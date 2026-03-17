@@ -227,8 +227,12 @@ import CategoryGrid from '../components/CategoryGrid.astro';
   .hero {
     position: relative;
     text-align: center;
-    padding: 6rem 0 5rem;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%);
+    padding: 8rem 0 6rem;
+    background: 
+      /* 深層底色 */
+      radial-gradient(ellipse 120% 80% at 50% 20%, #1a202c 0%, #0f172a 40%, #0a0f1a 100%),
+      /* 細微紋理 */
+      linear-gradient(180deg, rgba(34, 197, 94, 0.02) 0%, transparent 30%, rgba(59, 130, 246, 0.015) 70%, transparent 100%);
     color: white;
     margin: -2rem -1rem 0;
     margin-bottom: 4rem;
@@ -236,6 +240,30 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     min-height: 100vh;
     display: flex;
     align-items: center;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      /* 光暈層 */
+      radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+      /* 星空效果 */
+      radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(34, 197, 94, 0.8), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.6), transparent),
+      radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(251, 191, 36, 0.7), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px, 200px 100px, 200px 100px, 200px 100px, 200px 100px, 200px 100px, 200px 100px;
+    z-index: 1;
+    opacity: 0.4;
+    animation: starsMove 20s linear infinite;
   }
   
   .hero-bg {
@@ -247,36 +275,39 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     z-index: 1;
   }
   
-  /* 台灣山脈剪影 */
+  /* 台灣山脈剪影 - 更層次感 */
   .taiwan-mountains {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 35%;
+    height: 40%;
     background: 
-      /* 遠山 */
-      radial-gradient(ellipse 800px 120px at 10% 100%, rgba(34, 197, 94, 0.06) 0%, transparent 70%),
+      /* 遠山（最淡） */
+      radial-gradient(ellipse 1000px 100px at 5% 100%, rgba(34, 197, 94, 0.04) 0%, transparent 80%),
+      radial-gradient(ellipse 800px 120px at 15% 100%, rgba(34, 197, 94, 0.06) 0%, transparent 75%),
       /* 中山 */
-      radial-gradient(ellipse 600px 180px at 35% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 700px 160px at 35% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 180px at 55% 100%, rgba(34, 197, 94, 0.1) 0%, transparent 65%),
       /* 近山 */
-      radial-gradient(ellipse 500px 200px at 65% 100%, rgba(34, 197, 94, 0.1) 0%, transparent 70%),
-      /* 最近山 */
-      radial-gradient(ellipse 400px 160px at 90% 100%, rgba(34, 197, 94, 0.12) 0%, transparent 70%);
+      radial-gradient(ellipse 500px 200px at 70% 100%, rgba(34, 197, 94, 0.12) 0%, transparent 60%),
+      /* 最近山（最深） */
+      radial-gradient(ellipse 400px 220px at 85% 100%, rgba(34, 197, 94, 0.15) 0%, transparent 55%);
   }
   
-  /* 台灣島輪廓SVG */
+  /* 台灣島輪廓SVG - 更精緻 */
   .taiwan-silhouette {
     position: absolute;
-    top: 20%;
-    right: 5%;
-    width: 200px;
-    height: 200px;
-    opacity: 0.4;
-    animation: float 8s ease-in-out infinite;
+    top: 15%;
+    right: 8%;
+    width: 180px;
+    height: 180px;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.2));
+    animation: float 10s ease-in-out infinite;
   }
   
-  /* 流動漸層背景 */
+  /* 流動漸層背景 - 更細膩 */
   .flowing-gradient {
     position: absolute;
     top: 0;
@@ -284,39 +315,54 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     right: 0;
     bottom: 0;
     background: linear-gradient(
-      45deg,
-      rgba(59, 130, 246, 0.03) 0%,
-      rgba(34, 197, 94, 0.04) 25%,
-      rgba(168, 85, 247, 0.03) 50%,
-      rgba(239, 68, 68, 0.02) 75%,
-      rgba(251, 191, 36, 0.03) 100%
+      -45deg,
+      rgba(59, 130, 246, 0.02) 0%,
+      rgba(34, 197, 94, 0.03) 20%,
+      rgba(168, 85, 247, 0.02) 40%,
+      rgba(239, 68, 68, 0.015) 60%,
+      rgba(251, 191, 36, 0.025) 80%,
+      rgba(59, 130, 246, 0.02) 100%
     );
-    background-size: 400% 400%;
-    animation: gradientFlow 12s ease infinite;
+    background-size: 600% 600%;
+    animation: gradientFlow 15s ease infinite;
+    z-index: 1;
   }
   
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
   
-  /* 標題設計 */
+  /* 標題設計 - 更精緻的品牌感 */
   .hero-title {
     position: relative;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 900;
-    margin-bottom: 1rem;
-    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    margin-bottom: 1.5rem;
+    font-family: "Noto Serif TC", 'Inter', -apple-system, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1;
   }
   
   .title-text {
     position: relative;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 30%, #dc2626 60%, #b91c1c 100%);
+    background: linear-gradient(
+      135deg, 
+      #fbbf24 0%, 
+      #f59e0b 25%, 
+      #dc2626 50%, 
+      #b91c1c 75%, 
+      #7c2d12 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
   }
   
   .title-glow {
@@ -329,62 +375,85 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: blur(20px);
-    opacity: 0.3;
+    filter: blur(30px);
+    opacity: 0.2;
     z-index: 1;
   }
   
+  /* 副標題 - 更有氣勢 */
   .hero-subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    color: #e2e8f0;
+    font-family: "Noto Serif TC", 'Inter', system-ui, sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
   }
   
+  /* 描述文字 - 更精緻 */
   .hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    margin-bottom: 3.5rem;
     opacity: 0.9;
-    line-height: 1.7;
-    max-width: 600px;
+    line-height: 1.8;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
+    color: #f1f5f9;
+  }
+  
+  .hero-description br {
+    margin-bottom: 0.5rem;
   }
   
   .highlight {
-    color: #fbbf24;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: 500;
+    letter-spacing: 0.02em;
   }
   
-  /* CTA 按鈕升級 */
+  /* CTA 按鈕升級 - 更突出精緻 */
   .hero-cta {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    gap: 2rem;
+    margin-bottom: 5rem;
     flex-wrap: wrap;
+    padding: 0 1rem;
   }
   
   .btn-cta {
-    padding: 1.2rem 2.5rem;
+    padding: 1.4rem 3rem;
     text-decoration: none;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(20px);
   }
   
   .btn-cta.primary {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 30%, #991b1b 70%, #7c2d12 100%);
     color: white;
-    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    box-shadow: 
+      0 8px 32px rgba(220, 38, 38, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .btn-cta.primary::before {
@@ -395,7 +464,18 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
+    transition: left 0.6s ease;
+  }
+  
+  .btn-cta.primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #dc2626, #b91c1c, #7c2d12);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
   }
   
   .btn-cta.primary:hover::before {
@@ -403,65 +483,110 @@ import CategoryGrid from '../components/CategoryGrid.astro';
   }
   
   .btn-cta.primary:hover {
-    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 30%, #7c2d12 70%, #5c1a1a 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      0 12px 40px rgba(220, 38, 38, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
   
   .btn-cta.secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .btn-cta.secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      0 12px 40px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
   
   .cta-arrow {
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .btn-cta.primary:hover .cta-arrow {
-    transform: translateX(3px);
+    transform: translateX(4px) scale(1.1);
   }
   
-  /* 統計數字CSS動畫 */
+  .btn-cta.secondary:hover .github-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* 統計數字 - 更精緻設計 */
   .hero-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
-    max-width: 600px;
+    margin-top: 4rem;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem;
   }
   
   .stat {
     text-align: center;
-    padding: 1rem;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(20px);
+    background: 
+      linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+  
+  .stat:hover {
+    transform: translateY(-8px);
+    background: 
+      linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    box-shadow: 
+      0 16px 48px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
   
   .stat-number {
     display: block;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #fbbf24;
-    margin-bottom: 0.25rem;
+    font-size: 2.4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.2));
   }
   
   .stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    color: #cbd5e1;
+    font-size: 1rem;
+    opacity: 0.9;
+    color: #e2e8f0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
   
   /* ===== FEATURES SECTION 升級 ===== */
@@ -659,60 +784,139 @@ import CategoryGrid from '../components/CategoryGrid.astro';
   
   /* ===== ANIMATIONS ===== */
   @keyframes gradientFlow {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 25%; }
+    50% { background-position: 0% 75%; }
+    75% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
   @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(1deg); }
-    50% { transform: translateY(-5px) rotate(-1deg); }
-    75% { transform: translateY(-15px) rotate(0.5deg); }
+    0%, 100% { 
+      transform: translateY(0) rotate(0deg); 
+      opacity: 0.3;
+    }
+    25% { 
+      transform: translateY(-15px) rotate(2deg); 
+      opacity: 0.4;
+    }
+    50% { 
+      transform: translateY(-8px) rotate(-1deg); 
+      opacity: 0.35;
+    }
+    75% { 
+      transform: translateY(-20px) rotate(1deg); 
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes starsMove {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-200px) translateY(-100px); }
+  }
+  
+  @keyframes titleGlow {
+    0%, 100% { 
+      filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
+    }
+    50% { 
+      filter: drop-shadow(0 6px 12px rgba(220, 38, 38, 0.5));
+    }
+  }
+  
+  .title-text {
+    animation: titleGlow 4s ease-in-out infinite;
   }
   
   /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 4rem 1rem;
-      min-height: 80vh;
-    }
-    
+  @media (max-width: 1024px) {
     .hero-title {
-      font-size: 3rem;
+      font-size: 5rem;
     }
     
     .hero-subtitle {
-      font-size: 1.8rem;
+      font-size: 2.4rem;
+    }
+    
+    .taiwan-silhouette {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 5rem 1rem;
+      min-height: 85vh;
+    }
+    
+    .hero-content {
+      padding: 0 1rem;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+    
+    .hero-subtitle {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
     }
     
     .hero-description {
-      font-size: 1rem;
-      padding: 0 1rem;
+      font-size: 1.1rem;
+      padding: 0;
+      margin-bottom: 3rem;
+      max-width: 100%;
     }
     
     .hero-cta {
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
     }
     
     .btn-cta {
-      width: 90%;
-      max-width: 280px;
+      width: 100%;
+      max-width: 300px;
       justify-content: center;
+      padding: 1.3rem 2.5rem;
+      font-size: 1.1rem;
     }
     
     .hero-stats {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin: 0 1rem;
+      gap: 1.5rem;
+      margin: 0;
+      max-width: 100%;
+    }
+    
+    .stat {
+      padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
     }
     
     .taiwan-silhouette {
       width: 120px;
       height: 120px;
-      top: 15%;
-      right: 3%;
+      top: 10%;
+      right: 5%;
+      opacity: 0.2;
+    }
+    
+    .taiwan-mountains {
+      height: 35%;
     }
     
     .features-grid {
@@ -729,6 +933,51 @@ import CategoryGrid from '../components/CategoryGrid.astro';
     .contribute-buttons {
       flex-direction: column;
       align-items: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 4rem 0.5rem;
+    }
+    
+    .hero-title {
+      font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.6rem;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+    
+    .btn-cta {
+      padding: 1.2rem 2rem;
+      font-size: 1rem;
+    }
+    
+    .hero-stats {
+      gap: 1rem;
+    }
+    
+    .stat {
+      padding: 1.2rem 0.8rem;
+    }
+    
+    .stat-number {
+      font-size: 1.8rem;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+    }
+    
+    .taiwan-silhouette {
+      width: 100px;
+      height: 100px;
+      opacity: 0.15;
     }
   }
 
