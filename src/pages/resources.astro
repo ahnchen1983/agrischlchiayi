@@ -3,17 +3,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout 
-  title="資源與工具 - Taiwan.md"
-  description="Taiwan.md 相關的學習資源、開發工具、參考文獻與貢獻指南"
+  title="台灣資源導覽 - Taiwan.md"
+  description="完整收錄台灣政府機關、文化機構、開放資料平台等官方網站，提供政策資訊、文化內容、統計數據的一站式入口"
 >
   <main class="resources-page">
     <div class="container">
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content">
-          <h1 class="hero-title">資源與工具</h1>
+          <h1 class="hero-title">台灣資源導覽</h1>
           <p class="hero-subtitle">
-            學習資源、開發工具、參考文獻與貢獻指南
+            完整收錄政府機關、文化機構、開放資料等官方資源<br>
+            一站式掌握台灣最權威的資訊來源
           </p>
         </div>
       </section>
@@ -25,313 +26,530 @@ import Layout from '../layouts/Layout.astro';
         <span class="current">資源</span>
       </nav>
 
-      <!-- Learning Resources -->
-      <section class="resources-section">
-        <h2 class="section-title">📚 學習資源</h2>
-        
-        <div class="resource-category">
-          <h3>台灣歷史與文化</h3>
-          <div class="resource-grid">
-            <div class="resource-item">
-              <h4>📖 推薦書籍</h4>
-              <ul>
-                <li>《台灣史綱》- 王育德</li>
-                <li>《台灣通史》- 連橫</li>
-                <li>《福爾摩沙三族記》- 陳第</li>
-                <li>《看見台灣》- 齊柏林</li>
-                <li>《我們的島》- 柯金源</li>
-              </ul>
+      <!-- 官方機構 -->
+      <section class="resource-section">
+        <h2 class="section-title">🏛️ 官方機構</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>總統府</h3>
             </div>
-            
-            <div class="resource-item">
-              <h4>🏛️ 博物館與文化機構</h4>
-              <ul>
-                <li><a href="https://www.npm.gov.tw" target="_blank">國立故宮博物院</a></li>
-                <li><a href="https://www.ntm.gov.tw" target="_blank">國立台灣博物館</a></li>
-                <li><a href="https://www.nmh.gov.tw" target="_blank">國立台灣歷史博物館</a></li>
-                <li><a href="https://www.nmp.gov.tw" target="_blank">國立台灣史前文化博物館</a></li>
-                <li><a href="https://www.culture.tw" target="_blank">文化部</a></li>
-              </ul>
-            </div>
-            
-            <div class="resource-item">
-              <h4>🎬 紀錄片與影片</h4>
-              <ul>
-                <li>《不老騎士》- 華天灝</li>
-                <li>《拔一條河》- 楊力州</li>
-                <li>《看見台灣》- 齊柏林</li>
-                <li>《我們的島》- 公視</li>
-                <li>《島嶼的孩子》- 陳芯宜</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="resource-category">
-          <h3>數位資源</h3>
-          <div class="resource-grid">
-            <div class="resource-item">
-              <h4>🌐 線上資料庫</h4>
-              <ul>
-                <li><a href="https://taiwanpedia.culture.tw" target="_blank">台灣大百科全書</a></li>
-                <li><a href="https://zh.wikipedia.org" target="_blank">維基百科</a></li>
-                <li><a href="https://www.sinica.edu.tw" target="_blank">中央研究院</a></li>
-                <li><a href="https://www.digital.ntu.edu.tw" target="_blank">台大數位典藏</a></li>
-                <li><a href="https://catalog.digitalarchives.tw" target="_blank">數位典藏聯合目錄</a></li>
-              </ul>
-            </div>
-            
-            <div class="resource-item">
-              <h4>📊 開放資料</h4>
-              <ul>
-                <li><a href="https://data.gov.tw" target="_blank">政府資料開放平台</a></li>
-                <li><a href="https://www.dgbas.gov.tw" target="_blank">行政院主計總處</a></li>
-                <li><a href="https://www.stat.gov.tw" target="_blank">中華民國統計資訊網</a></li>
-                <li><a href="https://opendata.cwb.gov.tw" target="_blank">氣象資料開放平台</a></li>
-                <li><a href="https://data.taipei" target="_blank">台北市資料大平台</a></li>
-              </ul>
-            </div>
-            
-            <div class="resource-item">
-              <h4>🗞️ 新聞與媒體</h4>
-              <ul>
-                <li><a href="https://www.cna.com.tw" target="_blank">中央通訊社</a></li>
-                <li><a href="https://www.pts.org.tw" target="_blank">公共電視</a></li>
-                <li><a href="https://www.rfi.fr/tw" target="_blank">法廣中文網</a></li>
-                <li><a href="https://www.bbc.com/zhongwen/trad" target="_blank">BBC中文網</a></li>
-                <li><a href="https://focustaiwan.tw" target="_blank">Focus Taiwan</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Development Tools -->
-      <section class="tools-section">
-        <h2 class="section-title">🛠️ 開發工具</h2>
-        
-        <div class="tools-content">
-          <div class="tool-category">
-            <h3>內容創作工具</h3>
-            <div class="tool-grid">
-              <div class="tool-item">
-                <div class="tool-header">
-                  <h4>Markdown 編輯器</h4>
-                  <span class="tool-type">寫作</span>
-                </div>
-                <p>推薦使用支援 Frontmatter 的 Markdown 編輯器：</p>
-                <ul>
-                  <li><a href="https://obsidian.md" target="_blank">Obsidian</a> - 知識管理與連結</li>
-                  <li><a href="https://typora.io" target="_blank">Typora</a> - 即時預覽</li>
-                  <li><a href="https://zettlr.com" target="_blank">Zettlr</a> - 學術寫作</li>
-                  <li><a href="https://code.visualstudio.com" target="_blank">VS Code</a> - 程式編輯</li>
-                </ul>
-              </div>
-              
-              <div class="tool-item">
-                <div class="tool-header">
-                  <h4>圖片與媒體</h4>
-                  <span class="tool-type">設計</span>
-                </div>
-                <p>處理圖片、影片等媒體資源：</p>
-                <ul>
-                  <li><a href="https://www.figma.com" target="_blank">Figma</a> - 設計與原型</li>
-                  <li><a href="https://unsplash.com" target="_blank">Unsplash</a> - 免費圖片</li>
-                  <li><a href="https://www.canva.com" target="_blank">Canva</a> - 快速設計</li>
-                  <li><a href="https://imageoptim.com" target="_blank">ImageOptim</a> - 圖片最佳化</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.president.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 中華民國總統府 <span class="external-icon">↗</span>
+                </a>
+                <p>國家元首相關資訊與政策宣示</p>
+              </li>
+              <li>
+                <a href="https://english.president.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 Presidential Office (English) <span class="external-icon">↗</span>
+                </a>
+                <p>總統府英文官網，國際對外窗口</p>
+              </li>
+            </ul>
           </div>
 
-          <div class="tool-category">
-            <h3>技術開發工具</h3>
-            <div class="tool-grid">
-              <div class="tool-item">
-                <div class="tool-header">
-                  <h4>前端開發</h4>
-                  <span class="tool-type">程式</span>
-                </div>
-                <p>Taiwan.md 使用的技術棧：</p>
-                <ul>
-                  <li><a href="https://astro.build" target="_blank">Astro</a> - 靜態網站生成</li>
-                  <li><a href="https://www.typescriptlang.org" target="_blank">TypeScript</a> - 型別安全</li>
-                  <li><a href="https://nodejs.org" target="_blank">Node.js</a> - 執行環境</li>
-                  <li><a href="https://pnpm.io" target="_blank">pnpm</a> - 套件管理</li>
-                </ul>
-              </div>
-              
-              <div class="tool-item">
-                <div class="tool-header">
-                  <h4>版本控制</h4>
-                  <span class="tool-type">協作</span>
-                </div>
-                <p>專案協作與版本控制：</p>
-                <ul>
-                  <li><a href="https://git-scm.com" target="_blank">Git</a> - 版本控制系統</li>
-                  <li><a href="https://github.com" target="_blank">GitHub</a> - 程式碼託管</li>
-                  <li><a href="https://github.com/frank890417/taiwan-md" target="_blank">Taiwan.md Repo</a> - 專案倉庫</li>
-                </ul>
-              </div>
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>五院體制</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.ey.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 行政院 <span class="external-icon">↗</span>
+                </a>
+                <p>最高行政機關，政策執行與協調</p>
+              </li>
+              <li>
+                <a href="https://www.ly.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 立法院 <span class="external-icon">↗</span>
+                </a>
+                <p>國家立法機關，法案審議與監督</p>
+              </li>
+              <li>
+                <a href="https://www.judicial.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 司法院 <span class="external-icon">↗</span>
+                </a>
+                <p>最高司法機關，司法政策與制度</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>主要部會</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.mofa.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 外交部 <span class="external-icon">↗</span>
+                </a>
+                <p>外交政策與國際關係，領務服務</p>
+              </li>
+              <li>
+                <a href="https://moda.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 數位發展部 <span class="external-icon">↗</span>
+                </a>
+                <p>數位轉型與智慧國家政策</p>
+              </li>
+              <li>
+                <a href="https://www.moi.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 內政部 <span class="external-icon">↗</span>
+                </a>
+                <p>內政事務與民政管理，戶政服務</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>專責委員會</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.ndc.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國家發展委員會 <span class="external-icon">↗</span>
+                </a>
+                <p>國家發展規劃與政策，前瞻計畫</p>
+              </li>
+              <li>
+                <a href="https://www.mac.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 大陸委員會 <span class="external-icon">↗</span>
+                </a>
+                <p>兩岸事務與政策，兩岸交流管理</p>
+              </li>
+              <li>
+                <a href="https://www.cip.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 原住民族委員會 <span class="external-icon">↗</span>
+                </a>
+                <p>原住民族事務與文化，族群權益</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Contribution Guide -->
-      <section class="contribution-section">
-        <h2 class="section-title">🤝 貢獻指南</h2>
-        
-        <div class="contribution-content">
-          <div class="contribution-steps">
-            <h3>如何參與貢獻</h3>
-            <div class="steps-grid">
-              <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                  <h4>Fork 專案</h4>
-                  <p>在 <a href="https://github.com/frank890417/taiwan-md" target="_blank">GitHub</a> 上 fork 專案到你的帳號</p>
-                </div>
-              </div>
-              
-              <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                  <h4>創建分支</h4>
-                  <p>為你的改動創建一個新的分支：<code>git checkout -b feature/your-feature</code></p>
-                </div>
-              </div>
-              
-              <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                  <h4>進行修改</h4>
-                  <p>編輯 Markdown 檔案，新增內容或修正錯誤</p>
-                </div>
-              </div>
-              
-              <div class="step-item">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                  <h4>測試變更</h4>
-                  <p>在本地執行 <code>npm run dev</code> 確認變更正常</p>
-                </div>
-              </div>
-              
-              <div class="step-item">
-                <div class="step-number">5</div>
-                <div class="step-content">
-                  <h4>提交 PR</h4>
-                  <p>提交 Pull Request，描述你的變更內容</p>
-                </div>
-              </div>
-              
-              <div class="step-item">
-                <div class="step-number">6</div>
-                <div class="step-content">
-                  <h4>代碼審查</h4>
-                  <p>等待維護者審查你的貢獻並提供反饋</p>
-                </div>
-              </div>
+      <!-- 文化與教育 -->
+      <section class="resource-section">
+        <h2 class="section-title">🎭 文化與教育</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>文教部會</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.moc.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 文化部 <span class="external-icon">↗</span>
+                </a>
+                <p>文化政策與藝術推廣，文化資產保存</p>
+              </li>
+              <li>
+                <a href="https://www.moe.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 教育部 <span class="external-icon">↗</span>
+                </a>
+                <p>教育政策與學術發展，各級教育管理</p>
+              </li>
+              <li>
+                <a href="https://www.ncl.edu.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國立國家圖書館 <span class="external-icon">↗</span>
+                </a>
+                <p>國家級圖書館與文獻典藏</p>
+              </li>
+            </ul>
           </div>
 
-          <div class="contribution-types">
-            <h3>貢獻類型</h3>
-            <div class="types-grid">
-              <div class="type-item">
-                <div class="type-icon">✏️</div>
-                <h4>內容貢獻</h4>
-                <p>新增文章、修正錯誤、補充資訊、翻譯內容</p>
-              </div>
-              
-              <div class="type-item">
-                <div class="type-icon">🐛</div>
-                <h4>錯誤修正</h4>
-                <p>修正網站 bug、改善使用者體驗、最佳化效能</p>
-              </div>
-              
-              <div class="type-item">
-                <div class="type-icon">💡</div>
-                <h4>功能建議</h4>
-                <p>提出新功能想法、改善建議、使用者回饋</p>
-              </div>
-              
-              <div class="type-item">
-                <div class="type-icon">📖</div>
-                <h4>文件改善</h4>
-                <p>改善文件說明、新增使用指南、API 文件</p>
-              </div>
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>博物館群</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.npm.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國立故宮博物院 <span class="external-icon">↗</span>
+                </a>
+                <p>中華文化瑰寶典藏，世界級文物展示</p>
+              </li>
+              <li>
+                <a href="https://www.ntmofa.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國立台灣美術館 <span class="external-icon">↗</span>
+                </a>
+                <p>台灣現代美術展示與研究</p>
+              </li>
+              <li>
+                <a href="https://www.nmth.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國立臺灣歷史博物館 <span class="external-icon">↗</span>
+                </a>
+                <p>台灣歷史文化典藏研究</p>
+              </li>
+            </ul>
           </div>
 
-          <div class="contribution-guidelines">
-            <h3>貢獻規範</h3>
-            <div class="guidelines-content">
-              <div class="guideline-section">
-                <h4>內容準則</h4>
-                <ul>
-                  <li>保持客觀中立，避免偏頗觀點</li>
-                  <li>提供可靠來源與參考資料</li>
-                  <li>使用簡潔清晰的語言表達</li>
-                  <li>遵循現有的文章結構與格式</li>
-                  <li>確保內容的準確性與時效性</li>
-                </ul>
-              </div>
-              
-              <div class="guideline-section">
-                <h4>技術準則</h4>
-                <ul>
-                  <li>遵循專案的程式碼風格</li>
-                  <li>確保所有變更都能通過測試</li>
-                  <li>撰寫清晰的 commit 訊息</li>
-                  <li>在 PR 中描述變更的目的與內容</li>
-                  <li>保持向後相容性</li>
-                </ul>
-              </div>
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>表演藝術</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://npac-ntch.org/zh" target="_blank" rel="noopener noreferrer">
+                  🔗 國家兩廳院 <span class="external-icon">↗</span>
+                </a>
+                <p>國家級表演藝術中心，經典演出</p>
+              </li>
+              <li>
+                <a href="https://www.npac-weiwuying.org/" target="_blank" rel="noopener noreferrer">
+                  🔗 衛武營藝術中心 <span class="external-icon">↗</span>
+                </a>
+                <p>世界最大單一建築表演場館</p>
+              </li>
+              <li>
+                <a href="https://taicca.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 文策院 TAICCA <span class="external-icon">↗</span>
+                </a>
+                <p>文化內容產業策進，創意經濟</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>學術研究</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.sinica.edu.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 中央研究院 <span class="external-icon">↗</span>
+                </a>
+                <p>國家最高學術研究機構</p>
+              </li>
+              <li>
+                <a href="https://www.nstc.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 國家科學及技術委員會 <span class="external-icon">↗</span>
+                </a>
+                <p>科技政策與研發，學術研究推動</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- License & Credits -->
-      <section class="license-section">
-        <h2 class="section-title">📜 授權與致謝</h2>
-        
-        <div class="license-content">
-          <div class="license-info">
-            <h3>開源授權</h3>
-            <p>
-              Taiwan.md 採用 <strong>MIT License</strong> 開源授權，歡迎自由使用、修改與分享。
-            </p>
-            <div class="license-details">
-              <a href="https://github.com/frank890417/taiwan-md/blob/main/LICENSE" target="_blank" class="license-link">
-                查看完整授權條款 →
-              </a>
+      <!-- 觀光與旅遊 -->
+      <section class="resource-section">
+        <h2 class="section-title">✈️ 觀光與旅遊</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>觀光推廣</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://eng.taiwan.net.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 交通部觀光署 <span class="external-icon">↗</span>
+                </a>
+                <p>觀光推廣與旅遊資訊，國際行銷</p>
+              </li>
+              <li>
+                <a href="https://www.immigration.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 內政部移民署 <span class="external-icon">↗</span>
+                </a>
+                <p>入出境管理與移民服務</p>
+              </li>
+            </ul>
           </div>
 
-          <div class="credits">
-            <h3>特別致謝</h3>
-            <div class="credits-grid">
-              <div class="credit-item">
-                <h4>技術支援</h4>
-                <ul>
-                  <li>Astro 團隊 - 優秀的靜態網站生成器</li>
-                  <li>GitHub - 程式碼託管與協作平台</li>
-                  <li>Vercel - 部署與 CDN 服務</li>
-                </ul>
-              </div>
-              
-              <div class="credit-item">
-                <h4>內容來源</h4>
-                <ul>
-                  <li>維基百科 - 基礎事實資料</li>
-                  <li>政府開放資料 - 官方統計資訊</li>
-                  <li>學術研究 - 深度分析內容</li>
-                </ul>
-              </div>
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>交通運輸</h3>
             </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.motc.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 交通部 <span class="external-icon">↗</span>
+                </a>
+                <p>交通政策與運輸基建，交通安全</p>
+              </li>
+              <li>
+                <a href="https://www.cwa.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 中央氣象署 <span class="external-icon">↗</span>
+                </a>
+                <p>氣象、氣候、地震預報，防災資訊</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 科技與經濟 -->
+      <section class="resource-section">
+        <h2 class="section-title">💼 科技與經濟</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>經濟發展</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.moea.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 經濟部 <span class="external-icon">↗</span>
+                </a>
+                <p>經濟政策與產業發展，投資促進</p>
+              </li>
+              <li>
+                <a href="https://www.trade.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 經濟部國際貿易署 <span class="external-icon">↗</span>
+                </a>
+                <p>國際貿易政策與推廣，出口促進</p>
+              </li>
+              <li>
+                <a href="https://www.sme.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 中小及新創企業署 <span class="external-icon">↗</span>
+                </a>
+                <p>中小企業發展與新創支持</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>產業研發</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.itri.org.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 工研院 <span class="external-icon">↗</span>
+                </a>
+                <p>產業技術研發機構，創新驅動</p>
+              </li>
+              <li>
+                <a href="https://www.tipo.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 經濟部智慧財產局 <span class="external-icon">↗</span>
+                </a>
+                <p>智慧財產權保護與管理</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>金融監管</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.fsc.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 金融監督管理委員會 <span class="external-icon">↗</span>
+                </a>
+                <p>金融監督與管理，金融市場穩定</p>
+              </li>
+              <li>
+                <a href="https://www.twse.com.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 臺灣證券交易所 <span class="external-icon">↗</span>
+                </a>
+                <p>台灣主要證券交易市場</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>投資推廣</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://investtaiwan.nat.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 投資台灣 <span class="external-icon">↗</span>
+                </a>
+                <p>投資環境與政策資訊，招商引資</p>
+              </li>
+              <li>
+                <a href="https://www.taiwanexcellence.org/en" target="_blank" rel="noopener noreferrer">
+                  🔗 Taiwan Excellence <span class="external-icon">↗</span>
+                </a>
+                <p>台灣精品獎，展示優質產品</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 媒體與新聞 -->
+      <section class="resource-section">
+        <h2 class="section-title">📰 媒體與新聞</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>官方媒體</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.cna.com.tw" target="_blank" rel="noopener noreferrer">
+                  🔗 中央通訊社 <span class="external-icon">↗</span>
+                </a>
+                <p>國家通訊社，權威新聞來源</p>
+              </li>
+              <li>
+                <a href="https://focustaiwan.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 Focus Taiwan <span class="external-icon">↗</span>
+                </a>
+                <p>中央社英文新聞網站，國際視野</p>
+              </li>
+              <li>
+                <a href="https://www.pts.org.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 公共電視 <span class="external-icon">↗</span>
+                </a>
+                <p>公共媒體服務，優質內容製作</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>對外推廣</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://www.taiwantoday.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 Taiwan Today <span class="external-icon">↗</span>
+                </a>
+                <p>台灣官方新聞平台，政策宣導</p>
+              </li>
+              <li>
+                <a href="https://www.taiwan-panorama.com/" target="_blank" rel="noopener noreferrer">
+                  🔗 台灣光華雜誌 <span class="external-icon">↗</span>
+                </a>
+                <p>台灣文化推廣雜誌，軟實力展示</p>
+              </li>
+              <li>
+                <a href="https://www.rti.org.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 中央廣播電台 <span class="external-icon">↗</span>
+                </a>
+                <p>對外廣播電台，多語言服務</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 開放資料 -->
+      <section class="resource-section">
+        <h2 class="section-title">📊 開放資料</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>政府開放資料</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://data.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 政府資料開放平臺 <span class="external-icon">↗</span>
+                </a>
+                <p>政府開放資料統一平台，資料治理</p>
+              </li>
+              <li>
+                <a href="https://www.taiwan.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 政府入口網站 <span class="external-icon">↗</span>
+                </a>
+                <p>政府資訊統一入口，一站式服務</p>
+              </li>
+              <li>
+                <a href="https://law.moj.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 全國法規資料庫 <span class="external-icon">↗</span>
+                </a>
+                <p>完整法規查詢系統，法治基礎</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>公民科技</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://g0v.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 g0v 零時政府 <span class="external-icon">↗</span>
+                </a>
+                <p>開源公民科技社群，協作治理</p>
+              </li>
+              <li>
+                <a href="https://digitalarchives.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 典藏台灣 <span class="external-icon">↗</span>
+                </a>
+                <p>中研院數位文化典藏，數位人文</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>科普教育</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://scitechvista.nat.gov.tw/" target="_blank" rel="noopener noreferrer">
+                  🔗 科技大觀園 <span class="external-icon">↗</span>
+                </a>
+                <p>國科會科普知識平台，科學教育</p>
+              </li>
+              <li>
+                <a href="https://tcmb.culture.tw/zh-tw" target="_blank" rel="noopener noreferrer">
+                  🔗 國家文化記憶庫 <span class="external-icon">↗</span>
+                </a>
+                <p>台灣文化記憶數位典藏</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Taiwan.md 相關 -->
+      <section class="resource-section">
+        <h2 class="section-title">🌟 Taiwan.md 相關</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>專案資源</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="https://github.com/frank890417/taiwan-md" target="_blank" rel="noopener noreferrer">
+                  🔗 GitHub 專案倉庫 <span class="external-icon">↗</span>
+                </a>
+                <p>Taiwan.md 開源專案，歡迎貢獻</p>
+              </li>
+              <li>
+                <a href="/contribute" rel="noopener noreferrer">
+                  🔗 貢獻指南
+                </a>
+                <p>如何參與 Taiwan.md 專案開發</p>
+              </li>
+              <li>
+                <a href="/rss.xml" rel="noopener noreferrer">
+                  🔗 RSS 訂閱
+                </a>
+                <p>訂閱 Taiwan.md 最新內容更新</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resource-card">
+            <div class="card-header">
+              <h3>聯繫方式</h3>
+            </div>
+            <ul class="resource-links">
+              <li>
+                <a href="mailto:contact@taiwan.md">
+                  🔗 聯絡信箱
+                </a>
+                <p>任何問題或建議歡迎來信</p>
+              </li>
+              <li>
+                <a href="https://twitter.com/taiwanmd" target="_blank" rel="noopener noreferrer">
+                  🔗 Twitter <span class="external-icon">↗</span>
+                </a>
+                <p>關注最新動態與討論</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -349,419 +567,257 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .resources-page {
     min-height: 100vh;
-    padding: 2rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    font-family: 'Noto Serif TC', serif;
   }
 
   .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
   }
 
+  /* Hero Section */
   .hero {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
 
   .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #065f46, #059669, #10b981);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
   }
 
   .hero-subtitle {
     font-size: 1.3rem;
-    color: #6b7280;
-    line-height: 1.6;
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
+  /* Breadcrumb */
   .breadcrumb {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 3rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #64748b;
   }
 
   .breadcrumb a {
-    color: #1e40af;
+    color: #059669;
     text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   .breadcrumb a:hover {
-    text-decoration: underline;
+    color: #065f46;
   }
 
   .separator {
-    color: #9ca3af;
+    color: #94a3b8;
   }
 
   .current {
-    color: #6b7280;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  /* Section Styling */
+  .resource-section {
+    margin-bottom: 4rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 2rem;
-  }
-
-  .resources-section, .tools-section, .contribution-section, .license-section {
-    margin-bottom: 4rem;
-    padding: 2rem 0;
-  }
-
-  .resource-category, .tool-category {
-    margin-bottom: 3rem;
-  }
-
-  .resource-category h3, .tool-category h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e5e7eb;
-  }
-
-  .resource-grid, .tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .resource-item, .tool-item {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .resource-item h4, .tool-item h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-  }
-
-  .tool-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .tool-type {
-    background: #e0f2fe;
-    color: #0e7490;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  .resource-item ul, .tool-item ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .resource-item li, .tool-item li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f3f4f6;
-  }
-
-  .resource-item li:last-child, .tool-item li:last-child {
-    border-bottom: none;
-  }
-
-  .resource-item a, .tool-item a {
-    color: #1e40af;
-    text-decoration: none;
-  }
-
-  .resource-item a:hover, .tool-item a:hover {
-    text-decoration: underline;
-  }
-
-  .tool-item p {
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .contribution-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .contribution-steps h3, .contribution-types h3, .contribution-guidelines h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 2rem;
-  }
-
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .step-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .step-number {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: #1e40af;
-    color: white;
-    border-radius: 50%;
+    color: #065f46;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #d1fae5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    flex-shrink: 0;
+    gap: 0.75rem;
   }
 
-  .step-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .step-content p {
-    color: #6b7280;
-    line-height: 1.6;
-  }
-
-  .step-content code {
-    background: #f1f5f9;
-    color: #e11d48;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-
-  .types-grid {
+  /* Resource Grid */
+  .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .type-item {
-    text-align: center;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .type-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .type-item h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .type-item p {
-    color: #6b7280;
-    line-height: 1.6;
-  }
-
-  .guidelines-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
   }
 
-  .guideline-section {
+  .resource-card {
     background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .guideline-section h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-  }
-
-  .guideline-section ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-
-  .guideline-section li {
-    color: #374151;
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-  }
-
-  .license-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .license-info {
-    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
 
-  .license-info h3 {
-    font-size: 1.5rem;
+  .resource-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #d1fae5;
+  }
+
+  .card-header h3 {
+    font-size: 1.4rem;
     font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-  }
-
-  .license-info p {
-    color: #374151;
-    line-height: 1.6;
+    color: #065f46;
     margin-bottom: 1.5rem;
-  }
-
-  .license-link {
-    color: #1e40af;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f9ff;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
   }
 
-  .license-link:hover {
-    text-decoration: underline;
-  }
-
-  .credits h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 2rem;
-  }
-
-  .credits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .credit-item {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .credit-item h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-  }
-
-  .credit-item ul {
+  .resource-links {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .credit-item li {
-    color: #374151;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f3f4f6;
+  .resource-links li {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
   }
 
-  .credit-item li:last-child {
+  .resource-links li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
     border-bottom: none;
   }
 
+  .resource-links a {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #059669;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .resource-links a:hover {
+    color: #065f46;
+  }
+
+  .external-icon {
+    font-size: 0.8em;
+    opacity: 0.7;
+  }
+
+  .resource-links p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  /* Back to Home */
   .back-to-home {
     text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e5e7eb;
   }
 
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 2rem;
-    background: #1e40af;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #065f46, #059669);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background 0.2s ease;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
   .btn-primary:hover {
-    background: #1e3a8a;
+    background: linear-gradient(135deg, #064e3b, #047857);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
 
+  /* Responsive Design */
   @media (max-width: 768px) {
     .container {
-      padding: 0 1rem;
+      padding: 1rem;
+    }
+
+    .hero {
+      padding: 2rem 0;
     }
 
     .hero-title {
       font-size: 2.5rem;
     }
 
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
     .section-title {
+      font-size: 1.8rem;
+    }
+
+    .resource-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .resource-card {
+      padding: 1.5rem;
+    }
+
+    .card-header h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0.75rem;
+    }
+
+    .hero-title {
       font-size: 2rem;
     }
 
-    .resource-grid, .tool-grid {
-      grid-template-columns: 1fr;
+    .section-title {
+      font-size: 1.5rem;
     }
 
-    .steps-grid {
-      grid-template-columns: 1fr;
+    .resource-card {
+      padding: 1.25rem;
     }
 
-    .types-grid {
-      grid-template-columns: 1fr;
+    .resource-links a {
+      font-size: 1rem;
     }
 
-    .guidelines-content {
-      grid-template-columns: 1fr;
-    }
-
-    .credits-grid {
-      grid-template-columns: 1fr;
+    .resource-links p {
+      font-size: 0.9rem;
     }
   }
 </style>
