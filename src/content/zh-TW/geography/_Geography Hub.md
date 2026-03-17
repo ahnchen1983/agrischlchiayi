@@ -1,6 +1,13 @@
 ---
+title: "台灣地理"
+description: "台灣位於亞洲大陸邊緣，面積雖小但地形多樣，從海平面到近4000公尺高山，具備熱帶到寒帶的完整氣候帶，造就豐富的生態系統與自然景觀。"
+date: 2026-03-17T00:00:00Z
+tags: ["地理", "地形", "氣候", "自然環境"]
+author: "taiwan.md 社群"
+difficulty: "beginner"
+readingTime: 5
+featured: false
 created: 2026-03-17
-tags: [地理, Hub]
 source: []
 status: 🌱 初稿（知識庫框架）
 ---
