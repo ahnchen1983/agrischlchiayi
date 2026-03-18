@@ -386,6 +386,11 @@ import Layout from '../layouts/Layout.astro';
           <div class="tier">
             <h3 class="tier-name community">💚 Community Supporter</h3>
             <p class="tier-desc">個人贊助者，README 感謝名單</p>
+            <div class="tier-logos">
+              <a href="https://protico.io" target="_blank" class="supporter-link">
+                <strong>Protico</strong> — Howei Young
+              </a>
+            </div>
           </div>
         </div>
 
@@ -432,6 +437,9 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
   </div>
+
+  <!-- Protico Community Chat Bubble — sponsored by Howei Young -->
+  <script src="https://main.protico.io/api/v1/taiwan.md/protico-frame.js"></script>
 </Layout>
 
 <style>
@@ -1310,5 +1318,14 @@ import Layout from '../layouts/Layout.astro';
     color: #94a3b8;
     margin-top: 0.5rem;
   }
+  .supporter-link {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #15803d;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .supporter-link:hover { color: #166534; text-decoration: underline; }
   }
 </style>
