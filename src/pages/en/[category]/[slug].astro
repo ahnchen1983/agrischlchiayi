@@ -7,13 +7,13 @@ import Layout from '../../../layouts/Layout.astro';
 import { marked } from 'marked';
 import { categoryConfig, getCategoryConfig, type CategoryKey } from '../../../utils/categoryConfig';
 
-let _gitCache: Record<string, { contributors: string[]; lastModified: string }> | null = null;
-function buildGitCache() {
+let _gitCache: Map<string, { contributors: string[]; lastModified: string }> | null = null;
+function buildGitCache(): Map<string, { contributors: string[]; lastModified: string }> {
   if (_gitCache) return _gitCache;
-  _gitCache = {};
+  _gitCache = new Map();
   try {
     const logOutput = execSync(
-      `git log --name-only --format="COMMIT_BY:%an" -- "knowledge/"`,
+      `git -c core.quotePath=false log --name-only --format="COMMIT_BY:%an" -- "knowledge/"`,
       { encoding: 'utf-8', maxBuffer: 10 * 1024 * 1024 }
     );
     let currentAuthor = '';
@@ -22,14 +22,13 @@ function buildGitCache() {
         currentAuthor = line.slice(10);
       } else if (line.startsWith('knowledge/') && line.endsWith('.md')) {
         const key = resolve(process.cwd(), line);
-        if (!_gitCache[key]) _gitCache[key] = { contributors: [], lastModified: '' };
-        if (!_gitCache[key].contributors.includes(currentAuthor)) {
-          _gitCache[key].contributors.push(currentAuthor);
-        }
+        const entry = _gitCache.get(key) || { contributors: [], lastModified: '' };
+        if (!entry.contributors.includes(currentAuthor)) entry.contributors.push(currentAuthor);
+        _gitCache.set(key, entry);
       }
     }
     const dateOutput = execSync(
-      `git log --format="COMMIT_DATE:%aI" --name-only -- "knowledge/"`,
+      `git -c core.quotePath=false log --format="COMMIT_DATE:%aI" --name-only -- "knowledge/"`,
       { encoding: 'utf-8', maxBuffer: 10 * 1024 * 1024 }
     );
     let currentDate = '';
@@ -41,20 +40,20 @@ function buildGitCache() {
         const key = resolve(process.cwd(), line);
         if (!seenFiles.has(key)) {
           seenFiles.add(key);
-          if (_gitCache[key]) _gitCache[key].lastModified = currentDate;
-          else _gitCache[key] = { contributors: [], lastModified: currentDate };
+          const entry = _gitCache.get(key) || { contributors: [], lastModified: '' };
+          entry.lastModified = currentDate;
+          _gitCache.set(key, entry);
         }
       }
     }
   } catch (e) {
-    console.log('Git cache build error:', (e as Error).message);
+    console.error('Git cache error:', (e as Error).message);
   }
   return _gitCache;
 }
-
 function getGitInfo(filePath: string) {
   const cache = buildGitCache();
-  return cache[filePath] || { contributors: [], lastModified: '' };
+  return cache.get(filePath) || { contributors: [], lastModified: '' };
 }
 
 export async function getStaticPaths() {
@@ -86,7 +85,8 @@ export async function getStaticPaths() {
         const { data: frontmatter, content } = matter(fileContent);
         const slug = basename(file, '.md');
 
-        const gitInfo = getGitInfo(filePath);
+        let gitInfo = { contributors: [] as string[], lastModified: '' };
+        try { gitInfo = getGitInfo(filePath); } catch {}
         paths.push({
           params: { category: categorySlug, slug },
           props: {
