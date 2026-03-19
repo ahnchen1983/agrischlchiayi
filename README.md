@@ -189,32 +189,36 @@ Thanks to these wonderful people ([emoji key](https://allcontributors.org/docs/e
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://cheyuwu.com"><img src="https://avatars.githubusercontent.com/u/4727572?v=4" width="80px;" alt="frank890417"/><br /><sub><b>frank890417</b></sub></a><br />💻 🖋 🎨 🤔 📆 📖</td>
-    <td align="center"><a href="https://github.com/bugnimusic"><img src="https://avatars.githubusercontent.com/u/260387338?v=4" width="80px;" alt="bugnimusic"/><br /><sub><b>bugnimusic</b></sub></a><br />🖋 🌍</td>
-    <td align="center"><a href="https://github.com/Ray0907"><img src="https://avatars.githubusercontent.com/u/29456968?v=4" width="80px;" alt="Ray0907"/><br /><sub><b>Ray0907</b></sub></a><br />🖋 💻</td>
-    <td align="center"><a href="https://github.com/number053"><img src="https://avatars.githubusercontent.com/u/269151044?v=4" width="80px;" alt="number053"/><br /><sub><b>number053</b></sub></a><br />🖋</td>
-    <td align="center"><a href="https://github.com/jekyll530"><img src="https://avatars.githubusercontent.com/u/150101610?v=4" width="80px;" alt="jekyll530"/><br /><sub><b>jekyll530</b></sub></a><br />🖋 🌍</td>
-    <td align="center"><a href="https://github.com/ro9er117911"><img src="https://avatars.githubusercontent.com/u/127029993?v=4" width="80px;" alt="ro9er117911"/><br /><sub><b>ro9er117911</b></sub></a><br />🖋</td>
-    <td align="center"><a href="https://github.com/jacky1822"><img src="https://avatars.githubusercontent.com/u/94786796?v=4" width="80px;" alt="jacky1822"/><br /><sub><b>jacky1822</b></sub></a><br />🖋</td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/hansai-art"><img src="https://avatars.githubusercontent.com/u/132933660?v=4" width="80px;" alt="hansai-art"/><br /><sub><b>hansai-art</b></sub></a><br />🖋 💻 🔍</td>
-    <td align="center"><a href="https://github.com/luofreddy"><img src="https://avatars.githubusercontent.com/u/85281073?v=4" width="80px;" alt="luofreddy"/><br /><sub><b>luofreddy</b></sub></a><br />💻</td>
-    <td align="center"><a href="https://github.com/fredchu"><img src="https://avatars.githubusercontent.com/u/1243384?v=4" width="80px;" alt="fredchu"/><br /><sub><b>fredchu</b></sub></a><br />🔍 🐛 🖋 📖</td>
-    <td align="center"><a href="https://github.com/Rushyuheng"><img src="https://avatars.githubusercontent.com/u/82425707?v=4" width="80px;" alt="Rushyuheng"/><br /><sub><b>Rushyuheng</b></sub></a><br />🖋</td>
-    <td align="center"><a href="https://github.com/f312213213"><img src="https://avatars.githubusercontent.com/u/71749524?v=4" width="80px;" alt="f312213213"/><br /><sub><b>f312213213</b></sub></a><br />💻 🌍</td>
-    <td align="center"><a href="https://github.com/siansiansu"><img src="https://avatars.githubusercontent.com/u/33390878?v=4" width="80px;" alt="siansiansu"/><br /><sub><b>siansiansu</b></sub></a><br />🖋</td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/YenTingWu"><img src="https://avatars.githubusercontent.com/u/57777349?v=4" width="80px;" alt="YenTingWu"/><br /><sub><b>YenTingWu</b></sub></a><br />💻 🔧</td>
-    <td align="center"><a href="https://github.com/r000tmnt"><img src="https://avatars.githubusercontent.com/u/62630285?v=4" width="80px;" alt="r000tmnt"/><br /><sub><b>ParkCorner</b></sub></a><br />🖋</td>
-    <td align="center"><a href="https://github.com/weilinlai719"><img src="https://avatars.githubusercontent.com/u/173038591?v=4" width="80px;" alt="weilinlai719"/><br /><sub><b>weilin lai</b></sub></a><br />💻 🐛</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://cheyuwu.com"><img src="https://avatars.githubusercontent.com/u/4727572?v=4?s=80" width="80px;" alt="Che-Yu Wu"/><br /><sub><b>Che-Yu Wu</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/commits?author=frank890417" title="Code">💻</a> <a href="#content-frank890417" title="Content">🖋</a> <a href="#design-frank890417" title="Design">🎨</a> <a href="#ideas-frank890417" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-frank890417" title="Project Management">📆</a> <a href="https://github.com/frank890417/taiwan-md/commits?author=frank890417" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bugnimusic"><img src="https://avatars.githubusercontent.com/u/260387338?v=4?s=80" width="80px;" alt="Bugni"/><br /><sub><b>Bugni</b></sub></a><br /><a href="#content-bugnimusic" title="Content">🖋</a> <a href="#translation-bugnimusic" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ray0907"><img src="https://avatars.githubusercontent.com/u/29456968?v=4?s=80" width="80px;" alt="Ray Tien"/><br /><sub><b>Ray Tien</b></sub></a><br /><a href="#content-Ray0907" title="Content">🖋</a> <a href="https://github.com/frank890417/taiwan-md/commits?author=Ray0907" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/number053"><img src="https://avatars.githubusercontent.com/u/269151044?v=4?s=80" width="80px;" alt="number053"/><br /><sub><b>number053</b></sub></a><br /><a href="#content-number053" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jekyll530"><img src="https://avatars.githubusercontent.com/u/150101610?v=4?s=80" width="80px;" alt="jekyll530"/><br /><sub><b>jekyll530</b></sub></a><br /><a href="#content-jekyll530" title="Content">🖋</a> <a href="#translation-jekyll530" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ro9er117911"><img src="https://avatars.githubusercontent.com/u/127029993?v=4?s=80" width="80px;" alt="ro9er117911"/><br /><sub><b>ro9er117911</b></sub></a><br /><a href="#content-ro9er117911" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacky1822"><img src="https://avatars.githubusercontent.com/u/94786796?v=4?s=80" width="80px;" alt="jacky1822"/><br /><sub><b>jacky1822</b></sub></a><br /><a href="#content-jacky1822" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hansai-art"><img src="https://avatars.githubusercontent.com/u/132933660?v=4?s=80" width="80px;" alt="hansai-art"/><br /><sub><b>hansai-art</b></sub></a><br /><a href="#content-hansai-art" title="Content">🖋</a> <a href="https://github.com/frank890417/taiwan-md/commits?author=hansai-art" title="Code">💻</a> <a href="https://github.com/frank890417/taiwan-md/pulls?q=is%3Apr+reviewed-by%3Ahansai-art" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/luofreddy"><img src="https://avatars.githubusercontent.com/u/85281073?v=4?s=80" width="80px;" alt="luofreddy"/><br /><sub><b>luofreddy</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/commits?author=luofreddy" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fredchu"><img src="https://avatars.githubusercontent.com/u/282984?v=4?s=80" width="80px;" alt="Fred Chu"/><br /><sub><b>Fred Chu</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/pulls?q=is%3Apr+reviewed-by%3Afredchu" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/frank890417/taiwan-md/issues?q=author%3Afredchu" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Rushyuheng"><img src="https://avatars.githubusercontent.com/u/82425707?v=4?s=80" width="80px;" alt="Rushyuheng"/><br /><sub><b>Rushyuheng</b></sub></a><br /><a href="#content-Rushyuheng" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/f312213213"><img src="https://avatars.githubusercontent.com/u/71749524?v=4?s=80" width="80px;" alt="David"/><br /><sub><b>David</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/commits?author=f312213213" title="Code">💻</a> <a href="#translation-f312213213" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/siansiansu"><img src="https://avatars.githubusercontent.com/u/33390878?v=4?s=80" width="80px;" alt="siansiansu"/><br /><sub><b>siansiansu</b></sub></a><br /><a href="#content-siansiansu" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/YenTingWu"><img src="https://avatars.githubusercontent.com/u/57777349?v=4?s=80" width="80px;" alt="YenTing Wu"/><br /><sub><b>YenTing Wu</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/commits?author=YenTingWu" title="Code">💻</a> <a href="#tool-YenTingWu" title="Tools">🔧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/r000tmnt"><img src="https://avatars.githubusercontent.com/u/62630285?v=4?s=80" width="80px;" alt="ParkCorner"/><br /><sub><b>ParkCorner</b></sub></a><br /><a href="#content-r000tmnt" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/weilinlai719"><img src="https://avatars.githubusercontent.com/u/173038591?v=4?s=80" width="80px;" alt="weilin lai"/><br /><sub><b>weilin lai</b></sub></a><br /><a href="https://github.com/frank890417/taiwan-md/commits?author=weilinlai719" title="Code">💻</a> <a href="https://github.com/frank890417/taiwan-md/issues?q=author%3Aweilinlai719" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/idlccp02"><img src="https://avatars.githubusercontent.com/u/233878411?v=4?s=80" width="80px;" alt="idlccp02"/><br /><sub><b>idlccp02</b></sub></a><br /><a href="#content-idlccp02" title="Content">🖋</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://allcontributors.org) specification. Contributions of any kind welcome!
