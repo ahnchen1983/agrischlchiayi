@@ -12,7 +12,10 @@
     "sync": "bash scripts/sync.sh",
     "sync:build": "bash scripts/sync.sh && astro build",
     "check-images": "node scripts/check-images.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "format::check": "prettier --check .",
+    "format::write": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
@@ -20,5 +23,11 @@
     "gray-matter": "^4.0.3",
     "marked": "^17.0.4",
     "rehype-external-links": "^3.0.0"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
