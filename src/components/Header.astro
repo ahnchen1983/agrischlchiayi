@@ -21,11 +21,6 @@ const navConfig = [
   { path: '/contribute', label: t('nav.contribute') },
   { path: '/data', label: t('nav.data') },
   { path: '/resources', label: t('nav.resources') },
-  { path: '/contribute', label: t('nav.contribute') },
-  { path: '/resources', label: t('nav.resources') },
-  { path: '/data', label: t('nav.data') },
-  { path: '/assets', label: t('nav.assets') },
-  { path: '/projects', label: t('nav.projects') },
 ].map((item) => {
   const fullPath = translatePath(item.path);
   const pathWithoutHash = fullPath.replace(/#.*$/, '');
