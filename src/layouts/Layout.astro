@@ -1451,7 +1451,7 @@ const navConfig = [
   main
     a:not(.nav-link):not([class*='btn']):not(.card-link):not(.logo):not(
       .category-card
-    ):not(.floating-md):not(.search-item) {
+    ):not(.floating-md):not(.search-item):not(.reading-step):not(.update-item) {
     color: #475569;
     text-decoration: none;
     border-bottom: 1px solid #cbd5e1;
@@ -1461,7 +1461,9 @@ const navConfig = [
   main
     a:not(.nav-link):not([class*='btn']):not(.card-link):not(.logo):not(
       .category-card
-    ):not(.floating-md):not(.search-item):hover {
+    ):not(.floating-md):not(.search-item):not(.reading-step):not(
+      .update-item
+    ):hover {
     color: #1a1a2e;
     border-bottom-color: #64748b;
   }
