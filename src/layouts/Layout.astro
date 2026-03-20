@@ -134,18 +134,44 @@ const i18n = {
   },
 };
 
-// Language switch logic
+// Language switch logic — uses _translations.json for article slug mapping
 let zhLink = '/';
 let enLink = '/en';
 
-if (currentPath.startsWith('/en')) {
-  // Current is EN, switch to ZH: remove /en prefix
-  zhLink = currentPath.replace(/^\/en/, '') || '/';
-  enLink = currentPath;
+// Load translations map for accurate language switching
+let translationsMap: Record<string, string> = {};
+try {
+  const translationsPath = resolve(process.cwd(), 'knowledge', '_translations.json');
+  translationsMap = JSON.parse(await readFile(translationsPath, 'utf-8'));
+} catch {}
+
+// Build reverse map: zh path → en path
+const zhToEn: Record<string, string> = {};
+for (const [enFile, zhFile] of Object.entries(translationsMap)) {
+  // enFile: "en/Culture/slug-name.md" → "/en/culture/slug-name"
+  // zhFile: "Culture/中文名稱.md" → "/culture/中文名稱"
+  const enParts = enFile.replace(/\.md$/, '').split('/');
+  const zhParts = (zhFile as string).replace(/\.md$/, '').split('/');
+  if (enParts.length >= 3 && zhParts.length >= 2) {
+    const enUrl = `/en/${enParts[1].toLowerCase()}/${enParts[2]}`;
+    const zhUrl = `/${zhParts[0].toLowerCase()}/${zhParts[1]}`;
+    zhToEn[zhUrl] = enUrl;
+    // Also store reverse: en → zh
+    zhToEn[enUrl] = zhUrl;
+  }
+}
+
+// Normalize path (remove trailing slash)
+const normalizedPath = currentPath.replace(/\/$/, '') || '/';
+
+if (normalizedPath.startsWith('/en')) {
+  enLink = normalizedPath;
+  // Try mapped zh link first, fallback to prefix removal
+  zhLink = zhToEn[normalizedPath] || normalizedPath.replace(/^\/en/, '') || '/';
 } else {
-  // Current is ZH, switch to EN: add /en prefix
-  zhLink = currentPath;
-  enLink = '/en' + (currentPath === '/' ? '' : currentPath);
+  zhLink = normalizedPath;
+  // Try mapped en link first, fallback to prefix addition
+  enLink = zhToEn[normalizedPath] || '/en' + (normalizedPath === '/' ? '' : normalizedPath);
 }
 
 const navConfig = [
