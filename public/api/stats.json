@@ -1,12 +1,12 @@
 {
-  "totalArticles": 666,
+  "totalArticles": 676,
   "totalCategories": 15,
-  "estimatedContributors": 45,
-  "totalTags": 1515,
+  "estimatedContributors": 46,
+  "totalTags": 1565,
   "categories": [
     {
       "name": "en",
-      "count": 339
+      "count": 345
     },
     {
       "name": "History",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Food",
-      "count": 25
+      "count": 28
     },
     {
       "name": "Technology",
@@ -50,7 +50,7 @@
     },
     {
       "name": "Lifestyle",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Music",
@@ -75,11 +75,11 @@
       "count": 19
     },
     {
-      "name": "literature",
-      "count": 12
+      "name": "people",
+      "count": 14
     },
     {
-      "name": "people",
+      "name": "literature",
       "count": 12
     },
     {
@@ -119,6 +119,10 @@
       "count": 9
     },
     {
+      "name": "生活",
+      "count": 9
+    },
+    {
       "name": "culture",
       "count": 9
     },
@@ -131,25 +135,21 @@
       "count": 8
     },
     {
-      "name": "生活",
+      "name": "流行音樂",
       "count": 8
     },
     {
-      "name": "流行音樂",
+      "name": "Taiwan",
       "count": 8
     },
     {
       "name": "history",
       "count": 7
-    },
-    {
-      "name": "民主化",
-      "count": 7
     }
   ],
   "languageDistribution": {
-    "zh-TW": 666,
+    "zh-TW": 676,
     "en": 0
   },
-  "lastUpdated": "2026-03-20T08:17:50.417Z"
+  "lastUpdated": "2026-03-20T08:49:18.134Z"
 }
