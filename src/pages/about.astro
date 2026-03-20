@@ -333,10 +333,6 @@ import ProticoScript from '../components/ProticoScript.astro';
             <span class="link-icon">💻</span>
             <span class="link-text">@frank890417</span>
           </a>
-          <a href="https://x.com/taiwandotmd" target="_blank" class="link-inline">
-            <span class="link-icon">𝕏</span>
-            <span class="link-text">@taiwandotmd</span>
-          </a>
           <a href="https://instagram.com/cheyuwu345" target="_blank" class="link-inline">
             <span class="link-icon">📷</span>
             <span class="link-text">@cheyuwu345</span>
@@ -1382,9 +1378,10 @@ import ProticoScript from '../components/ProticoScript.astro';
   /* Founder Links - 改為 inline 小方塊 */
   .founder-links-inline {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.75rem;
     justify-content: center;
+    margin-bottom: 3rem;
   }
 
   .link-inline {
@@ -2002,6 +1999,7 @@ import ProticoScript from '../components/ProticoScript.astro';
     }
 
     .founder-links-inline {
+      flex-wrap: wrap;
       justify-content: center;
       margin-top: 1.5rem;
     }
