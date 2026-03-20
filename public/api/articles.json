@@ -6012,6 +6012,24 @@
     "path": "en/Geography/climate.md"
   },
   {
+    "title": "Contemporary Indigenous Art in Taiwan",
+    "description": "From traditional crafts to contemporary creation, explore how Taiwanese indigenous artists find their voice on the global art stage, redefining the dialogue between indigenous identity and contemporary art",
+    "category": "en",
+    "tags": [
+      "indigenous art",
+      "contemporary art",
+      "traditional crafts",
+      "identity",
+      "artists",
+      "cultural revitalization"
+    ],
+    "url": "https://taiwan.md/en/Art/contemporary-indigenous-art-taiwan",
+    "readingTime": 62,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Art/contemporary-indigenous-art-taiwan.md"
+  },
+  {
     "title": "Contemporary Indigenous Singer‑Songwriters in Taiwan",
     "description": "From A‑mei to Suming and Sangpuy, Indigenous artists have carried ancestral languages into modern music—building Taiwan’s most distinctive and globally recognizable sound.",
     "category": "en",
@@ -7658,6 +7676,24 @@
     "path": "en/Technology/taiwan-ai-labs.md"
   },
   {
+    "title": "Taiwan Alpine Ecosystems and Glacial Relicts",
+    "description": "Exploring the unique ecosystems of Taiwan's mountains above 3,000 meters, from Taiwan red cypress and Yushan rhododendron to precious biodiversity of glacial relict species",
+    "category": "en",
+    "tags": [
+      "alpine ecology",
+      "glacial relicts",
+      "Taiwan cypress",
+      "alpine plants",
+      "biodiversity",
+      "climate change"
+    ],
+    "url": "https://taiwan.md/en/Nature/taiwan-alpine-ecosystems-glacial-relicts",
+    "readingTime": 61,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Nature/taiwan-alpine-ecosystems-glacial-relicts.md"
+  },
+  {
     "title": "Taiwan Baseball Culture",
     "description": "From the legendary Red Leaf Little League to CPBL tears and triumphs — how baseball became Taiwan's 'national sport'",
     "category": "en",
@@ -7746,6 +7782,43 @@
     "featured": true,
     "date": "2026-03-18",
     "path": "en/Technology/taiwan-electric-vehicle-industry-chain.md"
+  },
+  {
+    "title": "Taiwan Environmental Justice and NIMBY Conflicts",
+    "description": "Exploring Taiwan's unequal environmental burden distribution, from incinerators and nuclear waste to petrochemical industry NIMBY conflicts, analyzing environmental inequality and social justice issues",
+    "category": "en",
+    "tags": [
+      "environmental justice",
+      "NIMBY effect",
+      "environmental inequality",
+      "social justice",
+      "incinerators",
+      "nuclear waste",
+      "petrochemical industry"
+    ],
+    "url": "https://taiwan.md/en/Society/taiwan-environmental-justice-nimby-conflicts",
+    "readingTime": 88,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Society/taiwan-environmental-justice-nimby-conflicts.md"
+  },
+  {
+    "title": "Taiwan Environmental Movement History",
+    "description": "The evolution of Taiwan's environmental movement from 1980s anti-pollution protests to recent plastic reduction campaigns, witnessing the awakening of environmental consciousness intertwined with Taiwan's democratization process",
+    "category": "en",
+    "tags": [
+      "environmental movement",
+      "environmental protection",
+      "social movements",
+      "anti-nuclear movement",
+      "air pollution",
+      "marine conservation"
+    ],
+    "url": "https://taiwan.md/en/Nature/taiwan-environmental-movement-history",
+    "readingTime": 44,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Nature/taiwan-environmental-movement-history.md"
   },
   {
     "title": "Taiwan Floral Fabric",
@@ -7888,6 +7961,24 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "en/Nature/taiwan-marine-conservation-and-challenges.md"
+  },
+  {
+    "title": "Taiwan Marine Ecology and Coral Reef Conservation",
+    "description": "Taiwan, surrounded by ocean waters, possesses rich marine ecosystems. From coral bleaching crises to cetacean conservation, exploring the protection effectiveness and future challenges of marine national parks",
+    "category": "en",
+    "tags": [
+      "marine ecology",
+      "coral reef conservation",
+      "cetacean conservation",
+      "marine national parks",
+      "marine protected areas",
+      "biodiversity"
+    ],
+    "url": "https://taiwan.md/en/Nature/taiwan-marine-ecology-coral-reef-conservation",
+    "readingTime": 72,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Nature/taiwan-marine-ecology-coral-reef-conservation.md"
   },
   {
     "title": "Taiwan New Media Art",
@@ -9051,6 +9142,25 @@
     "featured": true,
     "date": "2026-03-18",
     "path": "en/Art/taiwanese-experimental-and-new-media-art.md"
+  },
+  {
+    "title": "Taiwanese Indigenous Ecological Wisdom and Environmental Conservation",
+    "description": "Exploring the traditional ecological knowledge accumulated by Taiwan's indigenous peoples over thousands of years, and its important value and practical applications in modern environmental conservation",
+    "category": "en",
+    "tags": [
+      "indigenous peoples",
+      "ecological wisdom",
+      "environmental conservation",
+      "traditional knowledge",
+      "satoyama initiative",
+      "hunting culture",
+      "sustainable development"
+    ],
+    "url": "https://taiwan.md/en/Nature/taiwanese-indigenous-ecological-wisdom-conservation",
+    "readingTime": 75,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/Nature/taiwanese-indigenous-ecological-wisdom-conservation.md"
   },
   {
     "title": "Taiwanese Life Ceremony Traditions: Marriage, Funeral Rites, and Ritual Celebrations",

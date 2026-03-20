@@ -1,299 +1,333 @@
 [
   {
-    "title": "台灣電子音樂與派對文化：從地下 Rave 到國際舞台",
-    "description": "從1990年代 Rave 派對文化到 Road to Ultra 電音節，台灣電子音樂如何從地下走向主流，孕育出國際級 DJ 與獨立電子廠牌",
-    "category": "Music",
-    "tags": [
-      "電子音樂",
-      "Rave",
-      "派對文化",
-      "DJ",
-      "電音節",
-      "地下音樂"
-    ],
-    "url": "https://taiwan.md/Music/%E5%8F%B0%E7%81%A3%E9%9B%BB%E5%AD%90%E9%9F%B3%E6%A8%82%E8%88%87%E6%B4%BE%E5%B0%8D%E6%96%87%E5%8C%96",
-    "readingTime": 11,
-    "featured": true,
-    "date": "2026-03-19",
-    "path": "Music/台灣電子音樂與派對文化.md"
-  },
-  {
-    "title": "珍珠奶茶",
-    "description": "從台灣夜市小攤到全球飲品帝國，珍珠奶茶的起源爭議與文化征服之路",
-    "category": "Food",
-    "tags": [
-      "美食",
-      "珍珠奶茶",
-      "手搖飲",
-      "全球化",
-      "軟實力",
-      "文化外交"
-    ],
-    "url": "https://taiwan.md/Food/%E7%8F%8D%E7%8F%A0%E5%A5%B6%E8%8C%B6",
-    "readingTime": 16,
-    "featured": true,
-    "date": "2026-03-17",
-    "path": "Food/珍珠奶茶.md"
-  },
-  {
-    "title": "台灣海洋生態",
-    "description": "黑潮、珊瑚礁與海洋生物多樣性：台灣海域的生態奇蹟與保育挑戰",
-    "category": "Nature",
+    "title": "Zhong Lihe: The Eternal Seeker of Nativeland",
+    "description": "Author of 'The Man from Nativeland', revered as the Father of Taiwan Literature, a literary warrior who persisted in writing despite poverty and illness",
+    "category": "en",
     "tags": [],
-    "url": "https://taiwan.md/Nature/%E5%8F%B0%E7%81%A3%E6%B5%B7%E6%B4%8B%E7%94%9F%E6%85%8B",
-    "readingTime": 19,
+    "url": "https://taiwan.md/en/People/zhong-lihe-nativeland-eternal-seeker",
+    "readingTime": 39,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "en/People/zhong-lihe-nativeland-eternal-seeker.md"
+  },
+  {
+    "title": "台灣原住民族土地正義與傳統領域",
+    "description": "探討台灣原住民族土地權利的歷史脈絡、法律發展、傳統領域劃設爭議與原住民族轉型正義委員會的工作成果",
+    "category": "Society",
+    "tags": [
+      "原住民族",
+      "土地正義",
+      "傳統領域",
+      "轉型正義",
+      "原轉會",
+      "土地權利"
+    ],
+    "url": "https://taiwan.md/Society/%E5%8F%B0%E7%81%A3%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E5%9C%9F%E5%9C%B0%E6%AD%A3%E7%BE%A9%E8%88%87%E5%82%B3%E7%B5%B1%E9%A0%98%E5%9F%9F",
+    "readingTime": 16,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "Society/台灣原住民族土地正義與傳統領域.md"
+  },
+  {
+    "title": "台灣散文",
+    "description": "",
+    "category": "Art",
+    "tags": [
+      "文學",
+      "散文",
+      "生活書寫"
+    ],
+    "url": "https://taiwan.md/Art/%E5%8F%B0%E7%81%A3%E6%95%A3%E6%96%87",
+    "readingTime": 15,
     "featured": false,
     "date": "2026-03-18",
-    "path": "Nature/台灣海洋生態.md"
+    "path": "Art/台灣散文.md"
   },
   {
-    "title": "台灣產業轉型升級：從製造大國到創新強國",
-    "description": "台灣產業結構從勞力密集轉向知識密集，透過5+2產業創新、6大核心戰略產業等政策，推動傳統製造業升級與新興產業發展。",
-    "category": "Economy",
+    "title": "台灣發酵食品與醃製文化",
+    "description": "從臭豆腐到豆腐乳，探索台灣獨特的發酵技術與醃製文化傳統",
+    "category": "Food",
     "tags": [
-      "經濟",
-      "產業政策",
-      "轉型升級",
-      "創新",
-      "製造業",
-      "高科技"
+      "發酵食品",
+      "醃製文化",
+      "臭豆腐",
+      "豆腐乳",
+      "泡菜",
+      "傳統技術",
+      "微生物"
     ],
-    "url": "https://taiwan.md/Economy/%E5%8F%B0%E7%81%A3%E7%94%A2%E6%A5%AD%E8%BD%89%E5%9E%8B%E5%8D%87%E7%B4%9A%EF%BC%9A%E5%BE%9E%E8%A3%BD%E9%80%A0%E5%A4%A7%E5%9C%8B%E5%88%B0%E5%89%B5%E6%96%B0%E5%BC%B7%E5%9C%8B",
-    "readingTime": 17,
-    "featured": true,
-    "date": "2026-03-19",
-    "path": "Economy/台灣產業轉型升級：從製造大國到創新強國.md"
+    "url": "https://taiwan.md/Food/%E5%8F%B0%E7%81%A3%E7%99%BC%E9%85%B5%E9%A3%9F%E5%93%81%E8%88%87%E9%86%83%E8%A3%BD%E6%96%87%E5%8C%96",
+    "readingTime": 15,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "Food/台灣發酵食品與醃製文化.md"
   },
   {
-    "title": "楊傳廣",
-    "description": "亞洲鐵人，1960羅馬奧運十項全能銀牌，台灣首位奧運獎牌得主",
+    "title": "人間雜誌",
+    "description": "47 期，四年，一場用攝影和文字發動的安靜革命——台灣報導文學的起點",
+    "category": "Culture",
+    "tags": [],
+    "url": "https://taiwan.md/Culture/%E4%BA%BA%E9%96%93%E9%9B%9C%E8%AA%8C",
+    "readingTime": 15,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "Culture/人間雜誌.md"
+  },
+  {
+    "title": "鄭南榕",
+    "description": "言論自由殉道者，《自由時代》雜誌創辦人，4月7日言論自由日紀念人物",
     "category": "People",
     "tags": [
-      "體育",
-      "田徑",
-      "奧運",
-      "十項全能",
-      "原住民",
-      "阿美族"
+      "民主運動",
+      "言論自由",
+      "政治雜誌",
+      "自由時代",
+      "殉道者"
     ],
-    "url": "https://taiwan.md/People/%E6%A5%8A%E5%82%B3%E5%BB%A3",
+    "url": "https://taiwan.md/People/%E9%84%AD%E5%8D%97%E6%A6%95",
+    "readingTime": 8,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "People/鄭南榕.md"
+  },
+  {
+    "title": "氣候",
+    "description": "台灣多樣的亞熱帶季風氣候，從季風系統到颱風，影響島嶼生活的天氣密碼",
+    "category": "Geography",
+    "tags": [
+      "氣候",
+      "季風",
+      "颱風",
+      "梅雨",
+      "氣候變遷",
+      "降雨"
+    ],
+    "url": "https://taiwan.md/Geography/%E6%B0%A3%E5%80%99",
+    "readingTime": 15,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "Geography/氣候.md"
+  },
+  {
+    "title": "龍應台",
+    "description": "《野火集》作者，華語世界最具影響力的散文家與前台灣文化部長",
+    "category": "People",
+    "tags": [
+      "人物",
+      "龍應台",
+      "野火集",
+      "大江大海",
+      "散文家",
+      "文化部長",
+      "公共知識分子"
+    ],
+    "url": "https://taiwan.md/People/%E9%BE%8D%E6%87%89%E5%8F%B0",
+    "readingTime": 9,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "People/龍應台.md"
+  },
+  {
+    "title": "日治時期",
+    "description": "1895-1945年日本統治台灣50年，帶來全面現代化建設與制度化管理，同時實施同化政策，深刻影響台灣社會發展",
+    "category": "History",
+    "tags": [
+      "History",
+      "日本統治",
+      "現代化",
+      "皇民化運動"
+    ],
+    "url": "https://taiwan.md/History/%E6%97%A5%E6%B2%BB%E6%99%82%E6%9C%9F",
+    "readingTime": 7,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "History/日治時期.md"
+  },
+  {
+    "title": "席慕蓉",
+    "description": "《七里香》《無怨的青春》作者，華語詩壇最暢銷詩人，蒙古族",
+    "category": "People",
+    "tags": [
+      "人物",
+      "席慕蓉",
+      "七里香",
+      "無怨的青春",
+      "詩人",
+      "蒙古族",
+      "散文家"
+    ],
+    "url": "https://taiwan.md/People/%E5%B8%AD%E6%85%95%E8%93%89",
+    "readingTime": 12,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "People/席慕蓉.md"
+  },
+  {
+    "title": "鄧雨賢",
+    "description": "台灣歌謠之父，創作《望春風》《雨夜花》《月夜愁》等經典台語歌謠",
+    "category": "People",
+    "tags": [
+      "音樂",
+      "台語歌謠",
+      "作曲家",
+      "日治時期",
+      "古典音樂",
+      "桃園"
+    ],
+    "url": "https://taiwan.md/People/%E9%84%A7%E9%9B%A8%E8%B3%A2",
+    "readingTime": 7,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "People/鄧雨賢.md"
+  },
+  {
+    "title": "為什麼台灣需要自己的知識庫",
+    "description": "當 AI 模型用人類的語言說著別人寫的故事，台灣人要怎麼確保自己的故事不被改寫？",
+    "category": "About",
+    "tags": [
+      "AI",
+      "資訊戰",
+      "開源",
+      "SSOT",
+      "知識主權",
+      "台灣"
+    ],
+    "url": "https://taiwan.md/About/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8F%B0%E7%81%A3%E9%9C%80%E8%A6%81%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9F%A5%E8%AD%98%E5%BA%AB",
+    "readingTime": 11,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "About/為什麼台灣需要自己的知識庫.md"
+  },
+  {
+    "title": "台灣文化創意園區發展",
+    "description": "從舊建築活化到創意聚落，台灣文化創意園區的發展歷程與創新模式",
+    "category": "Culture",
+    "tags": [
+      "文創園區",
+      "舊建築活化",
+      "創意產業",
+      "都市更新",
+      "文化保存"
+    ],
+    "url": "https://taiwan.md/Culture/%E5%8F%B0%E7%81%A3%E6%96%87%E5%8C%96%E5%89%B5%E6%84%8F%E5%9C%92%E5%8D%80%E7%99%BC%E5%B1%95",
+    "readingTime": 18,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "Culture/台灣文化創意園區發展.md"
+  },
+  {
+    "title": "台灣新媒體藝術",
+    "description": "",
+    "category": "Art",
+    "tags": [
+      "新媒體藝術",
+      "數位藝術",
+      "科技藝術",
+      "生成藝術"
+    ],
+    "url": "https://taiwan.md/Art/%E5%8F%B0%E7%81%A3%E6%96%B0%E5%AA%92%E9%AB%94%E8%97%9D%E8%A1%93",
+    "readingTime": 24,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "Art/台灣新媒體藝術.md"
+  },
+  {
+    "title": "台灣豆漿與早餐店",
+    "description": "從永和豆漿的起源神話到美而美加盟王國，探索台灣早餐店的密度傳奇",
+    "category": "Food",
+    "tags": [
+      "豆漿",
+      "早餐店",
+      "永和豆漿",
+      "燒餅油條",
+      "美而美"
+    ],
+    "url": "https://taiwan.md/Food/%E5%8F%B0%E7%81%A3%E8%B1%86%E6%BC%BF%E8%88%87%E6%97%A9%E9%A4%90%E5%BA%97",
+    "readingTime": 10,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "Food/台灣豆漿與早餐店.md"
+  },
+  {
+    "title": "翁啟惠",
+    "description": "醣化學世界權威，中研院前院長，諾貝爾獎候選人",
+    "category": "People",
+    "tags": [
+      "學者",
+      "化學",
+      "中研院",
+      "醣化學",
+      "浩鼎案"
+    ],
+    "url": "https://taiwan.md/People/%E7%BF%81%E5%95%9F%E6%83%A0",
     "readingTime": 6,
     "featured": false,
     "date": "2026-03-19",
-    "path": "People/楊傳廣.md"
+    "path": "People/翁啟惠.md"
   },
   {
-    "title": "人權與性別平等",
-    "description": "台灣在人權保障與性別平等方面的進步歷程，從威權體制下的人權侵害到成為亞洲人權先驅",
-    "category": "Society",
+    "title": "台灣麵食文化",
+    "description": "從擔仔麵到牛肉麵，從陽春麵到乾拌麵，台灣麵食文化融合閩南、外省與創新元素，形成獨特的麵條飲食傳統",
+    "category": "Food",
     "tags": [
-      "Society",
-      "人權",
-      "性別平等",
-      "同性婚姻",
-      "轉型正義"
+      "麵食",
+      "飲食文化",
+      "台灣料理",
+      "外省菜",
+      "閩南菜"
     ],
-    "url": "https://taiwan.md/Society/%E4%BA%BA%E6%AC%8A%E8%88%87%E6%80%A7%E5%88%A5%E5%B9%B3%E7%AD%89",
+    "url": "https://taiwan.md/Food/%E5%8F%B0%E7%81%A3%E9%BA%B5%E9%A3%9F%E6%96%87%E5%8C%96",
     "readingTime": 8,
     "featured": false,
-    "date": "2026-03-17",
-    "path": "Society/人權與性別平等.md"
-  },
-  {
-    "title": "Transportation System",
-    "description": "High-speed rail connects north to south in 90 minutes, metro weaves urban arteries, scooters navigate through alleys",
-    "category": "en",
-    "tags": [
-      "lifestyle",
-      "transportation",
-      "high-speed rail",
-      "metro",
-      "scooters",
-      "Taiwan"
-    ],
-    "url": "https://taiwan.md/en/Lifestyle/transportation-system",
-    "readingTime": 47,
-    "featured": false,
-    "date": "2026-03-17",
-    "path": "en/Lifestyle/transportation-system.md"
-  },
-  {
-    "title": "Human Rights and Gender Equality",
-    "description": "Taiwan's progressive journey in human rights protection and gender equality, from authoritarian human rights violations to becoming Asia's pioneer in human rights",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/Society/human-rights-and-gender-equality",
-    "readingTime": 33,
-    "featured": false,
-    "date": "2026-03-17",
-    "path": "en/Society/human-rights-and-gender-equality.md"
-  },
-  {
-    "title": "Crowd Lu (盧廣仲)",
-    "description": "Taiwanese singer-songwriter and actor who captured hearts with his grassroots charm and unique vocal style, becoming the youngest triple-crown winner of Taiwan's Golden Melody, Golden Bell, and Golden Horse Awards",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/People/crowd-lu-indie-folk-treasure",
-    "readingTime": 29,
-    "featured": false,
     "date": "2026-03-20",
-    "path": "en/People/crowd-lu-indie-folk-treasure.md"
+    "path": "Food/台灣麵食文化.md"
   },
   {
-    "title": "City Character and Regional Cultures",
-    "description": "How Taiwan’s cities—from Taipei’s global core to Tainan’s old‑capital soul—shape local identity and everyday life",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/Geography/city-character-and-regional-cultures",
-    "readingTime": 28,
-    "featured": true,
-    "date": "2026-03-18",
-    "path": "en/Geography/city-character-and-regional-cultures.md"
-  },
-  {
-    "title": "Chen Wei-yin: Taiwan's MLB Pioneer",
-    "description": "Taiwan's successful Major League Baseball pitcher who brought pride to Taiwan on international baseball's biggest stage",
-    "category": "en",
+    "title": "蕭敬騰",
+    "description": "台灣「雨神」，金曲歌王，從街頭藝人蛻變為國際舞台巨星",
+    "category": "People",
     "tags": [
-      "baseball",
-      "MLB",
-      "sports",
-      "athlete",
-      "pitcher"
+      "音樂",
+      "流行音樂",
+      "爵士樂",
+      "街頭藝人",
+      "金曲獎",
+      "雨神"
     ],
-    "url": "https://taiwan.md/en/People/chen-wei-yin-mlb-pitcher",
-    "readingTime": 37,
+    "url": "https://taiwan.md/People/%E8%95%AD%E6%95%AC%E9%A8%B0",
+    "readingTime": 7,
     "featured": false,
-    "date": "2026-03-20",
-    "path": "en/People/chen-wei-yin-mlb-pitcher.md"
+    "date": "2026-03-19",
+    "path": "People/蕭敬騰.md"
   },
   {
-    "title": "Clash of Civilizations on Keyboards: A Century of East Asian Input Method Evolution",
-    "description": "When keyboards worldwide look identical, how do different civilizations fit their scripts into 26 English letters? From Taiwan's Zhuyin to Korea's Dubeolsik, input methods are a silent cultural preservation battle",
+    "title": "魏德聖",
+    "description": "用電影書寫台灣史詩，從《海角七號》到《賽德克・巴萊》的夢想實踐者",
+    "category": "People",
+    "tags": [
+      "人物",
+      "導演",
+      "電影",
+      "台灣電影",
+      "原住民文化",
+      "海角七號",
+      "賽德克巴萊"
+    ],
+    "url": "https://taiwan.md/People/%E9%AD%8F%E5%BE%B7%E8%81%96",
+    "readingTime": 8,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "People/魏德聖.md"
+  },
+  {
+    "title": "Audrey Tang",
+    "description": "World's first transgender cabinet minister and pioneering practitioner of open government and digital democracy",
     "category": "en",
     "tags": [],
-    "url": "https://taiwan.md/en/Technology/east-asian-input-methods",
-    "readingTime": 61,
-    "featured": true,
-    "date": "2026-03-19",
-    "path": "en/Technology/east-asian-input-methods.md"
-  },
-  {
-    "title": "democracy-and-democratization",
-    "description": "Taiwan's successful democratization holds significant historical and contemporary importance. It proves that Chinese soc",
-    "category": "en",
-    "tags": [
-      "history",
-      "democratization",
-      "politics"
-    ],
-    "url": "https://taiwan.md/en/History/democracy-and-democratization",
-    "readingTime": 30,
+    "url": "https://taiwan.md/en/People/audrey-tang",
+    "readingTime": 54,
     "featured": false,
     "date": "2026-03-17",
-    "path": "en/History/democracy-and-democratization.md"
-  },
-  {
-    "title": "Dutch, Spanish and Koxinga Era",
-    "description": "Taiwan's first systematic colonial rule, from the Dutch establishment of Fort Zeelandia to Koxinga's founding of Taiwan, laying the foundation for Han Chinese settlement and political institutions",
-    "category": "en",
-    "tags": [
-      "History",
-      "Dutch East India Company",
-      "Kingdom of Tungning",
-      "Koxinga"
-    ],
-    "url": "https://taiwan.md/en/History/dutch-spanish-and-koxinga-era",
-    "readingTime": 42,
-    "featured": false,
-    "date": "2026-03-17",
-    "path": "en/History/dutch-spanish-and-koxinga-era.md"
-  },
-  {
-    "title": "Mayday (五月天)",
-    "description": "From a high school band in Taipei to a generational symbol of Mandarin rock—how Mayday turned youthful sincerity into Taiwan’s loudest cultural heartbeat",
-    "category": "en",
-    "tags": [
-      "people",
-      "band",
-      "rock",
-      "mandarin-pop",
-      "golden-melody-awards",
-      "live-concerts"
-    ],
-    "url": "https://taiwan.md/en/People/mayday",
-    "readingTime": 25,
-    "featured": false,
-    "date": "2026-03-19",
-    "path": "en/People/mayday.md"
-  },
-  {
-    "title": "Lee Teng-hui",
-    "description": "Architect of Taiwan’s ‘quiet revolution,’ often called ‘Mr. Democracy’ for leading the island’s peaceful democratic transition.",
-    "category": "en",
-    "tags": [
-      "people",
-      "politics",
-      "democratization",
-      "president"
-    ],
-    "url": "https://taiwan.md/en/People/lee-teng-hui",
-    "readingTime": 20,
-    "featured": false,
-    "date": "2026-03-19",
-    "path": "en/People/lee-teng-hui.md"
-  },
-  {
-    "title": "Contemporary Taiwanese Literature",
-    "description": "",
-    "category": "en",
-    "tags": [
-      "literature",
-      "contemporary",
-      "diversity"
-    ],
-    "url": "https://taiwan.md/en/Art/contemporary-taiwanese-literature",
-    "readingTime": 46,
-    "featured": false,
-    "date": "2026-03-19",
-    "path": "en/Art/contemporary-taiwanese-literature.md"
-  },
-  {
-    "title": "Chi Cheng: The Flying Antelope",
-    "description": "The Flying Antelope, bronze medalist in 80m hurdles at 1968 Mexico Olympics",
-    "category": "en",
-    "tags": [
-      "sports",
-      "track and field",
-      "Olympics",
-      "hurdles"
-    ],
-    "url": "https://taiwan.md/en/People/chi-cheng-flying-antelope",
-    "readingTime": 34,
-    "featured": false,
-    "date": "2026-03-20",
-    "path": "en/People/chi-cheng-flying-antelope.md"
-  },
-  {
-    "title": "Lee Yuan-tseh",
-    "description": "",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/People/lee-yuan-tseh",
-    "readingTime": 59,
-    "featured": false,
-    "date": "2026-03-17",
-    "path": "en/People/lee-yuan-tseh.md"
-  },
-  {
-    "title": "Braised Pork Rice (滷肉飯): Taiwan’s Everyday National Dish",
-    "description": "From military dependents’ kitchens to a nationwide comfort food, the north–south debate and cultural meaning of braised pork rice",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/Food/braised-pork-rice",
-    "readingTime": 21,
-    "featured": true,
-    "date": "2026-03-19",
-    "path": "en/Food/braised-pork-rice.md"
+    "path": "en/People/audrey-tang.md"
   }
 ]

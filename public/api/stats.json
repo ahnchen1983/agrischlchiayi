@@ -1,12 +1,12 @@
 {
-  "totalArticles": 660,
+  "totalArticles": 666,
   "totalCategories": 15,
-  "estimatedContributors": 44,
-  "totalTags": 1482,
+  "estimatedContributors": 45,
+  "totalTags": 1515,
   "categories": [
     {
       "name": "en",
-      "count": 333
+      "count": 339
     },
     {
       "name": "History",
@@ -148,8 +148,8 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 660,
+    "zh-TW": 666,
     "en": 0
   },
-  "lastUpdated": "2026-03-20T07:49:39.839Z"
+  "lastUpdated": "2026-03-20T08:17:50.417Z"
 }
