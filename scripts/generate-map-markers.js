@@ -28,6 +28,23 @@ function parseFrontmatter(content) {
   return fm;
 }
 
+// 從檔名推測分類
+function inferCategoryFromFilename(filename) {
+  if (filename.includes('半導體') || filename.includes('科技') || filename.includes('數位') || filename.includes('AI')) return 'technology';
+  if (filename.includes('水果') || filename.includes('茶') || filename.includes('美食') || filename.includes('小吃')) return 'food';
+  if (filename.includes('海岸') || filename.includes('地形') || filename.includes('地理') || filename.includes('河流')) return 'geography';
+  if (filename.includes('選舉') || filename.includes('政治') || filename.includes('民主') || filename.includes('社會')) return 'society';
+  if (filename.includes('城市') || filename.includes('生活') || filename.includes('都市')) return 'lifestyle';
+  if (filename.includes('醫療') || filename.includes('健保')) return 'society';
+  if (filename.includes('經濟') || filename.includes('企業') || filename.includes('產業')) return 'economy';
+  if (filename.includes('文化') || filename.includes('廟') || filename.includes('原住民')) return 'culture';
+  if (filename.includes('歷史') || filename.includes('戰爭') || filename.includes('殖民')) return 'history';
+  if (filename.includes('藝術') || filename.includes('電影') || filename.includes('攝影')) return 'art';
+  if (filename.includes('音樂') || filename.includes('歌')) return 'music';
+  if (filename.includes('棒球') || filename.includes('運動') || filename.includes('麟洋')) return 'lifestyle';
+  return 'culture'; // 預設
+}
+
 // 從路徑推導分類
 function getCategoryFromPath(filePath) {
   const pathParts = filePath.split('/');
@@ -35,6 +52,11 @@ function getCategoryFromPath(filePath) {
   
   if (categoryIndex !== -1 && categoryIndex + 1 < pathParts.length) {
     const category = pathParts[categoryIndex + 1];
+    // 如果下一個 part 就是 .md 檔案（根目錄文件），不是分類目錄
+    if (category.endsWith('.md')) {
+      // 從 frontmatter 或檔名推測
+      return inferCategoryFromFilename(path.basename(filePath, '.md'));
+    }
     // 轉成小寫英文
     const categoryMap = {
       'Food': 'food',
@@ -116,15 +138,19 @@ function matchLocations(title, content) {
   for (const [landmarkName, landmarkData] of Object.entries(landmarks)) {
     let score = 0;
     
-    // 標題匹配 (最高分)
+    // 標題匹配 (最高分) — 標題含地標名幾乎確定相關
     if (title.includes(landmarkName)) score += 100;
-    if (titleLower.includes(landmarkName.toLowerCase())) score += 80;
     
-    // 內容匹配
+    // 內容匹配 — 需要多次提及才算（1 次可能只是順帶提到）
     const contentMatches = (content.match(new RegExp(landmarkName, 'g')) || []).length;
-    score += contentMatches * 20;
+    if (contentMatches >= 3) {
+      score += contentMatches * 15;
+    } else if (contentMatches >= 1) {
+      score += contentMatches * 5; // 少量提及低分
+    }
     
-    if (score > 0) {
+    // 門檻：標題匹配或內容至少出現 3 次
+    if (score >= 45) {
       matches.push({
         name: landmarkName,
         type: 'landmark',
@@ -137,32 +163,52 @@ function matchLocations(title, content) {
   // 縣市匹配（較低優先級）
   for (const [cityName, cityData] of Object.entries(cities)) {
     let score = 0;
+    let matchCount = 0;
     
-    // 標題匹配
-    if (title.includes(cityName)) score += 50;
-    if (titleLower.includes(cityName.toLowerCase())) score += 40;
-    
-    // 內容匹配
-    const contentMatches = (content.match(new RegExp(cityName, 'g')) || []).length;
-    score += contentMatches * 10;
-    
-    // 特殊地名變體
-    const variants = {
-      '台北': ['臺北', 'taipei'],
-      '台中': ['臺中', 'taichung'],
-      '台南': ['臺南', 'tainan'],
-      '台東': ['臺東', 'taitung']
+    // 對「台X」系列城市，使用完整名稱匹配（包含市/縣）避免誤匹配
+    // 例如「台北」要匹配「台北市」「台北」但不能匹配「台灣」中的「台」
+    const fullNamePatterns = {
+      '台北': [/台北(?:市|車站|捷運|101|故宮|大學|盆地|港|松山|信義|大安|中山|萬華|士林|北投|內湖|南港|文山)/g, /台北(?![灣海商幣股積語諺裔僑])/g, /臺北/g],
+      '台中': [/台中(?:市|車站|捷運|歌劇院|國家|大學|盆地|港|公園)/g, /台中(?![灣海商幣股積語諺裔僑])/g, /臺中/g],
+      '台南': [/台南(?:市|車站|府城|孔廟|安平|赤崁|大學|運河)/g, /台南(?![灣海商幣股積語諺裔僑])/g, /臺南/g],
+      '台東': [/台東(?:市|車站|大學|縱谷|海岸|池上|知本|鹿野|蘭嶼)/g, /台東(?![灣海商幣股積語諺裔僑])/g, /臺東/g],
     };
     
-    if (variants[cityName]) {
-      for (const variant of variants[cityName]) {
-        if (contentLower.includes(variant.toLowerCase())) {
-          score += 15;
-        }
-      }
+    if (fullNamePatterns[cityName]) {
+      // 台X 系列：優先用精確模式（有後綴的）
+      const precisePattern = fullNamePatterns[cityName][0];
+      const preciseMatches = (content.match(precisePattern) || []).length;
+      const preciseTitleMatches = (title.match(precisePattern) || []).length;
+      
+      // 寬鬆模式（排除台灣等）
+      const loosePattern = fullNamePatterns[cityName][1];
+      const looseMatches = (content.match(loosePattern) || []).length;
+      const looseTitleMatches = (title.match(loosePattern) || []).length;
+      
+      // 臺X 變體
+      const variantPattern = fullNamePatterns[cityName][2];
+      const variantMatches = (content.match(variantPattern) || []).length;
+      
+      if (preciseTitleMatches > 0 || looseTitleMatches > 0) score += 50;
+      
+      // 精確匹配（帶後綴）計分更高
+      score += preciseMatches * 15;
+      // 寬鬆匹配計分較低（因為可能有誤匹配）
+      score += looseMatches * 5;
+      score += variantMatches * 10;
+      
+      matchCount = preciseMatches + looseMatches + variantMatches;
+    } else {
+      // 非台X系列：直接匹配
+      const cityPattern = new RegExp(cityName, 'g');
+      
+      if (title.includes(cityName)) score += 50;
+      matchCount = (content.match(cityPattern) || []).length;
+      score += matchCount * 10;
     }
     
-    if (score > 0) {
+    // 提高門檻：至少在文章中出現 3 次，或在標題中出現
+    if (score >= 30 && matchCount >= 2) {
       matches.push({
         name: cityName,
         type: 'city',
@@ -277,15 +323,9 @@ function generateMarkers() {
         locations = matchLocations(title, content);
       }
       
-      // 如果仍然沒有匹配到任何地點，使用台北作為預設
+      // 如果沒有匹配到任何地點，跳過此文章（不放在地圖上）
       if (locations.length === 0) {
-        locations.push({
-          name: '台北',
-          type: 'fallback',
-          city: '台北',
-          score: 1,
-          ...cities['台北']
-        });
+        continue;
       }
       
       // 為每個匹配的地點生成marker
