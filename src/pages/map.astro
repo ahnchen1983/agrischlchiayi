@@ -96,6 +96,7 @@ import routesData from '../data/map-routes.json';
         </div>
       </div>
 
+      <div class="mobile-overlay" id="mobileOverlay"></div>
       <aside class="map-panel" id="infoPanel">
         <div class="panel-content" id="defaultContent">
           <h3>台灣知識地圖</h3>
@@ -377,9 +378,47 @@ import routesData from '../data/map-routes.json';
     .map-panel { position: relative; top: auto; }
   }
   @media (max-width: 768px) {
+    .map-hero { padding: 2rem 1rem 1.5rem; }
     .map-hero h1 { font-size: 2.2rem; }
     .filter-buttons { justify-content: center; }
     .filter-btn { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
+    .route-section { padding: 0.75rem 1rem; }
+    .route-buttons { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 0.4rem; }
+    .route-btn { font-size: 0.78rem; padding: 0.4rem 0.75rem; flex-shrink: 0; }
+    .route-info { max-height: 50vh; overflow-y: auto; }
+
+    /* 手機版：浮動文章面板 */
+    .map-panel {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 1000;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+      max-height: 60vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .map-panel.mobile-show {
+      transform: translateY(0);
+    }
+    /* 手機版遮罩 */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    .mobile-overlay.active { display: block; }
+    .mobile-article-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .mobile-article-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 0.5rem; background: #f9fafb; border-radius: 8px;
+      text-decoration: none; color: #333; font-size: 0.9rem;
+    }
+    .mobile-article-item:active { background: #e5e7eb; }
+    .mobile-article-title { flex: 1; }
   }
 </style>
 
@@ -609,7 +648,24 @@ import routesData from '../data/map-routes.json';
     document.getElementById('backBtn').addEventListener('click', () => {
       document.getElementById('defaultContent').style.display = 'block';
       document.getElementById('articleContent').style.display = 'none';
+      closeMobilePanel();
     });
+
+    // 手機版遮罩點擊關閉
+    document.getElementById('mobileOverlay').addEventListener('click', () => {
+      closeMobilePanel();
+    });
+  }
+
+  function openMobilePanel() {
+    if (window.innerWidth <= 768) {
+      document.getElementById('infoPanel').classList.add('mobile-show');
+      document.getElementById('mobileOverlay').classList.add('active');
+    }
+  }
+  function closeMobilePanel() {
+    document.getElementById('infoPanel').classList.remove('mobile-show');
+    document.getElementById('mobileOverlay').classList.remove('active');
   }
 
   function applyFilters() {
@@ -643,6 +699,7 @@ import routesData from '../data/map-routes.json';
 
     document.getElementById('defaultContent').style.display = 'none';
     document.getElementById('articleContent').style.display = 'block';
+    openMobilePanel();
   }
 
   function showCountyArticles(countyName, region) {
@@ -659,6 +716,41 @@ import routesData from '../data/map-routes.json';
       });
       
       applyFilters();
+    }
+
+    // 手機版：顯示該區域的文章列表
+    if (window.innerWidth <= 768) {
+      const regionMarkers = markersData.filter(m => m.region === region);
+      const defaultContent = document.getElementById('defaultContent');
+      const articleContent = document.getElementById('articleContent');
+      
+      defaultContent.style.display = 'block';
+      articleContent.style.display = 'none';
+      
+      // 更新側欄內容為文章列表
+      const statsEl = defaultContent.querySelector('.stats');
+      const catDist = defaultContent.querySelector('.category-distribution');
+      const panelLinks = defaultContent.querySelector('.panel-links');
+      
+      if (statsEl) statsEl.style.display = 'none';
+      if (catDist) {
+        const regionName = { north: '北部', central: '中部', south: '南部', east: '東部', islands: '離島' }[region] || region;
+        catDist.innerHTML = `
+          <h4>${regionName}文章（${regionMarkers.length} 篇）</h4>
+          <div class="mobile-article-list">
+            ${regionMarkers.slice(0, 15).map(m => `
+              <a href="${m.link}" class="mobile-article-item">
+                <span class="category-color" style="background: ${categoryColors[m.category] || '#16a34a'}"></span>
+                <span class="mobile-article-title">${m.title}</span>
+              </a>
+            `).join('')}
+            ${regionMarkers.length > 15 ? `<p style="color:#999;font-size:0.8rem;margin-top:0.5rem">⋯及其他 ${regionMarkers.length - 15} 篇</p>` : ''}
+          </div>
+        `;
+      }
+      if (panelLinks) panelLinks.style.display = 'none';
+      
+      openMobilePanel();
     }
   }
 
