@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProticoScript from '../components/ProticoScript.astro';
+import i18nProgress from '../data/i18n-progress.json';
 ---
 
 <Layout
@@ -716,6 +717,68 @@ import ProticoScript from '../components/ProticoScript.astro';
       </div>
     </section>
   </div>
+
+  <!-- i18n Progress Section -->
+    <section class="i18n-progress-section">
+      <div class="i18n-inner">
+        <h2>📊 翻譯進度</h2>
+        <p class="i18n-desc">目前英文版本已完成 {i18nProgress.coverage_en}%，感謝所有翻譯志工！</p>
+        
+        <div class="progress-overview">
+          <div class="progress-main">
+            <h3>🇺🇸 English</h3>
+            <div class="progress-bar">
+              <div class="progress-fill english" style={`width: ${i18nProgress.coverage_en}%`}>
+                {i18nProgress.coverage_en}%
+              </div>
+            </div>
+            <p class="progress-detail">{i18nProgress.total_en} / {i18nProgress.total_zh} 篇</p>
+          </div>
+          
+          <div class="progress-other">
+            <div class="progress-item">
+              <span>🇯🇵 日本語</span>
+              <div class="progress-bar empty">
+                <div class="progress-fill" style="width: 0%">0%</div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <span>🇰🇷 한국어</span>
+              <div class="progress-bar empty">
+                <div class="progress-fill" style="width: 0%">0%</div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <span>🇪🇸 Español</span>
+              <div class="progress-bar empty">
+                <div class="progress-fill" style="width: 0%">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-breakdown">
+          <h3>分類進度</h3>
+          <div class="category-grid">
+            {Object.entries(i18nProgress.categories).filter(([cat]) => cat !== 'root').map(([category, counts]) => (
+              <div class="category-item">
+                <span class="category-name">{category}</span>
+                <div class="category-progress">
+                  <div class="progress-bar mini">
+                    <div 
+                      class="progress-fill" 
+                      style={`width: ${counts.zh ? (counts.en / counts.zh * 100) : 0}%`}
+                    >
+                    </div>
+                  </div>
+                  <span class="category-count">{counts.en}/{counts.zh}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- Token Donation Section -->
     <section class="token-donation" id="token-donation">
@@ -1534,6 +1597,140 @@ lastVerified: 2026-03-22
     color: #2d5016;
   }
 
+  /* i18n Progress Section */
+  .i18n-progress-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #e8f5e8, #f0f7e6);
+  }
+  .i18n-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .i18n-progress-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2d5016;
+    font-weight: 700;
+  }
+  .i18n-desc {
+    text-align: center;
+    color: #4a5d23;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+  .progress-overview {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #a7c4a0;
+  }
+  .progress-main h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2d5016;
+    text-align: center;
+    font-weight: 700;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 24px;
+    background: rgba(167, 196, 160, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #4a7c59;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: width 0.8s ease;
+  }
+  .progress-fill.english {
+    background: linear-gradient(90deg, #4a7c59, #6b8e23);
+  }
+  .progress-detail {
+    text-align: center;
+    color: #4a5d23;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .progress-other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .progress-item {
+    text-align: center;
+  }
+  .progress-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #4a5d23;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .progress-bar.empty .progress-fill {
+    background: #d1d5db;
+    color: #6b7280;
+  }
+  .progress-bar.mini {
+    height: 16px;
+  }
+  .category-breakdown {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid #a7c4a0;
+  }
+  .category-breakdown h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #2d5016;
+    text-align: center;
+    font-weight: 700;
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-name {
+    font-size: 0.85rem;
+    color: #4a5d23;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .category-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .category-progress .progress-bar {
+    flex: 1;
+    margin: 0;
+  }
+  .category-count {
+    font-size: 0.75rem;
+    color: #6b8e23;
+    font-weight: 700;
+    min-width: 40px;
+    text-align: right;
+  }
+
   @media (max-width: 768px) {
     .path-grid {
       grid-template-columns: 1fr;
@@ -1542,6 +1739,17 @@ lastVerified: 2026-03-22
       grid-template-columns: 1fr;
     }
     .ideas-grid {
+      grid-template-columns: 1fr;
+    }
+    .progress-other {
+      grid-template-columns: 1fr;
+    }
+    .category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .category-grid {
       grid-template-columns: 1fr;
     }
   }
