@@ -5,7 +5,7 @@ date: 2026-03-22
 category: economy
 tags: [Economy, Corporations, Largan Precision, Optical Industry, Precision Manufacturing, Apple Supply Chain, Architectural Innovation]
 author: 'Taiwan.md Contributors'
-readingTime: 15 minutes
+readingTime: 15
 lastVerified: 2026-03-22
 lastHumanReview: false
 ---

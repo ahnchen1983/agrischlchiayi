@@ -5,7 +5,7 @@ date: 2026-03-19
 tags:
   [Lifestyle, Convenience Stores, 7-Eleven, FamilyMart, Fresh Food, Urban Life]
 author: 'Taiwan.md'
-readingTime: '7 min'
+readingTime: 7
 featured: true
 category: 'Lifestyle'
 lastVerified: 2026-03-19

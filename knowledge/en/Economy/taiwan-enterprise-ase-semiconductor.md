@@ -4,7 +4,7 @@ description: "World's largest assembly and testing company - why did a construct
 date: 2026-03-21
 tags: [Economy, Enterprises, Semiconductor, Assembly and Testing, Tech Manufacturing]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-21
 lastHumanReview: true

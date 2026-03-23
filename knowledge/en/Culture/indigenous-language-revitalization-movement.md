@@ -4,7 +4,7 @@ description: "From language endangerment crisis to revitalization efforts: exami
 date: 2026-03-20
 tags: [indigenous languages, language revitalization, indigenous education, language policy, cultural transmission]
 author: "Taiwan.md Contributors"
-readingTime: "7 minutes"
+readingTime: 7
 featured: false
 category: Culture
 lastVerified: 2026-03-20

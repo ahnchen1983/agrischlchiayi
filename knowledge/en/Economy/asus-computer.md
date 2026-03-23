@@ -4,7 +4,7 @@ description: "Tech giant that grew from motherboard startup: Inspiring transform
 date: 2026-03-20
 tags: [Economy, Corporations, Computer Hardware, Brand, Technology]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

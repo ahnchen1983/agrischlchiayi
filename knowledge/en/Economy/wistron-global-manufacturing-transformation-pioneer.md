@@ -4,7 +4,7 @@ description: "The manufacturing giant spun off from Acer, with over NT$1 trillio
 date: 2026-03-20
 tags: [Economy, Enterprise, Electronics Manufacturing, ODM, Global Manufacturing]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

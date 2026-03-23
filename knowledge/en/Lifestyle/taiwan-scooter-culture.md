@@ -13,7 +13,7 @@ tags:
     transportation,
   ]
 author: 'Taiwan.md'
-readingTime: '8 min'
+readingTime: 8
 featured: true
 category: 'Lifestyle'
 lastVerified: 2026-03-19
