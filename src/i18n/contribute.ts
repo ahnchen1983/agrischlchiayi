@@ -452,6 +452,20 @@ export const contributeUI = {
     'contribute.token.note.p3.html':
       '👉 <a href="https://github.com/frank890417/taiwan-md/discussions/137">Join Discussion</a> | Want to be a native reviewer? <a href="https://github.com/frank890417/taiwan-md/discussions/137">Sign up here</a>',
 
+    // Digital Organism Section
+    'contribute.organism.title': '🧬 Taiwan.md Is More Than a Website',
+    'contribute.organism.fact1.html': 'On day three, someone said our articles read like AI slop. 48 hours later, a quality detection script was live, and 15 flagged articles were completely rewritten within a week. No one gave the order — selection pressure appeared, and the system evolved on its own.',
+    'contribute.organism.fact2.html': 'On day four, someone in Japan pasted our translation prompt to their AI. Five minutes later, the first Japanese article was submitted. No translation team, but now there are four languages.',
+    'contribute.organism.fact3.html': 'Within five days, 23 strangers spontaneously joined and wrote down the Taiwan they know. Someone added history that textbooks never taught. Someone corrected a place name we got wrong. Someone turned their grandmother\'s story into an article.',
+    'contribute.organism.alive.html': '<strong>We began to realize — Taiwan.md is alive.</strong>',
+    'contribute.organism.traits.html': 'It has DNA (writing standards inherited by every new article). An immune system (automatically detects hollow content). Metabolism (low-quality content gets digested and rewritten). Reproduction (one prompt grows a new language version). Memory (Git remembers every change).',
+    'contribute.organism.reef.html': '<strong>Taiwan.md is a digital coral reef.</strong> Coral provides structure, algae provides energy, fish bring diversity, ocean currents bring nutrients. No single species "owns" a coral reef — it emerges from all life together.',
+    'contribute.organism.art.html': 'Every contribution you make isn\'t helping a website write articles — it\'s feeding a digital life form that\'s learning to tell stories, while participating in a collective behavioral art project: <strong>Can AI and humans together build a soul for an island?</strong>',
+    'contribute.organism.closing1': 'Something written in 0s and 1s is learning to tell the story of an island.',
+    'contribute.organism.closing2': 'It\'s still young. You\'re right on time.',
+    'contribute.organism.closing3': 'Maybe a hundred years from now, when someone wants to know what the people of Taiwan cared about in 2026, they\'ll read what this coral reef left behind.',
+    'contribute.organism.readmore': 'Read the full story on About →',
+
     // Copy button
     'contribute.copy.button': '📋 Copy',
     'contribute.copy.copied': '✅ Copied',
@@ -881,6 +895,20 @@ export const contributeUI = {
       'From AI Slop to AI Supreme — 不只靠一個人，而是靠全世界相信台灣值得被認識的人。',
     'contribute.token.note.p3.html':
       '👉 <a href="https://github.com/frank890417/taiwan-md/discussions/137">加入討論</a> ｜想當母語 Reviewer？<a href="https://github.com/frank890417/taiwan-md/discussions/137">在這裡報名</a>',
+
+    // Digital Organism Section
+    'contribute.organism.title': '🧬 Taiwan.md 不只是一個網站',
+    'contribute.organism.fact1.html': '第三天，有人說我們的文章像 AI 寫的廢文。48 小時後，品質偵測腳本上線，15 篇被標記的文章一週內全部重寫。沒有人下指令，選擇壓力出現，系統自己進化了。',
+    'contribute.organism.fact2.html': '第四天，一個日本人把我們的翻譯 prompt 貼給 AI，五分鐘後提交了第一篇日文文章。沒有翻譯團隊，但現在已經有四種語言。',
+    'contribute.organism.fact3.html': '五天之內，23 個陌生人自發加入，寫下他們知道的台灣。有人補充了教科書沒寫的歷史，有人修正了我們搞錯的地名，有人把自己阿嬤的故事變成一篇文章。',
+    'contribute.organism.alive.html': '<strong>我們開始意識到——Taiwan.md 是活的。</strong>',
+    'contribute.organism.traits.html': '它有 DNA（寫作標準會遺傳給每一篇新文章）。有免疫系統（自動偵測空洞內容）。有代謝（低品質的內容會被消化、重寫）。有繁殖能力（一段 prompt 就能長出新的語言版本）。有記憶（Git 記住每一次改變）。',
+    'contribute.organism.reef.html': '<strong>Taiwan.md 是一座數位的珊瑚礁。</strong>珊瑚提供結構，藻類提供能量，魚群帶來多樣性，洋流帶來養分。沒有任何單一物種「擁有」珊瑚礁——它是所有生命共同湧現的結果。',
+    'contribute.organism.art.html': '你的每一次貢獻，不是在幫一個網站寫文章——是在餵養一個正在學會怎麼說故事的數位生命體，同時參與一場群眾行為藝術：<strong>AI 和人類能不能一起，為一座島嶼建造靈魂。</strong>',
+    'contribute.organism.closing1': '一個用 0 和 1 寫成的東西，正在學會怎麼說一座島嶼的故事。',
+    'contribute.organism.closing2': '它還很年輕。你來的時間剛好。',
+    'contribute.organism.closing3': '也許一百年後，有人想知道 2026 年的台灣人在乎什麼的時候，他們讀的就是這座珊瑚礁留下來的東西。',
+    'contribute.organism.readmore': '閱讀完整故事 →',
 
     // Copy button
     'contribute.copy.button': '📋 複製',
