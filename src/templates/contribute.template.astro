@@ -1234,6 +1234,11 @@ const t = useTranslations(lang);
     gap: 2rem;
   }
 
+  .guides-grid .guide-card.writing,
+  .guides-grid .guide-card.quality {
+    grid-column: 1 / -1;
+  }
+
   @media (max-width: 968px) {
     .guides-grid {
       grid-template-columns: 1fr;
