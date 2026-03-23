@@ -10732,6 +10732,25 @@
     "path": "en/Lifestyle/taiwan-coffee-culture.md"
   },
   {
+    "title": "Taiwan Coffee Industry",
+    "description": "From Tait & Co.\\'s 100 seedlings in 1884 to hosting the first Cup of Excellence in 2024, how an island built a coffee empire importing 43,000 tons annually in 140 years",
+    "category": "en",
+    "tags": [
+      "coffee",
+      "Gukeng coffee",
+      "Alishan coffee",
+      "Simple Kaffa",
+      "third wave coffee",
+      "Cup of Excellence",
+      "convenience store coffee"
+    ],
+    "url": "https://taiwan.md/en/Food/taiwan-coffee-industry",
+    "readingTime": 61,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "en/Food/taiwan-coffee-industry.md"
+  },
+  {
     "title": "Taiwan Comics and Animation Culture",
     "description": "From the golden age of Comic King to the cultural renaissance of CCC Creative Collection, how Taiwan comics found their voice amid Japanese manga dominance",
     "category": "en",
@@ -11990,17 +12009,6 @@
     "featured": true,
     "date": "2026-03-19",
     "path": "en/Geography/taiwan-coastal-landforms-and-seascapes.md"
-  },
-  {
-    "title": "Taiwan’s Coffee Industry",
-    "description": "From Japanese-era plantings to a world barista champion, the century-long rise of Taiwan coffee",
-    "category": "en",
-    "tags": [],
-    "url": "https://taiwan.md/en/Food/taiwan-coffee-industry",
-    "readingTime": 21,
-    "featured": true,
-    "date": "2026-03-19",
-    "path": "en/Food/taiwan-coffee-industry.md"
   },
   {
     "title": "Taiwan’s Convenience Store Culture",
