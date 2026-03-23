@@ -364,49 +364,17 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.writing.icon')}</div>
             <h3>{t('contribute.guides.writing.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.writing.belief')}</h4>
               <p>{t('contribute.guides.writing.belief.desc')}</p>
-
-              <h4>{t('contribute.guides.writing.ironlaws')}</h4>
-              <ul>
+              <ul class="guide-highlights">
                 <li set:html={t('contribute.guides.writing.ironlaws.story')} />
                 <li set:html={t('contribute.guides.writing.ironlaws.verify')} />
                 <li set:html={t('contribute.guides.writing.ironlaws.density')} />
               </ul>
-
-              <h4>{t('contribute.guides.writing.core')}</h4>
-              <p>{t('contribute.guides.writing.core.desc')}</p>
               <p set:html={t('contribute.guides.writing.core.good')} />
               <p set:html={t('contribute.guides.writing.core.bad')} />
-
-              <h4>{t('contribute.guides.writing.openings')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.writing.openings.scene')} />
-                <li set:html={t('contribute.guides.writing.openings.data')} />
-                <li set:html={t('contribute.guides.writing.openings.contrast')} />
-                <li set:html={t('contribute.guides.writing.openings.challenge')} />
-              </ul>
-
-              <h4>{t('contribute.guides.writing.voice')}</h4>
-              <p>{t('contribute.guides.writing.voice.desc')}</p>
-              <p set:html={t('contribute.guides.writing.voice.good')} />
-              <p set:html={t('contribute.guides.writing.voice.bad')} />
-
-              <h4>{t('contribute.guides.writing.research')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.writing.research.sources')} />
-                <li set:html={t('contribute.guides.writing.research.primary')} />
-                <li set:html={t('contribute.guides.writing.research.english')} />
-                <li set:html={t('contribute.guides.writing.research.surprise')} />
-              </ul>
-
-              <h4>{t('contribute.guides.writing.blacklist')}</h4>
-              <p>{t('contribute.guides.writing.blacklist.desc')}</p>
-              <p set:html={t('contribute.guides.writing.blacklist.patterns')} />
-              <p set:html={t('contribute.guides.writing.blacklist.structures')} />
-
-              <h4>{t('contribute.guides.writing.example')}</h4>
-              <div set:html={t('contribute.guides.writing.example.html')} />
+              <a href="https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md" target="_blank" class="guide-link">
+                {lang === 'en' ? '→ Full EDITORIAL Guide' : '→ 完整寫作方法論（EDITORIAL.md）'}
+              </a>
             </div>
           </div>
 
@@ -414,25 +382,7 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.ai.icon')}</div>
             <h3>{t('contribute.guides.ai.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.ai.onerule')}</h4>
               <p set:html={t('contribute.guides.ai.onerule.desc')} />
-
-              <h4>{t('contribute.guides.ai.correct')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.ai.correct.research')} />
-                <li set:html={t('contribute.guides.ai.correct.sources')} />
-                <li set:html={t('contribute.guides.ai.correct.structure')} />
-              </ul>
-
-              <h4>{t('contribute.guides.ai.wrong')}</h4>
-              <ul>
-                <li>{t('contribute.guides.ai.wrong.generate')}</li>
-                <li>{t('contribute.guides.ai.wrong.trust')}</li>
-                <li>{t('contribute.guides.ai.wrong.copy')}</li>
-              </ul>
-
-              <h4>{t('contribute.guides.ai.prompt')}</h4>
-              <p set:html={t('contribute.guides.ai.prompt.features')} />
               <div class="ai-prompt-box">
                 <code>{t('contribute.guides.ai.prompt.text')}</code>
                 <button
@@ -441,6 +391,9 @@ const t = useTranslations(lang);
                   >{t('contribute.copy.button')}</button
                 >
               </div>
+              <a href="https://github.com/frank890417/taiwan-md/blob/main/TRANSLATE_PROMPT.md" target="_blank" class="guide-link">
+                {lang === 'en' ? '→ Full AI Prompt' : '→ 完整 AI 寫作助手 Prompt'}
+              </a>
             </div>
           </div>
 
@@ -450,11 +403,8 @@ const t = useTranslations(lang);
             </div>
             <h3>{t('contribute.guides.translation.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.translation.priority')}</h4>
               <p>{t('contribute.guides.translation.priority.desc')}</p>
-
-              <h4>{t('contribute.guides.translation.board')}</h4>
-              <ul>
+              <ul class="guide-highlights">
                 <li set:html={t('contribute.guides.translation.board.check')} />
                 <li set:html={t('contribute.guides.translation.board.prompt')} />
                 <li set:html={t('contribute.guides.translation.board.submit')} />
@@ -467,16 +417,9 @@ const t = useTranslations(lang);
                 <li set:html={t('contribute.guides.translation.languages.you')} />
               </ul>
 
-              <h4>{t('contribute.guides.translation.token')}</h4>
-              <p>{t('contribute.guides.translation.token.desc')}</p>
-
-              <h4>{t('contribute.guides.translation.quality')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.translation.quality.rewrite')} />
-                <li set:html={t('contribute.guides.translation.quality.context')} />
-                <li set:html={t('contribute.guides.translation.quality.style')} />
-                <li set:html={t('contribute.guides.translation.quality.verify')} />
-              </ul>
+              <a href="https://github.com/frank890417/taiwan-md/blob/main/TRANSLATION-BOARD.md" target="_blank" class="guide-link">
+                {lang === 'en' ? '→ Translation Board' : '→ 翻譯看板'}
+              </a>
             </div>
           </div>
 
@@ -484,34 +427,13 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.images.icon')}</div>
             <h3>{t('contribute.guides.images.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.images.priority')}</h4>
               <p>{t('contribute.guides.images.priority.desc')}</p>
-              <p set:html={t('contribute.guides.images.priority.search')} />
-
-              <h4>{t('contribute.guides.images.acceptable')}</h4>
-              <ul>
+              <ul class="guide-highlights">
                 <li set:html={t('contribute.guides.images.wikimedia.html')} />
                 <li set:html={t('contribute.guides.images.government.html')} />
                 <li set:html={t('contribute.guides.images.selftaken.html')} />
               </ul>
-
-              <h4>{t('contribute.guides.images.forbidden')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.images.forbidden.unsplash')} />
-                <li set:html={t('contribute.guides.images.forbidden.google')} />
-                <li set:html={t('contribute.guides.images.forbidden.social')} />
-                <li set:html={t('contribute.guides.images.forbidden.commercial')} />
-              </ul>
-
-              <h4>{t('contribute.guides.images.format')}</h4>
-              <div set:html={t('contribute.guides.images.format.html')} />
-
-              <h4>{t('contribute.guides.images.standards')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.images.standards.size')} />
-                <li set:html={t('contribute.guides.images.standards.format')} />
-                <li set:html={t('contribute.guides.images.standards.alt')} />
-              </ul>
+              <p class="guide-warning">{lang === 'en' ? '⛔ No Unsplash, Google Images, or social media screenshots' : '⛔ 禁止 Unsplash、Google 圖片搜尋、社群媒體截圖'}</p>
             </div>
           </div>
 
@@ -520,26 +442,12 @@ const t = useTranslations(lang);
             <h3>{t('contribute.guides.quality.title')}</h3>
             <div class="guide-content">
               <p>{t('contribute.guides.quality.desc')}</p>
-
-              <h4>{t('contribute.guides.quality.checklist')}</h4>
-              <ul>
+              <ul class="guide-highlights">
                 <li set:html={t('contribute.guides.quality.checklist.counter')} />
-                <li set:html={t('contribute.guides.quality.checklist.opening')} />
                 <li set:html={t('contribute.guides.quality.checklist.sources')} />
                 <li set:html={t('contribute.guides.quality.checklist.voice')} />
-                <li set:html={t('contribute.guides.quality.checklist.challenges')} />
               </ul>
-
-              <h4>{t('contribute.guides.quality.rejections')}</h4>
-              <ul>
-                <li set:html={t('contribute.guides.quality.rejections.plastic')} />
-                <li set:html={t('contribute.guides.quality.rejections.bullets')} />
-                <li set:html={t('contribute.guides.quality.rejections.sources')} />
-                <li set:html={t('contribute.guides.quality.rejections.neutral')} />
-              </ul>
-
-              <h4>{t('contribute.guides.quality.script')}</h4>
-              <p>{t('contribute.guides.quality.script.desc')}</p>
+              <p class="guide-warning" set:html={t('contribute.guides.quality.rejections.plastic')} />
             </div>
           </div>
         </div>
@@ -1052,9 +960,36 @@ const t = useTranslations(lang);
     gap: 2rem;
   }
 
-  .guides-grid .guide-card.writing,
-  .guides-grid .guide-card.quality {
-    grid-column: 1 / -1;
+  .guide-highlights {
+    margin: 0.8rem 0;
+    padding-left: 1.2rem;
+  }
+  .guide-highlights li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+  .guide-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2d5016;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #a7c4a0;
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .guide-link:hover {
+    color: #1a3a09;
+    border-color: #2d5016;
+  }
+  .guide-warning {
+    margin-top: 0.8rem;
+    padding: 0.6rem 1rem;
+    background: rgba(220, 38, 38, 0.05);
+    border-left: 3px solid #dc2626;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    color: #991b1b;
   }
 
   @media (max-width: 968px) {
