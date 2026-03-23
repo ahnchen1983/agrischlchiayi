@@ -4,7 +4,7 @@ description: "The petrochemical empire built by Taiwan's 'God of Management' Wan
 date: 2026-03-22
 tags: [Economy, Corporations, Petrochemicals, Manufacturing, Formosa Plastics, Industry]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-22
 lastHumanReview: false

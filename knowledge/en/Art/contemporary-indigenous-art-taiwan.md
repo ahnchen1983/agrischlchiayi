@@ -4,7 +4,7 @@ description: "From traditional crafts to contemporary creation, explore how Taiw
 date: 2026-03-20
 tags: [indigenous art, contemporary art, traditional crafts, identity, artists, cultural revitalization]
 author: "Taiwan.md Contributors"
-readingTime: "8 minutes"
+readingTime: 8
 featured: false
 category: Art
 lastVerified: 2026-03-20

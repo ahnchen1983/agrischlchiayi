@@ -4,7 +4,7 @@ description: "From one second-hand ship to a global shipping empire: Chang Yung-
 date: 2026-03-20
 tags: [Economy, Corporations, Shipping Industry, Logistics, International Trade]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

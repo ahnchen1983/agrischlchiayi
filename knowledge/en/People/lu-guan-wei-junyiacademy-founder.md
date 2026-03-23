@@ -5,7 +5,7 @@ date: 2026-03-20
 tags: ['Education', 'Junyi Academy', 'Online learning', 'Educational technology', 'Social enterprise', 'Rural education']
 subcategory: 'Education & Society'
 author: 'Taiwan.md'
-readingTime: '5 minutes'
+readingTime: 5
 category: 'People'
 lastVerified: 2026-03-20
 ---

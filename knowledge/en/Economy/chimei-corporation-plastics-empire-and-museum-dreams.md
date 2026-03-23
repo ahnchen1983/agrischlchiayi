@@ -4,7 +4,7 @@ description: "From a small Tainan factory in 1960, Xu Wen-Long built Asia's larg
 date: 2026-03-20
 tags: [Economy, Enterprise, Chemical Industry, Polymer Materials, Tainan Business]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: true

@@ -4,7 +4,7 @@ description: "The world's largest electronics manufacturing empire and the hidde
 date: 2026-03-20
 tags: [Economy, Corporations, Electronics Manufacturing, Contract Manufacturing, Foxconn, Taiwan]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

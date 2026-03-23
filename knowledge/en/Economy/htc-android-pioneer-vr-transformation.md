@@ -4,7 +4,7 @@ description: "Founded by Cher Wang in 1997, HTC created the world's first Androi
 date: 2026-03-20
 tags: [Economy, Business, Technology, VR, Smartphones, Innovation]
 author: Taiwan.md
-readingTime: 9 minutes
+readingTime: 9
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: true

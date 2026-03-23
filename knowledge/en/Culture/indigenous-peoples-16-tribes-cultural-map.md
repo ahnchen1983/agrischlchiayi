@@ -4,7 +4,7 @@ description: "Explore the distribution, languages, ceremonial traditions, and co
 date: 2026-03-20
 tags: [indigenous peoples, culture, ceremonies, languages, contemporary art]
 author: "Taiwan.md Contributors"
-readingTime: "8 minutes"
+readingTime: 8
 featured: false
 category: Culture
 lastVerified: 2026-03-20

@@ -4,7 +4,7 @@ description: "From a factory fire to global laptop dominance — how Barry Lam b
 date: 2026-03-21
 tags: [Economy, Enterprises, Electronics Manufacturing, ODM, AI Cloud, Laptops]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-21
 lastHumanReview: true

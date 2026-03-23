@@ -4,7 +4,7 @@ description: "Global mobile chip challenger: From enabling knockoff phones to AI
 date: 2026-03-20
 tags: [Economy, Corporations, Semiconductors, Chip Design, IC Design, MediaTek]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

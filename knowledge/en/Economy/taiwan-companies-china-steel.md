@@ -4,7 +4,7 @@ description: "From Zhao Yao-dong's clever negotiations for technology in Europe 
 date: 2026-03-20
 tags: [Economy, Companies, Steel Industry, Ten Major Constructions, Heavy Industry]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: true
