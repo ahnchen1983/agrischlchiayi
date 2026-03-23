@@ -252,36 +252,46 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.writing.icon')}</div>
             <h3>{t('contribute.guides.writing.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.writing.structure')}</h4>
+              <h4>{t('contribute.guides.writing.belief')}</h4>
+              <p>{t('contribute.guides.writing.belief.desc')}</p>
+
+              <h4>{t('contribute.guides.writing.ironlaws')}</h4>
               <ul>
-                <li set:html={t('contribute.guides.writing.structure.title')} />
-                <li
-                  set:html={t('contribute.guides.writing.structure.opening')}
-                />
-                <li set:html={t('contribute.guides.writing.structure.body')} />
-                <li
-                  set:html={t('contribute.guides.writing.structure.ending')}
-                />
+                <li set:html={t('contribute.guides.writing.ironlaws.story')} />
+                <li set:html={t('contribute.guides.writing.ironlaws.verify')} />
+                <li set:html={t('contribute.guides.writing.ironlaws.density')} />
               </ul>
 
-              <h4>{t('contribute.guides.writing.format')}</h4>
+              <h4>{t('contribute.guides.writing.core')}</h4>
+              <p>{t('contribute.guides.writing.core.desc')}</p>
+              <p set:html={t('contribute.guides.writing.core.good')} />
+              <p set:html={t('contribute.guides.writing.core.bad')} />
+
+              <h4>{t('contribute.guides.writing.openings')}</h4>
               <ul>
-                <li
-                  set:html={t('contribute.guides.writing.format.sections.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.writing.format.bold.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.writing.format.quotes.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.writing.format.lists.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.writing.format.links.html')}
-                />
+                <li set:html={t('contribute.guides.writing.openings.scene')} />
+                <li set:html={t('contribute.guides.writing.openings.data')} />
+                <li set:html={t('contribute.guides.writing.openings.contrast')} />
+                <li set:html={t('contribute.guides.writing.openings.challenge')} />
               </ul>
+
+              <h4>{t('contribute.guides.writing.voice')}</h4>
+              <p>{t('contribute.guides.writing.voice.desc')}</p>
+              <p set:html={t('contribute.guides.writing.voice.good')} />
+              <p set:html={t('contribute.guides.writing.voice.bad')} />
+
+              <h4>{t('contribute.guides.writing.research')}</h4>
+              <ul>
+                <li set:html={t('contribute.guides.writing.research.sources')} />
+                <li set:html={t('contribute.guides.writing.research.primary')} />
+                <li set:html={t('contribute.guides.writing.research.english')} />
+                <li set:html={t('contribute.guides.writing.research.surprise')} />
+              </ul>
+
+              <h4>{t('contribute.guides.writing.blacklist')}</h4>
+              <p>{t('contribute.guides.writing.blacklist.desc')}</p>
+              <p set:html={t('contribute.guides.writing.blacklist.patterns')} />
+              <p set:html={t('contribute.guides.writing.blacklist.structures')} />
 
               <h4>{t('contribute.guides.writing.example')}</h4>
               <div set:html={t('contribute.guides.writing.example.html')} />
@@ -292,7 +302,25 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.ai.icon')}</div>
             <h3>{t('contribute.guides.ai.title')}</h3>
             <div class="guide-content">
+              <h4>{t('contribute.guides.ai.onerule')}</h4>
+              <p set:html={t('contribute.guides.ai.onerule.desc')} />
+
+              <h4>{t('contribute.guides.ai.correct')}</h4>
+              <ul>
+                <li set:html={t('contribute.guides.ai.correct.research')} />
+                <li set:html={t('contribute.guides.ai.correct.sources')} />
+                <li set:html={t('contribute.guides.ai.correct.structure')} />
+              </ul>
+
+              <h4>{t('contribute.guides.ai.wrong')}</h4>
+              <ul>
+                <li>{t('contribute.guides.ai.wrong.generate')}</li>
+                <li>{t('contribute.guides.ai.wrong.trust')}</li>
+                <li>{t('contribute.guides.ai.wrong.copy')}</li>
+              </ul>
+
               <h4>{t('contribute.guides.ai.prompt')}</h4>
+              <p set:html={t('contribute.guides.ai.prompt.features')} />
               <div class="ai-prompt-box">
                 <code>{t('contribute.guides.ai.prompt.text')}</code>
                 <button
@@ -301,20 +329,6 @@ const t = useTranslations(lang);
                   >{t('contribute.copy.button')}</button
                 >
               </div>
-
-              <h4>{t('contribute.guides.ai.prompts')}</h4>
-              <ul>
-                <li
-                  set:html={t('contribute.guides.ai.prompts.historian.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.ai.prompts.cultural.html')}
-                />
-                <li
-                  set:html={t('contribute.guides.ai.prompts.technical.html')}
-                />
-                <li set:html={t('contribute.guides.ai.prompts.local.html')} />
-              </ul>
             </div>
           </div>
 
@@ -324,70 +338,32 @@ const t = useTranslations(lang);
             </div>
             <h3>{t('contribute.guides.translation.title')}</h3>
             <div class="guide-content">
-              <h4>{t('contribute.guides.translation.keypoints')}</h4>
+              <h4>{t('contribute.guides.translation.priority')}</h4>
+              <p>{t('contribute.guides.translation.priority.desc')}</p>
+
+              <h4>{t('contribute.guides.translation.board')}</h4>
               <ul>
-                <li
-                  set:html={t('contribute.guides.translation.cultural.html')}
-                />
-                <li set:html={t('contribute.guides.translation.proper.html')} />
-                <li set:html={t('contribute.guides.translation.food.html')} />
-                <li
-                  set:html={t('contribute.guides.translation.historical.html')}
-                />
+                <li set:html={t('contribute.guides.translation.board.check')} />
+                <li set:html={t('contribute.guides.translation.board.prompt')} />
+                <li set:html={t('contribute.guides.translation.board.submit')} />
               </ul>
 
-              <h4>{t('contribute.guides.translation.factcheck')}</h4>
-              <p>
-                {t('contribute.guides.translation.factcheck.desc')}
-              </p>
+              <h4>{t('contribute.guides.translation.languages')}</h4>
               <ul>
-                <li
-                  set:html={t(
-                    'contribute.guides.translation.factcheck.references.html',
-                  )}
-                />
-                <li
-                  set:html={t(
-                    'contribute.guides.translation.factcheck.numbers.html',
-                  )}
-                />
-                <li>{t('contribute.guides.translation.factcheck.priority')}</li>
-                <li>{t('contribute.guides.translation.factcheck.errors')}</li>
+                <li set:html={t('contribute.guides.translation.languages.live')} />
+                <li set:html={t('contribute.guides.translation.languages.coming')} />
+                <li set:html={t('contribute.guides.translation.languages.you')} />
               </ul>
 
-              <h4>{t('contribute.guides.translation.resources')}</h4>
-              <ul>
-                <li
-                  set:html={t(
-                    'contribute.guides.translation.resources.gov.html',
-                  )}
-                />
-                <li
-                  set:html={t(
-                    'contribute.guides.translation.resources.mofa.html',
-                  )}
-                />
-                <li
-                  set:html={t(
-                    'contribute.guides.translation.resources.tourism.html',
-                  )}
-                />
-              </ul>
+              <h4>{t('contribute.guides.translation.token')}</h4>
+              <p>{t('contribute.guides.translation.token.desc')}</p>
 
-              <h4>{t('contribute.guides.translation.considerations')}</h4>
+              <h4>{t('contribute.guides.translation.quality')}</h4>
               <ul>
-                <li>
-                  {t('contribute.guides.translation.considerations.neutral')}
-                </li>
-                <li>
-                  {t('contribute.guides.translation.considerations.localized')}
-                </li>
-                <li>
-                  {t('contribute.guides.translation.considerations.political')}
-                </li>
-                <li>
-                  {t('contribute.guides.translation.considerations.format')}
-                </li>
+                <li set:html={t('contribute.guides.translation.quality.rewrite')} />
+                <li set:html={t('contribute.guides.translation.quality.context')} />
+                <li set:html={t('contribute.guides.translation.quality.style')} />
+                <li set:html={t('contribute.guides.translation.quality.verify')} />
               </ul>
             </div>
           </div>
@@ -396,34 +372,62 @@ const t = useTranslations(lang);
             <div class="guide-icon">{t('contribute.guides.images.icon')}</div>
             <h3>{t('contribute.guides.images.title')}</h3>
             <div class="guide-content">
+              <h4>{t('contribute.guides.images.priority')}</h4>
+              <p>{t('contribute.guides.images.priority.desc')}</p>
+              <p set:html={t('contribute.guides.images.priority.search')} />
+
               <h4>{t('contribute.guides.images.acceptable')}</h4>
               <ul>
                 <li set:html={t('contribute.guides.images.wikimedia.html')} />
-                <li set:html={t('contribute.guides.images.selftaken.html')} />
                 <li set:html={t('contribute.guides.images.government.html')} />
-                <li set:html={t('contribute.guides.images.cc.html')} />
+                <li set:html={t('contribute.guides.images.selftaken.html')} />
               </ul>
 
-              <h4>{t('contribute.guides.images.recommended')}</h4>
+              <h4>{t('contribute.guides.images.forbidden')}</h4>
               <ul>
-                <li
-                  set:html={t('contribute.guides.images.wikimedia.link.html')}
-                />
-                <li set:html={t('contribute.guides.images.datagovtw.html')} />
-                <li set:html={t('contribute.guides.images.unsplash.html')} />
-                <li set:html={t('contribute.guides.images.pexels.html')} />
+                <li set:html={t('contribute.guides.images.forbidden.unsplash')} />
+                <li set:html={t('contribute.guides.images.forbidden.google')} />
+                <li set:html={t('contribute.guides.images.forbidden.social')} />
+                <li set:html={t('contribute.guides.images.forbidden.commercial')} />
               </ul>
 
               <h4>{t('contribute.guides.images.format')}</h4>
               <div set:html={t('contribute.guides.images.format.html')} />
 
-              <h4>{t('contribute.guides.images.notallowed')}</h4>
+              <h4>{t('contribute.guides.images.standards')}</h4>
               <ul>
-                <li>{t('contribute.guides.images.notallowed.google')}</li>
-                <li>{t('contribute.guides.images.notallowed.commercial')}</li>
-                <li>{t('contribute.guides.images.notallowed.social')}</li>
-                <li>{t('contribute.guides.images.notallowed.historical')}</li>
+                <li set:html={t('contribute.guides.images.standards.size')} />
+                <li set:html={t('contribute.guides.images.standards.format')} />
+                <li set:html={t('contribute.guides.images.standards.alt')} />
               </ul>
+            </div>
+          </div>
+
+          <div class="guide-card quality">
+            <div class="guide-icon">{t('contribute.guides.quality.icon')}</div>
+            <h3>{t('contribute.guides.quality.title')}</h3>
+            <div class="guide-content">
+              <p>{t('contribute.guides.quality.desc')}</p>
+
+              <h4>{t('contribute.guides.quality.checklist')}</h4>
+              <ul>
+                <li set:html={t('contribute.guides.quality.checklist.counter')} />
+                <li set:html={t('contribute.guides.quality.checklist.opening')} />
+                <li set:html={t('contribute.guides.quality.checklist.sources')} />
+                <li set:html={t('contribute.guides.quality.checklist.voice')} />
+                <li set:html={t('contribute.guides.quality.checklist.challenges')} />
+              </ul>
+
+              <h4>{t('contribute.guides.quality.rejections')}</h4>
+              <ul>
+                <li set:html={t('contribute.guides.quality.rejections.plastic')} />
+                <li set:html={t('contribute.guides.quality.rejections.bullets')} />
+                <li set:html={t('contribute.guides.quality.rejections.sources')} />
+                <li set:html={t('contribute.guides.quality.rejections.neutral')} />
+              </ul>
+
+              <h4>{t('contribute.guides.quality.script')}</h4>
+              <p>{t('contribute.guides.quality.script.desc')}</p>
             </div>
           </div>
         </div>
