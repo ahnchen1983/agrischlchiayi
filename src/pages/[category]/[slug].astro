@@ -1231,6 +1231,11 @@ const processedContent = marked.parse(resolvedContent, { renderer });
     border-left: 3px solid rgba(0, 0, 0, 0.15);
   }
 
+  /* heading 前間距保證：避免 list/blockquote 後 margin collapse */
+  .content :is(ul, ol, blockquote, table, details) + :is(h2, h3, h4) {
+    margin-top: 5rem;
+  }
+
   /* 段落 — 大呼吸感 */
   .content p {
     margin-bottom: 1.75rem;
