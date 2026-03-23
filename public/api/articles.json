@@ -6165,9 +6165,9 @@
       "環境"
     ],
     "url": "https://taiwan.md/People/%E9%BD%8A%E6%9F%8F%E6%9E%97",
-    "readingTime": 13,
+    "readingTime": 15,
     "featured": false,
-    "date": "2026-03-22",
+    "date": "2026-03-23",
     "path": "People/齊柏林.md"
   },
   {
@@ -7320,13 +7320,22 @@
   },
   {
     "title": "Chi Po-lin",
-    "description": "Documentary filmmaker and aerial photographer, director of 'Beyond Beauty: Taiwan from Above', who spent 25 years documenting Taiwan's landscapes",
+    "description": "How a government clerk who couldn\\'t afford helicopters on his salary mortgaged his house to create Taiwan\\'s most successful documentary",
     "category": "en",
-    "tags": [],
+    "tags": [
+      "People",
+      "Chi Po-lin",
+      "Documentary",
+      "Beyond Beauty Taiwan",
+      "Director",
+      "Photographer",
+      "Aerial Photography",
+      "Environment"
+    ],
     "url": "https://taiwan.md/en/People/chi-po-lin",
-    "readingTime": 44,
+    "readingTime": 46,
     "featured": false,
-    "date": "2026-03-20",
+    "date": "2026-03-23",
     "path": "en/People/chi-po-lin.md"
   },
   {
