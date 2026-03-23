@@ -15,7 +15,8 @@ Most people looking at Taiwan maps see static outlines. Mini Taiwan Pulse shows 
 
 This project has ambitious goals: integrating scattered open data from various government agencies — flights, AIS ship tracking, Taiwan Railway and High Speed Rail timetables, MRT routes, demographic statistics, weather observations — all onto a single 3D map. Not simple dot markers, but visual language using light orbs, light trails, and comet tails that transform data into moving landscapes.
 
-📝 **Curator's Note:** Taiwan's open data infrastructure ranks among Asia's best (consistently in the top ten of the [Global Open Data Index](https://index.okfn.org/)), but there's a vast gap between "data being open" and "data being seen." Mini Taiwan Pulse is filling this gap.
+> **📝 Curator's Note**
+> Taiwan's open data infrastructure ranks among Asia's best (consistently in the top ten of the [Global Open Data Index](https://index.okfn.org/)), but there's a vast gap between "data being open" and "data being seen." Mini Taiwan Pulse is filling this gap.
 
 ## Three Layers of Pulse
 
@@ -68,7 +69,8 @@ Total of **23 independently switchable layers** across ten categories.
 - **Color Science**: Population layers use perceptually uniform color scales like Plasma/Viridis/Inferno, log1p + gamma normalization for heavy-tail distributions, colorblind-friendly
 - **MIT License**: Completely open source, welcome forks and contributions
 
-📝 **Curator's Note:** Using additive blending for light trail overlays is a clever choice — areas where multiple flight routes overlap naturally become brighter, visually showing route density without additional statistical charts.
+> **📝 Curator's Note**
+> Using additive blending for light trail overlays is a clever choice — areas where multiple flight routes overlap naturally become brighter, visually showing route density without additional statistical charts.
 
 ## Open Data Ecosystem
 
