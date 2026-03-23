@@ -1,110 +1,130 @@
 ---
-created: 2026-03-17
-tags: [Food, Tea Culture, Oolong Tea, High Mountain Tea, Bubble Tea]
-title: Tea Culture
-description: Taiwan's tea culture evolution from traditional tea ceremonies to modern bubble tea drinks, showcasing the island's unique tea varieties and drinking culture
-date: 2026-03-17
+created: 2026-03-23
+tags: [Food, Tea Culture, Oolong Tea, High Mountain Tea, Bubble Tea, Boba]
+title: Echoes of the Golden Age：Taiwan Tea Culture Evolution and Craftsmanship
+description: An island excluded from the international tea production agreement became the unlikely creator of a tea golden age, ultimately conquering the world with a drink containing "little snacks"
+date: 2026-03-23
 author: Taiwan.md
-readingTime: 9
-featured: false
+readingTime: 12
+featured: true
+lastVerified: 2026-03-23
+lastHumanReview: false
+category: Food
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Jacksons_of_Piccadilly_Formosa_Oolong_Tea_%2851878727206%29.jpg/960px-Jacksons_of_Piccadilly_Formosa_Oolong_Tea_%2851878727206%29.jpg"
+imageAlt: "Taiwan Oolong Tea package with Formosa Oolong Tea branding"
+imageCredit: "Wikimedia Commons, CC BY-SA"
 ---
 
-# Tea Culture
+# Echoes of the Golden Age：Taiwan Tea Culture Evolution and Craftsmanship
 
-> **30-Second Overview:** Taiwan's tea culture combines tradition and innovation, evolving from oolong tea production techniques introduced during the Qing Dynasty to develop world-renowned tea varieties like Dong Ding Oolong and high mountain teas. Modern bubble tea culture has pushed Taiwanese tea onto the international stage, with pearl milk tea becoming Taiwan's most representative beverage, demonstrating the perfect fusion of traditional tea arts and modern innovation.
+> **30-second overview**: Taiwan's tea culture has undergone three remarkable transformations: the 1930s unexpected rise after being excluded from the international tea production agreement, with exports jumping from 3.29 million kg to 5.8 million kg; the 1980s redefinition of tea culture with foam black tea; and 1987's bubble tea with added "little snacks" (pearls), ultimately becoming Taiwan's soft power symbol that conquered the globe.
 
-## Why It Matters
+In 1934, when major tea-producing nations like India and Sri Lanka signed the International Tea Restriction Agreement, no one anticipated that Taiwan—excluded from this pact—would subsequently experience the most brilliant golden age in tea history.
 
-Taiwan's tea culture embodies the island's inclusive and innovative spirit. From the refined inheritance of traditional Chinese tea ceremonies to the creative development of modern bubble tea, Taiwan's tea culture not only preserves deep cultural heritage but also reaches the world stage through innovation, becoming an important symbol of Taiwan's soft power.
+That year, Taiwan's black tea exports reached 3.29 million kilograms, forming a triumvirate with paochung tea and oolong tea. By 1937, this figure had soared to 5.8 million kilograms, representing 52% of total exports. Taiwan's black tea not only dominated Asia but even reached Copenhagen, Denmark—8,800 kilometers away.
 
-## Overview
+**How did this forgotten tea nation find opportunity within restrictions?**
 
-Taiwan's tea culture has evolved through three development phases: the introduction of mainland tea varieties and production techniques during the Qing Dynasty, the development of tea export industry during Japanese rule, and the modern innovation of bubble tea culture. Superior geographical and climatic conditions have nurtured unique Taiwanese tea varieties, from traditional Dong Ding Oolong and Tieguanyin to modern high mountain teas and Oriental Beauty tea, forming a complete tea industry chain and cultural system.
+This story begins with a Japanese merchant.
 
-## Key Facts
+## Innovation Rejected: Tea Routes from Siberia to Europe
 
-- **Tea Garden Distribution**: Mainly located in mountainous areas of Nantou, Chiayi, Taipei, and Hsinchu at elevations of 1000-2500 meters
-- **Famous Tea Varieties**: Dong Ding Oolong (凍頂烏龍), Alishan (阿里山) High Mountain Tea, Wenshan Baozhong Tea, Oriental Beauty Tea
-- **Bubble Tea Origins**: Chun Shui Tang invented pearl milk tea in the 1980s, creating bubble tea culture
-- **Industry Scale**: Tea garden area approximately 12,000 hectares, annual production 14,000 tons
-- **International Impact**: Bubble tea shops worldwide, pearl milk tea as Taiwan's representative beverage
+In 1906, Taiwan began exporting its first batch of black tea to Russia. Interestingly, this tea took the form of "brick tea"—tea leaves compressed into brick shapes for easy long-distance transport to Siberia.
 
-## In-Depth Content
+Leading this enterprise was Kutoku Zenzo, one of the most legendary merchants of the Meiji period. Born in Kumamoto, this merchant learned tea-making techniques in his youth and specifically traveled to Hankou, China, to master brick tea production methods. He specialized in marketing black tea to Russia and even opened tea shops in Siberia. However, the 1917 Russian October Revolution changed everything—demand for tea plummeted, quietly ending Taiwan's first phase of black tea exports.
 
-### Tea Cultivation History
+The Japanese government persisted, deciding to pivot toward European markets. But Taiwan's small-leaf black tea wasn't robust enough to suit European drinking styles dominated by Britain (with added sugar and milk). In 1925, Mitsui Bussan imported large-leaf Assam tea seedlings from India, giving Taiwan its first true "large-leaf" black tea.
 
-**Early Development**: Taiwan's indigenous peoples had early records of utilizing wild tea trees. **Qing Dynasty Introduction**: In 1855, Lin Feng-chi brought oolong tea seedlings from Fujian to plant in Nantou's Lugu, launching Taiwan's tea industry. **Baozhong Tea Development**: In 1881, Wu Fu-yuan developed baozhong tea production methods in Taipei's Wenshan area.
+**The breakthrough came unexpectedly.**
 
-**Japanese Period**: Vigorously promoted tea cultivation, established modern tea factories, with large-scale exports to Japan. **Variety Improvement**: Experimental stations cultivated Taiwan tea series varieties like Taiwan Tea No. 12 (Jin Xuan) and Taiwan Tea No. 13 (Cui Yu).
+## An Accidental Golden Age: The Outsider of International Restrictions
 
-### Major Tea Regions and Varieties
+In 1930, global tea overproduction caused black tea prices to collapse. Major tea-producing nations like India and Sri Lanka established the International Tea Restriction Agreement, regulating production and export quotas from 1933-1940.
 
-**Nantou Tea Region**: Birthplace of Dong Ding Oolong tea, Lugu (鹿谷) Township's Dong Ding Mountain (凍頂山) at approximately 700 meters elevation with cool, misty climate. **Alishan Tea Region**: High mountain tea at 1000-1700 meters elevation, producing thick, durable leaves with elegant aroma.
+But Taiwan was excluded from the agreement—a decision that seemed to marginalize the island but actually created Taiwan's greatest opportunity in tea history.
 
-**Lishan (梨山) Tea Region**: Ultra-high altitude tea region above 2000 meters, where large day-night temperature differences create unique flavors. **Wenshan Tea Region**: Home of baozhong tea, located in southern Taipei mountain areas, characterized by light-fragrant green tea.
+**While other tea-producing nations were forced to reduce production, Taiwan could sprint ahead at full capacity.**
 
-**Oriental Beauty Tea**: Produced in Hsinchu and Miaoli mountain areas, develops honey fragrance from green leafhopper bites, also known as White Tip Oolong. **Tieguanyin Tea**: Mainly produced in Muzha area, featuring distinctive roasted aroma.
+Arai Kojiro, known as the "Guardian of Taiwan Black Tea," arrived in Yuchi in 1936 to establish the Central Research Institute's Yuchi Black Tea Research Station. He built an industrialized large-scale Ceylon-style tea factory, with Yuchi's black tea production area reaching its historical peak of 3,000 hectares.
 
-### Tea Production Craftsmanship
+During this period, Yuchi Township became the birthplace of Taiwan black tea. Beyond Yuchi, Xinzhu's Guanxi also emerged as a major black tea production base.
 
-**Oolong Tea Method**: Uses partial fermentation process including withering, rolling, kill-green, kneading, and drying steps. **Rolling Technique**: Key to oolong tea production, promoting fermentation through shaking and resting.
+## From Export to Domestic: The 1975 Watershed
 
-**Roasting Technology**: Tea varieties like Muzha Tieguanyin require special roasting craftsmanship to develop unique roasted aroma. **Handcrafted Tea**: Traditional tea masters control each process through experience, representing the essence of tea-making artistry.
+1975 marked a crucial turning point for Taiwan's tea industry. The global energy crisis combined with Taiwan dollar appreciation led to the cessation of tea exports. The Agriculture and Forestry Department began pondering: How to get Taiwanese people to drink tea?
 
-**Mechanized Production**: Modern tea factories introduce tea-making machinery to increase output and stabilize quality. **Organic Cultivation**: Promoting organic tea garden certification, reducing pesticide use to protect the environment.
+**At the time, Taiwanese people didn't really drink tea.**
 
-### Traditional Tea Ceremony Culture
+Soft drinks and coffee had become popular beverages among the general public earlier than tea. Only wealthy people had tea-drinking habits. The Agriculture and Forestry Department decided to emphasize health benefits, discovering foreign research showing tea was healthier than coffee. In 1975, they held a press conference promoting the relationship between tea and health.
 
-**Gongfu Tea Ceremony**: Inheriting Minnan gongfu tea traditions, emphasizing water quality, tea utensils, and brewing techniques. **Tea Utensil Culture**: Yixing clay teapots, porcelain cups, bamboo tea trays each have specific considerations.
+That same year, Taiwan's first post-restoration tea competition—the Xindian Paochung Tea Competition—was held. Meishan began cultivating high-mountain tea. In 1982, tea production management regulations were abolished, allowing Taiwan farmers to "grow, process, and sell" their own tea.
 
-**Tea Tasting Etiquette**: Includes procedures like warming pots, awakening tea, brewing, and serving tea, embodying tea ceremony spirit. **Tea Art Performance**: Artistically presenting brewing techniques as cultural performance.
+**Competition and brand proliferation led to remarkable advances in Taiwan oolong tea production techniques.**
 
-**Tea Setting Design**: Combining elements like flower arrangement, incense ceremony, and guqin music to create complete aesthetic experiences. **Tea Culture Education**: Tea ceremony courses and tea clubs promote traditional tea culture.
+In the 1980s, Taiwan's stock market reached 10,000 points, entering the era of "money everywhere." Teahouses sprouted like mushrooms after rain, becoming venues for card games, meetings, and matchmaking. Taipei's Purple Vine Tea House and Taichung's Yangxian Tea House (predecessor to Chun Shui Tang) were both established during this period.
 
-### Modern Bubble Tea Culture
+## The Cold Drink Revolution: From Foam Black Tea to Bubble Tea
 
-**Pearl Milk Tea Origins**: In the 1980s, Chun Shui Tang's Liu Han-chieh invented pearl milk tea, combining tea, milk, and tapioca pearls in an innovative beverage. **Bubble Tea Development**: Evolved from traditional bubble tea shops to modern chain bubble tea stores.
+In 1983, an experiment changed Taiwan's tea culture.
 
-**Innovative Elements**: Adding various toppings like pearls, coconut jelly, pudding, grass jelly to create diverse textures. **Tea Base Selection**: Using Taiwanese teas like oolong and baozhong as bubble tea bases.
+Chun Shui Tang founder Liu Han-chieh witnessed iced coffee preparation techniques in Japan. During summer, he asked servers to add ice to black tea but was told: "No one drinks iced black tea!"
 
-**Customization Service**: Adjustable sweetness and ice levels to meet different consumer preferences. **Seasonal Specials**: Introducing innovative flavors by season, such as hot drinks in winter and fruit teas in summer.
+Returning to Taiwan, Liu bought cocktail shakers and mixed black tea, cane sugar, and ice together. The 4-degree Celsius tea produced aromatic black tea with rich foam adding texture—"foam black tea" was born.
 
-### Bubble Tea Industry Development
+**But the real revolution was yet to come.**
 
-**Brand Franchising**: Chain brands like 50 Lan, CoCo, and Qingxin Fuquan expanded rapidly. **International Operations**: Taiwan bubble tea brands entered overseas markets in Southeast Asia, Europe, and America.
+In 1987, Chun Shui Tang store manager Lin Hsiu-hui experimented during work by adding "tapioca pearls" to prepared iced milk tea. This combination of Taiwanese street snack with aromatic milk tea not only broke the boundaries between "beverages" and "desserts" but also received tremendous customer approval during test sales.
 
-**Technological Innovation**: Automated equipment and standardized operating procedures ensure quality consistency. **Supply Chain**: Establishing complete supply systems from tea leaves and ingredients to packaging materials.
+**Chun Shui Tang's golden ratio of "7:2:1"—tea, ice, foam—became the standard bubble tea formula.**
 
-**Intense Competition**: Market saturation leads to fierce competition, making brand differentiation crucial. **Emerging Brands**: New brands continuously enter the market, bringing innovative products and marketing models.
+Interestingly, Tainan's Hanlin Tea Room also claimed to have invented bubble tea, leading to a decade-long legal battle. Judges ultimately determined bubble tea was a new beverage rather than a patentable invention, making the question of "originality" unnecessary.
 
-### Tea Industry Current Status
+## The Numbers Behind the Drinking Empire
 
-**Premium Tea Development**: Growing high-end tea market demand, with tea farmers investing in premium tea production. **Production Traceability**: Promoting tea production traceability systems to enhance consumer confidence.
+Today's Taiwan hand-shaken drink industry scale is astounding:
 
-**Tea Certification**: Quality assurance mechanisms like Taiwan tea origin certification and organic certification. **Tea Tourism**: Combining tourism development with tea garden experiences and DIY tea-making activities.
+- **2024 hand-shaken drink revenue: 133.13 billion TWD**, setting a historical record
+- **Total hand-shaken drink stores nationwide: 16,070**, representing 57% of all beverage shops
+- **Store expansion rate: average of 40 new stores monthly**
+- **Taiwanese annual consumption: approximately 1.075 billion cups** (calculated at 50 TWD per cup)
 
-**E-commerce Sales**: Online platforms becoming important tea sales channels, directly connecting producers with consumers. **Cultural Creative Integration**: Developing added value through tea packaging design and tea utensil cultural creative products.
+**Taichung residents' hand-shaken drink consumption is particularly remarkable—consumption volume significantly exceeds proportion relative to actual population.**
 
-### International Influence and Challenges
+By gender, female consumption exceeds male across all age groups, with women aged 25-34 representing about 20% of total consumption. Regarding sweetness preferences, over half of consumers choose "light sugar," followed by "no sugar" (39.7%).
 
-**Global Pearl Milk Tea Craze**: Taiwan bubble tea brands expanding globally, with pearl milk tea becoming internationally famous. **Cultural Export**: Promoting Taiwan tea culture and lifestyle through bubble tea.
+## World Conquest: From Taichung to Global
 
-**Brand Protection**: Facing copycat brand challenges, requiring strengthened intellectual property protection. **Sustainable Development**: Addressing environmental concerns, promoting recyclable cups and reduced plastic packaging.
+Chun Shui Tang's bubble tea now sells over 2 million cups annually. More importantly, this drink with "little snacks" has become Taiwan's soft power for conquering the world.
 
-**Health Trends**: Responding to rising health consciousness by developing low-sugar, sugar-free, and natural ingredient products. **Continuous Innovation**: Maintaining balance between tradition and innovation to continue tea culture vitality.
+**In 2020, Taiwan had over 15,000 hand-shaken drink stores, the highest density globally.**
 
-## Cultural Value
+Taiwanese hand-shaken drink brands like 50 Lan, CoCo, and Qing Xin Fu Quan rapidly expanded overseas, entering Southeast Asian, European, and American markets. Bubble tea is not only Chun Shui Tang's enduring masterpiece but also a crucial milestone in promoting tea culture worldwide.
 
-Taiwan's tea culture demonstrates the perfect fusion of tradition and modernity, preserving deep tea ceremony cultural heritage while creating globally popular bubble tea culture. This cultural innovation capacity reflects Taiwan society's vitality and creativity, making Taiwan tea culture an important window for international understanding of Taiwan.
+The global hand-shaken drink market in the Asia-Pacific region reached 1.14 billion USD in 2024, with Vietnam and Taiwan projected to have the largest sales volumes. The Chinese market has grown nearly five-fold since the early 2020s.
+
+## From Formosa Oolong to Bubble Tea
+
+Looking back over 150 years of tea history, Taiwan's tea culture demonstrates remarkable adaptability and innovative spirit.
+
+In 1869, British merchant John Dodd first shipped 210,000 pounds of "Formosa Oolong" from Dadaocheng to New York. No one then imagined that this island called "Formosa" would conquer the world a century later with bubble tea.
+
+**True sustainability lies not in rigidly preserving tradition, but in continuously redefining tradition's meaning.**
+
+Taiwan tea culture's success secret perhaps lies in this "maintain core, flexible boundaries" philosophy. From traditional gongfu tea ceremony to modern hand-shaken drink culture, from "Formosa Oolong" to "Bubble Tea," Taiwan has consistently found balance between tradition and innovation.
+
+This isn't just the story of a cup of tea—it's the story of how an island maintained cultural subjectivity while conquering the world through innovation amid globalization waves.
 
 ## Further Reading
 
+- [Taiwan Tea Historical Context - Tea Talk Academy](https://teatalkacademy.com/celebrities/13-tang-jia-hong/152-c3offee2019-05)
+- [The Invention of Bubble Tea - Chun Shui Tang Official Site](https://www.chunshuitang.com.tw/article-detail/invent-bubble-milk-tea/)
+- [Drinking Craze: Revealing Taiwan's Hand-shaken Drinks with Data - LnData](https://lndatatech.github.io/taiwan-drink/)
+- [Witnessing Taiwan's Economic Transformation in Tea Industry - Agriharvest](https://www.agriharvest.tw/archives/70760)
 - [Taiwan Tea - Wikipedia](https://en.wikipedia.org/wiki/Taiwan_tea)
-- [Taiwan Tea Association](https://www.teataiwan.org/)
 
 ## Related Topics
 
-- [[Food/taiwanese-street-food]]
-- [[Culture/ethnic-groups]]
-- [[Economy/economic-miracle]]
-- [[Lifestyle/convenience-store-culture]]
+- [[Food/Taiwan Street Food]]
+- [[Food/Night Market Culture and Street Food]]
+- [[Culture/Ethnic Culture]]
+- [[Economy/Economic Miracle]]
