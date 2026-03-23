@@ -756,93 +756,6 @@ const t = useTranslations(lang);
       </div>
     </section>
 
-    <!-- Section 4: Contact -->
-    <section class="contact-section">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.contact.title')}</h2>
-        <p class="section-subtitle">{t('about.contact.subtitle')}</p>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-icon">{t('about.contact.collaboration.icon')}</div>
-            <h4>{t('about.contact.collaboration.title')}</h4>
-            <a href={`mailto:${t('about.contact.collaboration.email')}`}>
-              {t('about.contact.collaboration.email')}
-            </a>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">{t('about.contact.opensource.icon')}</div>
-            <h4>{t('about.contact.opensource.title')}</h4>
-            <a href={`https://github.com/${t('about.contact.opensource.link')}`} target="_blank">
-              {t('about.contact.opensource.link')}
-            </a>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">{t('about.contact.license.icon')}</div>
-            <h4>{t('about.contact.license.title')}</h4>
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-tw" target="_blank">
-              {t('about.contact.license.link')}
-            </a>
-            <p class="contact-note">{t('about.contact.license.note')}</p>
-          </div>
-        </div>
-
-        <div class="contact-cta">
-          <p>{t('about.contact.cta.text')}</p>
-          <div class="cta-buttons">
-            <a href="/contributing" class="btn btn-primary">{t('about.contact.cta.guide')}</a>
-            <a href="https://github.com/frank890417/taiwan-md" target="_blank" class="btn btn-outline">
-              {t('about.contact.cta.github')}
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Press -->
-    <section class="press-section">
-      <div class="press-inner">
-        <h2>📰 媒體報導</h2>
-        <div class="press-grid">
-          <a href="https://www.cna.com.tw/news/ait/202603195002.aspx" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">{t('about.press.cna')}</div>
-            <h3 class="press-title">{t('about.press.cna.title')}</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-          <a href="https://www.inside.com.tw/article/40877-taiwan-md" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">{t('about.press.inside')}</div>
-            <h3 class="press-title">{t('about.press.inside.title')}</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-          <a href="https://abmedia.io/taiwan-md-github-opensource" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">{t('about.press.abmedia')}</div>
-            <h3 class="press-title">{t('about.press.abmedia.title')}</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-          <a href="https://art.ltn.com.tw/article/breakingnews/5374934" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">{t('about.press.ltn')}</div>
-            <h3 class="press-title">{t('about.press.ltn.title')}</h3>
-            <p class="press-date">2026-03-18</p>
-          </a>
-          <a href="https://www.upmedia.mg/tw/commentary/culture-and-education/254232" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">上報 Up Media</div>
-            <h3 class="press-title">策展島嶼的深度敘事</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-          <a href="https://tw.news.yahoo.com/%E7%AD%96%E5%B1%95%E5%B3%B6%E5%B6%BC%E7%9A%84%E6%B7%B1%E5%BA%A6%E6%95%98%E4%BA%8B-221000314.html" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">Yahoo 新聞</div>
-            <h3 class="press-title">策展島嶼的深度敘事</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-          <a href="https://www.ftnn.com.tw/news/531960" target="_blank" rel="noopener noreferrer" class="press-card">
-            <div class="press-source">{t('about.press.ftnn')}</div>
-            <h3 class="press-title">{t('about.press.ftnn.title')}</h3>
-            <p class="press-date">2026-03-19</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Section: Sponsors -->
     <section class="sponsors-section">
       <div class="sponsors-inner">
@@ -960,6 +873,51 @@ const t = useTranslations(lang);
         </div>
       </div>
     </section>
+
+
+    <!-- Section 4: Contact -->
+    <section class="contact-section">
+      <div class="section-inner">
+        <h2 class="section-title">{t('about.contact.title')}</h2>
+        <p class="section-subtitle">{t('about.contact.subtitle')}</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.collaboration.icon')}</div>
+            <h4>{t('about.contact.collaboration.title')}</h4>
+            <a href={`mailto:${t('about.contact.collaboration.email')}`}>
+              {t('about.contact.collaboration.email')}
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.opensource.icon')}</div>
+            <h4>{t('about.contact.opensource.title')}</h4>
+            <a href={`https://github.com/${t('about.contact.opensource.link')}`} target="_blank">
+              {t('about.contact.opensource.link')}
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.license.icon')}</div>
+            <h4>{t('about.contact.license.title')}</h4>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-tw" target="_blank">
+              {t('about.contact.license.link')}
+            </a>
+            <p class="contact-note">{t('about.contact.license.note')}</p>
+          </div>
+        </div>
+
+        <div class="contact-cta">
+          <p>{t('about.contact.cta.text')}</p>
+          <div class="cta-buttons">
+            <a href="/contributing" class="btn btn-primary">{t('about.contact.cta.guide')}</a>
+            <a href="https://github.com/frank890417/taiwan-md" target="_blank" class="btn btn-outline">
+              {t('about.contact.cta.github')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Protico Community Chat Bubble — sponsored by Howie Young -->
