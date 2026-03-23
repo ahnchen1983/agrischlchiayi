@@ -140,6 +140,58 @@ const categoryList = [
               </div>
             );
           }
+          if (item.path === '/about') {
+            return (
+              <div class="nav-dropdown">
+                <a
+                  href={item.fullPath}
+                  class:list={['nav-link', { active: item.active }]}
+                >
+                  {item.label} <span class="dropdown-arrow">▾</span>
+                </a>
+                <div class="dropdown-menu">
+                  <a href={`${translatePath('/about')}#story`} class="dropdown-item">
+                    📖 {lang === 'en' ? 'Our Story' : '我們的故事'}
+                  </a>
+                  <a href={`${translatePath('/about')}#organism`} class="dropdown-item">
+                    🧬 {lang === 'en' ? 'Digital Organism' : '數位生命體'}
+                  </a>
+                  <a href={`${translatePath('/about')}#team`} class="dropdown-item">
+                    👥 {lang === 'en' ? 'Team' : '團隊'}
+                  </a>
+                  <a href={translatePath('/changelog')} class="dropdown-item">
+                    📝 {lang === 'en' ? 'Changelog' : '更新日誌'}
+                  </a>
+                </div>
+              </div>
+            );
+          }
+          if (item.path === '/contribute') {
+            return (
+              <div class="nav-dropdown">
+                <a
+                  href={item.fullPath}
+                  class:list={['nav-link', { active: item.active }]}
+                >
+                  {item.label} <span class="dropdown-arrow">▾</span>
+                </a>
+                <div class="dropdown-menu">
+                  <a href={`${translatePath('/contribute')}#form`} class="dropdown-item">
+                    📝 {lang === 'en' ? 'Submit Article' : '投稿文章'}
+                  </a>
+                  <a href={`${translatePath('/contribute')}#token-donation`} class="dropdown-item">
+                    🤖 {lang === 'en' ? 'Token Donation' : 'AI 翻譯'}
+                  </a>
+                  <a href={`${translatePath('/contribute')}#organism`} class="dropdown-item">
+                    🧬 {lang === 'en' ? 'Why Contribute' : '為什麼參與'}
+                  </a>
+                  <a href="https://github.com/frank890417/taiwan-md" target="_blank" class="dropdown-item">
+                    🐙 GitHub
+                  </a>
+                </div>
+              </div>
+            );
+          }
           if (item.path === '/data') {
             return (
               <div class="nav-dropdown">
