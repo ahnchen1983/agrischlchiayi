@@ -802,6 +802,28 @@ const t = useTranslations(lang);
     </div>
   </section>
 
+  <!-- Digital Organism Section -->
+  <section class="organism-brief" id="organism">
+    <div class="organism-brief-inner">
+      <h2>{t('contribute.organism.title')}</h2>
+      <div class="organism-facts">
+        <p set:html={t('contribute.organism.fact1.html')} />
+        <p set:html={t('contribute.organism.fact2.html')} />
+        <p set:html={t('contribute.organism.fact3.html')} />
+      </div>
+      <p class="organism-alive" set:html={t('contribute.organism.alive.html')} />
+      <p class="organism-traits" set:html={t('contribute.organism.traits.html')} />
+      <p class="organism-reef" set:html={t('contribute.organism.reef.html')} />
+      <p class="organism-art" set:html={t('contribute.organism.art.html')} />
+      <div class="organism-closing">
+        <p class="closing-line">{t('contribute.organism.closing1')}</p>
+        <p class="closing-line">{t('contribute.organism.closing2')}</p>
+        <p class="closing-line closing-future">{t('contribute.organism.closing3')}</p>
+      </div>
+      <a href="/about/#organism" class="organism-more">{t('contribute.organism.readmore')}</a>
+    </div>
+  </section>
+
   <!-- Token Donation Section -->
   <section class="token-donation" id="token-donation">
     <div class="token-inner">
