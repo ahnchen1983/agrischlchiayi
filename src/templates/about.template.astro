@@ -748,6 +748,170 @@ const t = useTranslations(lang);
             </a>
 
           </div>
+          <p
+            class="contributors-cta"
+            set:html={t('about.team.contributors.cta.html')}
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Contact -->
+    <section class="contact-section">
+      <div class="section-inner">
+        <h2 class="section-title">{t('about.contact.title')}</h2>
+        <p class="section-subtitle">{t('about.contact.subtitle')}</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.collaboration.icon')}</div>
+            <h4>{t('about.contact.collaboration.title')}</h4>
+            <a href={`mailto:${t('about.contact.collaboration.email')}`}>
+              {t('about.contact.collaboration.email')}
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.opensource.icon')}</div>
+            <h4>{t('about.contact.opensource.title')}</h4>
+            <a href={`https://github.com/${t('about.contact.opensource.link')}`} target="_blank">
+              {t('about.contact.opensource.link')}
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">{t('about.contact.license.icon')}</div>
+            <h4>{t('about.contact.license.title')}</h4>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-tw" target="_blank">
+              {t('about.contact.license.link')}
+            </a>
+            <p class="contact-note">{t('about.contact.license.note')}</p>
+          </div>
+        </div>
+
+        <div class="contact-cta">
+          <p>{t('about.contact.cta.text')}</p>
+          <div class="cta-buttons">
+            <a href="/contributing" class="btn btn-primary">{t('about.contact.cta.guide')}</a>
+            <a href="https://github.com/frank890417/taiwan-md" target="_blank" class="btn btn-outline">
+              {t('about.contact.cta.github')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Press -->
+    <section class="press-section">
+      <div class="press-inner">
+        <h2>📰 媒體報導</h2>
+        <div class="press-grid">
+          <a href="https://www.cna.com.tw/news/ait/202603195002.aspx" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">{t('about.press.cna')}</div>
+            <h3 class="press-title">{t('about.press.cna.title')}</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+          <a href="https://www.inside.com.tw/article/40877-taiwan-md" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">{t('about.press.inside')}</div>
+            <h3 class="press-title">{t('about.press.inside.title')}</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+          <a href="https://abmedia.io/taiwan-md-github-opensource" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">{t('about.press.abmedia')}</div>
+            <h3 class="press-title">{t('about.press.abmedia.title')}</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+          <a href="https://art.ltn.com.tw/article/breakingnews/5374934" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">{t('about.press.ltn')}</div>
+            <h3 class="press-title">{t('about.press.ltn.title')}</h3>
+            <p class="press-date">2026-03-18</p>
+          </a>
+          <a href="https://www.upmedia.mg/tw/commentary/culture-and-education/254232" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">上報 Up Media</div>
+            <h3 class="press-title">策展島嶼的深度敘事</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+          <a href="https://tw.news.yahoo.com/%E7%AD%96%E5%B1%95%E5%B3%B6%E5%B6%BC%E7%9A%84%E6%B7%B1%E5%BA%A6%E6%95%98%E4%BA%8B-221000314.html" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">Yahoo 新聞</div>
+            <h3 class="press-title">策展島嶼的深度敘事</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+          <a href="https://www.ftnn.com.tw/news/531960" target="_blank" rel="noopener noreferrer" class="press-card">
+            <div class="press-source">{t('about.press.ftnn')}</div>
+            <h3 class="press-title">{t('about.press.ftnn.title')}</h3>
+            <p class="press-date">2026-03-19</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Sponsors -->
+    <section class="sponsors-section">
+      <div class="sponsors-inner">
+        <h2 class="section-title">{t('about.sponsors.title')}</h2>
+        <p class="sponsors-desc" set:html={t('about.sponsors.desc.html')} />
+
+        <div class="sponsor-tiers">
+          <div class="tier">
+            <h3 class="tier-name gold">{t('about.sponsors.tier.core.name')}</h3>
+            <p class="tier-desc">{t('about.sponsors.tier.core.desc')}</p>
+            <p class="tier-perks">{t('about.sponsors.tier.core.perks')}</p>
+            <div class="tier-logos">
+              <div class="logo-placeholder">{t('about.sponsors.tier.core.placeholder')}</div>
+            </div>
+          </div>
+
+          <div class="tier">
+            <h3 class="tier-name silver">{t('about.sponsors.tier.professional.name')}</h3>
+            <p class="tier-desc">{t('about.sponsors.tier.professional.desc')}</p>
+            <p class="tier-perks">{t('about.sponsors.tier.professional.perks')}</p>
+            <div class="tier-logos">
+              <div class="sponsor-card">
+                <a href="https://justfont.com" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                  <img src="/images/justfont-logo.svg" alt="justfont" class="sponsor-logo-img" style="height: 28px;" />
+                </a>
+                <div class="sponsor-story">
+                  <p class="sponsor-contribution-title">{t('about.sponsors.justfont.story.title')}</p>
+                  <p class="sponsor-contribution">
+                    {t('about.sponsors.justfont.story.desc')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier">
+            <h3 class="tier-name bronze">{t('about.sponsors.tier.community.name')}</h3>
+            <p class="tier-desc">{t('about.sponsors.tier.community.desc')}</p>
+            <p class="tier-perks">{t('about.sponsors.tier.community.perks')}</p>
+            <div class="tier-logos">
+              <a href="https://protico.io" target="_blank" class="supporter-link">
+                <span set:html={t('about.sponsors.protico.text.html')} />
+              </a>
+            </div>
+          </div>
+
+          <div class="tier">
+            <h3 class="tier-name community">{t('about.sponsors.tier.individual.name')}</h3>
+            <p class="tier-desc">{t('about.sponsors.tier.individual.desc')}</p>
+            <p class="tier-perks">{t('about.sponsors.tier.individual.perks')}</p>
+            <div class="tier-logos">
+              <a href="https://github.com/howieyoung" target="_blank" class="supporter-link">
+                <span set:html={t('about.sponsors.howie.text.html')} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sponsor-cta">
+          <h3>{t('about.sponsors.cta.title')}</h3>
+          <p set:html={t('about.sponsors.cta.desc.html')} />
+          <div class="sponsor-contact">
+            <a href={`mailto:cheyu.wu@monoame.com?subject=Taiwan.md 贊助合作詢問`} class="btn btn-primary">
+              {t('about.sponsors.cta.contact')}
+            </a>
+            <a href="https://github.com/sponsors/frank890417" target="_blank" class="btn btn-outline">
+              {t('about.sponsors.cta.github')}
+            </a>
+          </div>
           <div class="eth-donate">
             <p class="eth-label">{t('about.sponsors.eth.label')}</p>
             <div class="eth-address-box">
@@ -1502,6 +1666,61 @@ const t = useTranslations(lang);
     font-weight: 500;
   }
 
+  /* ===== Press ===== */
+  .press-section {
+    padding: 4rem 2rem;
+    background: rgba(247, 243, 233, 0.3);
+  }
+  .press-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .press-inner h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #2D5016;
+    font-weight: 700;
+  }
+  .press-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .press-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #A7C4A0;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+  .press-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.12);
+    border-color: #4A7C59;
+  }
+  .press-source {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4A7C59;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  .press-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2D5016;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  .press-date {
+    font-size: 0.85rem;
+    color: #6B8E23;
+  }
+
   /* ===== Section 5: 聯繫我們 ===== */
   .contact-section {
     padding: 4rem 0 3rem;
@@ -1755,6 +1974,19 @@ const t = useTranslations(lang);
   }
   .sponsor-note a {
     color: #3b82f6;
+  }
+
+  .supporter-link {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #15803d;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .supporter-link:hover { 
+    color: #166534; 
+    text-decoration: underline; 
   }
 
   .eth-donate {
