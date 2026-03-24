@@ -16,18 +16,6 @@ import {
   type CategoryKey,
 } from '../../utils/categoryConfig';
 
-const safeMatter = (fileContent: string) => {
-  try {
-    return matter(fileContent);
-  } catch {
-    const stripped = fileContent.replace(
-      /^---\s*\n[\s\S]*?\n---\s*\n/,
-      '',
-    );
-    return { data: {}, content: stripped };
-  }
-};
-
 // ── Git helpers ───────────────────────────────────────────────────────────────
 let _gitCache: Map<
   string,
@@ -111,6 +99,15 @@ const categoryMapping: Record<string, string> = {
 
 // ── getStaticPaths ────────────────────────────────────────────────────────────
 export async function getStaticPaths() {
+  const safeMatter = (fileContent: string) => {
+    try {
+      return matter(fileContent);
+    } catch {
+      const stripped = fileContent.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, '');
+      return { data: {}, content: stripped };
+    }
+  };
+
   const _categoryMapping: Record<string, string> = {
     about: 'About',
     history: 'History',
