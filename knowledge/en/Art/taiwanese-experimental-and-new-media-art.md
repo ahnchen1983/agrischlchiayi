@@ -5,7 +5,7 @@ date: 2026-03-18
 tags: [new media art, digital art, interactive installations, video art, VR, AR, experimental art, technology art]
 author: "Taiwan.md"
 difficulty: "advanced"
-readingTime: "20 minutes"
+readingTime: 20
 featured: true
 lastVerified: 2026-03-19
 lastHumanReview: false

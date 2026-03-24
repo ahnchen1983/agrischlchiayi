@@ -4,7 +4,7 @@ description: "How a 13-Year-Old Child Worker Built a NT$657.6 Billion Revenue Em
 date: 2026-03-21
 tags: [economy, enterprise, food industry, retail, brand management]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-21
 lastHumanReview: true

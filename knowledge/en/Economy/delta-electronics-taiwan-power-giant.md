@@ -4,7 +4,7 @@ description: "How NT$300,000 and one man's vision redefined the global power ind
 date: 2026-03-22
 tags: [Economy, Corporations, Power Management, Green Technology, Industrial Automation, ESG]
 author: Taiwan.md
-readingTime: 15 minutes
+readingTime: 15
 category: economy
 featured: true
 lastVerified: 2026-03-22

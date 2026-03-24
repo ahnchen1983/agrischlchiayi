@@ -4,7 +4,7 @@ description: "Global leader in industrial computing, IoT intelligent systems pio
 date: 2026-03-20
 tags: [Economy, Enterprises, Industrial Computers, IoT]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

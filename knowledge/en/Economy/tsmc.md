@@ -4,7 +4,7 @@ description: "How a Taiwanese chipmaker became the linchpin of global digital ci
 date: 2026-03-20
 tags: [Economy, Business, Semiconductors, Technology, Manufacturing, TSMC]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

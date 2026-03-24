@@ -5,7 +5,7 @@ date: 2026-03-20
 tags: ['education', 'flipped learning', 'PaGamO', 'gamified learning', 'NTU', 'educational innovation']
 subcategory: 'Education & Society'
 author: 'Taiwan.md'
-readingTime: '5 minutes'
+readingTime: 5
 category: 'People'
 lastVerified: 2026-03-20
 ---

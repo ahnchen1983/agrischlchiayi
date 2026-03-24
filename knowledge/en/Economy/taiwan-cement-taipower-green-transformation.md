@@ -4,7 +4,7 @@ description: "Founded in 1946, stock code 1101 was born for the Taiwan Stock Exc
 date: 2026-03-20
 tags: [Economy, Enterprises, Cement Industry, Construction Materials, Privatization, Green Transformation]
 author: Taiwan.md
-readingTime: 9 minutes
+readingTime: 9
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: true

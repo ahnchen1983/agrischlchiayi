@@ -4,7 +4,7 @@ description: "From Shanghai textile beginnings to an 11-industry conglomerate sp
 date: 2026-03-20
 tags: [Economy, Enterprises, Conglomerates, Diversified Business, Textiles]
 author: Taiwan.md
-readingTime: 9 minutes
+readingTime: 9
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

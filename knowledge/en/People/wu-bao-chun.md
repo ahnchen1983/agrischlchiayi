@@ -5,7 +5,7 @@ date: 2026-03-22
 tags: ['Food', 'Baking', 'Craftsmanship', 'World Champion', 'Pingtung', 'Bread']
 subcategory: 'Food & Craft'
 author: 'Taiwan.md'
-readingTime: '6 minutes'
+readingTime: 6
 category: 'People'
 lastVerified: 2026-03-22
 ---

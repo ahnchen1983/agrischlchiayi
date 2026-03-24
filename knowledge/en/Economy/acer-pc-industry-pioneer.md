@@ -4,7 +4,7 @@ description: "From Taoyuan garage to global brand: How Taiwan's personal compute
 date: 2026-03-20
 tags: [Economy, Corporations, Personal Computers, Brand, Globalization]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: false

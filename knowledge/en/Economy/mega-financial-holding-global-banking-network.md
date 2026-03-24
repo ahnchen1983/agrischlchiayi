@@ -4,7 +4,7 @@ description: "Inheriting the legacy of Taiwan Bank established in 1897, Mega Fin
 date: 2026-03-20
 tags: [Economy, Enterprise, Financial Industry, State-Owned Bank, International Finance]
 author: Taiwan.md
-readingTime: 8 minutes
+readingTime: 8
 featured: false
 lastVerified: 2026-03-20
 lastHumanReview: true
