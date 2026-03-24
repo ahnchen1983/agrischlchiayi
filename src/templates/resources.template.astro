@@ -716,7 +716,7 @@ const mindmapData = JSON.stringify({
       </nav>
 
       <h1 class="hero-title">
-        <span class="hero-emoji">🇹🇼</span>
+        <span class="hero-emoji">📚</span>
         {t('resources.hero.title')}
       </h1>
       
@@ -1441,7 +1441,7 @@ const mindmapData = JSON.stringify({
 
     // Layout params
     const dx = 22; // vertical spacing
-    const dy = 160; // horizontal spacing
+    const dy = 160; // horizontal spacing - reduced to prevent stretching
     const treeLayout = d3.tree().nodeSize([dx, dy]);
 
     // Layout right tree
@@ -1561,4 +1561,105 @@ const mindmapData = JSON.stringify({
         return `M${sy},${sx} C${my},${sx} ${my},${tx} ${ty},${tx}`;
       })
       .attr('stroke', (d) => d.target.data.color || '#94a3b8')
-      .attr('stroke-width', (d) => ((d.target.depth || 0) <= 1 ? 2 : 1.
+      .attr('stroke-width', (d) => ((d.target.depth || 0) <= 1 ? 2 : 1.2))
+      .attr('stroke-opacity', 0.5);
+
+    // Nodes
+    const nodeG = g
+      .append('g')
+      .selectAll('g')
+      .data(allNodes)
+      .join('g')
+      .attr('transform', (d) => `translate(${d.y || 0},${d.x || 0})`)
+      .attr('cursor', (d) => (d.data.url ? 'pointer' : 'default'));
+
+    nodeG
+      .append('circle')
+      .attr('r', (d) => {
+        if ((d.depth || 0) === 0) return 10;
+        if ((d.depth || 0) === 1) return 6;
+        return 3.5;
+      })
+      .attr('fill', (d) => d.data.color || '#94a3b8')
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.5);
+
+    // Labels — horizontal, positioned based on side
+    nodeG
+      .append('text')
+      .attr('dy', '0.32em')
+      .attr('x', (d) => {
+        if ((d.depth || 0) === 0) return 0; // root: centered above
+        if (d._side === 'left') {
+          return d.children ? 10 : -8; // left side: leaves go left
+        }
+        return d.children ? -10 : 8; // right side: leaves go right
+      })
+      .attr('text-anchor', (d) => {
+        if ((d.depth || 0) === 0) return 'middle';
+        if (d._side === 'left') {
+          return d.children ? 'start' : 'end';
+        }
+        return d.children ? 'end' : 'start';
+      })
+      .attr('font-size', (d) => {
+        if ((d.depth || 0) === 0) return '14px';
+        if ((d.depth || 0) === 1) return '12px';
+        return '10px';
+      })
+      .attr('font-weight', (d) => ((d.depth || 0) <= 1 ? '700' : '400'))
+      .attr('fill', (d) =>
+        (d.depth || 0) === 0
+          ? '#065f46'
+          : (d.depth || 0) === 1
+            ? '#1a1a1a'
+            : '#555',
+      )
+      .text((d) => d.data.label || d.data.name || '');
+
+    // Click to navigate
+    nodeG.on('click', (event, d) => {
+      if (d.data.url) {
+        window.open(d.data.url, '_blank', 'noopener noreferrer');
+      }
+    });
+
+    // Hover effects
+    nodeG
+      .on('mouseover', function () {
+        d3.select(this)
+          .select('circle')
+          .transition()
+          .duration(150)
+          .attr('stroke', '#3b82f6')
+          .attr('stroke-width', 3);
+        d3.select(this)
+          .select('text')
+          .transition()
+          .duration(150)
+          .attr('fill', '#065f46')
+          .attr('font-weight', '700');
+      })
+      .on('mouseout', function (event, d) {
+        d3.select(this)
+          .select('circle')
+          .transition()
+          .duration(150)
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1.5);
+        d3.select(this)
+          .select('text')
+          .transition()
+          .duration(150)
+          .attr(
+            'fill',
+            (d.depth || 0) === 0
+              ? '#065f46'
+              : (d.depth || 0) === 1
+                ? '#1a1a1a'
+                : '#555',
+          )
+          .attr('font-weight', (d.depth || 0) <= 1 ? '700' : '400');
+      });
+  });
+</script>
