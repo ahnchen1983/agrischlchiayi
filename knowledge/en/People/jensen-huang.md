@@ -82,7 +82,7 @@ He wore his signature black leather jacket to night markets, chatted with vendor
 <<<<<<< Updated upstream
 But Huang's significance to Taiwan extends far beyond celebrity. NVIDIA's most advanced AI chips are manufactured by [[tsmc]]. Huang and TSMC founder [[tsmc-morris-chang]] share a partnership spanning over three decades. At Computex, Huang displayed a map of Taiwan covered with NVIDIA's supply-chain partners and declared: "Taiwan is a world hero."
 =======
-But Huang's significance to Taiwan extends far beyond celebrity. NVIDIA's most advanced AI chips are manufactured by [[tsmc]]. Huang and TSMC founder [[Morris Chang]] share a partnership spanning over three decades. At Computex, Huang displayed a map of Taiwan covered with NVIDIA's supply-chain partners and declared: "Taiwan is a world hero."
+But Huang's significance to Taiwan extends far beyond celebrity. NVIDIA's most advanced AI chips are manufactured by [[tsmc]]. Huang and TSMC founder [[tsmc-morris-chang]] share a partnership spanning over three decades. At Computex, Huang displayed a map of Taiwan covered with NVIDIA's supply-chain partners and declared: "Taiwan is a world hero."
 
 > > > > > > > Stashed changes
 
@@ -143,7 +143,7 @@ Jensen Huang now has a corporate logo permanently inked on his skin. His NVIDIA 
 <<<<<<< Updated upstream
 
 - # [[tsmc-morris-chang]]: NVIDIA's most critical partner, founder of TSMC
-- [[Morris Chang]]: NVIDIA's most critical partner, founder of TSMC
+- [[tsmc-morris-chang]]: NVIDIA's most critical partner, founder of TSMC
   > > > > > > > Stashed changes
 - [[tsmc]]: Manufacturer of the world's most advanced AI chips
 - [[Science Parks]]: The foundation of Taiwan's semiconductor ecosystem

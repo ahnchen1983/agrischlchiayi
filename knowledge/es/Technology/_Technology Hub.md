@@ -98,11 +98,11 @@ _Fuente de la imagen: [Wikimedia Commons](https://commons.wikimedia.org/wiki/Fil
 - [[acer-pc-industry-pioneer]]​: Curva de la sonrisa e internacionalización de marca
 - [[asus-computer]]​: De placas madre a marca tecnológica integral
 - # [[foxconn-precision-industry]]​: Fabricación de precisión y reino de fabricación por contrato
-- [[Audrey Tang]]​: Ministra digital e innovación en gobernanza tecnológica
+- [[audrey-tang]]​: Ministra digital e innovación en gobernanza tecnológica
 - [[mediatek]]​: La competitividad global del diseño de IC taiwanés
-- [[Acer]]​: Curva de la sonrisa e internacionalización de marca
-- [[ASUS]]​: De placas madre a marca tecnológica integral
-- [[Foxconn]]​: Fabricación de precisión y reino de fabricación por contrato
+- [[acer-pc-industry-pioneer]]​: Curva de la sonrisa e internacionalización de marca
+- [[asus-computer]]​: De placas madre a marca tecnológica integral
+- [[foxconn-precision-industry]]​: Fabricación de precisión y reino de fabricación por contrato
   > > > > > > > Stashed changes
 
 ---

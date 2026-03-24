@@ -56,7 +56,7 @@ Three major world tours tell the story in numbers:
 <<<<<<< Updated upstream
 Over 100 shows, cumulative box office exceeding NT$4 billion (roughly US$130 million). In the Mandopop world, only [[jay-chou]] and [[mayday]] operate at comparable scale. She is the highest-grossing female concert act in Taiwanese pop history.
 =======
-Over 100 shows, cumulative box office exceeding NT$4 billion (roughly US$130 million). In the Mandopop world, only [[Jay Chou]] and [[mayday]] operate at comparable scale. She is the highest-grossing female concert act in Taiwanese pop history.
+Over 100 shows, cumulative box office exceeding NT$4 billion (roughly US$130 million). In the Mandopop world, only [[jay-chou]] and [[mayday]] operate at comparable scale. She is the highest-grossing female concert act in Taiwanese pop history.
 
 > > > > > > > Stashed changes
 

@@ -29,7 +29,7 @@ These names aren't just Taiwan's pride; they redrew the boundaries of Mandarin m
 <<<<<<< Updated upstream
 [[Mandarin Pop and Golden Melody Awards]] | [[jay-chou]] | [[mayday]] | [[蔡依林]] | [[a-mei]] | [[Yoga Lin]] | [[Hebe Tien]]
 =======
-[[Mandarin Pop and Golden Melody Awards]] | [[Jay Chou]] | [[mayday]] | [[Jolin Tsai]] | [[a-mei]] | [[Yoga Lin]] | [[Hebe Tien]]
+[[Mandarin Pop and Golden Melody Awards]] | [[jay-chou]] | [[mayday]] | [[蔡依林]] | [[a-mei]] | [[Yoga Lin]] | [[Hebe Tien]]
 
 > > > > > > > Stashed changes
 
@@ -64,7 +64,7 @@ Most importantly, this music reminds us: Taiwan's cultural roots run far deeper 
 <<<<<<< Updated upstream
 [[Taiwan Indigenous Music Traditions]] | [[contemporary-indigenous-singer-songwriters]] | [[a-mei]] | [[Jia Jia]] | [[Haowen]]
 =======
-[[Taiwan Indigenous Music Traditions]] | [[Contemporary Indigenous Singer-Songwriters]] | [[a-mei]] | [[Jia Jia]] | [[Haowen]]
+[[Taiwan Indigenous Music Traditions]] | [[contemporary-indigenous-singer-songwriters]] | [[a-mei]] | [[Jia Jia]] | [[Haowen]]
 
 > > > > > > > Stashed changes
 

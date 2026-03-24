@@ -357,5 +357,5 @@ For visitors from around the world, Taiwan's national parks offer an unparallele
 - [[hot-spring-culture]] _(coming soon)_
   <<<<<<< Updated upstream
 - # [[indigenous-peoples-16-tribes-cultural-map]] _(coming soon)_
-- [[Culture/indigenous-peoples]] _(coming soon)_
+- [[indigenous-peoples-16-tribes-cultural-map]] _(coming soon)_
   > > > > > > > Stashed changes

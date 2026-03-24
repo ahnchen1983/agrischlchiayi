@@ -69,7 +69,7 @@ Active participation in global trade and attracting foreign investment, successf
 <<<<<<< Updated upstream
 
 - # [[semiconductor-industry]]
-- [[Technology/Semiconductor Industry]]
+- [[semiconductor-industry]]
   > > > > > > > Stashed changes
 - [[convenience-store-culture]]
 - [[democratic-system]]

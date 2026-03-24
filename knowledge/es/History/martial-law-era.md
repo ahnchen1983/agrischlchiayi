@@ -184,7 +184,7 @@ La experiencia de la ley marcial se convirtió en una referencia importante para
 - [[democratization]]: El proceso de transición de la ley marcial a la democracia
   <<<<<<< Updated upstream
 - # [[february-28-incident-and-white-terror-taiwan-authoritarian-rule-trauma-and-memory]]: Conflicto político temprano
-- [[February 28 Incident]]: Conflicto político temprano
+- [[february-28-incident-and-white-terror-taiwan-authoritarian-rule-trauma-and-memory]]: Conflicto político temprano
   > > > > > > > Stashed changes
 - [[Transitional Justice]]: Esfuerzos para abordar el legado autoritario
 

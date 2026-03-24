@@ -72,9 +72,9 @@ Audrey Tang's appointment and practice as Digital Minister symbolizes Taiwan's p
 - [[foxconn-precision-industry]]: World's largest contract manufacturer
 - [[asus-computer]]: Brand computer and motherboard manufacturer
 - # [[acer-pc-industry-pioneer]]: International brand pioneer
-- [[Foxconn]]: World's largest contract manufacturer
-- [[ASUS]]: Brand computer and motherboard manufacturer
-- [[Acer]]: International brand pioneer
+- [[foxconn-precision-industry]]: World's largest contract manufacturer
+- [[asus-computer]]: Brand computer and motherboard manufacturer
+- [[acer-pc-industry-pioneer]]: International brand pioneer
   > > > > > > > Stashed changes
 
 ### Industry Ecosystem

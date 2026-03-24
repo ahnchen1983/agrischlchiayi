@@ -37,7 +37,7 @@ Los logros tecnológicos de Taiwán han impresionado al mundo entero, y detrás 
 <<<<<<< Updated upstream
 [[tsmc-morris-chang]] es conocido como el "Padrino de los Semiconductores", creó [[tsmc]] con sus propias manos, que no solo cambió a Taiwán, sino que también redefinió el modelo de división del trabajo de la industria global de semiconductores. En 1987, cuando Morris Chang propuso el concepto de "fundición profesional de obleas", muchas personas pensaron que era un modelo de negocio imposible. Sin embargo, fue precisamente este modelo "imposible" el que hizo de TSMC la fundición de obleas más grande del mundo, dando a Taiwán una posición estratégica de "escudo de silicio" en la cadena de suministro global de semiconductores.
 =======
-[[Morris Chang]] es conocido como el "Padrino de los Semiconductores", creó [[tsmc]] con sus propias manos, que no solo cambió a Taiwán, sino que también redefinió el modelo de división del trabajo de la industria global de semiconductores. En 1987, cuando Morris Chang propuso el concepto de "fundición profesional de obleas", muchas personas pensaron que era un modelo de negocio imposible. Sin embargo, fue precisamente este modelo "imposible" el que hizo de TSMC la fundición de obleas más grande del mundo, dando a Taiwán una posición estratégica de "escudo de silicio" en la cadena de suministro global de semiconductores.
+[[tsmc-morris-chang]] es conocido como el "Padrino de los Semiconductores", creó [[tsmc]] con sus propias manos, que no solo cambió a Taiwán, sino que también redefinió el modelo de división del trabajo de la industria global de semiconductores. En 1987, cuando Morris Chang propuso el concepto de "fundición profesional de obleas", muchas personas pensaron que era un modelo de negocio imposible. Sin embargo, fue precisamente este modelo "imposible" el que hizo de TSMC la fundición de obleas más grande del mundo, dando a Taiwán una posición estratégica de "escudo de silicio" en la cadena de suministro global de semiconductores.
 
 > > > > > > > Stashed changes
 
@@ -116,7 +116,7 @@ En el campo de imagen y diseño, [[齊柏林]] despertó la conciencia ambiental
 <<<<<<< Updated upstream
 [[jensen-huang]], fundador de NVIDIA, ha liderado la revolución global de computación de IA. Como "Padrino de la IA", no solo demuestra liderazgo en la cima de la tecnología, sino que también retribuye activamente a su tierra natal, profundizando las conexiones estratégicas con la industria de semiconductores taiwanesa como [[tsmc]], convirtiendo a Taiwán en el núcleo del mapa global de IA.
 =======
-[[Jensen Huang]], fundador de NVIDIA, ha liderado la revolución global de computación de IA. Como "Padrino de la IA", no solo demuestra liderazgo en la cima de la tecnología, sino que también retribuye activamente a su tierra natal, profundizando las conexiones estratégicas con la industria de semiconductores taiwanesa como [[tsmc]], convirtiendo a Taiwán en el núcleo del mapa global de IA.
+[[jensen-huang]], fundador de NVIDIA, ha liderado la revolución global de computación de IA. Como "Padrino de la IA", no solo demuestra liderazgo en la cima de la tecnología, sino que también retribuye activamente a su tierra natal, profundizando las conexiones estratégicas con la industria de semiconductores taiwanesa como [[tsmc]], convirtiendo a Taiwán en el núcleo del mapa global de IA.
 
 > > > > > > > Stashed changes
 
@@ -167,14 +167,14 @@ _Fuente de la imagen: [Wikimedia Commons](https://commons.wikimedia.org/wiki/Fil
 - [[chen-shu-chu-vegetable-vendor-philanthropist]]​: Vendedora de verduras de Taitung, una de las 100 personas más influyentes de TIME
 - [[jimmy-liao]]​: Autor de libros ilustrados, obras internacionalmente conocidas como "Turn Left, Turn Right"
 - # [[jeremy-lin]]​: Leyenda de "Linsanity" en la NBA, máxima visibilidad de atleta taiwanés-estadounidense
-- [[Annette Lu]]​: Pionera feminista taiwanesa, primera mujer vicepresidenta en el mundo de habla china
-- [[Kao Chun-ming]]​: Pastor de derechos humanos, prisionero de conciencia durante el período de ley marcial
-- [[Jolin Tsai]]​: Reina del pop asiático, reina de Golden Melody
+- [[annette-lu]]​: Pionera feminista taiwanesa, primera mujer vicepresidenta en el mundo de habla china
+- [[高俊明]]​: Pastor de derechos humanos, prisionero de conciencia durante el período de ley marcial
+- [[蔡依林]]​: Reina del pop asiático, reina de Golden Melody
 - [[mayday]]​: Sinónimo de rock en chino mandarín, mejor banda de Golden Melody
-- [[Wei Te-sheng]]​: Director de "Cape No. 7" y "Warriors of the Rainbow: Seediq Bale"
-- [[Chen Shu-chu]]​: Vendedora de verduras de Taitung, una de las 100 personas más influyentes de TIME
-- [[Jimmy Liao]]​: Autor de libros ilustrados, obras internacionalmente conocidas como "Turn Left, Turn Right"
-- [[Jeremy Lin]]​: Leyenda de "Linsanity" en la NBA, máxima visibilidad de atleta taiwanés-estadounidense
+- [[wei-te-sheng-taiwanese-epic-filmmaker]]​: Director de "Cape No. 7" y "Warriors of the Rainbow: Seediq Bale"
+- [[chen-shu-chu-vegetable-vendor-philanthropist]]​: Vendedora de verduras de Taitung, una de las 100 personas más influyentes de TIME
+- [[jimmy-liao]]​: Autor de libros ilustrados, obras internacionalmente conocidas como "Turn Left, Turn Right"
+- [[jeremy-lin]]​: Leyenda de "Linsanity" en la NBA, máxima visibilidad de atleta taiwanés-estadounidense
   > > > > > > > Stashed changes
 - [[Ju Tzong-ching]]​: Padrino de la percusión, llevó lo minoritario a lo mainstream
 - [[kevin-lin-ultramarathon-desert-pioneer]]​: Aventurero taiwanés, primero en cruzar el desierto del Sahara

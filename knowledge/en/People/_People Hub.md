@@ -50,9 +50,9 @@ In the 2000s, [[jay-chou]] redefined the sound of Chinese popular music, fusing 
 
 # [[deng-yu-xian-taiwanese-song-composer]] | [[teresa-teng]] | [[Lo Ta-yu]] | [[Jonathan Lee]] | [[jay-chou]] | [[a-mei]] | [[mayday]] | [[wu-bai]] | [[蔡依林]] | [[jj-lin-singaporean-mandopop-king]] | [[crowd-lu-indie-folk-treasure]] | [[jam-hsiao]] | [[bobby-chen-indie-music-pioneer]]
 
-In the 2000s, [[Jay Chou]] redefined the sound of Chinese popular music, fusing R&B, hip-hop, and Chinese traditional elements. [[a-mei]] became a diva with her indigenous heritage and explosive vocals, later advocating for LGBTQ rights. [[mayday]] grew from underground band to Asia's largest Chinese rock group. [[Wu Bai]]'s Taiwanese rock injected raw vitality into local music.
+In the 2000s, [[jay-chou]] redefined the sound of Chinese popular music, fusing R&B, hip-hop, and Chinese traditional elements. [[a-mei]] became a diva with her indigenous heritage and explosive vocals, later advocating for LGBTQ rights. [[mayday]] grew from underground band to Asia's largest Chinese rock group. [[wu-bai]]'s Taiwanese rock injected raw vitality into local music.
 
-[[Deng Yu-xian]] | [[Teresa Teng]] | [[Lo Ta-yu]] | [[Jonathan Lee]] | [[Jay Chou]] | [[a-mei]] | [[mayday]] | [[Wu Bai]] | [[Jolin Tsai]] | [[JJ Lin]] | [[Crowd Lu]] | [[Jam Hsiao]] | [[Bobby Chen]]
+[[deng-yu-xian-taiwanese-song-composer]] | [[teresa-teng]] | [[Lo Ta-yu]] | [[Jonathan Lee]] | [[jay-chou]] | [[a-mei]] | [[mayday]] | [[wu-bai]] | [[蔡依林]] | [[jj-lin-singaporean-mandopop-king]] | [[crowd-lu-indie-folk-treasure]] | [[jam-hsiao]] | [[bobby-chen-indie-music-pioneer]]
 
 > > > > > > > Stashed changes
 

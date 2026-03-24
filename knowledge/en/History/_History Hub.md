@@ -45,7 +45,7 @@ On September 28, 1986, the Democratic Progressive Party was founded at the Grand
 <<<<<<< Updated upstream
 [[democratization]] | [[Taiwan Democracy Movement]] | [[taiwan-elections-and-party-politics]]
 =======
-[[democratization]] | [[Taiwan Democracy Movement]] | [[Taiwan Elections and Party Politics]]
+[[democratization]] | [[Taiwan Democracy Movement]] | [[taiwan-elections-and-party-politics]]
 
 > > > > > > > Stashed changes
 
