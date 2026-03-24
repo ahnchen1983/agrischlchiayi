@@ -153,6 +153,66 @@ docs/
 
 ---
 
+## 🧬 Digital Organism — 數位生命體
+
+Taiwan.md is not a static website. It's a **digital organism** — a living knowledge system with its own DNA, immune system, and evolutionary mechanisms.
+
+Every `.md` file in the root directory is an organ of this organism. Together, they form a self-sustaining system that ensures quality, consistency, and growth — whether the contributor is a first-time reader, a seasoned developer, or an AI agent.
+
+### 🧠 The Organism's Organs
+
+| File | Role | When to read |
+|------|------|-------------|
+| **[EDITORIAL.md](./EDITORIAL.md)** | 🫀 **Heart** — Writing methodology & quality standard | Before writing or reviewing any article. Defines what a "good article" looks like: research depth, narrative structure, tone, anti-AI-hollow patterns, rich text requirements |
+| **[REWRITE-PIPELINE.md](./REWRITE-PIPELINE.md)** | 🔄 **Circulatory system** — Three-stage quality pipeline | Before rewriting existing articles. Separates Research → Write → Verify to prevent quality decay in the second half of articles |
+| **[TERMINOLOGY.md](./TERMINOLOGY.md)** | 🗣️ **Voice** — Language & naming conventions | Before writing. Covers national identity terms, Taiwanese language naming, geographic conventions, respectful language for indigenous peoples |
+| **[CONTRIBUTING.md](./CONTRIBUTING.md)** | 🚪 **Front door** — How to contribute | First time contributing. Four paths from zero-code to full PR, plus article templates and submission guidelines |
+| **[CONTRIBUTE_PROMPT.md](./CONTRIBUTE_PROMPT.md)** | 🤖 **AI onboarding** — Prompt for AI-assisted writing | When using ChatGPT/Claude/Gemini to write an article. Paste this to your AI and it guides the process |
+| **[TRANSLATE_PROMPT.md](./TRANSLATE_PROMPT.md)** | 🌐 **Translation guide** — Prompt for AI-assisted translation | When translating zh-TW → en. Not word-for-word translation; recreates the article for English readers |
+| **[GOVERNANCE.md](./GOVERNANCE.md)** | ⚖️ **Constitution** — Decision-making & roles | When proposing structural changes. Defines maintainer roles, merge policies, dispute resolution |
+| **[REVIEWERS.md](./REVIEWERS.md)** | 👁️ **Immune system** — PR review guidelines | Before reviewing a PR. Quality checklist, common rejection reasons, how to give constructive feedback |
+| **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** | 🤝 **Social contract** — Community behavior standards | When joining the community. Based on Contributor Covenant |
+| **[ROADMAP.md](./ROADMAP.md)** | 🗺️ **Growth plan** — Feature & content roadmap | When planning contributions or looking for things to work on |
+| **[HUB-EDITORIAL.md](./HUB-EDITORIAL.md)** | 📐 **Hub blueprint** — Standards for category hub pages | When writing or redesigning a Hub page (e.g., `_Hub.md`). Hub pages are literary curatorial essays, not index lists |
+| **[TRANSLATION-BOARD.md](./TRANSLATION-BOARD.md)** | 📋 **Translation tracker** — i18n coverage dashboard | When looking for untranslated articles to work on |
+| **[SECURITY.md](./SECURITY.md)** | 🔒 **Security policy** — Vulnerability reporting | When discovering a security issue |
+
+### 🛡️ Quality Immune System
+
+The organism has an automated immune system that detects and fights "hollow AI content" — articles that look polished but carry no real substance:
+
+| Tool | Function |
+|------|----------|
+| `tools/detect-ai-hollow.sh` | Scans all articles for 7 hollow-content indicators: bullet padding, missing dates, no sources, empty modifiers, repetitive structure, thin paragraphs, no human review |
+| `tools/detect-ai-hollow.sh --diff` | Compares against baseline to show which articles improved or degraded since last scan |
+| `tools/detect-ai-hollow.sh --fix` | Auto-suggests fixes for flagged articles |
+| [EDITORIAL.md §塑膠偵測](./EDITORIAL.md) | Human-readable guide to detecting "plastic" writing — five species of hollow sentences that AI loves to generate |
+| [REWRITE-PIPELINE.md](./REWRITE-PIPELINE.md) | Three-stage pipeline (Research → Write → Verify) that prevents quality from collapsing in the second half of articles |
+
+### 🌱 How the Organism Evolves
+
+```
+New knowledge discovered
+       ↓
+  EDITORIAL.md (quality standard)
+       ↓
+  REWRITE-PIPELINE.md (execution process)
+       ↓
+  detect-ai-hollow.sh (automated quality gate)
+       ↓
+  REVIEWERS.md (human review)
+       ↓
+  Article published → feeds back into knowledge graph
+       ↓
+  ROADMAP.md (plans next evolution)
+```
+
+Every article that passes through this system makes the organism smarter. Every quality failure that gets caught teaches the immune system a new pattern. The `.md` files evolve together — when we discover a new type of AI-generated hollow content, it gets added to EDITORIAL.md's blocklist, coded into `detect-ai-hollow.sh`, and documented in REWRITE-PIPELINE.md.
+
+> _"Taiwan.md is not a project that will be 'finished.' It's a living thing that grows, adapts, and occasionally gets sick — but it has an immune system, and it heals."_
+
+---
+
 ## 🔐 Protico Community Chat Disclosure
 
 Selected pages on the public site currently embed a sponsor-provided Protico community chat / lobby widget:
