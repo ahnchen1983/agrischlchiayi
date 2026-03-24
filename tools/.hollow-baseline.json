@@ -1,8 +1,8 @@
 {
   "version": "2.0",
-  "timestamp": "2026-03-24T14:52:58Z",
+  "timestamp": "2026-03-24T17:52:44Z",
   "total": 439,
-  "flagged": 150,
+  "flagged": 149,
   "files": [
     {"file": "_Home.md", "score": 9},
     {"file": "about/台灣官方網站資源.md", "score": 8},
@@ -43,7 +43,6 @@
     {"file": "economy/台灣企業：巨大機械.md", "score": 6},
     {"file": "economy/台灣企業：研華科技.md", "score": 5},
     {"file": "economy/台灣企業：緯創資通.md", "score": 5},
-    {"file": "economy/台灣企業：聯發科技.md", "score": 8},
     {"file": "economy/台灣企業：聯華電子.md", "score": 4},
     {"file": "economy/台灣企業：華碩.md", "score": 5},
     {"file": "economy/台灣企業：鴻海精密.md", "score": 7},
@@ -149,7 +148,7 @@
     {"file": "society/教育制度與升學文化.md", "score": 4},
     {"file": "society/民主制度.md", "score": 7},
     {"file": "society/社會運動與公民參與.md", "score": 4},
-    {"file": "technology/_Technology Hub.md", "score": 4},
+    {"file": "technology/_Technology Hub.md", "score": 6},
     {"file": "technology/台灣人工智慧發展與未來策略.md", "score": 6},
     {"file": "technology/台灣資安產業發展.md", "score": 4},
     {"file": "technology/科技園區發展.md", "score": 7},
