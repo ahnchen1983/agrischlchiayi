@@ -66,6 +66,10 @@ Stage 3: VERIFY（驗證）───→ commit + push
 6. 回頭檢查富文本數量
 ```
 
+**⚠️ SSOT 鐵律：只改 `knowledge/`，不直接改 `src/content/`。**
+寫完後用 `bash scripts/sync.sh` 同步到 src/content/，再 build。
+直接改 src/content/ 會被 sync.sh 覆蓋回舊版。
+
 **防崩潰機制：**
 
 - **結尾先行**：結尾是品質崩塌的起點。先寫結尾 = 保底。

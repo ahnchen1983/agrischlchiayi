@@ -78,6 +78,9 @@
 ## 四、自動驗證（必跑）
 
 ```bash
+# 0. SSOT 同步（⚠️ 必做！只改 knowledge/，sync 到 src/content/）
+bash scripts/sync.sh
+
 # 1. 空洞分數檢測（必須 ≤ 3）
 bash tools/detect-ai-hollow.sh --json 2>&1 | \
   python3 -c "import json,sys; d=json.load(sys.stdin); \
