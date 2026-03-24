@@ -529,21 +529,22 @@
     "path": "Nature/台灣山岳與登山文化.md"
   },
   {
-    "title": "台灣中小企業與隱形冠軍",
-    "description": "台灣經濟真正的骨幹：從傳統工廠到全球供應鏈關鍵環節的中小企業轉型故事",
+    "title": "台灣中小企業與隱形冠軍：171萬家平凡無奇企業撐起的經濟奇蹟",
+    "description": "真正支撐台灣經濟的不是護國神山，而是171萬家看似平凡、卻創造79%就業機會的隱形冠軍。從1960年代黑手師傅起家，到今日掌控全球利基市場的精密製造王國。",
     "category": "Economy",
     "tags": [
       "中小企業",
       "隱形冠軍",
       "製造業",
-      "創業精神",
+      "代工",
       "全球供應鏈",
-      "產業升級"
+      "家族企業",
+      "創業精神"
     ],
     "url": "https://taiwan.md/Economy/%E5%8F%B0%E7%81%A3%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E8%88%87%E9%9A%B1%E5%BD%A2%E5%86%A0%E8%BB%8D",
-    "readingTime": 12,
-    "featured": false,
-    "date": "2026-03-18",
+    "readingTime": 14,
+    "featured": true,
+    "date": "2026-03-24",
     "path": "Economy/台灣中小企業與隱形冠軍.md"
   },
   {
@@ -5032,6 +5033,25 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "People/席慕蓉.md"
+  },
+  {
+    "title": "捐款永動機：FAB DAO 與百岳計畫的社會實驗",
+    "description": "一位離職醫師如何用一面壓線球國旗，開啟台灣 Web3 公益的全新想像。FAB DAO 與百岳計畫重新定義了捐款的本質：收藏即捐款，藝術即社會行動。",
+    "category": "Art",
+    "tags": [
+      "NFT",
+      "區塊鏈藝術",
+      "社會創新",
+      "公益",
+      "生成藝術",
+      "台灣百岳",
+      "數位藝術"
+    ],
+    "url": "https://taiwan.md/Art/FAB%20DAO%E8%88%87%E7%99%BE%E5%B2%B3%E8%A8%88%E7%95%AB",
+    "readingTime": 14,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "Art/FAB DAO與百岳計畫.md"
   },
   {
     "title": "桂綸鎂",
@@ -12158,6 +12178,26 @@
     "featured": true,
     "date": "2026-03-17",
     "path": "en/taiwan-semiconductor-industry.md"
+  },
+  {
+    "title": "Taiwan SMEs and Hidden Champions: 1.7 Million Unsung Heroes Behind Economic Miracle",
+    "description": "The real backbone of Taiwan economy isn not TSMC, but 1.7 million seemingly ordinary SMEs creating 79% of jobs. From 1960s garage startups to today global niche market leaders dominating precision manufacturing worldwide.",
+    "category": "en",
+    "tags": [
+      "SMEs",
+      "Hidden Champions",
+      "Manufacturing",
+      "OEM",
+      "ODM",
+      "Global Supply Chain",
+      "Family Business",
+      "Entrepreneurship"
+    ],
+    "url": "https://taiwan.md/en/Economy/Taiwan%20SMEs%20and%20Hidden%20Champions",
+    "readingTime": 40,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "en/Economy/Taiwan SMEs and Hidden Champions.md"
   },
   {
     "title": "Taiwan Strait Crises and Cross-Strait Relations Development",

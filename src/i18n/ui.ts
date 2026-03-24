@@ -160,7 +160,7 @@ export const ui = {
     'nav.explore': '🕸️ 知識圖譜',
     'nav.graph': '🕸️ 圖譜',
     'nav.graph-view': '知識圖譜',
-    'nav.map': '📍 地理台灣',
+    'nav.map': '📍 地理',
     'nav.contribute': '✋ 參與專案',
     'nav.resources': '🔗 延伸資源',
     'nav.data': '📊 數據台灣',

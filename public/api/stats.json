@@ -1,12 +1,12 @@
 {
-  "totalArticles": 936,
+  "totalArticles": 938,
   "totalCategories": 27,
   "estimatedContributors": 63,
-  "totalTags": 2512,
+  "totalTags": 2521,
   "categories": [
     {
       "name": "en",
-      "count": 483
+      "count": 484
     },
     {
       "name": "History",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Art",
-      "count": 25
+      "count": 26
     },
     {
       "name": "Food",
@@ -163,6 +163,10 @@
       "count": 11
     },
     {
+      "name": "ODM",
+      "count": 11
+    },
+    {
       "name": "History",
       "count": 11
     },
@@ -189,15 +193,11 @@
     {
       "name": "民主化",
       "count": 10
-    },
-    {
-      "name": "ODM",
-      "count": 10
     }
   ],
   "languageDistribution": {
-    "zh-TW": 936,
+    "zh-TW": 938,
     "en": 0
   },
-  "lastUpdated": "2026-03-24T08:56:49.759Z"
+  "lastUpdated": "2026-03-24T09:21:18.508Z"
 }
