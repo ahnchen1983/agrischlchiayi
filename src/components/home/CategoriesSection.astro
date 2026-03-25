@@ -1,9 +1,10 @@
 ---
 import { useTranslations, getLangFromUrl } from '../../i18n/utils';
-import TopicsMasonry from '../TopicsMasonry.astro';
+import CategoryGrid from '../CategoryGrid.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const isEn = lang === 'en';
 ---
 
 <section class="categories" id="categories">
@@ -21,7 +22,7 @@ const t = useTranslations(lang);
     <div class="divider-line"></div>
   </div>
 
-  <TopicsMasonry />
+  <CategoryGrid lang={isEn ? 'en' : undefined} />
 </section>
 
 <style>
