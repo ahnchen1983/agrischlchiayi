@@ -8,14 +8,15 @@
 
 ```
 docs/
-├── editorial/          品質標準與寫作流程
-├── factory/            社群散播（孢子工廠）
-├── community/          社群治理與翻譯
-├── prompts/            AI prompt 模板
-├── reports/            品質報告與測試紀錄
-├── marketing/          行銷策略
-├── taxonomy/           分類法
-└── *.md                獨立文件
+├── editorial/      品質標準、寫作流程、翻譯同步
+├── factory/         社群散播（孢子工廠）
+├── community/       社群治理與翻譯
+├── prompts/         AI prompt 模板
+├── reports/         品質報告、UX 審計、研究分析
+├── marketing/       行銷策略、合作提案
+├── taxonomy/        分類法
+├── assets/          圖片資源清單（CC 授權）
+└── DASHBOARD-PIPELINE.md
 ```
 
 ---
@@ -29,6 +30,8 @@ docs/
 | [HUB-EDITORIAL.md](editorial/HUB-EDITORIAL.md)         | Hub 頁面策展指南（分類首頁的寫法）             |
 | [RESEARCH-TEMPLATE.md](editorial/RESEARCH-TEMPLATE.md) | Stage 1 研究筆記輸出格式                       |
 | [TERMINOLOGY.md](editorial/TERMINOLOGY.md)             | 術語統一表（中英對照）                         |
+| [TRANSLATION-SYNC.md](editorial/TRANSLATION-SYNC.md)   | 翻譯同步規則（SSOT = knowledge/）              |
+| [UPDATE-LOG-GUIDE.md](editorial/UPDATE-LOG-GUIDE.md)   | 更新日誌撰寫指南                               |
 
 **入口**：寫文章前先讀根目錄 `EDITORIAL.md`（品質標準），改寫用 `REWRITE-PIPELINE.md`。
 
@@ -57,19 +60,24 @@ docs/
 | [CONTRIBUTE_PROMPT.md](prompts/CONTRIBUTE_PROMPT.md) | 寫新文章的 AI prompt |
 | [TRANSLATE_PROMPT.md](prompts/TRANSLATE_PROMPT.md)   | 翻譯文章的 AI prompt |
 
-## 📊 reports/ — 品質報告
+## 📊 reports/ — 品質報告與研究
 
-| 文件                                                               | 用途               |
-| ------------------------------------------------------------------ | ------------------ |
-| [TEST_REPORT.md](reports/TEST_REPORT.md)                           | CI/CD 測試報告     |
-| [FACT-CHECK-120.md](reports/FACT-CHECK-120.md)                     | 120 篇事實查核紀錄 |
-| [SEO_OPTIMIZATION_SUMMARY.md](reports/SEO_OPTIMIZATION_SUMMARY.md) | SEO 優化摘要       |
+| 文件                                                                     | 用途                               |
+| ------------------------------------------------------------------------ | ---------------------------------- |
+| [TEST_REPORT.md](reports/TEST_REPORT.md)                                 | CI/CD 測試報告                     |
+| [FACT-CHECK-120.md](reports/FACT-CHECK-120.md)                           | 120 篇事實查核紀錄                 |
+| [SEO_OPTIMIZATION_SUMMARY.md](reports/SEO_OPTIMIZATION_SUMMARY.md)       | SEO 優化摘要                       |
+| [ux-audit-2026-03-17.md](reports/ux-audit-2026-03-17.md)                 | 網站 UX/UI 審計（2026-03-17）      |
+| [research-e-estonia-analysis.md](reports/research-e-estonia-analysis.md) | e-Estonia 網站深度分析（設計參考） |
+| [resources-expanded.md](reports/resources-expanded.md)                   | 擴充資源清單（官方機構、學術等）   |
 
-## 📢 marketing/
+## 📢 marketing/ — 行銷與合作
 
-| 文件                                                 | 用途                                  |
-| ---------------------------------------------------- | ------------------------------------- |
-| [THREADS-PLAYBOOK.md](marketing/THREADS-PLAYBOOK.md) | Threads 發文策略（已整合進 factory/） |
+| 文件                                                                   | 用途                                  |
+| ---------------------------------------------------------------------- | ------------------------------------- |
+| [THREADS-PLAYBOOK.md](marketing/THREADS-PLAYBOOK.md)                   | Threads 發文策略（已整合進 factory/） |
+| [draft-justfont-collab.md](marketing/draft-justfont-collab.md)         | justfont 合作提案草稿                 |
+| [plan-taiwan-svg-open-data.md](marketing/plan-taiwan-svg-open-data.md) | Taiwan SVG 開放資料集企劃             |
 
 ## 🏷️ taxonomy/
 
@@ -77,13 +85,21 @@ docs/
 | ----------------------------------------- | ------------------------ |
 | [SUBCATEGORY.md](taxonomy/SUBCATEGORY.md) | 12 大分類 × 子分類對照表 |
 
+## 🖼️ assets/ — 圖片資源
+
+| 文件                                                      | 用途                                   |
+| --------------------------------------------------------- | -------------------------------------- |
+| [image-sources.md](assets/image-sources.md)               | CC 授權圖片總清單                      |
+| [image-sources-batch2.md](assets/image-sources-batch2.md) | Batch 2: History / Geography / Nature  |
+| [image-sources-batch3.md](assets/image-sources-batch3.md) | Batch 3: Culture / Food / Art          |
+| [image-sources-batch4.md](assets/image-sources-batch4.md) | Batch 4: Technology / Economy / People |
+| [image-sources-batch5.md](assets/image-sources-batch5.md) | Batch 5: Music / Society / Lifestyle   |
+
 ## 📄 獨立文件
 
-| 文件                                           | 用途                              |
-| ---------------------------------------------- | --------------------------------- |
-| [DASHBOARD-PIPELINE.md](DASHBOARD-PIPELINE.md) | Dashboard 數據管線與更新 SOP      |
-| [TRANSLATION-SYNC.md](TRANSLATION-SYNC.md)     | 翻譯同步規則（SSOT = knowledge/） |
-| [UPDATE-LOG-GUIDE.md](UPDATE-LOG-GUIDE.md)     | 更新日誌撰寫指南                  |
+| 文件                                           | 用途                         |
+| ---------------------------------------------- | ---------------------------- |
+| [DASHBOARD-PIPELINE.md](DASHBOARD-PIPELINE.md) | Dashboard 數據管線與更新 SOP |
 
 ---
 
