@@ -1,16 +1,14 @@
 ---
-created: 2026-03-29
-tags: [Food, 客家, 擂茶, 野薑花粽, 傳統美食, 族群文化]
-category: 'Food'
-subcategory: '族群飲食'
 title: 客家の食文化
 description: 客家の食文化は、擂茶の香ばしい深みから野姜花粽の山の気配まで、倹約を重んじ、土地の恵みを生かしてきた暮らしの知恵を映し出しています。
 date: 2026-03-29
-author: Taiwan.md Translation Team
-readingTime: 12
+tags: [客家, 擂茶, 野姜花粽, 伝統料理, エスニック文化, グルメ]
+category: Food
 featured: false
 lastVerified: 2026-03-29
 lastHumanReview: false
+author: Taiwan.md Translation Team
+readingTime: 12
 image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%E7%BE%8E%E6%BF%83%E6%B0%91%E4%BF%97%E6%9D%91%E5%AE%A2%E5%AE%B6%E6%93%82%E8%8C%B6%E9%AB%94%E9%A9%9780.jpg/960px-%E7%BE%8E%E6%BF%83%E6%B0%91%E4%BF%97%E6%9D%91%E5%AE%A2%E5%AE%B6%E6%93%82%E8%8C%B6%E9%AB%94%E9%A9%9780.jpg'
 imageAlt: '客家の擂茶'
 imageCredit: 'Wikimedia Commons, CC BY-SA'
