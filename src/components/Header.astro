@@ -473,13 +473,33 @@ const categoryList = [
       <nav class="nav-mobile" aria-label={t('nav.aria-mobile-navigation')}>
         {
           navConfig.map((item) => (
-            <a
-              href={item.fullPath}
-              class:list={['nav-link', { active: item.active }]}
-              onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-            >
-              {item.label}
-            </a>
+            <Fragment>
+              <a
+                href={item.fullPath}
+                class:list={['nav-link', { active: item.active }]}
+                onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+              >
+                {item.label}
+              </a>
+              {item.path === '/#categories' && (
+                <div class="mobile-sub-links">
+                  <a
+                    href={translatePath('/graph')}
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    🕸️ {t('nav.graph-view')}
+                  </a>
+                  <a
+                    href={translatePath('/terminology')}
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    📖 {t('nav.terminology')}
+                  </a>
+                </div>
+              )}
+            </Fragment>
           ))
         }
         <a
@@ -1024,6 +1044,16 @@ const categoryList = [
   /* Mobile nav — hidden by default */
   .nav-mobile {
     display: none;
+  }
+  .mobile-sub-links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  .mobile-sub-links .nav-sub-link {
+    font-size: 0.85em;
+    opacity: 0.8;
+    padding: 0.25rem 0;
   }
 
   /* =============================================
