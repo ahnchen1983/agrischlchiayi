@@ -135,75 +135,17 @@ const dataCategories = getCategories(t);
       </div>
     </section>
 
-    <!-- Content Analytics Section -->
+    <!-- Content Analytics → moved to Dashboard -->
     <section class="content-analytics-section" id="analytics">
       <div class="section-divider">
         <div class="divider-line"></div>
       </div>
-
       <div class="story-intro">
         <h2 class="section-title">📈 內容成長分析</h2>
         <div class="story-text">
           <p>
-            Taiwan.md 的成長軌跡見證了開源知識庫的力量。從零開始到現在涵蓋 {
-              Object.values(contentStats.categories).reduce(
-                (sum, count) => sum + count,
-                0,
-              )
-            } 篇文章，每一篇都代表著台灣故事的一部分。
+            內容成長分析已整合至 <a href="/dashboard#content-analysis" style="color: var(--color-accent); text-decoration: underline;">Dashboard</a>，提供更完整的即時數據與視覺化圖表。
           </p>
-          <p>
-            這些數據不只是數字，而是全球貢獻者對台灣認識的渴望，以及我們用知識連結世界的使命。
-          </p>
-        </div>
-      </div>
-
-      <div class="charts-grid">
-        <div class="chart-card">
-          <h3>分類分布</h3>
-          <p class="chart-desc">各領域文章數量分布，反映台灣知識的多元面貌</p>
-          <div class="chart-wrapper">
-            <canvas id="categoryChart" width="400" height="300"></canvas>
-          </div>
-        </div>
-
-        <div class="chart-card">
-          <h3>內容成長軌跡</h3>
-          <p class="chart-desc">每日新增文章數量，見證知識庫的擴張歷程</p>
-          <div class="chart-wrapper">
-            <canvas id="growthChart" width="400" height="300"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats Summary -->
-      <div class="stats-summary">
-        <div class="stat-item">
-          <div class="stat-number">
-            {
-              Object.values(contentStats.categories).reduce(
-                (sum, count) => sum + count,
-                0,
-              )
-            }
-          </div>
-          <div class="stat-label">篇文章</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">
-            {Object.keys(contentStats.categories).length}
-          </div>
-          <div class="stat-label">個分類</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">
-            {contentStats.dailyGrowth.reduce((sum, day) => sum + day.count, 0)}
-          </div>
-          <div class="stat-label">次貢獻</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">{contentStats.updated}</div>
-          <div class="stat-label">最後更新</div>
         </div>
       </div>
     </section>
