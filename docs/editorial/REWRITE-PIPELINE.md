@@ -109,6 +109,12 @@ Stage 3: VERIFY（驗證）───→ commit + push
 6. 回頭檢查富文本數量
 ```
 
+**⚠️ Frontmatter 完整性鐵律：**
+
+- `subcategory` 必填 — 參照 `docs/taxonomy/SUBCATEGORY.md` 該 category 的子分類表
+- 跨主題文章加統一 tag（如原住民相關文章統一加 `原住民族` tag）
+- 不確定歸哪個 subcategory → 先查 SUBCATEGORY.md，沒有合適的 → 在 SUBCATEGORY.md 新增
+
 **⚠️ SSOT 鐵律：只改 `knowledge/`，不直接改 `src/content/`。**
 寫完後用 `bash scripts/sync.sh` 同步到 src/content/，再 build。
 直接改 src/content/ 會被 sync.sh 覆蓋回舊版。

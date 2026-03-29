@@ -53,6 +53,12 @@
 - [ ] 至少 **1 個 stat block 或 pull quote**
 - [ ] 至少 **2-3 個 wikilink**（站內連結 `[[]]`）
 
+### Frontmatter 完整性
+
+- [ ] `subcategory` 已填寫，且對應 `docs/taxonomy/SUBCATEGORY.md` 該 category 的子分類表
+- [ ] 跨主題文章有統一 tag（如原住民相關 → `原住民族`）
+- [ ] `featured: true/false` 已設定
+
 ### 來源
 
 - [ ] **5+ 可點擊 URL** 在參考資料區
@@ -126,6 +132,7 @@ git push
 □ 開場有事實？結尾不是罐頭？
 □ 2 callout + 1 stat/quote + 2 wikilink + 5 URL？
 □ 後半段塑膠掃描？
+□ subcategory 正確？跨主題 tag 有加？
 □ hollow ≤ 3？build OK？
 → commit
 ```

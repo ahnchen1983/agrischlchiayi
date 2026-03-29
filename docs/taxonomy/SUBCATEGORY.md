@@ -225,14 +225,29 @@
 ---
 title: '文章標題'
 category: History
-subcategory: '民主與治理' # ← 新增欄位
+subcategory: '民主與治理' # ← 必填，對應本文件的子分類表
+tags: ['原住民族', '正名運動'] # ← 跨主題 tag 用這裡串聯
 # ...其他欄位
 ---
 ```
 
-- `subcategory` 為字串，使用中文
+- `subcategory` 為字串，使用中文，**必填**
 - 值必須對應本文件中該 category 的 sub-category 表
 - 新增 sub-category 需先更新本文件
+
+### 跨主題 Tag（Cross-cutting Tags）
+
+有些主題橫跨多個 category（如原住民族、客家、日治時期），不適合用 subcategory 歸類。
+用 `tags` 統一串聯：
+
+| 跨主題 Tag | 涵蓋                                                      | 說明                 |
+| ---------- | --------------------------------------------------------- | -------------------- |
+| `原住民族` | History / Culture / Food / Nature / Art / Society / Music | 所有原住民族相關文章 |
+| `客家`     | Culture / Food / Music                                    | 客家相關文章         |
+| `日治時期` | History / Culture / Art / Economy                         | 日治時期相關文章     |
+
+> **原則：subcategory = 歸屬（一對一），tag = 連結（多對多）。**
+> 一篇文章只屬於一個 subcategory，但可以有多個跨主題 tag。
 
 ---
 
