@@ -7,6 +7,7 @@
 > - **EDITORIAL.md** → 品質標準（好文章長什麼樣、風格、禁止事項）
 > - **RESEARCH-TEMPLATE.md** → 研究模板（Stage 1 輸出格式）
 > - **QUALITY-CHECKLIST.md** → 驗證清單（Stage 3 逐項檢查）
+> - **TERMINOLOGY.md** → 用語規範（台灣在地用語標準，A 類必換 + B 類判斷）
 >
 > ⚠️ **每個 Stage 都必須讀對應的文件。不讀 = 不合格。**
 
