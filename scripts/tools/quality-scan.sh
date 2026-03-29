@@ -27,6 +27,7 @@
 #  12. 🆕 LIST-DUMP：後半段清單堆砌（>40% bullet 且 > 前段 2 倍）
 #  13. 🆕 THIN：稀薄段落（H2 區塊內散文行 < 3）
 #  14. 🆕 QUALITY-DECAY：前後半品質衰退（後段散文比例 < 前段 70%）
+#  15. 🆕 CHINA-TERM：中國用語偵測（視頻/質量/軟件/博主/算法等 30+ 詞）
 
 set -uo pipefail
 cd "$(dirname "$0")/../.."
@@ -359,6 +360,35 @@ scan_file() {
     fi
   fi
 
+  # ── 15. CHINA-TERM（中國用語偵測）──
+  # 從 data/terminology/ YAML 萃取 A 類必換詞 + 硬編碼常見詞
+  local china_terms=(
+    "視頻" "質量" "軟件" "硬件" "博主" "博客" "點贊" "互聯網"
+    "內存" "人工智能" "操作系統" "數據庫" "信息化" "服務器" "算法"
+    "屏幕" "打印機" "網絡" "盒飯" "出租車" "鼠標" "硬盤" "寬帶"
+    "U盤" "優盤" "移動端" "公交車" "地鐵站" "煤氣" "高清" "下載量"
+  )
+  local china_hits=0
+  local china_found=""
+  for cterm in "${china_terms[@]}"; do
+    local count
+    count=$(grep -c "$cterm" "$f" 2>/dev/null || echo 0)
+    if [[ $count -gt 0 ]]; then
+      china_hits=$((china_hits + count))
+      china_found="${china_found}${cterm}(${count}) "
+    fi
+  done
+  if [[ $china_hits -ge 5 ]]; then
+    score=$((score + 3))
+    reasons="${reasons}中國用語×${china_hits}[${china_found}] "
+  elif [[ $china_hits -ge 3 ]]; then
+    score=$((score + 2))
+    reasons="${reasons}中國用語×${china_hits}[${china_found}] "
+  elif [[ $china_hits -ge 1 ]]; then
+    score=$((score + 1))
+    reasons="${reasons}中國用語×${china_hits}[${china_found}] "
+  fi
+
   TOTAL=$((TOTAL + 1))
 
   # 分級: 0-3 OK, 4-7 ⚠️ 可疑, 8+ 🔴 高度可疑
@@ -379,7 +409,7 @@ if [[ "$JSON_MODE" == false ]]; then
     echo "🔍 quality-scan v3.0 — 掃描 src/content/zh-TW/"
   fi
   echo "   評分: 0-3 ✅ OK | 4-7 ⚠️ 可疑 | 8+ 🔴 高度可疑"
-  echo "   維度: 原11項 + LIST-DUMP + THIN + QUALITY-DECAY"
+  echo "   維度: 原11項 + LIST-DUMP + THIN + QUALITY-DECAY + CHINA-TERM"
   echo ""
 fi
 
