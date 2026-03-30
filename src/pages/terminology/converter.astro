@@ -127,6 +127,8 @@ const rulesJSON = JSON.stringify(rules);
 ---
 
 <Layout title="🔄 用語轉換器 — Taiwan.md">
+  <!-- Preload OpenCC for faster mobile loading -->
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/opencc-js@1/dist/esm/cn2t.js" />
   <main class="conv-page">
     <!-- ── Header ──────────────────────────────────────────────────── -->
     <div class="conv-header">
@@ -229,24 +231,36 @@ const rulesJSON = JSON.stringify(rules);
     let openccStatus = 'loading'; // 'loading' | 'ready' | 'failed'
 
     async function initOpenCC() {
-      try {
-        const OpenCC =
-          await import('https://cdn.jsdelivr.net/npm/opencc-js@1/dist/esm/cn2t.js');
-        // Use cn → tw (standard traditional Chinese used in Taiwan)
-        // cn → t produces archaic characters (麪/喫/裏) that nobody uses,
-        // cn → tw produces modern traditional (麵/吃/裡) matching our terminology rules.
-        // OpenCC cn→tw does include some word-level conversions, but since our
-        // terminology rules run AFTER OpenCC and use marker-based replacement,
-        // they always take priority for the terms we care about.
-        openccConverter = OpenCC.ConverterFactory(
-          OpenCC.Locale.from.cn,
-          OpenCC.Locale.to.tw,
-        );
-        openccStatus = 'ready';
-      } catch (e) {
-        console.warn('OpenCC 載入失敗，僅做用語轉換', e);
-        openccStatus = 'failed';
+      // Try multiple CDN sources with timeout for mobile reliability
+      const cdnUrls = [
+        'https://cdn.jsdelivr.net/npm/opencc-js@1/dist/esm/cn2t.js',
+        'https://unpkg.com/opencc-js@1/dist/esm/cn2t.js',
+      ];
+      for (const url of cdnUrls) {
+        try {
+          // Race import against a timeout (8s for mobile networks)
+          const OpenCC = await Promise.race([
+            import(/* @vite-ignore */ url),
+            new Promise((_, reject) =>
+              setTimeout(() => reject(new Error('timeout')), 8000)
+            ),
+          ]);
+          // Use cn → tw (standard traditional Chinese used in Taiwan)
+          // cn → t produces archaic characters (麪/喫/裏) that nobody uses,
+          // cn → tw produces modern traditional (麵/吃/裡) matching our terminology rules.
+          openccConverter = OpenCC.ConverterFactory(
+            OpenCC.Locale.from.cn,
+            OpenCC.Locale.to.tw,
+          );
+          openccStatus = 'ready';
+          return; // success
+        } catch (e) {
+          console.warn(`OpenCC from ${url} failed:`, e.message);
+        }
       }
+      // All CDN sources failed
+      console.warn('OpenCC 載入失敗，僅做用語替換（字形轉換不可用）');
+      openccStatus = 'failed';
     }
     initOpenCC();
 
@@ -360,7 +374,7 @@ const rulesJSON = JSON.stringify(rules);
       } else if (openccStatus === 'failed') {
         openccStatusEl.hidden = false;
         openccStatusEl.className = 'opencc-status-row opencc-failed';
-        openccStatusEl.textContent = '⚠️ 字形轉換不可用，僅做用語替換';
+        openccStatusEl.textContent = '⚠️ 簡→繁字形轉換載入中或不可用，用語替換仍正常運作（建議先手動轉為繁體再貼入）';
       } else {
         openccStatusEl.hidden = true;
       }
