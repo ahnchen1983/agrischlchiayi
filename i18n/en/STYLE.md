@@ -1,6 +1,6 @@
 # 🇬🇧 English Translation Style Guide
 
-> 搭配 [EDITORIAL.md](../../EDITORIAL.md) 使用
+> 搭配 [EDITORIAL.md](../../docs/editorial/EDITORIAL.md) 使用
 
 ## 核心原則
 

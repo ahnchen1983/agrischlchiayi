@@ -1,6 +1,6 @@
 # 🇯🇵 日本語翻訳スタイルガイド
 
-> [EDITORIAL.md](../../EDITORIAL.md) と併用してください
+> [EDITORIAL.md](../../docs/editorial/EDITORIAL.md) と併用してください
 
 ## 基本方針
 

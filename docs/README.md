@@ -33,7 +33,7 @@ docs/
 | [TRANSLATION-SYNC.md](editorial/TRANSLATION-SYNC.md)   | 翻譯同步規則（SSOT = knowledge/）              |
 | [UPDATE-LOG-GUIDE.md](editorial/UPDATE-LOG-GUIDE.md)   | 更新日誌撰寫指南                               |
 
-**入口**：寫文章前先讀根目錄 `EDITORIAL.md`（品質標準），改寫用 `REWRITE-PIPELINE.md`。
+**入口**：寫文章前先讀 `docs/editorial/EDITORIAL.md`（品質標準），改寫用 `REWRITE-PIPELINE.md`。
 
 ## 🏭 factory/ — 孢子工廠（社群散播）
 

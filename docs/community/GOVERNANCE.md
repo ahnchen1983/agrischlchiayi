@@ -50,7 +50,7 @@ Taiwan.md 歡迎所有人參與，從閱讀到維護都是貢獻。
 
 ## 內容品質標準
 
-所有文章必須符合 [EDITORIAL.md](./EDITORIAL.md) 的規範：
+所有文章必須符合 [EDITORIAL.md](../editorial/EDITORIAL.md) 的規範：
 
 1. **事實準確** — 所有數據必須標注來源
 2. **多元觀點** — 涉及爭議議題需呈現不同立場

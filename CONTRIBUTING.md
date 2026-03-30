@@ -247,7 +247,7 @@ src/content/         ← ⚙️ 投影層（自動產生，不要手動改）
 #### 新增文章流程
 
 1. 在 `knowledge/{Category}/` 建立新的 `.md` 檔案（中文 SSOT）
-2. 按照 [EDITORIAL.md](./EDITORIAL.md) 標準撰寫內容
+2. 按照 [EDITORIAL.md](./docs/editorial/EDITORIAL.md) 標準撰寫內容
 3. 執行 `bash scripts/sync.sh`（同步到 `src/content/`）
 4. 執行 `npm run build` 驗證（確認 frontmatter 正確）
 5. 執行 `bash tools/quality-scan.sh` 品質檢測（分數 ≤ 3）
@@ -268,7 +268,7 @@ git add -A && git commit -m "content: 新增 XXX 文章"
 
 1. **確認分類**：文章屬於哪個 Category（History/Culture/People/Food 等）
 2. **建立檔案**：`knowledge/{Category}/{主題名}.md`
-3. **深度研究**：遵循 [EDITORIAL.md](./EDITORIAL.md) 的研究流程（Step 0-4）
+3. **深度研究**：遵循 [EDITORIAL.md](./docs/editorial/EDITORIAL.md) 的研究流程（Step 0-4）
 4. **撰寫文章**：SSOT 是中文版，英文版之後透過翻譯流程產生
 5. **Sync + Build**：確保同步和建置都通過
 6. **提交 PR**：附上研究來源和品質檢測結果
@@ -285,7 +285,7 @@ bun run dev  # 或 npm run dev
 
 ### 3. 品質檢查
 
-> ⚠️ **所有文章 PR 必須通過 [EDITORIAL.md](./EDITORIAL.md) 標準審核。** 不符合寫作標準的 PR 會被要求修改後重新提交。
+> ⚠️ **所有文章 PR 必須通過 [EDITORIAL.md](./docs/editorial/EDITORIAL.md) 標準審核。** 不符合寫作標準的 PR 會被要求修改後重新提交。
 
 #### EDITORIAL.md 核心要求（PR 前必讀）
 
@@ -382,7 +382,7 @@ Closes #123
 - **數據/統計**：必須標注來源機構與年份
 - **書籍**：附上出版社或書籍資料庫連結
 
-詳見 [EDITORIAL.md](./EDITORIAL.md) 的「引用與來源標注」章節。
+詳見 [EDITORIAL.md](./docs/editorial/EDITORIAL.md) 的「引用與來源標注」章節。
 
 ````
 

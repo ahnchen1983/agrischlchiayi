@@ -158,7 +158,7 @@ score = wordCount/3000 * 25     // 字數（上限 3000 字 = 滿分）
 | -------------- | ----------- | ---------------------------- |
 | 🫀 Heart       | heart       | 近 7 天新增文章數            |
 | 🛡️ Immune      | immune      | humanReviewed / total \* 100 |
-| 🧬 DNA         | dna         | EDITORIAL.md 最後修改天數    |
+| 🧬 DNA         | dna         | docs/editorial/EDITORIAL.md 最後修改天數 |
 | 🦴 Skeleton    | skeleton    | 固定 90（Astro 架構穩定）    |
 | 🫁 Breath      | breath      | .github/workflows/ yml 數量  |
 | 🧫 Reproduce   | reproduce   | 近 30 天 contributors 數     |
@@ -170,8 +170,8 @@ score = wordCount/3000 * 25     // 字數（上限 3000 字 = 滿分）
 | Organ       | 對應檔案                  |
 | ----------- | ------------------------- |
 | heart       | `knowledge/`              |
-| immune      | `EDITORIAL.md`            |
-| dna         | `EDITORIAL.md`            |
+| immune      | `docs/editorial/EDITORIAL.md` |
+| dna         | `docs/editorial/EDITORIAL.md` |
 | skeleton    | `astro.config.mjs`        |
 | breath      | `.github/workflows/`      |
 | reproduce   | `CONTRIBUTING.md`         |

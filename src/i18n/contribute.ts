@@ -395,7 +395,7 @@ export const contributeUI = {
     'contribute.paths.dev.guide.html':
       '📖 <a href="/en/contribute">Contributing Guidelines</a>',
     'contribute.paths.dev.editorial.html':
-      '📝 <a href="https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md" target="_blank">Editorial Guidelines</a>',
+      '📝 <a href="https://github.com/frank890417/taiwan-md/blob/main/docs/editorial/EDITORIAL.md" target="_blank">Editorial Guidelines</a>',
     'contribute.paths.dev.button': 'Go to GitHub →',
 
     // Form Section
@@ -921,7 +921,7 @@ export const contributeUI = {
       '你會 Git？太好了。直接在 <code>knowledge/</code> 目錄新增文章。',
     'contribute.paths.dev.guide.html': '📖 <a href="/contribute">貢獻指南</a>',
     'contribute.paths.dev.editorial.html':
-      '📝 <a href="https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md" target="_blank">編輯方針</a>',
+      '📝 <a href="https://github.com/frank890417/taiwan-md/blob/main/docs/editorial/EDITORIAL.md" target="_blank">編輯方針</a>',
     'contribute.paths.dev.button': '前往 GitHub →',
 
     // Form Section

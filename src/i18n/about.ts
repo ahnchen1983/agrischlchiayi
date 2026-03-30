@@ -350,7 +350,7 @@ export const aboutUI = {
     'about.faq.q3':
       'Are the articles written by AI? How do you ensure quality?',
     'about.faq.a3.html':
-      'AI is our writing tool, not our author. Every article goes through a three-stage pipeline: <strong>Research</strong> (10+ independent sources) → <strong>Writing</strong> (following <a href="https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md" target="_blank">EDITORIAL.md</a> guidelines) → <strong>Verification</strong> (automated scanning + human review). We also have an auto-metabolism system — scripts regularly scan article quality and prioritize the weakest for rewriting. Track progress on our <a href="/dashboard/">Dashboard</a>.',
+      'AI is our writing tool, not our author. Every article goes through a three-stage pipeline: <strong>Research</strong> (10+ independent sources) → <strong>Writing</strong> (following <a href="https://github.com/frank890417/taiwan-md/blob/main/docs/editorial/EDITORIAL.md" target="_blank">EDITORIAL.md</a> guidelines) → <strong>Verification</strong> (automated scanning + human review). We also have an auto-metabolism system — scripts regularly scan article quality and prioritize the weakest for rewriting. Track progress on our <a href="/dashboard/">Dashboard</a>.',
 
     'about.faq.q4': 'What if an article has errors?',
     'about.faq.a4.html':
@@ -709,7 +709,7 @@ export const aboutUI = {
 
     'about.faq.q3': '文章是 AI 寫的嗎？品質怎麼保證？',
     'about.faq.a3.html':
-      'AI 是我們的寫作工具，但不是作者。每篇文章經過三階段品質管線：<strong>研究</strong>（10+ 獨立來源）→ <strong>寫作</strong>（依照 <a href="https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md" target="_blank">EDITORIAL.md</a> 編輯守則）→ <strong>驗證</strong>（自動掃描 + 人工審閱）。我們也有自動代謝機制——腳本定期掃描文章品質，最差的優先排入改寫佇列。你可以在 <a href="/dashboard/">Dashboard</a> 的「免疫系統」指標即時看到進度。',
+      'AI 是我們的寫作工具，但不是作者。每篇文章經過三階段品質管線：<strong>研究</strong>（10+ 獨立來源）→ <strong>寫作</strong>（依照 <a href="https://github.com/frank890417/taiwan-md/blob/main/docs/editorial/EDITORIAL.md" target="_blank">EDITORIAL.md</a> 編輯守則）→ <strong>驗證</strong>（自動掃描 + 人工審閱）。我們也有自動代謝機制——腳本定期掃描文章品質，最差的優先排入改寫佇列。你可以在 <a href="/dashboard/">Dashboard</a> 的「免疫系統」指標即時看到進度。',
 
     'about.faq.q4': '如果文章有錯誤怎麼辦？',
     'about.faq.a4.html':

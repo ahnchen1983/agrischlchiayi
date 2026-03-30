@@ -11,7 +11,7 @@
 請先讀取以下資訊（用你的網路搜尋功能）：
 
 1. **專案結構**：讀取 https://taiwan.md/llms.txt
-2. **編輯方針**：讀取 https://raw.githubusercontent.com/frank890417/taiwan-md/main/EDITORIAL.md
+2. **編輯方針**：讀取 https://raw.githubusercontent.com/frank890417/taiwan-md/main/docs/editorial/EDITORIAL.md
 3. **現有文章清單**：讀取 https://raw.githubusercontent.com/frank890417/taiwan-md/main/knowledge/_Home.md
 
 讀完後，告訴用戶：

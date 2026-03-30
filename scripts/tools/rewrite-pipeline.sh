@@ -19,7 +19,7 @@
 #   請用 rewrite-pipeline 深度研究「{主題}」
 #
 #   Agent 會依序執行：
-#   Step 0: 讀 EDITORIAL.md 確認品質標準
+#   Step 0: 讀 docs/editorial/EDITORIAL.md 確認品質標準
 #   Step 1: 深度研究（至少 8+ 來源，含一手、英文、時間跨度）
 #   Step 2: 寫入 knowledge/{Category}/{主題}.md
 #   Step 3: bash scripts/core/sync.sh

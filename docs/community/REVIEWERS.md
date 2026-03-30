@@ -54,7 +54,7 @@ Taiwan.md 的社群協作分為三個角色：
 - [ ] 事實是否正確？有沒有可查證的來源？
 - [ ] 語氣是否中性？（不偏頗、不過度美化、不政治宣傳）
 - [ ] 用語是否符合 [TERMINOLOGY.md](./TERMINOLOGY.md)？
-- [ ] 文章結構是否符合 [EDITORIAL.md](./EDITORIAL.md)？
+- [ ] 文章結構是否符合 [EDITORIAL.md](../editorial/EDITORIAL.md)？
 - [ ] 有沒有空洞修飾詞？（蓬勃/日益/積極/顯著/豐富/完整/多元）
 
 **技術類 PR：**

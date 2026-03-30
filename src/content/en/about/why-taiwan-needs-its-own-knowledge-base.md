@@ -168,7 +168,7 @@ We believe: **When all well-founded perspectives are fairly presented, readers n
 
 > _"We don't define what Taiwan is. We present the multiple faces of what Taiwan has been, is, and might become—and trust you to think for yourself."_
 
-For complete perspective system explanation, see [Editorial Guidelines EDITORIAL.md](https://github.com/frank890417/taiwan-md/blob/main/EDITORIAL.md).
+For complete perspective system explanation, see [Editorial Guidelines EDITORIAL.md](https://github.com/frank890417/taiwan-md/blob/main/docs/editorial/EDITORIAL.md).
 
 ---
 

@@ -5,7 +5,7 @@
 每次翻譯產出 → reviewer 糾正 → 錯誤回寫到 STYLE.md → 下次翻譯自動避開。越翻越聰明，每個語言獨立進化。
 
 翻譯時請同時參考：
-- **[EDITORIAL.md](../EDITORIAL.md)** — 全站品質標準（適用所有語言）
+- **[EDITORIAL.md](../docs/editorial/EDITORIAL.md)** — 全站品質標準（適用所有語言）
 - **`i18n/{lang}/STYLE.md`** — 該語言的累積經驗與特殊規則
 
 ## 目錄結構
@@ -35,7 +35,7 @@ i18n/
 
 ```
 翻譯 cron/contributor 翻譯文章
-  → 讀 EDITORIAL.md + i18n/{lang}/STYLE.md
+  → 讀 docs/editorial/EDITORIAL.md + i18n/{lang}/STYLE.md
   → 產出翻譯
   → 母語 reviewer 審核、糾正
   → 錯誤模式回寫到 STYLE.md「常見錯誤」區

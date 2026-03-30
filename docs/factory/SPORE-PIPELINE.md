@@ -10,7 +10,7 @@
 
 1. `cat docs/factory/README.md` — 理解孢子是什麼
 2. `cat docs/factory/SPORE-TEMPLATES.md` — 四種模板 + 範例
-3. `cat EDITORIAL.md | head -100` — 品質標準核心信念
+3. `cat docs/editorial/EDITORIAL.md | head -100` — 品質標準核心信念
 
 ---
 
@@ -111,7 +111,7 @@ validate ≥ 80 且 hollow ≤ 3 且 lastVerified ≤ 90 天？
 # 讀 rewrite-pipeline 流程
 cat docs/editorial/REWRITE-PIPELINE.md
 cat docs/editorial/RESEARCH-TEMPLATE.md
-cat EDITORIAL.md
+cat docs/editorial/EDITORIAL.md
 ```
 
 按照三階段執行：RESEARCH → WRITE → VERIFY。完成後重新進入 Step 2。

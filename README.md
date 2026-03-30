@@ -141,11 +141,11 @@ We maintain a **[TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md)** to ensure co
 | 👵 **台文正字**           | Use 「阿媽」(a-má) not 「阿嬤」                          | 台文正字，非國語系統用字         |
 | 🗣️ **Language naming**    | Use 「台語」not 「閩南語」(per 國家語言發展法)           | 語言學語境可用「台語（閩南語）」 |
 
-> **Contributors**: Please read [TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md) and [EDITORIAL.md](./EDITORIAL.md) before writing or reviewing articles.
+> **Contributors**: Please read [TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md) and [EDITORIAL.md](./docs/editorial/EDITORIAL.md) before writing or reviewing articles.
 
 ### 📐 Editorial Standards
 
-We maintain an **[EDITORIAL.md](./EDITORIAL.md)** — our writing methodology and quality standard. It covers:
+We maintain an **[EDITORIAL.md](./docs/editorial/EDITORIAL.md)** — our writing methodology and quality standard. It covers:
 
 - **Research workflow**: define questions → cross-reference 2+ sources → verify data
 - **Article structure**: 30-sec overview → narrative-driven body → challenges → references
@@ -177,7 +177,7 @@ taiwan-md/
 **SSOT:** All content lives in `knowledge/`. Website is a projection. `scripts/core/sync.sh` syncs to `src/content/`.  
 **SEO:** JSON-LD · Open Graph · per-article OG cards (`/og/[category]/[slug]`) · Twitter Cards · RSS · `<meta ai-summary>`  
 **i18n:** zh-TW (default SSOT) + en (116% coverage) + es + ja  
-**Quality:** 14-dimension automated scanner + editorial pipeline. See [EDITORIAL.md](./EDITORIAL.md) and [CONTRIBUTING.md](./CONTRIBUTING.md).
+**Quality:** 14-dimension automated scanner + editorial pipeline. See [EDITORIAL.md](./docs/editorial/EDITORIAL.md) and [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ---
 
@@ -195,7 +195,7 @@ Every `.md` file in the root directory is an organ of this organism. Together, t
 
 | File                                                              | Role                                                            | When to read                                                                                                                                                   |
 | ----------------------------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[EDITORIAL.md](./EDITORIAL.md)**                                | 🫀 **Heart** — Writing methodology & quality standard (v4)      | Before writing or reviewing any article. Defines what a "good article" looks like: 切入人物、挖引語制度、因果鏈、五種開場/結尾模式、塑膠偵測                   |
+| **[EDITORIAL.md](./docs/editorial/EDITORIAL.md)**                                | 🫀 **Heart** — Writing methodology & quality standard (v4)      | Before writing or reviewing any article. Defines what a "good article" looks like: 切入人物、挖引語制度、因果鏈、五種開場/結尾模式、塑膠偵測                   |
 | **[REWRITE-PIPELINE.md](./docs/editorial/REWRITE-PIPELINE.md)**   | 🔄 **Circulatory system** — Three-stage quality pipeline (v2.1) | Before rewriting existing articles. Orchestrates four files: Research → Write → Verify, with quality gates at each stage                                       |
 | **[RESEARCH-TEMPLATE.md](./docs/editorial/RESEARCH-TEMPLATE.md)** | 🔬 **Sensory system** — Pre-writing research template           | During Stage 1 of the rewrite pipeline. Structured template for gathering facts, finding a 切入人物, collecting 真人引語, and preparing endings before writing |
 | **[QUALITY-CHECKLIST.md](./docs/editorial/QUALITY-CHECKLIST.md)** | 🛡️ **Immune checkpoint** — Post-writing verification checklist  | During Stage 3 of the rewrite pipeline. Five-step verification: 五指檢測 → 結構驗證 → 塑膠掃描 → 自動驗證 → commit                                             |
@@ -220,7 +220,7 @@ The organism has an automated immune system that detects and fights "hollow AI c
 | `tools/quality-scan.sh`                                     | Scans all articles for **14 quality dimensions**: bullet padding, missing dates, no sources, empty modifiers, repetitive structure, thin paragraphs, no human review, plastic phrases, dash abuse, textbook openings, cliché endings, template H2s, **list-dump detection**, **quality decay** (虎頭蛇尾) |
 | `tools/quality-scan.sh --diff`                              | Compares against baseline to show which articles improved or degraded since last scan                                                                                                                                                                                                                     |
 | `tools/quality-scan.sh --sort`                              | Outputs worst-scoring articles first for triage                                                                                                                                                                                                                                                           |
-| [EDITORIAL.md §塑膠偵測](./EDITORIAL.md)                    | Human-readable guide to detecting "plastic" writing — five species of hollow sentences that AI loves to generate                                                                                                                                                                                          |
+| [EDITORIAL.md §塑膠偵測](./docs/editorial/EDITORIAL.md)                    | Human-readable guide to detecting "plastic" writing — five species of hollow sentences that AI loves to generate                                                                                                                                                                                          |
 | [REWRITE-PIPELINE.md](./docs/editorial/REWRITE-PIPELINE.md) | Four-file orchestration pipeline that prevents quality collapse: Pipeline (flow) → RESEARCH-TEMPLATE (research) → EDITORIAL (writing) → QUALITY-CHECKLIST (verification)                                                                                                                                  |
 
 ### 🌱 How the Organism Evolves

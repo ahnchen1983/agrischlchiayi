@@ -95,7 +95,7 @@ Build 由 CI/CD 處理。sub-agent 跑 build 容易 timeout 且浪費資源。
 | `docs/editorial/REWRITE-PIPELINE.md`  | 完整三階段流程（SSOT） |
 | `docs/editorial/RESEARCH.md`          | 研究方法論             |
 | `docs/editorial/RESEARCH-TEMPLATE.md` | Stage 1 研究筆記模板   |
-| `EDITORIAL.md`                        | 品質標準               |
+| `docs/editorial/EDITORIAL.md`         | 品質標準               |
 | `docs/editorial/QUALITY-CHECKLIST.md` | Stage 3 驗證清單       |
 | `scripts/tools/rewrite-queue.txt`     | 待重寫佇列             |
 | `scripts/tools/quality-scan.sh`       | 品質掃描腳本           |

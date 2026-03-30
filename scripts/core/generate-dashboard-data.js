@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.join(__dirname, '../..');
 const KNOWLEDGE_DIR = path.join(PROJECT_ROOT, 'knowledge');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, 'public/api');
-const EDITORIAL_PATH = path.join(PROJECT_ROOT, 'EDITORIAL.md');
+const EDITORIAL_PATH = path.join(PROJECT_ROOT, 'docs', 'editorial', 'EDITORIAL.md');
 
 // PascalCase category directories (zh-TW SSOT)
 const CATEGORIES = [
@@ -302,7 +302,7 @@ function countTranslationsByCategory() {
 // ---------------------------------------------------------------------------
 function getEditorialLastModified() {
   try {
-    const result = execSync(`git log -1 --format="%aI" -- EDITORIAL.md`, {
+    const result = execSync(`git log -1 --format="%aI" -- docs/editorial/EDITORIAL.md`, {
       cwd: PROJECT_ROOT,
       encoding: 'utf8',
       stdio: ['pipe', 'pipe', 'pipe'],
