@@ -160,13 +160,16 @@ const rulesJSON = JSON.stringify(rules);
         <div class="editor-grid">
           <div class="editor-panel">
             <div class="panel-label">輸入文字</div>
-            <textarea
-              id="input-text"
-              class="editor-textarea"
-              placeholder="在這裡貼入文字…
+            <div class="input-wrapper">
+              <div id="input-highlight" class="input-highlight" aria-hidden="true"></div>
+              <textarea
+                id="input-text"
+                class="editor-textarea"
+                placeholder="在這裡貼入文字…
 
 例如：這個軟件視頻很有用，可以通過下載來使用。"
-              spellcheck="false"></textarea>
+                spellcheck="false"></textarea>
+            </div>
           </div>
 
           <div class="editor-panel">
@@ -370,6 +373,42 @@ const rulesJSON = JSON.stringify(rules);
       return { html: escaped, matches };
     }
 
+    // ── Highlight source (original) text — mark matched china terms ─────────
+    function highlightSource(input, matches) {
+      if (!input.trim() || matches.length === 0) return '';
+
+      // Apply OpenCC first (same as convertText) so we match against traditional
+      let text = input;
+      if (openccConverter) {
+        text = openccConverter(text);
+      }
+
+      // Use marker system identical to convertText
+      const placeholders = [];
+      let markerIdx = 0;
+      for (const m of matches) {
+        const escaped = m.source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const marker = `\x00S${markerIdx}\x00`;
+        text = text.replace(new RegExp(escaped, 'g'), marker);
+        placeholders.push({ marker, source: m.source });
+        markerIdx++;
+      }
+
+      // Escape HTML
+      let html = text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>');
+
+      // Replace markers with highlighted source words
+      for (const { marker, source } of placeholders) {
+        html = html.split(marker).join(`<mark class="source-word">${escHtml(source)}</mark>`);
+      }
+
+      return html;
+    }
+
     // ── Compute Taiwan-ization index ────────────────────────────────────────
     function computeIndex(input, matches) {
       if (!input.trim()) return { before: 100, after: 100 };
@@ -479,12 +518,14 @@ const rulesJSON = JSON.stringify(rules);
 
     // ── Main run ────────────────────────────────────────────────────────────
     let lastHtml = '';
+    const inputHighlightEl = document.getElementById('input-highlight');
 
     async function run() {
       const input = inputEl.value;
       if (!input.trim()) {
         outputEl.innerHTML =
           '<span class="output-placeholder">轉換結果會顯示在這裡，<mark class="sample-mark">替換的詞</mark> 會被醒目標示。</span>';
+        inputHighlightEl.innerHTML = '';
         analysisEl.hidden = true;
         btnCopy.disabled = true;
         lastHtml = '';
@@ -507,6 +548,9 @@ const rulesJSON = JSON.stringify(rules);
         matches.length > 0 ? outputEl.innerText || outputEl.textContent : input;
       btnCopy.disabled = false;
 
+      // Highlight matched china terms in the input panel
+      inputHighlightEl.innerHTML = highlightSource(input, matches);
+
       // Render analysis
       const { before, after } = computeIndex(input, matches);
       renderAnalysis(matches);
@@ -519,6 +563,12 @@ const rulesJSON = JSON.stringify(rules);
     // ── Event listeners ─────────────────────────────────────────────────────
     inputEl.addEventListener('input', run);
     btnConvert.addEventListener('click', run);
+
+    // Sync scroll between textarea and highlight overlay
+    inputEl.addEventListener('scroll', () => {
+      inputHighlightEl.scrollTop = inputEl.scrollTop;
+      inputHighlightEl.scrollLeft = inputEl.scrollLeft;
+    });
 
     // Example buttons
     document.querySelectorAll('.btn-example').forEach((btn) => {
@@ -684,6 +734,34 @@ const rulesJSON = JSON.stringify(rules);
     letter-spacing: 0.08em;
     color: #555;
   }
+  .input-wrapper {
+    position: relative;
+  }
+  .input-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-ui, system-ui, sans-serif);
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: hidden;
+    pointer-events: none;
+    color: transparent;
+    box-sizing: border-box;
+  }
+  :global(mark.source-word) {
+    background: #ffe066;
+    color: transparent;
+    border-radius: 3px;
+    padding: 0 1px;
+  }
   .editor-textarea {
     width: 100%;
     min-height: 240px;
@@ -694,9 +772,11 @@ const rulesJSON = JSON.stringify(rules);
     font-family: var(--font-ui, system-ui, sans-serif);
     line-height: 1.7;
     resize: vertical;
-    background: white;
+    background: transparent;
     transition: border-color 0.15s;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
   }
   .editor-textarea:focus {
     outline: none;
