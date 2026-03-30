@@ -14,6 +14,7 @@ import { graphCommand } from './commands/graph.js';
 import { ragCommand } from './commands/rag.js';
 import { contributeCommand } from './commands/contribute.js';
 import { validateCommand } from './commands/validate.js';
+import { terminologyCommand } from './commands/terminology.js';
 
 const program = new Command();
 
@@ -22,7 +23,7 @@ program
   .description(
     'Taiwan.md — 台灣知識庫 CLI\nSearch, read, and explore 900+ curated articles about Taiwan.',
   )
-  .version('0.4.0');
+  .version('0.5.0');
 
 // Register all commands
 searchCommand(program);
@@ -39,5 +40,6 @@ graphCommand(program);
 ragCommand(program);
 contributeCommand(program);
 validateCommand(program);
+terminologyCommand(program);
 
 program.parse();
