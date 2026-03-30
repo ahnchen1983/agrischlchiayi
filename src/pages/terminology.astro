@@ -145,25 +145,19 @@ const termsJSON = JSON.stringify(terms);
         <p class="header-tagline">
           Taiwan.md 的文字應該讀起來像在台灣長大的人寫的——這不是政治立場，是生活經驗的真實性。
         </p>
-        <div class="header-stats">
-          <span class="stat"><strong>{totalTerms}</strong> 個詞條</span>
-          <span class="stat-sep">|</span>
-          <span class="stat"><strong>6</strong> 種分歧類型</span>
-          <span class="stat-sep">|</span>
-          <span class="stat"><strong>{totalSources}</strong> 個來源</span>
+        <div class="header-bottom">
+          <div class="header-stats">
+            <span class="stat"><strong>{totalTerms}</strong> 個詞條</span>
+            <span class="stat-sep">|</span>
+            <span class="stat"><strong>6</strong> 種分歧類型</span>
+            <span class="stat-sep">|</span>
+            <span class="stat"><strong>{totalSources}</strong> 個來源</span>
+          </div>
+          <a href="/fork-graph" class="fork-link-btn">
+            🌿 語言分支樹 →
+          </a>
         </div>
       </div>
-    </div>
-
-    <!-- ── Fork Graph Link Card ──────────────────────────────── -->
-    <div class="fork-link-wrap">
-      <a href="/fork-graph" class="fork-link-card">
-        <div class="fork-link-icon">🌿</div>
-        <div class="fork-link-text">
-          <strong>語言分支樹</strong>
-          <span>10 個代表詞的視覺化分歧歷程 →</span>
-        </div>
-      </a>
     </div>
 
     <!-- ── Filter bar ─────────────────────────────────────────── -->
@@ -404,56 +398,33 @@ const termsJSON = JSON.stringify(terms);
 </script>
 
 <style>
-  /* ── Fork Link Card ──────────────────────────────────────────── */
-  .fork-link-wrap {
-    max-width: 72rem;
-    margin: 0 auto 0;
-    padding: 1.25rem var(--space-page-x, 2rem) 0;
-  }
-  .fork-link-card {
+  /* ── Fork Link Button (in header) ────────────────────────────── */
+  .header-bottom {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    background: #1a1a2e;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .fork-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    background: rgba(255,255,255,0.12);
     color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    transition: background 0.18s, transform 0.18s;
-    border-bottom: none !important;
-  }
-  .fork-link-card:hover {
-    background: #2a2a4e;
-    transform: translateY(-1px);
-    text-decoration: none !important;
-  }
-  .fork-link-icon {
-    font-size: 1.8rem;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-  .fork-link-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .fork-link-text strong {
-    font-size: 1rem;
-    font-weight: 700;
-    color: white;
-  }
-  .fork-link-text span {
     font-size: 0.88rem;
-    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
   }
-
-  @media (max-width: 640px) {
-    .fork-link-wrap {
-      padding: 1rem 1rem 0;
-    }
-    .fork-link-card {
-      padding: 0.85rem 1rem;
-    }
+  .fork-link-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.4);
+    text-decoration: none;
   }
 
   /* ── Page layout ──────────────────────────────────────────────── */
