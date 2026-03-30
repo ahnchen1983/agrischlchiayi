@@ -160,15 +160,14 @@ const rulesJSON = JSON.stringify(rules);
         <div class="editor-grid">
           <div class="editor-panel">
             <div class="panel-label">輸入文字</div>
-            <div class="input-wrapper">
-              <div id="input-highlight" class="input-highlight" aria-hidden="true"></div>
-              <textarea
-                id="input-text"
-                class="editor-textarea"
-                placeholder="在這裡貼入文字…
+            <textarea
+              id="input-text"
+              class="editor-textarea"
+              placeholder="在這裡貼入文字…
 
 例如：這個軟件視頻很有用，可以通過下載來使用。"
-                spellcheck="false"></textarea>
+              spellcheck="false"></textarea>
+            <div id="input-display" class="editor-output input-display" hidden>
             </div>
           </div>
 
@@ -518,14 +517,25 @@ const rulesJSON = JSON.stringify(rules);
 
     // ── Main run ────────────────────────────────────────────────────────────
     let lastHtml = '';
-    const inputHighlightEl = document.getElementById('input-highlight');
+    const inputDisplayEl = document.getElementById('input-display');
+
+    function showInputDisplay(show) {
+      if (show) {
+        inputEl.hidden = true;
+        inputDisplayEl.hidden = false;
+      } else {
+        inputEl.hidden = false;
+        inputDisplayEl.hidden = true;
+      }
+    }
 
     async function run() {
       const input = inputEl.value;
       if (!input.trim()) {
         outputEl.innerHTML =
           '<span class="output-placeholder">轉換結果會顯示在這裡，<mark class="sample-mark">替換的詞</mark> 會被醒目標示。</span>';
-        inputHighlightEl.innerHTML = '';
+        showInputDisplay(false);
+        inputDisplayEl.innerHTML = '';
         analysisEl.hidden = true;
         btnCopy.disabled = true;
         lastHtml = '';
@@ -548,8 +558,14 @@ const rulesJSON = JSON.stringify(rules);
         matches.length > 0 ? outputEl.innerText || outputEl.textContent : input;
       btnCopy.disabled = false;
 
-      // Highlight matched china terms in the input panel
-      inputHighlightEl.innerHTML = highlightSource(input, matches);
+      // Show highlighted source in input panel (same style as output)
+      const sourceHtml = highlightSource(input, matches);
+      if (sourceHtml) {
+        inputDisplayEl.innerHTML = sourceHtml;
+        showInputDisplay(true);
+      } else {
+        showInputDisplay(false);
+      }
 
       // Render analysis
       const { before, after } = computeIndex(input, matches);
@@ -564,10 +580,10 @@ const rulesJSON = JSON.stringify(rules);
     inputEl.addEventListener('input', run);
     btnConvert.addEventListener('click', run);
 
-    // Sync scroll between textarea and highlight overlay
-    inputEl.addEventListener('scroll', () => {
-      inputHighlightEl.scrollTop = inputEl.scrollTop;
-      inputHighlightEl.scrollLeft = inputEl.scrollLeft;
+    // Click highlighted input to go back to editing
+    inputDisplayEl.addEventListener('click', () => {
+      showInputDisplay(false);
+      inputEl.focus();
     });
 
     // Example buttons
@@ -734,33 +750,15 @@ const rulesJSON = JSON.stringify(rules);
     letter-spacing: 0.08em;
     color: #555;
   }
-  .input-wrapper {
-    position: relative;
-  }
-  .input-highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 1rem;
-    border: 1.5px solid transparent;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: var(--font-ui, system-ui, sans-serif);
-    line-height: 1.7;
-    white-space: pre-wrap;
-    word-break: break-word;
-    overflow: hidden;
-    pointer-events: none;
-    color: transparent;
-    box-sizing: border-box;
-  }
   :global(mark.source-word) {
     background: #ffe066;
-    color: transparent;
+    color: #1a1a2e;
     border-radius: 3px;
-    padding: 0 1px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .input-display {
+    cursor: text;
   }
   .editor-textarea {
     width: 100%;
@@ -772,11 +770,9 @@ const rulesJSON = JSON.stringify(rules);
     font-family: var(--font-ui, system-ui, sans-serif);
     line-height: 1.7;
     resize: vertical;
-    background: transparent;
+    background: white;
     transition: border-color 0.15s;
     box-sizing: border-box;
-    position: relative;
-    z-index: 1;
   }
   .editor-textarea:focus {
     outline: none;
