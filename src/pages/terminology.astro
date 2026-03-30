@@ -104,6 +104,7 @@ interface CardData {
   fork_cause: string;
   exceptions: string;
   sources: string[];
+  subcategory: string;
 }
 
 const cards: CardData[] = terms.map((t) => {
@@ -128,8 +129,20 @@ const cards: CardData[] = terms.map((t) => {
     fork_cause: (t.etymology?.fork_cause || '').split('\n').join(' ').trim(),
     exceptions: (t.usage?.exceptions || '').split('\n').join(' ').trim(),
     sources: (t.sources || []).filter(Boolean),
+    subcategory: t.subcategory || '',
   };
 });
+
+// Collect subcategories with counts (sorted by count desc, skip empty)
+const subcatCounts: Record<string, number> = {};
+for (const c of cards) {
+  if (c.subcategory) {
+    subcatCounts[c.subcategory] = (subcatCounts[c.subcategory] || 0) + 1;
+  }
+}
+const subcategories = Object.entries(subcatCounts)
+  .sort((a, b) => b[1] - a[1])
+  .map(([name, count]) => ({ name, count }));
 
 // Serialize for client-side JS
 const termsJSON = JSON.stringify(terms);
@@ -184,6 +197,14 @@ const termsJSON = JSON.stringify(terms);
           />
           <span id="result-count" class="result-count"></span>
         </div>
+        <div class="subcat-row" role="group" aria-label="依子分類篩選">
+          <button class="subcat-btn active" data-subcat="all">全部分類</button>
+          {subcategories.map((s) => (
+            <button class="subcat-btn" data-subcat={s.name}>
+              {s.name} <span class="subcat-count">{s.count}</span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
 
@@ -197,6 +218,7 @@ const termsJSON = JSON.stringify(terms);
             data-taiwan={c.taiwan}
             data-china={c.china}
             data-notes={c.notes_full}
+            data-subcat={c.subcategory}
             data-id={`card-${i}`}
             role="article"
             tabindex="0"
@@ -336,6 +358,7 @@ const termsJSON = JSON.stringify(terms);
   const filterBtns = document.querySelectorAll('.filter-btn');
 
   let currentFork = 'all';
+  let currentSubcat = 'all';
   let currentQuery = '';
 
   function applyFilters() {
@@ -343,19 +366,21 @@ const termsJSON = JSON.stringify(terms);
     let visible = 0;
     cards.forEach((card) => {
       const fork = card.dataset.fork || '';
+      const subcat = card.dataset.subcat || '';
       const taiwan = (card.dataset.taiwan || '').toLowerCase();
       const china = (card.dataset.china || '').toLowerCase();
       const notes = (card.dataset.notes || '').toLowerCase();
       const q = currentQuery.toLowerCase();
 
       const forkMatch = currentFork === 'all' || fork === currentFork;
+      const subcatMatch = currentSubcat === 'all' || subcat === currentSubcat;
       const queryMatch =
         !q ||
         taiwan.includes(q) ||
         china.includes(q) ||
         notes.includes(q);
 
-      const show = forkMatch && queryMatch;
+      const show = forkMatch && subcatMatch && queryMatch;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
     });
@@ -365,7 +390,7 @@ const termsJSON = JSON.stringify(terms);
     }
     if (resultCount) {
       resultCount.textContent =
-        currentFork !== 'all' || currentQuery
+        currentFork !== 'all' || currentSubcat !== 'all' || currentQuery
           ? `${visible} 個詞條`
           : '';
     }
@@ -377,6 +402,17 @@ const termsJSON = JSON.stringify(terms);
       filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       currentFork = btn.dataset.fork || 'all';
+      applyFilters();
+    });
+  });
+
+  // Subcategory filter buttons
+  const subcatBtns = document.querySelectorAll('.subcat-btn');
+  subcatBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      subcatBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSubcat = btn.dataset.subcat || 'all';
       applyFilters();
     });
   });
@@ -674,6 +710,40 @@ const termsJSON = JSON.stringify(terms);
   #term-search:focus {
     border-color: #1a1a2e;
   }
+  /* ── Subcategory filter ─────────────────────────────── */
+  .subcat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #eee;
+  }
+  .subcat-btn {
+    padding: 0.2rem 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    background: white;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #666;
+    white-space: nowrap;
+  }
+  .subcat-btn:hover {
+    border-color: #999;
+    color: #333;
+  }
+  .subcat-btn.active {
+    background: #1a1a2e;
+    color: white;
+    border-color: #1a1a2e;
+  }
+  .subcat-count {
+    font-size: 0.65rem;
+    opacity: 0.6;
+  }
+
   .result-count {
     font-size: 0.8rem;
     color: #888;
