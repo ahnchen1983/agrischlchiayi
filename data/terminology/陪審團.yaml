@@ -1,0 +1,31 @@
+id: pei-shen-tuan
+category: legal
+fork_type: E
+
+display:
+  taiwan: 陪審團
+  china: 陪审团（簡）/ 觀審制（現行）
+
+english: jury / citizen judge
+
+etymology:
+  origin: 台灣「陪審團」制度長期討論，2023年試行「國民法官」制度，是兩岸法制最重要的當代分歧之一；中國無陪審團制度，有「人民陪審員」制度。
+  taiwan_path: 台灣2023年起實施「國民法官」制度（部分採用陪審精神），讓一般市民參與重大刑案審判，是台灣司法改革的重大里程碑，「陪審團」與「國民法官」的制度爭論持續進行中。
+  china_path: 中國沒有西方式陪審團制度，「人民陪審員」制度讓普通公民以陪審員身份參與部分案件，但決定權仍在職業法官。
+  fork_point: "~2023"
+  fork_cause: 台灣推行國民法官制度是正在進行中的司法分歧，台灣走向部分公民參與審判的方向。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「國民法官」制度的實施是台灣司法改革的重大突破，也引發關於公民素養、司法效率和個案公正性的廣泛討論，屬於台灣正在進行中的制度分歧。
+
+sources:
+  - "司法院國民法官法及國民法官制度說明"
+
+added: "2026-03-30"
+updated: "2026-03-30"

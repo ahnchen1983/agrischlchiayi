@@ -1,0 +1,31 @@
+id: yan-jiu-suo
+category: education
+fork_type: B
+
+display:
+  taiwan: 研究所
+  china: 研究生院 / 研究所
+
+english: graduate school
+
+etymology:
+  origin: 台灣「研究所」指碩士、博士研究生院，中國官方稱「研究生院」，日常也說「研究所」（部分用語），但指涉略有差異。
+  taiwan_path: 台灣「考研究所」是大學畢業後的重要選擇，「讀研究所」「考上研究所」是台灣高等教育的重要里程碑。
+  china_path: 中國「考研」（考研究生）是高度競爭的升學考試，「考研」一詞本身已成為中國特有的社會現象，競爭激烈程度遠超台灣。
+  fork_point: "~1949"
+  fork_cause: 台灣「研究所」指研究生階段的學習機構，中國「研究所」另可指研究機構，用法稍有不同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「研究所」升學率相對高，「碩士滿街走」的現象反映了台灣高學歷通膨的社會問題，也是台灣教育政策的重要議題。
+
+sources:
+  - "教育部高等教育統計資料"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: gong-ting-hui
+category: legal
+fork_type: B
+
+display:
+  taiwan: 公聽會
+  china: 聽證會 / 公聽會
+
+english: public hearing
+
+etymology:
+  origin: 「公聽會」是讓公眾就政策或立法議題表達意見的公開聽證會議，台灣用「公聽會」，中國行政法律程序中用「聽證會」。
+  taiwan_path: 台灣立法院在審查重要法案前通常舉辦公聽會，邀請學者、業界和民間團體表達意見，是台灣立法透明化的重要機制。
+  china_path: 中國「聽證會」是行政程序中徵求各方意見的機制，但政策制定的透明度和公民參與程度與台灣有所不同。
+  fork_point: "~1994"
+  fork_cause: 台灣以「公聽會」強調公眾參與，中國以「聽證會」強調法律程序。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣公聽會制度讓公民社會得以直接參與立法過程，是台灣民主深化的重要指標，也是台灣NGO和社運團體影響政策的重要管道。
+
+sources:
+  - "立法院公聽會相關規則及立法院議事規則"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: xing-dong-zhi-fu
+category: business
+fork_type: B
+
+display:
+  taiwan: 行動支付
+  china: 移動支付
+
+english: mobile payment
+
+etymology:
+  origin: 台灣稱「行動支付」（行動裝置進行支付），中國稱「移動支付」（移動設備進行支付），兩者均指相同的技術概念，反映「行動 vs 移動」的語彙差異。
+  taiwan_path: 台灣「行動支付」以Line Pay、街口支付、Apple Pay為主流，政府推動「行動支付100萬店家」計畫，台灣行動支付滲透率持續提升但仍低於中國。
+  china_path: 中國「移動支付」以支付寶、微信支付為絕對主導，滲透率和使用頻率在全球名列前茅，現金支付在中國城市已近乎消失。
+  fork_point: "~2010s"
+  fork_cause: 「行動 vs 移動」的命名差異延伸到支付科技領域，台灣中國在行動支付生態上差異巨大。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣行動支付生態系多元但分散，與中國支付寶微信支付的雙寡頭格局形成鮮明對比，也反映了台灣金融市場的開放競爭環境。
+
+sources:
+  - "金融監理委員會（台灣）電子支付統計及經濟部商業司行動支付推廣資料"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: zhen-zhu-nai-cha
+category: food
+fork_type: C
+
+display:
+  taiwan: 珍珠奶茶 / 波霸奶茶
+  china: 珍珠奶茶
+
+english: bubble tea
+
+etymology:
+  origin: 台灣原創飲品，1980年代由台中春水堂或台南翰林茶館發明，以木薯粉圓球加入奶茶。「珍珠」因外觀如珍珠，「波霸」源自台語幽默借用。
+  taiwan_path: 台灣本土原創，1990年代後全面普及，50嵐、鮮芋仙、CoCo等品牌蓬勃發展，「手搖飲」產業輸出全球。
+  china_path: 台灣文化輸出後，中國出現大量跟進品牌（喜茶等）。「奶茶」在中國另有港式傳統，與台灣珍珠奶茶不同源。
+  fork_point: "~1986"
+  fork_cause: 台灣原創發明，後輸出全球成為台灣飲食文化最大外交成就。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  珍珠奶茶是台灣最成功的飲食文化輸出，從台灣發源後遍及全球，「台灣手搖飲」產業已成為全球飲料市場的重要力量。
+
+sources:
+  - "農業部台灣茶葉與手搖飲產業統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

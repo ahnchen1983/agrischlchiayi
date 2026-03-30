@@ -1,0 +1,31 @@
+id: ding-cun
+category: business
+fork_type: B
+
+display:
+  taiwan: 定存
+  china: 定期存款 / 定存
+
+english: fixed deposit / term deposit
+
+etymology:
+  origin: 「定存」是「定期存款」的縮寫，台灣日常一律說「定存」，中國通常說「定期存款」，「定存」也使用但不如台灣普遍。
+  taiwan_path: 台灣「定存」是保守型理財的代名詞，「錢放定存」是台灣民眾（尤其長輩）的主流理財方式，台灣銀行低利率時代使定存利率成為財經關注焦點。
+  china_path: 中國「定期存款」同樣是普遍的儲蓄方式，「理財通」「寶寶類產品」等新型理財工具部分取代了傳統定存的地位。
+  fork_point: "~1950s"
+  fork_cause: 台灣以「定存」縮寫固化，中國保留完整詞形「定期存款」。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「定存」在低利率環境下被視為保守理財的象徵，「放定存不如買股票」的理財觀念變遷是台灣金融理財文化演進的縮影。
+
+sources:
+  - "中央銀行（台灣）存款統計及金融監理委員會資料"
+
+added: "2026-03-30"
+updated: "2026-03-30"

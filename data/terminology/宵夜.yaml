@@ -1,0 +1,31 @@
+id: xiao-ye
+category: food
+fork_type: B
+
+display:
+  taiwan: 宵夜
+  china: 夜宵
+
+english: late-night snack / supper
+
+etymology:
+  origin: 「宵」指夜晚，台灣用「宵夜」，中國北方常用「夜宵」，詞序不同。
+  taiwan_path: 台灣夜市文化發達，「吃宵夜」是夜生活核心活動，鹹酥雞、泡麵、滷味是代表食物。
+  china_path: 中國「夜宵」在南方城市極為發達，燒烤、麻辣燙是夜宵主流，「擼串」是典型描述。
+  fork_point: "~1949"
+  fork_cause: 詞序差異（宵夜 vs 夜宵），反映各自語言慣用結構。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣的宵夜文化與夜市密不可分，夜市攤位直到凌晨仍人潮洶湧，「宵夜」也成為台灣職場熬夜文化的代名詞。
+
+sources:
+  - "觀光署台灣夜市文化統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: dou-jiang
+category: food
+fork_type: F
+
+display:
+  taiwan: 豆漿
+  china: 豆浆（簡）/ 豆奶（商品名）
+
+english: soy milk
+
+etymology:
+  origin: 漢語固有詞，兩岸皆使用「豆漿」（繁簡字差異），但台灣早餐文化中地位特殊。
+  taiwan_path: 台灣「豆漿店」是早餐文化核心，「鹹豆漿」（加醋凝固的豆漿）是台灣早餐特有吃法，「豆漿油條」是經典組合。
+  china_path: 中國同樣以豆漿為早餐飲品，「豆奶」在中國有時指加工包裝豆奶，與現磨豆漿有別。
+  fork_point: "~1949"
+  fork_cause: 同詞不同飲食文化脈絡，台灣以豆漿早餐店為特色場域。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「永和豆漿」文化圈覆蓋全台，24小時豆漿店是台灣夜間飲食的重要場景，「鹹豆漿」是台灣獨有的早餐吃法。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：豆漿"
+
+added: "2026-03-30"
+updated: "2026-03-30"

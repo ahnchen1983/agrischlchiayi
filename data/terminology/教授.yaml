@@ -1,0 +1,31 @@
+id: jiao-shou
+category: education
+fork_type: F
+
+display:
+  taiwan: 教授
+  china: 教授
+
+english: professor
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異：教授/教授），指大學最高職稱的教師。
+  taiwan_path: 台灣「教授」是大學的最高學術職稱（助理教授→副教授→教授），「叫教授」是台灣學生對大學老師的常見稱呼，不論職稱高低。
+  china_path: 中國「教授」同樣是大學最高職稱，「叫老師」「叫教授」均常見，近年也有「副教授」「講師」的差異化稱呼文化。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，稱謂文化略有不同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣大學生習慣稱大學老師為「教授」（不論實際職稱），體現了對學術知識的尊重，也反映台灣校園文化的親切感。
+
+sources:
+  - "教育部大學教師資格審查辦法"
+
+added: "2026-03-30"
+updated: "2026-03-30"

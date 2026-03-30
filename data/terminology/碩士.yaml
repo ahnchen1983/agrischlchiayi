@@ -1,0 +1,31 @@
+id: shuo-shi
+category: education
+fork_type: F
+
+display:
+  taiwan: 碩士
+  china: 硕士（簡）/ 碩士
+
+english: master's degree
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異：碩/硕），指大學本科後的第一個研究學位。
+  taiwan_path: 台灣「碩士」是高度普及的學歷，「碩士班」「碩士學位」是台灣高等教育的重要層級，台灣碩士畢業生比例在全球名列前段。
+  china_path: 中國「硕士」同樣是重要學歷，「考研」競爭激烈，「碩士」學歷在中國職場的溢價近年有所下降。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，台灣碩士普及率相對較高。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣碩士學位的普及化反映了高等教育擴張的歷史趨勢，「碩士滿街走」的現象引發對學歷通膨和教育資源分配的社會討論。
+
+sources:
+  - "教育部高等教育統計資料"
+
+added: "2026-03-30"
+updated: "2026-03-30"

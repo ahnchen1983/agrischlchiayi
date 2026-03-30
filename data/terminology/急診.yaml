@@ -1,0 +1,31 @@
+id: ji-zhen
+category: medical
+fork_type: F
+
+display:
+  taiwan: 急診
+  china: 急诊（簡）/ 急診
+
+english: emergency room / ER
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異），「急診」指緊急診治。
+  taiwan_path: 台灣急診以24小時服務為標準，全民健保涵蓋急診費用，但急診壅塞問題是台灣醫療體系的長期挑戰。
+  china_path: 中國急診制度類似，大型三甲醫院急診壅塞問題同樣存在，費用由醫保部分負擔。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，醫療制度不同導致就診體驗有別。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣急診壅塞是醫療體系長期課題，「掛急診等很久」是台灣人的共同經歷，也反映了全民健保制度下過度使用急診資源的問題。
+
+sources:
+  - "衛生福利部醫院急診服務統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

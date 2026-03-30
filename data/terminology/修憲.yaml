@@ -1,0 +1,31 @@
+id: xiu-xian
+category: legal
+fork_type: E
+
+display:
+  taiwan: 修憲
+  china: 修宪（簡）/ 修憲
+
+english: constitutional amendment
+
+etymology:
+  origin: 「修憲」指修改憲法，兩岸用詞相同（繁簡字差異），但在政治制度和實踐上存在根本差異。
+  taiwan_path: 台灣修憲需經立法院提案、公告半年後交公民複決，是高門檻的民主程序。台灣修憲（如憲改18歲公民權）是政治熱點，體現台灣民主政治的深化。
+  china_path: 中國修憲由全國人大決定，2018年修憲取消國家主席任期限制是重要的政治事件，修憲程序與台灣的民主公投模式根本不同。
+  fork_point: "~1947"
+  fork_cause: 同詞不同政治制度脈絡，台灣修憲涉及公民複決，中國修憲由人大決定。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣修憲程序的公民複決要求反映了台灣主權在民的民主精神，「18歲公民權入憲」等議題是台灣世代政治意識的重要試金石。
+
+sources:
+  - "中華民國憲法增修條文及修憲程序規定"
+
+added: "2026-03-30"
+updated: "2026-03-30"

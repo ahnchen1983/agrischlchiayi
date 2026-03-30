@@ -1,0 +1,31 @@
+id: you-you-fu
+category: business
+fork_type: C
+
+display:
+  taiwan: 悠遊付
+  china: （無直接對應）
+
+english: EasyWallet (Taiwan mobile payment)
+
+etymology:
+  origin: 「悠遊付」是台灣悠遊卡公司推出的行動支付服務，以悠遊卡（EasyCard）品牌延伸，結合NFC和QR Code支付，是台灣本土行動支付的重要品牌。
+  taiwan_path: 台灣悠遊卡公司將實體悠遊卡品牌延伸為行動支付應用，「悠遊付」主攻大眾運輸和小額消費場景，是台灣行動支付多元化競爭格局的一部分。
+  china_path: 中國沒有直接對應的「悠遊付」，中國行動支付以支付寶（阿里巴巴）和微信支付（騰訊）為主導，市場集中度遠高於台灣。
+  fork_point: "~2016"
+  fork_cause: 台灣本土原創行動支付品牌，是台灣交通支付系統數位化的延伸。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣行動支付市場群雄割據，悠遊付、Line Pay、街口支付等多個品牌並存，反映了台灣金融科技市場的活躍競爭，與中國支付寶微信支付雙寡頭格局形成對比。
+
+sources:
+  - "悠遊卡股份有限公司官方資料及金管會電子支付統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

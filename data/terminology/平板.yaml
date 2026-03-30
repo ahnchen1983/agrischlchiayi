@@ -1,0 +1,31 @@
+id: ping-ban
+category: tech
+fork_type: B
+
+display:
+  taiwan: 平板
+  china: 平板电脑（簡）/ 平板電腦
+
+english: tablet / tablet computer
+
+etymology:
+  origin: 台灣日常說「平板」（省略「電腦」），中國通常說「平板電腦」（保留完整詞形），兩者指同一設備。
+  taiwan_path: 台灣「平板」以iPad為代名詞，台灣教育部推動數位學習，「人手一平板」成為台灣教育政策目標，「平板教學」在中小學逐步普及。
+  china_path: 中國「平板電腦」市場龐大，華為、小米、聯想等本土品牌競爭激烈，「平板上網課」在COVID-19疫情期間需求暴增。
+  fork_point: "~2010s"
+  fork_cause: 台灣省略「電腦」形成口語簡稱「平板」，中國保留完整詞形。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣教育部「班班有網路、生生用平板」政策將平板引入台灣中小學教室，「平板學習」成為台灣數位教育轉型的核心工具。
+
+sources:
+  - "教育部數位學習推動計畫及國家通訊傳播委員會統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

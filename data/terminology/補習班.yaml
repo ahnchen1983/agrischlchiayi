@@ -1,0 +1,31 @@
+id: bu-xi-ban
+category: education
+fork_type: B
+
+display:
+  taiwan: 補習班
+  china: 補習班 / 培訓機構 / 輔導班
+
+english: cram school / tutoring center
+
+etymology:
+  origin: 台灣「補習班」是普及的課外輔導機構，正式名稱為「短期補習班」；中國稱「輔導班」「培訓機構」或「補習班」（台灣用語在中國也可理解）。
+  taiwan_path: 台灣「補習班文化」深入家長與學生的日常，「放學去補習班」是台灣學生的標準行程，台北補習班密集的「補教街」是台灣獨特的都市景觀。
+  china_path: 中國「補習機構」市場龐大，2021年「雙減政策」大幅限制學科類補習班，與台灣補習班市場形成明顯對比。
+  fork_point: "~1950s"
+  fork_cause: 台灣「補習班」已固化為標準用語，中國近年因政策限制用語和業態均有變化。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣補習班文化是台灣教育生態的核心組成，「補習班老師」甚至成為部分學科知識的主要傳遞者，反映了台灣考試文化的深度影響。
+
+sources:
+  - "教育部短期補習班立案統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

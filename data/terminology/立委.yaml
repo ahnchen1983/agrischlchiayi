@@ -1,0 +1,31 @@
+id: li-wei
+category: legal
+fork_type: B
+
+display:
+  taiwan: 立委
+  china: 人大代表 / 全國人大代表
+
+english: legislator / member of the Legislative Yuan
+
+etymology:
+  origin: 「立委」是「立法委員」的縮寫，指台灣立法院的民選議員；中國「人大代表」指全國人民代表大會的代表，兩者在政治制度上根本不同。
+  taiwan_path: 台灣立委由全民直選產生，任期四年，「選立委」「立委問政」是台灣民主政治的核心語彙，「立委選區服務」是台灣政治文化的重要特色。
+  china_path: 中國「人大代表」由各級人民代表大會選舉產生，制度架構與台灣直選立委根本不同，雖然在立法功能上有部分相似。
+  fork_point: "~1947"
+  fork_cause: 台灣民主制度下的直選立法委員，與中國人大代表制度根本不同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  「立委」是台灣民主政治最重要的代名詞，立法院的「立委質詢」直播是台灣特有的政治奇觀，也是台灣公民社會對政府問責的重要機制。
+
+sources:
+  - "立法院官方網站及中華民國憲法"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,33 @@
+id: mazu
+category: culture
+fork_type: F
+
+display:
+  taiwan: 媽祖
+  china: 媽祖 / 天妃 / 天后
+
+english: Mazu (Sea goddess / Goddess of the Sea)
+
+etymology:
+  origin: 媽祖信仰源自宋代福建湄洲，為海上守護神，隨閩南移民傳至台灣，成為台灣最重要的民間信仰
+  taiwan_path: 台灣媽祖信仰極為盛行，大甲媽祖遶境是全球最大宗教活動之一，「媽祖」為日常口語
+  china_path: 中國媽祖信仰以福建湄洲祖廟為中心，稱「天后」「媽祖」均可，2009年列入人類非物質文化遺產
+  fork_point: "~清代"
+  fork_cause: 詞彙相同，但台灣媽祖信仰的規模、密度和文化意涵已超越原鄉，形成台灣獨特的宗教文化
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣媽祖廟超過900座，大甲鎮瀾宮媽祖遶境被CNN評為世界三大宗教盛事之一。
+  媽祖遶境是台灣每年最重要的文化事件，吸引數十萬信徒徒步參與。
+
+sources:
+  - "文化部：大甲媽祖遶境進香無形文化資產"
+  - "教育部國語辭典：媽祖"
+
+added: "2026-03-30"
+updated: "2026-03-30"

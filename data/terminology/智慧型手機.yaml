@@ -1,0 +1,31 @@
+id: zhi-hui-xing-shou-ji
+category: tech
+fork_type: B
+
+display:
+  taiwan: 智慧型手機
+  china: 智能手机（簡）/ 智慧手機
+
+english: smartphone
+
+etymology:
+  origin: 台灣以「智慧型手機」描述smartphone，中國以「智能手机」（簡體）為標準用語，「智慧 vs 智能」是兩岸科技詞彙的典型差異。
+  taiwan_path: 台灣「智慧型手機」普及率極高，台灣人平均每人擁有1.5支手機以上，「滑手機」文化深入各年齡層，手機族群的低頭文化是台灣都市景觀的一部分。
+  china_path: 中國「智能手机」普及率同樣極高，「手機依賴」是全球性現象，但中國以華為、小米等本土品牌佔據重要市場地位。
+  fork_point: "~2007"
+  fork_cause: 「智慧 vs 智能」的術語差異是兩岸科技詞彙分流的典型案例。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  「智慧型手機」在台灣的高度普及催生了「低頭族」（滑手機的人）等台灣社會學詞彙，也是台灣4G/5G行動網路快速發展的核心驅動力。
+
+sources:
+  - "國家通訊傳播委員會（NCC）行動通訊統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

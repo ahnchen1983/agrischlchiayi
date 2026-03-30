@@ -1,0 +1,31 @@
+id: song-bing
+category: food
+fork_type: B
+
+display:
+  taiwan: 鬆餅
+  china: 華夫餅（waffle）/ 鬆餅（pancake）
+
+english: waffle / pancake
+
+etymology:
+  origin: 「鬆餅」以口感命名，台灣「鬆餅」同時涵蓋waffle和pancake；中國「華夫餅」為waffle的音譯，區分更細。
+  taiwan_path: 台灣2010年代鬆餅咖啡廳文化爆發，「厚鬆餅」成為IG打卡熱點，代表台灣咖啡廳文化的美食美學。
+  china_path: 中國通常區分「華夫餅」（waffle）和「鬆餅」（pancake），區分比台灣更細。
+  fork_point: "~2000s"
+  fork_cause: 台灣「鬆餅」作為廣義甜點名稱使用，中國傾向區分不同種類。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「鬆餅店」文化在2010年代大爆發，成為咖啡廳打卡文化的核心，「下午茶配鬆餅」是台灣都市消費文化的重要場景。
+
+sources:
+  - "食力foodNEXT台灣甜點市場調查"
+
+added: "2026-03-30"
+updated: "2026-03-30"

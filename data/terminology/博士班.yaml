@@ -1,0 +1,31 @@
+id: bo-shi-ban
+category: education
+fork_type: B
+
+display:
+  taiwan: 博士班
+  china: 博士研究生 / 博士班
+
+english: PhD program / doctoral program
+
+etymology:
+  origin: 台灣以「博士班」稱博士學位課程，中國稱「博士研究生」（正式）或「博士生」（口語），「博士班」在中國較少使用。
+  taiwan_path: 台灣「博士班」招生競爭激烈，近年面臨少子化導致招生不足的挑戰，「博士畢業後的出路」是台灣學術界的重要討論議題。
+  china_path: 中國「博士研究生」招生名額近年大幅增加，但博士生就業市場也面臨壓力，「博士內卷」是中國學術圈的熱詞。
+  fork_point: "~1949"
+  fork_cause: 台灣以「班」稱課程群體，中國以「研究生」強調學習者身份。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣博士班近年面臨招生不足的困境，反映了台灣學術勞動市場的結構性問題，「博士後研究員」的出路問題是台灣高教政策的重要挑戰。
+
+sources:
+  - "教育部博士班招生及就業統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

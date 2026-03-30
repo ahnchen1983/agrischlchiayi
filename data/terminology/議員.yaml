@@ -1,0 +1,31 @@
+id: yi-yuan
+category: legal
+fork_type: B
+
+display:
+  taiwan: 議員
+  china: 議员（簡）/ 人大代表（縣市層級）
+
+english: councillor / city council member
+
+etymology:
+  origin: 台灣「議員」指縣市議會的民選代表；中國地方立法機構代表稱「人大代表」，兩者政治制度不同。
+  taiwan_path: 台灣縣市議會議員由直選產生，「地方議員服務選民」是台灣基層民主的基礎，「議員質詢」「議員關說」是台灣政治文化的常見詞彙。
+  china_path: 中國縣市層級「人大代表」由間接選舉產生，政治功能與台灣直選議員有本質差異。
+  fork_point: "~1947"
+  fork_cause: 台灣民主制度下的地方直選代表，與中國人大代表制度根本不同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣地方議員是連結市民與政府的重要橋梁，「議員服務處」遍布各社區，「陳情議員」是台灣市民解決地方問題的常見途徑。
+
+sources:
+  - "地方制度法（台灣）及縣市議會組織規程"
+
+added: "2026-03-30"
+updated: "2026-03-30"

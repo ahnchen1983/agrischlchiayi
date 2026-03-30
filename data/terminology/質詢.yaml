@@ -1,0 +1,31 @@
+id: zhi-xun
+category: legal
+fork_type: B
+
+display:
+  taiwan: 質詢
+  china: 质询（簡）/ 詢問（中國國會用語）
+
+english: legislative interpellation / questioning
+
+etymology:
+  origin: 台灣「質詢」指立委或議員向行政機關首長提出問題，要求答覆的立法監督程序；中國全國人大的類似程序稱「詢問」，不具台灣質詢的強制問責性質。
+  taiwan_path: 台灣「立委質詢」「議員質詢」是台灣政治文化的核心場景，立委質詢行政院長和部長的直播是台灣政治透明度的重要體現，「被質詢」是官員的日常考驗。
+  china_path: 中國全國人大的「詢問」和「質詢」制度存在，但實際使用較少，不具台灣式的強烈問責文化。
+  fork_point: "~1947"
+  fork_cause: 台灣質詢制度有實質的政治問責功能，是台灣議會民主的核心機制。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣立委質詢的精彩片段常在社群媒體廣泛流傳，形成台灣獨特的「質詢文化」，反映了台灣公民對政府問責的高度期待。
+
+sources:
+  - "立法院議事規則及憲法質詢制度規定"
+
+added: "2026-03-30"
+updated: "2026-03-30"

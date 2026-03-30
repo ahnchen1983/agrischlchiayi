@@ -1,0 +1,31 @@
+id: gu-piao
+category: business
+fork_type: F
+
+display:
+  taiwan: 股票
+  china: 股票
+
+english: stock / share
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異），但台股（TWSE）與A股（上交所、深交所）是完全獨立的資本市場。
+  taiwan_path: 台灣「股票」以台灣證券交易所（台灣股市/台股）為核心，「買賣股票」「台股大漲」是台灣財經日常用語，台股以電子科技股（台積電）為重心。
+  china_path: 中國「股票」以上交所（滬市）和深交所（深市）為核心，「A股」「B股」「H股」等分類是中國資本市場的特有結構。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，台灣台股與中國A股是完全不同的資本市場體系。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣股市（台股）以台積電為龍頭，半導體和電子產業佔比極高，「台積電股價」幾乎成為台灣經濟晴雨表，是台灣科技業全球地位的重要指標。
+
+sources:
+  - "台灣證券交易所（TWSE）官方統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

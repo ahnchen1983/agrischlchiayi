@@ -1,0 +1,31 @@
+id: e-a-jian
+category: food
+fork_type: D
+
+display:
+  taiwan: 蚵仔煎
+  china: 海蠣煎 / 牡蠣煎
+
+english: oyster omelet
+
+etymology:
+  origin: 台語「蚵仔」（e-á）指牡蠣，「煎」指煎炒，是閩南飲食文化在台灣的代表性小吃，名稱源自台語。
+  taiwan_path: 台灣蚵仔煎以甘藷粉漿製作，加入蚵仔、雞蛋、蔬菜，淋上甜辣醬，是夜市必備小吃。
+  china_path: 福建、廣東沿海有類似食物「海蠣煎」，閩南語系地區保留類似稱呼。
+  fork_point: "~1895前"
+  fork_cause: 台語底層詞彙，閩南飲食文化的台灣在地化演變。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  蚵仔煎是台灣最具代表性的夜市小吃，也是外國人認識台灣飲食文化的入門首選，台語發音本身即成為台灣文化符號。
+
+sources:
+  - "農業部漁業署牡蠣養殖文化"
+
+added: "2026-03-30"
+updated: "2026-03-30"

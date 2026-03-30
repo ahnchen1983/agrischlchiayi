@@ -1,0 +1,31 @@
+id: jian-jian
+category: medical
+fork_type: B
+
+display:
+  taiwan: 健檢
+  china: 體檢 / 健檢
+
+english: health check-up / medical examination
+
+etymology:
+  origin: 台灣「健檢」為「健康檢查」縮寫，中國多稱「體檢」（體格檢查），兩者指相同的預防性健康檢查。
+  taiwan_path: 台灣全民健保提供免費成人預防保健（成人健檢）和癌症篩檢，「做健檢」是台灣中高齡族群的重要健康管理行為，企業健檢也是台灣職場福利的標配。
+  china_path: 中國「體檢」廣泛使用，包含入學、入職、婚前體檢等場合，「體檢中心」是獨立的醫療機構類型。
+  fork_point: "~1990s"
+  fork_cause: 台灣以「健檢」強調健康維護面向，中國以「體檢」強調體格檢查程序。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣全民健保提供免費成人健檢，「定期做健檢」是台灣健康意識提升的重要指標，也是健康保險文化的核心推廣內容。
+
+sources:
+  - "衛生福利部成人預防保健服務計畫"
+
+added: "2026-03-30"
+updated: "2026-03-30"

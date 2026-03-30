@@ -1,0 +1,31 @@
+id: gua-hao-fei
+category: medical
+fork_type: B
+
+display:
+  taiwan: 掛號費
+  china: 掛號費 / 挂号费（簡）
+
+english: registration fee (medical)
+
+etymology:
+  origin: 「掛號」指在醫院登記就診，「費」指費用，兩岸用詞相同（繁簡字差異），但台灣全民健保制度下掛號費政策獨具特色。
+  taiwan_path: 台灣在全民健保制度下，掛號費相對低廉（基層診所約150-300元），全民健保大幅降低就醫門檻，「掛號費」是台灣醫療日常最常見的費用詞彙。
+  china_path: 中國看診需支付掛號費，費用因醫院等級和地區而異，差距較大；未有全國統一健保制度，費用負擔相對較重。
+  fork_point: "~1995"
+  fork_cause: 台灣全民健保制度（1995年實施）使掛號費成為台灣醫療文化的重要語彙，具特殊政策含義。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣全民健保制度使「掛號費」成為全民熟悉的詞彙，低廉的掛號費是台灣全民健保的重要成就，也是台灣醫療體系對外的最大亮點。
+
+sources:
+  - "衛生福利部全民健康保險署費用規定"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: chu-fang-jian
+category: medical
+fork_type: B
+
+display:
+  taiwan: 處方箋
+  china: 处方笺（簡）/ 處方
+
+english: medical prescription
+
+etymology:
+  origin: 台灣使用「處方箋」（箋指單據），中國多說「處方」（省略「箋」），兩者指醫師開立的用藥指示。
+  taiwan_path: 台灣「處方箋」制度完善，慢性病患可取得「慢性病連續處方箋」，免去每次看診的不便，是台灣全民健保的重要創新制度。
+  china_path: 中國「處方」是醫療文件的標準用語，藥店憑處方可購買處方藥，制度架構類似。
+  fork_point: "~1990s"
+  fork_cause: 「箋 vs 無箋」的用字差異，台灣保留完整詞形。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「慢性病連續處方箋」是全民健保的重要便民措施，讓慢性病患者最多可取得90天的藥量，減少就醫次數。
+
+sources:
+  - "衛生福利部全民健康保險署處方箋制度說明"
+
+added: "2026-03-30"
+updated: "2026-03-30"

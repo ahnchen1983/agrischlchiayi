@@ -1,0 +1,31 @@
+id: men-zhen
+category: medical
+fork_type: F
+
+display:
+  taiwan: 門診
+  china: 门诊（簡）/ 門診
+
+english: outpatient clinic / outpatient visit
+
+etymology:
+  origin: 漢語固有詞，「門診」指在醫院或診所非住院的就診服務，兩岸用詞完全相同（繁簡字差異）。
+  taiwan_path: 台灣門診制度完善，在全民健保下，門診就醫費用由健保負擔大部分，「看門診」是台灣人最常見的就醫方式，大型醫院門診壅塞是常態。
+  china_path: 中國門診制度類似，三甲醫院門診壅塞問題嚴重，號源緊張，「搶號」現象普遍。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，台灣全民健保制度使門診就醫更普及。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣大型醫院門診壅塞是長期課題，「做大醫院的事，基層診所沒事做」的分級醫療失衡是台灣醫療政策的重要議題。
+
+sources:
+  - "衛生福利部醫療機構門診服務統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

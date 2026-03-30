@@ -1,0 +1,31 @@
+id: ma-la-guo
+category: food
+fork_type: F
+
+display:
+  taiwan: 麻辣鍋
+  china: 麻辣火鍋 / 重慶火鍋
+
+english: mala hot pot
+
+etymology:
+  origin: 「麻辣」指花椒（麻）與辣椒（辣）的雙重刺激，源自四川飲食文化，兩岸名稱相近，但在地化後形成不同食用文化。
+  taiwan_path: 台灣麻辣鍋以鴛鴦鍋（半麻辣半清湯）為特色，底湯融入台式滷味工藝，鼎王等是代表品牌。
+  china_path: 四川重慶為發源地，香料更濃烈，底料更複雜，是中國最具代表性的飲食文化之一。
+  fork_point: "~1970s"
+  fork_cause: 同源飲食在兩岸各自在地化，台灣版本融入台式滷味底湯工藝。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣麻辣鍋以鴛鴦鍋聞名，讓不吃辣者也能同桌享用，是台灣冬季聚餐首選，體現台灣飲食設計的包容性。
+
+sources:
+  - "食力foodNEXT台灣麻辣鍋市場調查"
+
+added: "2026-03-30"
+updated: "2026-03-30"

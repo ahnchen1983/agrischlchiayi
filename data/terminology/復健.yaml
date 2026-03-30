@@ -1,0 +1,31 @@
+id: fu-jian
+category: medical
+fork_type: B
+
+display:
+  taiwan: 復健
+  china: 康复（簡）/ 復健
+
+english: rehabilitation / physical therapy
+
+etymology:
+  origin: 台灣用「復健」（恢復健康），中國慣用「康復」（康健恢復），兩者指相同的醫療復原服務。
+  taiwan_path: 台灣「復健科」是醫院標準科別，全民健保涵蓋大部分復健費用，「做復健」是台灣傷病患者的常見日常用語。
+  china_path: 中國「康復」是官方醫療術語，「康復科」「康復訓練」是標準用語，「復健」較少使用。
+  fork_point: "~1950s"
+  fork_cause: 台灣延用「復健」（日語「リハビリ」影響），中國以「康復」為標準用語。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣復健醫學發展完善，全民健保對復健治療的補助使「做復健」成為台灣傷病患者的普及選項，也是台灣醫療軟實力的展現。
+
+sources:
+  - "台灣復健醫學會及衛生福利部復健醫療政策"
+
+added: "2026-03-30"
+updated: "2026-03-30"

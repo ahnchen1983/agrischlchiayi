@@ -1,0 +1,33 @@
+id: zhen-tou
+category: culture
+fork_type: A
+
+display:
+  taiwan: 陣頭
+  china: （無對應概念）
+
+english: Zhentou (Taiwanese folk religion procession troupe)
+
+etymology:
+  origin: 台灣民間宗教遊行中的表演陣容，源自閩南移民帶來的廟會文化，在台灣發展成獨特形式
+  taiwan_path: 陣頭包含八家將、官將首、龍陣、獅陣、宋江陣等多種類型，是廟會遊行的核心
+  china_path: 中國閩南地區有類似的民俗表演，但台灣「陣頭」已發展出台灣本土特色，為台灣特有詞彙
+  fork_point: "~清代"
+  fork_cause: 閩南移民文化在台灣300年演化後，形成有別於原鄉的台灣本土陣頭文化
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  陣頭是台灣廟會文化的靈魂，每年各地廟會中不可缺少。
+  2012年電影《陣頭》讓此文化受到廣泛關注，促進年輕世代對陣頭文化的認識與傳承。
+
+sources:
+  - "文化部：台灣民俗文化資產——陣頭"
+  - "教育部台灣閩南語常用詞辭典：陣頭"
+
+added: "2026-03-30"
+updated: "2026-03-30"

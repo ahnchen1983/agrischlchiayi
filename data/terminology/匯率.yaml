@@ -1,0 +1,31 @@
+id: hui-lu
+category: business
+fork_type: F
+
+display:
+  taiwan: 匯率
+  china: 汇率（簡）/ 匯率
+
+english: exchange rate
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異：匯/汇），指不同貨幣之間的兌換比率。
+  taiwan_path: 台灣「匯率」關係台幣（TWD）兌各主要貨幣的匯價，中央銀行「靜悄悄干預匯市」是台灣外匯政策的特色，台灣出口導向經濟使匯率成為重要的財經指標。
+  china_path: 中國「汇率」涉及人民幣兌美元等貨幣的匯價，人民幣匯率政策是中國重要的宏觀經濟工具，與台灣自由浮動匯率有所不同。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，台灣與中國的匯率政策和管制程度均有不同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣新台幣匯率是反映台灣出口競爭力和外資流入的重要指標，「台幣升值」對出口商的衝擊是台灣財經媒體的長期話題。
+
+sources:
+  - "中央銀行（台灣）外匯市場統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

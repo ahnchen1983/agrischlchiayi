@@ -1,0 +1,31 @@
+id: you-er-yuan
+category: education
+fork_type: B
+
+display:
+  taiwan: 幼兒園
+  china: 幼儿园（簡）/ 幼稚園（舊）
+
+english: kindergarten / preschool
+
+etymology:
+  origin: 台灣「幼兒園」為2012年《幼兒教育及照顧法》後的統一用語，整合原「幼稚園」（學前教育）與「托兒所」（保育）；中國稱「幼儿园」（簡體）。
+  taiwan_path: 台灣幼兒園提供2-6歲幼兒的學前教育，政府積極推動公立幼兒園擴增，「就讀公幼還是私幼」是台灣家長的重要決策。
+  china_path: 中國「幼儿园」是3-6歲的學前教育機構，「幼升小」（幼兒園升小學）的競爭在大城市相當激烈。
+  fork_point: "~2012"
+  fork_cause: 台灣2012年法規整合後統一使用「幼兒園」，取代舊稱「幼稚園」。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣幼兒園政策近年積極推動公立化，「搶公幼名額」是台灣年輕父母的共同焦慮，反映了台灣少子化背景下對教育資源公平性的高度重視。
+
+sources:
+  - "教育部幼兒教育及照顧法（2012）"
+
+added: "2026-03-30"
+updated: "2026-03-30"

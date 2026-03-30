@@ -1,0 +1,31 @@
+id: zhuo-ji
+category: tech
+fork_type: B
+
+display:
+  taiwan: 桌機
+  china: 台式机（簡）/ 台式電腦
+
+english: desktop computer
+
+etymology:
+  origin: 台灣口語稱桌上型電腦為「桌機」，中國稱「台式機」（台式電腦），兩者指相同的設備。
+  taiwan_path: 台灣「桌機」多用於電競、設計創作等高性能需求場景，「組桌機」（自行組裝桌上型電腦）是台灣科技宅的重要文化，「光華商場」是台灣桌機文化的聖地。
+  china_path: 中國「台式机」同樣廣泛使用，「組裝機」市場龐大，各大電腦城（北京中關村等）是桌機文化的聚集地。
+  fork_point: "~1990s"
+  fork_cause: 台灣以「桌機」口語縮寫，中國以「台式機」作為標準稱呼。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣光華商場是「組桌機」文化的重鎮，「桌機」象徵著台灣科技業的製造基礎，也是台灣電競文化的核心硬體支撐。
+
+sources:
+  - "台灣資訊工業策進會（資策會）電腦市場統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

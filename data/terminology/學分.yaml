@@ -1,0 +1,31 @@
+id: xue-fen
+category: education
+fork_type: F
+
+display:
+  taiwan: 學分
+  china: 学分（簡）/ 學分
+
+english: credit (academic)
+
+etymology:
+  origin: 漢語固有詞，「學分」指學習課程所獲得的學術信用單位，兩岸用詞完全相同（繁簡字差異）。
+  taiwan_path: 台灣大學學分制完善，「修學分」「補學分」「被當掉的學分」是台灣大學生的日常語彙，「學分」也衍生為台灣流行語（「這個人我修夠了」）。
+  china_path: 中國「学分」同樣是大學教育的核心計量單位，「績點」（GPA）制度與學分制並行。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，學分制度在兩岸高等教育中均普遍採用。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  「學分」在台灣衍生出幽默用語，「這門課我修夠了」比喻對某件事或某人已徹底了解，是台灣校園文化向日常語言滲透的典型案例。
+
+sources:
+  - "教育部大學課程規劃與學分規定"
+
+added: "2026-03-30"
+updated: "2026-03-30"

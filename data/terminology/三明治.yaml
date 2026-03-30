@@ -1,0 +1,31 @@
+id: san-ming-zhi
+category: food
+fork_type: F
+
+display:
+  taiwan: 三明治
+  china: 三明治
+
+english: sandwich
+
+etymology:
+  origin: 英語sandwich的音譯，兩岸音譯相同（繁簡字差異），但台灣發展出獨特的「台式三明治」。
+  taiwan_path: 台灣「台式三明治」以白吐司去邊、包生菜番茄火腿蛋為特色，是台灣早餐店的獨有發明。
+  china_path: 中國「三明治」多指西式夾心麵包，便利商店三明治是主要形態，台式三明治文化不普遍。
+  fork_point: "~1950s"
+  fork_cause: 同詞不同在地化形態，台灣早餐店發展出獨特的台式版本。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣早餐店的「台式三明治」以白土司去邊夾料為特色，是台灣早餐文化的獨特發明，是食物在地化的典型案例。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：三明治"
+
+added: "2026-03-30"
+updated: "2026-03-30"

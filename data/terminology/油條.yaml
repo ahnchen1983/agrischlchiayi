@@ -1,0 +1,31 @@
+id: you-tiao
+category: food
+fork_type: F
+
+display:
+  taiwan: 油條
+  china: 油条（簡）
+
+english: fried dough stick
+
+etymology:
+  origin: 漢語固有詞，以麵糰油炸製成的長條食物，兩岸叫法基本相同（繁簡字差異）。
+  taiwan_path: 台灣油條是早餐文化核心食材，「豆漿+油條」是台式早餐黃金搭配，「燒餅夾油條」是中式早餐特色組合。
+  china_path: 中國油條廣泛分布，各地早餐攤均有，配稀飯、豆漿食用，文化地位相同。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，飲食文化地位相近，台灣特色在於早餐店體制的在地化。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣中式早餐店是油條文化的核心場景，「燒餅夾油條」融合了南北中國移民的飲食傳統，是台灣多元文化匯聚的飲食見證。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：油條"
+
+added: "2026-03-30"
+updated: "2026-03-30"

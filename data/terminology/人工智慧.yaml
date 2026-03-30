@@ -1,0 +1,33 @@
+id: artificial-intelligence
+category: tech
+fork_type: B
+
+display:
+  taiwan: 人工智慧
+  china: 人工智能
+
+english: artificial intelligence (AI)
+
+etymology:
+  origin: 台灣譯「artificial intelligence」為「人工智慧」；中國譯為「人工智能」
+  taiwan_path: 台灣官方、學術、媒體均使用「人工智慧」，縮稱「AI」，政府有「AI行動計畫」
+  china_path: 中國使用「人工智能」，「智能」在科技語境為主流選擇，政府有「新一代人工智能發展規劃」
+  fork_point: "~1980s"
+  fork_cause: 「智慧」（wisdom，台灣偏好）vs「智能」（intelligence，中國偏好）的系統性翻譯差異
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: false
+  exceptions: "口語多直接說「AI」，「人工智慧」較書面"
+
+status: stable
+notes: |
+  「人工智慧」vs「人工智能」是兩岸科技用語最顯著差異之一，凸顯「智慧」/「智能」的系統性翻譯分歧。
+  此差異延伸至「智慧城市/智能城市」「智慧製造/智能製造」「智慧醫療/智能醫療」等大量詞彙。
+
+sources:
+  - "行政院：台灣AI行動計畫"
+  - "教育部國語辭典：人工智慧"
+
+added: "2026-03-30"
+updated: "2026-03-30"

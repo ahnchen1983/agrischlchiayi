@@ -1,0 +1,33 @@
+id: machine-learning
+category: tech
+fork_type: F
+
+display:
+  taiwan: 機器學習
+  china: 機器學習
+
+english: machine learning (ML)
+
+etymology:
+  origin: 「機器學習」為machine learning的漢譯，兩岸均使用相同詞彙
+  taiwan_path: 台灣學術界、業界均使用「機器學習」，為AI領域核心術語
+  china_path: 中國同樣使用「機器學習」，是AI/ML領域的標準術語
+  fork_point: "~2000s"
+  fork_cause: 技術術語兩岸採用相同翻譯，無分歧
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: "口語常縮稱「ML」"
+
+status: stable
+notes: |
+  「機器學習」是兩岸罕見的完全一致科技術語，無翻譯差異。
+  與「人工智慧/人工智能」不同，「機器學習」兩岸使用完全相同的中文翻譯。
+
+sources:
+  - "科技部：機器學習研究計畫"
+  - "教育部國語辭典：機器學習"
+
+added: "2026-03-30"
+updated: "2026-03-30"

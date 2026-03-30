@@ -1,0 +1,31 @@
+id: ji-jiu
+category: medical
+fork_type: F
+
+display:
+  taiwan: 急救
+  china: 急救
+
+english: first aid / emergency rescue
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異：救/救），指緊急搶救生命的醫療行動。
+  taiwan_path: 台灣「急救」文化重視公眾教育，CPR（心肺復甦術）訓練在學校和社區廣泛推廣，台灣AED（自動體外去顫器）設置密度是全球前段班。
+  china_path: 中國「急救」同樣使用，急救知識普及教育也在推進，「撥打120」是中國急救標準流程（台灣則是119）。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，急救號碼不同（台灣119，中國120）是重要的日常差異。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣AED設置密度在全球名列前茅，「見到AED會使用」是台灣公民急救意識的重要指標，也是台灣公共衛生政策的成功案例。
+
+sources:
+  - "消防署緊急救護統計及衛生福利部急救教育推廣"
+
+added: "2026-03-30"
+updated: "2026-03-30"

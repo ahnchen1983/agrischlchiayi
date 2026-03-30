@@ -1,0 +1,31 @@
+id: ji-pai
+category: food
+fork_type: D
+
+display:
+  taiwan: 雞排
+  china: 炸雞排
+
+english: Taiwanese fried chicken cutlet
+
+etymology:
+  origin: 台灣在地化的大塊油炸雞肉，以地瓜粉裹粉炸製，是台灣夜市飲食的代表性食物。
+  taiwan_path: 台灣雞排以超大尺寸（通常大於手掌）著稱，搭配胡椒鹽、九層塔調味，「豪大雞排」等品牌是台灣文化符號。
+  china_path: 中國也有炸雞排，但與台灣版本工藝、尺寸、調味均不同。
+  fork_point: "~1970s"
+  fork_cause: 台灣在地化飲食創作，以台式香料與超大尺寸形成獨特風格，是台客文化飲食符號。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣雞排以「比臉大」著稱於國際，是外國遊客到台灣夜市必嚐的代表性食物，也是台客美食的核心符號。
+
+sources:
+  - "觀光署台灣夜市美食地圖"
+
+added: "2026-03-30"
+updated: "2026-03-30"

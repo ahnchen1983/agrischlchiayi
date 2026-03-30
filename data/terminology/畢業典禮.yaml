@@ -1,0 +1,31 @@
+id: bi-ye-dian-li
+category: education
+fork_type: F
+
+display:
+  taiwan: 畢業典禮
+  china: 毕业典礼（簡）/ 畢業典禮
+
+english: graduation ceremony
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異），指完成學業的正式儀式。
+  taiwan_path: 台灣畢業典禮是重要的校園年度慶典，以學士服（方帽）為標誌，台灣高中與大學畢業典禮各有特色，「撥穗」（撥動學士帽穗）是台灣大學畢業的象徵動作。
+  china_path: 中國畢業典禮同樣舉辦，形式與台灣相近，「撥穗禮」也是中國大學畢業的慣例。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，儀式內容高度相似。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣大學畢業典禮的「撥穗禮」是親子共同的重要儀式，也是台灣教育重視儀式感的體現，近年各校也發展出各具特色的畢業慶典傳統。
+
+sources:
+  - "教育部學制及學位規定"
+
+added: "2026-03-30"
+updated: "2026-03-30"
