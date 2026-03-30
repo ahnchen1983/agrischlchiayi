@@ -1,11 +1,13 @@
 id: ultrasound
-taiwan: 超音波
-china: B超
-type: A
 category: medical
-origin: 台灣稱「超音波（檢查）」，中國稱「B超」（B型超聲波的簡稱）。B超是中國醫療系統的日常用語，台灣幾乎不使用。
-taiwan_path: 台灣醫療系統統一使用「超音波」，如「腹部超音波」「產科超音波」「心臟超音波」，民眾也以此稱呼。
-china_path: 中國簡稱「B超」（B-mode ultrasonography），醫院科室常標示「B超室」，是極為日常的醫療用語。
-fork_cause: 兩岸醫療體系各自發展簡稱，台灣取「超音波」物理學名詞，中國取「B超」技術型號縮寫。
-notes: |
-  「B超」的 B 指 Brightness mode（亮度模式），是超音波成像最常見的模式。台灣人聽到「B超」通常需要反應一下才知道是超音波。
+fork_type: A
+display:
+  taiwan: 超音波
+  china: B超
+etymology:
+  origin: 台灣稱「超音波（檢查）」，中國稱「B超」（B型超聲波的簡稱）。B超是中國醫療系統的日常用語，台灣幾乎不使用。
+  taiwan_path: 台灣醫療系統統一使用「超音波」，如「腹部超音波」「產科超音波」「心臟超音波」，民眾也以此稱呼。
+  china_path: 中國簡稱「B超」（B-mode ultrasonography），醫院科室常標示「B超室」，是極為日常的醫療用語。
+  fork_cause: 兩岸醫療體系各自發展簡稱，台灣取「超音波」物理學名詞，中國取「B超」技術型號縮寫。
+notes: 「B超」的 B 指 Brightness mode（亮度模式），是超音波成像最常見的模式。台灣人聽到「B超」通常需要反應一下才知道是超音波。
+updated: 2026-03-30
