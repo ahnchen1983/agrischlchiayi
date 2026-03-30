@@ -1,0 +1,31 @@
+id: wa-leng-zhi
+category: daily
+fork_type: F
+
+display:
+  taiwan: 瓦楞紙
+  china: 瓦楞纸（簡）
+
+english: corrugated cardboard
+
+etymology:
+  origin: 「瓦楞」形容波浪形紋路，兩岸用詞相同（繁簡字差異）。
+  taiwan_path: 台灣電商興起後瓦楞紙箱使用量大增，老人收集瓦楞紙變賣是台灣社會關懷議題。
+  china_path: 中國同樣使用「瓦楞紙」，電商物流大規模發展後需求暴增。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，概念完全相同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣街頭常見老人推車收集瓦楞紙變賣的景象，是台灣社會高齡貧窮議題的縮影，引發對資源回收政策的公共討論。
+
+sources:
+  - "環境部資源回收統計年報"
+
+added: "2026-03-30"
+updated: "2026-03-30"

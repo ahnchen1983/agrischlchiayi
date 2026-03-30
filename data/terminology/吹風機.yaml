@@ -1,0 +1,31 @@
+id: chui-feng-ji
+category: daily
+fork_type: B
+
+display:
+  taiwan: 吹風機
+  china: 電吹風 / 吹風機
+
+english: hair dryer
+
+etymology:
+  origin: 「吹風機」為直觀命名，中國早期常用「電吹風」強調電力，香港說「風筒」。
+  taiwan_path: 台灣「吹風機」完全固化，「吹頭髮」「吹乾」是日常固定搭配。
+  china_path: 中國年輕世代也說「吹風機」，但「電吹風」仍見於官方和年長世代。
+  fork_point: "~1970s"
+  fork_cause: 台灣固化簡潔的「吹風機」，中國保留「電」字強調電力設備屬性。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣美髮業極為發達，「吹風機」是理髮店核心設備，「幫你吹」是台灣理髮業的標準加值服務。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：吹風機"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: ban-ma-xian
+category: daily
+fork_type: B
+
+display:
+  taiwan: 斑馬線
+  china: 人行橫道 / 斑馬線
+
+english: zebra crossing
+
+etymology:
+  origin: 英語zebra crossing的形象譯詞，因黑白條紋如斑馬而得名。
+  taiwan_path: 台灣日常口語與法規一律說「斑馬線」，完全固化為標準用語。
+  china_path: 中國交通法規正式用語為「人行橫道」，日常口語則兩者並用。
+  fork_point: "~1960s"
+  fork_cause: 台灣以形象化口語詞固化，中國以行政法規用語為主。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣交通安全教育從小學起即使用「斑馬線」，此詞完全取代「人行橫道」，反映台灣語言偏好形象化表達。
+
+sources:
+  - "道路交通管理處罰條例（台灣）"
+
+added: "2026-03-30"
+updated: "2026-03-30"

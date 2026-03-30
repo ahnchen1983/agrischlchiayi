@@ -1,0 +1,31 @@
+id: leng-qi
+category: daily
+fork_type: B
+
+display:
+  taiwan: 冷氣
+  china: 空調
+
+english: air conditioner
+
+etymology:
+  origin: 「冷氣」直觀描述製冷設備；「空調」為「空氣調節」縮寫，更具技術性。
+  taiwan_path: 台灣日常一律說「冷氣」，「冷氣房」「冷氣費」是固定搭配，幾乎不說「空調」。
+  china_path: 中國日常主要說「空調」，1990年代後成為主流用語。
+  fork_point: "~1970s"
+  fork_cause: 台灣延續早期普及化用語「冷氣」，中國以技術詞彙「空調」取代。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣「冷氣文化」極為普遍，「這裡有沒有冷氣」是台灣人選擇餐廳的重要考量指標。
+
+sources:
+  - "台灣電力公司夏季用電統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

@@ -1,0 +1,31 @@
+id: hong-lu-deng
+category: daily
+fork_type: F
+
+display:
+  taiwan: 紅綠燈
+  china: 紅綠燈 / 交通信號燈
+
+english: traffic light
+
+etymology:
+  origin: 漢語固有詞，兩岸皆使用「紅綠燈」，中國官方也用「交通信號燈」。
+  taiwan_path: 台灣日常與官方均使用「紅綠燈」，台灣率先推廣行人倒數計時器。
+  china_path: 中國日常也說「紅綠燈」，官方標準用語為「交通信號燈」。
+  fork_point: "~1949"
+  fork_cause: 同詞不同正式化程度，台灣日常與正式通用。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣行人紅綠燈的倒數計時器設計是重要創新，「紅綠燈文化」反映了台灣城市交通的進化軌跡。
+
+sources:
+  - "道路交通安全規則（台灣交通部）"
+
+added: "2026-03-30"
+updated: "2026-03-30"

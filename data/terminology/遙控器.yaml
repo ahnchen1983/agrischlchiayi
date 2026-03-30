@@ -1,0 +1,31 @@
+id: yao-kong-qi
+category: daily
+fork_type: F
+
+display:
+  taiwan: 遙控器
+  china: 遥控器（簡）
+
+english: remote control
+
+etymology:
+  origin: 「遙控」為remote control的意譯，兩岸用詞完全相同（繁簡字差異）。
+  taiwan_path: 台灣「遙控器」已固化為標準用語，「電視遙控器」「冷氣遙控器」是家庭日常詞彙。
+  china_path: 中國同樣使用「遥控器」，「遙控器」為標準寫法。
+  fork_point: "~1980s"
+  fork_cause: 繁簡字差異，概念完全相同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  「遙控器在哪」是台灣家庭客廳的經典對話，「搶遙控器」也成為家庭關係的文化隱喻，象徵電視頻道選擇的家庭權力關係。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：遙控器"
+
+added: "2026-03-30"
+updated: "2026-03-30"

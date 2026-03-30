@@ -1,0 +1,31 @@
+id: bing-xiang
+category: daily
+fork_type: F
+
+display:
+  taiwan: 冰箱
+  china: 冰箱 / 冰柜（冷凍）
+
+english: refrigerator
+
+etymology:
+  origin: 漢語固有詞，兩岸皆使用「冰箱」，中國有時將冷凍展示櫃專稱「冰柜」。
+  taiwan_path: 台灣「冰箱」涵蓋冷藏與冷凍功能，便利商店文化中冰箱是核心設施。
+  china_path: 中國日常也說「冰箱」，「冰柜」特指冷凍展示櫃或臥式冰箱。
+  fork_point: "~1949"
+  fork_cause: 同詞不同使用範疇，細分程度有別。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣便利商店文化中，冰箱是核心設施，「7-11的冰箱」承載著台灣人對飲料、關東煮等日常消費的集體記憶。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：冰箱"
+
+added: "2026-03-30"
+updated: "2026-03-30"

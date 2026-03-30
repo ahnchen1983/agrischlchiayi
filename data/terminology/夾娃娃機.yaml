@@ -1,0 +1,31 @@
+id: jia-wa-wa-ji
+category: daily
+fork_type: B
+
+display:
+  taiwan: 夾娃娃機
+  china: 抓娃娃機
+
+english: claw machine
+
+etymology:
+  origin: 日本UFOキャッチャー引入，台灣用「夾」，中國用「抓」。
+  taiwan_path: 1990年代引入，至2010年代夾娃娃機店在台灣遍地開花，成為獨特街頭文化。
+  china_path: 中國以「抓」描述爪型機器動作，「抓娃娃機」廣泛使用。
+  fork_point: "~1990s"
+  fork_cause: 動詞選字差異（夾 vs 抓），反映語言習慣分流。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣夾娃娃機產業極為發達，全台無人夾娃娃機店曾超過一萬家，是台灣獨特的都市消費文化符號。
+
+sources:
+  - "經濟部商業司特殊娛樂業統計"
+
+added: "2026-03-30"
+updated: "2026-03-30"

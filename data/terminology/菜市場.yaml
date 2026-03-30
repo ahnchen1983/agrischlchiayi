@@ -1,0 +1,31 @@
+id: cai-shi-chang
+category: daily
+fork_type: D
+
+display:
+  taiwan: 菜市場
+  china: 集貿市場 / 菜市場
+
+english: traditional wet market
+
+etymology:
+  origin: 漢語固有詞，台灣保留日常口語「菜市場」，中國官方傾向「集貿市場」。
+  taiwan_path: 日治時期格局延續，菜市場是台灣庶民生活核心場域，與超市並存。
+  china_path: 中國官方用「農貿市場」或「集貿市場」，日常也說菜市場。
+  fork_point: "~1950s"
+  fork_cause: 台灣以日常口語固化，中國以行政術語規範。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣菜市場不僅是購物場所，更是鄰里社交核心。「菜市場名」（如俊宏、淑芬）也成為台灣特有文化現象。
+
+sources:
+  - "農業部傳統市場管理辦法"
+
+added: "2026-03-30"
+updated: "2026-03-30"

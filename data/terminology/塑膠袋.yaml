@@ -1,0 +1,31 @@
+id: su-jiao-dai
+category: daily
+fork_type: B
+
+display:
+  taiwan: 塑膠袋
+  china: 塑料袋
+
+english: plastic bag
+
+etymology:
+  origin: 台灣用「塑膠」（日語影響），中國用「塑料」（純中文意譯）。
+  taiwan_path: 台灣2002年起限塑，「塑膠袋收費」「自備環保袋」是台灣環保意識里程碑。
+  china_path: 中國使用「塑料袋」，亦有限塑政策，推行時間與力度不同。
+  fork_point: "~1960s"
+  fork_cause: 「塑膠 vs 塑料」的材質命名差異，反映日語影響（台灣）vs 純中文意譯（中國）。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣是全球最早推行限塑政策的地區之一，「要袋子嗎？」成為台灣商店標準問語，「自備購物袋」是台灣環保文化的核心實踐。
+
+sources:
+  - "環境部限制塑膠袋使用政策說明"
+
+added: "2026-03-30"
+updated: "2026-03-30"

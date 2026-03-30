@@ -1,0 +1,31 @@
+id: yao-shi-quan
+category: daily
+fork_type: B
+
+display:
+  taiwan: 鑰匙圈
+  china: 鑰匙扣 / 鑰匙鏈
+
+english: keychain
+
+etymology:
+  origin: 台灣以「圈」（環形）描述，中國以「扣」或「鏈」描述同一物品，命名側重不同物理特徵。
+  taiwan_path: 台灣「鑰匙圈」完全固化，觀光景點紀念品鑰匙圈是重要伴手禮。
+  china_path: 中國「鑰匙扣」更為常用，「鑰匙鏈」也有使用。
+  fork_point: "~1949"
+  fork_cause: 同一物品的不同部位命名（圈/扣），反映語言習慣差異。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣各大景點均販售「鑰匙圈」紀念品，是台灣觀光文化的重要商品類別，造型涵蓋廟宇文物到台灣特色食物。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：鑰匙圈"
+
+added: "2026-03-30"
+updated: "2026-03-30"

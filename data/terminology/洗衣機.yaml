@@ -1,0 +1,31 @@
+id: xi-yi-ji
+category: daily
+fork_type: F
+
+display:
+  taiwan: 洗衣機
+  china: 洗衣机（簡）
+
+english: washing machine
+
+etymology:
+  origin: 漢語固有詞，兩岸用詞完全相同（繁簡字差異）。
+  taiwan_path: 台灣投幣式洗衣機在都市租屋族中常見；「洗烘脫」是台灣廣告常用詞。
+  china_path: 中國同樣使用「洗衣機」，近年滾筒式洗衣機也日趨普及。
+  fork_point: "~1949"
+  fork_cause: 繁簡字差異，概念完全相同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣城市租屋族大量依賴投幣式洗衣機，「投幣洗衣房」是台灣都市生活基礎設施，反映台灣高房租、小坪數的都市生活現實。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：洗衣機"
+
+added: "2026-03-30"
+updated: "2026-03-30"

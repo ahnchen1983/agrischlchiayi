@@ -1,0 +1,31 @@
+id: wei-bo-lu
+category: daily
+fork_type: F
+
+display:
+  taiwan: 微波爐
+  china: 微波炉（簡）
+
+english: microwave oven
+
+etymology:
+  origin: 「微波」為microwave的直譯，兩岸用詞完全相同（繁簡字差異）。
+  taiwan_path: 台灣便利商店提供免費微波加熱服務，「微波一下」成為日常動詞。
+  china_path: 中國同樣使用「微波炉」，用法相同。
+  fork_point: "~1980s"
+  fork_cause: 繁簡字差異，概念完全相同。
+
+usage:
+  taiwan_formal: true
+  taiwan_casual: true
+  exceptions: ""
+
+status: stable
+notes: |
+  台灣便利商店提供免費微波加熱服務，讓「微波」成為台灣消費文化的日常動詞，「幫我微波一下」是便利商店標準對話。
+
+sources:
+  - "教育部《重編國語辭典修訂本》：微波爐"
+
+added: "2026-03-30"
+updated: "2026-03-30"
