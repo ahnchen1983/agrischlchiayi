@@ -1,0 +1,10 @@
+id: waiter
+category: daily
+fork_type: B
+display:
+  taiwan: 服務生
+  china: 服務員
+notes: 台灣說「服務生」，中國說「服務員」
+sources:
+- 台灣餐飲業常用術語
+added: '2026-03-30'

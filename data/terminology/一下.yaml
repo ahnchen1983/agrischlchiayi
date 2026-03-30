@@ -1,0 +1,10 @@
+id: a-moment
+category: daily
+fork_type: B
+display:
+  taiwan: 一下
+  china: 一會兒
+notes: 台灣口語「一下」vs 中國「一會兒」（短暫時間）
+sources:
+- 兩岸口語差異
+added: '2026-03-30'

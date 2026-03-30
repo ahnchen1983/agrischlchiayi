@@ -1,0 +1,10 @@
+id: awesome
+category: daily
+fork_type: B
+display:
+  taiwan: 讚
+  china: 贊
+notes: 中國「贊」= 台灣「讚」（稱讚/很棒之意）。台灣用「讚」字，中國簡化為「赞」繁體回轉為「贊」
+sources:
+- 教育部國語辭典
+added: '2026-03-30'

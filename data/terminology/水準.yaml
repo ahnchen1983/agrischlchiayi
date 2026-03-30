@@ -1,0 +1,11 @@
+id: level-standard
+category: daily
+fork_type: B
+display:
+  taiwan: 水準
+  china: 水平
+notes: 台灣「水準」= 中國「水平」（程度/標準之意）
+sources:
+- 教育部國語辭典
+- 兩岸用語對照
+added: '2026-03-30'
