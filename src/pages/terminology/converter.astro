@@ -324,27 +324,48 @@ const rulesJSON = JSON.stringify(rules);
         text = openccConverter(text);
       }
 
-      // Step 2: Apply terminology replacements (rules sorted by source.length desc)
-      // Use a marker system to avoid double-replacing
+      // Step 2: Find all match positions FIRST (before any replacement)
+      // This gives us accurate character positions for the source highlight overlay
+      const allRegions = []; // { start, end, ruleIdx }
+      const used = new Array(text.length).fill(false);
+      const matchedRules = []; // { rule, count }
+
+      for (let ri = 0; ri < RULES.length; ri++) {
+        const rule = RULES[ri];
+        if (!text.includes(rule.source)) continue;
+        let count = 0;
+        let idx = 0;
+        while ((idx = text.indexOf(rule.source, idx)) !== -1) {
+          let overlap = false;
+          for (let i = idx; i < idx + rule.source.length; i++) {
+            if (used[i]) { overlap = true; break; }
+          }
+          if (!overlap) {
+            allRegions.push({ start: idx, end: idx + rule.source.length, ruleIdx: ri });
+            for (let i = idx; i < idx + rule.source.length; i++) used[i] = true;
+            count++;
+          }
+          idx += rule.source.length;
+        }
+        if (count > 0) {
+          matches.push({ ...rule, count });
+          matchedRules.push({ rule, count });
+        }
+      }
+
+      // Step 3: Apply replacements using marker system
       const placeholders = [];
       let markerIdx = 0;
 
-      for (const rule of RULES) {
-        if (text.includes(rule.source)) {
-          const marker = `\x00${markerIdx}\x00`;
-          const escapedSource = rule.source.replace(
-            /[.*+?^${}()|[\]\\]/g,
-            '\\$&',
-          );
-          const count = (text.match(new RegExp(escapedSource, 'g')) || [])
-            .length;
-          if (count > 0) {
-            matches.push({ ...rule, count });
-            text = text.replace(new RegExp(escapedSource, 'g'), marker);
-            placeholders.push({ marker, target: rule.target });
-            markerIdx++;
-          }
-        }
+      for (const { rule } of matchedRules) {
+        const marker = `\x00${markerIdx}\x00`;
+        const escapedSource = rule.source.replace(
+          /[.*+?^${}()|[\]\\]/g,
+          '\\$&',
+        );
+        text = text.replace(new RegExp(escapedSource, 'g'), marker);
+        placeholders.push({ marker, target: rule.target });
+        markerIdx++;
       }
 
       // Escape HTML in the modified text
@@ -370,60 +391,27 @@ const rulesJSON = JSON.stringify(rules);
         escaped = escaped.split(marker).join(html);
       }
 
-      return { html: escaped, matches };
+      // Sort regions for sourceHtml building
+      allRegions.sort((a, b) => a.start - b.start);
+
+      return { html: escaped, matches, sourceRegions: allRegions };
     }
 
-    // ── Highlight source (original) text — mark matched china terms ─────────
-    // Strategy: find match positions in the OpenCC-converted text,
-    // then apply highlights at the same character positions in the original text.
-    // Chinese simplified→traditional is 1:1 character mapping, so positions align.
-    function highlightSource(input, matches) {
-      if (!input.trim() || matches.length === 0) return '';
+    // ── Build source highlight HTML using pre-computed regions ───────────────
+    // Regions are character positions in the OpenCC-converted text.
+    // Since cn→tw is 1:1 char mapping, same positions work on the original input.
+    function buildSourceHtml(input, sourceRegions) {
+      if (!input || sourceRegions.length === 0) return '';
 
-      // Step 1: Get the OpenCC-converted text (same as convertText does)
-      let converted = input;
-      if (openccConverter) {
-        converted = openccConverter(input);
-      }
-
-      // Step 2: Find all match positions in the converted text
-      // (same order as convertText: longest first, no overlaps)
-      const regions = []; // { start, end } in character positions
-      let working = converted;
-      const used = new Array(converted.length).fill(false);
-
-      for (const m of matches) {
-        let idx = 0;
-        while ((idx = working.indexOf(m.source, idx)) !== -1) {
-          // Check no overlap with already-marked regions
-          let overlap = false;
-          for (let i = idx; i < idx + m.source.length; i++) {
-            if (used[i]) { overlap = true; break; }
-          }
-          if (!overlap) {
-            regions.push({ start: idx, end: idx + m.source.length });
-            for (let i = idx; i < idx + m.source.length; i++) used[i] = true;
-          }
-          idx += m.source.length;
-        }
-      }
-
-      // Step 3: Sort regions by position
-      regions.sort((a, b) => a.start - b.start);
-
-      // Step 4: Build HTML from the ORIGINAL input using region positions
       let html = '';
       let pos = 0;
-      for (const r of regions) {
-        // Text before this match (from original)
+      for (const r of sourceRegions) {
         html += escHtml(input.substring(pos, r.start));
-        // The matched portion (from original, same positions)
         html += `<mark class="source-word">${escHtml(input.substring(r.start, r.end))}</mark>`;
         pos = r.end;
       }
       html += escHtml(input.substring(pos));
       html = html.replace(/\n/g, '<br>');
-
       return html;
     }
 
@@ -558,7 +546,7 @@ const rulesJSON = JSON.stringify(rules);
         // If still loading, proceed anyway (may use plain term replacement)
       }
 
-      const { html, matches } = convertText(input);
+      const { html, matches, sourceRegions } = convertText(input);
       outputEl.innerHTML =
         html ||
         '<span class="no-change">✅ 未偵測到中國用語，文字已符合台灣習慣。</span>';
@@ -567,7 +555,7 @@ const rulesJSON = JSON.stringify(rules);
       btnCopy.disabled = false;
 
       // Highlight matched china terms in the input overlay
-      inputHighlightEl.innerHTML = highlightSource(input, matches);
+      inputHighlightEl.innerHTML = buildSourceHtml(input, sourceRegions);
 
       // Render analysis
       const { before, after } = computeIndex(input, matches);
