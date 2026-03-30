@@ -1,0 +1,696 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readdir, readFile } from 'fs/promises';
+import { resolve, join } from 'path';
+import { parse as parseYaml } from 'yaml';
+
+// ── Build-time: generate conversion rules from YAML files ─────────────────────
+interface TermEntry {
+  id: string;
+  category?: string;
+  subcategory?: string;
+  fork_type?: string;
+  display: {
+    taiwan: string;
+    china?: string;
+    hongkong?: string;
+  };
+  notes?: string;
+  sources?: string[];
+}
+
+interface ConversionRule {
+  source: string;
+  target: string;
+  forkType: string;
+  category: string;
+  id: string;
+}
+
+const termDir = resolve(process.cwd(), 'data/terminology');
+const files = await readdir(termDir);
+const rules: ConversionRule[] = [];
+
+for (const file of files) {
+  if (!file.endsWith('.yaml') || file.startsWith('_')) continue;
+  const raw = await readFile(join(termDir, file), 'utf-8');
+  try {
+    const d = parseYaml(raw) as TermEntry;
+    if (
+      d &&
+      d.display &&
+      d.display.china &&
+      d.display.taiwan &&
+      d.display.china !== d.display.taiwan
+    ) {
+      rules.push({
+        source: d.display.china,
+        target: d.display.taiwan,
+        forkType: d.fork_type || '',
+        category: d.category || '',
+        id: d.id || file.replace('.yaml', ''),
+      });
+    }
+  } catch {
+    // skip malformed
+  }
+}
+
+// Sort by source length descending (longer matches first to avoid partial replacement)
+rules.sort((a, b) => b.source.length - a.source.length);
+
+const rulesJSON = JSON.stringify(rules);
+---
+
+<Layout title="🔄 用語轉換器 — Taiwan.md">
+  <main class="conv-page">
+    <!-- ── Header ──────────────────────────────────────────────────── -->
+    <div class="conv-header">
+      <div class="header-inner">
+        <h1>
+          🔄 用語轉換器 <span class="header-en">Terminology Converter</span>
+        </h1>
+        <p class="header-tagline">
+          把中國用語轉換為台灣用語——不只是字形，是語感。
+        </p>
+        <div class="header-bottom">
+          <div class="header-stats">
+            <span class="stat"><strong>{rules.length}</strong> 條轉換規則</span>
+          </div>
+          <div class="header-links">
+            <a href="/terminology" class="fork-link-btn"> ← 回到詞庫 </a>
+            <a href="/fork-graph" class="fork-link-btn"> 🌿 語言分支樹 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Main converter area ─────────────────────────────────────── -->
+    <div class="conv-body">
+      <div class="conv-inner">
+        <!-- Two-column editor -->
+        <div class="editor-grid">
+          <div class="editor-panel">
+            <div class="panel-label">輸入文字</div>
+            <textarea
+              id="input-text"
+              class="editor-textarea"
+              placeholder="在這裡貼入文字…
+
+例如：這個軟件視頻很有用，可以通過下載來使用。"
+              spellcheck="false"></textarea>
+          </div>
+
+          <div class="editor-panel">
+            <div class="panel-label">轉換結果</div>
+            <div id="output-text" class="editor-output" aria-live="polite">
+              <span class="output-placeholder"
+                >轉換結果會顯示在這裡，<mark class="sample-mark">替換的詞</mark> 會被高亮標記。</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-bar">
+          <button id="btn-convert" class="btn btn-primary">🔄 轉換</button>
+          <button id="btn-clear" class="btn btn-secondary">✕ 清除</button>
+          <button id="btn-copy" class="btn btn-secondary" disabled
+            >📋 複製結果</button
+          >
+        </div>
+
+        <!-- Analysis report -->
+        <div id="analysis" class="analysis-box" hidden>
+          <div class="analysis-header">
+            <span id="analysis-title" class="analysis-title"></span>
+          </div>
+
+          <div id="must-change" class="analysis-section" hidden>
+            <div class="section-label label-red">🔴 必換（A / B 類）</div>
+            <ul id="must-list" class="change-list"></ul>
+          </div>
+
+          <div id="suggest-change" class="analysis-section" hidden>
+            <div class="section-label label-yellow">🟡 建議（其他類）</div>
+            <ul id="suggest-list" class="change-list"></ul>
+          </div>
+
+          <div class="taiwan-index-row">
+            <span class="index-label">📊 台灣化指數</span>
+            <span id="index-before" class="index-val before"></span>
+            <span class="index-arrow">→</span>
+            <span id="index-after" class="index-val after"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script define:vars={{ rulesJSON }}>
+    // ── Parse rules injected from build time ────────────────────────────────
+    const RULES = JSON.parse(rulesJSON);
+    const GITHUB_BASE =
+      'https://github.com/frank890417/taiwan-md/blob/main/data/terminology/';
+
+    // ── DOM refs ────────────────────────────────────────────────────────────
+    const inputEl = document.getElementById('input-text');
+    const outputEl = document.getElementById('output-text');
+    const btnConvert = document.getElementById('btn-convert');
+    const btnClear = document.getElementById('btn-clear');
+    const btnCopy = document.getElementById('btn-copy');
+    const analysisEl = document.getElementById('analysis');
+    const analysisTitleEl = document.getElementById('analysis-title');
+    const mustSection = document.getElementById('must-change');
+    const mustList = document.getElementById('must-list');
+    const suggestSection = document.getElementById('suggest-change');
+    const suggestList = document.getElementById('suggest-list');
+    const indexBefore = document.getElementById('index-before');
+    const indexAfter = document.getElementById('index-after');
+
+    // ── Core convert function ───────────────────────────────────────────────
+    function convertText(input) {
+      if (!input.trim()) return { html: '', matches: [] };
+
+      const matches = [];
+      let text = input;
+
+      // Apply replacements (rules already sorted by source.length desc)
+      // Use a marker system to avoid double-replacing
+      const placeholders = [];
+      let markerIdx = 0;
+
+      for (const rule of RULES) {
+        if (text.includes(rule.source)) {
+          const marker = `\x00${markerIdx}\x00`;
+          const escapedSource = rule.source.replace(
+            /[.*+?^${}()|[\]\\]/g,
+            '\\$&',
+          );
+          const count = (text.match(new RegExp(escapedSource, 'g')) || [])
+            .length;
+          if (count > 0) {
+            matches.push({ ...rule, count });
+            text = text.replace(new RegExp(escapedSource, 'g'), marker);
+            placeholders.push({ marker, target: rule.target });
+            markerIdx++;
+          }
+        }
+      }
+
+      // Escape HTML in the modified text
+      let escaped = text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>');
+
+      // Replace markers with highlighted spans
+      for (const { marker, target } of placeholders) {
+        const escapedMarker = marker.replace(/\x00/g, '\\x00');
+        // Use a regex to replace the null-byte markers
+        const safeMarker = marker.replace(/\x00(\d+)\x00/, '\x00$1\x00');
+        escaped = escaped
+          .split(marker)
+          .join(`<mark class="replaced-word">${target}</mark>`);
+      }
+
+      return { html: escaped, matches };
+    }
+
+    // ── Compute Taiwan-ization index ────────────────────────────────────────
+    function computeIndex(input, matches) {
+      if (!input.trim()) return { before: 100, after: 100 };
+      const totalChars = input.replace(/\s/g, '').length || 1;
+      let chinaChars = 0;
+      for (const m of matches) {
+        chinaChars += m.source.length * m.count;
+      }
+      const before = Math.round(
+        Math.max(0, ((totalChars - chinaChars) / totalChars) * 100),
+      );
+      return { before, after: 100 };
+    }
+
+    // ── Render analysis report ──────────────────────────────────────────────
+    function renderAnalysis(matches) {
+      if (matches.length === 0) {
+        analysisEl.hidden = true;
+        return;
+      }
+
+      analysisEl.hidden = false;
+      analysisTitleEl.textContent = `偵測到 ${matches.length} 個中國用語`;
+
+      const mustMatches = matches.filter(
+        (m) => m.forkType === 'A' || m.forkType === 'B',
+      );
+      const suggestMatches = matches.filter(
+        (m) => m.forkType !== 'A' && m.forkType !== 'B',
+      );
+
+      // Must-change
+      if (mustMatches.length > 0) {
+        mustSection.hidden = false;
+        mustList.innerHTML = mustMatches
+          .map(
+            (m) => `
+          <li class="change-item">
+            <span class="change-source">${escHtml(m.source)}</span>
+            <span class="change-arrow">→</span>
+            <span class="change-target">${escHtml(m.target)}</span>
+            ${m.count > 1 ? `<span class="change-count">×${m.count}</span>` : ''}
+            <a href="${GITHUB_BASE}${encodeURIComponent(m.id)}.yaml" target="_blank" rel="noopener" class="github-link" title="查看詞源">🔗</a>
+          </li>
+        `,
+          )
+          .join('');
+      } else {
+        mustSection.hidden = true;
+      }
+
+      // Suggest
+      if (suggestMatches.length > 0) {
+        suggestSection.hidden = false;
+        suggestList.innerHTML = suggestMatches
+          .map(
+            (m) => `
+          <li class="change-item">
+            <span class="change-source">${escHtml(m.source)}</span>
+            <span class="change-arrow">→</span>
+            <span class="change-target">${escHtml(m.target)}</span>
+            ${m.count > 1 ? `<span class="change-count">×${m.count}</span>` : ''}
+            <a href="${GITHUB_BASE}${encodeURIComponent(m.id)}.yaml" target="_blank" rel="noopener" class="github-link" title="查看詞源">🔗</a>
+          </li>
+        `,
+          )
+          .join('');
+      } else {
+        suggestSection.hidden = true;
+      }
+    }
+
+    function escHtml(s) {
+      return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    // ── Main run ────────────────────────────────────────────────────────────
+    let lastHtml = '';
+
+    function run() {
+      const input = inputEl.value;
+      if (!input.trim()) {
+        outputEl.innerHTML =
+          '<span class="output-placeholder">轉換結果會顯示在這裡，<mark class="sample-mark">替換的詞</mark> 會被高亮標記。</span>';
+        analysisEl.hidden = true;
+        btnCopy.disabled = true;
+        lastHtml = '';
+        return;
+      }
+
+      const { html, matches } = convertText(input);
+      outputEl.innerHTML =
+        html ||
+        '<span class="no-change">✅ 未偵測到中國用語，文字已符合台灣習慣。</span>';
+      lastHtml =
+        matches.length > 0 ? outputEl.innerText || outputEl.textContent : input;
+      btnCopy.disabled = false;
+
+      // Render analysis
+      const { before, after } = computeIndex(input, matches);
+      renderAnalysis(matches);
+      if (matches.length > 0) {
+        indexBefore.textContent = `${before}%`;
+        indexAfter.textContent = `${after}%`;
+      }
+    }
+
+    // ── Event listeners ─────────────────────────────────────────────────────
+    inputEl.addEventListener('input', run);
+    btnConvert.addEventListener('click', run);
+
+    btnClear.addEventListener('click', () => {
+      inputEl.value = '';
+      run();
+      inputEl.focus();
+    });
+
+    btnCopy.addEventListener('click', async () => {
+      try {
+        // Copy plain text (strip HTML tags)
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = outputEl.innerHTML;
+        const plain = tempDiv.innerText || tempDiv.textContent || '';
+        await navigator.clipboard.writeText(plain);
+        btnCopy.textContent = '✅ 已複製';
+        setTimeout(() => {
+          btnCopy.textContent = '📋 複製結果';
+        }, 1800);
+      } catch {
+        btnCopy.textContent = '❌ 複製失敗';
+        setTimeout(() => {
+          btnCopy.textContent = '📋 複製結果';
+        }, 1800);
+      }
+    });
+  </script>
+</Layout>
+
+<style>
+  /* ── Page shell ───────────────────────────────────────────────────── */
+  .conv-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+  }
+
+  /* ── Header ───────────────────────────────────────────────────────── */
+  .conv-header {
+    background: #1a1a2e;
+    color: white;
+    padding: 2.5rem var(--space-page-x, 2rem) 2rem;
+  }
+  .header-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .conv-header h1 {
+    font-family: var(--font-editorial, Georgia, serif);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .header-en {
+    font-size: 0.62em;
+    font-weight: 400;
+    opacity: 0.65;
+    display: block;
+    margin-top: 0.2em;
+    letter-spacing: 0.04em;
+    font-family: var(--font-ui, system-ui, sans-serif);
+  }
+  .header-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    opacity: 0.82;
+    margin: 0 0 1.25rem;
+    max-width: 42rem;
+    line-height: 1.65;
+  }
+  .header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .header-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  .stat strong {
+    opacity: 1;
+    color: white;
+  }
+  .header-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .fork-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
+    white-space: nowrap;
+  }
+  .fork-link-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+  }
+
+  /* ── Body ─────────────────────────────────────────────────────────── */
+  .conv-body {
+    flex: 1;
+    padding: 2rem var(--space-page-x, 2rem);
+  }
+  .conv-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* ── Editor grid (two columns) ─────────────────────────────────── */
+  .editor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  @media (max-width: 680px) {
+    .editor-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .editor-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .panel-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #555;
+  }
+  .editor-textarea {
+    width: 100%;
+    min-height: 240px;
+    padding: 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-ui, system-ui, sans-serif);
+    line-height: 1.7;
+    resize: vertical;
+    background: white;
+    transition: border-color 0.15s;
+    box-sizing: border-box;
+  }
+  .editor-textarea:focus {
+    outline: none;
+    border-color: #1a1a2e;
+    box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+  }
+  .editor-output {
+    min-height: 240px;
+    padding: 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-ui, system-ui, sans-serif);
+    line-height: 1.7;
+    background: white;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .output-placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  .no-change {
+    color: #27ae60;
+    font-style: italic;
+  }
+
+  /* Mark styles */
+  :global(mark.replaced-word) {
+    background: #fff0a0;
+    color: #1a1a2e;
+    border-radius: 3px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  :global(mark.sample-mark) {
+    background: #fff0a0;
+    color: #1a1a2e;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+
+  /* ── Action bar ────────────────────────────────────────────────── */
+  .action-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 0.55rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition:
+      background 0.15s,
+      color 0.15s,
+      border-color 0.15s,
+      opacity 0.15s;
+  }
+  .btn-primary {
+    background: #1a1a2e;
+    color: white;
+    border-color: #1a1a2e;
+  }
+  .btn-primary:hover {
+    background: #2d2d50;
+    border-color: #2d2d50;
+  }
+  .btn-secondary {
+    background: white;
+    color: #333;
+    border-color: #ccc;
+  }
+  .btn-secondary:hover {
+    background: #f3f3f3;
+    border-color: #aaa;
+  }
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* ── Analysis box ──────────────────────────────────────────────── */
+  .analysis-box {
+    background: white;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .analysis-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.75rem;
+  }
+  .analysis-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .analysis-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .section-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+  .label-red {
+    color: #c0392b;
+  }
+  .label-yellow {
+    color: #d68910;
+  }
+
+  .change-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .change-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.93rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    background: #fafafa;
+    flex-wrap: wrap;
+  }
+  .change-source {
+    font-weight: 700;
+    color: #c0392b;
+    background: #fdecea;
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  .change-arrow {
+    color: #888;
+  }
+  .change-target {
+    font-weight: 700;
+    color: #27ae60;
+    background: #eafaf1;
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  .change-count {
+    font-size: 0.78rem;
+    color: #888;
+  }
+  .github-link {
+    margin-left: auto;
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+  }
+  .github-link:hover {
+    opacity: 1;
+  }
+
+  /* ── Taiwan index row ──────────────────────────────────────────── */
+  .taiwan-index-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+  }
+  .index-label {
+    font-weight: 700;
+    color: #555;
+  }
+  .index-val {
+    font-weight: 800;
+    font-size: 1.05rem;
+  }
+  .index-val.before {
+    color: #c0392b;
+  }
+  .index-val.after {
+    color: #27ae60;
+  }
+  .index-arrow {
+    color: #888;
+  }
+</style>

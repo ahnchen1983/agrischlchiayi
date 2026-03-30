@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { readdir, readFile } from 'fs/promises';
 import { resolve, join } from 'path';
 
@@ -57,14 +57,17 @@ for (const file of files) {
 terms.sort((a, b) => {
   const ft = (a.fork_type || 'Z').localeCompare(b.fork_type || 'Z');
   if (ft !== 0) return ft;
-  return (a.display?.taiwan || '').localeCompare(b.display?.taiwan || '', 'zh-TW');
+  return (a.display?.taiwan || '').localeCompare(
+    b.display?.taiwan || '',
+    'zh-TW',
+  );
 });
 
 const totalTerms = terms.length;
 const totalSources = (() => {
   const seen = new Set<string>();
   for (const t of terms) {
-    for (const s of (t.sources || [])) if (s) seen.add(s.trim());
+    for (const s of t.sources || []) if (s) seen.add(s.trim());
   }
   return seen.size;
 })();
@@ -111,7 +114,8 @@ const cards: CardData[] = terms.map((t) => {
   const forkColor = forkTypeColors[t.fork_type] || '#999';
   const forkLabel = forkTypeLabels[t.fork_type] || t.fork_type;
   const notesClean = (t.notes || '').split('\n').join(' ').trim();
-  const notesShort = notesClean.length > 90 ? notesClean.slice(0, 90) + '…' : notesClean;
+  const notesShort =
+    notesClean.length > 90 ? notesClean.slice(0, 90) + '…' : notesClean;
   return {
     fork_type: t.fork_type || '',
     taiwan: t.display?.taiwan || '',
@@ -146,7 +150,6 @@ const subcategories = Object.entries(subcatCounts)
 
 // Serialize for client-side JS
 const termsJSON = JSON.stringify(terms);
-
 ---
 
 <Layout title="📖 用語保存計畫 — Taiwan.md">
@@ -154,9 +157,13 @@ const termsJSON = JSON.stringify(terms);
     <!-- ── Header ─────────────────────────────────────────────── -->
     <div class="term-header">
       <div class="header-inner">
-        <h1>📖 用語保存計畫 <span class="header-en">Terminology Preservation</span></h1>
+        <h1>
+          📖 用語保存計畫 <span class="header-en"
+            >Terminology Preservation</span>
+        </h1>
         <p class="header-tagline">
-          Taiwan.md 的文字應該讀起來像在台灣長大的人寫的——這不是政治立場，是生活經驗的真實性。
+          Taiwan.md
+          的文字應該讀起來像在台灣長大的人寫的——這不是政治立場，是生活經驗的真實性。
         </p>
         <div class="header-bottom">
           <div class="header-stats">
@@ -166,9 +173,10 @@ const termsJSON = JSON.stringify(terms);
             <span class="stat-sep">|</span>
             <span class="stat"><strong>{totalSources}</strong> 個來源</span>
           </div>
-          <a href="/fork-graph" class="fork-link-btn">
-            🌿 語言分支樹 →
+          <a href="/terminology/converter" class="fork-link-btn">
+            🔄 用語轉換器 →
           </a>
+          <a href="/fork-graph" class="fork-link-btn"> 🌿 語言分支樹 → </a>
         </div>
       </div>
     </div>
@@ -178,15 +186,17 @@ const termsJSON = JSON.stringify(terms);
       <div class="filter-inner">
         <div class="filter-buttons" role="group" aria-label="依分歧類型篩選">
           <button class="filter-btn active" data-fork="all">全部</button>
-          {Object.entries(forkTypeLabels).map(([key, label]) => (
-            <button
-              class="filter-btn"
-              data-fork={key}
-              style={`--fork-color: ${forkTypeColors[key]}`}
-            >
-              {label}
-            </button>
-          ))}
+          {
+            Object.entries(forkTypeLabels).map(([key, label]) => (
+              <button
+                class="filter-btn"
+                data-fork={key}
+                style={`--fork-color: ${forkTypeColors[key]}`}
+              >
+                {label}
+              </button>
+            ))
+          }
         </div>
         <div class="search-wrap">
           <input
@@ -199,11 +209,13 @@ const termsJSON = JSON.stringify(terms);
         </div>
         <div class="subcat-row" role="group" aria-label="依子分類篩選">
           <button class="subcat-btn active" data-subcat="all">全部分類</button>
-          {subcategories.map((s) => (
-            <button class="subcat-btn" data-subcat={s.name}>
-              {s.name} <span class="subcat-count">{s.count}</span>
-            </button>
-          ))}
+          {
+            subcategories.map((s) => (
+              <button class="subcat-btn" data-subcat={s.name}>
+                {s.name} <span class="subcat-count">{s.count}</span>
+              </button>
+            ))
+          }
         </div>
       </div>
     </div>
@@ -211,104 +223,117 @@ const termsJSON = JSON.stringify(terms);
     <!-- ── Cards grid ─────────────────────────────────────────── -->
     <div class="terms-section">
       <div class="terms-grid" id="terms-grid">
-        {cards.map((c, i) => (
-          <div
-            class="term-card"
-            data-fork={c.fork_type}
-            data-taiwan={c.taiwan}
-            data-china={c.china}
-            data-notes={c.notes_full}
-            data-subcat={c.subcategory}
-            data-id={`card-${i}`}
-            role="article"
-            tabindex="0"
-            aria-expanded="false"
-          >
-            <div class="card-top">
-              <div class="card-main">
-                <span class="taiwan-word">{c.taiwan}</span>
-                {c.china && <span class="china-word">中：{c.china}</span>}
-                {c.hongkong && <span class="hk-word">港：{c.hongkong}</span>}
+        {
+          cards.map((c, i) => (
+            <div
+              class="term-card"
+              data-fork={c.fork_type}
+              data-taiwan={c.taiwan}
+              data-china={c.china}
+              data-notes={c.notes_full}
+              data-subcat={c.subcategory}
+              data-id={`card-${i}`}
+              role="article"
+              tabindex="0"
+              aria-expanded="false"
+            >
+              <div class="card-top">
+                <div class="card-main">
+                  <span class="taiwan-word">{c.taiwan}</span>
+                  {c.china && <span class="china-word">中：{c.china}</span>}
+                  {c.hongkong && <span class="hk-word">港：{c.hongkong}</span>}
+                </div>
+                <div class="card-meta">
+                  <button
+                    class="fork-tree-btn"
+                    title="查看語言分支樹"
+                    aria-label={`查看「${c.taiwan}」的語言分支樹`}
+                    data-tw={c.taiwan}
+                    data-cn={c.china || c.taiwan}
+                    data-origin={c.origin || ''}
+                    data-fork-point={c.fork_point || ''}
+                    data-fork-type={c.fork_type}
+                    data-fork-color={c.fork_color}
+                    data-tw-path={c.taiwan_path || ''}
+                    data-cn-path={c.china_path || ''}
+                  >
+                    🌿
+                  </button>
+                  <span
+                    class="fork-badge"
+                    style={`background: ${c.fork_color}22; color: ${c.fork_color}; border-color: ${c.fork_color}44`}
+                  >
+                    {c.fork_label}
+                  </span>
+                  {c.fork_point && (
+                    <span class="fork-point">{c.fork_point}</span>
+                  )}
+                </div>
               </div>
-              <div class="card-meta">
-                <button
-                  class="fork-tree-btn"
-                  title="查看語言分支樹"
-                  aria-label={`查看「${c.taiwan}」的語言分支樹`}
-                  data-tw={c.taiwan}
-                  data-cn={c.china || c.taiwan}
-                  data-origin={c.origin || ''}
-                  data-fork-point={c.fork_point || ''}
-                  data-fork-type={c.fork_type}
-                  data-fork-color={c.fork_color}
-                  data-tw-path={c.taiwan_path || ''}
-                  data-cn-path={c.china_path || ''}
-                >🌿</button>
-                <span
-                  class="fork-badge"
-                  style={`background: ${c.fork_color}22; color: ${c.fork_color}; border-color: ${c.fork_color}44`}
-                >
-                  {c.fork_label}
-                </span>
-                {c.fork_point && <span class="fork-point">{c.fork_point}</span>}
+              {c.notes_short && <p class="card-notes-short">{c.notes_short}</p>}
+              <div class="card-expand" aria-hidden="true">
+                <div class="expand-content">
+                  {c.origin && (
+                    <div class="expand-section">
+                      <h4>詞源</h4>
+                      <p>{c.origin}</p>
+                    </div>
+                  )}
+                  {c.taiwan_path && (
+                    <div class="expand-section">
+                      <h4>台灣路徑</h4>
+                      <p>{c.taiwan_path}</p>
+                    </div>
+                  )}
+                  {c.china_path && (
+                    <div class="expand-section">
+                      <h4>中國路徑</h4>
+                      <p>{c.china_path}</p>
+                    </div>
+                  )}
+                  {c.fork_cause && (
+                    <div class="expand-section">
+                      <h4>分歧原因</h4>
+                      <p>{c.fork_cause}</p>
+                    </div>
+                  )}
+                  {c.exceptions && (
+                    <div class="expand-section">
+                      <h4>例外情境</h4>
+                      <p>{c.exceptions}</p>
+                    </div>
+                  )}
+                  {c.sources.length > 0 && (
+                    <div class="expand-section sources-section">
+                      <h4>來源</h4>
+                      <ul>
+                        {c.sources.map((src) => (
+                          <li>{src}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {c.english && (
+                    <div class="expand-english">
+                      English: <em>{c.english}</em>
+                    </div>
+                  )}
+                </div>
               </div>
+              <button
+                class="expand-toggle"
+                aria-label={`展開 ${c.taiwan} 詞源`}
+              >
+                <span class="toggle-text">查看詞源</span>
+                <span class="toggle-icon">▼</span>
+              </button>
             </div>
-            {c.notes_short && <p class="card-notes-short">{c.notes_short}</p>}
-            <div class="card-expand" aria-hidden="true">
-              <div class="expand-content">
-                {c.origin && (
-                  <div class="expand-section">
-                    <h4>詞源</h4>
-                    <p>{c.origin}</p>
-                  </div>
-                )}
-                {c.taiwan_path && (
-                  <div class="expand-section">
-                    <h4>台灣路徑</h4>
-                    <p>{c.taiwan_path}</p>
-                  </div>
-                )}
-                {c.china_path && (
-                  <div class="expand-section">
-                    <h4>中國路徑</h4>
-                    <p>{c.china_path}</p>
-                  </div>
-                )}
-                {c.fork_cause && (
-                  <div class="expand-section">
-                    <h4>分歧原因</h4>
-                    <p>{c.fork_cause}</p>
-                  </div>
-                )}
-                {c.exceptions && (
-                  <div class="expand-section">
-                    <h4>例外情境</h4>
-                    <p>{c.exceptions}</p>
-                  </div>
-                )}
-                {c.sources.length > 0 && (
-                  <div class="expand-section sources-section">
-                    <h4>來源</h4>
-                    <ul>
-                      {c.sources.map((src) => <li>{src}</li>)}
-                    </ul>
-                  </div>
-                )}
-                {c.english && (
-                  <div class="expand-english">
-                    English: <em>{c.english}</em>
-                  </div>
-                )}
-              </div>
-            </div>
-            <button class="expand-toggle" aria-label={`展開 ${c.taiwan} 詞源`}>
-              <span class="toggle-text">查看詞源</span>
-              <span class="toggle-icon">▼</span>
-            </button>
-          </div>
-        ))}
+          ))
+        }
       </div>
-      <p class="no-results" id="no-results" style="display:none">找不到符合條件的詞條。</p>
+      <p class="no-results" id="no-results" style="display:none">
+        找不到符合條件的詞條。
+      </p>
     </div>
 
     <!-- ── Footer ─────────────────────────────────────────────── -->
@@ -323,9 +348,7 @@ const termsJSON = JSON.stringify(terms);
           >
             📂 在 GitHub 瀏覽詞條資料
           </a>
-          <a href="/contribute" class="footer-link footer-cta">
-            ✏️ 貢獻詞條
-          </a>
+          <a href="/contribute" class="footer-link footer-cta"> ✏️ 貢獻詞條 </a>
           <a href="/culture/台灣華語的演化" class="footer-link">
             📝 台灣華語的演化
           </a>
@@ -375,10 +398,7 @@ const termsJSON = JSON.stringify(terms);
       const forkMatch = currentFork === 'all' || fork === currentFork;
       const subcatMatch = currentSubcat === 'all' || subcat === currentSubcat;
       const queryMatch =
-        !q ||
-        taiwan.includes(q) ||
-        china.includes(q) ||
-        notes.includes(q);
+        !q || taiwan.includes(q) || china.includes(q) || notes.includes(q);
 
       const show = forkMatch && subcatMatch && queryMatch;
       card.style.display = show ? '' : 'none';
@@ -476,23 +496,30 @@ const termsJSON = JSON.stringify(terms);
     popupTitle.textContent = `🌿 ${tw}${cn && cn !== tw ? ` / ${cn}` : ''}`;
 
     // Draw mini fork tree with SVG (no D3 needed for single term)
-    const W = 500, H = 160;
-    const sameTerm = (!cn || cn === tw);
+    const W = 500,
+      H = 160;
+    const sameTerm = !cn || cn === tw;
     popupSvg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     popupSvg.innerHTML = '';
 
     // Layout: origin node left → fork point center → two branches right
-    const ox = 60, oy = H / 2;
-    const fx = W * 0.45, fy = H / 2;
-    const twX = W - 80, twY = 50;
-    const cnX = W - 80, cnY = H - 50;
+    const ox = 60,
+      oy = H / 2;
+    const fx = W * 0.45,
+      fy = H / 2;
+    const twX = W - 80,
+      twY = 50;
+    const cnX = W - 80,
+      cnY = H - 50;
 
     // Path: origin → fork
     const pathOriginFork = `M${ox},${oy} C${fx - 40},${oy} ${fx - 40},${fy} ${fx},${fy}`;
     // Path: fork → taiwan
     const pathTW = `M${fx},${fy} C${fx + 60},${fy} ${twX - 60},${twY} ${twX},${twY}`;
     // Path: fork → china
-    const pathCN = sameTerm ? '' : `M${fx},${fy} C${fx + 60},${fy} ${cnX - 60},${cnY} ${cnX},${cnY}`;
+    const pathCN = sameTerm
+      ? ''
+      : `M${fx},${fy} C${fx + 60},${fy} ${cnX - 60},${cnY} ${cnX},${cnY}`;
 
     const twColor = '#e74c3c';
     const cnColor = '#3498db';
@@ -521,9 +548,12 @@ const termsJSON = JSON.stringify(terms);
 
     // Info section
     let info = '';
-    if (origin) info += `<div class="info-row"><span class="info-label">詞源</span><span>${origin}</span></div>`;
-    if (twPath) info += `<div class="info-row"><span class="info-label">🇹🇼 台灣</span><span>${twPath}</span></div>`;
-    if (cnPath) info += `<div class="info-row"><span class="info-label">🇨🇳 中國</span><span>${cnPath}</span></div>`;
+    if (origin)
+      info += `<div class="info-row"><span class="info-label">詞源</span><span>${origin}</span></div>`;
+    if (twPath)
+      info += `<div class="info-row"><span class="info-label">🇹🇼 台灣</span><span>${twPath}</span></div>`;
+    if (cnPath)
+      info += `<div class="info-row"><span class="info-label">🇨🇳 中國</span><span>${cnPath}</span></div>`;
     popupInfo.innerHTML = info;
 
     popup.classList.add('visible');
@@ -536,7 +566,7 @@ const termsJSON = JSON.stringify(terms);
   }
 
   // Bind click events
-  document.querySelectorAll('.fork-tree-btn').forEach(btn => {
+  document.querySelectorAll('.fork-tree-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       openForkPopup(btn);
@@ -548,7 +578,8 @@ const termsJSON = JSON.stringify(terms);
     if (e.target === popup) closeForkPopup();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && popup?.classList.contains('visible')) closeForkPopup();
+    if (e.key === 'Escape' && popup?.classList.contains('visible'))
+      closeForkPopup();
   });
 </script>
 
@@ -566,19 +597,21 @@ const termsJSON = JSON.stringify(terms);
     align-items: center;
     gap: 0.4rem;
     padding: 0.45rem 1rem;
-    background: rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.12);
     color: white;
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8px;
     text-decoration: none;
     font-size: 0.88rem;
     font-weight: 600;
-    transition: background 0.15s, border-color 0.15s;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
     white-space: nowrap;
   }
   .fork-link-btn:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
   }
 
@@ -648,7 +681,7 @@ const termsJSON = JSON.stringify(terms);
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
   .filter-inner {
     max-width: 72rem;
@@ -687,7 +720,7 @@ const termsJSON = JSON.stringify(terms);
     border-color: var(--fork-color, #1a1a2e);
     color: white;
   }
-  .filter-btn[data-fork="all"].active {
+  .filter-btn[data-fork='all'].active {
     background: #1a1a2e;
     border-color: #1a1a2e;
   }
@@ -775,12 +808,14 @@ const termsJSON = JSON.stringify(terms);
     flex-direction: column;
     gap: 0.6rem;
     cursor: default;
-    transition: box-shadow 0.18s, border-color 0.18s;
+    transition:
+      box-shadow 0.18s,
+      border-color 0.18s;
     outline: none;
   }
   .term-card:hover,
   .term-card:focus {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
     border-color: #ccc;
   }
   .card-top {
@@ -830,7 +865,9 @@ const termsJSON = JSON.stringify(terms);
     font-size: 0.9rem;
     padding: 0.15rem 0.35rem;
     line-height: 1;
-    transition: background 0.15s, border-color 0.15s;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
     opacity: 0.6;
   }
   .fork-tree-btn:hover {
@@ -845,7 +882,7 @@ const termsJSON = JSON.stringify(terms);
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     justify-content: center;
     align-items: center;
@@ -861,7 +898,7 @@ const termsJSON = JSON.stringify(terms);
     max-width: 560px;
     width: 100%;
     position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     max-height: 90vh;
     overflow-y: auto;
   }
@@ -881,7 +918,9 @@ const termsJSON = JSON.stringify(terms);
     justify-content: center;
     transition: background 0.15s;
   }
-  .fork-popup-close:hover { background: #ddd; }
+  .fork-popup-close:hover {
+    background: #ddd;
+  }
   .fork-popup-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -1037,7 +1076,7 @@ const termsJSON = JSON.stringify(terms);
     align-items: center;
   }
   .footer-link {
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.15s;
@@ -1048,15 +1087,15 @@ const termsJSON = JSON.stringify(terms);
     text-decoration: underline;
   }
   .footer-cta {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 6px;
     padding: 0.4rem 1rem;
     font-weight: 600;
     color: white !important;
   }
   .footer-cta:hover {
-    background: rgba(255,255,255,0.22);
+    background: rgba(255, 255, 255, 0.22);
     text-decoration: none !important;
   }
   .footer-note {
