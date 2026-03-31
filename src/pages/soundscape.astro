@@ -66,7 +66,8 @@ const categories = [
         locationEn: 'Xingtian Temple',
         description: '拜拜（擲筊、誦經）',
         descriptionEn: 'Temple worship (divination blocks, chanting)',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🏯',
       },
@@ -76,7 +77,8 @@ const categories = [
         locationEn: 'Ximending',
         description: '刺青店',
         descriptionEn: 'Tattoo parlor buzz',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🎨',
       },
@@ -86,7 +88,8 @@ const categories = [
         locationEn: 'Dihua Street',
         description: '買年貨',
         descriptionEn: 'Lunar New Year shopping',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🧨',
       },
@@ -96,7 +99,8 @@ const categories = [
         locationEn: 'Taipei 101',
         description: '跨年倒數',
         descriptionEn: 'New Year countdown',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🎆',
       },
@@ -106,7 +110,8 @@ const categories = [
         locationEn: 'CKS Memorial Hall',
         description: '鴿子飛翔',
         descriptionEn: 'Pigeons taking flight',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🕊️',
       },
@@ -116,7 +121,8 @@ const categories = [
         locationEn: 'CKS Memorial Hall',
         description: '遊客拍照',
         descriptionEn: 'Tourist camera shutters',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '📸',
       },
@@ -126,7 +132,8 @@ const categories = [
         locationEn: "Da'an Forest Park",
         description: '賞鴨子',
         descriptionEn: 'Ducks in the park',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🦆',
       },
@@ -136,7 +143,8 @@ const categories = [
         locationEn: 'Dahu Park',
         description: '湖水聲',
         descriptionEn: 'Lake water',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🌊',
       },
@@ -146,7 +154,8 @@ const categories = [
         locationEn: 'Xiaobitan',
         description: '賞鳥',
         descriptionEn: 'Birdsong',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🐦',
       },
@@ -156,7 +165,8 @@ const categories = [
         locationEn: 'Tamsui',
         description: '買花枝',
         descriptionEn: 'Buying squid at the waterfront',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🦑',
       },
@@ -166,7 +176,8 @@ const categories = [
         locationEn: 'Miramar',
         description: '看電影',
         descriptionEn: 'Cinema ambience',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🎬',
       },
@@ -176,7 +187,8 @@ const categories = [
         locationEn: 'Sanmin Bookstore',
         description: '翻書聲',
         descriptionEn: 'Page flipping',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '📚',
       },
@@ -186,7 +198,8 @@ const categories = [
         locationEn: 'Beimen Post Office',
         description: '寄信',
         descriptionEn: 'Mailing a letter',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '📮',
       },
@@ -196,7 +209,8 @@ const categories = [
         locationEn: 'Zhongshan Station',
         description: '螺絲電鑽聲',
         descriptionEn: 'Power drill',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '🔧',
       },
@@ -206,7 +220,8 @@ const categories = [
         locationEn: 'Zhongshan Junior High Station',
         description: '喊報告',
         descriptionEn: 'Student roll call',
-        contributor: 'DaheMusic',
+        contributor: '大禾音樂',
+        contributorUrl: 'https://www.harvestmusician.com/',
         date: '2018-03',
         icon: '📢',
       },
@@ -437,12 +452,17 @@ const totalWishlist = categories.reduce(
                     </p>
                     <div class="sound-meta">
                       <a
-                        href={`https://github.com/${sound.contributor}`}
+                        href={
+                          sound.contributorUrl ||
+                          `https://github.com/${sound.contributor}`
+                        }
                         target="_blank"
                         rel="noopener"
                         class="contributor"
                       >
-                        @{sound.contributor}
+                        {sound.contributorUrl
+                          ? sound.contributor
+                          : `@${sound.contributor}`}
                       </a>
                       <span class="sound-date">{sound.date}</span>
                     </div>
