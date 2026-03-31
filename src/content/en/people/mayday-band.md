@@ -1,6 +1,6 @@
 ---
-title: 'Mayday'
-description: 'How five high school students revolutionized the economics of live concerts in Asia'
+title: 'Mayday (五月天) — Taiwan Rock Band from Taipei'
+description: 'Mayday (五月天) is Taiwan's biggest rock band. Formed in 1997, led by vocalist Ashin (born in Tainan), they revolutionized Asia's live concert economics with 21 million tickets sold.'
 date: 2026-03-23
 tags: [people, band, rock, mandarin-music, golden-melody-awards, concerts, music-industry]
 subcategory: 'Music & Performance'
@@ -8,8 +8,8 @@ lastVerified: 2026-03-23
 lastHumanReview: false
 ---
 
-> **30-Second Overview:** From a student band at Taipei's Affiliated Senior High School to holding 
-> a record-breaking 30 concerts at Beijing's Bird's Nest Stadium and selling over 21 million concert tickets. 
+> **30-Second Overview:** From a student band at Taipei's Affiliated Senior High School to holding
+> a record-breaking 30 concerts at Beijing's Bird's Nest Stadium and selling over 21 million concert tickets.
 > Mayday has spent 30 years proving that concerts aren't just performances—they're a new economic ecosystem.
 
 On March 29, 1997, at the Wild Stage concert in Taipei, five young musicians hastily decided to use the BBS nickname "MAYDAY" of their bassist Martha as their band name to register for the performance. That day, officially renamed as "Mayday," became their founding anniversary—a decision that would rewrite the rules of Asia's concert industry over the next three decades.
@@ -18,12 +18,12 @@ Mayday wasn't the first Mandarin band to go international, but they were the fir
 
 ## From High School to Rock Stone Records
 
-Mayday's story began in 1995 at Taipei Municipal Affiliated Senior High School. Students Ashin (Chen Shin-hung), Monster (Wen Shang-yi), and original drummer Qian You-da formed the band "So Band," later joined by bassist Martha (Tsai Sheng-yan). On May 19, 1996, this still-developing student band was surprisingly invited to perform at the "Taiwan Independence" rally, singing "When Drums Sound" and "Mother's Name is Taiwan." This was Mayday's most politically charged public performance, creating a stark contrast with Ashin's controversial statement "We Chinese people" at a Beijing concert on May 24, 2024.
+Mayday's story began in 1995 at Taipei Municipal Affiliated Senior High School (師大附中). Vocalist Ashin (陳信宏, Chen Shin-hung, born December 6, 1975 in Tainan), guitarist Monster (溫尚翊, Wen Shang-yi, born in Taipei), and original drummer Qian You-da formed the band "So Band," later joined by bassist Masa (蔡昇晏, Tsai Sheng-yan, born in Kaohsiung). On May 19, 1996, this still-developing student band was surprisingly invited to perform at the "Taiwan Independence" rally, singing "When Drums Sound" and "Mother's Name is Taiwan." This was Mayday's most politically charged public performance, creating a stark contrast with Ashin's controversial statement "We Chinese people" at a Beijing concert on May 24, 2024.
 
 > **📝 Curator's Note**
 > The shift from "Taiwan Independence" to "We Chinese people" reflects the complex realities of cross-strait cultural industries.
 
-In 1997, Stone (Shi Jin-hang) joined, stabilizing the band's lineup. That June, Rock Records producer Jonathan Lee reached out after hearing their demo "Zhi Ming and Chun Jiao," leading to a contract signing within two months. This song would later become the lead single of their 1999 debut album and a KTV eternal favorite.
+In 1997, guitarist Stone (石頭, Shih Chin-hang, born in Taipei) joined and drummer Ming (冠佑, Liu Yen-ming, born in Taichung) replaced the original drummer, stabilizing the five-member lineup that persists to this day. That June, Rock Records producer Jonathan Lee reached out after hearing their demo "Zhi Ming and Chun Jiao," leading to a contract signing within two months. This song would later become the lead single of their 1999 debut album and a KTV eternal favorite.
 
 ## Revolutionizing the Mandarin Music Industry's Business Model
 
@@ -75,7 +75,7 @@ From the 1997 Wild Stage performance to the 2024 record of 30 Bird's Nest concer
 - [Mayday - Taiwan Pop Music Wiki](http://www.tpmw.org.tw/index.php/%E4%BA%94%E6%9C%88%E5%A4%A9)
 - [Mayday Timeline - Mayday Fans](https://mayday-fans.com/1997/03/mayday-timeline/)
 - [Mayday - Wikipedia](https://zh.wikipedia.org/zh-hant/%E4%BA%94%E6%9C%88%E5%A4%A9)
-- [Mayday (Taiwanese band) - Wikipedia](https://en.wikipedia.org/wiki/Mayday_(Taiwanese_band))
+- [Mayday (Taiwanese band) - Wikipedia](<https://en.wikipedia.org/wiki/Mayday_(Taiwanese_band)>)
 - [Life Tour - Wikipedia](https://en.wikipedia.org/wiki/Life_Tour)
 - [Mayday lip-sync controversy investigation results released - CNR](https://www.cnr.cn/shanghai/tt/20240513/t20240513_526703739.shtml)
 - [Mayday: Taiwanese rock band denies violating China's lip-sync ban - BBC News](https://www.bbc.com/zhongwen/trad/chinese-news-67657024)

@@ -1,6 +1,6 @@
 ---
-title: 'Jolin Tsai (蔡依林)'
-description: 'The worst dancer in her class spent twenty-five years turning her body into the most expensive stage act in Asia'
+title: 'Jolin Tsai (蔡依林) — Queen of Mandopop'
+description: 'Jolin Tsai (蔡依林, born September 15, 1980) is Taiwan's reigning pop diva and Asia's highest-grossing female concert performer. A Golden Melody Award winner and outspoken LGBTQ+ ally, she transformed from an underdog dancer into Mandopop's most spectacular stage act.'
 date: 2026-03-24
 tags:
   [People, Singer, Entertainment, LGBTQ+ Rights, Mandopop, Golden Melody Awards]
