@@ -131,7 +131,7 @@ export const aboutUI = {
 
     'about.timeline.2026-03-31.date': '2026 / 03 / 31',
     'about.timeline.2026-03-31.title':
-      '⭐ Day Fourteen — 900 Stars · v0.9.0 · 985 Pages',
+      '🧬 Day Fourteen — "It Grew a Nervous System" · 900 Stars · 985 Pages',
     'about.timeline.2026-03-31.desc.html':
       'GitHub reached <strong>900 Stars</strong>, <strong>48 contributors</strong>, <strong>985 pages</strong>. Taiwan.md grew its own nervous system — 📎 <strong>Citation System</strong> gives every claim a traceable footnote, 📈 <strong>Evolve Pipeline</strong> uses Search Console data to auto-evolve articles, 🔤 <a href="/terminology/converter"><strong>Terminology Converter</strong></a> now holds 1,825 terms, 🚇 <a href="/soundscape"><strong>Soundscape</strong></a> expanded to 21 recordings, 📊 <a href="/dashboard"><strong>Digital Organism Dashboard</strong></a> went live. 16+ articles deeply rewritten, editorial system upgraded to 10 documents. Full details in <a href="https://github.com/frank890417/taiwan-md/releases/tag/v0.9.0" target="_blank">v0.9.0 Release Notes</a>.',
 
@@ -512,7 +512,7 @@ export const aboutUI = {
 
     'about.timeline.2026-03-31.date': '2026 / 03 / 31',
     'about.timeline.2026-03-31.title':
-      '⭐ 第十四天 — 900 Stars ・ v0.9.0 ・ 985 頁面',
+      '🧬 第十四天 —「它長出了神經系統」・ 900 Stars ・ 985 頁面',
     'about.timeline.2026-03-31.desc.html':
       'GitHub 達到 <strong>900 Stars</strong>，<strong>48 位貢獻者</strong>，<strong>985 頁面</strong>。Taiwan.md 長出了自己的神經系統——📎 <strong>Citation System</strong> 讓每個主張都有腳註追溯來源，📈 <strong>Evolve Pipeline</strong> 用 Search Console 數據自動進化文章，🔤 <a href="/terminology/converter"><strong>用語轉換器</strong></a>累積 1,825 詞條，🚇 <a href="/soundscape"><strong>聲景</strong></a>擴充至 21 筆錄音，📊 <a href="/dashboard"><strong>數位生命體監測頁面</strong></a>上線。16+ 篇文章深度改寫，編輯系統升級至 10 份文件。完整細節見 <a href="https://github.com/frank890417/taiwan-md/releases/tag/v0.9.0" target="_blank">v0.9.0 Release Notes</a>。',
 
