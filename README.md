@@ -145,13 +145,28 @@ We maintain a **[TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md)** to ensure co
 
 ### 📐 Editorial Standards
 
-We maintain an **[EDITORIAL.md](./docs/editorial/EDITORIAL.md)** — our writing methodology and quality standard. It covers:
+We maintain a **five-document editorial system** that governs every article from research to publication:
 
-- **Research workflow**: define questions → cross-reference 2+ sources → verify data
-- **Article structure**: 30-sec overview → narrative-driven body → challenges → references
-- **Tone**: specific over vague, stories over bullet lists, honesty over cheerleading
-- **AI quality control**: `tools/quality-scan.sh` scans all articles for hollow AI patterns (empty modifiers, missing sources, bullet-list padding)
-- **Checklist**: 10-point quality gate before every publish
+- **[EDITORIAL.md](./docs/editorial/EDITORIAL.md)** — Writing methodology & quality standard (v4). Covers narrative structure, tone, citation format, anti-AI-slop rules
+- **[REWRITE-PIPELINE.md](./docs/editorial/REWRITE-PIPELINE.md)** — Three-stage quality pipeline: Research → Write → Verify, with quality gates at each stage
+- **[RESEARCH-TEMPLATE.md](./docs/editorial/RESEARCH-TEMPLATE.md)** — Structured research template with fact-source pairing for footnotes
+- **[QUALITY-CHECKLIST.md](./docs/editorial/QUALITY-CHECKLIST.md)** — Post-writing verification: 五指檢測 → structure → citation density → auto-scan → commit
+- **[TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md)** — Language & naming conventions for Taiwan-specific usage
+
+### 📎 Citation System (Footnote-First)
+
+Every claim needs a source. We use **Markdown footnotes** (`[^1]`) to link facts directly to their origins — no more dumping a list of URLs at the bottom and hoping readers trust you.
+
+```markdown
+台灣早餐店超過 2 萬家[^1]。
+
+[^1]: [經濟部商業司](https://gcis.nat.gov.tw/)（2026 年）
+```
+
+- **Density standard**: ≥ 1 footnote per 300 words
+- **Write inline, not after**: footnotes are inserted during writing, not retrofitted (painful lesson learned)
+- **Three citation contexts**: data → footnote, quotes → footnote, callout sources → inline link
+- Design doc: [`docs/design/CITATION-SYSTEM.md`](./docs/design/CITATION-SYSTEM.md)
 
 ---
 
@@ -198,7 +213,8 @@ Every `.md` file in the root directory is an organ of this organism. Together, t
 | **[EDITORIAL.md](./docs/editorial/EDITORIAL.md)**                 | 🫀 **Heart** — Writing methodology & quality standard (v4)      | Before writing or reviewing any article. Defines what a "good article" looks like: 切入人物、挖引語制度、因果鏈、五種開場/結尾模式、塑膠偵測                   |
 | **[REWRITE-PIPELINE.md](./docs/editorial/REWRITE-PIPELINE.md)**   | 🔄 **Circulatory system** — Three-stage quality pipeline (v2.1) | Before rewriting existing articles. Orchestrates four files: Research → Write → Verify, with quality gates at each stage                                       |
 | **[RESEARCH-TEMPLATE.md](./docs/editorial/RESEARCH-TEMPLATE.md)** | 🔬 **Sensory system** — Pre-writing research template           | During Stage 1 of the rewrite pipeline. Structured template for gathering facts, finding a 切入人物, collecting 真人引語, and preparing endings before writing |
-| **[QUALITY-CHECKLIST.md](./docs/editorial/QUALITY-CHECKLIST.md)** | 🛡️ **Immune checkpoint** — Post-writing verification checklist  | During Stage 3 of the rewrite pipeline. Five-step verification: 五指檢測 → 結構驗證 → 塑膠掃描 → 自動驗證 → commit                                             |
+| **[QUALITY-CHECKLIST.md](./docs/editorial/QUALITY-CHECKLIST.md)** | 🛡️ **Immune checkpoint** — Post-writing verification checklist  | During Stage 3 of the rewrite pipeline. Five-step verification: 五指檢測 → 結構驗證 → 來源引用密度 → 塑膠掃描 → commit                                         |
+| **[CITATION-SYSTEM.md](./docs/design/CITATION-SYSTEM.md)**        | 📎 **Nervous system** — Footnote-first citation architecture    | Design doc for the citation system. Every claim links to its source via `[^n]` footnotes. Density: ≥ 1 per 300 words                                           |
 | **[TERMINOLOGY.md](./docs/editorial/TERMINOLOGY.md)**             | 🗣️ **Voice** — Language & naming conventions                    | Before writing. Covers national identity terms, Taiwanese language naming, geographic conventions, respectful language for indigenous peoples                  |
 | **[CONTRIBUTING.md](./CONTRIBUTING.md)**                          | 🚪 **Front door** — How to contribute                           | First time contributing. Four paths from zero-code to full PR, plus article templates and submission guidelines                                                |
 | **[CONTRIBUTE_PROMPT.md](./docs/prompts/CONTRIBUTE_PROMPT.md)**   | 🤖 **AI onboarding** — Prompt for AI-assisted writing           | When using ChatGPT/Claude/Gemini to write an article. Paste this to your AI and it guides the process                                                          |
@@ -231,13 +247,13 @@ New knowledge discovered
   docs/editorial/REWRITE-PIPELINE.md ← 指揮官 (orchestrates everything)
        │
        ├─ Stage 1: docs/editorial/RESEARCH-TEMPLATE.md (structured research)
-       │     → 切入人物、反直覺核心句、真人引語、結尾素材
+       │     → 切入人物、反直覺核心句、真人引語、結尾素材、事實-來源配對表
        │
-       ├─ Stage 2: EDITORIAL.md (quality standard)
-       │     → 五種開場、因果鏈、塑膠偵測、結尾模式庫
+       ├─ Stage 2: EDITORIAL.md (quality standard) + CITATION-SYSTEM.md
+       │     → 五種開場、因果鏈、塑膠偵測、結尾模式庫、邊寫邊插 [^n] footnote
        │
        └─ Stage 3: docs/editorial/QUALITY-CHECKLIST.md (verification)
-             → 五指檢測 → 結構驗證 → 塑膠掃描 → quality-scan.sh (14 維度)
+             → 五指檢測 → 結構驗證 → 來源引用密度 → 塑膠掃描 → quality-scan.sh
                     ↓
               docs/community/REVIEWERS.md (human review)
                     ↓
