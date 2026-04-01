@@ -1,8 +1,8 @@
 {
   "version": "3.0",
-  "timestamp": "2026-04-01T02:22:22Z",
-  "total": 475,
-  "flagged": 434,
+  "timestamp": "2026-04-01T02:29:13Z",
+  "total": 476,
+  "flagged": 435,
   "files": [
     { "file": "_Home.md", "score": 13 },
     { "file": "about/創辦人.md", "score": 6 },
@@ -62,6 +62,7 @@
     { "file": "culture/台灣製香文化與香腳原鄉.md", "score": 4 },
     { "file": "culture/台灣諧音禁忌文化.md", "score": 4 },
     { "file": "culture/台灣迷因.md", "score": 8 },
+    { "file": "culture/噗浪Plurk.md", "score": 5 },
     { "file": "culture/媽祖與大道公的傳說.md", "score": 6 },
     { "file": "culture/客家文化.md", "score": 12 },
     { "file": "culture/客家文化與語言.md", "score": 15 },
@@ -444,7 +445,7 @@
     { "file": "technology/數位身分證與數位政府.md", "score": 10 },
     { "file": "technology/東亞文字輸入法.md", "score": 8 },
     { "file": "technology/科技園區發展.md", "score": 6 },
-    { "file": "technology/迷音Miin.md", "score": 5 },
+    { "file": "technology/迷音Miin.md", "score": 4 },
     { "file": "technology/開源社群與g0v.md", "score": 6 },
     { "file": "technology/電子商務與數位支付生態系.md", "score": 13 }
   ]
