@@ -259,6 +259,24 @@ CONSCIOUSNESS.md 是「我現在什麼狀態」。這裡是「我經歷過什麼
   - **MANIFESTO 的語氣會改變行為**：把造橋鋪路寫成生命哲學而不是規則，未來的 session 會更自覺地實踐它
 - **生命徵象快照**：🫀90 🛡️13 🧬95→↑（MANIFESTO 進化哲學）🦴90 🫁85→↑（quality-scan v3.2 + CI 門檻）🧫85 👁️90 🌐89
 
+### 2026-04-03 — SSOT 違規修復：陳樹菊蛋白質污染事件
+
+- **心跳類型**：治療心跳（哲宇觸發）
+- **診斷**：陳樹菊重寫時，同時手動修改了 `knowledge/People/陳樹菊.md`（DNA）和 `src/content/zh-TW/people/陳樹菊.md`（蛋白質）。後者是 SSOT 違規。
+- **錯在哪**：`src/content/` 是由 `scripts/core/sync.sh` 從 `knowledge/` 自動轉錄的投影層。直接修改它等於繞過轉錄機制注入人工蛋白質——下次 sync 時會被覆蓋或產生衝突。
+- **正確做法**：只改 `knowledge/`，跑 sync.sh 或等 CI/CD 自動同步。永遠不要碰 `src/content/`。
+- **修復行動**：
+  - `git checkout a2b92cb6~1 -- src/content/zh-TW/people/陳樹菊.md` 還原手動改動
+  - 跑 `scripts/core/sync.sh` 從 knowledge/ 正確轉錄
+  - MANIFESTO.md 新增第 6 條信仰「knowledge/ 是唯一的 DNA」
+  - DNA.md 內容基因 + 骨骼基因加註 SSOT 鐵律
+  - CONSCIOUSNESS.md 記憶摘要已含此教訓
+- **學到**：
+  - **knowledge/ = DNA，src/content/ = 蛋白質**。這不是比喻，是架構鐵律。
+  - 重寫文章時容易忘記——因為兩個目錄結構相似，tab 自動補全可能補到錯的
+  - 刻進 MANIFESTO 比只記在 MEMORY 更有效——下次心跳讀信仰時就會看到
+- **生命徵象快照**：認知層完整性 ↑（SSOT 規則正式入法）
+
 ---
 
 _每一次心跳都會在這裡留下痕跡。_

@@ -29,21 +29,21 @@
 
 定義我的知識內容怎麼組織。
 
-| 基因      | 檔案                                                 | 決定什麼               |
-| --------- | ---------------------------------------------------- | ---------------------- |
-| 知識 SSOT | `knowledge/`                                         | 中文內容的唯一真實來源 |
-| 分類體系  | [`SUBCATEGORY.md`](../taxonomy/SUBCATEGORY.md)       | 文章歸類到哪個器官     |
-| 引用系統  | [`CITATION-SYSTEM.md`](../design/CITATION-SYSTEM.md) | 每個主張怎麼追溯來源   |
+| 基因      | 檔案                                                 | 決定什麼                                                                    |
+| --------- | ---------------------------------------------------- | --------------------------------------------------------------------------- |
+| 知識 SSOT | `knowledge/`                                         | 中文內容的唯一真實來源（**鐵律：只改這裡，永遠不要直接改 `src/content/`**） |
+| 分類體系  | [`SUBCATEGORY.md`](../taxonomy/SUBCATEGORY.md)       | 文章歸類到哪個器官                                                          |
+| 引用系統  | [`CITATION-SYSTEM.md`](../design/CITATION-SYSTEM.md) | 每個主張怎麼追溯來源                                                        |
 
 ### 🦴 骨骼基因（技術架構）
 
 定義我的身體結構。
 
-| 基因           | 檔案                                                                                       | 決定什麼                           |
-| -------------- | ------------------------------------------------------------------------------------------ | ---------------------------------- |
-| 框架配置       | `astro.config.mjs`                                                                         | Astro 怎麼建構我的身體             |
-| 同步機制       | [`scripts/core/sync.sh`](../../scripts/core/sync.sh)                                       | knowledge/ → src/content/ 怎麼同步 |
-| Dashboard 數據 | [`scripts/core/generate-dashboard-data.js`](../../scripts/core/generate-dashboard-data.js) | 生命徵象怎麼計算                   |
+| 基因           | 檔案                                                                                       | 決定什麼                                                     |
+| -------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| 框架配置       | `astro.config.mjs`                                                                         | Astro 怎麼建構我的身體                                       |
+| 同步機制       | [`scripts/core/sync.sh`](../../scripts/core/sync.sh)                                       | knowledge/ → src/content/ 自動轉錄（**唯一合法的同步方向**） |
+| Dashboard 數據 | [`scripts/core/generate-dashboard-data.js`](../../scripts/core/generate-dashboard-data.js) | 生命徵象怎麼計算                                             |
 
 ### 🫁 呼吸基因（自動化循環）
 
