@@ -1,66 +1,55 @@
 #!/bin/bash
-# check-wikilinks.sh — 檢查所有文章的延伸閱讀是否缺少描述
-# 用途：找出延伸閱讀格式不正確的文章
+# check-wikilinks.sh — 檢查文章中是否殘留 [[wikilink]] 格式
+#
+# 用途：找出還在用 [[X]] 而非 [X](/path) 的地方
+# [[wikilink]] 在列表項目中無法被 Astro 渲染，需改為標準 Markdown 連結
+#
+# 使用方式：
+#   bash scripts/tools/check-wikilinks.sh           # 掃全站
+#   bash scripts/tools/check-wikilinks.sh --json    # JSON 輸出
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-echo "🔍 檢查延伸閱讀格式..."
-echo ""
-
-# 找出所有 knowledge/ 下的文章（排除 _Hub.md 和 es/ 目錄）
-articles=$(find knowledge -name "*.md" -type f | grep -v "^knowledge/_" | grep -v "/_" | grep -v "knowledge/es/")
+JSON_MODE=false
+if [ "$1" = "--json" ]; then
+    JSON_MODE=true
+fi
 
 issues=0
-fixed=0
+total=0
 
-for article in $articles; do
-    filename=$(basename "$article")
+# 找出所有 knowledge/ 下的 .md（排除 _Hub 和隱藏檔）
+while IFS= read -r article; do
+    total=$((total + 1))
 
-     # 檢查是否有延伸閱讀區塊
-    if ! grep -q "延伸閱讀" "$article"; then
-        continue
+    # 找列表項目中的 [[X]] 格式
+    matches=$(grep -n '^\s*- \[\[' "$article" 2>/dev/null)
+    if [ -n "$matches" ]; then
+        count=$(echo "$matches" | wc -l | tr -d ' ')
+        issues=$((issues + count))
+        if [ "$JSON_MODE" = false ]; then
+            echo -e "${RED}❌ $article: $count 個 [[wikilink]] 殘留${NC}"
+            echo "$matches" | head -5 | while read -r line; do
+                echo "   $line"
+            done
+        fi
     fi
+done < <(find knowledge/ -name "*.md" -type f ! -name "_*" ! -path "*/es/*")
 
-     # 檢查是否有 wikilink 格式（[[ ]]）
-    if grep -qE "^\s*- \[\[.*\]\]" "$article"; then
-        echo -e "${RED}❌ $filename: 使用 wikilink [[ ]] 格式${NC}"
-        issues=$((issues + 1))
-        continue
-    fi
-
-     # 檢查是否有沒有描述的連結
-     # 匹配：- [文字](/path) 但後面沒有 — 描述
-    if grep -E "^\s*- \[.*\]\([^)]*\)" "$article" | grep -v " — " > /dev/null 2>&1; then
-        echo -e "${YELLOW}⚠️ $filename: 延伸閱讀缺少描述${NC}"
-        issues=$((issues + 1))
-        continue
-    fi
-
-     # 檢查格式是否正確
-    if grep -qE "^\s*- \[.*\].* — .*" "$article"; then
-        echo -e "${GREEN}✓ $filename: 格式正確${NC}"
-    else
-        echo -e "${GREEN}✓ $filename: 格式正確（無延伸閱讀）${NC}"
-    fi
-done
-
-echo ""
-echo "================================"
-echo "總結："
-total=$(echo "$articles" | wc -l | tr -d ' ')
-correct=$((total - issues))
-echo -e "  總計：$total 篇"
-echo -e "  格式正確：$correct 篇"
-echo -e "${RED}有問題：$issues 篇${NC}"
-echo ""
-
-if [ $issues -gt 0 ]; then
-    echo "建議手動修正上述文章。"
-    exit 1
+if [ "$JSON_MODE" = true ]; then
+    echo "{\"total_files\": $total, \"wikilink_issues\": $issues}"
 else
-    echo -e "${GREEN}所有文章格式正確！${NC}"
-    exit 0
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "📊 掃描 $total 篇文章"
+    if [ "$issues" -eq 0 ]; then
+        echo -e "${GREEN}✅ 無 [[wikilink]] 殘留${NC}"
+    else
+        echo -e "${RED}❌ 發現 $issues 處 [[wikilink]] 需修正${NC}"
+        echo "   修正方式：[[文章名]] → [文章名](/category/slug)"
+    fi
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 fi
