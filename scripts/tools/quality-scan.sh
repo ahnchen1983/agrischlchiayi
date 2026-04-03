@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# quality-scan.sh v3.1 — 偵測疑似 AI 空洞模板的文章 + 引用荒漠偵測
+# quality-scan.sh v3.2 — 偵測疑似 AI 空洞模板的文章 + 引用健康度整合報告
 # 用法: bash tools/quality-scan.sh [--fix] [--json] [--diff] [--sort]
 #
 # v3.0 新增:
@@ -66,6 +66,17 @@ SUSPECT=0
 declare -a FLAGGED_FILES=()
 declare -a SCORES=()
 declare -a REASONS=()
+
+# ── Citation health tracking (造橋鋪路: 每次掃描自動報告引用健康度) ──
+CITE_TOTAL=0
+CITE_HAS_FN=0
+CITE_HAS_URL=0
+CITE_NAKED=0
+CITE_GRADE_A=0
+CITE_GRADE_B=0
+CITE_GRADE_C=0
+CITE_GRADE_D=0
+CITE_GRADE_F=0
 
 scan_file() {
   local f="$1"
@@ -390,14 +401,14 @@ scan_file() {
     reasons="${reasons}中國用語×${china_hits}[${china_found}] "
   fi
 
-  # ── 16. 🆕 CITATION-DESERT（引用荒漠：無正式腳註）──
+  # ── 16. CITATION-DESERT（引用荒漠：無正式腳註）──
   local fn_def_count
   fn_def_count=$(grep -cE '^\[\^[0-9a-zA-Z_-]+\]:' "$f" 2>/dev/null || echo "0")
   fn_def_count=${fn_def_count//[[:space:]]/}
+  # Always compute content_words (needed for citation health grading below)
+  local content_words
+  content_words=$(awk 'BEGIN{fm=0} /^---$/{fm++; next} fm>=2{print}' "$f" | wc -w | tr -d '[:space:]')
   if [[ $fn_def_count -eq 0 ]]; then
-    # Check word count to avoid penalizing stubs
-    local content_words
-    content_words=$(awk 'BEGIN{fm=0} /^---$/{fm++; next} fm>=2{print}' "$f" | wc -w | tr -d '[:space:]')
     if [[ $content_words -gt 500 ]]; then
       if [[ $url_count -eq 0 ]]; then
         score=$((score + 4))
@@ -414,6 +425,32 @@ scan_file() {
 
   TOTAL=$((TOTAL + 1))
 
+  # ── Citation health grading (integrated from footnote-scan logic) ──
+  CITE_TOTAL=$((CITE_TOTAL + 1))
+  local cite_grade=""
+  if [[ $fn_def_count -ge 3 ]]; then
+    local cite_density=999999
+    [[ $fn_def_count -gt 0 ]] && cite_density=$((content_words / fn_def_count))
+    if [[ $cite_density -le 300 ]]; then
+      cite_grade="A"; CITE_GRADE_A=$((CITE_GRADE_A + 1))
+    else
+      cite_grade="B"; CITE_GRADE_B=$((CITE_GRADE_B + 1))
+    fi
+    CITE_HAS_FN=$((CITE_HAS_FN + 1))
+  elif [[ $fn_def_count -ge 1 ]]; then
+    cite_grade="B"; CITE_GRADE_B=$((CITE_GRADE_B + 1))
+    CITE_HAS_FN=$((CITE_HAS_FN + 1))
+  elif [[ $url_count -ge 3 ]]; then
+    cite_grade="C"; CITE_GRADE_C=$((CITE_GRADE_C + 1))
+    CITE_HAS_URL=$((CITE_HAS_URL + 1))
+  elif [[ $url_count -ge 1 ]]; then
+    cite_grade="D"; CITE_GRADE_D=$((CITE_GRADE_D + 1))
+    CITE_HAS_URL=$((CITE_HAS_URL + 1))
+  else
+    cite_grade="F"; CITE_GRADE_F=$((CITE_GRADE_F + 1))
+    CITE_NAKED=$((CITE_NAKED + 1))
+  fi
+
   # 分級: 0-3 OK, 4-7 ⚠️ 可疑, 8+ 🔴 高度可疑
   if [[ $score -ge 4 ]]; then
     SUSPECT=$((SUSPECT + 1))
@@ -427,9 +464,9 @@ scan_file() {
 echo ""
 if [[ "$JSON_MODE" == false ]]; then
   if [[ -n "$SINGLE_FILE" ]]; then
-    echo "🔍 quality-scan v3.1 — 掃描單一檔案: $SINGLE_FILE"
+    echo "🔍 quality-scan v3.2 — 掃描單一檔案: $SINGLE_FILE"
   else
-    echo "🔍 quality-scan v3.1 — 掃描 src/content/zh-TW/"
+    echo "🔍 quality-scan v3.2 — 掃描 src/content/zh-TW/"
   fi
   echo "   評分: 0-3 ✅ OK | 4-7 ⚠️ 可疑 | 8+ 🔴 高度可疑"
   echo "   維度: 原11項 + LIST-DUMP + THIN + QUALITY-DECAY + CHINA-TERM + CITATION-DESERT"
@@ -567,17 +604,44 @@ if [[ "$JSON_MODE" == false ]]; then
     echo -e "   ${GRN}✅ 已修復: ${fixed_count}${RST}"
   fi
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+  # ── Citation health summary (造橋鋪路: 每次掃描自動報告引用健康度) ──
+  if [[ -z "$SINGLE_FILE" ]] && [[ $CITE_TOTAL -gt 0 ]]; then
+    fn_pct=$((CITE_HAS_FN * 100 / CITE_TOTAL))
+    naked_pct=$((CITE_NAKED * 100 / CITE_TOTAL))
+    echo ""
+    echo "📋 引用健康度（整合自 footnote-scan 邏輯）"
+    echo -e "   掃描: ${CITE_TOTAL} 篇"
+    echo -e "   ${GRN}有腳註: ${CITE_HAS_FN} (${fn_pct}%)${RST}  ${YEL}僅URL: ${CITE_HAS_URL}${RST}  ${RED}裸奔: ${CITE_NAKED} (${naked_pct}%)${RST}"
+    echo -e "   等級: ${GRN}A:${CITE_GRADE_A}${RST} ${GRN}B:${CITE_GRADE_B}${RST} ${YEL}C:${CITE_GRADE_C}${RST} ${YEL}D:${CITE_GRADE_D}${RST} ${RED}F:${CITE_GRADE_F}${RST}"
+    if [[ $fn_pct -lt 10 ]]; then
+      echo -e "   ${RED}⚠️  腳註覆蓋率 ${fn_pct}% — 引用荒漠${RST}"
+    elif [[ $fn_pct -lt 30 ]]; then
+      echo -e "   ${YEL}🟡 腳註覆蓋率 ${fn_pct}% — 需要改善${RST}"
+    else
+      echo -e "   ${GRN}✅ 腳註覆蓋率 ${fn_pct}%${RST}"
+    fi
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  fi
 fi
 
 # ── JSON output ──
 if [[ "$JSON_MODE" == true ]]; then
   echo "{"
-  echo "  \"version\": \"3.1\","
+  echo "  \"version\": \"3.2\","
   echo "  \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\","
   echo "  \"total\": $TOTAL,"
   echo "  \"flagged\": $SUSPECT,"
   echo "  \"red\": $(printf '%s\n' ${SCORES[@]+"${SCORES[@]}"} | awk '$1>=8' | wc -l | tr -d '[:space:]'),"
   echo "  \"yellow\": $(printf '%s\n' ${SCORES[@]+"${SCORES[@]}"} | awk '$1>=4 && $1<8' | wc -l | tr -d '[:space:]'),"
+  echo "  \"citation_health\": {"
+  echo "    \"total\": $CITE_TOTAL,"
+  echo "    \"has_footnotes\": $CITE_HAS_FN,"
+  echo "    \"has_urls_only\": $CITE_HAS_URL,"
+  echo "    \"naked\": $CITE_NAKED,"
+  echo "    \"footnote_rate_pct\": $(( CITE_TOTAL > 0 ? CITE_HAS_FN * 100 / CITE_TOTAL : 0 )),"
+  echo "    \"grades\": {\"A\": $CITE_GRADE_A, \"B\": $CITE_GRADE_B, \"C\": $CITE_GRADE_C, \"D\": $CITE_GRADE_D, \"F\": $CITE_GRADE_F}"
+  echo "  },"
   echo "  \"files\": ["
   first=true
   for idx in ${sorted_indices[@]+"${sorted_indices[@]}"}; do
@@ -593,7 +657,7 @@ fi
 # ── Save baseline (always, for diff mode next time) ──
 {
   echo "{"
-  echo "  \"version\": \"3.1\","
+  echo "  \"version\": \"3.2\","
   echo "  \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\","
   echo "  \"total\": $TOTAL,"
   echo "  \"flagged\": $SUSPECT,"

@@ -168,6 +168,10 @@ layer3() {
   local refs; refs=$(grep -c 'http' "$f" 2>/dev/null || echo 0); refs=${refs//[^0-9]/}; refs=${refs:-0}
   (( refs < 3 )) && wrn+=("來源<3")
 
+  # 腳註檢查（造橋鋪路: 讓新文章天生帶腳註）
+  local fns; fns=$(grep -cE '^\[\^[0-9a-zA-Z_-]+\]:' "$f" 2>/dev/null || echo 0); fns=${fns//[^0-9]/}; fns=${fns:-0}
+  (( fns == 0 )) && wrn+=("無腳註[^N]")
+
   if (( ${#wrn[@]} > 0 )); then
     echo "🟡 $(IFS=', '; echo "${wrn[*]}")"
   else echo "✅"
