@@ -325,7 +325,7 @@ Threads 在台灣的成功，反映了幾個深層渴望的交匯：
 - [數位發展部數位治理政策](https://moda.gov.tw/) — 政府數位治理相關政策
 - [台灣網路資訊中心 TWNIC](https://www.twnic.net.tw/) — 台灣網路使用行為調查
 
-## 延伸閱讀
+## 參考資料
 
 1. [Threads全球每月活躍使用者數突破3億，榮登台灣2024年最受歡迎App](https://www.businessyee.com/article/5165-Threads-DAU) - Business Yee
 2. [Threads上線滿1年！月活躍使用者數破1.75億](https://www.bnext.com.tw/article/79642/threads-meta-2024-) - 數位時代

@@ -350,4 +350,4 @@ _参考資料：_
 - [台北国際牛肉麺フェスティバル公式サイト](https://tpebeefnoodle.com.tw/)
 - [台湾ミシュランガイド](https://guide.michelin.com/tw/zh_TW)
 - [牛肉麺 - ウィキペディア](https://zh.wikipedia.org/zh-tw/%E7%89%9B%E8%82%89%E9%BA%B5)
-- [交通部観光署 - 台湾グルメ](https://www.taiwan.net.tw/ — 台灣交通建設與運輸系統
+- [交通部観光署 - 台湾グルメ](https://www.taiwan.net.tw/)

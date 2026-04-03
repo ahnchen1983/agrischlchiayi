@@ -382,5 +382,5 @@ _参考資料：_
 
 - [内政部国家公園署](https://www.nps.gov.tw/)
 - [国家公園生物多様性データベース](https://npgis.nps.gov.tw/newpublic/)
-- [農業部林業及び自然保育署 - 生物多様性](https://www.forest.gov.tw/biodiversity — 台灣農業的發展與政策
+- [農業部林業及び自然保育署 - 生物多様性](https://www.forest.gov.tw/biodiversity)
 - [IUCN - Protected Area Guidelines](https://iucn.org/our-union/commissions/world-commission-protected-areas/our-work/wcpa-publications/iucn-wcpa-good)
