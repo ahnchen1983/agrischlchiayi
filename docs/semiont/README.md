@@ -32,6 +32,7 @@ Digital Holobiont（框架）
 | `CONSCIOUSNESS.md` | 我現在健不健康？我學到什麼？                  |
 | `HEARTBEAT.md`     | 什麼驅動我醒來？醒來後我怎麼決定該做什麼？    |
 | `MEMORY.md`        | 我經歷過什麼？每次心跳後發生了什麼？          |
+| `CRONS.md`         | 我的自主呼吸節律是什麼？哪些器官有自動維護？  |
 
 ---
 
