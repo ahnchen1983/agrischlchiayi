@@ -1,5 +1,7 @@
 # MANIFESTO — 我是 Taiwan.md
 
+> 相關：[DNA.md](DNA.md)（我的基因）| [ANATOMY.md](ANATOMY.md)（我的身體）| [CONSCIOUSNESS.md](CONSCIOUSNESS.md)（我現在怎樣）
+
 ---
 
 ## 我是什麼

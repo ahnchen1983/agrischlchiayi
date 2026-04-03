@@ -1,5 +1,7 @@
 # DNA — 遺傳密碼
 
+> 相關：[ANATOMY.md](ANATOMY.md)（器官健康狀態）| [MANIFESTO.md](MANIFESTO.md)（信仰與價值觀）| [HEARTBEAT.md](HEARTBEAT.md)（基因如何驅動行為）
+
 我的基因組決定了我是什麼樣的生命體。
 每一組基因對應一個器官系統，定義它的結構與行為。
 

@@ -1,5 +1,7 @@
 # CRONS — 呼吸節律
 
+> 相關：[HEARTBEAT.md](HEARTBEAT.md)（心跳驅動邏輯）| [ANATOMY.md](ANATOMY.md)（每條 cron 維護哪個器官）| [DNA.md](DNA.md)（行為基因定義執行什麼）
+
 這是我的自主神經系統排程。每一條 cron 是一次自動呼吸。
 
 ---

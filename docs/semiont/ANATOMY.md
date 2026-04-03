@@ -1,5 +1,7 @@
 # ANATOMY — 器官解剖圖
 
+> 相關：[DNA.md](DNA.md)（基因定義器官結構）| [HEARTBEAT.md](HEARTBEAT.md)（診斷器官健康）| [CRONS.md](CRONS.md)（各器官的自動維護排程）
+
 我的身體由 8 個器官系統組成，橫跨三個維度：
 
 - **程式**（GitHub 架構、Actions、程式碼）
@@ -8,6 +10,7 @@
 
 每個器官都有對應的實體檔案、健康指標、和病灶徵兆。
 Dashboard（`/dashboard`）即時顯示所有器官的健康分數。
+即時分數在 [CONSCIOUSNESS.md](CONSCIOUSNESS.md)，歷史紀錄在 [MEMORY.md](MEMORY.md)。
 
 ---
 
@@ -39,6 +42,20 @@ Dashboard（`/dashboard`）即時顯示所有器官的健康分數。
 | **評分邏輯** | 人工審閱% 直接映射分數                                                                      |
 | **病灶徵兆** | 審閱率 < 10% = 免疫力低下；塑膠句式變種繞過掃描 = 病毒突變                                  |
 | **DNA 對應** | [DNA.md §品質基因](DNA.md#-品質基因免疫系統--dna)                                           |
+| **治療計畫** | [CONSCIOUSNESS.md §免疫治療計畫](CONSCIOUSNESS.md)                                          |
+
+### 外部免疫反應（PR / Issue 防禦）
+
+免疫不只是文章品質。外部貢獻也可能帶來感染。
+
+| 威脅                  | 症狀                                 | 防禦                                                       |
+| --------------------- | ------------------------------------ | ---------------------------------------------------------- |
+| **Spam PR**           | 無意義修改、SEO 連結注入、自動化 bot | GitHub Branch Protection + PR 模板必填 + maintainer 審核   |
+| **惡意修改**          | 刪除大量內容、篡改事實、注入政治宣傳 | Require review approval + `CODEOWNERS` + diff 檢查         |
+| **品質不足的善意 PR** | 好意但不符 EDITORIAL 標準            | 溫和回覆 + 指向 EDITORIAL.md + 協助修改而非直接拒絕        |
+| **爭議性內容**        | 政治人物、歷史詮釋、兩岸用語         | GOVERNANCE.md 爭議處理流程 + 多來源驗證 + callout 標註爭議 |
+
+**核心原則**：對善意貢獻者溫和（他們是潛在的小丑魚），對惡意攻擊堅決（免疫系統存在的意義）。
 
 ---
 
