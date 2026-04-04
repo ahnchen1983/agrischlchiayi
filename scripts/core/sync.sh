@@ -68,7 +68,7 @@ for category in Agri-Basics Agri-Advanced Farm-Management Crop-Production Facili
         # 總是覆蓋以保持同步（SSOT 為準）
         cp "$file" "$target_file"
         echo "  ✅ $category/$filename"
-        ((SYNCED_COUNT++))
+        SYNCED_COUNT=$((SYNCED_COUNT + 1))
       fi
     done
   fi
