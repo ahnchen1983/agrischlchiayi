@@ -8,6 +8,7 @@ import {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer role="contentinfo">
@@ -99,7 +100,7 @@ const translatePath = useTranslatedPath(lang);
         class="justfont-link"
       >
         <img
-          src="/images/justfont-logo.svg"
+          src={`${base}images/justfont-logo.svg`}
           alt="justfont"
           class="justfont-logo"
         />

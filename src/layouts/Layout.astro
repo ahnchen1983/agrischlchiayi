@@ -52,8 +52,16 @@ const jfClass = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href={`${import.meta.env.BASE_URL}favicon.png`}
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href={`${import.meta.env.BASE_URL}favicon.ico`}
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Taiwan Typography System -->
@@ -72,13 +80,16 @@ const jfClass = [
         rel="stylesheet"
       />
     </noscript>
-    <title>{title} | Taiwan.md</title>
+    <title>{title} | 嘉義農業學堂</title>
     <link
       rel="alternate"
       type="application/rss+xml"
-      title="Taiwan.md RSS"
-      href="/rss.xml"
+      title="嘉義農業學堂 RSS"
+      href={`${import.meta.env.BASE_URL}rss.xml`}
     />
+    <script is:inline define:vars={{ __siteBase: import.meta.env.BASE_URL }}>
+      window.__BASE__ = __siteBase;
+    </script>
     <SEO
       title={title}
       description={description}
@@ -448,7 +459,9 @@ const jfClass = [
 
       async function _initSearchEngine() {
         try {
-          var res = await fetch('/api/search-minisearch.json');
+          var res = await fetch(
+            (window.__BASE__ || '/') + 'api/search-minisearch.json',
+          );
           if (!res.ok) throw new Error('HTTP ' + res.status);
           var data = await res.json();
           var MiniSearch = (
@@ -473,7 +486,9 @@ const jfClass = [
             e,
           );
           try {
-            var res2 = await fetch('/api/search-index.json');
+            var res2 = await fetch(
+              (window.__BASE__ || '/') + 'api/search-index.json',
+            );
             if (res2.ok) _fallbackIdx = await res2.json();
             else _fallbackIdx = [];
           } catch (e2) {

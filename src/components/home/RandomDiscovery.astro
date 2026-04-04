@@ -9,6 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { articlesJson } = Astro.props;
 const isEn = lang === 'en';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <section class="random-discovery">
@@ -22,7 +23,7 @@ const isEn = lang === 'en';
   </div>
 </section>
 
-<script is:inline define:vars={{ articlesJson, isEn }}>
+<script is:inline define:vars={{ articlesJson, isEn, baseUrl }}>
   document.addEventListener('DOMContentLoaded', async function () {
     const randomBtn = document.getElementById('random-discovery-btn');
     let articles = [];
@@ -46,7 +47,7 @@ const isEn = lang === 'en';
         lifestyle: '🏮 生活',
       };
       try {
-        const res = await fetch('/api/articles.json');
+        const res = await fetch(baseUrl + 'api/articles.json');
         if (res.ok) {
           const raw = await res.json();
           articles = raw
