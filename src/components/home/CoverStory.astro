@@ -1,61 +1,46 @@
 ---
-import {
-  useTranslations,
-  getLangFromUrl,
-  useTranslatedPath,
-} from '../../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const toHref = (path: string) => base + translatePath(path);
 
 const quotes = [
   {
-    eraKey: 'home.cover.era.indigenous' as const,
-    quoteKey: 'home.cover.quote.indigenous' as const,
-    citeKey: 'home.cover.cite.indigenous' as const,
+    era: '1624',
+    quote: '「嘉南平原，沃野千里，水利之便，為全台之冠。」',
+    cite: '— 荷蘭時期文獻，最早記載嘉南平原農業潛力',
   },
   {
-    era: '1584',
-    quoteKey: 'home.cover.quote.1584' as const,
-    citeKey: 'home.cover.cite.1584' as const,
+    era: '1930',
+    quote: '「嘉南大圳通水之日，即嘉南平原重生之時。」',
+    cite: '— 八田與一，嘉南大圳完工，灌溉面積達 15 萬甲',
   },
   {
-    era: '1697',
-    quoteKey: 'home.cover.quote.1697' as const,
-    citeKey: 'home.cover.cite.1697' as const,
+    era: '1953',
+    quote: '「耕者有其田，是台灣農村安定的基石。」',
+    cite: '— 土地改革時期，奠定台灣小農經濟基礎',
   },
   {
-    era: '1926',
-    quoteKey: 'home.cover.quote.1926' as const,
-    citeKey: 'home.cover.cite.1926' as const,
+    era: '2005',
+    quote: '「阿里山茶不只是飲料，是嘉義山林與人的對話。」',
+    cite: '— 嘉義高山茶農，茶園海拔 1,000-1,700 公尺',
   },
   {
-    era: '1946',
-    quoteKey: 'home.cover.quote.1946' as const,
-    citeKey: 'home.cover.cite.1946' as const,
+    era: '2020',
+    quote: '「智慧農業不是取代農人，而是讓農人更自由。」',
+    cite: '— 國本學堂智慧農業課程講師',
   },
   {
-    era: '2013',
-    quoteKey: 'home.cover.quote.2013' as const,
-    citeKey: 'home.cover.cite.2013' as const,
-  },
-  {
-    eraKey: 'home.cover.era.contemporary' as const,
-    quoteKey: 'home.cover.quote.contemporary' as const,
-    citeKey: 'home.cover.cite.contemporary' as const,
+    era: '現在',
+    quote: '「每一堂課，都是一顆種子。我們種的不只是作物，是知識。」',
+    cite: '— 嘉義農業學堂，持續耕耘中',
   },
 ];
 ---
 
 <section class="cover-story">
   <div class="cover-content">
-    <h2>{t('home.cover.heading')}</h2>
+    <h2>為什麼是嘉義？</h2>
     <p class="cover-lead">
-      {t('home.cover.lead')}<br />
-      {t('home.cover.lead2')}
+      北回歸線穿越的農業重鎮，嘉南平原的心臟地帶。<br />
+      從水稻、小番茄到阿里山茶，嘉義是台灣農業的縮影。
     </p>
     <div class="quotes-timeline">
       {
@@ -66,12 +51,10 @@ const quotes = [
               {i < quotes.length - 1 && <div class="quote-line" />}
             </div>
             <div class="quote-body">
-              <span class="era-label">
-                {'eraKey' in q && q.eraKey ? t(q.eraKey) : q.era}
-              </span>
+              <span class="era-label">{q.era}</span>
               <blockquote>
-                {t(q.quoteKey)}
-                <cite>{t(q.citeKey)}</cite>
+                {q.quote}
+                <cite>{q.cite}</cite>
               </blockquote>
             </div>
           </div>
@@ -79,12 +62,14 @@ const quotes = [
       }
     </div>
     <div class="cover-closing">
-      <p>{t('home.cover.closing1')}</p>
       <p>
-        <strong>{t('home.cover.closing2')}</strong>
-        {t('home.cover.closing3')}
+        從嘉南大圳灌溉的稻田到無人機巡田的智慧農場，從阿公的經驗到青農的創新。嘉義農業的故事跨越百年，仍在繼續。
       </p>
-      <a href={toHref('/about')} class="cover-link">{t('home.cover.link')}</a>
+      <p>
+        <strong>嘉義農業學堂不只是課程紀錄。</strong>
+        我們想把每一堂課變成一篇知識，讓農業智慧不再只留在教室裡。
+      </p>
+      <a href={`${base}/about`} class="cover-link">認識嘉義農業學堂 →</a>
     </div>
   </div>
 </section>
@@ -137,16 +122,16 @@ const quotes = [
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #3b82f6;
+    background: #22c55e;
     border: 2px solid #fff;
-    outline: 2px solid #3b82f6;
+    outline: 2px solid #22c55e;
     flex-shrink: 0;
     margin-top: 0.35rem;
   }
   .quote-line {
     width: 2px;
     flex: 1;
-    background: linear-gradient(180deg, #3b82f6, #e2e8f0);
+    background: linear-gradient(180deg, #22c55e, #e2e8f0);
     margin-top: 4px;
     min-height: 2rem;
   }
@@ -158,8 +143,8 @@ const quotes = [
     background: linear-gradient(180deg, #059669, #e2e8f0);
   }
   .quote-era:last-child .quote-dot {
-    background: #fbbf24;
-    outline-color: #fbbf24;
+    background: #f59e0b;
+    outline-color: #f59e0b;
   }
   .quote-body {
     padding-bottom: 2rem;
@@ -171,10 +156,10 @@ const quotes = [
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0;
-    color: #3b82f6;
+    color: #16a34a;
     margin-bottom: 0.5rem;
     padding: 0.15rem 0.5rem;
-    background: #eff6ff;
+    background: #f0fdf4;
     border-radius: 4px;
   }
   .quote-era:nth-child(even) .era-label {
@@ -222,7 +207,7 @@ const quotes = [
   .cover-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #3b82f6;
+    color: #16a34a;
     text-decoration: none;
     font-weight: 500;
   }
