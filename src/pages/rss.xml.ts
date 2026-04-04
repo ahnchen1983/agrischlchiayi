@@ -7,6 +7,9 @@ export async function GET(context) {
   // 掃描 knowledge/ 下所有文章
   const knowledgeDir = path.join(process.cwd(), 'knowledge');
   const articles = [];
+  const siteUrl = context.site
+    ? new URL(import.meta.env.BASE_URL, context.site).href.replace(/\/$/, '')
+    : 'https://ahnchen1983.github.io/agrischlchiayi';
 
   // 遞迴掃描
   function scanDir(dir, category = '') {
@@ -47,9 +50,10 @@ export async function GET(context) {
   articles.sort((a, b) => b.pubDate - a.pubDate);
 
   return rss({
-    title: 'Taiwan.md — 開源台灣知識庫',
-    description: '用 Markdown 策展台灣，讓世界看見這座島嶼的故事',
-    site: context.site || 'https://taiwan.md',
+    title: '嘉義國本學堂 — 開源農業知識平台',
+    description:
+      '用 Markdown 整理嘉義農業知識，涵蓋農業基礎、作物生產、智慧農業、場域交流與補助規劃。',
+    site: siteUrl,
     items: articles.slice(0, 50),
     customData: '<language>zh-TW</language>',
   });

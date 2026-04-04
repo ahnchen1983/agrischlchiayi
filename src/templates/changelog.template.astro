@@ -5,6 +5,10 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+function normalizeCommitMessage(message: string) {
+  return message.replaceAll('嘉義農業學堂', '嘉義國本學堂');
+}
+
 // Fetch commit history from GitHub API (works in shallow clone CI/CD environments)
 let commits: { hash: string; date: string; message: string; author: string }[] =
   [];
@@ -17,7 +21,7 @@ try {
     commits = data.map((c: any) => ({
       hash: c.sha,
       date: c.commit.author.date,
-      message: c.commit.message.split('\n')[0],
+      message: normalizeCommitMessage(c.commit.message.split('\n')[0]),
       author: c.commit.author.name,
     }));
   }

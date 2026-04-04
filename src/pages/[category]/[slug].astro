@@ -368,7 +368,7 @@ const estimatedReadingTime =
   frontmatter.readingTime ||
   Math.max(1, Math.round(content.replace(/\s+/g, ' ').length / 500));
 
-const articleUrl = `https://taiwan.md/${category}/${slug}`;
+const articleUrl = Astro.url.href;
 const encodedUrl = encodeURIComponent(articleUrl);
 const encodedTitle = encodeURIComponent(title);
 ---

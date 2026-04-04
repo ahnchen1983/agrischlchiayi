@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
 import { readdir, readFile } from 'fs/promises';
 import { resolve, join } from 'path';
 
@@ -48,63 +47,49 @@ const nodes: any[] = [];
 const edges: any[] = [];
 const tagMap: Record<string, string[]> = {}; // tag → article ids
 
-// Pre-fetch all collections
-let allZhArticles: any[] = [];
-try {
-  allZhArticles = await getCollection('zh-TW');
-} catch (e) {
-  console.log('zh-TW collection error:', e);
-}
+// Scan filesystem for article data used by the graph view
+const allZhArticles: any[] = [];
 
-// Fallback: scan filesystem if collections are empty
-if (allZhArticles.length === 0) {
-  try {
-    for (const cat of categories) {
-      const catDir = resolve('src/content/zh-TW', cat);
-      try {
-        const files = await readdir(catDir);
-        for (const file of files) {
-          if (file.endsWith('.md') && !file.startsWith('_')) {
-            const slug = file.replace(/\.md$/, '');
-            const content = await readFile(join(catDir, file), 'utf-8');
-            const titleMatch = content.match(/^title:\s*["']?(.+?)["']?\s*$/m);
-            const tagsMatch = content.match(/^tags:\s*\[(.+?)\]/m);
-            const subcatMatch = content.match(
-              /^subcategory:\s*["']?(.+?)["']?\s*$/m,
-            );
-            const cropMatch = content.match(/^crop:\s*\[(.+?)\]/m);
-            const techMatch = content.match(/^tech:\s*\[(.+?)\]/m);
-            const title = titleMatch ? titleMatch[1] : slug;
-            const tags = tagsMatch
-              ? tagsMatch[1]
-                  .split(',')
-                  .map((t) => t.trim().replace(/["']/g, ''))
-              : [];
-            const subcategory = subcatMatch ? subcatMatch[1] : '';
-            const crop = cropMatch
-              ? cropMatch[1]
-                  .split(',')
-                  .map((c) => c.trim().replace(/["']/g, ''))
-              : [];
-            const tech = techMatch
-              ? techMatch[1]
-                  .split(',')
-                  .map((t) => t.trim().replace(/["']/g, ''))
-              : [];
-            allZhArticles.push({
-              id: `${cat}/${slug}`,
-              data: { title, tags, subcategory, crop, tech },
-            });
-          }
+try {
+  for (const cat of categories) {
+    const catDir = resolve('src/content/zh-TW', cat);
+    try {
+      const files = await readdir(catDir);
+      for (const file of files) {
+        if (file.endsWith('.md') && !file.startsWith('_')) {
+          const slug = file.replace(/\.md$/, '');
+          const content = await readFile(join(catDir, file), 'utf-8');
+          const titleMatch = content.match(/^title:\s*["']?(.+?)["']?\s*$/m);
+          const tagsMatch = content.match(/^tags:\s*\[(.+?)\]/m);
+          const subcatMatch = content.match(
+            /^subcategory:\s*["']?(.+?)["']?\s*$/m,
+          );
+          const cropMatch = content.match(/^crop:\s*\[(.+?)\]/m);
+          const techMatch = content.match(/^tech:\s*\[(.+?)\]/m);
+          const title = titleMatch ? titleMatch[1] : slug;
+          const tags = tagsMatch
+            ? tagsMatch[1].split(',').map((t) => t.trim().replace(/["']/g, ''))
+            : [];
+          const subcategory = subcatMatch ? subcatMatch[1] : '';
+          const crop = cropMatch
+            ? cropMatch[1].split(',').map((c) => c.trim().replace(/["']/g, ''))
+            : [];
+          const tech = techMatch
+            ? techMatch[1].split(',').map((t) => t.trim().replace(/["']/g, ''))
+            : [];
+          allZhArticles.push({
+            id: `${cat}/${slug}`,
+            data: { title, tags, subcategory, crop, tech },
+          });
         }
-      } catch {}
-    }
-  } catch {}
-}
+      }
+    } catch {}
+  }
+} catch {}
 // Center node
 nodes.push({
   id: 'chiayi-agri',
-  label: '嘉義農業學堂',
+  label: '嘉義國本學堂',
   group: 'center',
   size: 30,
 });
@@ -325,11 +310,11 @@ const graphData = JSON.stringify({ nodes, edges });
 const basePath = import.meta.env.BASE_URL;
 ---
 
-<Layout title="🕸️ 知識圖譜 — 嘉義農業學堂">
+<Layout title="🕸️ 知識圖譜 — 嘉義國本學堂">
   <main class="graph-page">
     <div class="graph-header">
       <h1>🕸️ 知識圖譜 Knowledge Graph</h1>
-      <p>嘉義農業學堂的所有知識節點與連結</p>
+      <p>嘉義國本學堂的所有知識節點與連結</p>
       <div class="search-box">
         <input
           id="graph-search"

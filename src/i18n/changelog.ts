@@ -3,12 +3,12 @@ export const changelogUI = {
     // Meta
     'changelog.meta.title': 'Update History',
     'changelog.meta.description':
-      'Real-time update history of Taiwan.md — track every content addition and site improvement.',
+      'Real-time update history of 嘉義國本學堂 — track every content addition and site improvement.',
 
     // Header
     'changelog.header.title': 'Update History',
     'changelog.header.subtitle':
-      'Track every content addition and site improvement on Taiwan.md',
+      'Track every content addition and site improvement on 嘉義國本學堂',
     'changelog.header.meta.updates': 'updates',
     'changelog.header.meta.synced': 'Auto-synced from',
 
@@ -28,11 +28,11 @@ export const changelogUI = {
     // Meta
     'changelog.meta.title': '網站更新紀錄',
     'changelog.meta.description':
-      'Taiwan.md 的即時更新歷史，追蹤每一次內容新增與網站改進。',
+      '嘉義國本學堂的即時更新歷史，追蹤每一次內容新增與網站改進。',
 
     // Header
     'changelog.header.title': '網站更新紀錄',
-    'changelog.header.subtitle': '追蹤 Taiwan.md 的每一次內容新增與網站改進',
+    'changelog.header.subtitle': '追蹤嘉義國本學堂的每一次內容新增與網站改進',
     'changelog.header.meta.updates': '筆更新紀錄',
     'changelog.header.meta.synced': '自動同步自',
 

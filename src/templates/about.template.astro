@@ -1010,7 +1010,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                   class="sponsor-logo-link"
                 >
                   <img
-                    src="/images/nmth-logo.png"
+                    src={`${base}/images/nmth-logo.png`}
                     alt="國立臺灣歷史博物館 NMTH"
                     class="sponsor-logo-img"
                   />
@@ -1046,7 +1046,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                   class="sponsor-logo-link"
                 >
                   <img
-                    src="/images/justfont-logo.svg"
+                    src={`${base}/images/justfont-logo.svg`}
                     alt="justfont"
                     class="sponsor-logo-img"
                     style="height: 28px;"
@@ -1296,24 +1296,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
       </div>
     </section>
-  </div>
-
-  <!-- Protico Community Chat Bubble — sponsored by Howie Young -->
-  <ProticoScript />
-</Layout>
-
-<style>
-  /* ===== Global ===== */
-  .about-page {
-    padding-bottom: 0;
-  }
-
-  .section-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
   </div>
 
   <!-- Protico Community Chat Bubble — sponsored by Howie Young -->

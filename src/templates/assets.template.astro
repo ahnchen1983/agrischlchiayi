@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -29,7 +30,10 @@ const t = useTranslations(lang);
     <section class="svg-cards">
       <div class="card">
         <div class="card-preview">
-          <img src="/assets/svg/taiwan-icon-wiki.svg" alt="Taiwan Icon" />
+          <img
+            src={`${base}/assets/svg/taiwan-icon-wiki.svg`}
+            alt="Taiwan Icon"
+          />
         </div>
         <div class="card-info">
           <h3>{t('assets.card1.title')}</h3>
@@ -37,7 +41,7 @@ const t = useTranslations(lang);
           <p class="card-meta">{t('assets.card1.meta')}</p>
           <div class="card-actions">
             <a
-              href="/assets/svg/taiwan-icon-wiki.svg"
+              href={`${base}/assets/svg/taiwan-icon-wiki.svg`}
               download
               class="btn btn-primary">{t('assets.btn.download')}</a
             >
@@ -56,7 +60,7 @@ const t = useTranslations(lang);
       <div class="card">
         <div class="card-preview">
           <img
-            src="/assets/svg/taiwan-simplemaps.svg"
+            src={`${base}/assets/svg/taiwan-simplemaps.svg`}
             alt="Taiwan SimpleMaps"
           />
         </div>
@@ -66,7 +70,7 @@ const t = useTranslations(lang);
           <p class="card-meta">{t('assets.card2.meta')}</p>
           <div class="card-actions">
             <a
-              href="/assets/svg/taiwan-simplemaps.svg"
+              href={`${base}/assets/svg/taiwan-simplemaps.svg`}
               download
               class="btn btn-primary">{t('assets.btn.download')}</a
             >
@@ -85,7 +89,7 @@ const t = useTranslations(lang);
       <div class="card">
         <div class="card-preview">
           <img
-            src="/assets/svg/taiwan-location-map.svg"
+            src={`${base}/assets/svg/taiwan-location-map.svg`}
             alt="Taiwan Location Map"
           />
         </div>
@@ -95,7 +99,7 @@ const t = useTranslations(lang);
           <p class="card-meta">{t('assets.card3.meta')}</p>
           <div class="card-actions">
             <a
-              href="/assets/svg/taiwan-location-map.svg"
+              href={`${base}/assets/svg/taiwan-location-map.svg`}
               download
               class="btn btn-primary">{t('assets.btn.download')}</a
             >
@@ -114,7 +118,7 @@ const t = useTranslations(lang);
       <div class="card">
         <div class="card-preview">
           <img
-            src="/assets/svg/taiwan-political-division.svg"
+            src={`${base}/assets/svg/taiwan-political-division.svg`}
             alt="Taiwan Political Division Map"
           />
         </div>
@@ -124,7 +128,7 @@ const t = useTranslations(lang);
           <p class="card-meta">{t('assets.card4.meta')}</p>
           <div class="card-actions">
             <a
-              href="/assets/svg/taiwan-political-division.svg"
+              href={`${base}/assets/svg/taiwan-political-division.svg`}
               download
               class="btn btn-primary">{t('assets.btn.download')}</a
             >
@@ -173,8 +177,10 @@ const t = useTranslations(lang);
 
   <script is:inline>
     async function copySVG(filename, btn) {
+      const siteBase = window.__BASE__?.replace(/\/$/, '') || '';
+
       try {
-        const res = await fetch('/assets/svg/' + filename);
+        const res = await fetch(`${siteBase}/assets/svg/${filename}`);
         const text = await res.text();
         await navigator.clipboard.writeText(text);
         const orig = btn.dataset.origText;

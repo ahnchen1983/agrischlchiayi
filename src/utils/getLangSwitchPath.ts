@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 export async function getLangSwitchPath(currentPath: string) {
   // Language switch logic — use _translations.json for article pages
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   let zhLink = '/';
   let enLink = '/en';
 
@@ -77,34 +78,39 @@ export async function getLangSwitchPath(currentPath: string) {
   } catch {}
 
   const normalizedPath = normalizePath(currentPath);
-  const decodedPath = normalizePath(decodeURIComponent(normalizedPath));
+  const routePath =
+    base && normalizedPath.startsWith(base)
+      ? normalizePath(normalizedPath.slice(base.length) || '/')
+      : normalizedPath;
+  const decodedPath = normalizePath(decodeURIComponent(routePath));
 
-  if (normalizedPath.startsWith('/en')) {
-    enLink = normalizedPath;
+  if (routePath.startsWith('/en')) {
+    enLink = routePath;
     zhLink =
       translationMap.get(decodedPath) ||
-      translationMap.get(normalizedPath) ||
+      translationMap.get(routePath) ||
       (() => {
-        const match = normalizedPath.match(/^\/en\/([^/]+)\/[^/]+$/);
-        return match
-          ? `/${match[1]}`
-          : normalizedPath.replace(/^\/en/, '') || '/';
+        const match = routePath.match(/^\/en\/([^/]+)\/[^/]+$/);
+        return match ? `/${match[1]}` : routePath.replace(/^\/en/, '') || '/';
       })();
   } else {
-    zhLink = normalizedPath;
+    zhLink = routePath;
     enLink =
       reverseMap.get(decodedPath) ||
-      reverseMap.get(normalizedPath) ||
+      reverseMap.get(routePath) ||
       (() => {
-        const match = normalizedPath.match(/^\/([^/]+)\/[^/]+$/);
+        const match = routePath.match(/^\/([^/]+)\/[^/]+$/);
         return match
           ? `/en/${match[1]}`
-          : '/en' + (normalizedPath === '/' ? '' : normalizedPath);
+          : '/en' + (routePath === '/' ? '' : routePath);
       })();
   }
 
+  const withBase = (path: string) =>
+    base ? `${base}${path === '/' ? '/' : path}` : path;
+
   return {
-    enLink,
-    zhLink,
+    enLink: withBase(enLink),
+    zhLink: withBase(zhLink),
   };
 }

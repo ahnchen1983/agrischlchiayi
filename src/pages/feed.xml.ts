@@ -2,9 +2,9 @@ import { readdir, readFile } from 'fs/promises';
 import { resolve, join, basename } from 'path';
 import matter from 'gray-matter';
 
-// RSS Feed generation for Taiwan.md
+// RSS Feed generation for 嘉義國本學堂
 export async function GET() {
-  const siteUrl = 'https://taiwan.md';
+  const siteUrl = 'https://ahnchen1983.github.io/agrischlchiayi';
 
   // Category mapping to folder names
   const categoryMapping: Record<string, string> = {
@@ -79,18 +79,18 @@ export async function GET() {
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Taiwan.md - 台灣知識庫</title>
-    <description>讓全世界完整認識台灣 - 開源台灣知識庫，蒐集關於台灣的政治、經濟、文化、歷史、地理等各方面知識。</description>
+    <title>嘉義國本學堂 - 開源農業知識平台</title>
+    <description>以嘉義縣國本學堂與在地農業課程為基礎，整理農業基礎、作物生產、智慧農業、農場管理與補助申請等主題。</description>
     <link>${siteUrl}</link>
     <language>zh-TW</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <pubDate>${new Date().toUTCString()}</pubDate>
-    <managingEditor>cheyu.wu@monoame.com (Taiwan.md)</managingEditor>
-    <webMaster>cheyu.wu@monoame.com (Taiwan.md)</webMaster>
+    <managingEditor>ahnchen (嘉義國本學堂)</managingEditor>
+    <webMaster>ahnchen (嘉義國本學堂)</webMaster>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>${siteUrl}/images/taiwan-social.jpg</url>
-      <title>Taiwan.md - 台灣知識庫</title>
+      <url>${siteUrl}/favicon.png</url>
+      <title>嘉義國本學堂 - 開源農業知識平台</title>
       <link>${siteUrl}</link>
     </image>
 ${latestArticles

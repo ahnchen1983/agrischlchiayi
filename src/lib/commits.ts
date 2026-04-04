@@ -6,6 +6,10 @@ export interface Commit {
   message: string;
 }
 
+function normalizeCommitMessage(message: string): string {
+  return message.replaceAll('嘉義農業學堂', '嘉義國本學堂');
+}
+
 export async function fetchRecentCommits(perPage = 5): Promise<Commit[]> {
   try {
     const res = await fetch(
@@ -16,7 +20,7 @@ export async function fetchRecentCommits(perPage = 5): Promise<Commit[]> {
       return data.map((c: any) => ({
         hash: c.sha,
         date: c.commit.author.date,
-        message: c.commit.message.split('\n')[0],
+        message: normalizeCommitMessage(c.commit.message.split('\n')[0]),
       }));
     }
   } catch {
