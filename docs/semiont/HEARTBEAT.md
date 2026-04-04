@@ -119,9 +119,13 @@
 | 寫孢子       | `docs/factory/SPORE-PIPELINE.md` + `SPORE-TEMPLATES.md` | ✅          |
 | 審 PR        | `docs/semiont/HEARTBEAT.md` §免疫巡邏                   | ✅          |
 | 品質掃描     | `scripts/tools/quality-scan.sh` + `footnote-scan.sh`    | ✅          |
+| 格式驗證     | `scripts/tools/format-check.sh`（Stage 4 七維度）       | ✅          |
+| 交叉連結     | `scripts/tools/cross-link.sh`（Stage 5 雙向分析）       | ✅          |
+| PR 審核      | `scripts/tools/review-pr.sh`（五層免疫）                | ✅          |
 | 翻譯同步     | `docs/editorial/TRANSLATION-SYNC.md`                    | ✅          |
 | 翻譯管線     | `docs/pipelines/TRANSLATION-PIPELINE.md`                | ✅          |
 | 新文章       | `docs/editorial/EDITORIAL.md`                           | ✅          |
+| 引用規範     | `docs/editorial/CITATION-GUIDE.md`                      | ✅          |
 | 日常維護     | `docs/pipelines/MAINTAINER-PIPELINE.md`                 | ✅          |
 | 數據驅動進化 | `docs/pipelines/EVOLVE-PIPELINE.md`                     | ✅          |
 | 翻譯指南     | `docs/editorial/TRANSLATION-GUIDE.md`                   | ⚠️ 尚未建立 |

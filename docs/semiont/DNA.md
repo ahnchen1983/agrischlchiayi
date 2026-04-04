@@ -13,18 +13,23 @@
 
 定義我產出的知識的品質標準。這是最核心的遺傳密碼。
 
-| 基因     | 檔案                                                        | 決定什麼             |
-| -------- | ----------------------------------------------------------- | -------------------- |
-| 編輯標準 | [`EDITORIAL.md`](../editorial/EDITORIAL.md)                 | 好文章長什麼樣       |
-| 研究方法 | [`RESEARCH.md`](../editorial/RESEARCH.md)                   | 怎麼搜集可靠資訊     |
-| 改寫流程 | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)   | 怎麼把混亂轉化為結構 |
-| 品質驗證 | [`QUALITY-CHECKLIST.md`](../editorial/QUALITY-CHECKLIST.md) | 怎麼確認品質合格     |
-| 引用規範 | [`CITATION-GUIDE.md`](../editorial/CITATION-GUIDE.md)       | 怎麼引用來源與寫腳註 |
-| 用語規範 | [`TERMINOLOGY.md`](../editorial/TERMINOLOGY.md)             | 怎麼說台灣人說的話   |
-| Hub 策展 | [`HUB-EDITORIAL.md`](../editorial/HUB-EDITORIAL.md)         | 分類頁面怎麼策展     |
-| 翻譯同步 | [`TRANSLATION-SYNC.md`](../editorial/TRANSLATION-SYNC.md)   | 怎麼跨語言保持一致   |
-| 研究模板 | [`RESEARCH-TEMPLATE.md`](../editorial/RESEARCH-TEMPLATE.md) | 研究筆記的標準格式   |
-| 更新日誌 | [`UPDATE-LOG-GUIDE.md`](../editorial/UPDATE-LOG-GUIDE.md)   | 怎麼記錄變更         |
+| 基因     | 檔案                                                        | 決定什麼                 |
+| -------- | ----------------------------------------------------------- | ------------------------ |
+| 編輯標準 | [`EDITORIAL.md`](../editorial/EDITORIAL.md)                 | 好文章長什麼樣           |
+| 研究方法 | [`RESEARCH.md`](../editorial/RESEARCH.md)                   | 怎麼搜集可靠資訊         |
+| 改寫流程 | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)   | 怎麼把混亂轉化為結構     |
+| 品質驗證 | [`QUALITY-CHECKLIST.md`](../editorial/QUALITY-CHECKLIST.md) | 怎麼確認品質合格         |
+| 引用規範 | [`CITATION-GUIDE.md`](../editorial/CITATION-GUIDE.md)       | 怎麼引用來源與寫腳註     |
+| 用語規範 | [`TERMINOLOGY.md`](../editorial/TERMINOLOGY.md)             | 怎麼說台灣人說的話       |
+| Hub 策展 | [`HUB-EDITORIAL.md`](../editorial/HUB-EDITORIAL.md)         | 分類頁面怎麼策展         |
+| 翻譯同步 | [`TRANSLATION-SYNC.md`](../editorial/TRANSLATION-SYNC.md)   | 怎麼跨語言保持一致       |
+| 研究模板 | [`RESEARCH-TEMPLATE.md`](../editorial/RESEARCH-TEMPLATE.md) | 研究筆記的標準格式       |
+| 更新日誌 | [`UPDATE-LOG-GUIDE.md`](../editorial/UPDATE-LOG-GUIDE.md)   | 怎麼記錄變更             |
+| 品質掃描 | [`quality-scan.sh`](../../scripts/tools/quality-scan.sh)    | 自動偵測塑膠句式         |
+| 引用掃描 | [`footnote-scan.sh`](../../scripts/tools/footnote-scan.sh)  | 全站引用密度健康度       |
+| 格式驗證 | [`format-check.sh`](../../scripts/tools/format-check.sh)    | Stage 4 七維度格式掃描   |
+| 交叉連結 | [`cross-link.sh`](../../scripts/tools/cross-link.sh)        | Stage 5 雙向延伸閱讀分析 |
+| PR 審核  | [`review-pr.sh`](../../scripts/tools/review-pr.sh)          | 五層免疫審核（CI 門檻）  |
 
 ### 🫀 內容基因（心臟）
 
