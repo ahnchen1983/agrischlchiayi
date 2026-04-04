@@ -167,8 +167,9 @@ export const homeUI = {
       '，但堅持讓繁體中文站在前面。 AI 看得懂，搜尋引擎看得懂，而你——如果看不懂也沒關係——這份美麗本身就值得被看見。',
     'home.lang.en':
       "Taiwan.md is written in Traditional Chinese by default — the world's oldest writing system still in daily use, and Taiwan is its last major home. We offer an English version too, but we believe our language deserves to stand front and center. Even if you can't read it, its beauty speaks for itself.",
-    'home.updates.heading': '網站即時更新',
-    'home.updates.subtitle': 'Taiwan.md 持續成長中 — 最近的內容更新與網站改進',
+    'home.updates.heading': '最新動態',
+    'home.updates.subtitle':
+      '嘉義農業學堂持續更新中 — 最近的內容新增與網站改進',
     'home.updates.viewAll': '查看完整更新紀錄 →',
     'home.newsletter.heading': '📬 訂閱 Taiwan.md 週報',
     'home.newsletter.description': '每週精選台灣知識，直送信箱。',

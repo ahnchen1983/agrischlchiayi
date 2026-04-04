@@ -15,9 +15,9 @@ const base = import.meta.env.BASE_URL;
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo">🇹🇼 Taiwan.md</span>
-        <p>{t('footer.desc')}</p>
-        <p class="footer-heart">Built with ❤️ in Taiwan</p>
+        <span class="footer-logo">🌾 嘉義農業學堂</span>
+        <p>國本學堂農業課程知識庫 — 開源農業知識平台</p>
+        <p class="footer-heart">Built with 🌱 in Chiayi</p>
         <p class="footer-license">
           <a
             href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-tw"
@@ -38,56 +38,38 @@ const base = import.meta.env.BASE_URL;
             CC BY-SA 4.0
           </a>
         </p>
-        <p class="footer-eth">
-          <span class="footer-eth-label">{t('footer.support-us')}:</span>
-          <code class="footer-eth-address">taiwanmd.eth</code>
-        </p>
       </div>
       <div class="footer-col">
-        <h4>{t('footer.explore')}</h4>
-        <a href={translatePath('/history')}>{t('footer.history')}</a>
-        <a href={translatePath('/culture')}>{t('footer.culture')}</a>
-        <a href={translatePath('/food')}>{t('footer.food')}</a>
-        <a href={translatePath('/technology')}>{t('footer.technology')}</a>
-        <a href={translatePath('/nature')}>{t('footer.nature')}</a>
-        <a href={translatePath('/society')}>{t('footer.society')}</a>
+        <h4>探索知識</h4>
+        <a href={translatePath('/agri-basics')}>🌱 農業基礎入門</a>
+        <a href={translatePath('/crop-production')}>🌿 作物生產技術</a>
+        <a href={translatePath('/smart-farming')}>🤖 智慧農業</a>
+        <a href={translatePath('/farm-management')}>🏡 農場經營管理</a>
+        <a href={translatePath('/field-visits')}>🚜 場域交流觀摩</a>
+        <a href={translatePath('/grants-planning')}>📝 計畫撰寫補助</a>
       </div>
       <div class="footer-col">
-        <h4>{t('footer.project')}</h4>
-        <a href="https://github.com/frank890417/taiwan-md" target="_blank"
+        <h4>專案</h4>
+        <a href="https://github.com/ahnchen1983/agrischlchiayi" target="_blank"
           >GitHub</a
         >
-        <a href={translatePath('/about')}>{t('footer.about')}</a>
-        <a href={translatePath('/graph')}>{t('footer.graph')}</a>
-        <a href={translatePath('/data')}
-          >{lang === 'en' ? 'Data' : '數據台灣'}</a
-        >
-        <a href={translatePath('/dashboard')}
-          >{lang === 'en' ? 'Dashboard' : '監測面板'}</a
-        >
+        <a href={translatePath('/about')}>關於</a>
+        <a href={translatePath('/graph')}>知識圖譜</a>
         <a
-          href="https://github.com/frank890417/taiwan-md/blob/main/CONTRIBUTING.md"
-          target="_blank">{t('footer.contribute')}</a
+          href="https://github.com/ahnchen1983/agrischlchiayi/blob/main/CONTRIBUTING.md"
+          target="_blank">貢獻指南</a
         >
-        <a href={translatePath('/changelog')}>{t('footer.changelog')}</a>
+        <a href={translatePath('/changelog')}>更新紀錄</a>
       </div>
       <div class="footer-col">
-        <h4>{t('footer.contact')}</h4>
-        <a href="https://x.com/taiwandotmd" target="_blank">𝕏 @taiwandotmd</a>
-        <a href="https://www.threads.com/@taiwandotmd" target="_blank"
-          >Threads @taiwandotmd</a
-        >
-        <a href="https://www.instagram.com/taiwandotmd" target="_blank"
-          >IG @taiwandotmd</a
-        >
-        <a href="mailto:cheyu.wu@monoame.com">cheyu.wu@monoame.com</a>
+        <h4>聯繫</h4>
         <a
-          href="https://github.com/frank890417/taiwan-md/issues"
-          target="_blank">{t('footer.report')}</a
+          href="https://github.com/ahnchen1983/agrischlchiayi/issues"
+          target="_blank">回報問題</a
         >
         <a
-          href="https://github.com/frank890417/taiwan-md/discussions"
-          target="_blank">{t('footer.discuss')}</a
+          href="https://github.com/ahnchen1983/agrischlchiayi/discussions"
+          target="_blank">討論區</a
         >
       </div>
     </div>
@@ -108,7 +90,7 @@ const base = import.meta.env.BASE_URL;
       <span>{t('footer.font-sponsor-suffix')}</span>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Taiwan.md — {t('footer.desc')}
+      &copy; 2026 嘉義農業學堂 — 國本學堂農業課程知識庫
     </div>
   </div>
 </footer>

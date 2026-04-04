@@ -9,7 +9,7 @@ export interface Commit {
 export async function fetchRecentCommits(perPage = 5): Promise<Commit[]> {
   try {
     const res = await fetch(
-      `https://api.github.com/repos/frank890417/taiwan-md/commits?per_page=${perPage}`,
+      `https://api.github.com/repos/ahnchen1983/agrischlchiayi/commits?per_page=${perPage}`,
     );
     if (res.ok) {
       const data = await res.json();

@@ -408,26 +408,7 @@ const categoryList = [
           >☰</button
         >
 
-        <!-- Lang toggle -->
-        <div
-          class="lang-toggle"
-          role="group"
-          aria-label={t('nav.aria-language-selection')}
-        >
-          <a
-            href={zhLink}
-            class:list={[
-              'lang-btn',
-              { active: !currentPath.startsWith('/en') },
-            ]}
-            aria-label={t('nav.aria-switch-to-zh-tw')}>中文</a
-          >
-          <a
-            href={enLink}
-            class:list={['lang-btn', { active: currentPath.startsWith('/en') }]}
-            aria-label={t('nav.aria-switch-to-en')}>EN</a
-          >
-        </div>
+        <!-- Lang toggle removed -->
       </div>
 
       <!-- Mobile Nav -->
@@ -470,31 +451,7 @@ const categoryList = [
           onclick="document.querySelector('.nav-mobile').classList.remove('open')"
           >GitHub</a
         >
-        <div class="mobile-lang-toggle">
-          <span class="mobile-lang-label"
-            >{`🌐 ${t('nav.language-switch')}:`}</span
-          >
-          <div class="mobile-lang-buttons">
-            <a
-              href={zhLink}
-              class:list={[
-                'mobile-lang-btn',
-                { active: !currentPath.startsWith('/en') },
-              ]}
-              onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-              >中文</a
-            >
-            <a
-              href={enLink}
-              class:list={[
-                'mobile-lang-btn',
-                { active: currentPath.startsWith('/en') },
-              ]}
-              onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-              >English</a
-            >
-          </div>
-        </div>
+        <!-- mobile lang toggle removed -->
       </nav>
     </header>
   </div>
