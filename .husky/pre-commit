@@ -1,3 +1,6 @@
+# 確保 node / bun 在 PATH 中（husky 環境 PATH 比 shell 環境窄）
+export PATH="$PATH:/usr/local/bin:/Users/cheyuwu/.bun/bin"
+
 bunx lint-staged
 
 # Validate frontmatter on staged .md files in knowledge/
