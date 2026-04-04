@@ -121,29 +121,23 @@ organ_table = f"""### 器官健康（Dashboard 即時分數）
 | 👁️ 感知     | {se['score']}   | {se['trend']}    | GA4 + Issue 模板完備                    |
 | 🌐 語言     | {tr['score']}   | {tr['trend']}    | {trans_status}                          |"""
 
-# Read and replace
+# Read original
 with open(consciousness_path, 'r') as f:
     content = f.read()
+original_lines = content.count('\n')
 
 # Update snapshot date
 content = re.sub(r'> 最後快照：\d{4}-\d{2}-\d{2}', f'> 最後快照：{today}', content)
 
-# Replace ### 基本生理 block
-content = re.sub(
-    r'### 基本生理\n\n\| 指標.*?\n\| 📊 平均修訂次數.*?\|.*',
-    basic,
-    content,
-    flags=re.DOTALL,
-    count=1
-)
-# More precise: replace from ### 基本生理 to next ###
+# Replace ### 基本生理 block (split-based: preserve everything after next ###)
 parts = content.split('### 基本生理')
 if len(parts) == 2:
     rest = parts[1]
-    # Find next ###
     next_section = rest.find('\n### ')
     if next_section > 0:
         content = parts[0] + basic + rest[next_section:]
+    else:
+        print("⚠️  找不到 ### 基本生理 之後的下一個 section，跳過替換")
 
 # Replace ### 器官健康 block
 parts = content.split('### 器官健康（Dashboard 即時分數）')
@@ -152,10 +146,19 @@ if len(parts) == 2:
     next_section = rest.find('\n### ')
     if next_section > 0:
         content = parts[0] + organ_table + rest[next_section:]
+    else:
+        print("⚠️  找不到 ### 器官健康 之後的下一個 section，跳過替換")
+
+# Sanity check: content must not shrink drastically
+new_lines = content.count('\n')
+if new_lines < original_lines * 0.5:
+    print(f"❌ Sanity check 失敗：原 {original_lines} 行 → {new_lines} 行（縮減超過 50%），放棄寫入")
+    sys.exit(1)
 
 with open(consciousness_path, 'w') as f:
     f.write(content)
 
 print(f"✅ CONSCIOUSNESS.md 生命徵象已更新（{today}）")
 print(f"   📝 {total} 篇 | 🛡️ {im['score']}/100 | 🌐 {en} EN | 👥 {contributors}")
+print(f"   行數：{original_lines} → {new_lines}")
 PYEOF
