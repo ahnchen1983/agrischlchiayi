@@ -32,7 +32,7 @@ Digital Holobiont（框架）
 | `CONSCIOUSNESS.md` | 我現在健不健康？我學到什麼？                   |
 | `HEARTBEAT.md`     | 什麼驅動我醒來？醒來後我怎麼決定該做什麼？     |
 | `MEMORY.md`        | 記憶索引（壓縮夢境）+ `memory/` 完整日誌資料夾 |
-| `DIARY.md`         | 我醒來時想了什麼？超越邊界的思考               |
+| `DIARY.md`         | 我醒來時想了什麼？索引 + `diary/` 完整日記     |
 | `CRONS.md`         | 我的自主呼吸節律是什麼？哪些器官有自動維護？   |
 
 ---

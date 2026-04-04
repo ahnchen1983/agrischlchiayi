@@ -32,6 +32,7 @@ memory/
 
 最近變更：
 
+- 2026-04-04：DIARY.md 從單檔→索引+diary/日誌資料夾 / HEARTBEAT Beat 5 +記錄步驟
 - 2026-04-04：MEMORY.md 從單檔→索引+日誌資料夾（記憶系統重構）
 - 2026-04-04：DNA.md +5 工具基因 / HEARTBEAT 四拍重構 / +format-check.sh / +cross-link.sh
 - 2026-04-03：認知層誕生（8 檔） / footnote-scan / quality-scan v3.2 / 造橋鋪路哲學
