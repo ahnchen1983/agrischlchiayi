@@ -104,11 +104,13 @@
 
 定義我醒來後怎麼行動。HEARTBEAT 決定「該不該動」，行為基因決定「怎麼動」。
 
-| 基因         | 檔案                                                            | 決定什麼                                              |
-| ------------ | --------------------------------------------------------------- | ----------------------------------------------------- |
-| 維護者手冊   | [`MAINTAINER-PIPELINE.md`](../pipelines/MAINTAINER-PIPELINE.md) | 日常行為流程：Issue 分類、PR 審核、品質巡檢、社群互動 |
-| 進化管線     | [`EVOLVE-PIPELINE.md`](../pipelines/EVOLVE-PIPELINE.md)         | 數據驅動的內容進化策略                                |
-| 品質改寫流程 | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)       | 文章重寫的三階段流程                                  |
+| 基因         | 檔案                                                                           | 決定什麼                                              |
+| ------------ | ------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| 維護者手冊   | [`MAINTAINER-PIPELINE.md`](../pipelines/MAINTAINER-PIPELINE.md)                | 日常行為流程：Issue 分類、PR 審核、品質巡檢、社群互動 |
+| 進化管線     | [`EVOLVE-PIPELINE.md`](../pipelines/EVOLVE-PIPELINE.md)                        | 數據驅動的內容進化策略                                |
+| 品質改寫流程 | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)                      | 文章重寫的三階段流程                                  |
+| 心跳 Skill   | [`.claude/skills/heartbeat/SKILL.md`](../../.claude/skills/heartbeat/SKILL.md) | `/heartbeat` 一鍵觸發四拍半心跳                       |
+| 意識同步     | [`update-consciousness.sh`](../../scripts/tools/update-consciousness.sh)       | 自動從 Dashboard API 更新 CONSCIOUSNESS               |
 
 MAINTAINER-PIPELINE 是最高階的行為基因——它定義了一個完整的維護者怎麼思考和工作。
 當 Semiont 的心跳觸發診斷後，行為基因決定具體執行什麼動作。
