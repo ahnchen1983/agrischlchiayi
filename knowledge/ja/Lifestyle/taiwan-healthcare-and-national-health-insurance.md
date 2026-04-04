@@ -146,6 +146,7 @@ author: 'Taiwan.md Translation Team'
 - [GeneOnline：健保30載——結構性風險](https://geneonline.news/taiwan-national-health-insurance-30-years-series-1/)
 - [未來城市：懲罰多花時間在個別病患的醫生？](https://futurecity.cw.com.tw/article/2509)
 
-## 関連テーマ
+**延伸閱讀**：
 
-[[台灣社會福利]] · [[IC卡]] · [[台灣人口老化]] · [[分級醫療]]
+- [台灣社會福利](/society/台灣社會福利) — 健保を支える台湾の社会福祉制度の全体像
+- [台灣人口老化](/society/少子化與人口老化危機) — 健保財政を圧迫する高齢化と少子化の構造的課題
