@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="404 — 找不到頁面 | Taiwan.md">
@@ -10,8 +12,8 @@ import Layout from '../layouts/Layout.astro';
       <p class="error-desc">可能是連結過期、文章被移動，或是網址打錯了。</p>
 
       <div class="error-actions">
-        <a href="/" class="btn btn-primary">← 回首頁</a>
-        <a href="/graph" class="btn btn-secondary">🕸️ 知識圖譜</a>
+        <a href={`${base}/`} class="btn btn-primary">← 回首頁</a>
+        <a href={`${base}/graph`} class="btn btn-secondary">🕸️ 知識圖譜</a>
       </div>
 
       <div class="search-section">
@@ -52,16 +54,16 @@ import Layout from '../layouts/Layout.astro';
       <div class="explore-section">
         <p>或者探索這些主題：</p>
         <div class="category-chips">
-          <a href="/history">📜 歷史</a>
-          <a href="/culture">🎭 文化</a>
-          <a href="/food">🧋 美食</a>
-          <a href="/art">🎨 藝術</a>
-          <a href="/music">🎵 音樂</a>
-          <a href="/technology">💻 科技</a>
-          <a href="/nature">🌿 自然</a>
-          <a href="/people">👥 人物</a>
-          <a href="/economy">📈 經濟</a>
-          <a href="/society">⚖️ 社會</a>
+          <a href={`${base}/history`}>📜 歷史</a>
+          <a href={`${base}/culture`}>🎭 文化</a>
+          <a href={`${base}/food`}>🧋 美食</a>
+          <a href={`${base}/art`}>🎨 藝術</a>
+          <a href={`${base}/music`}>🎵 音樂</a>
+          <a href={`${base}/technology`}>💻 科技</a>
+          <a href={`${base}/nature`}>🌿 自然</a>
+          <a href={`${base}/people`}>👥 人物</a>
+          <a href={`${base}/economy`}>📈 經濟</a>
+          <a href={`${base}/society`}>⚖️ 社會</a>
         </div>
       </div>
     </div>

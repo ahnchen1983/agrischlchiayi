@@ -11,34 +11,35 @@ import ContributeSection from '../components/home/ContributeSection.astro';
 import { fetchRecentCommits } from '../lib/commits';
 
 const recentCommits = await fetchRecentCommits();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const readingPathSteps = [
   {
-    href: '/agri-basics/土壤基礎知識',
+    href: `${base}/agri-basics/土壤基礎知識`,
     title: '🌱 土壤基礎知識',
     description: '認識嘉義地區土壤特性，新農入門第一步',
     time: '5 min',
   },
   {
-    href: '/crop-production/小番茄栽培技術',
+    href: `${base}/crop-production/小番茄栽培技術`,
     title: '🌿 小番茄栽培技術',
     description: '從選種到採收，嘉義小番茄完整栽培指南',
     time: '6 min',
   },
   {
-    href: '/smart-farming/農業物聯網入門',
+    href: `${base}/smart-farming/農業物聯網入門`,
     title: '🤖 農業物聯網入門',
     description: '感測器、數據分析，智慧農業起步走',
     time: '5 min',
   },
   {
-    href: '/farm-management/農場財務規劃',
+    href: `${base}/farm-management/農場財務規劃`,
     title: '🏡 農場財務規劃',
     description: '小農也需要的財務管理基本功',
     time: '5 min',
   },
   {
-    href: '/grants-planning/農業補助申請指南',
+    href: `${base}/grants-planning/農業補助申請指南`,
     title: '📝 農業補助申請指南',
     description: '補助計畫申請流程與撰寫技巧',
     time: '4 min',
@@ -98,7 +99,7 @@ const readingPathFooterItems = [
     ]}
   >
     <div class="features-cta">
-      <a href="/graph" class="feature-btn">🔗 知識圖譜 — 探索文章之間的連結</a>
+      <a href={`${base}/graph`} class="feature-btn">🔗 知識圖譜 — 探索文章之間的連結</a>
       <a
         href="https://github.com/ahnchen1983/agrischlchiayi/tree/main/knowledge"
         target="_blank"
@@ -109,7 +110,7 @@ const readingPathFooterItems = [
   </FeatureCards>
 
   <section class="mini-graph-section">
-    <a href="/graph" class="mini-graph-link">
+    <a href={`${base}/graph`} class="mini-graph-link">
       <div class="mini-graph-text">
         <h3>🕸️ 知識圖譜</h3>
         <p>每篇文章都不是孤島——點擊探索農業知識的連結網絡</p>
@@ -123,45 +124,45 @@ const readingPathFooterItems = [
       <p>
         嘉義，北回歸線穿越的農業重鎮。從嘉南平原的稻浪到阿里山的茶園，
         這裡是台灣農業的核心產區之一。
-        <a href="/agri-basics" class="topic-pill">🌱 農業基礎入門</a
+        <a href={`${base}/agri-basics`} class="topic-pill">🌱 農業基礎入門</
         >帶你認識土壤、水資源與有機農法的第一步。
       </p>
 
       <p>
         國本學堂自創辦以來，培育了數百位新農與返鄉青農。
-        從<a href="/agri-advanced" class="topic-pill">🌾 進階實務</a
-        >的田間管理技巧，到<a href="/crop-production" class="topic-pill"
+        從<a href={`${base}/agri-advanced`} class="topic-pill">🌾 進階實務</
+        >的田間管理技巧，到<a href={`${base}/crop-production`} class="topic-pill"
           >🌿 作物生產</a
         >的小番茄、百香果栽培指南，每一堂課都是來自產地的實戰經驗。
       </p>
 
       <p>
-        現代農業不只是種田。<a href="/smart-farming" class="topic-pill"
+        現代農業不只是種田。<a href={`${base}/smart-farming`} class="topic-pill"
           >🤖 智慧農業</a
         >帶來物聯網感測、智慧灌溉與無人機應用；
-        <a href="/facility-farming" class="topic-pill">🏗️ 設施農業</a
+        <a href={`${base}/facility-farming`} class="topic-pill">🏗️ 設施農業</
         >讓溫室環控成為可能。科技正在改變嘉義的農田風景。
       </p>
 
       <p>
         經營一座農場需要的不只是農藝。
-        <a href="/farm-management" class="topic-pill">🏡 農場經營管理</a
+        <a href={`${base}/farm-management`} class="topic-pill">🏡 農場經營管理</
         >教你財務規劃與人力管理；
-        <a href="/grants-planning" class="topic-pill">📝 計畫撰寫補助</a
+        <a href={`${base}/grants-planning`} class="topic-pill">📝 計畫撰寫補助</
         >幫你掌握補助申請的眉角。
       </p>
 
       <p>
         從產地到餐桌的最後一哩路——<a
-          href="/agri-marketing"
-          class="topic-pill">📦 農產品銷售</a
+          href={`${base}/agri-marketing`}
+          class="topic-pill">📦 農產品銷售</
         >探索品牌建立與通路經營。
-        而<a href="/field-visits" class="topic-pill">🚜 場域交流觀摩</a
+        而<a href={`${base}/field-visits`} class="topic-pill">🚜 場域交流觀摩</
         >帶你走訪模範農場，看見不同經營模式的可能。
       </p>
 
       <p>
-        <a href="/livestock-health" class="topic-pill">🐄 畜牧健康</a
+        <a href={`${base}/livestock-health`} class="topic-pill">🐄 畜牧健康</
         >不可忽視——家禽飼養管理與動物福利同樣是農業的一環。
         所有知識在這裡匯聚，等你探索。
       </p>

@@ -5,6 +5,8 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -196,10 +198,10 @@ const t = useTranslations(lang);
           </p>
         </div>
         <div class="organism-links">
-          <a href="/about/#organism" class="organism-more"
+          <a href={`${base}/about/#organism`} class="organism-more"
             >{t('contribute.organism.readmore')}</a
           >
-          <a href="/dashboard/" class="organism-dashboard-link">
+          <a href={`${base}/dashboard/`} class="organism-dashboard-link">
             🔬 {lang === 'en' ? 'Real-Time Dashboard' : '即時監測面板'} →
           </a>
         </div>

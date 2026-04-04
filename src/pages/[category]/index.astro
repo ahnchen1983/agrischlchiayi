@@ -11,6 +11,8 @@ import {
   type CategoryKey,
 } from '../../utils/categoryConfig';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const safeMatter = (fileContent: string) => {
   try {
     return matter(fileContent);
@@ -161,8 +163,8 @@ function resolveWikilinks(md: string, currentCategory: string) {
         .replace(/ Hub$/, '')
         .toLowerCase();
       return bold
-        ? `<a class="topic-pill" href="/${catName}"><strong>${label}</strong></a>`
-        : `<a class="topic-pill" href="/${catName}">${label}</a>`;
+        ? `<a class="topic-pill" href="${base}/${catName}"><strong>${label}</strong></a>`
+        : `<a class="topic-pill" href="${base}/${catName}">${label}</a>`;
     }
     const matchArticle = articles.find(
       (a: any) =>
@@ -171,7 +173,7 @@ function resolveWikilinks(md: string, currentCategory: string) {
         a.slug === encodeURIComponent(target),
     );
     if (matchArticle) {
-      const url = `/${currentCategory}/${matchArticle.slug}`;
+      const url = `${base}/${currentCategory}/${matchArticle.slug}`;
       return bold
         ? `<a class="topic-pill" href="${url}"><strong>${label}</strong></a>`
         : `<a class="topic-pill" href="${url}">${label}</a>`;
@@ -198,12 +200,13 @@ const resolvedContent = hubContent
 
 // Build set of article URLs for topic-pill detection
 const articleUrlSet = new Set(
-  articles.map((a: any) => `/${category}/${a.slug}`),
+  articles.map((a: any) => `${base}/${category}/${a.slug}`),
 );
 // Also add cross-category hub URLs
 const categoryKeys = Object.keys({
-  history: 1, geography: 1, culture: 1, food: 1, art: 1, music: 1,
-  technology: 1, nature: 1, people: 1, society: 1, economy: 1, lifestyle: 1,
+  'agri-basics': 1, 'agri-advanced': 1, 'farm-management': 1, 'crop-production': 1,
+  'facility-farming': 1, 'smart-farming': 1, 'agri-marketing': 1,
+  'grants-planning': 1, 'field-visits': 1, 'livestock-health': 1,
 });
 
 // Broken image fallback + topic-pill link for hub pages
@@ -218,7 +221,7 @@ hubRenderer.link = ({ href, title, text }) => {
   const h = href || '';
   // Check if link points to an article or a hub category page
   const isArticleLink = articleUrlSet.has(decodeURIComponent(h));
-  const isCategoryLink = categoryKeys.some((k) => h === `/${k}` || h === `/${k}/`);
+  const isCategoryLink = categoryKeys.some((k) => h === `${base}/${k}` || h === `/${k}` || h === `/${k}/`);
   if (isArticleLink || isCategoryLink) {
     return `<a class="topic-pill" href="${h}"${titleAttr}>${text}</a>`;
   }

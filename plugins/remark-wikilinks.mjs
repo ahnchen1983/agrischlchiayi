@@ -6,6 +6,9 @@ import { readdirSync, readFileSync, statSync } from 'fs';
 import { join, basename } from 'path';
 import { visit } from 'unist-util-visit';
 
+// Read base from astro config (available as env or fallback to config)
+const base = (process.env.BASE_URL || '/agrischlchiayi').replace(/\/$/, '');
+
 const categorySlugMap = {
   'Agri-Basics': 'agri-basics',
   'Agri-Advanced': 'agri-advanced',
@@ -36,7 +39,7 @@ function buildMap() {
       for (const file of files) {
         if (!file.endsWith('.md') || file.startsWith('_')) continue;
         const name = basename(file, '.md');
-        titleToUrl.set(name, `/${slug}/${encodeURIComponent(name)}`);
+        titleToUrl.set(name, `${base}/${slug}/${encodeURIComponent(name)}`);
       }
     } catch {}
   }

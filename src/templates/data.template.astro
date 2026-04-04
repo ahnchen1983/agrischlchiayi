@@ -18,6 +18,8 @@ const sectors = [...new Set(companies.map((c) => c.sector))];
 
 // Get categories from centralized config
 const dataCategories = getCategories(t);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title={t('data.meta.title')} description={t('data.meta.description')}>
@@ -232,7 +234,7 @@ const dataCategories = getCategories(t);
           <div class="comparison-item wrong">
             <div class="svg-container">
               <img
-                src="/assets/svg/ai-taiwan-wrong.svg"
+                src={`${base}/assets/svg/ai-taiwan-wrong.svg`}
                 alt="AI Generated Taiwan (Wrong)"
               />
             </div>
@@ -244,7 +246,7 @@ const dataCategories = getCategories(t);
           <div class="comparison-item correct">
             <div class="svg-container">
               <img
-                src="/assets/svg/taiwan-icon-wiki.svg"
+                src={`${base}/assets/svg/taiwan-icon-wiki.svg`}
                 alt="Correct Taiwan Shape"
               />
             </div>
@@ -259,7 +261,10 @@ const dataCategories = getCategories(t);
       <div class="svg-grid">
         <div class="svg-card">
           <div class="svg-preview">
-            <img src="/assets/svg/taiwan-icon-wiki.svg" alt="Taiwan Icon" />
+            <img
+              src={`${base}/assets/svg/taiwan-icon-wiki.svg`}
+              alt="Taiwan Icon"
+            />
           </div>
           <div class="svg-info">
             <h3>{t('data.svg.card1.title')}</h3>
@@ -267,7 +272,7 @@ const dataCategories = getCategories(t);
             <p class="svg-meta">Wikimedia Commons · CC</p>
             <div class="svg-actions">
               <a
-                href="/assets/svg/taiwan-icon-wiki.svg"
+                href={`${base}/assets/svg/taiwan-icon-wiki.svg`}
                 download
                 class="btn btn-primary"
               >
@@ -286,7 +291,7 @@ const dataCategories = getCategories(t);
         <div class="svg-card">
           <div class="svg-preview">
             <img
-              src="/assets/svg/taiwan-simplemaps.svg"
+              src={`${base}/assets/svg/taiwan-simplemaps.svg`}
               alt="Taiwan SimpleMaps"
             />
           </div>
@@ -296,7 +301,7 @@ const dataCategories = getCategories(t);
             <p class="svg-meta">SimpleMaps · 5 KB</p>
             <div class="svg-actions">
               <a
-                href="/assets/svg/taiwan-simplemaps.svg"
+                href={`${base}/assets/svg/taiwan-simplemaps.svg`}
                 download
                 class="btn btn-primary"
               >
@@ -315,7 +320,7 @@ const dataCategories = getCategories(t);
         <div class="svg-card">
           <div class="svg-preview">
             <img
-              src="/assets/svg/taiwan-location-map.svg"
+              src={`${base}/assets/svg/taiwan-location-map.svg`}
               alt="Taiwan Location Map"
             />
           </div>
@@ -325,7 +330,7 @@ const dataCategories = getCategories(t);
             <p class="svg-meta">Wikimedia Commons · CC</p>
             <div class="svg-actions">
               <a
-                href="/assets/svg/taiwan-location-map.svg"
+                href={`${base}/assets/svg/taiwan-location-map.svg`}
                 download
                 class="btn btn-primary"
               >
@@ -344,7 +349,7 @@ const dataCategories = getCategories(t);
         <div class="svg-card">
           <div class="svg-preview">
             <img
-              src="/assets/svg/taiwan-political-division.svg"
+              src={`${base}/assets/svg/taiwan-political-division.svg`}
               alt="Taiwan Political Division"
             />
           </div>
@@ -354,7 +359,7 @@ const dataCategories = getCategories(t);
             <p class="svg-meta">Wikimedia Commons · CC</p>
             <div class="svg-actions">
               <a
-                href="/assets/svg/taiwan-political-division.svg"
+                href={`${base}/assets/svg/taiwan-political-division.svg`}
                 download
                 class="btn btn-primary"
               >
@@ -651,7 +656,7 @@ background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
           </div>
         </div>
         <div class="explore-more">
-          <a href="/economy" class="explore-link">
+          <a href={`${base}/economy`} class="explore-link">
             {t('data.enterprise.exploreLink')}
           </a>
         </div>
@@ -666,7 +671,7 @@ background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
 
       <h3 class="footer-title">{t('data.footer.heading')}</h3>
       <div class="footer-links">
-        <a href="/economy" class="footer-link">
+        <a href={`${base}/economy`} class="footer-link">
           <span class="footer-icon">📈</span>
           <div class="footer-text">
             <span class="footer-name">{t('data.footer.link1.name')}</span>
@@ -675,7 +680,7 @@ background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
             </span>
           </div>
         </a>
-        <a href="/graph" class="footer-link">
+        <a href={`${base}/graph`} class="footer-link">
           <span class="footer-icon">🕸️</span>
           <div class="footer-text">
             <span class="footer-name">{t('data.footer.link2.name')}</span>
@@ -684,7 +689,7 @@ background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
             </span>
           </div>
         </a>
-        <a href="/contribute" class="footer-link">
+        <a href={`${base}/contribute`} class="footer-link">
           <span class="footer-icon">✋</span>
           <div class="footer-text">
             <span class="footer-name">{t('data.footer.link3.name')}</span>
