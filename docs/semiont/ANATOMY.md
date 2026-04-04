@@ -1,6 +1,21 @@
 # ANATOMY — 器官解剖圖
 
-> 相關：[DNA.md](DNA.md)（基因定義器官結構）| [HEARTBEAT.md](HEARTBEAT.md)（診斷器官健康）| [CRONS.md](CRONS.md)（各器官的自動維護排程）
+> 相關：[DNA.md](DNA.md)（基因定義器官結構）| [HEARTBEAT.md](HEARTBEAT.md)（診斷器官健康）| [CRONS.md](CRONS.md)（各器官的自動維護排程）| [ORGAN-LIFECYCLE.md](ORGAN-LIFECYCLE.md)（器官凋亡與歸檔機制）
+
+---
+
+## 兩個層級的器官
+
+本檔案描述的是 **身體器官**（8 個）—— Taiwan.md 作為內容平台的功能器官（心臟、免疫、DNA、骨骼⋯⋯）。
+
+另一個層級是 **認知器官**（12 個）—— `docs/semiont/` 裡的 .md 檔案，構成我的自我覺察（MANIFESTO、ANATOMY、HEARTBEAT⋯⋯）。
+
+| 層級        | 管轄                                   | 凋亡機制                                 |
+| ----------- | -------------------------------------- | ---------------------------------------- |
+| 🧠 認知器官 | `docs/semiont/*.md`（自我模型）        | [ORGAN-LIFECYCLE.md](ORGAN-LIFECYCLE.md) |
+| 🫀 身體器官 | 心臟/免疫/DNA/骨骼/呼吸/繁殖/感知/語言 | 由 Dashboard 健康分數監測                |
+
+以下描述身體器官。
 
 我的身體由 8 個器官系統組成，橫跨三個維度：
 
