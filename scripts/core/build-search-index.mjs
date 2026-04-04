@@ -13,18 +13,19 @@ import matter from 'gray-matter';
 import MiniSearch from 'minisearch';
 
 const CATEGORY_MAP = {
-  history: 'History',
-  geography: 'Geography',
-  culture: 'Culture',
-  food: 'Food',
-  art: 'Art',
-  music: 'Music',
-  technology: 'Technology',
-  nature: 'Nature',
-  people: 'People',
-  society: 'Society',
-  economy: 'Economy',
-  lifestyle: 'Lifestyle',
+  'agri-basics': 'Agri-Basics',
+  'agri-advanced': 'Agri-Advanced',
+  'farm-management': 'Farm-Management',
+  'crop-production': 'Crop-Production',
+  'facility-farming': 'Facility-Farming',
+  'smart-farming': 'Smart-Farming',
+  'agri-marketing': 'Agri-Marketing',
+  'grants-planning': 'Grants-Planning',
+  'field-visits': 'Field-Visits',
+  'livestock-health': 'Livestock-Health',
+  'crop-index': 'Crop-Index',
+  'tech-index': 'Tech-Index',
+  'learning-paths': 'Learning-Paths',
 };
 
 // ── CJK bigram tokenizer ──
@@ -102,43 +103,6 @@ async function scanArticles() {
     } catch (err) {
       if (err.code !== 'ENOENT')
         console.warn(`[search] error reading ${zhPath}:`, err.message);
-    }
-
-    // English articles
-    const enPath = resolve(process.cwd(), 'knowledge', 'en', folder);
-    try {
-      const files = (await readdir(enPath)).filter(
-        (f) => f.endsWith('.md') && !f.startsWith('_'),
-      );
-      for (const file of files) {
-        try {
-          const { data } = matter(await readFile(join(enPath, file), 'utf-8'));
-          const name = basename(file, '.md');
-          const title = data.title || name;
-          const description = data.description || '';
-          const tags = Array.isArray(data.tags)
-            ? data.tags
-            : data.tags
-              ? [data.tags]
-              : [];
-          docs.push({
-            id: id++,
-            t: title,
-            d: description,
-            u: `/en/${slug}/${name}`,
-            tags,
-            lang: 'en',
-            title_bigram: bigramTokenize(title),
-            desc_bigram: bigramTokenize(description),
-            tags_bigram: bigramTokenize(tags.join(' ')),
-          });
-        } catch {
-          console.warn(`[search] skipped ${file}: YAML parse error`);
-        }
-      }
-    } catch (err) {
-      if (err.code !== 'ENOENT')
-        console.warn(`[search] error reading ${enPath}:`, err.message);
     }
   }
 

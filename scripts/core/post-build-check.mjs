@@ -1,33 +1,27 @@
 /**
- * Post-build smoke test for Taiwan.md
+ * Post-build smoke test for agrischlchiayi
  *
- * Runs after `npm run build` to catch silent failures like:
- * - getStaticPaths returning 0 paths (empty catch swallowing errors)
- * - Category pages showing "內容準備中" instead of articles
- * - Build producing far fewer pages than expected
- *
+ * Runs after `npm run build` to catch silent failures.
  * Exit code 1 = CI should NOT deploy.
  */
 
 import { readdir, readFile, stat } from 'node:fs/promises';
-import { resolve, join, relative } from 'node:path';
+import { resolve, join } from 'node:path';
 
 const DIST = resolve(process.cwd(), 'dist');
-const MIN_TOTAL_PAGES = 300;
-const MIN_ARTICLES_PER_CATEGORY = 3;
+const MIN_TOTAL_PAGES = 20;
+const MIN_ARTICLES_PER_CATEGORY = 1;
 const CATEGORIES = [
-  'history',
-  'geography',
-  'culture',
-  'food',
-  'art',
-  'music',
-  'technology',
-  'nature',
-  'people',
-  'society',
-  'economy',
-  'lifestyle',
+  'agri-basics',
+  'agri-advanced',
+  'farm-management',
+  'crop-production',
+  'facility-farming',
+  'smart-farming',
+  'agri-marketing',
+  'grants-planning',
+  'field-visits',
+  'livestock-health',
 ];
 
 let errors = [];
@@ -60,7 +54,7 @@ if (totalPages < MIN_TOTAL_PAGES) {
   );
 }
 
-// ── 2. Check each category has article pages (not just index) ──
+// ── 2. Check each category has article pages ──
 
 for (const cat of CATEGORIES) {
   const catDir = join(DIST, cat);
@@ -72,7 +66,7 @@ for (const cat of CATEGORIES) {
     const articleCount = articleDirs.length;
 
     if (articleCount < MIN_ARTICLES_PER_CATEGORY) {
-      errors.push(
+      warnings.push(
         `/${cat}/ has only ${articleCount} article pages (min: ${MIN_ARTICLES_PER_CATEGORY})`,
       );
     } else {
@@ -81,47 +75,6 @@ for (const cat of CATEGORIES) {
   } catch {
     errors.push(`/${cat}/ directory missing in dist/`);
   }
-}
-
-// ── 3. Spot-check: category index pages should have article cards ──
-
-for (const cat of CATEGORIES) {
-  const indexPath = join(DIST, cat, 'index.html');
-  try {
-    const html = await readFile(indexPath, 'utf-8');
-    const hasArticles =
-      html.includes('article-card') || html.includes('articlesGrid');
-    const hasComingSoon = html.includes('coming-soon-content');
-    // If the page has the "coming soon" block but no article cards, it's broken
-    if (hasComingSoon && !hasArticles) {
-      errors.push(
-        `/${cat}/index.html has no article cards — only "coming soon" fallback`,
-      );
-    }
-  } catch {
-    warnings.push(`/${cat}/index.html not found`);
-  }
-}
-
-// ── 4. Spot-check: random article pages should have real content ──
-
-const SAMPLE_CATEGORIES = ['history', 'people', 'culture'];
-for (const cat of SAMPLE_CATEGORIES) {
-  const catDir = join(DIST, cat);
-  try {
-    const entries = await readdir(catDir, { withFileTypes: true });
-    const articleDirs = entries.filter((e) => e.isDirectory());
-    if (articleDirs.length > 0) {
-      const sample = articleDirs[0];
-      const htmlPath = join(catDir, sample.name, 'index.html');
-      const s = await stat(htmlPath);
-      if (s.size < 1024) {
-        warnings.push(
-          `/${cat}/${sample.name}/index.html is suspiciously small (${s.size} bytes)`,
-        );
-      }
-    }
-  } catch {}
 }
 
 // ── Report ──

@@ -1,11 +1,11 @@
 #!/bin/bash
-# Taiwan.md 統一同步腳本
+# agrischlchiayi 統一同步腳本
 # 功能：knowledge/ SSOT → src/content/ + frontmatter 修復
 # 用法：bash scripts/sync.sh
 
 set -e  # 遇到錯誤立即退出
 
-echo "🚀 Taiwan.md 統一同步開始..."
+echo "🚀 agrischlchiayi 統一同步開始..."
 echo "================================================="
 
 # 1. 從 knowledge/ SSOT 同步到 src/content/ 投影層
@@ -16,13 +16,12 @@ echo "🔄 步驟 1/2: 同步 knowledge/ → src/content/..."
 # 這防止改名/刪除的檔案殘留為「幽靈細胞」
 echo "🧹 清空 src/content/ 投影層（冪等重建）..."
 if [ -d "src/content" ]; then
-  rm -rf src/content/zh-TW src/content/en
+  rm -rf src/content/zh-TW
 fi
 
 # 建立目錄結構
 echo "📁 建立目錄結構..."
-mkdir -p src/content/zh-TW/{about,art,culture,economy,food,geography,history,lifestyle,music,nature,people,society,technology,resources}
-mkdir -p src/content/en/{about,art,culture,economy,food,geography,history,lifestyle,music,nature,people,society,technology,resources}
+mkdir -p src/content/zh-TW/{agri-basics,agri-advanced,farm-management,crop-production,facility-farming,smart-farming,agri-marketing,grants-planning,field-visits,livestock-health,crop-index,tech-index,learning-paths}
 
 # 統計初始檔案數
 KNOWLEDGE_COUNT=$(find knowledge/ -name "*.md" | wc -l)
@@ -36,17 +35,36 @@ if [ -f "knowledge/_Home.md" ]; then
     echo "  ✅ _Home.md"
 fi
 
+# 定義資料夾名稱到 slug 的映射
+folder_to_slug() {
+  case "$1" in
+    Agri-Basics)      echo "agri-basics" ;;
+    Agri-Advanced)    echo "agri-advanced" ;;
+    Farm-Management)  echo "farm-management" ;;
+    Crop-Production)  echo "crop-production" ;;
+    Facility-Farming) echo "facility-farming" ;;
+    Smart-Farming)    echo "smart-farming" ;;
+    Agri-Marketing)   echo "agri-marketing" ;;
+    Grants-Planning)  echo "grants-planning" ;;
+    Field-Visits)     echo "field-visits" ;;
+    Livestock-Health) echo "livestock-health" ;;
+    Crop-Index)       echo "crop-index" ;;
+    Tech-Index)       echo "tech-index" ;;
+    Learning-Paths)   echo "learning-paths" ;;
+  esac
+}
+
 # 同步中文分類目錄
 echo "🇹🇼 同步中文分類目錄..."
 SYNCED_COUNT=0
-for category in About Art Culture Economy Food Geography History Lifestyle Music Nature People Society Technology; do
+for category in Agri-Basics Agri-Advanced Farm-Management Crop-Production Facility-Farming Smart-Farming Agri-Marketing Grants-Planning Field-Visits Livestock-Health Crop-Index Tech-Index Learning-Paths; do
   if [ -d "knowledge/$category" ]; then
-    lowercase_category=$(echo $category | tr '[:upper:]' '[:lower:]')
+    slug=$(folder_to_slug "$category")
     for file in knowledge/$category/*.md; do
       if [ -f "$file" ]; then
         filename=$(basename "$file")
-        target_file="src/content/zh-TW/$lowercase_category/$filename"
-        
+        target_file="src/content/zh-TW/$slug/$filename"
+
         # 總是覆蓋以保持同步（SSOT 為準）
         cp "$file" "$target_file"
         echo "  ✅ $category/$filename"
@@ -55,54 +73,6 @@ for category in About Art Culture Economy Food Geography History Lifestyle Music
     done
   fi
 done
-
-# 同步 resources 目錄（避免重複）
-echo "📚 同步 resources 目錄..."
-for resource_dir in "knowledge/resources" "knowledge/zh-TW/resources"; do
-  if [ -d "$resource_dir" ]; then
-    for file in $resource_dir/*.md; do
-      if [ -f "$file" ]; then
-        filename=$(basename "$file")
-        target_file="src/content/zh-TW/resources/$filename"
-        cp "$file" "$target_file"
-        echo "  ✅ resources/$filename"
-        ((SYNCED_COUNT++))
-      fi
-    done
-  fi
-done
-
-# 同步英文內容
-echo "🇺🇸 同步英文內容..."
-if [ -d "knowledge/en" ]; then
-  for category in About Art Culture Economy Food Geography Lifestyle Music People History Nature Society Technology; do
-    if [ -d "knowledge/en/$category" ]; then
-      lowercase_category=$(echo $category | tr '[:upper:]' '[:lower:]')
-      for file in knowledge/en/$category/*.md; do
-        if [ -f "$file" ]; then
-          filename=$(basename "$file")
-          target_file="src/content/en/$lowercase_category/$filename"
-          cp "$file" "$target_file"
-          echo "  ✅ en/$category/$filename"
-          ((SYNCED_COUNT++))
-        fi
-      done
-    fi
-  done
-  
-  # 英文 resources
-  if [ -d "knowledge/en/resources" ]; then
-    for file in knowledge/en/resources/*.md; do
-      if [ -f "$file" ]; then
-        filename=$(basename "$file")
-        target_file="src/content/en/resources/$filename"
-        cp "$file" "$target_file"
-        echo "  ✅ en/resources/$filename"
-        ((SYNCED_COUNT++))
-      fi
-    done
-  fi
-fi
 
 # 統計中間結果
 CONTENT_AFTER_SYNC=$(find src/content/ -name "*.md" | wc -l)
@@ -128,7 +98,7 @@ fi
 CONTENT_FINAL=$(find src/content/ -name "*.md" | wc -l)
 
 echo ""
-echo "🎊 Taiwan.md 統一同步完成！"
+echo "🎊 agrischlchiayi 統一同步完成！"
 echo "================================================="
 echo "📊 knowledge/ 來源檔案: $KNOWLEDGE_COUNT"
 echo "📊 最終 src/content/ 檔案數: $CONTENT_FINAL"

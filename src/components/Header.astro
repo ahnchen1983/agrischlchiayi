@@ -21,11 +21,8 @@ const isHome = normalizedPath === '/' || normalizedPath === '/en';
 const navConfig = [
   { path: '/about', label: t('nav.about') },
   { path: '/#categories', label: t('nav.explore') },
-  { path: '/map', label: t('nav.map') },
-  { path: '/data', label: t('nav.data') },
-  { path: '/soundscape', label: t('nav.soundscape') },
+  { path: '/graph', label: '知識圖譜' },
   { path: '/resources', label: t('nav.resources') },
-  { path: '/dashboard', label: t('nav.dashboard') },
   { path: '/contribute', label: t('nav.contribute') },
 ].map((item) => {
   const fullPath = translatePath(item.path);
@@ -38,66 +35,28 @@ const navConfig = [
 });
 
 const categoryList = [
+  { path: translatePath('/agri-basics'), label: '農業基礎入門', emoji: '🌱' },
+  { path: translatePath('/agri-advanced'), label: '農業進階實務', emoji: '🌾' },
   {
-    path: translatePath('/history'),
-    label: t('categoryConfig.history'),
-    emoji: '📜',
+    path: translatePath('/farm-management'),
+    label: '農場經營管理',
+    emoji: '🏡',
   },
   {
-    path: translatePath('/geography'),
-    label: t('categoryConfig.geography'),
-    emoji: '🗺️',
-  },
-  {
-    path: translatePath('/culture'),
-    label: t('categoryConfig.culture'),
-    emoji: '🎭',
-  },
-  {
-    path: translatePath('/food'),
-    label: t('categoryConfig.food'),
-    emoji: '🍜',
-  },
-  {
-    path: translatePath('/art'),
-    label: t('categoryConfig.art'),
-    emoji: '🎨',
-  },
-  {
-    path: translatePath('/music'),
-    label: t('categoryConfig.music'),
-    emoji: '🎵',
-  },
-  {
-    path: translatePath('/technology'),
-    label: t('categoryConfig.technology'),
-    emoji: '💻',
-  },
-  {
-    path: translatePath('/nature'),
-    label: t('categoryConfig.nature'),
+    path: translatePath('/crop-production'),
+    label: '作物生產技術',
     emoji: '🌿',
   },
+  { path: translatePath('/facility-farming'), label: '設施農業', emoji: '🏗️' },
+  { path: translatePath('/smart-farming'), label: '智慧農業', emoji: '🤖' },
+  { path: translatePath('/agri-marketing'), label: '農產品銷售', emoji: '📦' },
   {
-    path: translatePath('/people'),
-    label: t('categoryConfig.people'),
-    emoji: '👥',
+    path: translatePath('/grants-planning'),
+    label: '計畫撰寫補助',
+    emoji: '📝',
   },
-  {
-    path: translatePath('/society'),
-    label: t('categoryConfig.society'),
-    emoji: '🏛️',
-  },
-  {
-    path: translatePath('/economy'),
-    label: t('categoryConfig.economy'),
-    emoji: '📊',
-  },
-  {
-    path: translatePath('/lifestyle'),
-    label: t('categoryConfig.lifestyle'),
-    emoji: '🏠',
-  },
+  { path: translatePath('/field-visits'), label: '場域交流觀摩', emoji: '🚜' },
+  { path: translatePath('/livestock-health'), label: '畜牧健康', emoji: '🐄' },
 ];
 ---
 
@@ -123,7 +82,9 @@ const categoryList = [
             width="24"
             height="24"
           />
-          <span class="logo-text">Taiwan<span class="logo-dot">.md</span></span>
+          <span class="logo-text"
+            >嘉義農業<span class="logo-dot">學堂</span></span
+          >
         </a>
 
         <nav class="nav-desktop" aria-label={t('nav.aria-main-navigation')}>

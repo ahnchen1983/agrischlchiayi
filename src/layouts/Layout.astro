@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
-  lang?: 'zh-TW' | 'en';
+  lang?: 'zh-TW';
   image?: string;
   type?: 'website' | 'article';
   datePublished?: string;
@@ -19,9 +19,7 @@ interface Props {
 const { lang = 'zh-TW' } = Astro.props;
 const {
   title,
-  description = lang === 'en'
-    ? 'Open-source knowledge base about Taiwan'
-    : '讓全世界完整認識台灣',
+  description = '嘉義農業學堂 — 開源農業知識平台',
   image,
   type,
   datePublished,

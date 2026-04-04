@@ -28,3 +28,7 @@ public/api/search-minisearch.json
 meetings/
 memory/
 !docs/semiont/memory/
+
+# Dev management files
+.dev/
+.claude/

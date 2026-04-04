@@ -6,7 +6,7 @@ const baseContentSchema = z.object({
   description: z.string(),
   date: z.coerce.date(),
   tags: z.array(z.string()).default([]),
-  author: z.string().optional().default('Taiwan.md Contributors'),
+  author: z.string().optional().default('嘉義農業學堂'),
   difficulty: z
     .enum(['beginner', 'intermediate', 'advanced'])
     .optional()
@@ -21,44 +21,24 @@ const baseContentSchema = z.object({
   relatedTopics: z.array(z.string()).optional().default([]),
   sources: z.array(z.string()).optional().default([]),
   subcategory: z.string().optional().default(''),
+  // 農業學堂專用欄位
+  level: z.enum(['初階', '進階', '卓越']).optional().default('初階'),
+  crop: z.array(z.string()).optional().default([]),
+  tech: z.array(z.string()).optional().default([]),
+  year: z.number().optional(),
+  source: z.string().optional().default(''),
+  courseDate: z.coerce.date().optional(),
+  instructor: z.string().optional(),
+  accupassUrl: z.string().optional(),
 });
 
 // 中文內容 collection
 const zhTWCollection = defineCollection({
   type: 'content',
-  schema: baseContentSchema.extend({
-    // 中文特有欄位
-    originalTitle: z.string().optional(), // 原始中文標題
-    alternativeNames: z.array(z.string()).optional().default([]), // 別名
-  }),
-});
-
-// 英文內容 collection
-const enCollection = defineCollection({
-  type: 'content',
-  schema: baseContentSchema.extend({
-    // 英文特有欄位
-    chineseTitle: z.string().optional(), // 對應中文標題
-    translationStatus: z
-      .enum(['complete', 'partial', 'planned'])
-      .optional()
-      .default('complete'),
-  }),
+  schema: baseContentSchema,
 });
 
 // 導出 collections
 export const collections = {
   'zh-TW': zhTWCollection,
-  en: enCollection,
-};
-
-// Type exports for TypeScript support
-export type ZhTWContent = z.infer<typeof baseContentSchema> & {
-  originalTitle?: string;
-  alternativeNames?: string[];
-};
-
-export type EnContent = z.infer<typeof baseContentSchema> & {
-  chineseTitle?: string;
-  translationStatus?: 'complete' | 'partial' | 'planned';
 };

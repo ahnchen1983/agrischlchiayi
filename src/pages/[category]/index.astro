@@ -37,18 +37,19 @@ export async function getStaticPaths() {
   };
 
   const categoryMapping: Record<string, string> = {
-    history: 'History',
-    geography: 'Geography',
-    culture: 'Culture',
-    food: 'Food',
-    art: 'Art',
-    music: 'Music',
-    technology: 'Technology',
-    nature: 'Nature',
-    people: 'People',
-    society: 'Society',
-    economy: 'Economy',
-    lifestyle: 'Lifestyle',
+    'agri-basics': 'Agri-Basics',
+    'agri-advanced': 'Agri-Advanced',
+    'farm-management': 'Farm-Management',
+    'crop-production': 'Crop-Production',
+    'facility-farming': 'Facility-Farming',
+    'smart-farming': 'Smart-Farming',
+    'agri-marketing': 'Agri-Marketing',
+    'grants-planning': 'Grants-Planning',
+    'field-visits': 'Field-Visits',
+    'livestock-health': 'Livestock-Health',
+    'crop-index': 'Crop-Index',
+    'tech-index': 'Tech-Index',
+    'learning-paths': 'Learning-Paths',
   };
 
   const paths = [];
@@ -291,7 +292,7 @@ for (const [name, arts] of [...subcatMap.entries()].sort((a, b) => {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const categoryConfigs = getCategoryConfigs(t);
+const categoryConfigs = getCategoryConfigs();
 const categoryInfo = categoryConfigs[category];
 
 // 其他分類（跨分類導航用）

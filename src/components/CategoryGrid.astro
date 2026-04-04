@@ -13,31 +13,24 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const categoryConfigs = getCategoryConfigs(t);
+const categoryConfigs = getCategoryConfigs();
 
 // Count articles dynamically from knowledge/ directory
 function countArticles(categorySlug: string): number {
   const categoryMap: Record<string, string> = {
-    history: 'History',
-    geography: 'Geography',
-    culture: 'Culture',
-    food: 'Food',
-    art: 'Art',
-    music: 'Music',
-    technology: 'Technology',
-    nature: 'Nature',
-    people: 'People',
-    society: 'Society',
-    economy: 'Economy',
-    lifestyle: 'Lifestyle',
+    'agri-basics': 'Agri-Basics',
+    'agri-advanced': 'Agri-Advanced',
+    'farm-management': 'Farm-Management',
+    'crop-production': 'Crop-Production',
+    'facility-farming': 'Facility-Farming',
+    'smart-farming': 'Smart-Farming',
+    'agri-marketing': 'Agri-Marketing',
+    'grants-planning': 'Grants-Planning',
+    'field-visits': 'Field-Visits',
+    'livestock-health': 'Livestock-Health',
   };
   const dirName = categoryMap[categorySlug] || categorySlug;
-  const dirPath = path.join(
-    process.cwd(),
-    'knowledge',
-    lang === defaultLang ? '/' : lang,
-    dirName,
-  );
+  const dirPath = path.join(process.cwd(), 'knowledge', dirName);
   try {
     const files = fs.readdirSync(dirPath);
     return files.filter((f) => f.endsWith('.md') && !f.startsWith('_')).length;
@@ -46,104 +39,13 @@ function countArticles(categorySlug: string): number {
   }
 }
 
-const categories = [
-  {
-    name: categoryConfigs['history'].name,
-    slug: 'history',
-    description: categoryConfigs['history'].description,
-    icon: '📜',
-    color: 'from-amber-500 to-orange-600',
-    cover: '/images/wiki/b5604a9d7dac.jpg',
-  },
-  {
-    name: categoryConfigs['geography'].name,
-    slug: 'geography',
-    description: categoryConfigs['geography'].description,
-    icon: '🗺️',
-    color: 'from-emerald-500 to-teal-600',
-    cover: '/images/wiki/3a0af3fa1cff.jpg',
-  },
-  {
-    name: categoryConfigs['culture'].name,
-    slug: 'culture',
-    description: categoryConfigs['culture'].description,
-    icon: '🎭',
-    color: 'from-purple-500 to-violet-600',
-    cover: '/images/wiki/c3f69037472b.jpg',
-  },
-  {
-    name: categoryConfigs['food'].name,
-    slug: 'food',
-    description: categoryConfigs['food'].description,
-    icon: '🍜',
-    color: 'from-rose-500 to-pink-600',
-    cover: '/images/wiki/6a7bed12c2a6.jpg',
-  },
-  {
-    name: categoryConfigs['art'].name,
-    slug: 'art',
-    description: categoryConfigs['art'].description,
-    icon: '🎨',
-    color: 'from-cyan-500 to-blue-600',
-    cover: '/images/wiki/b92068ae92fb.jpg',
-  },
-  {
-    name: categoryConfigs['music'].name,
-    slug: 'music',
-    description: categoryConfigs['music'].description,
-    icon: '🎵',
-    color: 'from-indigo-500 to-purple-600',
-    cover: '/images/wiki/dba145c33d6d.jpg',
-  },
-  {
-    name: categoryConfigs['technology'].name,
-    slug: 'technology',
-    description: categoryConfigs['technology'].description,
-    icon: '💻',
-    color: 'from-slate-500 to-gray-600',
-    cover: '/images/wiki/f43072687967.jpg',
-  },
-  {
-    name: categoryConfigs['nature'].name,
-    slug: 'nature',
-    description: categoryConfigs['nature'].description,
-    icon: '🌿',
-    color: 'from-green-500 to-emerald-600',
-    cover: '/images/wiki/51510a8c6a50.jpg',
-  },
-  {
-    name: categoryConfigs['people'].name,
-    slug: 'people',
-    description: categoryConfigs['people'].description,
-    icon: '👥',
-    color: 'from-orange-500 to-red-600',
-    cover: '/images/wiki/4eadbb02099d.jpg',
-  },
-  {
-    name: categoryConfigs['society'].name,
-    slug: 'society',
-    description: categoryConfigs['society'].description,
-    icon: '🏛️',
-    color: 'from-blue-500 to-indigo-600',
-    cover: '/images/wiki/c18008c3ec52.jpg',
-  },
-  {
-    name: categoryConfigs['economy'].name,
-    slug: 'economy',
-    description: categoryConfigs['economy'].description,
-    icon: '📊',
-    color: 'from-yellow-500 to-amber-600',
-    cover: '/images/wiki/53ecc1645c5a.jpg',
-  },
-  {
-    name: categoryConfigs['lifestyle'].name,
-    slug: 'lifestyle',
-    description: categoryConfigs['lifestyle'].description,
-    icon: '🏠',
-    color: 'from-teal-500 to-cyan-600',
-    cover: '/images/wiki/c1fb1b3a4b79.jpg',
-  },
-];
+const categories = Object.entries(categoryConfigs).map(([slug, config]) => ({
+  name: config.name,
+  slug,
+  description: config.description,
+  icon: config.icon,
+  color: `from-green-500 to-emerald-600`,
+}));
 ---
 
 <section class="category-grid" aria-label={t('CategoryGrid.aria-section')}>
@@ -161,21 +63,7 @@ const categories = [
           >
             <div class="category-gradient" />
             <div class="category-header">
-              {category.cover ? (
-                <img
-                  src={category.cover}
-                  alt={`${category.name} ${t('CategoryGrid.alt-category-image-suffix')}`}
-                  class="category-cover"
-                  loading="lazy"
-                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-                />
-              ) : null}
-              <div
-                class="category-icon"
-                style={category.cover ? 'display:none' : ''}
-              >
-                {category.icon}
-              </div>
+              <div class="category-icon">{category.icon}</div>
             </div>
             <div class="category-body">
               <div class="card-title-row">

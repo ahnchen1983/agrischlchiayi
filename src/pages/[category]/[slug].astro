@@ -89,19 +89,19 @@ function getGitInfo(filePath: string) {
 // ── Category → folder mapping ─────────────────────────────────────────────────
 // Defined at module scope so it's available in both getStaticPaths and the template
 const categoryMapping: Record<string, string> = {
-  about: 'About',
-  history: 'History',
-  geography: 'Geography',
-  culture: 'Culture',
-  food: 'Food',
-  art: 'Art',
-  music: 'Music',
-  technology: 'Technology',
-  nature: 'Nature',
-  people: 'People',
-  society: 'Society',
-  economy: 'Economy',
-  lifestyle: 'Lifestyle',
+  'agri-basics': 'Agri-Basics',
+  'agri-advanced': 'Agri-Advanced',
+  'farm-management': 'Farm-Management',
+  'crop-production': 'Crop-Production',
+  'facility-farming': 'Facility-Farming',
+  'smart-farming': 'Smart-Farming',
+  'agri-marketing': 'Agri-Marketing',
+  'grants-planning': 'Grants-Planning',
+  'field-visits': 'Field-Visits',
+  'livestock-health': 'Livestock-Health',
+  'crop-index': 'Crop-Index',
+  'tech-index': 'Tech-Index',
+  'learning-paths': 'Learning-Paths',
 };
 
 // ── getStaticPaths ────────────────────────────────────────────────────────────
@@ -116,19 +116,19 @@ export async function getStaticPaths() {
   };
 
   const _categoryMapping: Record<string, string> = {
-    about: 'About',
-    history: 'History',
-    geography: 'Geography',
-    culture: 'Culture',
-    food: 'Food',
-    art: 'Art',
-    music: 'Music',
-    technology: 'Technology',
-    nature: 'Nature',
-    people: 'People',
-    society: 'Society',
-    economy: 'Economy',
-    lifestyle: 'Lifestyle',
+    'agri-basics': 'Agri-Basics',
+    'agri-advanced': 'Agri-Advanced',
+    'farm-management': 'Farm-Management',
+    'crop-production': 'Crop-Production',
+    'facility-farming': 'Facility-Farming',
+    'smart-farming': 'Smart-Farming',
+    'agri-marketing': 'Agri-Marketing',
+    'grants-planning': 'Grants-Planning',
+    'field-visits': 'Field-Visits',
+    'livestock-health': 'Livestock-Health',
+    'crop-index': 'Crop-Index',
+    'tech-index': 'Tech-Index',
+    'learning-paths': 'Learning-Paths',
   };
   const paths: any[] = [];
   for (const [categorySlug, folderName] of Object.entries(_categoryMapping)) {
@@ -211,7 +211,7 @@ const commitHash = _renderGitInfo.commitHash;
 const revisionCount = _renderGitInfo.revisionCount;
 
 const t = useTranslations(lang ?? 'zh-TW');
-const categoryConfigs = getCategoryConfigs(t);
+const categoryConfigs = getCategoryConfigs();
 const categoryInfo = categoryConfigs[category as CategoryKey];
 if (!categoryInfo) throw new Error(`Unknown category: ${category}`);
 
@@ -447,25 +447,27 @@ const encodedTitle = encodeURIComponent(title);
 
         <!-- Sources -->
         {
-          frontmatter.source && frontmatter.source.length > 0 && (
-            <div class="sources-block">
-              <h3 class="sources-heading">參考資料</h3>
-              <ul class="sources-list">
-                {frontmatter.source.map((url: string) => (
-                  <li>
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="source-link"
-                    >
-                      {url}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
+          frontmatter.sources &&
+            Array.isArray(frontmatter.sources) &&
+            frontmatter.sources.length > 0 && (
+              <div class="sources-block">
+                <h3 class="sources-heading">參考資料</h3>
+                <ul class="sources-list">
+                  {frontmatter.sources.map((url: string) => (
+                    <li>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="source-link"
+                      >
+                        {url}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
         }
 
         <!-- AI Disclaimer -->
@@ -495,7 +497,7 @@ const encodedTitle = encodeURIComponent(title);
         <!-- Contribution row -->
         <div class="contribute-row">
           <a
-            href={`https://github.com/frank890417/taiwan-md/edit/main/knowledge/${categoryMapping[category as string]}/${slug}.md`}
+            href={`https://github.com/ahnchen1983/agrischlchiayi/edit/main/knowledge/${categoryMapping[category as string]}/${slug}.md`}
             target="_blank"
             rel="noopener noreferrer"
             class="contribute-btn contribute-btn--primary"
@@ -515,7 +517,7 @@ const encodedTitle = encodeURIComponent(title);
             在 GitHub 上編輯此頁
           </a>
           <a
-            href={`https://github.com/frank890417/taiwan-md/issues/new?title=${encodeURIComponent(`Feedback: ${title}`)}`}
+            href={`https://github.com/ahnchen1983/agrischlchiayi/issues/new?title=${encodeURIComponent(`Feedback: ${title}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             class="contribute-btn contribute-btn--ghost"

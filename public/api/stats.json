@@ -1,175 +1,135 @@
 {
-  "totalArticles": 883,
-  "totalCategories": 20,
-  "estimatedContributors": 59,
-  "totalTags": 2245,
+  "totalArticles": 31,
+  "totalCategories": 10,
+  "estimatedContributors": 3,
+  "totalTags": 68,
   "categories": [
     {
-      "name": "en",
-      "count": 389
-    },
-    {
-      "name": "Culture",
-      "count": 38
-    },
-    {
-      "name": "History",
-      "count": 26
-    },
-    {
-      "name": "Society",
-      "count": 27
-    },
-    {
-      "name": "Music",
-      "count": 20
-    },
-    {
-      "name": "Economy",
-      "count": 48
-    },
-    {
-      "name": "People",
-      "count": 128
-    },
-    {
-      "name": "Lifestyle",
-      "count": 16
-    },
-    {
-      "name": "ja",
-      "count": 21
-    },
-    {
-      "name": "Art",
-      "count": 25
-    },
-    {
-      "name": "Food",
-      "count": 28
-    },
-    {
-      "name": "Technology",
-      "count": 27
-    },
-    {
-      "name": "Nature",
-      "count": 26
-    },
-    {
-      "name": "Geography",
-      "count": 18
-    },
-    {
-      "name": "About",
-      "count": 6
-    },
-    {
-      "name": "zh-TW",
+      "name": "Agri-Basics",
       "count": 2
     },
     {
-      "name": "Language",
+      "name": "Crop-Production",
+      "count": 4
+    },
+    {
+      "name": "Farm-Management",
+      "count": 5
+    },
+    {
+      "name": "Agri-Advanced",
+      "count": 3
+    },
+    {
+      "name": "Facility-Farming",
+      "count": 3
+    },
+    {
+      "name": "Livestock-Health",
       "count": 1
     },
     {
-      "name": "es",
-      "count": 34
+      "name": "Field-Visits",
+      "count": 5
     },
     {
-      "name": "resources",
+      "name": "Smart-Farming",
+      "count": 5
+    },
+    {
+      "name": "Agri-Marketing",
+      "count": 1
+    },
+    {
+      "name": "Grants-Planning",
       "count": 2
-    },
-    {
-      "name": "ko",
-      "count": 1
     }
   ],
   "topTags": [
     {
-      "name": "Economy",
-      "count": 55
-    },
-    {
-      "name": "人物",
-      "count": 51
-    },
-    {
-      "name": "企業",
+      "name": "國本學堂",
       "count": 31
     },
     {
-      "name": "台灣",
-      "count": 16
+      "name": "第三屆",
+      "count": 8
     },
     {
-      "name": "半導體",
-      "count": 15
+      "name": "第五屆",
+      "count": 4
     },
     {
-      "name": "歷史",
-      "count": 13
+      "name": "場域交流",
+      "count": 4
     },
     {
-      "name": "people",
-      "count": 13
+      "name": "第四屆",
+      "count": 4
     },
     {
-      "name": "金曲獎",
-      "count": 12
+      "name": "卓越班",
+      "count": 3
     },
     {
-      "name": "音樂",
-      "count": 12
+      "name": "溫室",
+      "count": 3
     },
     {
-      "name": "Technology",
-      "count": 12
+      "name": "智慧農業",
+      "count": 3
     },
     {
-      "name": "民主化",
-      "count": 11
+      "name": "農業基礎",
+      "count": 2
     },
     {
-      "name": "History",
-      "count": 11
+      "name": "作物生產",
+      "count": 2
     },
     {
-      "name": "數位轉型",
-      "count": 11
+      "name": "小番茄",
+      "count": 2
     },
     {
-      "name": "教育",
-      "count": 11
+      "name": "農業進階",
+      "count": 2
     },
     {
-      "name": "民間信仰",
-      "count": 10
+      "name": "家禽",
+      "count": 2
     },
     {
-      "name": "ODM",
-      "count": 10
+      "name": "農場管理",
+      "count": 2
     },
     {
-      "name": "製造業",
-      "count": 10
+      "name": "土壤學",
+      "count": 1
     },
     {
-      "name": "原住民",
-      "count": 10
+      "name": "小農新創",
+      "count": 1
     },
     {
-      "name": "體育",
-      "count": 10
+      "name": "圓夢發表",
+      "count": 1
     },
     {
-      "name": "Taiwan",
-      "count": 10
+      "name": "水資源",
+      "count": 1
+    },
+    {
+      "name": "田間管理",
+      "count": 1
+    },
+    {
+      "name": "有機農業",
+      "count": 1
     }
   ],
   "languageDistribution": {
-    "zh-TW": 883,
+    "zh-TW": 31,
     "en": 0
   },
-  "lastUpdated": "2026-04-03T17:50:14.930Z"
+  "lastUpdated": "2026-04-04T16:54:19.414Z"
 }

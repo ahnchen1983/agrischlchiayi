@@ -5,33 +5,15 @@ import rehypeExternalLinks from 'rehype-external-links';
 import remarkWikilinks from './plugins/remark-wikilinks.mjs';
 
 export default defineConfig({
-  site: 'https://taiwan.md',
+  site: 'https://ahnchen1983.github.io',
+  base: '/agrischlchiayi',
   integrations: [
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      // Customize priority and changefreq for different pages
-      customPages: [
-        'https://taiwan.md/?changefreq=daily&priority=1.0',
-        'https://taiwan.md/en?changefreq=daily&priority=1.0',
-      ],
-      i18n: {
-        defaultLocale: 'zh-TW',
-        locales: {
-          'zh-TW': 'zh-TW',
-          en: 'en',
-        },
-      },
     }),
   ],
-  i18n: {
-    defaultLocale: 'zh-TW',
-    locales: ['zh-TW', 'en'],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
   markdown: {
     shikiConfig: {
       theme: 'github-light',

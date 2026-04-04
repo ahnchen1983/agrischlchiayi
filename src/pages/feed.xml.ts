@@ -8,18 +8,19 @@ export async function GET() {
 
   // Category mapping to folder names
   const categoryMapping: Record<string, string> = {
-    history: 'History',
-    geography: 'Geography',
-    culture: 'Culture',
-    food: 'Food',
-    art: 'Art',
-    music: 'Music',
-    technology: 'Technology',
-    nature: 'Nature',
-    people: 'People',
-    society: 'Society',
-    economy: 'Economy',
-    lifestyle: 'Lifestyle',
+    'agri-basics': 'Agri-Basics',
+    'agri-advanced': 'Agri-Advanced',
+    'farm-management': 'Farm-Management',
+    'crop-production': 'Crop-Production',
+    'facility-farming': 'Facility-Farming',
+    'smart-farming': 'Smart-Farming',
+    'agri-marketing': 'Agri-Marketing',
+    'grants-planning': 'Grants-Planning',
+    'field-visits': 'Field-Visits',
+    'livestock-health': 'Livestock-Health',
+    'crop-index': 'Crop-Index',
+    'tech-index': 'Tech-Index',
+    'learning-paths': 'Learning-Paths',
   };
 
   const allArticles: any[] = [];

@@ -7,18 +7,19 @@ import { join, basename } from 'path';
 import { visit } from 'unist-util-visit';
 
 const categorySlugMap = {
-  History: 'history',
-  Geography: 'geography',
-  Culture: 'culture',
-  Food: 'food',
-  Art: 'art',
-  Music: 'music',
-  Technology: 'technology',
-  Nature: 'nature',
-  People: 'people',
-  Society: 'society',
-  Economy: 'economy',
-  Lifestyle: 'lifestyle',
+  'Agri-Basics': 'agri-basics',
+  'Agri-Advanced': 'agri-advanced',
+  'Farm-Management': 'farm-management',
+  'Crop-Production': 'crop-production',
+  'Facility-Farming': 'facility-farming',
+  'Smart-Farming': 'smart-farming',
+  'Agri-Marketing': 'agri-marketing',
+  'Grants-Planning': 'grants-planning',
+  'Field-Visits': 'field-visits',
+  'Livestock-Health': 'livestock-health',
+  'Crop-Index': 'crop-index',
+  'Tech-Index': 'tech-index',
+  'Learning-Paths': 'learning-paths',
 };
 
 let titleToUrl = null;
@@ -58,7 +59,10 @@ export default function remarkWikilinks() {
       while ((match = regex.exec(node.value)) !== null) {
         // Text before the match
         if (match.index > lastIndex) {
-          parts.push({ type: 'text', value: node.value.slice(lastIndex, match.index) });
+          parts.push({
+            type: 'text',
+            value: node.value.slice(lastIndex, match.index),
+          });
         }
 
         const isBold = match[1] !== undefined;

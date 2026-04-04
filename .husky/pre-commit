@@ -1,4 +1,4 @@
-bunx lint-staged
+npx lint-staged
 
 # Validate frontmatter on staged .md files in knowledge/
 node scripts/core/test-frontmatter.mjs --staged

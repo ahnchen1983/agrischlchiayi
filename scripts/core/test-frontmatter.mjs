@@ -1,5 +1,5 @@
 /**
- * Frontmatter YAML validation for Taiwan.md
+ * Frontmatter YAML validation for agrischlchiayi
  *
  * Scans all .md files in knowledge/ and validates:
  * - YAML parses without error (gray-matter)
@@ -19,21 +19,21 @@ import matter from 'gray-matter';
 
 const KNOWLEDGE = resolve(process.cwd(), 'knowledge');
 const CATEGORIES = [
-  'About',
-  'History',
-  'Geography',
-  'Culture',
-  'Food',
-  'Art',
-  'Music',
-  'Technology',
-  'Nature',
-  'People',
-  'Society',
-  'Economy',
-  'Lifestyle',
+  'Agri-Basics',
+  'Agri-Advanced',
+  'Farm-Management',
+  'Crop-Production',
+  'Facility-Farming',
+  'Smart-Farming',
+  'Agri-Marketing',
+  'Grants-Planning',
+  'Field-Visits',
+  'Livestock-Health',
+  'Crop-Index',
+  'Tech-Index',
+  'Learning-Paths',
 ];
-const LANGS = ['', 'en', 'es', 'ja']; // '' = zh-TW root
+const LANGS = ['']; // '' = zh-TW root
 
 const STRICT = process.argv.includes('--strict');
 const CI_MODE = process.argv.includes('--ci');

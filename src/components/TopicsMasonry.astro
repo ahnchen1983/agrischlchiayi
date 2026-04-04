@@ -13,23 +13,24 @@ import { getCategoryConfigs } from '../utils/categoryConfig';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
-const categoryConfigs = getCategoryConfigs(t);
+const categoryConfigs = getCategoryConfigs();
 
 // Count articles from knowledge/ directory
 function countArticles(categorySlug: string): number {
   const categoryMap: Record<string, string> = {
-    history: 'History',
-    geography: 'Geography',
-    culture: 'Culture',
-    food: 'Food',
-    art: 'Art',
-    music: 'Music',
-    technology: 'Technology',
-    nature: 'Nature',
-    people: 'People',
-    society: 'Society',
-    economy: 'Economy',
-    lifestyle: 'Lifestyle',
+    'agri-basics': 'Agri-Basics',
+    'agri-advanced': 'Agri-Advanced',
+    'farm-management': 'Farm-Management',
+    'crop-production': 'Crop-Production',
+    'facility-farming': 'Facility-Farming',
+    'smart-farming': 'Smart-Farming',
+    'agri-marketing': 'Agri-Marketing',
+    'grants-planning': 'Grants-Planning',
+    'field-visits': 'Field-Visits',
+    'livestock-health': 'Livestock-Health',
+    'crop-index': 'Crop-Index',
+    'tech-index': 'Tech-Index',
+    'learning-paths': 'Learning-Paths',
   };
   const dirName = categoryMap[categorySlug] || categorySlug;
   const langDir = lang === defaultLang ? '' : lang;
@@ -45,23 +46,18 @@ function countArticles(categorySlug: string): number {
 const articleLabel = t('CategoryGrid.articles');
 const ctaLabel = t('CategoryGrid.explore');
 
-// Intentionally interleaved heights for visual balance across 3 columns:
-// Col 1: history(tall), food(short), technology(tall), people(short)
-// Col 2: geography(med), art(med), nature(med), society(med)
-// Col 3: culture(tall), music(short), economy(tall), lifestyle(short)
+// Interleaved heights for visual balance across 3 columns
 const categories: { slug: string; height: 'tall' | 'medium' | 'short' }[] = [
-  { slug: 'history', height: 'tall' },
-  { slug: 'geography', height: 'medium' },
-  { slug: 'culture', height: 'tall' },
-  { slug: 'food', height: 'short' },
-  { slug: 'art', height: 'medium' },
-  { slug: 'music', height: 'short' },
-  { slug: 'technology', height: 'tall' },
-  { slug: 'nature', height: 'medium' },
-  { slug: 'economy', height: 'tall' },
-  { slug: 'people', height: 'short' },
-  { slug: 'society', height: 'medium' },
-  { slug: 'lifestyle', height: 'short' },
+  { slug: 'agri-basics', height: 'tall' },
+  { slug: 'agri-advanced', height: 'medium' },
+  { slug: 'farm-management', height: 'tall' },
+  { slug: 'crop-production', height: 'short' },
+  { slug: 'facility-farming', height: 'medium' },
+  { slug: 'smart-farming', height: 'short' },
+  { slug: 'agri-marketing', height: 'tall' },
+  { slug: 'grants-planning', height: 'medium' },
+  { slug: 'field-visits', height: 'tall' },
+  { slug: 'livestock-health', height: 'short' },
 ];
 ---
 

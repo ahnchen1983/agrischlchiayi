@@ -1,2 +1,2 @@
 *.yml
-
+src/pages/**/index.astro

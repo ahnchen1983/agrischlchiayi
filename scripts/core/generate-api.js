@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Taiwan.md API Generator
+ * agrischlchiayi API Generator
  * 生成靜態 JSON API endpoints for knowledge base
  *
  * Usage: node scripts/generate-api.js
@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 // 路徑配置
 const KNOWLEDGE_DIR = path.join(__dirname, '../../knowledge');
 const OUTPUT_DIR = path.join(__dirname, '../../public/api');
-const BASE_URL = 'https://taiwan.md';
+const BASE_URL = 'https://ahnchen1983.github.io/agrischlchiayi';
 
 // 確保輸出目錄存在
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -222,7 +222,7 @@ function getRandomArticles(articles, count = 20) {
  * 主函數
  */
 async function main() {
-  console.log('🚀 Taiwan.md API Generator 啟動...');
+  console.log('🚀 agrischlchiayi API Generator 啟動...');
 
   // 讀取所有 markdown 檔案
   console.log('📖 掃描 knowledge 目錄...');

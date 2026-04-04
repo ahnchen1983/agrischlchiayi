@@ -28,6 +28,8 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Sync knowledge to content
+        run: bash scripts/core/sync.sh
       - name: Validate frontmatter (changed files)
         run: node scripts/core/test-frontmatter.mjs --ci
       - name: Build

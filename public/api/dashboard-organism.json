@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T18:43:38.987Z",
+  "lastUpdated": "2026-04-04T16:49:32.358Z",
   "organs": [
     {
       "id": "heart",
@@ -7,12 +7,12 @@
       "nameZh": "心臟",
       "metaphor": "內容引擎",
       "emoji": "🫀",
-      "score": 90,
-      "trend": "up",
+      "score": 30,
+      "trend": "down",
       "metrics": {
-        "articlesLast7Days": 424,
-        "articlesLast30Days": 433,
-        "totalArticles": 433
+        "articlesLast7Days": 0,
+        "articlesLast30Days": 0,
+        "totalArticles": 0
       }
     },
     {
@@ -21,12 +21,12 @@
       "nameZh": "免疫系統",
       "metaphor": "品質防禦",
       "emoji": "🛡️",
-      "score": 98,
-      "trend": "up",
+      "score": 0,
+      "trend": "stable",
       "metrics": {
-        "humanReviewedCount": 424,
-        "totalArticles": 433,
-        "humanReviewedPercent": 97.9
+        "humanReviewedCount": 0,
+        "totalArticles": 0,
+        "humanReviewedPercent": 0
       }
     },
     {
@@ -38,7 +38,7 @@
       "score": 95,
       "trend": "up",
       "metrics": {
-        "editorialLastModified": "2026-04-03T17:06:43.000Z"
+        "editorialLastModified": "2026-04-04T07:33:26.000Z"
       }
     },
     {
@@ -94,16 +94,16 @@
       "nameZh": "語言器官",
       "metaphor": "多語言複製",
       "emoji": "🌐",
-      "score": 89,
+      "score": null,
       "trend": "stable",
       "metrics": {
         "languageCoverage": {
-          "zh-TW": 433,
-          "en": 385,
-          "es": 34,
-          "ja": 21
+          "zh-TW": 0,
+          "en": 0,
+          "es": 0,
+          "ja": 0
         },
-        "translationPct": 89
+        "translationPct": null
       }
     }
   ]
