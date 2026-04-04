@@ -13,8 +13,8 @@ import { getCategoryConfigs } from '../utils/categoryConfig';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
-const base = import.meta.env.BASE_URL;
-const toHref = (p: string) => base + translatePath(p).replace(/^\//, '');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toHref = (p: string) => base + translatePath(p);
 const categoryConfigs = getCategoryConfigs();
 
 // Count articles from knowledge/ directory

@@ -18,11 +18,11 @@ const { zhLink, enLink } = await getLangSwitchPath(currentPath);
 const normalizedPath = currentPath.replace(/\/$/, '') || '/';
 const isHome = normalizedPath === '/' || normalizedPath === '/en';
 
-const base = import.meta.env.BASE_URL; // e.g. '/agrischlchiayi/'
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/agrischlchiayi'
 
 // Helper: convert i18n-prefixed path to base-prefixed URL
-// translatePath('/about') → '/about'  →  base + 'about' = '/agrischlchiayi/about'
-const toHref = (path: string) => base + translatePath(path).replace(/^\//, '');
+// translatePath('/about') → '/about'  →  base + '/about' = '/agrischlchiayi/about'
+const toHref = (path: string) => base + translatePath(path);
 
 const navConfig = [
   { path: '/about', label: t('nav.about') },
@@ -36,7 +36,7 @@ const navConfig = [
   const active =
     pathWithoutHash !== fullPath
       ? false
-      : currentPath.startsWith(pathWithoutHash.replace(base.slice(0, -1), ''));
+      : currentPath.startsWith(pathWithoutHash.replace(base, ''));
   return { ...item, fullPath, active };
 });
 
@@ -66,7 +66,7 @@ const categoryList = [
       <div class="header-inner">
         <a href={toHref('/')} class="logo" aria-label={t('nav.aria-home')}>
           <img
-            src={`${base}favicon.png`}
+            src={`${base}/favicon.png`}
             alt={t('nav.aria-img-label')}
             class="logo-icon"
             width="24"
