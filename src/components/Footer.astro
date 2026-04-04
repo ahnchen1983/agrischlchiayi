@@ -9,6 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const base = import.meta.env.BASE_URL;
+const toHref = (path: string) => base + translatePath(path).replace(/^\//, '');
 ---
 
 <footer role="contentinfo">
@@ -41,25 +42,25 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div class="footer-col">
         <h4>探索知識</h4>
-        <a href={translatePath('/agri-basics')}>🌱 農業基礎入門</a>
-        <a href={translatePath('/crop-production')}>🌿 作物生產技術</a>
-        <a href={translatePath('/smart-farming')}>🤖 智慧農業</a>
-        <a href={translatePath('/farm-management')}>🏡 農場經營管理</a>
-        <a href={translatePath('/field-visits')}>🚜 場域交流觀摩</a>
-        <a href={translatePath('/grants-planning')}>📝 計畫撰寫補助</a>
+        <a href={toHref('/agri-basics')}>🌱 農業基礎入門</a>
+        <a href={toHref('/crop-production')}>🌿 作物生產技術</a>
+        <a href={toHref('/smart-farming')}>🤖 智慧農業</a>
+        <a href={toHref('/farm-management')}>🏡 農場經營管理</a>
+        <a href={toHref('/field-visits')}>🚜 場域交流觀摩</a>
+        <a href={toHref('/grants-planning')}>📝 計畫撰寫補助</a>
       </div>
       <div class="footer-col">
         <h4>專案</h4>
         <a href="https://github.com/ahnchen1983/agrischlchiayi" target="_blank"
           >GitHub</a
         >
-        <a href={translatePath('/about')}>關於</a>
-        <a href={translatePath('/graph')}>知識圖譜</a>
+        <a href={toHref('/about')}>關於</a>
+        <a href={toHref('/graph')}>知識圖譜</a>
         <a
           href="https://github.com/ahnchen1983/agrischlchiayi/blob/main/CONTRIBUTING.md"
           target="_blank">貢獻指南</a
         >
-        <a href={translatePath('/changelog')}>更新紀錄</a>
+        <a href={toHref('/changelog')}>更新紀錄</a>
       </div>
       <div class="footer-col">
         <h4>聯繫</h4>

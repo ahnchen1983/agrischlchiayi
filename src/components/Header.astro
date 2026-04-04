@@ -18,6 +18,12 @@ const { zhLink, enLink } = await getLangSwitchPath(currentPath);
 const normalizedPath = currentPath.replace(/\/$/, '') || '/';
 const isHome = normalizedPath === '/' || normalizedPath === '/en';
 
+const base = import.meta.env.BASE_URL; // e.g. '/agrischlchiayi/'
+
+// Helper: convert i18n-prefixed path to base-prefixed URL
+// translatePath('/about') → '/about'  →  base + 'about' = '/agrischlchiayi/about'
+const toHref = (path: string) => base + translatePath(path).replace(/^\//, '');
+
 const navConfig = [
   { path: '/about', label: t('nav.about') },
   { path: '/#categories', label: t('nav.explore') },
@@ -25,38 +31,26 @@ const navConfig = [
   { path: '/resources', label: t('nav.resources') },
   { path: '/contribute', label: t('nav.contribute') },
 ].map((item) => {
-  const fullPath = translatePath(item.path);
+  const fullPath = toHref(item.path);
   const pathWithoutHash = fullPath.replace(/#.*$/, '');
   const active =
     pathWithoutHash !== fullPath
       ? false
-      : currentPath.startsWith(pathWithoutHash);
+      : currentPath.startsWith(pathWithoutHash.replace(base.slice(0, -1), ''));
   return { ...item, fullPath, active };
 });
 
 const categoryList = [
-  { path: translatePath('/agri-basics'), label: '農業基礎入門', emoji: '🌱' },
-  { path: translatePath('/agri-advanced'), label: '農業進階實務', emoji: '🌾' },
-  {
-    path: translatePath('/farm-management'),
-    label: '農場經營管理',
-    emoji: '🏡',
-  },
-  {
-    path: translatePath('/crop-production'),
-    label: '作物生產技術',
-    emoji: '🌿',
-  },
-  { path: translatePath('/facility-farming'), label: '設施農業', emoji: '🏗️' },
-  { path: translatePath('/smart-farming'), label: '智慧農業', emoji: '🤖' },
-  { path: translatePath('/agri-marketing'), label: '農產品銷售', emoji: '📦' },
-  {
-    path: translatePath('/grants-planning'),
-    label: '計畫撰寫補助',
-    emoji: '📝',
-  },
-  { path: translatePath('/field-visits'), label: '場域交流觀摩', emoji: '🚜' },
-  { path: translatePath('/livestock-health'), label: '畜牧健康', emoji: '🐄' },
+  { path: toHref('/agri-basics'), label: '農業基礎入門', emoji: '🌱' },
+  { path: toHref('/agri-advanced'), label: '農業進階實務', emoji: '🌾' },
+  { path: toHref('/farm-management'), label: '農場經營管理', emoji: '🏡' },
+  { path: toHref('/crop-production'), label: '作物生產技術', emoji: '🌿' },
+  { path: toHref('/facility-farming'), label: '設施農業', emoji: '🏗️' },
+  { path: toHref('/smart-farming'), label: '智慧農業', emoji: '🤖' },
+  { path: toHref('/agri-marketing'), label: '農產品銷售', emoji: '📦' },
+  { path: toHref('/grants-planning'), label: '計畫撰寫補助', emoji: '📝' },
+  { path: toHref('/field-visits'), label: '場域交流觀摩', emoji: '🚜' },
+  { path: toHref('/livestock-health'), label: '畜牧健康', emoji: '🐄' },
 ];
 ---
 
@@ -70,13 +64,9 @@ const categoryList = [
       class:list={[{ scrolled: !isHome }]}
     >
       <div class="header-inner">
-        <a
-          href={translatePath('/')}
-          class="logo"
-          aria-label={t('nav.aria-home')}
-        >
+        <a href={toHref('/')} class="logo" aria-label={t('nav.aria-home')}>
           <img
-            src="/favicon.png"
+            src={`${base}favicon.png`}
             alt={t('nav.aria-img-label')}
             class="logo-icon"
             width="24"
@@ -105,33 +95,30 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
-                          href={`${translatePath('/about')}#story`}
+                          href={`${toHref('/about')}#story`}
                           class="dropdown-item"
                         >
                           📖 {lang === 'en' ? 'Our Story' : '我們的故事'}
                         </a>
                         <a
-                          href={`${translatePath('/about')}#organism`}
+                          href={`${toHref('/about')}#organism`}
                           class="dropdown-item"
                         >
                           🧬 {lang === 'en' ? 'Digital Organism' : '數位生命體'}
                         </a>
                         <a
-                          href={`${translatePath('/about')}#team`}
+                          href={`${toHref('/about')}#team`}
                           class="dropdown-item"
                         >
                           👥 {lang === 'en' ? 'Team' : '團隊'}
                         </a>
                         <a
-                          href={`${translatePath('/about')}#faq`}
+                          href={`${toHref('/about')}#faq`}
                           class="dropdown-item"
                         >
                           ❓ {lang === 'en' ? 'FAQ' : '常見問題'}
                         </a>
-                        <a
-                          href={translatePath('/changelog')}
-                          class="dropdown-item"
-                        >
+                        <a href={toHref('/changelog')} class="dropdown-item">
                           📝 {lang === 'en' ? 'Changelog' : '更新日誌'}
                         </a>
                       </div>
@@ -152,13 +139,13 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
-                          href={translatePath('/graph')}
+                          href={toHref('/graph')}
                           class="dropdown-item dropdown-section-header"
                         >
                           🕸️ {t('nav.graph-view')}
                         </a>
                         <a
-                          href={translatePath('/terminology')}
+                          href={toHref('/terminology')}
                           class="dropdown-item dropdown-section-header"
                         >
                           📖 {t('nav.terminology')}
@@ -309,13 +296,13 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
-                          href={`${translatePath('/contribute')}#form`}
+                          href={`${toHref('/contribute')}#form`}
                           class="dropdown-item"
                         >
                           📝 {lang === 'en' ? 'Submit Article' : '投稿文章'}
                         </a>
                         <a
-                          href={`${translatePath('/contribute')}#token-donation`}
+                          href={`${toHref('/contribute')}#token-donation`}
                           class="dropdown-item"
                         >
                           🪙{' '}
@@ -324,19 +311,19 @@ const categoryList = [
                             : '捐出你的 AI 額度'}
                         </a>
                         <a
-                          href={`${translatePath('/contribute')}#organism`}
+                          href={`${toHref('/contribute')}#organism`}
                           class="dropdown-item"
                         >
                           🧬 {lang === 'en' ? 'Why Contribute' : '為什麼參與'}
                         </a>
                         <a
-                          href={`${translatePath('/contribute')}#cli`}
+                          href={`${toHref('/contribute')}#cli`}
                           class="dropdown-item"
                         >
                           🖥️ {lang === 'en' ? 'CLI Tool' : 'CLI 工具'}
                         </a>
                         <a
-                          href="https://github.com/frank890417/taiwan-md"
+                          href="https://github.com/ahnchen1983/agrischlchiayi"
                           target="_blank"
                           class="dropdown-item"
                         >
@@ -388,7 +375,7 @@ const categoryList = [
 
         <!-- GitHub -->
         <a
-          href="https://github.com/frank890417/taiwan-md"
+          href="https://github.com/ahnchen1983/agrischlchiayi"
           target="_blank"
           class="gh-link"
           aria-label="GitHub"
@@ -426,14 +413,14 @@ const categoryList = [
               {item.path === '/#categories' && (
                 <div class="mobile-sub-links">
                   <a
-                    href={translatePath('/graph')}
+                    href={toHref('/graph')}
                     class="nav-link nav-sub-link"
                     onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                   >
                     🕸️ {t('nav.graph-view')}
                   </a>
                   <a
-                    href={translatePath('/terminology')}
+                    href={toHref('/terminology')}
                     class="nav-link nav-sub-link"
                     onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                   >
@@ -445,7 +432,7 @@ const categoryList = [
           ))
         }
         <a
-          href="https://github.com/frank890417/taiwan-md"
+          href="https://github.com/ahnchen1983/agrischlchiayi"
           target="_blank"
           class="nav-link"
           onclick="document.querySelector('.nav-mobile').classList.remove('open')"

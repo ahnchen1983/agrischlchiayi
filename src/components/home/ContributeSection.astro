@@ -8,6 +8,8 @@ import {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const base = import.meta.env.BASE_URL;
+const toHref = (path: string) => base + translatePath(path).replace(/^\//, '');
 ---
 
 <section class="contribute" aria-labelledby="contribute-heading">
@@ -15,11 +17,11 @@ const translatePath = useTranslatedPath(lang);
     <h2 id="contribute-heading">{t('home.contribute.heading')}</h2>
     <p>{t('home.contribute.description')}</p>
     <div class="contribute-buttons">
-      <a href={translatePath('/contribute')} class="btn btn-primary"
+      <a href={toHref('/contribute')} class="btn btn-primary"
         >{t('home.contribute.guide')}</a
       >
       <a
-        href="https://github.com/frank890417/taiwan-md"
+        href="https://github.com/ahnchen1983/agrischlchiayi"
         class="btn btn-secondary"
         target="_blank">{t('home.contribute.github')}</a
       >

@@ -1,3 +1,4 @@
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 npx lint-staged
 
 # Validate frontmatter on staged .md files in knowledge/

@@ -31,6 +31,8 @@ import {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const base = import.meta.env.BASE_URL;
+const toHref = (path: string) => base + translatePath(path).replace(/^\//, '');
 
 const chapters = [
   {
@@ -503,7 +505,7 @@ const mindmapData = JSON.stringify({
               {chapter.relatedKeys.map((key, i) => (
                 <Fragment>
                   <a
-                    href={translatePath(chapter.relatedPaths?.[i] || '/')}
+                    href={toHref(chapter.relatedPaths?.[i] || '/')}
                     class="related-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -519,7 +521,7 @@ const mindmapData = JSON.stringify({
               <span>📅 {t('resources.section.footer.verified')}</span>
               <span class="report-link-separator">｜</span>
               <a
-                href="https://github.com/frank890417/taiwan-md/issues"
+                href="https://github.com/ahnchen1983/agrischlchiayi/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="report-link"
@@ -534,21 +536,23 @@ const mindmapData = JSON.stringify({
       <div class="footer-stats">
         <div class="stat-item">
           <span class="stat-number">{totalCount}+</span><span class="stat-label"
-            >{t('resources.stats.collected')}</span>
+            >{t('resources.stats.collected')}</span
+          >
         </div>
         <div class="stat-item">
           <span class="stat-number">5</span><span class="stat-label"
-            >{t('resources.stats.chapters')}</span>
+            >{t('resources.stats.chapters')}</span
+          >
         </div>
         <div class="stat-item">
           <span class="stat-number">15+</span><span class="stat-label"
-            >{t('resources.stats.subcategories')}</span>
+            >{t('resources.stats.subcategories')}</span
+          >
         </div>
       </div>
 
       <div class="back-to-home">
-        <a href={translatePath('/')} class="btn-primary"
-          >{t('resources.backToHome')}</a
+        <a href={toHref('/')} class="btn-primary">{t('resources.backToHome')}</a
         >
       </div>
     </div>
