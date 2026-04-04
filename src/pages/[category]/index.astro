@@ -333,7 +333,7 @@ const otherCategories = categories
     <div class="container">
       <!-- Breadcrumb -->
       <nav class="breadcrumb">
-        <a href="/" class="breadcrumb-link">首頁</a>
+        <a href={`${base}/`} class="breadcrumb-link">首頁</a>
         <span class="separator">›</span>
         <span class="current">{categoryInfo.name}</span>
       </nav>
@@ -508,7 +508,7 @@ const otherCategories = categories
                         data-lang={article.lang}
                         data-subcategory={article.subcategory || ''}
                       >
-                        <a href={`/${category}/${article.slug}`} class="card-link">
+                        <a href={`${base}/${category}/${article.slug}`} class="card-link">
                           {article.image ? (
                             <div class="card-image">
                               <img 
@@ -577,7 +577,7 @@ const otherCategories = categories
               </p>
 
               <div class="action-buttons">
-                <a href="/" class="btn-primary">
+                <a href={`${base}/`} class="btn-primary">
                   返回首頁
                 </a>
                 <a
@@ -600,7 +600,7 @@ const otherCategories = categories
           {
             otherCategories.map((cat) => (
               <a
-                href={`/${cat.key}`}
+                href={`${base}/${cat.key}`}
                 class="category-card"
                 style={`border-color: ${cat.color}; color: ${cat.color};`}
               >

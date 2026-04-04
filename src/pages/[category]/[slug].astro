@@ -16,6 +16,8 @@ import {
   type CategoryKey,
 } from '../../utils/categoryConfig';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 // ── Git helpers ───────────────────────────────────────────────────────────────
 let _gitCache: Map<
   string,
@@ -421,7 +423,7 @@ const encodedTitle = encodeURIComponent(title);
             )
           }
           <a
-            href={`/${category}`}
+            href={`${base}/${category}`}
             class="meta-category-link"
             style={`color:${categoryInfo.color};`}
           >
@@ -633,7 +635,7 @@ const encodedTitle = encodeURIComponent(title);
         <!-- Return navigation -->
         <div class="return-nav">
           <a
-            href={`/${category}`}
+            href={`${base}/${category}`}
             class="return-btn return-btn--primary"
             style={`background:${categoryInfo.color};`}
           >
@@ -649,7 +651,7 @@ const encodedTitle = encodeURIComponent(title);
             >
             返回{categoryInfo.name}
           </a>
-          <a href="/" class="return-btn return-btn--ghost">
+          <a href={`${base}/`} class="return-btn return-btn--ghost">
             <svg
               width="14"
               height="14"
@@ -711,7 +713,7 @@ const encodedTitle = encodeURIComponent(title);
             </div>
             <div class="related-cta">
               <a
-                href={`/${category}`}
+                href={`${base}/${category}`}
                 class="view-all-btn"
                 style={`color:${categoryInfo.color}; border-color:${categoryInfo.color}30;`}
               >
@@ -771,7 +773,7 @@ const encodedTitle = encodeURIComponent(title);
         <div class="explore-grid">
           {
             otherCategories.map((cat) => (
-              <a href={`/${cat.key}`} class="explore-card">
+              <a href={`${base}/${cat.key}`} class="explore-card">
                 <div
                   class="explore-card-accent"
                   style={`background:${cat.color};`}
