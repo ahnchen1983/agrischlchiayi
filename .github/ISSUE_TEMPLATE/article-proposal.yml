@@ -1,5 +1,5 @@
 name: 📝 文章提案 / Article Proposal
-description: 提議一篇新文章或提供完整文章內容
+description: 提議一篇新農業知識文章
 title: "[Article] "
 labels: ["content"]
 body:
@@ -8,18 +8,16 @@ body:
     attributes:
       label: 分類 / Category
       options:
-        - Art (藝術)
-        - Culture (文化)
-        - Economy (經濟)
-        - Food (美食)
-        - Geography (地理)
-        - History (歷史)
-        - Lifestyle (生活)
-        - Music (音樂)
-        - Nature (自然)
-        - People (人物)
-        - Society (社會)
-        - Technology (科技)
+        - Agri-Basics (農業基礎入門)
+        - Agri-Advanced (農業進階實務)
+        - Farm-Management (農場經營管理)
+        - Crop-Production (作物生產技術)
+        - Facility-Farming (設施農業)
+        - Smart-Farming (智慧農業)
+        - Agri-Marketing (農產品銷售)
+        - Grants-Planning (計畫撰寫補助)
+        - Field-Visits (場域交流觀摩)
+        - Livestock-Health (畜牧健康)
     validations:
       required: true
   - type: textarea
@@ -28,18 +26,21 @@ body:
       label: 文章內容 / Article Content
       description: |
         可以是完整文章（含 frontmatter），也可以只是主題提案。
-        完整文章格式請參考 [CONTRIBUTING.md](https://github.com/frank890417/taiwan-md/blob/main/CONTRIBUTING.md)
+        完整文章格式請參考 [CONTRIBUTING.md](https://github.com/ahnchen1983/agrischlchiayi/blob/main/CONTRIBUTING.md)
       placeholder: |
         ---
         title: "文章標題"
         description: "一句話描述"
         date: 2026-01-01
-        tags: ["tag1", "tag2"]
+        tags: ["國本學堂", "tag2"]
+        level: "初階"
+        crop: ["水稻"]
+        tech: ["土壤檢測"]
         ---
-        
+
         # 文章標題
-        
-        ## 30 秒概覽
+
+        ## 摘要
         ...
     validations:
       required: true
@@ -48,6 +49,6 @@ body:
     attributes:
       label: 參考資料 / Sources
       description: 請提供可查證的資料來源
-      placeholder: "- https://example.com/source1\n- 學術論文/書籍名稱"
+      placeholder: "- https://example.com/source1\n- 課程講義/書籍名稱"
     validations:
       required: false
