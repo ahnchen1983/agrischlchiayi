@@ -565,6 +565,12 @@ export const contributeUI = {
     'contribute.copy.button': '📋 Copy',
     'contribute.copy.copied': '✅ Copied',
   },
+  ja: {
+    // Japanese — uses English as base, core strings will be translated
+  },
+  ko: {
+    // Korean — uses English as base, core strings will be translated
+  },
   'zh-TW': {
     // Meta
     'contribute.meta.title': '我想貢獻 — Taiwan.md',

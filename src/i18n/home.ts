@@ -104,6 +104,12 @@ export const homeUI = {
       'Discover the real Taiwan in 30 minutes with these 5 essential articles',
     'home.readingPath.continue': 'Continue exploring more topics →',
   },
+  ja: {
+    // Japanese — uses English as base, core strings will be translated
+  },
+  ko: {
+    // Korean — uses English as base, core strings will be translated
+  },
   'zh-TW': {
     'hero.stat.history.number': '400+',
     'hero.stat.history.label': '年歷史',
