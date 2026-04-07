@@ -49,7 +49,7 @@ const CATEGORIES = [
 ];
 
 // Translation language directories
-const TRANSLATION_LANGS = ['en', 'es', 'ja'];
+const TRANSLATION_LANGS = ['en', 'es', 'ja', 'ko'];
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
