@@ -504,12 +504,12 @@ const otherCategories = categories
                 </button>
               </div>
 
-              <div class="viz-container" id="sunburstViz"></div>
+              <div class="viz-container" id="sunburstViz" />
               <div
                 class="viz-container"
                 id="networkViz"
                 style="display:none;"
-              ></div>
+              />
 
               <div class="viz-legend" id="vizLegend" />
             </div>
@@ -517,153 +517,97 @@ const otherCategories = categories
         )
       }
 
-      <!-- Articles Section (grouped by subcategory) -->
-      <h2 class="articles-heading">📖 延伸閱讀</h2>
-
-      {
-        subcategoryGroups.length > 1 && (
-          <nav class="subcategory-nav">
-            {subcategoryGroups.map((group) => (
-              <a href={`#sub-${group.name}`} class="subcategory-chip">
-                {group.name}
-                <span class="chip-count">{group.articles.length}</span>
-              </a>
-            ))}
-          </nav>
-        )
-      }
+      <!-- Articles Section (row list + sidebar) -->
       {
         articles.length > 0 ? (
           <section class="articles-section">
-            {/* <!-- Sort & Filter Toolbar --> */}
-            <div class="toolbar">
-              <div class="toolbar-left">
-                <div class="sort-group">
-                  <span class="toolbar-label">排序</span>
-                  <button
-                    class="sort-btn active"
-                    data-sort="featured"
-                    type="button"
-                  >
-                    ⭐ 精選
-                  </button>
-                  <button class="sort-btn" data-sort="title" type="button">
-                    文 標題
-                  </button>
-                  <button class="sort-btn" data-sort="date" type="button">
-                    🕐 時間
-                  </button>
-                  <button class="sort-btn" data-sort="reading" type="button">
-                    📖 閱讀時間
-                  </button>
-                </div>
-              </div>
-              <div class="toolbar-right">
-                <div class="filter-group">
+            <div class="articles-layout">
+              {subcategoryGroups.length > 1 && (
+                <aside class="subcategory-sidebar">
+                  <nav class="sidebar-nav">
+                    <span class="sidebar-label">主題</span>
+                    {subcategoryGroups.map((group) => (
+                      <a href={`#sub-${group.name}`} class="sidebar-item">
+                        {group.name}
+                        <span class="sidebar-count">
+                          {group.articles.length}
+                        </span>
+                      </a>
+                    ))}
+                  </nav>
+                </aside>
+              )}
+
+              <div class="articles-main" id="articlesGrid">
+                <div class="articles-toolbar">
                   <input
                     type="text"
                     class="filter-input"
                     id="articleFilter"
-                    placeholder="🔍 搜尋文章..."
+                    placeholder="搜尋文章..."
                     autocomplete="off"
                   />
                 </div>
-                <div class="tag-filter" id="tagFilter">
-                  {uniqueTags.map((tag) => (
-                    <button class="tag-btn" data-tag={tag} type="button">
-                      {tag}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
 
-            <div id="articlesGrid">
-              {subcategoryGroups.map((group) => (
-                <div class="subcategory-section" id={`sub-${group.name}`}>
-                  {subcategoryGroups.length > 1 && (
-                    <h3 class="subcategory-heading">
-                      {group.name}
-                      <span class="subcategory-count">
-                        {group.articles.length}
-                      </span>
-                    </h3>
-                  )}
-                  <div class="articles-grid">
-                    {group.articles.map((article: any, index: number) => (
-                      <article
-                        class={`article-card ${index === 0 && article.featured ? 'featured-card' : ''}`}
-                        data-title={article.title}
-                        data-date={article.date || ''}
-                        data-reading={article.readingTime || 0}
-                        data-featured={article.featured ? '1' : '0'}
-                        data-tags={JSON.stringify(article.tags || [])}
-                        data-lang={article.lang}
-                        data-subcategory={article.subcategory || ''}
-                      >
+                {subcategoryGroups.map((group) => (
+                  <div class="subcategory-section" id={`sub-${group.name}`}>
+                    {subcategoryGroups.length > 1 && (
+                      <h3 class="subcategory-heading">
+                        {group.name}
+                        <span class="subcategory-count">
+                          {group.articles.length}
+                        </span>
+                      </h3>
+                    )}
+                    <div class="article-rows">
+                      {group.articles.map((article: any) => (
                         <a
-                          href={`/${category}/${article.slug}`}
-                          class="card-link"
+                          href={`/${category}/${encodeURIComponent(article.slug)}`}
+                          class={`article-row ${article.featured ? 'is-featured' : ''}`}
+                          data-title={article.title}
+                          data-date={article.date || ''}
+                          data-reading={article.readingTime || 0}
+                          data-featured={article.featured ? '1' : '0'}
+                          data-tags={JSON.stringify(article.tags || [])}
+                          data-subcategory={article.subcategory || ''}
                         >
-                          {article.image ? (
-                            <div class="card-image">
-                              <img
-                                src={article.image}
-                                alt={article.imageAlt || article.title}
-                                loading="lazy"
-                              />
-                            </div>
-                          ) : (
-                            <div
-                              class="card-image-placeholder"
-                              style={`background: ${categoryInfo.gradient};`}
-                            >
-                              <div class="card-image-icon">
-                                {categoryInfo.icon}
-                              </div>
-                            </div>
-                          )}
-
-                          <div class="card-content">
-                            <div class="card-header">
-                              <div class="article-meta">
-                                {article.status && (
-                                  <span class="status-tag">
-                                    {article.status}
-                                  </span>
-                                )}
-                                {article.lang && (
-                                  <span class="lang-tag">
-                                    {article.lang === 'zh-TW' ? '中文' : 'EN'}
-                                  </span>
-                                )}
-                              </div>
+                          <div class="row-main">
+                            <div class="row-title-line">
                               {article.featured && (
-                                <div class="featured-badge">⭐ 精選</div>
+                                <span class="row-star">★</span>
                               )}
+                              <h3 class="row-title">{article.title}</h3>
                             </div>
-
-                            <h3 class="article-title">{article.title}</h3>
-
-                            <p class="article-excerpt">{article.description}</p>
-
-                            <div class="article-info">
-                              {article.readingTime && (
-                                <span class="info-item">
-                                  📖 {article.readingTime} 分鐘
-                                </span>
-                              )}
-                            </div>
+                            {article.description && (
+                              <p class="row-desc">
+                                {article.description.length > 120
+                                  ? article.description.slice(0, 117) + '...'
+                                  : article.description}
+                              </p>
+                            )}
+                          </div>
+                          <div class="row-meta">
+                            {(article.footnotes || 0) > 0 && (
+                              <span class="row-fn">
+                                {article.footnotes} 引用
+                              </span>
+                            )}
+                            {article.readingTime && (
+                              <span class="row-time">
+                                {article.readingTime} min
+                              </span>
+                            )}
                           </div>
                         </a>
-                      </article>
-                    ))}
+                      ))}
+                    </div>
                   </div>
+                ))}
+
+                <div class="no-results" id="noResults" style="display:none;">
+                  <p>找不到符合條件的文章</p>
                 </div>
-              ))}
-            </div>
-            <div class="no-results" id="noResults" style="display:none;">
-              <p>找不到符合條件的文章 😢</p>
+              </div>
             </div>
           </section>
         ) : (
@@ -1299,7 +1243,228 @@ const otherCategories = categories
     margin-bottom: var(--space-8);
   }
 
-  /* Subcategory Navigation */
+  /* ===== ROW LIST LAYOUT ===== */
+  .articles-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .subcategory-sidebar {
+    position: sticky;
+    top: 80px;
+    width: 160px;
+    flex-shrink: 0;
+  }
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .sidebar-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 0.5rem 0.4rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0.3rem;
+  }
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.82rem;
+    color: #475569;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+  .sidebar-item:hover {
+    background: rgba(45, 80, 22, 0.06);
+    color: var(--categoryColor, #2d5016);
+  }
+  .sidebar-count {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    background: #f1f5f9;
+    padding: 0.1rem 0.35rem;
+    border-radius: 8px;
+    min-width: 1.2rem;
+    text-align: center;
+  }
+
+  .articles-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .articles-toolbar {
+    margin-bottom: 1rem;
+  }
+  .articles-toolbar .filter-input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .articles-toolbar .filter-input:focus {
+    border-color: var(--categoryColor, #2d5016);
+    box-shadow: 0 0 0 2px rgba(45, 80, 22, 0.08);
+  }
+
+  .subcategory-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #334155;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--categoryColor, #e2e8f0);
+    margin: 1.5rem 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .subcategory-section:first-child .subcategory-heading {
+    margin-top: 0;
+  }
+  .subcategory-count {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 400;
+  }
+
+  .article-rows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0.5rem;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.15s ease;
+  }
+  .article-row:last-child {
+    border-bottom: none;
+  }
+  .article-row:hover {
+    background: rgba(45, 80, 22, 0.03);
+    padding-left: 0.75rem;
+  }
+  .article-row.is-featured {
+    background: rgba(45, 80, 22, 0.02);
+  }
+
+  .row-main {
+    flex: 1;
+    min-width: 0;
+  }
+  .row-title-line {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .row-star {
+    color: var(--categoryColor, #d97706);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .row-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    line-height: 1.35;
+  }
+  .article-row:hover .row-title {
+    color: var(--categoryColor, #2d5016);
+  }
+  .row-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0.15rem 0 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .row-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding-top: 0.15rem;
+  }
+  .row-fn {
+    font-size: 0.72rem;
+    color: #16a34a;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .row-time {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    white-space: nowrap;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #94a3b8;
+  }
+
+  @media (max-width: 768px) {
+    .articles-layout {
+      flex-direction: column;
+      gap: 0;
+    }
+    .subcategory-sidebar {
+      position: static;
+      width: 100%;
+    }
+    .sidebar-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 1rem;
+    }
+    .sidebar-label {
+      display: none;
+    }
+    .sidebar-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.78rem;
+    }
+    .row-desc {
+      display: none;
+    }
+    .row-meta {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.1rem;
+    }
+  }
+
+  /* ===== END ROW LIST ===== */
+
+  /* Legacy — subcategory-nav removed, keeping chip for backwards compat */
   .subcategory-nav {
     display: flex;
     flex-wrap: wrap;
