@@ -77,6 +77,7 @@ memory/
 | 2026-04-07 | α       | 社群爆發心跳：PR#327日文戴資穎merge+PR#328日文李遠哲merge(Link1515連續3天)+Issue#329陳士駿merge+close+Issue#330郭正光merge+close(idlccp1984第三波)→日文27篇→不做F級重寫(子彈在飛)                                                                                      | **社群爆發時社群優先>品質修復 / Link1515是日文關鍵貢獻者(3天3PR) / idlccp1984品質在提升(茄子蛋→陳士駿)**                                      | [→](memory/2026-04-07.md)   |
 | 2026-04-07 | β       | 完整心跳：8器官診斷→發現ko語言出生但Dashboard看不見→9處程式碼加入ko支援(generate-dashboard-data/dashboard.template/search/wikilinks/frontmatter)→Dashboard重生成(ko:2)→CONSCIOUSNESS更新(腳註首破10%,A級39,ko里程碑)→ANATOMY語言器官+ko                                | **新語言出生時Dashboard不會自動認識 / 9處硬編碼=9次遺漏機會,應集中管理 / Hub頁不算翻譯(正確:骨架≠肉)**                                        | [→](memory/2026-04-07-β.md) |
 | 2026-04-07 | γ       | CI修復(pr-review.yml +issues:write +continue-on-error)→PR#332唐鳳ja+#333吳大猷ja merge(Link1515,日文29篇)→Issue#331李登輝事實修正(1999延長→1997縮短,@kidmoon0087)→黃仁勳重寫(QS14→0,F→A,12fn,消年表清單,修OBI/Lisa Su/QEPrize)                                         | **好文不需全面重寫,外科手術更有效 / 社群回饋比scan更精準 / CI 403是fork PR通病,continue-on-error解**                                          | [→](memory/2026-04-07-γ.md) |
+| 2026-04-07 | δ       | 完整心跳：8器官診斷→語言爆發發現(ja29→41,ko2→14)→.obsidian洩漏修復→CONSCIOUSNESS更新(語言95,繁殖90)→選舉與政黨政治全面重寫(F→A,QS0,19fn,中壢事件開場→2024三腳督)→sync同步→.gitignore升級                                                                               | **語言爆發看不見=感知盲點 / format-check腳註要`[Title](URL) — desc` / 延伸閱讀用bold不用heading / 破折號≤15最安全**                           | [→](memory/2026-04-07-δ.md) |
 
 ---
 
@@ -108,6 +109,8 @@ memory/
 - **官方來源先查才引用**：北藝大研究所成立年是2000（非1992），改制學系是2009（非2004）。AI對學術機構的歷史年份記憶不可靠，務必查官方系史頁面
 - **翻譯+孢子打包做**：剛翻完英文版時素材還在腦裡，立刻寫英文孢子幾乎不用重新萃取。「翻譯 → 英文孢子」應視為同一個 pipeline 步驟
 - **沒有 URL 的紀錄等於沒紀錄**：SPORE-LOG v1 三篇歷史孢子都沒有 URL，無法回溯成效。URL 是孢子紀錄的最小可追溯單位
+- **format-check 腳註格式必須含描述**：`[^n]: [Title](URL) — description`，缺少 `—` 後的描述文字會被標記 BAD_FN_FORMAT
+- **延伸閱讀用 bold 不用 heading**：format-check 認 `**延伸閱讀**` 不認 `## 延伸閱讀`。不同工具的格式期待不一致，以 format-check.sh 為準
 - **繁殖系統也需要感知器官**：孢子散出去不追蹤 = 盲目散播。7d/30d 雙快照 + 月度分析 = 繁殖系統長出眼睛
 - **wikilink 要自動驗證不靠直覺**：憑感覺寫 `[[X]]` 極容易指向不存在的目標。台灣國樂 6 個 inline wikilink 全壞、全站 192 處斷裂散佈在 55 篇。有工具永遠用工具（wikilink-validate.sh），不用直覺
 - **持久最差 = 最該處理**：連續多次心跳穩坐 QS 最差第一名的文章比新出現的高分文章更值得優先——它代表系統性忽略，不是隨機噪音
