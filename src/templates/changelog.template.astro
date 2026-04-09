@@ -1,29 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { commitIcon, fetchCommitFeed } from '../lib/commits';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-// Fetch commit history from GitHub API (works in shallow clone CI/CD environments)
-let commits: { hash: string; date: string; message: string; author: string }[] =
-  [];
-try {
-  const res = await fetch(
-    'https://api.github.com/repos/frank890417/taiwan-md/commits?per_page=100',
-  );
-  if (res.ok) {
-    const data = await res.json();
-    commits = data.map((c: any) => ({
-      hash: c.sha,
-      date: c.commit.author.date,
-      message: c.commit.message.split('\n')[0],
-      author: c.commit.author.name,
-    }));
-  }
-} catch (e) {
-  console.warn('Failed to fetch commits from GitHub API:', e);
-}
+const { commits, source } = await fetchCommitFeed(100);
 
 // Group commits by date
 const grouped: Record<string, typeof commits> = {};
@@ -44,17 +26,6 @@ function formatDate(dateStr: string) {
   });
 }
 
-function commitIcon(msg: string) {
-  if (msg.startsWith('feat')) return '✨';
-  if (msg.startsWith('fix')) return '🐛';
-  if (msg.startsWith('content')) return '📝';
-  if (msg.startsWith('docs')) return '📖';
-  if (msg.startsWith('style')) return '🎨';
-  if (msg.startsWith('refactor')) return '♻️';
-  if (msg.startsWith('chore')) return '🔧';
-  return '📌';
-}
-
 // Pass translations to the inline script
 const translations = {
   justNow: t('changelog.time.just-now'),
@@ -62,6 +33,23 @@ const translations = {
   hoursAgo: t('changelog.time.hours-ago'),
   daysAgo: t('changelog.time.days-ago'),
 };
+
+const sourceLabel =
+  lang === 'zh-TW'
+    ? source === 'git'
+      ? '來自專案 git 紀錄'
+      : source === 'cache'
+        ? '來自 build 時快取的 commit feed'
+        : source === 'github'
+          ? '來自 GitHub commit feed'
+          : '目前無法取得更新資料'
+    : source === 'git'
+      ? 'From local git history'
+      : source === 'cache'
+        ? 'From the build-time cached commit feed'
+        : source === 'github'
+          ? 'From the GitHub commit feed'
+          : 'Updates are temporarily unavailable';
 ---
 
 <Layout
@@ -76,65 +64,90 @@ const translations = {
         {t('changelog.header.subtitle')}
       </p>
       <p class="changelog-meta">
-        {lang === 'zh-TW' ? '共 ' : ''}{commits.length}
-        {t('changelog.header.meta.updates')} · {
-          t('changelog.header.meta.synced')
-        }
+        {lang === 'zh-TW' ? '共 ' : ''}{commits.length}{' '}
+        {t('changelog.header.meta.updates')} · {sourceLabel} ·
         <a
           href="https://github.com/frank890417/taiwan-md/commits/main"
-          target="_blank">GitHub</a
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a
         >
       </p>
     </header>
 
-    <div class="changelog-timeline">
-      {
-        sortedDays.map((day, i) => (
-          <div class="changelog-day">
-            <div class="day-indicator">
-              <div class="day-dot" />
-              <div class="day-line" />
-            </div>
-            <div class="day-body">
-              <div class="day-header">
-                <h2>{formatDate(day)}</h2>
-                <span class="day-count">
-                  {grouped[day].length} {t('changelog.day.updates')}
-                </span>
+    {
+      sortedDays.length ? (
+        <div class="changelog-timeline">
+          {sortedDays.map((day) => (
+            <div class="changelog-day">
+              <div class="day-indicator">
+                <div class="day-dot" />
+                <div class="day-line" />
               </div>
-              <div class="day-commits">
-                {grouped[day].map((commit) => (
-                  <div class="commit-item">
-                    <span class="commit-icon">
-                      {commitIcon(commit.message)}
-                    </span>
-                    <div class="commit-content">
-                      <p class="commit-message">{commit.message}</p>
-                      <div class="commit-meta">
-                        <span class="commit-author">{commit.author}</span>
-                        <span class="commit-time" data-date={commit.date}>
-                          {new Date(commit.date).toLocaleTimeString([], {
-                            hour: '2-digit',
-                            minute: '2-digit',
-                          })}
-                        </span>
-                        <a
-                          href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
-                          target="_blank"
-                          class="commit-hash"
-                        >
-                          {commit.hash.slice(0, 7)}
-                        </a>
+              <div class="day-body">
+                <div class="day-header">
+                  <h2>{formatDate(day)}</h2>
+                  <span class="day-count">
+                    {grouped[day].length} {t('changelog.day.updates')}
+                  </span>
+                </div>
+                <div class="day-commits">
+                  {grouped[day].map((commit) => (
+                    <div class="commit-item">
+                      <span class="commit-icon">
+                        {commitIcon(commit.message)}
+                      </span>
+                      <div class="commit-content">
+                        <p class="commit-message">{commit.message}</p>
+                        <div class="commit-meta">
+                          {commit.author && (
+                            <span class="commit-author">{commit.author}</span>
+                          )}
+                          <span class="commit-time" data-date={commit.date}>
+                            {new Date(commit.date).toLocaleTimeString([], {
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            })}
+                          </span>
+                          <a
+                            href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="commit-hash"
+                          >
+                            {commit.hash.slice(0, 7)}
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))
-      }
-    </div>
+          ))}
+        </div>
+      ) : (
+        <div class="changelog-empty">
+          <h2>
+            {lang === 'zh-TW'
+              ? '目前暫時抓不到更新紀錄'
+              : 'Update history is temporarily unavailable'}
+          </h2>
+          <p>
+            {lang === 'zh-TW'
+              ? '這頁現在會優先讀取 git，失敗時會退回 build-time 快取與 GitHub，避免部署後整頁空白。'
+              : 'This page now prefers git, then falls back to a build-time cache and GitHub to avoid shipping an empty changelog.'}
+          </p>
+          <a
+            href="https://github.com/frank890417/taiwan-md/commits/main"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="empty-link"
+          >
+            GitHub
+          </a>
+        </div>
+      )
+    }
   </div>
 
   <script is:inline define:vars={{ translations }}>
@@ -216,6 +229,38 @@ const translations = {
   .changelog-timeline {
     display: flex;
     flex-direction: column;
+  }
+
+  .changelog-empty {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #fafbfc;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+  }
+
+  .changelog-empty h2 {
+    margin: 0 0 0.75rem;
+    color: #1f2937;
+    font-size: 1.2rem;
+  }
+
+  .changelog-empty p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .empty-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .empty-link:hover {
+    text-decoration: underline;
   }
 
   .changelog-day {

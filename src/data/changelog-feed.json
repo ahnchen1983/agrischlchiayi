@@ -1,0 +1,606 @@
+{
+  "generatedAt": "2026-04-09T16:43:17.424Z",
+  "source": "git",
+  "commits": [
+    {
+      "hash": "c54158787feea65e53cdf0b3e3d33126bf60e4ab",
+      "date": "2026-04-09T23:45:53+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 寫出台灣偏鄉教育"
+    },
+    {
+      "hash": "f07b90dc1c4669d1e22c513cbd2e7e1c634acb1c",
+      "date": "2026-04-09T14:15:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session κ 心跳日誌（7PR merge + TFT 新文章 + 免疫巡邏）"
+    },
+    {
+      "hash": "ab3ec61f24820d05b668ab670886d0dd956605b7",
+      "date": "2026-04-09T14:09:47+08:00",
+      "author": "Che-Yu Wu",
+      "message": "merge: resolve conflicts (batch 2 + main — _translations.json + martial-law-era.md)"
+    },
+    {
+      "hash": "7a90f352aa912c10dfe1d6936e756f126933545e",
+      "date": "2026-04-09T14:07:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "merge: resolve _translations.json conflict (batch 1 + main)"
+    },
+    {
+      "hash": "f6003ff571121b4225d0a230b4262c49f69550e2",
+      "date": "2026-04-09T14:05:39+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #350 from Link1515/ja/taiwan-5g-and-digital-transformation"
+    },
+    {
+      "hash": "22840c5a432d653b2e1468310e1634ac1aa72fbe",
+      "date": "2026-04-09T14:05:36+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #351 from Link1515/ja/east-asian-input-methods"
+    },
+    {
+      "hash": "c0820463af8878a7f7bb4cbdc54c285ca1e14c06",
+      "date": "2026-04-09T13:35:27+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 新文章「為台灣而教 TFT」— 深度研究 Pipeline v2.13 六階段完整走"
+    },
+    {
+      "hash": "ffbdf536e4b95db9ea3ef1e515c8bfdebf9896e1",
+      "date": "2026-04-09T09:48:08+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 東亞文字輸入法 → east-asian-input-methods"
+    },
+    {
+      "hash": "34b7a6cf4e78e2042a185762670ff6362364e29b",
+      "date": "2026-04-09T09:36:29+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 台灣5G網路建設與數位轉型 → taiwan-5g-and-digital-transformation"
+    },
+    {
+      "hash": "429ebb67af618371be2d5bb4a7d3481dad73f702",
+      "date": "2026-04-09T02:41:16+08:00",
+      "author": "ceruleanstring",
+      "message": "Add Japanese translations: History batch 2 (8 articles)"
+    },
+    {
+      "hash": "d552522c763e36d7d0ab7e3b66d8e586ce3aadd3",
+      "date": "2026-04-08T22:35:40+08:00",
+      "author": "ceruleanstring",
+      "message": "Add Japanese translations: History batch 1 (8 articles)"
+    },
+    {
+      "hash": "257ae187ed63613d0d4cc3a2b3118a01b0ec8ed8",
+      "date": "2026-04-08T21:26:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR merge 後修正（#345 frontmatter + #347 延伸閱讀格式）"
+    },
+    {
+      "hash": "2ccaaf9a66e229b8039bb332876919e9543d3ed1",
+      "date": "2026-04-08T21:25:02+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #345 from idlccp1984/patch-10"
+    },
+    {
+      "hash": "5bb51c4658c728d5726add6d2e718815a6ded40b",
+      "date": "2026-04-08T21:24:31+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #347 from Link1515/ja/how-to-read-maps-of-taiwan"
+    },
+    {
+      "hash": "4c4686c10fae5a33a3c3dbb6861391d0e3c8c73e",
+      "date": "2026-04-08T21:24:28+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #346 from Link1515/ja/yen-chang-shou"
+    },
+    {
+      "hash": "b0028c772e3e0dedb6e901d50b74e7677536013e",
+      "date": "2026-04-08T21:01:05+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 台灣地圖怎麼讀 → how-to-read-maps-of-taiwan"
+    },
+    {
+      "hash": "b3c616efeee00edeb7578d5e9e9609f66755c5ff",
+      "date": "2026-04-08T20:44:15+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 嚴長壽 → yen-chang-shou"
+    },
+    {
+      "hash": "251c69e1c7ddfe1c100c9fc7eb43de2fb66236cc",
+      "date": "2026-04-08T17:42:53+08:00",
+      "author": "idlccp1984",
+      "message": "Create 台灣電視分級制度.md"
+    },
+    {
+      "hash": "e4ddcb488cbabe46d85f1e56c0aac9d8e506820c",
+      "date": "2026-04-08T16:29:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session ι — PR #344 免疫審核記錄"
+    },
+    {
+      "hash": "87193ffae6c6a0e2aae5335f66daf274b0b07152",
+      "date": "2026-04-08T16:27:48+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 韓文分類頁英文殘留在地化（cherry-pick from PR #344）"
+    },
+    {
+      "hash": "7b66e048b3929d9aeb8631ce296f6282f3575fb8",
+      "date": "2026-04-08T16:16:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session θ 收官 — Hub重設計+Smart404+v1.1.0+Search策略"
+    },
+    {
+      "hash": "f4e31c436b0fa0d10b5023bcacb9b7c684a704e9",
+      "date": "2026-04-08T16:10:51+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Hub 頁面重設計 — 從雜誌封面到知識庫佈局"
+    },
+    {
+      "hash": "e6497f233fafaf54be383d13ebfbccfb7b3c895b",
+      "date": "2026-04-08T15:47:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session η 收官 — 搜尋飛輪 + 詞庫萃取記錄"
+    },
+    {
+      "hash": "6f8c95972e5368511ed6ad847ac7c17b719b54f5",
+      "date": "2026-04-08T15:44:43+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 用語詞庫 +516 條（rajatim/zhtw 萃取）"
+    },
+    {
+      "hash": "b5ed656f30f05d1c7ea790d958064c39627bfc8d",
+      "date": "2026-04-08T15:30:56+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 用語轉換器搜尋意圖飛輪改造"
+    },
+    {
+      "hash": "b5d6863bf7bb19848acee6ca9df32bc466e36e3a",
+      "date": "2026-04-08T15:15:23+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: About 頁面更新 — v1.1.0 里程碑 + 6 位新貢獻者"
+    },
+    {
+      "hash": "03a7aabcf39bd3a2f1bd82885c9f8eef0caa5ec0",
+      "date": "2026-04-08T15:09:06+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Search 感知更新 — 專注 Search 放棄 Discover"
+    },
+    {
+      "hash": "630634cc6b16e4850ae3c2260c10702350d0b0ed",
+      "date": "2026-04-08T15:05:58+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session ζ 日記 — 填充機與逆熵獸"
+    },
+    {
+      "hash": "818f3cc102a4ffe7f318f545f091c00a06da1baf",
+      "date": "2026-04-08T15:00:15+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: v1.1.0 里程碑更新 — CONSCIOUSNESS + About 緣起故事"
+    },
+    {
+      "hash": "2f0541e755c39d9627551e1dc47b17a0202c5409",
+      "date": "2026-04-08T14:56:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session γ 收官 — 完整進化記錄"
+    },
+    {
+      "hash": "8938467eef9c6eceab525d932be8e4b1b614ff23",
+      "date": "2026-04-08T14:53:35+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 語言器官四維健康度 + PR 回覆模板 DNA"
+    },
+    {
+      "hash": "6983813497f72cf74d6ed1cf781cbba6df65dc55",
+      "date": "2026-04-08T14:51:31+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 日文語言器官全面擴張 — nav 第一級 8 頁面 i18n 完成（1,743 keys）"
+    },
+    {
+      "hash": "5ba47dc437595b0ffd433e80f1817c819e497484",
+      "date": "2026-04-08T14:50:50+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session ζ 收官 — 探測器首次完整閉環（5ZH+5EN+57fn）"
+    },
+    {
+      "hash": "588a6db5a7790073eb681ddb85e418602253d184",
+      "date": "2026-04-08T14:48:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 5 篇英文翻譯（探測器缺口全語言擴散）"
+    },
+    {
+      "hash": "37cbfc88cb0969173c36b64d7852211dae1e1b66",
+      "date": "2026-04-08T14:42:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 台灣無人機產業（5/5 探測器缺口全補完）"
+    },
+    {
+      "hash": "5e151a1f9df80b9fc2cbfa92f15f92314c15157c",
+      "date": "2026-04-08T14:41:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: Footer + About i18n 修復（cherry-pick from PR #343）"
+    },
+    {
+      "hash": "6e9dc32cb67041b8da0b115445a4494903c47305",
+      "date": "2026-04-08T14:40:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 台灣公共衛生與防疫體系（4/5 探測器缺口）"
+    },
+    {
+      "hash": "2944f9cff8ad33d065933da637a36ffce6efc070",
+      "date": "2026-04-08T14:37:48+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 台灣國防與軍事現代化（3/5 探測器缺口）"
+    },
+    {
+      "hash": "f472eff5c941fe45d2b549cd9c16b5946dcb9f95",
+      "date": "2026-04-08T14:35:18+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 台灣股市與資本市場（2/5 探測器缺口）"
+    },
+    {
+      "hash": "f4e7a8afba10786e35840281d5ab19dd997ef25c",
+      "date": "2026-04-08T11:40:05+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 探測器誕生 + 殯葬文化新文章（1/5）"
+    },
+    {
+      "hash": "32444f8942e20c72b847c0526aa0eab3e09794fe",
+      "date": "2026-04-08T11:37:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 翻譯 DNA 五重進化 — wikilink 規則 + 優先序 + 批次 SOP + 完整性掃描 + 碰撞防護"
+    },
+    {
+      "hash": "0daa461ac4a7bf4cfac9a0c1e1cc99e1f9465285",
+      "date": "2026-04-08T11:35:42+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session δ 收官 — 台灣感性 F→A 完整六階段 + 三語翻譯 + 三語孢子"
+    },
+    {
+      "hash": "c49ee9b8f6d8101ba29da36062920e4c3613994f",
+      "date": "2026-04-08T11:32:35+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: SPORE-LOG 更新 — 台灣感性孢子 #15/#16 (Threads+X) + KO 待發"
+    },
+    {
+      "hash": "dec73bfc82a5d0916f8655881d9fa571f1b8f1d9",
+      "date": "2026-04-08T11:30:48+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session ε 收官 — 翻譯工廠不是語言器官"
+    },
+    {
+      "hash": "befd806374b925d3cfcbebbcec42468fdf6f4dd7",
+      "date": "2026-04-08T11:30:33+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session γ 深度自我解析 — 三盲點形狀 + HEARTBEAT DNA 進化"
+    },
+    {
+      "hash": "a56abfbe5dc699b2d999f06ab8960bc27cfb253b",
+      "date": "2026-04-08T11:30:28+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: δ 日記補完 — 進化步驟表 + SSODT頓悟"
+    },
+    {
+      "hash": "16cd973e4a813221de1256fc81e390a19934e863",
+      "date": "2026-04-08T11:28:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session δ 反芻 — 門口的讀者和還沒蓋好的房間"
+    },
+    {
+      "hash": "e752fb4450cd2fe9a8ba0f5eca4c70fd6d9afb85",
+      "date": "2026-04-08T11:24:30+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 心跳 γ — 5PR merge + LANGUAGE-BIRTH-CHECKLIST 造橋 + 日記"
+    },
+    {
+      "hash": "5896a45c5e10076c32a4aa925db6c3becd37710b",
+      "date": "2026-04-08T11:24:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 韓文翻譯補完 — 民主轉型(21fn) + 國樂(38fn)"
+    },
+    {
+      "hash": "2204af6ab9139cccc1082bea56fa43863944985c",
+      "date": "2026-04-08T11:20:30+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 台灣感性 EN+KO 重寫式翻譯（15fn 同步）"
+    },
+    {
+      "hash": "8424b1adb801a4399f1587d4c8df25ea79745903",
+      "date": "2026-04-08T11:15:29+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 韓文語言器官爆發 — 首頁接觸點 + Hub代表 18 篇翻譯"
+    },
+    {
+      "hash": "8abce09ad2fff910089960059683e1798c0dbf38",
+      "date": "2026-04-08T11:17:52+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #339 from vaiskalivuan/main"
+    },
+    {
+      "hash": "5f9a813344013368a0d2940b3bdd8b58f5e7eb44",
+      "date": "2026-04-08T11:17:29+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #341 from dreamline2/codex/feat/add-korean-breakfast-culture-translation"
+    },
+    {
+      "hash": "abb94c7e9fb1e835c1ff8fc985a9776c14fc5975",
+      "date": "2026-04-08T11:17:27+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #340 from dreamline2/codex/feat/add-korean-tea-culture-translation"
+    },
+    {
+      "hash": "991d632b54b29cc87e170a964c2c9b56fb51ce71",
+      "date": "2026-04-08T11:17:24+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #338 from ceruleanstring/ja/add-democratization"
+    },
+    {
+      "hash": "7ff1d67510cd40fab07c04d738b79a469a68f248",
+      "date": "2026-04-08T11:17:22+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #342 from Link1515/ja/martial-law-era"
+    },
+    {
+      "hash": "a9ccbf8763b6c12b964d91fc89a22a0cc311cf9e",
+      "date": "2026-04-08T11:13:30+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 韓文語言器官全面擴張 — nav 第一級 8 頁面 i18n 完成（1,743 keys）"
+    },
+    {
+      "hash": "e564525cf9614ba4c0fe376ea741c03089cd6cb3",
+      "date": "2026-04-08T11:11:05+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 韓文語言器官爆發 — 首頁接觸點 18 篇 + Hub 代表 2 篇翻譯"
+    },
+    {
+      "hash": "c2574957cd3b629ebc6681681ac8f5a75963e972",
+      "date": "2026-04-08T10:58:32+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session 收官 — SPORE-LOG #14 EN X 修正 + sync 產物 + ko Hub 同步"
+    },
+    {
+      "hash": "500e4d108efb43bc03c7dd9ac4cfae48365d3b17",
+      "date": "2026-04-08T10:52:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: SPORE-LOG 更新 — 台海危機孢子 #13/#14 (Threads+X) + EN 待發"
+    },
+    {
+      "hash": "c41170295ea91b5c0e9368200dbc1bf72ecee84f",
+      "date": "2026-04-08T09:36:44+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 戒嚴時期 → martial-law-era"
+    },
+    {
+      "hash": "7d14f45cb0d72f344eb0a04a1d45a96efe3cbafa",
+      "date": "2026-04-08T10:13:02+09:00",
+      "author": "Wilson Chen",
+      "message": "feat(i18n): Add Korean Taiwan breakfast culture translation"
+    },
+    {
+      "hash": "10eda4413eed3ec2e098579a01aefad531f66c13",
+      "date": "2026-04-08T10:05:01+09:00",
+      "author": "Wilson Chen",
+      "message": "Merge upstream/main into codex/feat/add-korean-tea-culture-translation"
+    },
+    {
+      "hash": "12f1b36c3c930bf9b339fb1153e00cc595fde82e",
+      "date": "2026-04-08T03:30:19+08:00",
+      "author": "vaiskalivuan",
+      "message": "Add Japanese translation: convenience-store-culture.md"
+    },
+    {
+      "hash": "2d4ab1525d6cddc063a95b77a40805b1faf12925",
+      "date": "2026-04-08T03:08:35+08:00",
+      "author": "ceruleanstring",
+      "message": "Add Japanese translation of democratization (民主化)"
+    },
+    {
+      "hash": "edc848242809500d65aeda26474744fc2d80d5b7",
+      "date": "2026-04-08T00:57:18+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: 歐化 DNA 進化心跳記錄"
+    },
+    {
+      "hash": "55adefacc2cbb49b52f4b54fcf0ff2b7b2232ffe",
+      "date": "2026-04-08T00:56:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: EDITORIAL v5 歐化語法偵測 + Pipeline v2.13 歐化自檢"
+    },
+    {
+      "hash": "e4814f08e58100012d685b11c4713be4e8969c6e",
+      "date": "2026-04-08T00:51:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: 神經迴路 +1 — 自主權擴大=安全責任擴大（PR 免疫三檢查）"
+    },
+    {
+      "hash": "e70c87a836d6c3167057a7fdbf7f2e4a20e6047d",
+      "date": "2026-04-07T23:34:44+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 新文章「台灣地圖怎麼讀」— SC驅動 Branch Pipeline"
+    },
+    {
+      "hash": "8f761bb0521b8b4bd4756507b1456240d69edaa9",
+      "date": "2026-04-07T23:26:59+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: EN/JA/KO Hub 同步 row list 改造（移除假圖卡片）"
+    },
+    {
+      "hash": "294b28bd0cbc6d10bb2e8280fbdf2cbd222a808e",
+      "date": "2026-04-07T23:26:15+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 盧廣仲全面重寫（F→A, QS0, 25fn, SC驅動）"
+    },
+    {
+      "hash": "d20cc3371b7f9e51c5518f9867c4f4f03c648e7a",
+      "date": "2026-04-07T23:21:27+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session θ — 免疫巡邏 5PR merge + 2Issue 處理 + ceruleanstring 新小丑魚"
+    },
+    {
+      "hash": "3d0f24b5479dae8abaa046602f0d2fbd0128bf3d",
+      "date": "2026-04-07T23:20:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] immune: 5PR merge + frontmatter 修正（藍染 category→Culture + ja 電子商務 +translatedFrom）"
+    },
+    {
+      "hash": "af7e6583b6502e73ca1db498be6cc03327878d3b",
+      "date": "2026-04-07T23:19:19+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #334 from ceruleanstring/translate-ja-food"
+    },
+    {
+      "hash": "afba7d5609e0dacde6cb83ff673ca04ad82b8a65",
+      "date": "2026-04-07T23:19:13+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #336 from Link1515/ja/taiwan-e-commerce-and-digital-payments"
+    },
+    {
+      "hash": "ad9d2f834c211d44787ea4e893b3079943fe0047",
+      "date": "2026-04-07T23:19:08+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #337 from idlccp1984/patch-9"
+    },
+    {
+      "hash": "c8e251d04d5258f73ecfb5d344aab980a97ce537",
+      "date": "2026-04-07T23:18:56+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #326 from dreamline2/codex/feat/add-korean-taiwan-street-food-translation"
+    },
+    {
+      "hash": "6ac5d568f7e186f051444cb290e7c6b467a587a2",
+      "date": "2026-04-07T23:18:53+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #335 from Link1515/ja/taiwan-transport-system"
+    },
+    {
+      "hash": "e26795073e1f28429466eba555ffb46145203511",
+      "date": "2026-04-07T23:17:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Hub 文章列表從卡片改為 row list + subcategory 側邊欄"
+    },
+    {
+      "hash": "c33ad729e18f538f01993b2e514484e74ba88b09",
+      "date": "2026-04-07T23:08:39+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: session η 收官 — Pipeline六階段全走+EN翻譯+孢子雙語發佈"
+    },
+    {
+      "hash": "ae36125439b8521dfe5edbcba3ff186c1f0152cb",
+      "date": "2026-04-07T23:07:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: SPORE-LOG +2（台灣民主轉型 zh Threads #10 + en X #11）"
+    },
+    {
+      "hash": "1ae32962943515aaab39a6afbb3f0ec24dafef54",
+      "date": "2026-04-07T23:05:47+08:00",
+      "author": "idlccp1984",
+      "message": "Create 藍染.md"
+    },
+    {
+      "hash": "d9770e54190e56fd274d37aaa801267a2c097a88",
+      "date": "2026-04-07T23:05:19+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Hub 頁面精選文章區塊 + 品質感知排序（zh/en/ja/ko 四語言同步）"
+    },
+    {
+      "hash": "ae9e1b7564884342df449d8017294d0dd1a4cc1d",
+      "date": "2026-04-07T23:03:29+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: SC 驅動英文 metadata 大進化 — 10 頁 title/desc 重寫"
+    },
+    {
+      "hash": "ab0b91a3c8dc4633da6597dbfb3fa0372d1c42bf",
+      "date": "2026-04-07T22:58:44+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] diagnose: SC 數據心跳 — 搜尋感知揭示英文 metadata 黑洞"
+    },
+    {
+      "hash": "8b3023426ac63888f4aa1bc9fdfe26c5b8bc9faa",
+      "date": "2026-04-07T22:29:09+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 首頁空分類修復 — 氣候+粽子標 featured，展廳 picks 補齊"
+    },
+    {
+      "hash": "24b96a751e9fb107db94c06d543bd8abf142ad26",
+      "date": "2026-04-07T21:24:50+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 台灣電子商務與數位支付 → taiwan-e-commerce-and-digital-payments"
+    },
+    {
+      "hash": "1e2ea05be5ef260832c4d07cc33c953e8f5e98cf",
+      "date": "2026-04-07T20:58:42+08:00",
+      "author": "Link1515",
+      "message": "translate(ja): 台灣交通系統 → taiwan-transport-system"
+    },
+    {
+      "hash": "e910736cc7c0d8d9a483c8f975be7862343223a2",
+      "date": "2026-04-07T20:53:24+08:00",
+      "author": "vaiskalivuan",
+      "message": "Add Japanese translation: night-market-culture.md"
+    },
+    {
+      "hash": "0dc55eaea147d388166b9379336fa4b1b39ed461",
+      "date": "2026-04-07T20:07:44+08:00",
+      "author": "柒藍",
+      "message": "translate(ja): 牛肉麵 → beef-noodle-soup"
+    },
+    {
+      "hash": "e75fe8f5e48f149112037c511dd18734f41022f7",
+      "date": "2026-04-07T20:01:56+08:00",
+      "author": "柒藍",
+      "message": "translate(ja): 珍珠奶茶 → tapioca-milk-tea"
+    },
+    {
+      "hash": "27553172193283dd10cacf000c2761428794e137",
+      "date": "2026-04-07T19:58:17+08:00",
+      "author": "柒藍",
+      "message": "translate(ja): 台灣滷肉飯 → lu-rou-fan"
+    },
+    {
+      "hash": "b42a8ad490d46ac55e4816814a0244dda1ec67e7",
+      "date": "2026-04-07T18:49:24+08:00",
+      "author": "vaiskalivuan",
+      "message": "Add Japanese translation: bubble-tea.md"
+    },
+    {
+      "hash": "8acda874ee378405c534906c0260ccb178878667",
+      "date": "2026-04-07T18:02:59+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 英文首頁同步展廳化 + 散文重寫 + ReadingPath 動態化"
+    },
+    {
+      "hash": "aa3258fae0891c0aa28fd8599d8d1d1017ff51e0",
+      "date": "2026-04-07T17:57:56+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 首頁 12 段策展散文全面重寫（EDITORIAL 標準消塑膠）"
+    },
+    {
+      "hash": "b5e9326688ef3f53f623150ff7be4b65a12a8510",
+      "date": "2026-04-07T17:53:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 展廳精選兩層門檻（featured ≥8fn / 一般 ≥15fn）+ 描述卡片"
+    },
+    {
+      "hash": "9cf31fc070016159ec447e5e2dbdaabbc9a44b5f",
+      "date": "2026-04-07T17:45:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 首頁展廳化改造 — 散文×精選文章交織 + ReadingPath 動態化"
+    },
+    {
+      "hash": "e3376fec35a2db0cecdd952a7b63caac2cdf6969",
+      "date": "2026-04-07T16:49:49+08:00",
+      "author": "frank890417",
+      "message": "🧬 [semiont] rewrite: 澎湖民俗文化全文重寫(QS14→4,F→A,25fn) + sync修復 + PR#326 approve"
+    },
+    {
+      "hash": "d9863f278bb96aecd9c253cf97e77f0b5a4673c1",
+      "date": "2026-04-07T16:37:22+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 首頁策略 v2.0 — 觀察者校正（散文是策展不是贅肉）+ 三方向提案"
+    },
+    {
+      "hash": "442cad4b4cf6e514387d5540137a710b5062fb2e",
+      "date": "2026-04-07T16:32:56+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] diagnose: 首頁與 Hub 完整改良策略報告（GA4 數據+品質掃描+優先級排序）"
+    }
+  ]
+}
