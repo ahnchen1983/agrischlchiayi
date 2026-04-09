@@ -1,13 +1,14 @@
 ---
+import CommitLog from '../commits/CommitLog.astro';
 import {
   getLangFromUrl,
   useTranslations,
   useTranslatedPath,
 } from '../../i18n/utils';
-import { commitIcon, timeAgo } from '../../lib/commits';
+import type { Commit } from '../../lib/commits';
 
 interface Props {
-  commits: { hash: string; date: string; message: string }[];
+  commits: Commit[];
 }
 
 const { commits } = Astro.props;
@@ -24,21 +25,7 @@ const translatePath = useTranslatedPath(lang);
           <h2>{t('home.updates.heading')}</h2>
           <p class="updates-subtitle">{t('home.updates.subtitle')}</p>
         </div>
-        <div class="updates-list">
-          {commits.map((commit) => (
-            <a
-              href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="update-item"
-              title={commit.message}
-            >
-              <span class="update-icon">{commitIcon(commit.message)}</span>
-              <span class="update-message">{commit.message}</span>
-              <span class="update-time">{timeAgo(commit.date, lang)}</span>
-            </a>
-          ))}
-        </div>
+        <CommitLog commits={commits} lang={lang} variant="compact" />
         <div class="updates-footer">
           <a href={translatePath('/changelog')} class="updates-more-btn">
             {t('home.updates.viewAll')}
@@ -95,52 +82,11 @@ const translatePath = useTranslatedPath(lang);
     color: #64748b;
     font-weight: 500;
   }
-  .updates-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  :global(.recent-updates .commit-log--compact) {
     position: relative;
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
-  }
-  .update-item {
-    display: grid;
-    grid-template-columns: 1.5rem minmax(0, 1fr) auto;
-    align-items: start;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    color: inherit;
-  }
-  .update-item:hover {
-    border-color: #bfdbfe;
-    background: #f0f9ff;
-    transform: translateX(4px);
-  }
-  .update-icon {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .update-message {
-    font-size: 0.9rem;
-    color: #1f2937;
-    font-weight: 600;
-    line-height: 1.4;
-    min-width: 0;
-    white-space: normal;
-    word-break: break-word;
-  }
-  .update-time {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    font-weight: 500;
-    white-space: nowrap;
-    padding-top: 0.05rem;
   }
   .updates-footer {
     text-align: center;
@@ -176,16 +122,6 @@ const translatePath = useTranslatedPath(lang);
     }
     .updates-header h2 {
       font-size: 1.5rem;
-    }
-    .update-item {
-      grid-template-columns: 1.5rem 1fr;
-    }
-    .update-time {
-      grid-column: 2;
-      padding-top: 0;
-    }
-    .update-message {
-      font-size: 0.85rem;
     }
   }
 </style>

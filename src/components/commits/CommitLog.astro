@@ -1,0 +1,438 @@
+---
+import { commitIcon, timeAgo } from '../../lib/commits';
+import type { Commit } from '../../lib/commits';
+import type { Lang } from '../../types';
+
+interface RelativeTimeLabels {
+  justNow: string;
+  minutesAgo: string;
+  hoursAgo: string;
+  daysAgo: string;
+}
+
+interface Props {
+  commits: Commit[];
+  lang: Lang;
+  variant?: 'timeline' | 'compact';
+  locale?: string;
+  dayUpdatesLabel?: string;
+  emptyTitle?: string;
+  emptyDescription?: string;
+  emptyLinkHref?: string;
+  emptyLinkLabel?: string;
+  relativeTimeLabels?: RelativeTimeLabels;
+}
+
+const {
+  commits,
+  lang,
+  variant = 'timeline',
+  locale = lang === 'zh-TW'
+    ? 'zh-TW'
+    : lang === 'ja'
+      ? 'ja-JP'
+      : lang === 'ko'
+        ? 'ko-KR'
+        : 'en-US',
+  dayUpdatesLabel = lang === 'zh-TW' ? '筆更新' : 'updates',
+  emptyTitle = lang === 'zh-TW'
+    ? '目前暫時抓不到更新紀錄'
+    : 'Update history is temporarily unavailable',
+  emptyDescription = lang === 'zh-TW'
+    ? '目前沒有可顯示的 commit feed。'
+    : 'There is no commit feed available right now.',
+  emptyLinkHref = 'https://github.com/frank890417/taiwan-md/commits/main',
+  emptyLinkLabel = 'GitHub',
+  relativeTimeLabels = lang === 'zh-TW'
+    ? {
+        justNow: '剛剛',
+        minutesAgo: '分鐘前',
+        hoursAgo: '小時前',
+        daysAgo: '天前',
+      }
+    : {
+        justNow: 'just now',
+        minutesAgo: 'minutes ago',
+        hoursAgo: 'hours ago',
+        daysAgo: 'days ago',
+      },
+} = Astro.props;
+
+const grouped: Record<string, Commit[]> = {};
+if (variant === 'timeline') {
+  for (const commit of commits) {
+    const day = commit.date.slice(0, 10);
+    if (!grouped[day]) grouped[day] = [];
+    grouped[day].push(commit);
+  }
+}
+const sortedDays = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
+
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString(locale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'short',
+  });
+}
+---
+
+<div class:list={['commit-log', `commit-log--${variant}`]}>
+  {
+    variant === 'timeline' ? (
+      sortedDays.length ? (
+        <div class="commit-log-timeline">
+          {sortedDays.map((day) => (
+            <div class="commit-log-day">
+              <div class="commit-log-indicator">
+                <div class="commit-log-dot" />
+                <div class="commit-log-line" />
+              </div>
+              <div class="commit-log-body">
+                <div class="commit-log-day-header">
+                  <h2>{formatDate(day)}</h2>
+                  <span class="commit-log-day-count">
+                    {grouped[day].length} {dayUpdatesLabel}
+                  </span>
+                </div>
+                <div class="commit-log-items">
+                  {grouped[day].map((commit) => (
+                    <article class="commit-log-item commit-log-item--timeline">
+                      <span class="commit-log-icon">
+                        {commitIcon(commit.message)}
+                      </span>
+                      <div class="commit-log-content">
+                        <p class="commit-log-message">{commit.message}</p>
+                        <div class="commit-log-meta">
+                          {commit.author && (
+                            <span class="commit-log-author">
+                              {commit.author}
+                            </span>
+                          )}
+                          <span class="commit-log-time" data-date={commit.date}>
+                            {new Date(commit.date).toLocaleTimeString(locale, {
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            })}
+                          </span>
+                          <a
+                            href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="commit-log-hash"
+                          >
+                            {commit.hash.slice(0, 7)}
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="commit-log-empty">
+          <h2>{emptyTitle}</h2>
+          <p>{emptyDescription}</p>
+          <a
+            href={emptyLinkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="commit-log-empty-link"
+          >
+            {emptyLinkLabel}
+          </a>
+        </div>
+      )
+    ) : commits.length ? (
+      <div class="commit-log-items">
+        {commits.map((commit) => (
+          <a
+            href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="commit-log-item commit-log-item--compact"
+            title={commit.message}
+          >
+            <span class="commit-log-icon">{commitIcon(commit.message)}</span>
+            <span class="commit-log-message">{commit.message}</span>
+            <span class="commit-log-time">{timeAgo(commit.date, lang)}</span>
+          </a>
+        ))}
+      </div>
+    ) : null
+  }
+</div>
+
+<script is:inline define:vars={{ relativeTimeLabels }}>
+  function updateRelativeTimes() {
+    const timeElements = document.querySelectorAll(
+      '.commit-log-time[data-date]',
+    );
+    const now = new Date();
+
+    timeElements.forEach((el) => {
+      const dateValue = el.getAttribute('data-date');
+      if (!dateValue) return;
+
+      const date = new Date(dateValue);
+      const diffInSeconds = Math.floor((now - date) / 1000);
+
+      let relativeTime = '';
+      if (diffInSeconds < 60) {
+        relativeTime = relativeTimeLabels.justNow;
+      } else if (diffInSeconds < 3600) {
+        relativeTime = `${Math.floor(diffInSeconds / 60)} ${relativeTimeLabels.minutesAgo}`;
+      } else if (diffInSeconds < 86400) {
+        relativeTime = `${Math.floor(diffInSeconds / 3600)} ${relativeTimeLabels.hoursAgo}`;
+      } else if (diffInSeconds < 2592000) {
+        relativeTime = `${Math.floor(diffInSeconds / 86400)} ${relativeTimeLabels.daysAgo}`;
+      } else {
+        relativeTime = date.toLocaleDateString();
+      }
+
+      el.textContent = relativeTime;
+    });
+  }
+
+  updateRelativeTimes();
+  setInterval(updateRelativeTimes, 60000);
+</script>
+
+<style>
+  .commit-log-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .commit-log-empty {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #fafbfc;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+  }
+
+  .commit-log-empty h2 {
+    margin: 0 0 0.75rem;
+    color: #1f2937;
+    font-size: 1.2rem;
+  }
+
+  .commit-log-empty p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .commit-log-empty-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .commit-log-empty-link:hover {
+    text-decoration: underline;
+  }
+
+  .commit-log-day {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 0 1rem;
+  }
+
+  .commit-log-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .commit-log-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+  }
+
+  .commit-log-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, #cbd5e1, transparent);
+    margin-top: 0.5rem;
+  }
+
+  .commit-log-day:last-child .commit-log-line {
+    display: none;
+  }
+
+  .commit-log-body {
+    padding-bottom: 2.5rem;
+  }
+
+  .commit-log-day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .commit-log-day-header h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+  }
+
+  .commit-log-day-count {
+    font-size: 0.85rem;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  .commit-log-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .commit-log-item {
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+
+  .commit-log-item--timeline {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  }
+
+  .commit-log-item--compact {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .commit-log-item--compact:hover {
+    border-color: #bfdbfe;
+    background: #f0f9ff;
+    transform: translateX(4px);
+  }
+
+  .commit-log-icon {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .commit-log-content {
+    min-width: 0;
+  }
+
+  .commit-log-message {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #1f2937;
+    font-weight: 600;
+    word-break: break-word;
+  }
+
+  .commit-log-item--compact .commit-log-message {
+    font-size: 0.9rem;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .commit-log-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+
+  .commit-log-author {
+    font-weight: 600;
+  }
+
+  .commit-log-time {
+    color: #94a3b8;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .commit-log-item--compact .commit-log-time {
+    padding-top: 0.05rem;
+  }
+
+  .commit-log-hash {
+    color: #2563eb;
+    text-decoration: none;
+    font-family:
+      'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-weight: 600;
+  }
+
+  .commit-log-hash:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .commit-log-day {
+      grid-template-columns: 20px 1fr;
+      gap: 0 0.75rem;
+    }
+
+    .commit-log-body {
+      padding-bottom: 2rem;
+    }
+
+    .commit-log-day-header h2 {
+      font-size: 1.1rem;
+    }
+
+    .commit-log-item--timeline {
+      grid-template-columns: 24px 1fr;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+    }
+
+    .commit-log-item--compact {
+      grid-template-columns: 1.5rem 1fr;
+    }
+
+    .commit-log-item--compact .commit-log-time {
+      grid-column: 2;
+      padding-top: 0;
+    }
+
+    .commit-log-item--compact .commit-log-message {
+      font-size: 0.85rem;
+    }
+  }
+</style>

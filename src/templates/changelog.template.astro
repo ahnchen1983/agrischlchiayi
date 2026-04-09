@@ -1,38 +1,12 @@
 ---
+import CommitLog from '../components/commits/CommitLog.astro';
 import Layout from '../layouts/Layout.astro';
-import { commitIcon, fetchCommitFeed } from '../lib/commits';
+import { fetchCommitFeed } from '../lib/commits';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { commits, source } = await fetchCommitFeed(100);
-
-// Group commits by date
-const grouped: Record<string, typeof commits> = {};
-for (const commit of commits) {
-  const day = commit.date.slice(0, 10); // YYYY-MM-DD
-  if (!grouped[day]) grouped[day] = [];
-  grouped[day].push(commit);
-}
-const sortedDays = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
-
-function formatDate(dateStr: string) {
-  const d = new Date(dateStr);
-  return d.toLocaleDateString(t('changelog.locale'), {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    weekday: 'short',
-  });
-}
-
-// Pass translations to the inline script
-const translations = {
-  justNow: t('changelog.time.just-now'),
-  minutesAgo: t('changelog.time.minutes-ago'),
-  hoursAgo: t('changelog.time.hours-ago'),
-  daysAgo: t('changelog.time.days-ago'),
-};
 
 const sourceLabel =
   lang === 'zh-TW'
@@ -69,117 +43,35 @@ const sourceLabel =
         <a
           href="https://github.com/frank890417/taiwan-md/commits/main"
           target="_blank"
-          rel="noopener noreferrer">GitHub</a
+          rel="noopener noreferrer"
         >
+          GitHub
+        </a>
       </p>
     </header>
 
-    {
-      sortedDays.length ? (
-        <div class="changelog-timeline">
-          {sortedDays.map((day) => (
-            <div class="changelog-day">
-              <div class="day-indicator">
-                <div class="day-dot" />
-                <div class="day-line" />
-              </div>
-              <div class="day-body">
-                <div class="day-header">
-                  <h2>{formatDate(day)}</h2>
-                  <span class="day-count">
-                    {grouped[day].length} {t('changelog.day.updates')}
-                  </span>
-                </div>
-                <div class="day-commits">
-                  {grouped[day].map((commit) => (
-                    <div class="commit-item">
-                      <span class="commit-icon">
-                        {commitIcon(commit.message)}
-                      </span>
-                      <div class="commit-content">
-                        <p class="commit-message">{commit.message}</p>
-                        <div class="commit-meta">
-                          {commit.author && (
-                            <span class="commit-author">{commit.author}</span>
-                          )}
-                          <span class="commit-time" data-date={commit.date}>
-                            {new Date(commit.date).toLocaleTimeString([], {
-                              hour: '2-digit',
-                              minute: '2-digit',
-                            })}
-                          </span>
-                          <a
-                            href={`https://github.com/frank890417/taiwan-md/commit/${commit.hash}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="commit-hash"
-                          >
-                            {commit.hash.slice(0, 7)}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div class="changelog-empty">
-          <h2>
-            {lang === 'zh-TW'
-              ? '目前暫時抓不到更新紀錄'
-              : 'Update history is temporarily unavailable'}
-          </h2>
-          <p>
-            {lang === 'zh-TW'
-              ? '這頁現在會優先讀取 git，失敗時會退回 build-time 快取與 GitHub，避免部署後整頁空白。'
-              : 'This page now prefers git, then falls back to a build-time cache and GitHub to avoid shipping an empty changelog.'}
-          </p>
-          <a
-            href="https://github.com/frank890417/taiwan-md/commits/main"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="empty-link"
-          >
-            GitHub
-          </a>
-        </div>
-      )
-    }
+    <CommitLog
+      commits={commits}
+      lang={lang}
+      variant="timeline"
+      locale={t('changelog.locale')}
+      dayUpdatesLabel={t('changelog.day.updates')}
+      emptyTitle={lang === 'zh-TW'
+        ? '目前暫時抓不到更新紀錄'
+        : 'Update history is temporarily unavailable'}
+      emptyDescription={lang === 'zh-TW'
+        ? '這頁現在會優先讀取 git，失敗時會退回 build-time 快取與 GitHub，避免部署後整頁空白。'
+        : 'This page now prefers git, then falls back to a build-time cache and GitHub to avoid shipping an empty changelog.'}
+      emptyLinkHref="https://github.com/frank890417/taiwan-md/commits/main"
+      emptyLinkLabel="GitHub"
+      relativeTimeLabels={{
+        justNow: t('changelog.time.just-now'),
+        minutesAgo: t('changelog.time.minutes-ago'),
+        hoursAgo: t('changelog.time.hours-ago'),
+        daysAgo: t('changelog.time.days-ago'),
+      }}
+    />
   </div>
-
-  <script is:inline define:vars={{ translations }}>
-    function updateRelativeTimes() {
-      const timeElements = document.querySelectorAll('.commit-time');
-      const now = new Date();
-
-      timeElements.forEach((el) => {
-        const date = new Date(el.getAttribute('data-date'));
-        const diffInSeconds = Math.floor((now - date) / 1000);
-
-        let relativeTime = '';
-        if (diffInSeconds < 60) {
-          relativeTime = translations.justNow;
-        } else if (diffInSeconds < 3600) {
-          relativeTime = `${Math.floor(diffInSeconds / 60)} ${translations.minutesAgo}`;
-        } else if (diffInSeconds < 86400) {
-          relativeTime = `${Math.floor(diffInSeconds / 3600)} ${translations.hoursAgo}`;
-        } else if (diffInSeconds < 2592000) {
-          relativeTime = `${Math.floor(diffInSeconds / 86400)} ${translations.daysAgo}`;
-        } else {
-          relativeTime = date.toLocaleDateString();
-        }
-
-        el.textContent = relativeTime;
-      });
-    }
-
-    // Update on load and then every minute
-    updateRelativeTimes();
-    setInterval(updateRelativeTimes, 60000);
-  </script>
 </Layout>
 
 <style>
@@ -225,167 +117,6 @@ const sourceLabel =
     text-decoration: underline;
   }
 
-  /* Timeline */
-  .changelog-timeline {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .changelog-empty {
-    padding: 1.5rem;
-    border-radius: 16px;
-    background: #fafbfc;
-    border: 1px solid #e2e8f0;
-    text-align: center;
-  }
-
-  .changelog-empty h2 {
-    margin: 0 0 0.75rem;
-    color: #1f2937;
-    font-size: 1.2rem;
-  }
-
-  .changelog-empty p {
-    margin: 0;
-    color: #64748b;
-    line-height: 1.6;
-  }
-
-  .empty-link {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .empty-link:hover {
-    text-decoration: underline;
-  }
-
-  .changelog-day {
-    display: grid;
-    grid-template-columns: 32px 1fr;
-    gap: 0 1rem;
-  }
-
-  .day-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .day-dot {
-    width: 12px;
-    height: 12px;
-    background: #22c55e;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    outline: 2px solid #22c55e;
-    flex-shrink: 0;
-    margin-top: 0.3rem;
-  }
-
-  .day-line {
-    width: 2px;
-    flex: 1;
-    background: linear-gradient(180deg, #22c55e, #e2e8f0);
-    margin-top: 4px;
-    min-height: 1rem;
-  }
-
-  .day-body {
-    padding-bottom: 2rem;
-  }
-
-  .day-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .day-header h2 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin: 0;
-  }
-
-  .day-count {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    background: #f1f5f9;
-    padding: 0.15rem 0.6rem;
-    border-radius: 10px;
-    font-weight: 500;
-  }
-
-  .day-commits {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .commit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: #fafbfc;
-    border-radius: 10px;
-    border: 1px solid #f1f5f9;
-    transition: all 0.2s ease;
-  }
-
-  .commit-item:hover {
-    background: #f0fdf4;
-    border-color: #d1fae5;
-  }
-
-  .commit-icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    margin-top: 0.1rem;
-  }
-
-  .commit-content {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .commit-message {
-    font-size: 0.95rem;
-    color: #1f2937;
-    margin: 0 0 0.3rem;
-    line-height: 1.5;
-    font-weight: 600;
-    word-break: break-word;
-  }
-
-  .commit-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.8rem;
-    color: #94a3b8;
-  }
-
-  .commit-author {
-    font-weight: 500;
-  }
-
-  .commit-hash {
-    font-family: 'SF Mono', 'Fira Code', monospace;
-    color: #3b82f6;
-    text-decoration: none;
-    font-size: 0.78rem;
-  }
-
-  .commit-hash:hover {
-    text-decoration: underline;
-  }
-
   @media (max-width: 768px) {
     .changelog-page {
       padding: 3rem 1rem 4rem;
@@ -394,15 +125,5 @@ const sourceLabel =
     .changelog-header h1 {
       font-size: 2rem;
     }
-
-    .commit-item {
-      padding: 0.6rem 0.75rem;
-    }
-  }
-
-  .commit-time {
-    color: #94a3b8;
-    margin: 0 0.5rem;
-    font-size: 0.85rem;
   }
 </style>
