@@ -393,32 +393,59 @@ const otherCategories = categories
   description={`${categoryInfo.description} - 台灣知識庫`}
   category={categoryInfo.name}
 >
+  <!--
+    Phase 6 partial migration — [category]/index.astro (zh-TW)
+    ──────────────────────────────────────────────────────────
+    Same wrapper migration as en/ja [category]/index. zh-TW adds
+    two extra conditional sections beyond what en/ja have:
+    (1) Food visualization (when category === 'food') — sunburst
+        + network d3 viz, keeps all .food-viz / .viz-* classes in
+        the scoped <style> because they repeat and are animated
+        by script/index.astro's d3 code.
+    (2) Economy hub with inline charts (when isEconomy) — uses
+        .econ-chart-* classes rendered inline around hubSections,
+        also kept fully scoped.
+  -->
   <main class="category-page">
     <!-- Category Header (compact bar + curatorial hook fused) -->
     <div
-      class="category-header"
+      class="bg-[var(--categoryColorLight)] pb-5 pt-3"
       style={`border-bottom: 2px solid ${categoryInfo.color};`}
     >
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="/" class="breadcrumb-link">首頁</a>
-          <span class="separator">›</span>
-          <span class="current">{categoryInfo.name}</span>
+      <div class="mx-auto max-w-[1200px] px-8 max-[768px]:px-4">
+        <nav
+          class="mb-1 flex items-center gap-2 text-[0.9rem] [&>a:hover]:underline [&>a]:font-medium [&>a]:no-underline"
+        >
+          <a href="/" style={`color: ${categoryInfo.color};`}>首頁</a>
+          <span class="text-[#9ca3af]">›</span>
+          <span class="font-semibold text-[#6b7280]">{categoryInfo.name}</span>
         </nav>
-        <div class="bar-row">
-          <span class="bar-icon">{categoryInfo.icon}</span>
-          <h1 class="bar-title" style={`color: ${categoryInfo.color}`}>
+        <div class="flex flex-wrap items-baseline gap-2">
+          <span class="text-[1.5rem]">{categoryInfo.icon}</span>
+          <h1
+            class="m-0 text-[1.5rem] font-extrabold"
+            style={`color: ${categoryInfo.color}`}
+          >
             {categoryInfo.name}
           </h1>
-          <span class="bar-sep">·</span>
-          <span class="bar-desc">{categoryInfo.description}</span>
-          <span class="bar-count">{articles.length} 篇文章</span>
+          <span class="font-light text-[#94a3b8] max-[768px]:hidden">·</span>
+          <span
+            class="max-w-[50%] truncate text-[0.88rem] text-[#64748b] max-[768px]:hidden"
+            >{categoryInfo.description}</span
+          >
+          <span
+            class="ml-auto rounded-[12px] bg-[#f1f5f9] px-2 py-[0.15rem] text-[0.78rem] text-[#94a3b8]"
+            >{articles.length} 篇文章</span
+          >
         </div>
         {
           hubHook && (
-            <div class="header-hook">
+            <div class="mt-3 max-w-[800px] text-[0.92rem] leading-[1.75] text-[#475569] max-[768px]:text-[0.85rem]">
               <div class="header-hook-prose" set:html={hubHook} />
-              <a href="#hub-essay" class="hook-readmore">
+              <a
+                href="#hub-essay"
+                class="mt-2 inline-block text-[0.82rem] font-semibold text-[var(--categoryColor)] no-underline transition-all duration-150 hover:underline"
+              >
                 閱讀完整策展導讀 →
               </a>
             </div>
@@ -427,31 +454,45 @@ const otherCategories = categories
       </div>
     </div>
 
-    <div class="container">
-      <!-- Main two-column layout: sidebar + content -->
+    <div
+      class="mx-auto max-w-[1200px] px-8 py-8 max-[768px]:px-4 max-[768px]:py-4"
+    >
+      {/* Main two-column layout: sidebar + content */}
       {
         articles.length > 0 ? (
-          <div class="hub-layout">
-            <aside class="hub-sidebar">
+          <div class="mt-4 flex items-start gap-8 max-[768px]:flex-col max-[768px]:gap-0">
+            <aside class="sticky top-[72px] w-[180px] flex-shrink-0 self-start max-[768px]:static max-[768px]:w-full max-[768px]:max-h-none max-[768px]:overflow-visible">
               {/* Subcategory nav */}
               {subcategoryGroups.length > 1 && (
-                <nav class="sidebar-nav">
-                  <span class="sidebar-label">主題</span>
+                <nav class="flex flex-col gap-1 max-[768px]:flex-row max-[768px]:flex-wrap max-[768px]:gap-[0.3rem] max-[768px]:border-b max-[768px]:border-[#e2e8f0] max-[768px]:pb-4 max-[768px]:mb-4">
+                  <span class="mb-[0.3rem] border-b border-[#e2e8f0] px-2 pb-[0.4rem] text-[0.7rem] font-bold uppercase tracking-[0.1em] text-[#94a3b8] max-[768px]:hidden">
+                    主題
+                  </span>
                   {subcategoryGroups.map((group) => (
-                    <a href={`#sub-${group.name}`} class="sidebar-item">
+                    <a
+                      href={`#sub-${group.name}`}
+                      class="flex items-center justify-between rounded px-2 py-[0.35rem] text-[0.82rem] text-[#475569] no-underline transition-all duration-150 hover:bg-[rgba(45,80,22,0.06)] hover:text-[var(--categoryColor,#2d5016)] max-[768px]:rounded-2xl max-[768px]:border max-[768px]:border-[#e2e8f0] max-[768px]:bg-[#f8fafc] max-[768px]:px-[0.6rem] max-[768px]:py-1 max-[768px]:text-[0.78rem]"
+                    >
                       {group.name}
-                      <span class="sidebar-count">{group.articles.length}</span>
+                      <span class="min-w-[1.2rem] rounded-lg bg-[#f1f5f9] px-[0.35rem] py-[0.1rem] text-center text-[0.7rem] text-[#94a3b8]">
+                        {group.articles.length}
+                      </span>
                     </a>
                   ))}
                 </nav>
               )}
 
               {/* Cross-category nav (replaces bottom explore cards) */}
-              <div class="sidebar-divider" />
-              <nav class="sidebar-nav">
-                <span class="sidebar-label">其他主題</span>
+              <div class="my-3 h-px bg-[#e2e8f0] max-[768px]:hidden" />
+              <nav class="flex flex-col gap-1 max-[768px]:hidden">
+                <span class="mb-[0.3rem] border-b border-[#e2e8f0] px-2 pb-[0.4rem] text-[0.7rem] font-bold uppercase tracking-[0.1em] text-[#94a3b8]">
+                  其他主題
+                </span>
                 {otherCategories.map((cat) => (
-                  <a href={`/${cat.key}`} class="sidebar-item sidebar-other">
+                  <a
+                    href={`/${cat.key}`}
+                    class="flex items-center justify-between rounded px-2 py-[0.35rem] text-[0.78rem] text-[#475569] no-underline opacity-75 transition-all duration-150 hover:bg-[rgba(45,80,22,0.06)] hover:text-[var(--categoryColor,#2d5016)] hover:opacity-100"
+                  >
                     <span>
                       {cat.icon} {cat.name}
                     </span>
@@ -460,15 +501,17 @@ const otherCategories = categories
               </nav>
             </aside>
 
-            <div class="hub-main">
+            <div class="min-w-0 flex-1">
               {/* Featured Picks (horizontal chips) */}
               {topPicks && topPicks.length > 0 && (
-                <div class="featured-strip">
-                  <span class="featured-label">精選</span>
+                <div class="mb-4 flex flex-wrap items-center gap-2 border-b border-[#e2e8f0] pb-3 max-[768px]:flex-nowrap max-[768px]:overflow-x-auto max-[768px]:pb-2 max-[768px]:[-webkit-overflow-scrolling:touch]">
+                  <span class="flex-shrink-0 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[var(--categoryColor)]">
+                    精選
+                  </span>
                   {topPicks.slice(0, 3).map((article: any) => (
                     <a
                       href={`/${category}/${encodeURIComponent(article.slug)}`}
-                      class="featured-chip"
+                      class="whitespace-nowrap rounded-2xl border border-transparent bg-[var(--categoryColorLight)] px-[0.6rem] py-[0.2rem] text-[0.82rem] font-semibold text-[var(--categoryColor)] no-underline transition-all duration-150 hover:border-[var(--categoryColor)] hover:bg-white"
                     >
                       ★ {article.title}
                     </a>
@@ -477,11 +520,11 @@ const otherCategories = categories
               )}
 
               {/* Articles list */}
-              <div class="articles-main" id="articlesGrid">
-                <div class="articles-toolbar">
+              <div class="articles-main min-w-0 flex-1" id="articlesGrid">
+                <div class="mb-4">
                   <input
                     type="text"
-                    class="filter-input"
+                    class="w-full max-w-[320px] rounded-md border border-[#e2e8f0] px-3 py-[0.45rem] text-[0.85rem] outline-none transition-colors duration-200 focus:border-[var(--categoryColor,#2d5016)] focus:shadow-[0_0_0_2px_rgba(45,80,22,0.08)]"
                     id="articleFilter"
                     placeholder="搜尋文章..."
                     autocomplete="off"
@@ -491,14 +534,14 @@ const otherCategories = categories
                 {subcategoryGroups.map((group) => (
                   <div class="subcategory-section" id={`sub-${group.name}`}>
                     {subcategoryGroups.length > 1 && (
-                      <h3 class="subcategory-heading">
+                      <h3 class="mb-2 mt-6 flex items-center gap-2 border-b-2 border-[var(--categoryColor,#e2e8f0)] pb-[0.4rem] text-[1rem] font-bold text-[#334155] [.subcategory-section:first-child_&]:mt-0">
                         {group.name}
-                        <span class="subcategory-count">
+                        <span class="text-[0.72rem] font-normal text-[#94a3b8]">
                           {group.articles.length}
                         </span>
                       </h3>
                     )}
-                    <div class="article-rows">
+                    <div class="flex flex-col">
                       {group.articles.map((article: any) => (
                         <a
                           href={`/${category}/${encodeURIComponent(article.slug)}`}
@@ -543,7 +586,10 @@ const otherCategories = categories
                   </div>
                 ))}
 
-                <div class="no-results" id="noResults" style="display:none;">
+                <div
+                  class="hidden p-8 text-center text-[#94a3b8]"
+                  id="noResults"
+                >
                   <p>找不到符合條件的文章</p>
                 </div>
               </div>
@@ -577,8 +623,11 @@ const otherCategories = categories
 
               {/* Full Hub Essay (not collapsed — the soul of Taiwan.md) */}
               {hubHtml && !isEconomy && (
-                <section class="hub-content" id="hub-essay">
-                  <h2 class="hub-essay-heading">
+                <section
+                  class="my-8 mb-12 rounded-2xl border border-[#e2e8f0] bg-white p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+                  id="hub-essay"
+                >
+                  <h2 class="mb-2 mt-12 border-t-2 border-[#e2e8f0] pt-8 text-[1.15rem] font-bold text-[#334155]">
                     {categoryInfo.icon} 策展導讀
                   </h2>
                   <div class="hub-prose" set:html={hubHtml} />
@@ -587,8 +636,11 @@ const otherCategories = categories
 
               {/* Economy with charts */}
               {isEconomy && hubSections.length > 0 && (
-                <section class="hub-content" id="hub-essay">
-                  <h2 class="hub-essay-heading">
+                <section
+                  class="my-8 mb-12 rounded-2xl border border-[#e2e8f0] bg-white p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+                  id="hub-essay"
+                >
+                  <h2 class="mb-2 mt-12 border-t-2 border-[#e2e8f0] pt-8 text-[1.15rem] font-bold text-[#334155]">
                     {categoryInfo.icon} 策展導讀
                   </h2>
                   <div class="hub-prose">
@@ -642,22 +694,29 @@ const otherCategories = categories
             </div>
           </div>
         ) : (
-          <section class="coming-soon">
-            <div class="coming-soon-content">
-              <div class="coming-soon-icon">{categoryInfo.icon}</div>
-              <h2>內容準備中</h2>
-              <p>這個分類的文章正在努力製作中，敬請期待！</p>
-              <p class="category-desc">
+          <section class="px-8 py-16 text-center max-[768px]:px-4">
+            <div class="mx-auto max-w-[500px]">
+              <div class="mb-8 text-[5rem] opacity-70">{categoryInfo.icon}</div>
+              <h2 class="mb-4 text-[2.5rem] font-bold text-[#1f2937]">
+                內容準備中
+              </h2>
+              <p class="mb-6 text-[1.1rem] leading-[1.6] text-[#6b7280]">
+                這個分類的文章正在努力製作中，敬請期待！
+              </p>
+              <p class="!mb-12 text-[1.1rem] font-medium italic text-[var(--categoryColor)]">
                 未來這裡將會有：{categoryInfo.description}
               </p>
-              <div class="action-buttons">
-                <a href="/" class="btn-primary">
+              <div class="flex flex-wrap justify-center gap-4 max-[768px]:flex-col max-[768px]:items-center">
+                <a
+                  href="/"
+                  class="inline-flex items-center gap-2 rounded-xl bg-[var(--categoryColor)] px-8 py-4 font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)]"
+                >
                   返回首頁
                 </a>
                 <a
                   href="https://github.com/frank890417/taiwan-md"
                   target="_blank"
-                  class="btn-secondary"
+                  class="inline-flex items-center gap-2 rounded-xl border-2 border-[var(--categoryColor)] bg-white px-8 py-4 font-semibold text-[var(--categoryColor)] no-underline transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--categoryColor)] hover:text-white"
                 >
                   參與貢獻
                 </a>
@@ -739,7 +798,7 @@ const otherCategories = categories
         section.style.display = anyVisible ? '' : 'none';
       });
       if (noResults) {
-        noResults.style.display = visible === 0 ? 'block' : 'none';
+        noResults.classList.toggle('hidden', visible !== 0);
       }
     }
 
@@ -790,55 +849,6 @@ const otherCategories = categories
     min-height: 100vh;
   }
 
-  /* Category Header (bar + curatorial hook fused) */
-  .category-header {
-    padding: 0.75rem 0 1.25rem;
-    background: var(--categoryColorLight);
-  }
-  .bar-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .bar-icon {
-    font-size: 1.5rem;
-  }
-  .bar-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 0;
-    font-family: var(--font-editorial);
-  }
-  .bar-sep {
-    color: #94a3b8;
-    font-weight: 300;
-  }
-  .bar-desc {
-    font-size: 0.88rem;
-    color: #64748b;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 50%;
-  }
-  .bar-count {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    background: #f1f5f9;
-    padding: 0.15rem 0.5rem;
-    border-radius: 12px;
-    margin-left: auto;
-  }
-
-  /* Header Hook (curatorial intro inside category header) */
-  .header-hook {
-    margin-top: 0.75rem;
-    font-size: 0.92rem;
-    line-height: 1.75;
-    color: #475569;
-    max-width: 800px;
-  }
   .header-hook-prose :global(p) {
     margin: 0.4rem 0;
   }
@@ -848,273 +858,8 @@ const otherCategories = categories
   .header-hook-prose :global(p:last-child) {
     margin-bottom: 0;
   }
-  .hook-readmore {
-    display: inline-block;
-    margin-top: 0.5rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--categoryColor);
-    text-decoration: none;
-    transition: all 0.15s;
-  }
-  .hook-readmore:hover {
-    text-decoration: underline;
-  }
-
-  /* Hub Layout (two-column: sidebar + main) */
-  .hub-layout {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    margin-top: 1rem;
-  }
-  .hub-sidebar {
-    width: 180px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 72px;
-    align-self: flex-start;
-  }
-  .hub-main {
-    flex: 1;
-    min-width: 0;
-  }
-
-  /* Featured Strip (horizontal chips) */
-  .featured-strip {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid #e2e8f0;
-  }
-  .featured-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--categoryColor);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    flex-shrink: 0;
-  }
-  .featured-chip {
-    font-size: 0.82rem;
-    color: var(--categoryColor);
-    background: var(--categoryColorLight);
-    border: 1px solid transparent;
-    padding: 0.2rem 0.6rem;
-    border-radius: 16px;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: all 0.15s;
-  }
-  .featured-chip:hover {
-    border-color: var(--categoryColor);
-    background: white;
-  }
-
-  /* Hub Essay (full curatorial essay below articles) */
-  .hub-essay-heading {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #334155;
-    margin: 3rem 0 0.5rem;
-    padding-top: 2rem;
-    border-top: 2px solid #e2e8f0;
-  }
-
-  /* Sidebar shared styles */
-  .sidebar-divider {
-    height: 1px;
-    background: #e2e8f0;
-    margin: 0.75rem 0;
-  }
-  .sidebar-other {
-    font-size: 0.78rem;
-    opacity: 0.75;
-  }
-  .sidebar-other:hover {
-    opacity: 1;
-  }
-
-  /* ---- LEGACY hero classes removed, keeping icon reference for compat ---- */
-  .hero-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.8)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-
-  .hero-description {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    line-height: 1.4;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .stats-badge {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0.7rem 1.15rem;
-    border-radius: var(--radius-chip);
-    font-weight: 500;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
-  }
-
-  .hero-decoration {
-    position: absolute;
-    top: 0;
-    right: -10%;
-    width: 50%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 70%
-    );
-    border-radius: 50%;
-  }
-
-  /* Container */
-  .container {
-    max-width: var(--container-page);
-    margin: 0 auto;
-    padding: 2rem var(--space-page-x);
-  }
-
-  /* Breadcrumb */
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: var(--space-7);
-    font-size: 0.9rem;
-  }
-
-  .breadcrumb a {
-    color: var(--categoryColor);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-
-  .separator {
-    color: #9ca3af;
-  }
-
-  .current {
-    color: #6b7280;
-    font-weight: 600;
-  }
-
-  /* Hub Featured Picks */
-  .hub-picks {
-    margin: 1.5rem 0 2rem;
-  }
-  .hub-picks-heading {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 0.75rem;
-    font-family: var(--font-editorial, 'Noto Serif TC', serif);
-  }
-  .hub-picks-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .hub-picks .pick-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding: 0.55rem 0.85rem;
-    background: #fafdf7;
-    border: 1px solid rgba(45, 80, 22, 0.12);
-    border-left: 3px solid var(--categoryColor, rgba(45, 80, 22, 0.35));
-    border-radius: 0 6px 6px 0;
-    text-decoration: none;
-    transition: all 0.25s ease;
-  }
-  .hub-picks .pick-card:hover {
-    background: rgba(45, 80, 22, 0.06);
-    border-color: rgba(45, 80, 22, 0.25);
-    border-left-color: var(--categoryColor, rgba(45, 80, 22, 0.6));
-    transform: translateX(2px);
-    box-shadow: 0 1px 4px rgba(45, 80, 22, 0.08);
-  }
-  .hub-picks .pick-head {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .hub-picks .pick-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--categoryColor, #2d5016);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .hub-picks .pick-fn {
-    font-size: 0.72rem;
-    color: #6b7280;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .hub-picks .pick-desc {
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: #4b5563;
-    line-height: 1.5;
-    font-family: 'jf-jinxuanlatte', 'Noto Sans TC', sans-serif;
-  }
 
   /* Articles Grid */
-  .hub-content {
-    margin: var(--space-5) 0 var(--space-7);
-    padding: var(--space-6);
-    background: rgba(255, 255, 255, 0.88);
-    border-radius: 24px;
-    border: 1px solid #e2e8f0;
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(10px);
-  }
   .hub-prose {
     font-size: 1.05rem;
     line-height: 2;
@@ -1373,20 +1118,6 @@ const otherCategories = categories
     margin: 3rem 0;
   }
 
-  .articles-heading {
-    font-size: var(--title-subsection-size);
-    margin: 0 0 var(--space-5) 0;
-    color: #1e293b;
-    font-weight: 800;
-    line-height: var(--title-line-height);
-    letter-spacing: var(--title-letter-spacing);
-    font-family: var(--font-editorial);
-  }
-
-  .articles-section {
-    margin-bottom: var(--space-8);
-  }
-
   /* ===== ROW LIST LAYOUT ===== */
   .articles-layout {
     display: flex;
@@ -1631,494 +1362,6 @@ const otherCategories = categories
 
   /* ===== END ROW LIST ===== */
 
-  /* Legacy — subcategory-nav removed, keeping chip for backwards compat */
-  .subcategory-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: #f8fafc;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .subcategory-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.4rem 0.85rem;
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    color: #475569;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s;
-  }
-
-  .subcategory-chip:hover {
-    border-color: var(--categoryColor);
-    color: var(--categoryColor);
-    background: var(--categoryColorLight);
-  }
-
-  .chip-count {
-    background: #e2e8f0;
-    color: #64748b;
-    padding: 0.1rem 0.45rem;
-    border-radius: 10px;
-    font-size: 0.72rem;
-    font-weight: 600;
-  }
-
-  /* Subcategory Section */
-  .subcategory-section {
-    margin-bottom: 2.5rem;
-  }
-
-  .subcategory-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--categoryColor);
-    font-family: var(--font-editorial);
-    letter-spacing: var(--title-letter-spacing);
-  }
-
-  .subcategory-count {
-    background: var(--categoryColorLight);
-    color: var(--categoryColor);
-    padding: 0.15rem 0.55rem;
-    border-radius: 10px;
-    font-size: 0.78rem;
-    font-weight: 600;
-  }
-
-  /* Toolbar */
-  .toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: #f8fafc;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .toolbar-left {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .toolbar-right {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem;
-    margin-left: auto;
-  }
-
-  .toolbar-label {
-    font-size: 0.8rem;
-    color: #64748b;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .sort-group {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .sort-btn {
-    padding: 0.35rem 0.65rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    background: white;
-    font-size: 0.78rem;
-    color: #64748b;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-  }
-
-  .sort-btn:hover {
-    border-color: var(--categoryColor);
-    color: var(--categoryColor);
-  }
-
-  .sort-btn.active {
-    background: var(--categoryColor);
-    color: white;
-    border-color: var(--categoryColor);
-  }
-
-  .filter-input {
-    padding: 0.4rem 0.75rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    width: 180px;
-    outline: none;
-    transition: border-color 0.15s;
-  }
-
-  .filter-input:focus {
-    border-color: var(--categoryColor);
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-  }
-
-  .tag-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-  }
-
-  .tag-btn {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    background: white;
-    font-size: 0.72rem;
-    color: #94a3b8;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .tag-btn:hover {
-    border-color: var(--categoryColor);
-    color: var(--categoryColor);
-  }
-
-  .tag-btn.active {
-    background: var(--categoryColorLight);
-    color: var(--categoryColor);
-    border-color: var(--categoryColor);
-  }
-
-  .no-results {
-    text-align: center;
-    padding: 3rem 1rem;
-    color: #94a3b8;
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 768px) {
-    .toolbar {
-      flex-direction: column;
-    }
-    .toolbar-right {
-      margin-left: 0;
-      width: 100%;
-    }
-    .filter-input {
-      width: 100%;
-    }
-    .sort-group {
-      flex-wrap: wrap;
-    }
-  }
-
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-5);
-  }
-
-  .article-card {
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    transition:
-      transform 0.22s ease,
-      box-shadow 0.22s ease,
-      border-color 0.22s ease;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
-  }
-
-  .article-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-card);
-    border-color: rgba(148, 163, 184, 0.28);
-  }
-
-  .featured-card {
-    grid-column: 1 / -1;
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  .card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .card-image-placeholder {
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .card-image {
-    height: 160px;
-    overflow: hidden;
-    border-radius: 22px 22px 0 0;
-    position: relative;
-  }
-
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .article-card:hover .card-image img {
-    transform: scale(1.05);
-  }
-
-  .featured-card .card-image-placeholder {
-    height: 200px;
-  }
-
-  .featured-card .card-image {
-    height: 200px;
-  }
-
-  .card-image-icon {
-    font-size: 3rem;
-    opacity: 0.8;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  }
-
-  .card-content {
-    padding: 1.5rem;
-  }
-
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .article-meta {
-    display: flex;
-    gap: 0.55rem;
-    flex-wrap: wrap;
-  }
-
-  .status-tag {
-    background: var(--categoryColorLight);
-    color: var(--categoryColor);
-    padding: 0.45rem 0.8rem;
-    border-radius: var(--radius-chip);
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(148, 163, 184, 0.14);
-  }
-
-  .lang-tag {
-    background: rgba(255, 255, 255, 0.72);
-    color: #64748b;
-    padding: 0.45rem 0.8rem;
-    border-radius: var(--radius-chip);
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(148, 163, 184, 0.18);
-  }
-
-  .featured-badge {
-    background: linear-gradient(45deg, #fbbf24, #f59e0b);
-    color: white;
-    padding: 0.45rem 0.85rem;
-    border-radius: var(--radius-chip);
-    font-size: 0.8rem;
-    font-weight: 600;
-    box-shadow: 0 8px 22px rgba(245, 158, 11, 0.18);
-  }
-
-  .article-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    color: #1f2937;
-  }
-
-  .featured-card .article-title {
-    font-size: 1.8rem;
-  }
-
-  .article-excerpt {
-    color: #6b7280;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .article-info {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-  }
-
-  .info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.55rem 0.8rem;
-    font-size: 0.85rem;
-    color: #64748b;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    border-radius: var(--radius-chip);
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
-  }
-
-  /* Coming Soon */
-  .coming-soon {
-    text-align: center;
-    padding: var(--space-8) var(--space-5);
-  }
-
-  .coming-soon-content {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .coming-soon-icon {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    opacity: 0.7;
-  }
-
-  .coming-soon-content h2 {
-    font-size: var(--title-section-size);
-    color: #1f2937;
-    margin-bottom: 1rem;
-    font-weight: 800;
-    line-height: var(--title-line-height);
-    letter-spacing: var(--title-letter-spacing);
-    font-family: var(--font-editorial);
-  }
-
-  .coming-soon-content p {
-    color: var(--copy-intro-color);
-    margin-bottom: 1.5rem;
-    line-height: var(--copy-intro-line);
-    font-size: var(--copy-intro-size);
-  }
-
-  .category-desc {
-    font-style: italic;
-    color: var(--categoryColor);
-    margin-bottom: 3rem !important;
-    font-weight: 500;
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.95rem 1.6rem;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    justify-content: center;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease,
-      background 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-  .btn-primary {
-    background: var(--categoryColor);
-    color: white;
-    border: 1px solid var(--categoryColor);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .btn-secondary {
-    background: white;
-    color: var(--categoryColor);
-    border: 1px solid var(--categoryColor);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-  }
-
-  .btn-secondary:hover {
-    background: var(--categoryColor);
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  /* Explore More — moved to sidebar, legacy classes kept for compat */
-  .category-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid;
-    border-radius: 22px;
-    text-decoration: none;
-    transition:
-      transform 0.22s ease,
-      box-shadow 0.22s ease;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-  }
-
-  .category-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-card);
-  }
-
-  .category-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .category-card-name {
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
   /* Economic Charts */
   .econ-chart-wrapper {
     margin: 2.5rem 0;
@@ -2181,47 +1424,9 @@ const otherCategories = categories
     cursor: pointer;
   }
 
-  /* Responsive */
+  /* Responsive (food-viz / econ-chart only — wrapper rules
+     migrated to inline Tailwind `max-[768px]:` variants) */
   @media (max-width: 768px) {
-    .hero-banner {
-      padding: var(--space-7) 1rem;
-    }
-
-    .hero-title {
-      font-size: 2.5rem;
-    }
-
-    .hero-description {
-      font-size: 1.2rem;
-    }
-
-    .container {
-      padding: 1rem;
-    }
-
-    .hub-content {
-      padding: 1.5rem 1.25rem;
-      border-radius: 20px;
-    }
-
-    .articles-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
-    }
-
-    .featured-card {
-      grid-column: 1;
-    }
-
-    .action-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .categories-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
     .econ-chart-container {
       padding: 1rem;
     }
