@@ -18,8 +18,8 @@
 | Phase                   | 目標                             | 狀態      | 開始       | 完成       | PRs                   |
 | ----------------------- | -------------------------------- | --------- | ---------- | ---------- | --------------------- |
 | **0 — Foundation**      | 視覺 baseline + diff 工具        | ✅ 完成   | 2026-04-10 | 2026-04-10 | merged to main        |
-| **1 — Design Tokens**   | tokens.css + Tailwind v4 整合    | ✅ 完成   | 2026-04-10 | 2026-04-10 | `refactor/tw-phase-1` |
-| 2 — Component Layer     | @layer components 預建圖書館     | 🔲 未開始 | —          | —          | —                     |
+| **1 — Design Tokens**   | tokens.css + Tailwind v4 整合    | ✅ 完成   | 2026-04-10 | 2026-04-10 | merged to main        |
+| **2 — Component Layer** | @layer components 預建圖書館     | ✅ 完成   | 2026-04-10 | 2026-04-10 | `refactor/tw-phase-2` |
 | 3 — Leaf Migration      | 14 個 leaf component 逐個遷移    | 🔲 未開始 | —          | —          | —                     |
 | 4 — Layout Shell        | Header / Footer / Layout globals | 🔲 未開始 | —          | —          | —                     |
 | 5 — Pages & Routes      | 22 個 page style 區塊            | 🔲 未開始 | —          | —          | —                     |
@@ -221,9 +221,110 @@ Phase 2 會用 v4 的分層 import 技巧跳過 preflight：
 
 ---
 
+## Phase 2 — Component Layer
+
+> **目標**：在 `global.css` 的 `@layer components` 裡建 16 個預製 `tw-*` class，提供 Phase 3 leaf migration 直接使用。**樣式表現零變化**（因為還沒有 component 使用這些新 class）。
+
+### DOD Checklist
+
+- [x] `global.css` 有 `@layer components` 區塊，**16 個** 預製 class（> 10 門檻）
+- [x] `docs/refactor/TAILWIND-CHEATSHEET.md` 完整對照表 + 遷移 SOP
+- [x] `npm run build` 通過（1485 頁）
+- [x] `npm run visual:diff` 全綠（self-diff max 0.077%, mean 0.005%）
+- [x] REFACTOR-LOG Phase 2 段落寫完
+- [ ] PR merge 進 main ← **下一步**
+
+### 16 個預製 class
+
+| 類別            | Class 列表                                                         |
+| --------------- | ------------------------------------------------------------------ |
+| Containers      | `tw-container-wide` / `tw-container-page` / `tw-container-reading` |
+| Vertical rhythm | `tw-section-y`                                                     |
+| Buttons         | `tw-btn` + `tw-btn-primary` / `tw-btn-outline` / `tw-btn-ghost`    |
+| Cards           | `tw-card` / `tw-card-soft` / `tw-card-elevated`                    |
+| Micro-badges    | `tw-chip` / `tw-tag` / `tw-pill`                                   |
+| Interaction     | `tw-hover-lift`                                                    |
+| Navigation      | `tw-nav-link` / `tw-dropdown-item`                                 |
+| Prose           | `tw-prose`                                                         |
+| Titles          | `tw-kicker` / `tw-section-title` / `tw-subsection-title`           |
+
+### 進度紀錄
+
+#### 2026-04-10 α（續）— Phase 2 完成
+
+| 步驟                                                             | 狀態 | commit     |
+| ---------------------------------------------------------------- | ---- | ---------- |
+| 寫 `@layer components` 16 個 class + 補 cascade layer order 宣告 | ✅   | `a30aad36` |
+| 建 `docs/refactor/TAILWIND-CHEATSHEET.md` 對照表 + Phase 3 SOP   | ✅   | `72c1e871` |
+| REFACTOR-LOG Phase 2 段落                                        | ✅   | 本 commit  |
+
+### 關鍵決策：不用 `@apply`，全部 plain CSS
+
+原計畫的 Phase 2 範例是：
+
+```css
+.tw-btn {
+  @apply inline-flex items-center justify-content: center gap-2 rounded-xl px-4 py-2 font-semibold transition;
+}
+```
+
+實際實作時選了 plain CSS + `var(--token)`：
+
+```css
+.tw-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-chip);
+  ...
+}
+```
+
+**為什麼**：
+
+- `@apply` 需要 `@import 'tailwindcss'` 才能解析 utility class
+- Phase 1 已經證明 `@import 'tailwindcss'` 會強制套用 preflight base layer（`source(none)` 只關 content scan 不關 preflight）
+- Preflight 會讓全站視覺漂移 5-12%，不符合 Phase 2 DOD「零視覺變化」
+- Plain CSS 的好處：同樣達成「tokens 驅動的 reusable class」，但完全繞開 Tailwind import 的風險
+
+代價：
+
+- 沒有自動 responsive variants (`md:`, `dark:` 等)
+- 沒有 Tailwind 的 atomic class 可用
+- 但 Phase 2 的目標是「建圖書館」，不是「用 Tailwind atomic」
+
+**Phase 6 若要開 Tailwind utilities**，會用 v4 的 layer 分開 import 技巧：
+
+```css
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+/* 刻意不 import preflight.css */
+```
+
+### 驗證
+
+| 指標       | 結果   |
+| ---------- | ------ |
+| ok         | 36/36  |
+| regression | 0      |
+| max diff   | 0.077% |
+| mean diff  | 0.005% |
+
+Build：1485 頁 post-build-check 全綠。
+
+### Baseline checkpoint（Phase 2）
+
+- Commit: `72c1e871...`
+- Branch: `refactor/tw-phase-2`
+
+---
+
 ## 視覺微調紀錄
 
-> 每次 component 遷移時若有視覺差異需要記錄在這邊。Phase 0 本身不改樣式，應全部空白。
+> 每次 component 遷移時若有視覺差異需要記錄在這邊。Phase 0/1/2 本身不改樣式，應全部空白。
 
 | 日期 | Component | 差異 | 決定 | 備註 |
 | ---- | --------- | ---- | ---- | ---- |
