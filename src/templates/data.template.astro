@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from '../i18n/utils';
 import {
   getCompanyConfigs,
   getCategories,
@@ -10,6 +14,7 @@ import contentStats from '../data/content-stats.json';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 // Get companies from centralized config
 const companies = getCompanyConfigs(t);
@@ -211,7 +216,7 @@ const dataCategories = getCategories(t);
       </div>
     </section>
 
-    <!-- Taiwan Shape Section -->
+    <!-- Taiwan Shape Section — now a teaser linking to the standalone /taiwan-shape page -->
     <section class="taiwan-shape-section" id="shape">
       <div class="section-divider">
         <div class="divider-line"></div>
@@ -255,138 +260,43 @@ const dataCategories = getCategories(t);
         </div>
       </div>
 
-      <!-- SVG Cards -->
-      <div class="svg-grid">
-        <div class="svg-card">
-          <div class="svg-preview">
-            <img src="/assets/svg/taiwan-icon-wiki.svg" alt="Taiwan Icon" />
-          </div>
-          <div class="svg-info">
-            <h3>{t('data.svg.card1.title')}</h3>
-            <p class="svg-desc">{t('data.svg.card1.description')}</p>
-            <p class="svg-meta">Wikimedia Commons · CC</p>
-            <div class="svg-actions">
-              <a
-                href="/assets/svg/taiwan-icon-wiki.svg"
-                download
-                class="btn btn-primary"
-              >
-                {t('data.svg.button.download')}
-              </a>
-              <button
-                class="btn btn-outline"
-                onclick="copySVG('taiwan-icon-wiki.svg', this)"
-              >
-                {t('data.svg.button.copy')}
-              </button>
-            </div>
-          </div>
+      <!-- CTA to standalone page -->
+      <div class="shape-cta-card">
+        <div class="shape-cta-content">
+          <h3>
+            {
+              lang === 'en'
+                ? '🗺️ Explore the full open-source map archive'
+                : lang === 'ja'
+                  ? '🗺️ オープンソース地図データ全集へ'
+                  : lang === 'ko'
+                    ? '🗺️ 오픈소스 지도 데이터 전체 보기'
+                    : '🗺️ 前往完整開源地圖資料集'
+            }
+          </h3>
+          <p>
+            {
+              lang === 'en'
+                ? 'SVG outlines, TopoJSON for counties and townships, usage examples in D3.js, Leaflet, Python, and Vue, plus administrative code references and other open data sources — all on one dedicated page.'
+                : lang === 'ja'
+                  ? 'SVG 輪郭、県市と町丁目レベルの TopoJSON、D3.js / Leaflet / Python / Vue の使用例、行政区コード対照、その他のオープンデータソース — すべて専用ページに。'
+                  : lang === 'ko'
+                    ? 'SVG 윤곽, 현시와 향진 수준의 TopoJSON, D3.js / Leaflet / Python / Vue 사용 예제, 행정구역 코드 대조, 다른 오픈 데이터 소스 — 모두 전용 페이지에서.'
+                    : 'SVG 輪廓、縣市與鄉鎮級 TopoJSON、D3.js / Leaflet / Python / Vue 使用範例、行政區代碼對照、其他開源資料來源——全部在專屬頁面。'
+            }
+          </p>
+          <a href={translatePath('/taiwan-shape')} class="btn btn-primary">
+            {
+              lang === 'en'
+                ? "Go to Taiwan's Shape →"
+                : lang === 'ja'
+                  ? '台湾のかたちへ →'
+                  : lang === 'ko'
+                    ? '대만의 모양으로 →'
+                    : '前往台灣的形狀 →'
+            }
+          </a>
         </div>
-
-        <div class="svg-card">
-          <div class="svg-preview">
-            <img
-              src="/assets/svg/taiwan-simplemaps.svg"
-              alt="Taiwan SimpleMaps"
-            />
-          </div>
-          <div class="svg-info">
-            <h3>{t('data.svg.card2.title')}</h3>
-            <p class="svg-desc">{t('data.svg.card2.description')}</p>
-            <p class="svg-meta">SimpleMaps · 5 KB</p>
-            <div class="svg-actions">
-              <a
-                href="/assets/svg/taiwan-simplemaps.svg"
-                download
-                class="btn btn-primary"
-              >
-                {t('data.svg.button.download')}
-              </a>
-              <button
-                class="btn btn-outline"
-                onclick="copySVG('taiwan-simplemaps.svg', this)"
-              >
-                {t('data.svg.button.copy')}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="svg-card">
-          <div class="svg-preview">
-            <img
-              src="/assets/svg/taiwan-location-map.svg"
-              alt="Taiwan Location Map"
-            />
-          </div>
-          <div class="svg-info">
-            <h3>{t('data.svg.card3.title')}</h3>
-            <p class="svg-desc">{t('data.svg.card3.description')}</p>
-            <p class="svg-meta">Wikimedia Commons · CC</p>
-            <div class="svg-actions">
-              <a
-                href="/assets/svg/taiwan-location-map.svg"
-                download
-                class="btn btn-primary"
-              >
-                {t('data.svg.button.download')}
-              </a>
-              <button
-                class="btn btn-outline"
-                onclick="copySVG('taiwan-location-map.svg', this)"
-              >
-                {t('data.svg.button.copy')}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="svg-card">
-          <div class="svg-preview">
-            <img
-              src="/assets/svg/taiwan-political-division.svg"
-              alt="Taiwan Political Division"
-            />
-          </div>
-          <div class="svg-info">
-            <h3>{t('data.svg.card4.title')}</h3>
-            <p class="svg-desc">{t('data.svg.card4.description')}</p>
-            <p class="svg-meta">Wikimedia Commons · CC</p>
-            <div class="svg-actions">
-              <a
-                href="/assets/svg/taiwan-political-division.svg"
-                download
-                class="btn btn-primary"
-              >
-                {t('data.svg.button.download')}
-              </a>
-              <button
-                class="btn btn-outline"
-                onclick="copySVG('taiwan-political-division.svg', this)"
-              >
-                {t('data.svg.button.copy')}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Usage Example -->
-      <div class="usage-example">
-        <h3>{t('data.svg.usage.heading')}</h3>
-        <div class="code-block">
-          <pre><code>&lt;!-- 直接嵌入 / Embed directly --&gt;
-&lt;img src="https://taiwan.md/assets/svg/taiwan-icon-wiki.svg" alt="Taiwan" width="200"&gt;
-
-&lt;!-- 作為 CSS 背景 / As CSS background --&gt;
-background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
-
-&lt;!-- 在 Markdown 中引用 / In Markdown --&gt;
-![Taiwan](https://taiwan.md/assets/svg/taiwan-icon-wiki.svg)</code></pre>
-        </div>
-        <p class="license-note">
-          {t('data.svg.usage.licenseNote')}
-        </p>
       </div>
     </section>
 
@@ -1871,6 +1781,51 @@ background-image: url('https://taiwan.md/assets/svg/taiwan-icon-wiki.svg');
     /* Taiwan Shape Section */
     .taiwan-shape-section {
       padding: 2rem 0 4rem;
+    }
+
+    .shape-cta-card {
+      margin: 3rem auto 0;
+      max-width: 820px;
+      padding: 0 2rem;
+    }
+    .shape-cta-content {
+      background: linear-gradient(
+        135deg,
+        rgba(199, 62, 58, 0.12),
+        rgba(74, 144, 226, 0.08)
+      );
+      border: 1.5px solid rgba(199, 62, 58, 0.35);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      text-align: center;
+    }
+    .shape-cta-content h3 {
+      font-size: 1.4rem;
+      margin: 0 0 0.8rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .shape-cta-content p {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      margin: 0 0 1.5rem;
+      font-size: 0.98rem;
+    }
+    .shape-cta-content .btn {
+      display: inline-flex;
+      padding: 0.7rem 1.6rem;
+      background: #c73e3a;
+      color: #fff;
+      border-radius: 10px;
+      border: 1.5px solid #c73e3a;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .shape-cta-content .btn:hover {
+      background: #a8332f;
+      border-color: #a8332f;
+      transform: translateY(-1px);
     }
 
     .svg-grid {

@@ -11,6 +11,7 @@ import { mapUI } from './map';
 import { assetsUI } from './assets';
 import { dashboardUI } from './dashboard';
 import { notFoundUI } from './notfound';
+import { taiwanShapeUI } from './taiwanShape';
 
 export const languages: Record<Lang, string> = {
   en: 'English',
@@ -34,6 +35,7 @@ export const ui = {
     ...assetsUI.en,
     ...dashboardUI.en,
     ...notFoundUI.en,
+    ...taiwanShapeUI.en,
     'nav.aria-home': 'Taiwan.md Home',
     'nav.aria-img-label': 'Taiwan.md logo',
     'nav.aria-toggle-menu': 'Toggle navigation menu',
@@ -167,6 +169,7 @@ export const ui = {
     ...assetsUI.ja,
     ...dashboardUI.ja,
     ...notFoundUI.ja,
+    ...taiwanShapeUI.ja,
     'nav.aria-home': 'Taiwan.md ホーム',
     'nav.aria-img-label': 'Taiwan.md ロゴ',
     'nav.aria-toggle-menu': 'ナビゲーションメニューの切替',
@@ -292,6 +295,7 @@ export const ui = {
     ...assetsUI.ko,
     ...dashboardUI.ko,
     ...notFoundUI.ko,
+    ...taiwanShapeUI.ko,
     'nav.aria-home': 'Taiwan.md 홈',
     'nav.aria-img-label': 'Taiwan.md 로고',
     'nav.aria-toggle-menu': '내비게이션 메뉴 전환',
@@ -420,6 +424,7 @@ export const ui = {
     ...assetsUI['zh-TW'],
     ...dashboardUI['zh-TW'],
     ...notFoundUI['zh-TW'],
+    ...taiwanShapeUI['zh-TW'],
     'nav.aria-home': 'Taiwan.md 首頁',
     'nav.aria-img-label': 'Taiwan.md 標誌圖示',
     'nav.aria-toggle-menu': '開啟/關閉導航選單',
