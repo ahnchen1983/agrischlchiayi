@@ -679,6 +679,90 @@ Top 10 files by scoped CSS size:
 - **17,297 行 scoped CSS** 是整個 refactor 後的最終 baseline。Phases 1-7.5 刪掉的量遠大於剩下的——從感覺上，refactor 開始前整個 repo 大概有 30–40k 行 scoped CSS；現在剩下的多半是「有意的留下」而非「還沒清的遺物」。
 - `data.template.astro` 的 1539 行是**新發現的未遷移範圍**，應列入後續（Phase 7.6）的待辦。守門腳本成功抓到它是 Phase 8 的第一個驗證。
 
+### 剩餘高 CP 值待辦（Phase 7.6+ 優先順序清單）
+
+> 2026-04-10 更新：跑完守門腳本 + 人工掃過所有 30 個檔案後，剩下的工作按 ROI 分成四個 tier。**ROI = 預估可刪行數 × 影響頁面數 / 預估工時。**
+>
+> - Tier 1：原先盤點漏掉的檔案（4 語言 × 純 legacy CSS，刪除比例高）→ **先做這些**
+> - Tier 2：已部分遷移的大檔案可以再深化
+> - Tier 3：scoped CSS 本來就是正確選擇（state machine、重複 pattern、`:global()`）→ **不該動**
+> - Tier 4：延後或永不觸碰
+
+#### 🚀 Tier 1 — 漏網之魚（P0-P1，預估可刪 ~2,135 行）
+
+這些檔案**從來沒遷移過**。Phase 6 的 22 頁清單只掃 `src/pages/`；Phase 7.5 的 template 清單用 `^<style` grep 所以漏掉縮排的 `<style>` 開 tag；home page section components 則是 leaf migration 沒列入的。三者都是**純 legacy CSS**，刪除比例通常很高（70-80%）。每個 template 服務 4 語言頁面，ROI × 4。
+
+| P   | File                                          | 行數 | Pages 影響 | 預估可刪 | 備註                                                                                                                     |
+| --- | --------------------------------------------- | ---- | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| P0  | `src/templates/data.template.astro`           | 1539 | × 4        | ~1,077   | **最大單檔**。`<style>` 從 1513 起到 3053。Phase 7.5 的 `^<style` grep 漏掉它（縮排開 tag）。內容是 /data 的資料圖表頁。 |
+| P0  | `src/templates/taiwan-shape.template.astro`   | 418  | × 4        | ~334     | 只有 8 個 class——幾乎肯定可以 ~80% inline。台灣形狀小工具頁。                                                            |
+| P1  | `src/templates/assets.template.astro`         | 181  | × 4        | ~127     | 小檔，快速全遷。`/assets` 資源清單頁。                                                                                   |
+| P1  | `src/components/home/CoverStory.astro`        | 140  | × 4 home   | ~100     | 首頁 cover story section。23 classes，大多 single-use。                                                                  |
+| P1  | `src/components/home/RandomDiscovery.astro`   | 128  | × 4 home   | ~90      | 首頁 random discovery section。12 classes。                                                                              |
+| P1  | `src/components/home/CommunityFeedback.astro` | 122  | × 4 home   | ~85      | 首頁社群回饋 section。13 classes。                                                                                       |
+| P1  | `src/components/home/NewsletterSection.astro` | 118  | × 4 home   | ~85      | 首頁電子報 section。15 classes。                                                                                         |
+| P1  | `src/components/home/RecentUpdates.astro`     | 88   | × 4 home   | ~65      | 首頁近期更新 section。9 classes。                                                                                        |
+| P1  | `src/components/home/CategoriesSection.astro` | 81   | × 4 home   | ~60      | 首頁分類 section。11 classes。                                                                                           |
+| P1  | `src/components/home/ContributeSection.astro` | 79   | × 4 home   | ~55      | 首頁貢獻 section。11 classes。                                                                                           |
+| P1  | `src/components/home/LanguageStatement.astro` | 40   | × 4 home   | ~30      | 首頁語言宣言 section。最小。5 classes。                                                                                  |
+
+**Tier 1 小計：約 2,935 行，預估可刪 2,108 行（保守估 70% 可 inline）。**
+
+**建議執行順序**：先做 home components（都很小、全部 single-use、一個 session 可清掉全部 8 個），再做 taiwan-shape 和 assets（小且快），最後啃 data.template。
+
+#### 🔧 Tier 2 — 已部分遷移的大檔案可再深化（P2-P3，預估可刪 ~2,334 行）
+
+這些檔案 Phase 7.5 只做了 hero/wrappers 的淺層遷移，內部 section 的 single-use feature blocks 還可以 inline。共用的 `.section-title` / `.section-subtitle` 基元、重複 pattern（card grid、timeline items）、state class 應保留 scoped。
+
+| P   | File                                      | 行數 | 深化後預估 | 可刪   | 重點                                                                                                                                                                                                                                                                                                                                                           |
+| --- | ----------------------------------------- | ---- | ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P2  | `src/templates/about.template.astro`      | 1492 | ~400       | ~1,092 | 已做 section wrappers。剩下要 inline：`.vision-block`、`.standalone-quote`、`.organism-intro` / `-highlight` / `-quote`、`.dashboard-btn`、`.team-philosophy`、`.sponsors-inner`、`.contact-grid`。保留 `.section-inner` / `.section-title` / `.section-subtitle` 共用基元 + naming-card / timeline-item / trait-card / founder-card / faq-item 重複 pattern。 |
+| P2  | `src/templates/contribute.template.astro` | 1221 | ~500       | ~721   | 已做 hero。剩下要 inline：form wrappers、writing guides、CLI section outer、token donation outer、paths outer。保留 form fields state / path cards / guide cards 重複 pattern。                                                                                                                                                                                |
+| P3  | `src/templates/dashboard.template.astro`  | 1237 | ~700       | ~537   | 已做 hero。剩下可 inline：vitals-grid outer、organism anatomy outer、article registry outer、health distribution outer。保留 vital-card / dashboard-card / organ-card / chart containers / EKG keyframes + state classes。                                                                                                                                     |
+
+**Tier 2 小計：預估可刪 2,350 行。**
+
+#### 🗿 Tier 3 — 別動（scoped CSS 本來就是正確選擇）
+
+這些檔案的 scoped CSS 都是 Phase 4-6 刻意保留的——不是債，是**正確的架構選擇**。強行 Tailwind 化只會讓 markup 變醜、可讀性下降。合計 ~7,800 行，全部屬於「earned its place」。
+
+| File                                                 | 行數           | 為什麼要保留                                                                                                                                |
+| ---------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/components/Header.astro`                        | 859            | Scroll-state CSS 變數機（~25 vars × 2 states）。翻 60+ 個 `[.scrolled_&]:` 任意變體會比現在還難讀。Phase 5 明確決策。                       |
+| `src/pages/[category]/index.astro`                   | 1134           | `.hub-prose :global(*)` markdown 樣式 + `.article-row` 重複 × 100s + food-viz / econ-chart d3 組件。                                        |
+| `src/pages/en/[category]/[slug].astro` + `ja` + `ko` | 716 × 3 = 2148 | `.prose :global(*)` markdown body 樣式（~130 行）+ `.article-row` + 4-col explore grid 重複 pattern。                                       |
+| `src/pages/en/[category]/index.astro` + `ja`         | 322 × 2 = 644  | 同上（hub prose + article row）。                                                                                                           |
+| `src/pages/[category]/[slug].astro` (zh-TW)          | 273            | 同上 zh-TW 版（文章頁）。                                                                                                                   |
+| `src/pages/terminology/index.astro`                  | 743            | `.term-card` × 100s + `.filter-btn` / `.subcat-btn` state class + per-type `--fork-color` 變數。                                            |
+| `src/pages/terminology/converter.astro`              | 820            | `:global(mark.source-word)` / `:global(mark.replaced-word*)` JS innerHTML'd marks + `.change-*` list classes。                              |
+| `src/pages/index.astro`                              | 729            | 8 個展廳的 `.hall-*` / `.pick-*` 重複 pattern。                                                                                             |
+| `src/pages/en/index.astro`                           | 614            | 同上 en 版。                                                                                                                                |
+| `src/templates/map.template.astro`                   | 602            | d3 interactive map internals（`:global(.county)` / `:global(.marker)`、`.zoom-btn`、`.tooltip`、`.marker-tooltip`）+ sidebar list pattern。 |
+| `src/templates/resources.template.astro`             | 534            | Chapter nav sticky + JS-toggled `.active` state + `.site-card` / `.subcategory` 重複 pattern + `.hidden` 過濾狀態。                         |
+
+**Tier 3 小計：~8,200 行，全部 keep。**
+
+#### 🚫 Tier 4 — 延後或永不觸碰
+
+| File                                   | 行數 | 為什麼不遷                                                                                                                                                                                |
+| -------------------------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/pages/ko/[category]/index.astro`  | 1145 | ko 還在舊設計上（`hero-banner` + `hub-picks` + `explore-more`，其他三語言已經統一到 `category-header` bar）。**先改設計再說 Tailwind 遷移**——這是內容/設計工作，不是 refactor 範圍。      |
+| `src/pages/og/[category]/[slug].astro` | 168  | **永遠不遷**。OG card 圖片產生器，獨立 HTML 頁面，不 import Layout.astro、不載入 global.css，故意 standalone。引入 Tailwind 會把整套 preflight 塞進一個只為 image generation 存在的頁面。 |
+
+#### 整體估算
+
+| Tier     | 待辦檔案     | 當前行數   | 預估可刪          | 剩餘       |
+| -------- | ------------ | ---------- | ----------------- | ---------- |
+| Tier 1   | 11 files     | 2,935      | 2,108             | 827        |
+| Tier 2   | 3 files      | 3,950      | 2,350             | 1,600      |
+| Tier 3   | 13 files     | 8,200      | 0 (earned)        | 8,200      |
+| Tier 4   | 2 files      | 1,313      | 0 (deferred/skip) | 1,313      |
+| **合計** | **29 files** | **16,398** | **4,458**         | **11,940** |
+
+> `changelog.template.astro` 已在 Phase 7 全遷移（0 行 scoped），不在表內。
+>
+> **Tier 1 + 2 全部做完後**，repo 裡剩下的 ~12,000 行 scoped CSS 應該 100% 都是「意圖保留」的——state machines、repeating patterns、`:global()` rules、`@keyframes`。守門腳本 `check-scoped-css-size.mjs` 的 baseline 可以降到 ~12,500 並正式加 `--budget` flag 到 CI。
+
 ### Phase 8 經驗
 
 1. **決策文件比規則清單重要**：DESIGN.md 不只是寫「怎麼做」，更重要的是寫了 **decision tree**——貢獻者看到新情況時，自己能判斷該 inline 還是該 scoped。純規則清單在邊界情境會失效。
