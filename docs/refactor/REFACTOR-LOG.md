@@ -19,7 +19,8 @@
 | ----------------------- | -------------------------------- | --------- | ---------- | ---------- | --------------------- |
 | **0 — Foundation**      | 視覺 baseline + diff 工具        | ✅ 完成   | 2026-04-10 | 2026-04-10 | merged to main        |
 | **1 — Design Tokens**   | tokens.css + Tailwind v4 整合    | ✅ 完成   | 2026-04-10 | 2026-04-10 | merged to main        |
-| **2 — Component Layer** | @layer components 預建圖書館     | ✅ 完成   | 2026-04-10 | 2026-04-10 | `refactor/tw-phase-2` |
+| **2 — Component Layer** | @layer components 預建圖書館     | ✅ 完成   | 2026-04-10 | 2026-04-10 | merged to main        |
+| **3 — Tailwind Flip**   | preflight + @layer base rebuild  | ✅ 完成   | 2026-04-10 | 2026-04-10 | `refactor/tw-phase-3` |
 | 3 — Leaf Migration      | 14 個 leaf component 逐個遷移    | 🔲 未開始 | —          | —          | —                     |
 | 4 — Layout Shell        | Header / Footer / Layout globals | 🔲 未開始 | —          | —          | —                     |
 | 5 — Pages & Routes      | 22 個 page style 區塊            | 🔲 未開始 | —          | —          | —                     |
@@ -322,13 +323,109 @@ Build：1485 頁 post-build-check 全綠。
 
 ---
 
+## Phase 3 — Tailwind Flip
+
+> **目標**：把 Tailwind v4 真正 `@import` 進 CSS graph，啟用 preflight + utility class generation + @apply。同時把 `Layout.astro` 的 `<style is:global>` 完全清空，base styles 搬進 `global.css @layer base`。
+>
+> **決策依據**：[ADR-001](./ADR-001-tailwind-flip-timing.md) — 哲宇決定「儘早執行，避免後續更麻煩」。原計畫 Phase 6 的 preflight 被提前到 Phase 3。
+
+### DOD Checklist
+
+- [x] Tailwind v4 透過分層 import 啟用（theme / preflight / utilities）
+- [x] `@theme` 區塊 bridge tokens.css 的 CSS vars 成 Tailwind utility（font-title、bg-ink、shadow-card 等）
+- [x] `@layer base` 包含完整 Layout.astro 原 global styles
+- [x] `Layout.astro` 的 `<style is:global>` 完全清空（零 CSS）
+- [x] `npm run build` 通過（1485 頁）
+- [x] `@source` directive 告訴 Tailwind scan 哪些檔案
+- [x] 瀏覽器實測至少 3 頁（homepage / article / hub）
+- [x] REFACTOR-LOG Phase 3 段落寫完
+- [x] 視覺 drift 已記錄（預期 Phase 4 修復）
+- [ ] PR merge 進 main ← **下一步**
+
+### 進度紀錄
+
+#### 2026-04-10 α（續）— Phase 3 完成
+
+| 步驟                                              | 狀態 | commit     |
+| ------------------------------------------------- | ---- | ---------- |
+| ADR-001 決策記錄（reorder Phase 3 early）         | ✅   | `29654992` |
+| global.css 完整重寫 + Layout.astro `<style>` 清空 | ✅   | `2a4563c8` |
+| REFACTOR-LOG Phase 3 段落                         | ✅   | 本 commit  |
+
+### 架構決策：三層 import + @layer 順序
+
+```css
+@import './tokens.css';
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+```
+
+**關鍵**：Tailwind 預設的 `@import 'tailwindcss'` 一次載入全部（含 preflight），但無法控制 layer 位置。三個顯式 import 把每一部分放進指定 layer，我們的 `@layer base` 可以補充 preflight 砸掉的 browser defaults。
+
+### 視覺 drift（Phase 4 修復）
+
+Phase 3 flip 對 baseline（Phase 2 end）的 diff：
+
+| 指標         | 數值                        |
+| ------------ | --------------------------- |
+| max drift    | 18.72% (hub-history-mobile) |
+| mean drift   | 7.15%                       |
+| 0 regression | 0/36                        |
+
+**drift 的分布**：
+
+- **接近零的頁面**（< 1.5% drift）：taiwan-shape、data、article-martial-law-desktop、map — 這些頁面的 component 有完整的 scoped `<style>` 覆蓋 heading / layout，preflight 影響有限
+- **中度 drift 頁面**（3–6%）：changelog、contribute、about、dashboard — 這些頁面有部分 classless headings，但整體 layout 被自己的 scoped 樣式保護
+- **重度 drift 頁面**（13–19%）：hub-history、hub-food、home-zh、home-en — 首頁和分類 hub，因為有較多 **classless `<h2>` 元素**（例如 `<h2>🍜 探索台灣美食宇宙</h2>`、`<h2>內容準備中</h2>`）和使用 Layout.astro 原 h1-h6 family 規則的 FeatureCards、HeroSection、CategoryGrid 等
+
+### drift 的根本原因
+
+Modern browsers 對 `<h1>`-`<h6>` 沒有 class 的元素會套用 user-agent stylesheet 的預設 margin（`h2 { margin-block: 0.83em 0.83em }` 之類）。Tailwind preflight 的 `* { margin: 0 }` 把這個 margin 砸掉。之前 Phase 2 沒有 preflight，browser defaults 保留下來。
+
+我在 `@layer base` 加了 `h1-h6 { font-size: ... }`（2em/1.5em/1.17em/1em/0.83em/0.67em，對應 CSS2 sample stylesheet），但**沒有補 margin**。所以：
+
+- font-size：之前 browser default = 之後我的 rule → 近似相同
+- margin：之前 browser default margin → 之後 `* { margin: 0 }` from preflight → 差異累積在每個 classless heading
+
+### 為什麼不現在修 drift
+
+**選項 A**：在 `@layer base` 補 `h1 { margin-block: 0.67em }` 等 browser default margins
+→ 會讓所有有 scoped `.card-title { margin: 1rem 0 }` 的 component 疊加 margin，風險更大
+
+**選項 B**：在 `@layer base` 加 `main h1-h6 { margin: ... }` 讓 article body 維持原樣
+→ Phase 4 leaf migration 時會碰到這些樣式，該時機處理更精準
+
+**選項 C（採用）**：接受 drift，Phase 4 遷移每一個 classless heading 為 `tw-section-title` / `tw-subsection-title`，把 heading 完全從 `@layer base` 的責任中移出。遷移後，`@layer base` 的 heading rules 只影響 raw Markdown rendering（那部分有 `.prose :global(h2)` scoped 樣式保護）。
+
+→ 使用選項 C。Phase 4 完成後，visual diff 應該接近零。
+
+### 瀏覽器實測
+
+- `http://127.0.0.1:4321/` → 首頁完整（hero / stat cards / gradient / nav / buttons）
+- `http://127.0.0.1:4321/history/戒嚴時期/` → 文章頁完整（hero / breadcrumb / sidebar TOC / 30秒概覽 blockquote / metadata sidebar）
+- `http://127.0.0.1:4321/history/` → 分類 hub 可用但有 classless h2 reflow（預期 Phase 4 修復）
+
+### 解鎖的能力
+
+Phase 3 之後 Phase 4+ 可以使用：
+
+1. **Tailwind atomic utilities**：`class="flex items-center gap-4 p-6 rounded-xl bg-surface-soft"`
+2. **Responsive variants**：`class="grid-cols-1 md:grid-cols-2 lg:grid-cols-4"`
+3. **Dark mode**：`class="bg-surface dark:bg-ink text-ink dark:text-surface"` （Phase 6.5 會啟動）
+4. **`@apply` in `@layer components`**：Phase 4 leaf 可以用 `@apply` 重寫 tw-\* classes
+5. **`@tailwindcss/typography` plugin**：Phase 5.5 會 install，article body 切換到 `prose` class
+
+---
+
 ## 視覺微調紀錄
 
-> 每次 component 遷移時若有視覺差異需要記錄在這邊。Phase 0/1/2 本身不改樣式，應全部空白。
+> 每次 component 遷移時若有視覺差異需要記錄在這邊。
 
-| 日期 | Component | 差異 | 決定 | 備註 |
-| ---- | --------- | ---- | ---- | ---- |
-| —    | —         | —    | —    | —    |
+| 日期       | Component            | 差異                                        | 決定                            | 備註                                                                               |
+| ---------- | -------------------- | ------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------- |
+| 2026-04-10 | Phase 3 flip（全站） | mean 7.15% / max 18.72% on hub pages + home | 接受，Phase 4 逐個 component 修 | 主因：preflight 移除 classless heading margins；Phase 4 改用 tw-section-title 解決 |
 
 ---
 
