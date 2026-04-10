@@ -34,6 +34,11 @@ const repoRoot = join(__dirname, '..', '..');
 
 // --- config ---
 
+// NOTE: /graph/ is excluded from baseline capture because it renders
+// a d3 force-simulation layout with random initial positions, so any
+// two captures of the same commit differ by 5-10%. If refactoring
+// graph-specific CSS is needed later, add a deterministic seed to the
+// page first (e.g. `forceSimulation().randomSource(d3.randomLcg(42))`).
 const PAGES = [
   { name: 'home-zh', url: '/' },
   { name: 'home-en', url: '/en' },
@@ -45,13 +50,16 @@ const PAGES = [
   { name: 'data', url: '/data/' },
   { name: 'dashboard', url: '/dashboard/' },
   { name: 'map', url: '/map/' },
-  { name: 'graph', url: '/graph/' },
   { name: 'taiwan-shape', url: '/taiwan-shape/' },
+  { name: 'changelog', url: '/changelog/' },
 ];
 
+// 1x pixel ratio across all viewports to keep local baseline storage small.
+// Retina (2x) captures are ~4x bigger and the extra pixels don't catch
+// regressions that 1x wouldn't — pixelmatch is resolution-independent.
 const VIEWPORTS = [
-  { name: 'mobile', width: 375, height: 812, deviceScaleFactor: 2 },
-  { name: 'tablet', width: 768, height: 1024, deviceScaleFactor: 2 },
+  { name: 'mobile', width: 375, height: 812, deviceScaleFactor: 1 },
+  { name: 'tablet', width: 768, height: 1024, deviceScaleFactor: 1 },
   { name: 'desktop', width: 1280, height: 800, deviceScaleFactor: 1 },
 ];
 
@@ -158,18 +166,22 @@ async function main() {
             waitUntil: 'networkidle',
             timeout: 30_000,
           });
-          // Wait for web fonts to settle so typography diffs are stable
-          await page.evaluate(() => document.fonts?.ready);
-          // Disable any CSS animations for stable pixels
+          // Kill animations and transitions first so font-swap doesn't tween
           await page.addStyleTag({
             content: `*, *::before, *::after {
               animation-duration: 0s !important;
               animation-delay: 0s !important;
               transition-duration: 0s !important;
               transition-delay: 0s !important;
-            }`,
+              caret-color: transparent !important;
+            }
+            html { scroll-behavior: auto !important; }`,
           });
-          await page.waitForTimeout(300);
+          // Wait for web fonts to fully settle so typography diffs are stable
+          await page.evaluate(() => document.fonts?.ready);
+          await page.waitForLoadState('networkidle');
+          // Give layout one more frame to settle after font swap
+          await page.waitForTimeout(800);
           await page.screenshot({
             path: filePath,
             fullPage: true,

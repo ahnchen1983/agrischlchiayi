@@ -32,7 +32,12 @@ meetings/
 memory/
 !docs/semiont/memory/
 
-# Visual refactor: track baseline PNGs only, ignore ephemeral diff output
+# Visual refactor: track manifest only, regenerate PNGs locally.
+# Why: baseline PNGs are ~30-130 MB. Instead we commit the manifest
+# (which records the baseline commit SHA), and any contributor runs
+# `git checkout <baseline-sha> && npm run build && npm run preview &
+#  npm run visual:baseline` to reproduce the exact reference set.
+reports/visual/baseline/*.png
 reports/visual/current/
 reports/visual/diff/
 reports/visual/diff-report.html
