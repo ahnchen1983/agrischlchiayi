@@ -20,21 +20,45 @@ const routesData = getMapRoutes(t);
     >
     </div>
 
-    <section class="map-hero">
-      <div class="hero-inner">
-        <p class="hero-kicker">{t('map.hero.kicker')}</p>
-        <h1>{t('map.hero.title')}</h1>
-        <p class="hero-subtitle">
+    <!--
+      Phase 7.5 partial migration — map.template.astro
+      ────────────────────────────────────────────────
+      Wrappers (hero, controls layout, body container) moved to
+      inline Tailwind. Kept scoped: interactive map internals
+      (.filter-btn state, .taiwan-svg cursor, .zoom-btn, .tooltip,
+      .marker-tooltip, :global(.county), :global(.marker)),
+      sidebar list pattern (.sidebar-article-item, .article-*,
+      .category-group*), and the route picker (.route-btn states).
+    -->
+    <section class="bg-[#1a3c34] px-8 pb-12 pt-16 text-center">
+      <div class="mx-auto max-w-[1200px] text-center">
+        <p
+          class="mb-3 text-[0.9rem] font-semibold uppercase tracking-[0.15em] text-white/70"
+        >
+          {t('map.hero.kicker')}
+        </p>
+        <h1
+          class="mb-4 font-[var(--font-title,'Noto_Serif_TC',serif)] text-[3.5rem] font-black -tracking-[0.02em] text-white max-[768px]:text-[2.5rem]"
+        >
+          {t('map.hero.title')}
+        </h1>
+        <p
+          class="mx-auto max-w-[600px] text-[1.3rem] leading-[1.7] text-white/80 max-[768px]:text-[1.1rem]"
+        >
           {t('map.hero.subtitle')}
         </p>
       </div>
     </section>
 
-    <section class="map-controls">
-      <div class="controls-inner">
-        <div class="filter-section">
+    <section class="border-b border-[#e5e7eb] bg-white px-4 py-6">
+      <div
+        class="mx-auto grid max-w-[1200px] grid-cols-[1fr_2fr] items-start gap-8 max-[768px]:grid-cols-1 max-[768px]:gap-4"
+      >
+        <div
+          class="filter-section [&>h3]:mb-3 [&>h3]:text-base [&>h3]:font-semibold [&>h3]:text-[#374151]"
+        >
           <h3>{t('map.controls.region.title')}</h3>
-          <div class="filter-buttons" id="regionFilters">
+          <div class="flex flex-wrap gap-2" id="regionFilters">
             <button class="filter-btn active" data-filter="all"
               >{t('map.controls.region.all')}</button
             >
@@ -56,9 +80,11 @@ const routesData = getMapRoutes(t);
           </div>
         </div>
 
-        <div class="filter-section">
+        <div
+          class="filter-section [&>h3]:mb-3 [&>h3]:text-base [&>h3]:font-semibold [&>h3]:text-[#374151]"
+        >
           <h3>{t('map.controls.category.title')}</h3>
-          <div class="filter-buttons" id="categoryFilters">
+          <div class="flex flex-wrap gap-2" id="categoryFilters">
             <button class="filter-btn active" data-filter="all"
               >{t('map.controls.category.all')}</button
             >
@@ -233,64 +259,6 @@ const routesData = getMapRoutes(t);
     padding-bottom: 2rem;
   }
 
-  .map-hero {
-    padding: 4rem 2rem 3rem;
-    text-align: center;
-    background: #1a3c34;
-  }
-  .hero-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .hero-kicker {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-  }
-  .map-hero h1 {
-    font-family: var(--font-title, 'Noto Serif TC', serif);
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-    color: white;
-    letter-spacing: -0.02em;
-  }
-  .hero-subtitle {
-    font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  .map-controls {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    padding: 1.5rem 1rem;
-  }
-  .controls-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    align-items: start;
-  }
-  .filter-section h3 {
-    font-size: 1rem;
-    color: #374151;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-  }
-  .filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
   .filter-btn {
     padding: 0.5rem 1rem;
     border: 1px solid #d1d5db;
