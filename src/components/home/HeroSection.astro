@@ -6,33 +6,71 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="hero">
-  <div class="hero-bg">
-    <div class="taiwan-mountains"></div>
-    <svg class="taiwan-silhouette" viewBox="0 0 100 100" aria-hidden="true">
+<!--
+  Phase 4 leaf migration #10: home/HeroSection.astro
+  ──────────────────────────────────────────────────
+  - Scoped <style> block removed entirely
+  - All classes → Tailwind atomic utilities
+  - The 6-radial-gradient "taiwan-mountains" background is preserved
+    verbatim as an arbitrary [background:...] value
+  - Responsive text sizes use md/lg/max-[...] arbitrary breakpoints to
+    match the original 4-tier responsive ladder (default / 1024px /
+    768px / 480px)
+-->
+<section
+  class="relative -mt-8 flex w-full max-w-[100vw] items-center overflow-hidden bg-[linear-gradient(to_bottom,#0e2018_0%,#1a3c34_100%)] px-0 pb-20 pt-[calc(8rem+56px)] text-center text-white max-[768px]:min-h-0 max-[768px]:px-4 max-[768px]:pb-16 max-[768px]:pt-[calc(7rem+56px)] max-[480px]:px-2 max-[480px]:pb-12 max-[480px]:pt-[calc(6rem+56px)]"
+>
+  <div class="absolute inset-0 z-[1]">
+    <div
+      class="absolute bottom-0 left-0 right-0 h-2/5 [background:radial-gradient(ellipse_1000px_100px_at_5%_100%,rgba(0,77,64,0.15)_0%,transparent_80%),radial-gradient(ellipse_800px_120px_at_15%_100%,rgba(0,77,64,0.2)_0%,transparent_75%),radial-gradient(ellipse_700px_160px_at_35%_100%,rgba(0,99,82,0.25)_0%,transparent_70%),radial-gradient(ellipse_600px_180px_at_55%_100%,rgba(0,99,82,0.3)_0%,transparent_65%),radial-gradient(ellipse_500px_200px_at_70%_100%,rgba(79,209,176,0.2)_0%,transparent_60%),radial-gradient(ellipse_400px_220px_at_85%_100%,rgba(79,209,176,0.25)_0%,transparent_55%)] max-[768px]:h-[35%]"
+    >
+    </div>
+    <svg
+      class="absolute right-[8%] top-[15%] h-[180px] w-[180px] opacity-[0.15] [filter:drop-shadow(0_0_10px_rgba(79,209,176,0.2))] max-lg:h-40 max-lg:w-40 max-[768px]:right-[5%] max-[768px]:top-[10%] max-[768px]:h-[120px] max-[768px]:w-[120px] max-[768px]:opacity-20 max-[480px]:h-[100px] max-[480px]:w-[100px] max-[480px]:opacity-[0.15]"
+      viewBox="0 0 100 100"
+      aria-hidden="true"
+    >
       <path
         d="M30 20 C 35 18 40 20 42 25 C 44 30 46 35 48 40 C 50 45 52 50 50 55 C 48 60 46 65 44 70 C 42 75 40 80 35 82 C 30 84 25 82 22 78 C 19 74 20 69 21 64 C 22 59 24 54 26 49 C 28 44 29 39 30 34 C 31 29 30 24 30 20 Z"
         fill="rgba(79, 209, 176, 0.08)"
         stroke="rgba(79, 209, 176, 0.15)"
         stroke-width="0.5"></path>
     </svg>
-    <div class="flowing-gradient"></div>
   </div>
-  <div class="hero-content">
-    <h1 class="hero-title">
-      <span class="title-text">Taiwan<span class="title-dot">.md</span></span>
-      <span class="title-glow"></span>
+  <div
+    class="relative z-10 mx-auto w-full max-w-[1200px] px-8 max-[768px]:px-4"
+  >
+    <h1
+      class="relative mb-6 text-[6rem] font-bold leading-none tracking-normal text-white !font-['jf-kamabit','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] max-lg:text-[5rem] max-[768px]:mb-[1.2rem] max-[768px]:-tracking-[0.01em] max-[768px]:text-[3.5rem] max-[480px]:text-[2.8rem]"
+    >
+      <span
+        class="relative z-[2] text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.3)] !font-[inherit]"
+        >Taiwan<span class="text-[#4fd1b0]">.md</span></span
+      >
     </h1>
-    <h2 class="hero-subtitle">{t('home.hero.subtitle')}</h2>
-    <p class="hero-description">
+    <h2
+      class="mb-8 font-['jf-lanyangming','Noto_Serif_TC','Source_Han_Serif_TC',serif] text-[2.8rem] font-light leading-[1.2] tracking-normal text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.3)] max-lg:text-[2.4rem] max-[768px]:mb-8 max-[768px]:text-[2rem] max-[768px]:leading-[1.3] max-[480px]:text-[1.6rem]"
+    >
+      {t('home.hero.subtitle')}
+    </h2>
+    <p
+      class="mx-auto mb-14 max-w-[700px] text-[1.3rem] font-light leading-[1.8] text-white/85 [text-shadow:0_1px_3px_rgba(0,0,0,0.3)] max-[768px]:mb-14 max-[768px]:max-w-full max-[768px]:px-0 max-[768px]:text-[1.1rem] max-[480px]:text-base"
+    >
       {t('home.hero.description')}<br />
-      <span class="highlight">{t('home.hero.highlight')}</span>
+      <span class="font-medium tracking-[0.02em] text-white/95">
+        {t('home.hero.highlight')}
+      </span>
     </p>
-    <div class="hero-cta">
-      <a href="#categories" class="btn-cta primary">
+    <div
+      class="mb-20 flex flex-wrap justify-center gap-8 px-4 max-[768px]:mb-10 max-[768px]:flex-col max-[768px]:items-center max-[768px]:gap-3"
+    >
+      <a
+        href="#categories"
+        class="group inline-flex items-center gap-2 rounded-md bg-white/95 px-8 py-[0.8rem] text-[0.95rem] font-semibold tracking-[0.02em] text-[#004d40] no-underline transition-all duration-300 hover:-translate-y-px hover:bg-white hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] max-[768px]:w-full max-[768px]:max-w-[300px] max-[768px]:justify-center max-[768px]:px-6 max-[768px]:py-[0.6rem] max-[480px]:px-8 max-[480px]:py-5 max-[480px]:text-base"
+      >
         <span>{t('home.hero.cta.explore')}</span>
         <svg
-          class="cta-arrow"
+          class="transition-all duration-300 group-hover:translate-x-[3px]"
           width="20"
           height="20"
           fill="none"
@@ -49,10 +87,10 @@ const t = useTranslations(lang);
       <a
         href="https://github.com/frank890417/taiwan-md"
         target="_blank"
-        class="btn-cta secondary"
+        class="group inline-flex items-center gap-2 rounded-md border-[1.5px] border-white/50 bg-transparent px-8 py-[0.8rem] text-[0.95rem] font-semibold tracking-[0.02em] text-white no-underline transition-all duration-300 hover:-translate-y-px hover:border-white/80 hover:bg-white/10 max-[768px]:w-full max-[768px]:max-w-[300px] max-[768px]:justify-center max-[768px]:px-6 max-[768px]:py-[0.6rem] max-[480px]:px-8 max-[480px]:py-5 max-[480px]:text-base"
       >
         <svg
-          class="github-icon"
+          class="transition-transform duration-300 group-hover:scale-105"
           width="20"
           height="20"
           fill="currentColor"
@@ -67,12 +105,13 @@ const t = useTranslations(lang);
     </div>
     {
       lang === 'zh-TW' && (
-        <div class="hero-transparency">
-          <p>
+        <div class="mt-8 text-center">
+          <p class="m-0 text-[0.8rem] text-white/60">
             {t('home.hero.transparency')}
             <a
               href="https://github.com/frank890417/taiwan-md/issues"
               target="_blank"
+              class="text-[rgba(79,209,176,0.8)] underline"
             >
               {t('home.hero.transparency.link')}
             </a>
@@ -83,289 +122,3 @@ const t = useTranslations(lang);
     <HeroStats />
   </div>
 </section>
-
-<style>
-  .hero {
-    position: relative;
-    text-align: center;
-    padding: calc(8rem + 56px) 0 5rem;
-    background: linear-gradient(to bottom, #0e2018 0%, #1a3c34 100%);
-    color: white;
-    margin: -2rem 0 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 100vw;
-  }
-  .hero::before {
-    display: none;
-  }
-  .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-  .taiwan-mountains {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background:
-      radial-gradient(
-        ellipse 1000px 100px at 5% 100%,
-        rgba(0, 77, 64, 0.15) 0%,
-        transparent 80%
-      ),
-      radial-gradient(
-        ellipse 800px 120px at 15% 100%,
-        rgba(0, 77, 64, 0.2) 0%,
-        transparent 75%
-      ),
-      radial-gradient(
-        ellipse 700px 160px at 35% 100%,
-        rgba(0, 99, 82, 0.25) 0%,
-        transparent 70%
-      ),
-      radial-gradient(
-        ellipse 600px 180px at 55% 100%,
-        rgba(0, 99, 82, 0.3) 0%,
-        transparent 65%
-      ),
-      radial-gradient(
-        ellipse 500px 200px at 70% 100%,
-        rgba(79, 209, 176, 0.2) 0%,
-        transparent 60%
-      ),
-      radial-gradient(
-        ellipse 400px 220px at 85% 100%,
-        rgba(79, 209, 176, 0.25) 0%,
-        transparent 55%
-      );
-  }
-  .taiwan-silhouette {
-    position: absolute;
-    top: 15%;
-    right: 8%;
-    width: 180px;
-    height: 180px;
-    opacity: 0.15;
-    filter: drop-shadow(0 0 10px rgba(79, 209, 176, 0.2));
-  }
-  .flowing-gradient {
-    display: none;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  .hero-title {
-    position: relative;
-    font-size: 6rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    font-family:
-      'jf-kamabit', 'Noto Sans TC', 'Source Han Sans TC', sans-serif !important;
-    letter-spacing: 0;
-    line-height: 1;
-    color: white;
-  }
-  .hero-title .title-text {
-    position: relative;
-    color: white;
-    z-index: 2;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    font-family: inherit !important;
-  }
-  .title-dot {
-    color: #4fd1b0;
-  }
-  .title-glow {
-    display: none;
-  }
-  .hero-subtitle {
-    font-family:
-      'jf-lanyangming', 'Noto Serif TC', 'Source Han Serif TC', serif;
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0;
-    line-height: 1.2;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  }
-  .hero-description {
-    font-size: 1.3rem;
-    margin-bottom: 3.5rem;
-    line-height: 1.8;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  .hero-description br {
-    margin-bottom: 0.5rem;
-  }
-  .highlight {
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
-  .hero-transparency {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  .hero-transparency p {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0;
-  }
-  .hero-transparency a {
-    color: rgba(79, 209, 176, 0.8);
-    text-decoration: underline;
-  }
-  .hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 5rem;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-  }
-  .btn-cta {
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    letter-spacing: 0.02em;
-  }
-  .btn-cta.primary {
-    background: rgba(255, 255, 255, 0.95);
-    color: #004d40;
-    border: none;
-  }
-  .btn-cta.primary:hover {
-    background: #fff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  .btn-cta.secondary {
-    background: transparent;
-    color: white;
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-  }
-  .btn-cta.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.8);
-    transform: translateY(-1px);
-  }
-  .cta-arrow {
-    transition: all 0.3s ease;
-  }
-  .btn-cta.primary:hover .cta-arrow {
-    transform: translateX(3px);
-  }
-  .btn-cta.secondary:hover .github-icon {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 1024px) {
-    .hero-title {
-      font-size: 5rem;
-    }
-    .hero-subtitle {
-      font-size: 2.4rem;
-    }
-    .taiwan-silhouette {
-      width: 160px;
-      height: 160px;
-    }
-  }
-  @media (max-width: 768px) {
-    .hero {
-      padding: calc(7rem + 56px) 1rem 4rem;
-      min-height: auto;
-    }
-    .hero-content {
-      padding: 0 1rem;
-    }
-    .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.01em;
-    }
-    .hero-subtitle {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      line-height: 1.3;
-    }
-    .hero-description {
-      font-size: 1.1rem;
-      padding: 0;
-      margin-bottom: 3.5rem;
-      max-width: 100%;
-    }
-    .hero-cta {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 2.5rem;
-    }
-    .btn-cta {
-      width: 100%;
-      max-width: 300px;
-      justify-content: center;
-      padding: 0.6rem 1.5rem;
-      font-size: 0.95rem;
-    }
-    .taiwan-silhouette {
-      width: 120px;
-      height: 120px;
-      top: 10%;
-      right: 5%;
-      opacity: 0.2;
-    }
-    .taiwan-mountains {
-      height: 35%;
-    }
-  }
-  @media (max-width: 480px) {
-    .hero {
-      padding: calc(6rem + 56px) 0.5rem 3rem;
-      min-height: auto;
-    }
-    .hero-title {
-      font-size: 2.8rem;
-    }
-    .hero-subtitle {
-      font-size: 1.6rem;
-    }
-    .hero-description {
-      font-size: 1rem;
-    }
-    .btn-cta {
-      padding: 1.2rem 2rem;
-      font-size: 1rem;
-    }
-    .taiwan-silhouette {
-      width: 100px;
-      height: 100px;
-      opacity: 0.15;
-    }
-  }
-</style>
