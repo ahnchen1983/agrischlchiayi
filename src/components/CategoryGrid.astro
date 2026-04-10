@@ -46,13 +46,19 @@ function countArticles(categorySlug: string): number {
   }
 }
 
+// Each category carries its own header height (waterfall rhythm) and
+// gradient endpoints. Previously these lived in scoped CSS as
+// :nth-child() and [data-color=...] attribute selectors; moving them
+// into data is cleaner and eliminates the need for scoped styles.
 const categories = [
   {
     name: categoryConfigs['history'].name,
     slug: 'history',
     description: categoryConfigs['history'].description,
     icon: '📜',
-    color: 'from-amber-500 to-orange-600',
+    gradient: 'linear-gradient(135deg, #f59e0b, #ea580c)',
+    headerHeight: 200,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/b5604a9d7dac.jpg',
   },
   {
@@ -60,7 +66,9 @@ const categories = [
     slug: 'geography',
     description: categoryConfigs['geography'].description,
     icon: '🗺️',
-    color: 'from-emerald-500 to-teal-600',
+    gradient: 'linear-gradient(135deg, #10b981, #0d9488)',
+    headerHeight: 110,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/3a0af3fa1cff.jpg',
   },
   {
@@ -68,7 +76,9 @@ const categories = [
     slug: 'culture',
     description: categoryConfigs['culture'].description,
     icon: '🎭',
-    color: 'from-purple-500 to-violet-600',
+    gradient: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+    headerHeight: 160,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/c3f69037472b.jpg',
   },
   {
@@ -76,7 +86,9 @@ const categories = [
     slug: 'food',
     description: categoryConfigs['food'].description,
     icon: '🍜',
-    color: 'from-rose-500 to-pink-600',
+    gradient: 'linear-gradient(135deg, #f43f5e, #db2777)',
+    headerHeight: 185,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/6a7bed12c2a6.jpg',
   },
   {
@@ -84,7 +96,9 @@ const categories = [
     slug: 'art',
     description: categoryConfigs['art'].description,
     icon: '🎨',
-    color: 'from-cyan-500 to-blue-600',
+    gradient: 'linear-gradient(135deg, #06b6d4, #2563eb)',
+    headerHeight: 105,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/b92068ae92fb.jpg',
   },
   {
@@ -92,7 +106,9 @@ const categories = [
     slug: 'music',
     description: categoryConfigs['music'].description,
     icon: '🎵',
-    color: 'from-indigo-500 to-purple-600',
+    gradient: 'linear-gradient(135deg, #6366f1, #9333ea)',
+    headerHeight: 165,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/dba145c33d6d.jpg',
   },
   {
@@ -100,7 +116,9 @@ const categories = [
     slug: 'technology',
     description: categoryConfigs['technology'].description,
     icon: '💻',
-    color: 'from-slate-500 to-gray-600',
+    gradient: 'linear-gradient(135deg, #64748b, #4b5563)',
+    headerHeight: 115,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/f43072687967.jpg',
   },
   {
@@ -108,7 +126,9 @@ const categories = [
     slug: 'nature',
     description: categoryConfigs['nature'].description,
     icon: '🌿',
-    color: 'from-green-500 to-emerald-600',
+    gradient: 'linear-gradient(135deg, #22c55e, #059669)',
+    headerHeight: 195,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/51510a8c6a50.jpg',
   },
   {
@@ -116,7 +136,9 @@ const categories = [
     slug: 'people',
     description: categoryConfigs['people'].description,
     icon: '👥',
-    color: 'from-orange-500 to-red-600',
+    gradient: 'linear-gradient(135deg, #f97316, #dc2626)',
+    headerHeight: 175,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/4eadbb02099d.jpg',
   },
   {
@@ -124,7 +146,9 @@ const categories = [
     slug: 'society',
     description: categoryConfigs['society'].description,
     icon: '🏛️',
-    color: 'from-blue-500 to-indigo-600',
+    gradient: 'linear-gradient(135deg, #3b82f6, #4f46e5)',
+    headerHeight: 108,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/c18008c3ec52.jpg',
   },
   {
@@ -132,7 +156,9 @@ const categories = [
     slug: 'economy',
     description: categoryConfigs['economy'].description,
     icon: '📊',
-    color: 'from-yellow-500 to-amber-600',
+    gradient: 'linear-gradient(135deg, #eab308, #d97706)',
+    headerHeight: 150,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/53ecc1645c5a.jpg',
   },
   {
@@ -140,60 +166,93 @@ const categories = [
     slug: 'lifestyle',
     description: categoryConfigs['lifestyle'].description,
     icon: '🏠',
-    color: 'from-teal-500 to-cyan-600',
+    gradient: 'linear-gradient(135deg, #14b8a6, #0891b2)',
+    headerHeight: 155,
+    mobileHeaderHeight: 112,
     cover: '/images/wiki/c1fb1b3a4b79.jpg',
   },
 ];
 ---
 
-<section class="category-grid" aria-label={t('CategoryGrid.aria-section')}>
+<!--
+  Phase 4 leaf migration #13: CategoryGrid.astro
+  ──────────────────────────────────────────────
+  - Scoped <style> block removed entirely (~327 lines CSS deleted)
+  - Per-category header heights previously applied via
+    :nth-child() CSS selectors are now passed via inline style
+    style="height: {headerHeight}px" directly from the data array
+  - Per-category gradients previously applied via [data-color=...]
+    attribute selectors are now passed via inline style
+    style="background: {gradient}" directly from the data array
+  - This eliminates 12 nth-child rules + 12 attribute selector rules
+  - `group` + `group-hover:` for hover state propagation on title,
+    cover image, explore arrow, and gradient opacity
+-->
+
+<section
+  class="mx-auto my-12 max-w-[var(--container-wide)] columns-3 gap-x-6 px-[clamp(1.5rem,5vw,5rem)] max-lg:columns-2 max-[768px]:mx-4 max-[768px]:my-8 max-[768px]:columns-1"
+  aria-label={t('CategoryGrid.aria-section')}
+>
   {
     categories.map((category) => {
       const count = countArticles(category.slug);
 
       return (
-        <article>
+        <article class="mb-6 flex break-inside-avoid">
           <a
             href={translatePath(`/${category.slug}`)}
-            class="category-card"
-            data-color={category.color}
+            class="group relative flex w-full flex-col overflow-hidden rounded-3xl border border-[rgba(226,232,240,0.9)] bg-white/[0.98] text-inherit no-underline shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition-all duration-[280ms] ease hover:-translate-y-1.5 hover:border-[rgba(148,163,184,0.5)] hover:shadow-[0_24px_50px_rgba(15,23,42,0.18),0_8px_16px_rgba(0,0,0,0.06)] max-[768px]:min-h-[272px]"
             aria-label={`${t('CategoryGrid.aria-explore')} ${category.name}${t('CategoryGrid.aria-explore-suffix')}`}
           >
-            <div class="category-gradient" />
-            <div class="category-header">
+            <div
+              class="absolute inset-0 z-0 opacity-100 transition-opacity duration-[280ms] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0)_70%)] [-webkit-mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0)_70%)] group-hover:opacity-[0.35]"
+              style={`background: ${category.gradient};`}
+            />
+            <div
+              class="relative z-[1] flex flex-shrink-0 items-center justify-center overflow-hidden max-[768px]:!h-28"
+              style={`height: ${category.headerHeight}px;`}
+            >
               {category.cover ? (
                 <img
                   src={category.cover}
                   alt={`${category.name} ${t('CategoryGrid.alt-category-image-suffix')}`}
-                  class="category-cover"
+                  class="h-full w-full object-cover transition-transform duration-500 ease group-hover:scale-[1.04]"
                   loading="lazy"
                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
                 />
               ) : null}
               <div
-                class="category-icon"
+                class="relative z-[2] text-[3.25rem] transition-transform duration-[280ms] ease [filter:drop-shadow(0_4px_8px_rgba(0,0,0,0.15))] group-hover:scale-[1.04] max-[768px]:text-[2.8rem]"
                 style={category.cover ? 'display:none' : ''}
               >
                 {category.icon}
               </div>
             </div>
-            <div class="category-body">
-              <div class="card-title-row">
-                <h3 class="category-name">{category.name}</h3>
-                <span class="card-meta">
-                  <span class="card-count">{count}</span>{' '}
-                  <span class="card-label">
+            <div class="relative z-[1] flex flex-1 flex-col px-[1.35rem] pb-5 pt-[1.35rem]">
+              <div class="mb-2 flex items-baseline justify-between gap-2">
+                <h3 class="mb-[0.6rem] font-['Noto_Serif_TC',serif] text-[1.6rem] font-extrabold leading-tight -tracking-[0.02em] text-[#1a3c34] transition-colors duration-[250ms] ease group-hover:text-[#006d77] max-[768px]:text-[1.2rem]">
+                  {category.name}
+                </h3>
+                <span class="flex flex-shrink-0 items-baseline gap-[0.2rem]">
+                  <span class="font-['Noto_Serif_TC','Georgia',serif] text-[1.1rem] font-semibold leading-none -tracking-[0.01em] text-[#a8634a] max-[768px]:text-[1.6rem]">
+                    {count}
+                  </span>{' '}
+                  <span class="font-['Noto_Sans_TC',sans-serif] text-[0.7rem] font-medium tracking-[0.03em] text-[#a8634a]">
                     {count > 1
                       ? t('CategoryGrid.articles')
                       : t('CategoryGrid.article')}
                   </span>
                 </span>
               </div>
-              <p class="category-description">{category.description}</p>
-              <div class="category-footer">
-                <span class="explore-link">
+              <p class="mb-[1.1rem] line-clamp-3 flex-1 text-[0.93rem] leading-relaxed text-[#4a6560] max-[768px]:text-[0.9rem]">
+                {category.description}
+              </p>
+              <div class="mt-auto flex justify-start">
+                <span class="flex items-center gap-1 text-[0.875rem] font-semibold text-[#006d77] transition-colors duration-200 ease group-hover:text-[#1d4ed8]">
                   {t('CategoryGrid.explore')}
-                  <span class="cta-arrow">→</span>
+                  <span class="inline-block transition-transform duration-[250ms] [transition-timing-function:cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-1">
+                    →
+                  </span>
                 </span>
               </div>
             </div>
@@ -203,332 +262,3 @@ const categories = [
     })
   }
 </section>
-
-<style>
-  .category-grid {
-    columns: 3;
-    column-gap: 1.5rem;
-    margin: 3rem auto;
-    max-width: var(--container-wide);
-    padding: 0 clamp(1.5rem, 5vw, 5rem);
-  }
-
-  .category-grid article {
-    break-inside: avoid;
-    margin-bottom: 1.5rem;
-    display: flex;
-  }
-
-  /* Varied image heights to create natural waterfall rhythm */
-  .category-grid article:nth-child(1) .category-header {
-    height: 200px;
-  } /* history - tall */
-  .category-grid article:nth-child(2) .category-header {
-    height: 110px;
-  } /* geography - short */
-  .category-grid article:nth-child(3) .category-header {
-    height: 160px;
-  } /* culture - medium */
-  .category-grid article:nth-child(4) .category-header {
-    height: 185px;
-  } /* food - tall */
-  .category-grid article:nth-child(5) .category-header {
-    height: 105px;
-  } /* art - short */
-  .category-grid article:nth-child(6) .category-header {
-    height: 165px;
-  } /* music - medium */
-  .category-grid article:nth-child(7) .category-header {
-    height: 115px;
-  } /* technology - short */
-  .category-grid article:nth-child(8) .category-header {
-    height: 195px;
-  } /* nature - tall */
-  .category-grid article:nth-child(9) .category-header {
-    height: 150px;
-  } /* economy - medium */
-  .category-grid article:nth-child(10) .category-header {
-    height: 175px;
-  } /* people - tall */
-  .category-grid article:nth-child(11) .category-header {
-    height: 108px;
-  } /* society - short */
-  .category-grid article:nth-child(12) .category-header {
-    height: 155px;
-  } /* lifestyle - medium */
-
-  .category-card {
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 24px;
-    text-decoration: none;
-    color: inherit;
-    transition:
-      transform 0.28s ease,
-      box-shadow 0.28s ease,
-      border-color 0.28s ease;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* backdrop-filter: blur(10px); — removed: caused ghost blur artifacts on some GPUs, bleeding into sections below (reported 2026-03-29) */
-  }
-
-  .category-card:hover {
-    transform: translateY(-6px);
-    box-shadow:
-      0 24px 50px rgba(15, 23, 42, 0.18),
-      0 8px 16px rgba(0, 0, 0, 0.06);
-    border-color: rgba(148, 163, 184, 0.5);
-  }
-
-  .category-card:hover .category-gradient {
-    opacity: 0.35;
-  }
-
-  .category-card:hover .category-icon {
-    transform: scale(1.04);
-  }
-
-  .category-card:hover .explore-link {
-    color: #1d4ed8;
-  }
-
-  .category-header {
-    position: relative;
-    z-index: 1;
-    height: 136px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-
-  .category-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  .category-card:hover .category-cover {
-    transform: scale(1.04);
-  }
-
-  .category-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-    z-index: 0;
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0) 70%
-    );
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0) 70%
-    );
-  }
-
-  /* Article count — TopicCard style */
-  .card-title-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .card-meta {
-    display: flex;
-    align-items: baseline;
-    gap: 0.2rem;
-    flex-shrink: 0;
-  }
-
-  .card-count {
-    font-family: 'Noto Serif TC', 'Georgia', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1;
-    color: #a8634a;
-    letter-spacing: -0.01em;
-  }
-
-  .card-label {
-    font-family: var(--font-interface, 'Noto Sans TC', sans-serif);
-    font-size: 0.7rem;
-    color: #a8634a;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-  }
-
-  /* Color gradients for each category */
-  .category-card[data-color='from-amber-500 to-orange-600'] .category-gradient {
-    background: linear-gradient(135deg, #f59e0b, #ea580c);
-  }
-
-  .category-card[data-color='from-emerald-500 to-teal-600'] .category-gradient {
-    background: linear-gradient(135deg, #10b981, #0d9488);
-  }
-
-  .category-card[data-color='from-purple-500 to-violet-600']
-    .category-gradient {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  }
-
-  .category-card[data-color='from-rose-500 to-pink-600'] .category-gradient {
-    background: linear-gradient(135deg, #f43f5e, #db2777);
-  }
-
-  .category-card[data-color='from-cyan-500 to-blue-600'] .category-gradient {
-    background: linear-gradient(135deg, #06b6d4, #2563eb);
-  }
-
-  .category-card[data-color='from-indigo-500 to-purple-600']
-    .category-gradient {
-    background: linear-gradient(135deg, #6366f1, #9333ea);
-  }
-
-  .category-card[data-color='from-slate-500 to-gray-600'] .category-gradient {
-    background: linear-gradient(135deg, #64748b, #4b5563);
-  }
-
-  .category-card[data-color='from-green-500 to-emerald-600']
-    .category-gradient {
-    background: linear-gradient(135deg, #22c55e, #059669);
-  }
-
-  .category-card[data-color='from-orange-500 to-red-600'] .category-gradient {
-    background: linear-gradient(135deg, #f97316, #dc2626);
-  }
-
-  .category-card[data-color='from-blue-500 to-indigo-600'] .category-gradient {
-    background: linear-gradient(135deg, #3b82f6, #4f46e5);
-  }
-
-  .category-card[data-color='from-yellow-500 to-amber-600'] .category-gradient {
-    background: linear-gradient(135deg, #eab308, #d97706);
-  }
-
-  .category-card[data-color='from-teal-500 to-cyan-600'] .category-gradient {
-    background: linear-gradient(135deg, #14b8a6, #0891b2);
-  }
-
-  .category-icon {
-    font-size: 3.25rem;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    transition: transform 0.28s ease;
-  }
-
-  .category-card:hover .category-icon {
-    transform: scale(1.04);
-  }
-
-  .category-body {
-    position: relative;
-    z-index: 1;
-    padding: 1.35rem 1.35rem 1.25rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .category-name {
-    font-family: var(--font-title, 'Noto Serif TC', serif);
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-bottom: 0.6rem;
-    color: #1a3c34;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
-    transition: color 0.25s ease;
-  }
-
-  .category-card:hover .category-name {
-    color: #006d77;
-  }
-
-  .category-description {
-    color: #4a6560;
-    font-size: 0.93rem;
-    line-height: 1.7;
-    margin-bottom: 1.1rem;
-    flex: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .category-footer {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: auto;
-  }
-
-  .explore-link {
-    color: #006d77;
-    font-weight: 600;
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    transition: color 0.2s ease;
-  }
-
-  .cta-arrow {
-    display: inline-block;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  .category-card:hover .cta-arrow {
-    transform: translateX(4px);
-  }
-
-  @media (max-width: 1024px) {
-    .category-grid {
-      columns: 2;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .category-grid {
-      columns: 1;
-      margin: 2rem 1rem;
-    }
-
-    .category-card {
-      min-height: 272px;
-    }
-
-    .category-header {
-      height: 112px;
-    }
-
-    .category-icon {
-      font-size: 2.8rem;
-    }
-
-    .category-name {
-      font-size: 1.2rem;
-    }
-
-    .category-description {
-      font-size: 0.9rem;
-    }
-
-    .card-count {
-      font-size: 1.6rem;
-    }
-  }
-</style>
