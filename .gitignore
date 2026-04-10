@@ -15,7 +15,24 @@ pnpm-debug.log*
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
+
+# ═══ 感知資料源憑證（2026-04-11 session α 新增）═══════
+# 絕對不能 commit：GA4 / Search Console / Cloudflare 的 API 憑證
+# 正確位置是 ~/.config/taiwan-md/credentials/，repo 內這些路徑是雙層保護
+#
+# ⚠️ 如果你看到這些檔案意外出現在 git status，停下來檢查
+# 憑證應該放在 ~/.config/taiwan-md/ 而不是 repo 裡
+.credentials/
+credentials/
+secrets/
+*.service-account.json
+*-credentials.json
+*-service-account*.json
+google-credentials*.json
+cloudflare-token*
+.sense-cache/
 
 # macOS-specific files
 .DS_Store

@@ -36,3 +36,49 @@ if [ -n "$staged_md" ]; then
     exit 1
   fi
 fi
+
+# ═══ 憑證外洩防護（2026-04-11 session α）═══════
+# 掃描 staged 檔案的 credential pattern。這是 .gitignore 之外的第二層防護——
+# 即使 .gitignore 漏設或有人 git add -f，這裡會擋下
+staged_any=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null || true)
+if [ -n "$staged_any" ]; then
+  cred_fail=0
+  for f in $staged_any; do
+    [ ! -f "$f" ] && continue
+    # Skip binary files
+    case "$f" in
+      *.png|*.jpg|*.jpeg|*.gif|*.webp|*.pdf|*.zip|*.woff*|*.ttf|*.otf|*.ico|*.mp4|*.mp3) continue ;;
+    esac
+    # Google service account JSON
+    if grep -l '"type":[[:space:]]*"service_account"' "$f" > /dev/null 2>&1; then
+      echo "🔴 CREDENTIAL LEAK: $f 看起來是 Google service account JSON"
+      cred_fail=1
+    fi
+    # Private key (PEM)
+    if grep -lE 'BEGIN (RSA )?PRIVATE KEY' "$f" > /dev/null 2>&1; then
+      echo "🔴 CREDENTIAL LEAK: $f 含 private key"
+      cred_fail=1
+    fi
+    # Google API Key (AIza...)
+    if grep -lE 'AIza[0-9A-Za-z_-]{35}' "$f" > /dev/null 2>&1; then
+      echo "🔴 CREDENTIAL LEAK: $f 含可疑的 Google API key (AIza…)"
+      cred_fail=1
+    fi
+    # Cloudflare API token 寫在 = 後面 (40 char base62)
+    if grep -lE '(CF|CLOUDFLARE)_(API_)?TOKEN[[:space:]]*=[[:space:]]*["'"'"']?[A-Za-z0-9_-]{40,}' "$f" > /dev/null 2>&1; then
+      echo "🔴 CREDENTIAL LEAK: $f 含可疑的 Cloudflare API token"
+      cred_fail=1
+    fi
+    # Stripe/OpenAI-style sk_live
+    if grep -lE '(sk|pk)_(live|test)_[A-Za-z0-9]{24,}' "$f" > /dev/null 2>&1; then
+      echo "🔴 CREDENTIAL LEAK: $f 含可疑的 sk_/pk_ API key"
+      cred_fail=1
+    fi
+  done
+  if [ "$cred_fail" = "1" ]; then
+    echo ""
+    echo "🚨 發現可能的憑證洩漏。正確的憑證位置是 ~/.config/taiwan-md/credentials/"
+    echo "   如果是 example/fixture，確認沒有真實 token 後用 --no-verify 通過"
+    exit 1
+  fi
+fi
