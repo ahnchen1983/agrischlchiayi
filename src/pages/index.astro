@@ -186,34 +186,57 @@ const readingPathFooterItems = [
       },
     ]}
   >
-    <div class="features-cta">
-      <a href="/graph" class="feature-btn">🔗 知識圖譜 — 探索文章之間的連結</a>
+    <div
+      class="mt-8 flex flex-wrap justify-center gap-4 px-4 max-[480px]:flex-col max-[480px]:items-center"
+    >
+      <a
+        href="/graph"
+        class="inline-flex items-center gap-2 rounded-lg border-[1.5px] border-[rgba(45,80,22,0.2)] bg-[#f0fdf4] px-6 py-[0.7rem] text-[0.9rem] font-semibold text-[#2d5016] no-underline transition-all duration-[250ms] hover:-translate-y-px hover:border-[rgba(45,80,22,0.4)] hover:bg-[rgba(45,80,22,0.1)] hover:shadow-[0_2px_8px_rgba(45,80,22,0.15)]"
+        >🔗 知識圖譜 — 探索文章之間的連結</a
+      >
       <a
         href="https://github.com/frank890417/taiwan-md/tree/main/knowledge"
         target="_blank"
         rel="noopener noreferrer"
-        class="feature-btn secondary">📂 瀏覽 SSOT 原始資料 ↗</a
+        class="inline-flex items-center gap-2 rounded-lg border-[1.5px] border-[#d1d5db] bg-[#f8fafc] px-6 py-[0.7rem] text-[0.9rem] font-semibold text-[#374151] no-underline transition-all duration-[250ms] hover:-translate-y-px hover:border-[#9ca3af] hover:bg-[#f1f5f9] hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
+        >📂 瀏覽 SSOT 原始資料 ↗</a
       >
     </div>
   </FeatureCards>
 
-  <section class="mini-graph-section">
-    <a href="/graph" class="mini-graph-link">
-      <div class="mini-graph-text">
-        <h3>🕸️ 知識圖譜</h3>
-        <p>每篇文章都不是孤島——點擊探索台灣知識的連結網絡</p>
+  <section class="mx-auto mb-16 max-w-[800px] px-8 max-[480px]:px-4">
+    <a
+      href="/graph"
+      class="block rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-8 no-underline transition-all duration-300 hover:border-[#2d5016] hover:shadow-[0_4px_12px_rgba(45,80,22,0.1)]"
+    >
+      <div class="mb-4 text-center">
+        <h3 class="mb-2 text-[1.3rem] text-[#1f2937]">🕸️ 知識圖譜</h3>
+        <p class="text-[0.95rem] text-[#6b7280]">
+          每篇文章都不是孤島——點擊探索台灣知識的連結網絡
+        </p>
       </div>
-      <div id="mini-graph" class="mini-graph-container"></div>
+      <div id="mini-graph" class="h-[300px] w-full overflow-hidden"></div>
     </a>
   </section>
 
-  <!-- ===== EXHIBITION HALLS ===== -->
-  <section class="exhibition" id="categories">
-    <div class="exhibition-header">
-      <h2 class="section-title">{t('home.categories.heading')}</h2>
+  <!-- ===== EXHIBITION HALLS =====
+       Partial Tailwind migration (Phase 6): wrappers moved to inline
+       utilities. The .hall-* / .pick-* / .topic-pill repeating card
+       classes stay in scoped <style> because they repeat × 8 halls;
+       inlining would turn the markup into noise. Same call as Header.
+  -->
+  <section class="my-24" id="categories">
+    <div class="mb-8 text-center">
+      <h2
+        class="text-center font-['jf-lanyangming','Noto_Serif_TC','Source_Han_Serif_TC',serif] text-[2rem] font-light text-[#1f2937]"
+      >
+        {t('home.categories.heading')}
+      </h2>
     </div>
 
-    <div class="exhibition-halls">
+    <div
+      class="exhibition-halls mx-auto max-w-[800px] px-8 max-[768px]:px-6 max-[480px]:px-4"
+    >
       {/* ── 展廳一：這座島長什麼樣 ── */}
       <div class="exhibition-hall">
         <div class="hall-divider">
@@ -613,10 +636,21 @@ const readingPathFooterItems = [
       </div>
     </div>
 
-    <div class="section-divider">
-      <div class="divider-line"></div>
-      <span class="divider-text">{t('home.categories.divider')}</span>
-      <div class="divider-line"></div>
+    <div
+      class="mx-auto my-12 flex max-w-[800px] items-center px-8 max-[480px]:px-4"
+    >
+      <div
+        class="h-px flex-1 bg-[linear-gradient(90deg,transparent,#d1d5db,transparent)]"
+      >
+      </div>
+      <span
+        class="whitespace-nowrap px-6 font-[var(--font-title,'Noto_Serif_TC',serif)] text-[1.3rem] font-bold tracking-[0.05em] text-[#1a3c34]"
+        >{t('home.categories.divider')}</span
+      >
+      <div
+        class="h-px flex-1 bg-[linear-gradient(90deg,transparent,#d1d5db,transparent)]"
+      >
+      </div>
     </div>
 
     <CategoryGrid />
@@ -761,145 +795,18 @@ const readingPathFooterItems = [
 <!-- Protico Community Chat Bubble — sponsored by Howie Young -->
 <ProticoScript />
 
+<!--
+  Phase 6 partial migration — index.astro (zh-TW)
+  ───────────────────────────────────────────────
+  Wrappers (skip-link removed as dead code; section-title,
+  exhibition, exhibition-header, section-divider, divider-line,
+  divider-text, mini-graph-*, features-cta, feature-btn) moved to
+  inline Tailwind. The repeated .hall-* / .pick-* / .topic-pill
+  card classes stay scoped because they repeat across 8 halls and
+  inlining would make the markup unreadable.
+-->
 <style>
-  /* ===== SKIP LINK FOR ACCESSIBILITY ===== */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #1a1a2e;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    z-index: 100;
-    transition: top 0.3s ease;
-  }
-
-  .skip-link:focus {
-    top: 6px;
-  }
-
-  /* ===== SECTION TITLE ===== */
-  .section-title {
-    font-family:
-      'jf-lanyangming', 'Noto Serif TC', 'Source Han Serif TC', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: #1f2937;
-    text-align: center;
-  }
-
-  /* ===== MINI GRAPH SECTION (ZH-only) ===== */
-  .mini-graph-section {
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
-  }
-
-  .mini-graph-link {
-    display: block;
-    text-decoration: none;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-  }
-
-  .mini-graph-link:hover {
-    border-color: #2d5016;
-    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.1);
-  }
-
-  .mini-graph-text {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .mini-graph-text h3 {
-    font-size: 1.3rem;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .mini-graph-text p {
-    font-size: 0.95rem;
-    color: #6b7280;
-  }
-
-  .mini-graph-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-  }
-
-  /* ===== FEATURES CTA (ZH-only slot content) ===== */
-  .features-cta {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-  }
-
-  .feature-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    background: #f0fdf4;
-    border: 1.5px solid rgba(45, 80, 22, 0.2);
-    border-radius: 8px;
-    color: #2d5016;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.25s ease;
-  }
-
-  .feature-btn:hover {
-    background: rgba(45, 80, 22, 0.1);
-    border-color: rgba(45, 80, 22, 0.4);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(45, 80, 22, 0.15);
-  }
-
-  .feature-btn.secondary {
-    background: #f8fafc;
-    border-color: #d1d5db;
-    color: #374151;
-  }
-
-  .feature-btn.secondary:hover {
-    background: #f1f5f9;
-    border-color: #9ca3af;
-  }
-
-  @media (max-width: 480px) {
-    .features-cta {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  /* ===== EXHIBITION HALLS ===== */
-  .exhibition {
-    margin: 6rem 0;
-  }
-  .exhibition-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .exhibition-halls {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  /* Hall divider (壹 — 這座島長什麼樣) */
+  /* ── Exhibition hall card pattern (repeats × 8) ──────────────── */
   .hall-divider {
     display: flex;
     align-items: center;
@@ -1023,42 +930,13 @@ const readingPathFooterItems = [
     font-family: 'jf-jinxuanlatte', 'Noto Sans TC', sans-serif;
   }
 
-  /* Section divider (kept from CategoriesSection) */
-  .section-divider {
-    display: flex;
-    align-items: center;
-    margin: 3rem auto 2rem;
-    max-width: 800px;
-    padding: 0 2rem;
-  }
-  .divider-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #d1d5db, transparent);
-  }
-  .divider-text {
-    padding: 0 1.5rem;
-    font-family: var(--font-title, 'Noto Serif TC', serif);
-    color: #1a3c34;
-    font-size: 1.3rem;
-    font-weight: 700;
-    white-space: nowrap;
-    letter-spacing: 0.05em;
-  }
-
   @media (max-width: 768px) {
-    .exhibition-halls {
-      padding: 0 1.5rem;
-    }
     .hall-label {
       font-size: 1rem;
       padding: 0 1rem;
     }
   }
   @media (max-width: 480px) {
-    .exhibition-halls {
-      padding: 0 1rem;
-    }
     .hall-body p {
       font-size: 1rem;
     }
@@ -1071,9 +949,6 @@ const readingPathFooterItems = [
     }
     .pick-card {
       width: 100%;
-    }
-    .section-divider {
-      padding: 0 1rem;
     }
   }
 </style>
