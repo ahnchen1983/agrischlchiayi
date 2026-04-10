@@ -17,17 +17,33 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-{
+<!--
+  Phase 7.6 — RecentUpdates.astro (Tier 1 home component)
+  All wrappers inlined. The CommitLog child is a separate Astro
+  component that already handles its own styling, so no :global()
+  override needed anymore (the `.recent-updates .commit-log` rule
+  in the old scoped style was just position/z-index/max-width).
+-->{
   commits.length > 0 && (
-    <section class="recent-updates">
-      <div class="updates-inner">
-        <div class="updates-header">
-          <h2>{t('home.updates.heading')}</h2>
-          <p class="updates-subtitle">{t('home.updates.subtitle')}</p>
+    <section class="mx-auto my-16 max-w-[980px] px-8 max-[768px]:my-12 max-[768px]:px-4">
+      <div class="relative overflow-hidden rounded-[20px] border border-[#e0f2fe] bg-[linear-gradient(135deg,#f8fafc_0%,#f0f9ff_100%)] p-10 max-[768px]:p-6">
+        <div class="pointer-events-none absolute right-0 top-0 h-[200px] w-[200px] bg-[radial-gradient(circle,rgba(59,130,246,0.05)_0%,transparent_70%)]" />
+        <div class="relative z-[2] mb-8 text-center">
+          <h2 class="mb-2 font-['jf-lanyanghei','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[1.8rem] font-extrabold text-[#1e3a5f] max-[768px]:text-[1.5rem]">
+            {t('home.updates.heading')}
+          </h2>
+          <p class="text-base font-medium text-[#64748b]">
+            {t('home.updates.subtitle')}
+          </p>
         </div>
-        <CommitLog commits={commits} lang={lang} variant="cards" />
-        <div class="updates-footer">
-          <a href={translatePath('/changelog')} class="updates-more-btn">
+        <div class="relative z-[2] mx-auto max-w-[860px]">
+          <CommitLog commits={commits} lang={lang} variant="cards" />
+        </div>
+        <div class="relative z-[2] mt-6 text-center">
+          <a
+            href={translatePath('/changelog')}
+            class="inline-flex items-center gap-[0.3rem] rounded-full bg-[#1e3a5f] px-6 py-[0.6rem] text-[0.9rem] font-semibold text-white no-underline transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1e40af] hover:shadow-[0_4px_12px_rgba(30,64,175,0.3)]"
+          >
             {t('home.updates.viewAll')}
           </a>
         </div>
@@ -35,93 +51,3 @@ const translatePath = useTranslatedPath(lang);
     </section>
   )
 }
-
-<style>
-  .recent-updates {
-    max-width: 980px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-  }
-  .updates-inner {
-    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
-    border-radius: 20px;
-    border: 1px solid #e0f2fe;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .updates-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(
-      circle,
-      rgba(59, 130, 246, 0.05) 0%,
-      transparent 70%
-    );
-  }
-  .updates-header {
-    text-align: center;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
-  }
-  .updates-header h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #1e3a5f;
-    margin-bottom: 0.5rem;
-    font-family:
-      'jf-lanyanghei', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-  }
-  .updates-subtitle {
-    font-size: 1rem;
-    color: #64748b;
-    font-weight: 500;
-  }
-  :global(.recent-updates .commit-log) {
-    position: relative;
-    z-index: 2;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  .updates-footer {
-    text-align: center;
-    margin-top: 1.5rem;
-    position: relative;
-    z-index: 2;
-  }
-  .updates-more-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.6rem 1.5rem;
-    background: #1e3a5f;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-  }
-  .updates-more-btn:hover {
-    background: #1e40af;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
-  }
-  @media (max-width: 768px) {
-    .recent-updates {
-      padding: 0 1rem;
-      margin: 3rem auto;
-    }
-    .updates-inner {
-      padding: 1.5rem;
-    }
-    .updates-header h2 {
-      font-size: 1.5rem;
-    }
-  }
-</style>

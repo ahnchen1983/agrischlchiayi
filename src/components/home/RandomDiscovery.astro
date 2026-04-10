@@ -11,14 +11,48 @@ const { articlesJson } = Astro.props;
 const isEn = lang === 'en';
 ---
 
-<section class="random-discovery">
-  <div class="random-discovery-content">
-    <button id="random-discovery-btn" class="random-btn">
-      <span class="random-icon">🎲</span>
-      <span class="random-text">{t('home.random.button')}</span>
-      <span class="random-subtitle">{t('home.random.subtitle')}</span>
+<!--
+  Phase 7.6 — RandomDiscovery.astro (Tier 1 home component)
+  Scoped <style> removed. `@keyframes dice-roll` moved to
+  global.css (alongside marquee-* and float*). The button's
+  shimmer ::before pseudo is expressed via `[&::before]:` and
+  `hover:[&::before]:left-full` arbitrary variants. The
+  `.random-text` / `.random-subtitle` classes kept as JS hooks
+  (the script uses `querySelector('.random-text')` to swap text).
+  Background noise pattern stays as inline style="" because
+  data URLs with commas/apostrophes don't round-trip cleanly
+  through Tailwind arbitrary values.
+-->
+<section
+  class="relative mx-auto my-16 max-w-[600px] overflow-hidden rounded-3xl border border-[rgba(245,158,11,0.2)] bg-[linear-gradient(135deg,#fffbeb_0%,#fef3c7_50%,#fed7aa_100%)] px-8 py-12 text-center max-[480px]:mx-4 max-[480px]:my-12 max-[480px]:px-4 max-[480px]:py-8"
+>
+  <div
+    class="pointer-events-none absolute inset-0 opacity-60"
+    style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M15 0L20 10L30 15L20 20L15 30L10 20L0 15L10 10Z'/%3E%3C/g%3E%3C/svg%3E&quot;);"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="relative z-[2]">
+    <button
+      id="random-discovery-btn"
+      class="relative mb-6 min-w-[280px] cursor-pointer overflow-hidden rounded-[20px] border-none bg-[linear-gradient(135deg,#f59e0b,#d97706)] px-12 py-6 font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[1.3rem] font-bold text-white shadow-[0_8px_25px_rgba(245,158,11,0.3)] transition-all duration-300 hover:-translate-y-1 hover:bg-[linear-gradient(135deg,#d97706,#b45309)] hover:shadow-[0_12px_30px_rgba(245,158,11,0.4)] active:scale-95 [&::before]:content-[''] [&::before]:absolute [&::before]:left-[-100%] [&::before]:top-0 [&::before]:h-full [&::before]:w-full [&::before]:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent)] [&::before]:transition-[left] [&::before]:duration-500 hover:[&::before]:left-full max-[480px]:min-w-[250px] max-[480px]:px-8 max-[480px]:py-[1.2rem] max-[480px]:text-[1.1rem]"
+    >
+      <span
+        class="mr-2 inline-block text-[1.8rem] [animation:dice-roll_2s_ease-in-out_infinite]"
+        >🎲</span
+      >
+      <span
+        class="random-text mb-[0.3rem] block text-[1.3rem] leading-tight max-[480px]:text-[1.1rem]"
+        >{t('home.random.button')}</span
+      >
+      <span
+        class="random-subtitle block text-[0.9rem] font-medium leading-none opacity-90 max-[480px]:text-[0.85rem]"
+        >{t('home.random.subtitle')}</span
+      >
     </button>
-    <p class="random-description">{t('home.random.description')}</p>
+    <p class="m-0 text-base font-semibold leading-[1.6] text-[#92400e]">
+      {t('home.random.description')}
+    </p>
   </div>
 </section>
 
@@ -113,133 +147,3 @@ const isEn = lang === 'en';
     }
   });
 </script>
-
-<style>
-  .random-discovery {
-    max-width: 600px;
-    margin: 4rem auto;
-    padding: 3rem 2rem;
-    text-align: center;
-    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fed7aa 100%);
-    border-radius: 24px;
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    position: relative;
-    overflow: hidden;
-  }
-  .random-discovery::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M15 0L20 10L30 15L20 20L15 30L10 20L0 15L10 10Z'/%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.6;
-  }
-  .random-discovery-content {
-    position: relative;
-    z-index: 2;
-  }
-  .random-btn {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 1.5rem 3rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
-    margin-bottom: 1.5rem;
-    min-width: 280px;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-  }
-  .random-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: left 0.5s ease;
-  }
-  .random-btn:hover::before {
-    left: 100%;
-  }
-  .random-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4);
-    background: linear-gradient(135deg, #d97706, #b45309);
-  }
-  .random-btn:active {
-    transform: scale(0.95) translateY(-4px);
-  }
-  .random-icon {
-    font-size: 1.8rem;
-    margin-right: 0.5rem;
-    display: inline-block;
-    animation: dice-roll 2s ease-in-out infinite;
-  }
-  @keyframes dice-roll {
-    0%,
-    100% {
-      transform: rotate(0deg) scale(1);
-    }
-    25% {
-      transform: rotate(5deg) scale(1.05);
-    }
-    50% {
-      transform: rotate(-5deg) scale(1.1);
-    }
-    75% {
-      transform: rotate(3deg) scale(1.05);
-    }
-  }
-  .random-text {
-    display: block;
-    font-size: 1.3rem;
-    line-height: 1.2;
-    margin-bottom: 0.3rem;
-  }
-  .random-subtitle {
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.9;
-    font-weight: 500;
-    line-height: 1;
-  }
-  .random-description {
-    color: #92400e;
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.6;
-  }
-  @media (max-width: 480px) {
-    .random-discovery {
-      margin: 3rem 1rem;
-      padding: 2rem 1rem;
-    }
-    .random-btn {
-      min-width: 250px;
-      padding: 1.2rem 2rem;
-      font-size: 1.1rem;
-    }
-    .random-text {
-      font-size: 1.1rem;
-    }
-    .random-subtitle {
-      font-size: 0.85rem;
-    }
-  }
-</style>

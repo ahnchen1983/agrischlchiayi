@@ -9,7 +9,36 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const quotes = [
+// Per-quote color variant — the original scoped CSS used
+// :nth-child(even) and :last-child to paint timeline dots/lines
+// blue / green / yellow. Now computed in the frontmatter so we
+// don't need cascading pseudo-class selectors.
+type Variant = {
+  dot: string;
+  line: string;
+  labelColor: string;
+  labelBg: string;
+};
+const BLUE: Variant = {
+  dot: '#3b82f6',
+  line: 'linear-gradient(180deg,#3b82f6,#e2e8f0)',
+  labelColor: '#3b82f6',
+  labelBg: '#eff6ff',
+};
+const GREEN: Variant = {
+  dot: '#059669',
+  line: 'linear-gradient(180deg,#059669,#e2e8f0)',
+  labelColor: '#059669',
+  labelBg: '#ecfdf5',
+};
+const YELLOW: Variant = {
+  dot: '#fbbf24',
+  line: 'linear-gradient(180deg,#fbbf24,#e2e8f0)',
+  labelColor: '#b45309',
+  labelBg: '#fffbeb',
+};
+
+const rawQuotes = [
   {
     eraKey: 'home.cover.era.indigenous' as const,
     quoteKey: 'home.cover.quote.indigenous' as const,
@@ -46,187 +75,81 @@ const quotes = [
     citeKey: 'home.cover.cite.contemporary' as const,
   },
 ];
+
+const quotes = rawQuotes.map((q, i) => ({
+  ...q,
+  variant: i === rawQuotes.length - 1 ? YELLOW : i % 2 === 1 ? GREEN : BLUE,
+  isLast: i === rawQuotes.length - 1,
+}));
 ---
 
-<section class="cover-story">
-  <div class="cover-content">
-    <h2>{t('home.cover.heading')}</h2>
-    <p class="cover-lead">
+<!--
+  Phase 7.6 — CoverStory.astro (Tier 1 home component)
+  Scoped <style> removed. The old `:nth-child(even)` and
+  `:last-child` rules that painted timeline dots blue/green/yellow
+  are now computed in the frontmatter as a `variant` object per
+  quote and passed via inline `style=""`.
+-->
+<section class="bg-[#fafbfc] px-8 py-24">
+  <div class="mx-auto max-w-[780px]">
+    <h2
+      class="mb-4 text-center font-['jf-lanyangming','Noto_Serif_TC','Source_Han_Serif_TC',serif] text-[2rem] font-light tracking-normal text-[#1a1a2e]"
+    >
+      {t('home.cover.heading')}
+    </h2>
+    <p
+      class="mb-12 text-center font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[1.1rem] font-semibold leading-[2] text-[#475569]"
+    >
       {t('home.cover.lead')}<br />
       {t('home.cover.lead2')}
     </p>
-    <div class="quotes-timeline">
+    <div class="flex flex-col">
       {
         quotes.map((q, i) => (
-          <div class="quote-era">
-            <div class="quote-indicator">
-              <div class="quote-dot" />
-              {i < quotes.length - 1 && <div class="quote-line" />}
+          <div class="grid grid-cols-[28px_1fr] gap-x-4">
+            <div class="flex flex-col items-center">
+              <div
+                class="mt-[0.35rem] h-3 w-3 flex-shrink-0 rounded-full border-2 border-white outline outline-2"
+                style={`background:${q.variant.dot};outline-color:${q.variant.dot};`}
+              />
+              {i < quotes.length - 1 && (
+                <div
+                  class="mt-1 min-h-[2rem] w-[2px] flex-1"
+                  style={`background:${q.variant.line};`}
+                />
+              )}
             </div>
-            <div class="quote-body">
-              <span class="era-label">
+            <div class="pb-8">
+              <span
+                class="mb-2 inline-block rounded px-2 py-[0.15rem] font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[0.72rem] font-bold"
+                style={`color:${q.variant.labelColor};background:${q.variant.labelBg};`}
+              >
                 {'eraKey' in q && q.eraKey ? t(q.eraKey) : q.era}
               </span>
-              <blockquote>
+              <blockquote class="m-0 font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[1.05rem] font-semibold not-italic leading-[1.9] text-[#1e293b]">
                 {t(q.quoteKey)}
-                <cite>{t(q.citeKey)}</cite>
+                <cite class="mt-[0.4rem] block font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[0.8rem] not-italic text-[#94a3b8]">
+                  {t(q.citeKey)}
+                </cite>
               </blockquote>
             </div>
           </div>
         ))
       }
     </div>
-    <div class="cover-closing">
+    <div
+      class="mt-12 text-center font-['jf-jinxuanlatte','Noto_Sans_TC','Source_Han_Sans_TC',sans-serif] text-[1.05rem] leading-[1.9] text-[#475569] [&>p>strong]:text-[#1a1a2e] [&>p]:mb-4"
+    >
       <p>{t('home.cover.closing1')}</p>
       <p>
         <strong>{t('home.cover.closing2')}</strong>
         {t('home.cover.closing3')}
       </p>
-      <a href={translatePath('/about')} class="cover-link"
+      <a
+        href={translatePath('/about')}
+        class="mt-2 inline-block font-medium text-[#3b82f6] no-underline hover:underline"
         >{t('home.cover.link')}</a
       >
     </div>
   </div>
 </section>
-
-<style>
-  .cover-story {
-    padding: 6rem 2rem;
-    background: #fafbfc;
-  }
-  .cover-content {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .cover-content h2 {
-    font-family:
-      'jf-lanyangming', 'Noto Serif TC', 'Source Han Serif TC', serif;
-    font-size: 2rem;
-    color: #1a1a2e;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: 0;
-  }
-  .cover-lead {
-    text-align: center;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-    font-size: 1.1rem;
-    color: #475569;
-    line-height: 2;
-    margin-bottom: 3rem;
-    font-weight: 600;
-  }
-  .quotes-timeline {
-    display: flex;
-    flex-direction: column;
-  }
-  .quote-era {
-    display: grid;
-    grid-template-columns: 28px 1fr;
-    gap: 0 1rem;
-    margin-bottom: 0;
-  }
-  .quote-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .quote-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #3b82f6;
-    border: 2px solid #fff;
-    outline: 2px solid #3b82f6;
-    flex-shrink: 0;
-    margin-top: 0.35rem;
-  }
-  .quote-line {
-    width: 2px;
-    flex: 1;
-    background: linear-gradient(180deg, #3b82f6, #e2e8f0);
-    margin-top: 4px;
-    min-height: 2rem;
-  }
-  .quote-era:nth-child(even) .quote-dot {
-    background: #059669;
-    outline-color: #059669;
-  }
-  .quote-era:nth-child(even) .quote-line {
-    background: linear-gradient(180deg, #059669, #e2e8f0);
-  }
-  .quote-era:last-child .quote-dot {
-    background: #fbbf24;
-    outline-color: #fbbf24;
-  }
-  .quote-body {
-    padding-bottom: 2rem;
-  }
-  .era-label {
-    display: inline-block;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0;
-    color: #3b82f6;
-    margin-bottom: 0.5rem;
-    padding: 0.15rem 0.5rem;
-    background: #eff6ff;
-    border-radius: 4px;
-  }
-  .quote-era:nth-child(even) .era-label {
-    color: #059669;
-    background: #ecfdf5;
-  }
-  .quote-era:last-child .era-label {
-    color: #b45309;
-    background: #fffbeb;
-  }
-  .quote-era blockquote {
-    margin: 0;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #1e293b;
-    font-style: normal;
-    font-weight: 600;
-  }
-  .quote-era cite {
-    display: block;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-    font-size: 0.8rem;
-    color: #94a3b8;
-    font-style: normal;
-    margin-top: 0.4rem;
-  }
-  .cover-closing {
-    margin-top: 3rem;
-    text-align: center;
-    font-family:
-      'jf-jinxuanlatte', 'Noto Sans TC', 'Source Han Sans TC', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #475569;
-  }
-  .cover-closing strong {
-    color: #1a1a2e;
-  }
-  .cover-closing p {
-    margin-bottom: 1rem;
-  }
-  .cover-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .cover-link:hover {
-    text-decoration: underline;
-  }
-</style>
