@@ -399,29 +399,59 @@ const otherCategories = categories
   lang="ko"
   category={categoryInfo.name}
 >
+  <!--
+    Phase 6 partial migration — ko/[category]/index.astro
+    ─────────────────────────────────────────────────────
+    ko is on the older design (hero-banner + hub-picks + explore-more)
+    that pre-dates the unified category-header bar used in
+    en/ja/zh-TW. Migration scope is deliberately minimal:
+    - hero-banner, breadcrumb, container, no-results, coming-soon,
+      action-buttons, explore-more, category-card moved to inline
+      Tailwind.
+    - All .hub-* / .pick-* / .article-row / .food-viz / .viz-* /
+      .econ-chart-* classes stay scoped (repeating patterns or
+      data-viz components).
+    - Bringing ko to the new unified design is out of scope for
+      this refactor — that's a content/design update, not a
+      Tailwind migration.
+  -->
   <main class="category-page">
     <!-- Hero Banner -->
     <section
-      class="hero-banner"
+      class="relative overflow-hidden px-8 py-20 text-center text-white max-[768px]:px-4 max-[768px]:py-10"
       style={`background: ${categoryInfo.gradient};`}
     >
-      <div class="hero-content">
-        <div class="hero-icon">{categoryInfo.icon}</div>
-        <h1 class="hero-title">{categoryInfo.name}</h1>
-        <p class="hero-description">{categoryInfo.description}</p>
-        <div class="hero-stats">
-          <span class="stats-badge">📚 {articles.length}개 글</span>
+      <div class="relative z-[1] mx-auto max-w-[800px]">
+        <div class="mb-4 text-[5rem] max-[768px]:text-[3.5rem]">
+          {categoryInfo.icon}
+        </div>
+        <h1 class="mb-4 text-[3.5rem] font-extrabold max-[768px]:text-[2.5rem]">
+          {categoryInfo.name}
+        </h1>
+        <p
+          class="mb-6 text-[1.35rem] leading-[1.6] text-white/90 max-[768px]:text-[1.1rem]"
+        >
+          {categoryInfo.description}
+        </p>
+        <div>
+          <span
+            class="inline-block rounded-full border border-white/30 bg-white/15 px-4 py-[0.4rem] text-[0.88rem] font-semibold backdrop-blur-sm"
+            >📚 {articles.length}개 글</span
+          >
         </div>
       </div>
-      <div class="hero-decoration"></div>
     </section>
 
-    <div class="container">
+    <div
+      class="mx-auto max-w-[1200px] px-8 py-8 max-[768px]:px-4 max-[768px]:py-4"
+    >
       <!-- Breadcrumb -->
-      <nav class="breadcrumb">
-        <a href="/ko" class="breadcrumb-link">홈</a>
-        <span class="separator">›</span>
-        <span class="current">{categoryInfo.name}</span>
+      <nav
+        class="mb-6 flex items-center gap-2 text-[0.9rem] [&>a:hover]:underline [&>a]:font-medium [&>a]:no-underline"
+      >
+        <a href="/ko" style={`color: ${categoryInfo.color};`}>홈</a>
+        <span class="text-[#9ca3af]">›</span>
+        <span class="font-semibold text-[#6b7280]">{categoryInfo.name}</span>
       </nav>
 
       <!-- Featured Picks (above essay for immediate navigation) -->
@@ -636,30 +666,45 @@ const otherCategories = categories
                   </div>
                 ))}
 
-                <div class="no-results" id="noResults" style="display:none;">
+                <div
+                  class="hidden p-8 text-center text-[#94a3b8]"
+                  id="noResults"
+                >
                   <p>조건에 맞는 글이 없습니다</p>
                 </div>
               </div>
             </div>
           </section>
         ) : (
-          <section class="coming-soon">
-            <div class="coming-soon-content">
-              <div class="coming-soon-icon">{categoryInfo.icon}</div>
-              <h2>콘텐츠 준비 중</h2>
-              <p>이 주제의 글을 준비 중입니다. 조금만 기다려 주세요.</p>
-              <p class="category-desc">
+          <section class="px-8 py-16 text-center max-[768px]:px-4">
+            <div class="mx-auto max-w-[500px]">
+              <div class="mb-8 text-[5rem] opacity-70">{categoryInfo.icon}</div>
+              <h2 class="mb-4 text-[2.5rem] font-bold text-[#1f2937]">
+                콘텐츠 준비 중
+              </h2>
+              <p class="mb-6 text-[1.1rem] leading-[1.6] text-[#6b7280]">
+                이 주제의 글을 준비 중입니다. 조금만 기다려 주세요.
+              </p>
+              <p
+                class="!mb-12 text-[1.1rem] font-medium italic"
+                style={`color: ${categoryInfo.color};`}
+              >
                 앞으로 여기에는: {categoryInfo.description}
               </p>
 
-              <div class="action-buttons">
-                <a href="/ko" class="btn-primary">
+              <div class="flex flex-wrap justify-center gap-4 max-[768px]:flex-col max-[768px]:items-center">
+                <a
+                  href="/ko"
+                  class="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)]"
+                  style={`background: ${categoryInfo.color};`}
+                >
                   홈으로
                 </a>
                 <a
                   href="https://github.com/frank890417/taiwan-md"
                   target="_blank"
-                  class="btn-secondary"
+                  class="inline-flex items-center gap-2 rounded-xl border-2 bg-white px-8 py-4 font-semibold no-underline transition-all duration-300 hover:-translate-y-0.5"
+                  style={`border-color: ${categoryInfo.color}; color: ${categoryInfo.color};`}
                 >
                   기여하기
                 </a>
@@ -670,18 +715,20 @@ const otherCategories = categories
       }
 
       <!-- 探索其他面向 -->
-      <section class="explore-more">
-        <h2 class="explore-title">대만의 다른 모습 둘러보기</h2>
-        <div class="categories-grid">
+      <section class="mt-16">
+        <h2 class="mb-8 text-center text-[1.5rem] font-bold text-[#1f2937]">
+          대만의 다른 모습 둘러보기
+        </h2>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-4">
           {
             otherCategories.map((cat) => (
               <a
                 href={`/ko/${cat.key}`}
-                class="category-card"
+                class="flex flex-col items-center gap-2 rounded-xl border-2 bg-white px-4 py-6 text-center no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
                 style={`border-color: ${cat.color}; color: ${cat.color};`}
               >
-                <div class="category-card-icon">{cat.icon}</div>
-                <div class="category-card-name">{cat.name}</div>
+                <div class="text-[2rem]">{cat.icon}</div>
+                <div class="text-[0.95rem] font-semibold">{cat.name}</div>
               </a>
             ))
           }
@@ -770,7 +817,7 @@ const otherCategories = categories
         section.style.display = anyVisible ? '' : 'none';
       });
       if (noResults) {
-        noResults.style.display = visible === 0 ? 'block' : 'none';
+        noResults.classList.toggle('hidden', visible !== 0);
       }
     }
 
@@ -819,126 +866,6 @@ const otherCategories = categories
 >
   .category-page {
     min-height: 100vh;
-  }
-
-  /* Hero Banner */
-  .hero-banner {
-    position: relative;
-    width: 100%;
-    padding: clamp(3.5rem, 8vw, 5rem) var(--space-page-x);
-    color: white;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.8)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-
-  .hero-description {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    line-height: 1.4;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .stats-badge {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0.7rem 1.15rem;
-    border-radius: var(--radius-chip);
-    font-weight: 500;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
-  }
-
-  .hero-decoration {
-    position: absolute;
-    top: 0;
-    right: -10%;
-    width: 50%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 70%
-    );
-    border-radius: 50%;
-  }
-
-  /* Container */
-  .container {
-    max-width: var(--container-page);
-    margin: 0 auto;
-    padding: 2rem var(--space-page-x);
-  }
-
-  /* Breadcrumb */
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: var(--space-7);
-    font-size: 0.9rem;
-  }
-
-  .breadcrumb a {
-    color: var(--categoryColor);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-
-  .separator {
-    color: #9ca3af;
-  }
-
-  .current {
-    color: #6b7280;
-    font-weight: 600;
   }
 
   /* Hub Featured Picks */
@@ -1869,152 +1796,6 @@ const otherCategories = categories
     border: 1px solid rgba(148, 163, 184, 0.18);
     border-radius: var(--radius-chip);
     box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
-  }
-
-  /* Coming Soon */
-  .coming-soon {
-    text-align: center;
-    padding: var(--space-8) var(--space-5);
-  }
-
-  .coming-soon-content {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .coming-soon-icon {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    opacity: 0.7;
-  }
-
-  .coming-soon-content h2 {
-    font-size: var(--title-section-size);
-    color: #1f2937;
-    margin-bottom: 1rem;
-    font-weight: 800;
-    line-height: var(--title-line-height);
-    letter-spacing: var(--title-letter-spacing);
-    font-family: var(--font-editorial);
-  }
-
-  .coming-soon-content p {
-    color: var(--copy-intro-color);
-    margin-bottom: 1.5rem;
-    line-height: var(--copy-intro-line);
-    font-size: var(--copy-intro-size);
-  }
-
-  .category-desc {
-    font-style: italic;
-    color: var(--categoryColor);
-    margin-bottom: 3rem !important;
-    font-weight: 500;
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.95rem 1.6rem;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    justify-content: center;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease,
-      background 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-  .btn-primary {
-    background: var(--categoryColor);
-    color: white;
-    border: 1px solid var(--categoryColor);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .btn-secondary {
-    background: white;
-    color: var(--categoryColor);
-    border: 1px solid var(--categoryColor);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-  }
-
-  .btn-secondary:hover {
-    background: var(--categoryColor);
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  /* Explore More */
-  .explore-more {
-    margin-top: var(--space-9);
-    padding: var(--space-7) 0;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  .explore-title {
-    text-align: center;
-    font-size: var(--title-section-size);
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 2rem;
-    line-height: var(--title-line-height);
-    letter-spacing: var(--title-letter-spacing);
-    font-family: var(--font-editorial);
-  }
-
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-
-  .category-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid;
-    border-radius: 22px;
-    text-decoration: none;
-    transition:
-      transform 0.22s ease,
-      box-shadow 0.22s ease;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-  }
-
-  .category-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-card);
-  }
-
-  .category-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .category-card-name {
-    font-weight: 600;
-    font-size: 1.1rem;
   }
 
   /* Economic Charts */
