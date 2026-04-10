@@ -165,56 +165,94 @@ const categories = [
 ];
 ---
 
+<!--
+  Phase 6 page migration #3: 404.astro
+  ────────────────────────────────────
+  - Scoped <style> removed entirely (~210 lines CSS deleted)
+  - .error-page / .search-form kept as semantic hooks (referenced by
+    the <script> further down for JS-side form interception)
+  - .category-chips uses [&_a]:... arbitrary-child variants for the
+    static <a> children rendered from {categories.map(...)}
+  - The JS-created .lang-chip elements are now assigned Tailwind
+    utility strings directly in the <script> block — no CSS hook
+    needed
+-->
 <Layout title="404 | Taiwan.md">
-  <main class="error-page" style="opacity: 0; transition: opacity 0.15s;">
+  <main
+    class="error-page flex min-h-[80vh] items-center justify-center px-[var(--space-page-x)] py-8 opacity-0 transition-opacity duration-150"
+  >
     <!-- Generic 404 -->
-    <div class="error-content" id="notfound-generic">
-      <h1 class="error-code">404</h1>
-      <p class="error-title" data-i18n="generic.title">這個頁面不存在</p>
-      <p class="error-desc" data-i18n="generic.desc">
+    <div class="max-w-[600px] text-center" id="notfound-generic">
+      <h1
+        class="m-0 text-[clamp(4rem,10vw,8rem)] font-black leading-none text-[#1a1a2e] opacity-[0.15]"
+      >
+        404
+      </h1>
+      <p
+        class="my-2 font-[var(--font-editorial)] text-[1.5rem] font-bold"
+        data-i18n="generic.title"
+      >
+        這個頁面不存在
+      </p>
+      <p class="mb-8 leading-[1.6] text-[#666]" data-i18n="generic.desc">
         可能是連結過期、文章被移動，或是網址打錯了。
       </p>
 
-      <div class="error-actions">
-        <a href="/" class="btn btn-primary" id="back-link" data-i18n-text="back"
-          >← 回首頁</a
+      <div
+        class="mb-10 flex justify-center gap-4 max-[640px]:flex-col max-[640px]:items-center"
+      >
+        <a
+          href="/"
+          class="inline-flex items-center rounded-lg bg-[#1a1a2e] px-5 py-[0.6rem] text-[0.95rem] font-semibold text-white no-underline transition-all duration-200 hover:bg-[#2d2d4a]"
+          id="back-link"
+          data-i18n-text="back">← 回首頁</a
         >
-        <a href="/graph" class="btn btn-secondary">🕸️ Knowledge Graph</a>
+        <a
+          href="/graph"
+          class="inline-flex items-center rounded-lg bg-[#f0f0f0] px-5 py-[0.6rem] text-[0.95rem] font-semibold text-[#333] no-underline transition-all duration-200 hover:bg-[#e0e0e0]"
+          >🕸️ Knowledge Graph</a
+        >
       </div>
 
-      <div class="search-section">
-        <p data-i18n="search.prompt">試試搜尋你要找的內容：</p>
+      <div class="mb-10">
+        <p class="mb-3 text-[0.9rem] text-[#888]" data-i18n="search.prompt">
+          試試搜尋你要找的內容：
+        </p>
         <form
           action="https://www.google.com/search"
           method="get"
           target="_blank"
-          class="search-form"
+          class="search-form flex justify-center gap-2 max-[640px]:flex-col max-[640px]:items-center"
         >
           <input type="hidden" name="q" value="site:taiwan.md" />
           <input
             type="text"
             name="q"
             placeholder="搜尋 Taiwan.md…"
-            class="search-input"
+            class="w-[280px] rounded-lg border-2 border-[#e0e0e0] px-4 py-2 text-[0.95rem] outline-none transition-colors duration-200 focus:border-[#1a1a2e] max-[640px]:w-full"
             aria-label="搜尋 Taiwan.md"
             data-i18n-placeholder="search.placeholder"
           />
           <button
             type="submit"
-            class="btn btn-primary"
+            class="inline-flex cursor-pointer items-center rounded-lg border-none bg-[#1a1a2e] px-5 py-[0.6rem] text-[0.95rem] font-semibold text-white no-underline transition-all duration-200 hover:bg-[#2d2d4a]"
             data-i18n-text="search.label">搜尋</button
           >
         </form>
       </div>
 
-      <div class="report-section">
-        <p class="report-title" data-i18n="bug.title">🐛 這是個 Bug 嗎？</p>
-        <p class="report-desc" data-i18n="bug.desc">
+      <div
+        class="mb-10 rounded-xl border border-[#fcd34d] bg-[#fef3c7] px-6 py-5"
+      >
+        <p class="m-0 mb-[0.4rem] text-base font-bold" data-i18n="bug.title">
+          🐛 這是個 Bug 嗎？
+        </p>
+        <p class="m-0 mb-4 text-[0.88rem] text-[#666]" data-i18n="bug.desc">
           如果你覺得這個頁面應該存在，歡迎回報讓我們修復：
         </p>
         <a
           href={`https://github.com/frank890417/taiwan-md/issues/new?template=broken-link.yml&title=404:+${encodeURIComponent('[填入你看到的網址]')}&labels=bug,broken-link`}
-          class="btn btn-report"
+          class="inline-flex items-center rounded-lg bg-[#f59e0b] px-5 py-[0.6rem] text-[0.9rem] font-semibold text-white no-underline transition-all duration-200 hover:bg-[#d97706]"
           target="_blank"
           rel="noopener"
           id="report-link"
@@ -224,9 +262,16 @@ const categories = [
         </a>
       </div>
 
-      <div class="explore-section">
-        <p data-i18n="explore">或者探索這些主題：</p>
-        <div class="category-chips" id="category-chips">
+      <div
+        class="[&_a:hover]:bg-[#1a1a2e] [&_a:hover]:text-white [&_a]:rounded-[20px] [&_a]:bg-[#f5f5f5] [&_a]:px-3 [&_a]:py-[0.35rem] [&_a]:text-[0.85rem] [&_a]:text-[#333] [&_a]:no-underline [&_a]:transition-all [&_a]:duration-200"
+      >
+        <p class="mb-3 text-[0.9rem] text-[#888]" data-i18n="explore">
+          或者探索這些主題：
+        </p>
+        <div
+          class="category-chips flex flex-wrap justify-center gap-2"
+          id="category-chips"
+        >
           {
             categories.map((cat) => (
               <a
@@ -243,33 +288,41 @@ const categories = [
     </div>
 
     <!-- Untranslated article notice (hidden by default) -->
-    <div
-      class="error-content"
-      id="notfound-untranslated"
-      style="display: none;"
-    >
-      <h1 class="error-code" style="opacity: 0.08;">📝</h1>
+    <div class="hidden max-w-[600px] text-center" id="notfound-untranslated">
+      <h1
+        class="m-0 text-[clamp(4rem,10vw,8rem)] font-black leading-none text-[#1a1a2e] opacity-[0.08]"
+      >
+        📝
+      </h1>
       <p
-        class="error-title"
+        class="my-2 font-[var(--font-editorial)] text-[1.5rem] font-bold"
         id="untranslated-title"
         data-i18n="untranslated.title"
       >
         這篇文章尚未翻譯
       </p>
-      <p class="error-desc" id="untranslated-desc"></p>
+      <p class="mb-8 leading-[1.6] text-[#666]" id="untranslated-desc"></p>
 
-      <div class="lang-links" id="lang-links">
-        <p data-i18n="untranslated.view">查看其他語言版本：</p>
-        <div class="lang-chips" id="lang-chips"></div>
+      <div class="my-6" id="lang-links">
+        <p class="mb-3 text-[0.9rem] text-[#888]" data-i18n="untranslated.view">
+          查看其他語言版本：
+        </p>
+        <div class="flex flex-wrap justify-center gap-2" id="lang-chips"></div>
       </div>
 
-      <div class="contribute-section">
-        <p id="contribute-text" data-i18n="untranslated.contribute">
+      <div
+        class="mt-6 rounded-xl border border-[#90caf9] bg-[#e3f2fd] px-6 py-5"
+      >
+        <p
+          class="m-0 mb-3 font-semibold text-[#1565c0]"
+          id="contribute-text"
+          data-i18n="untranslated.contribute"
+        >
           想幫忙翻譯？
         </p>
         <a
           href="https://github.com/frank890417/taiwan-md/blob/main/CONTRIBUTING.md"
-          class="btn btn-primary"
+          class="inline-flex items-center rounded-lg bg-[#1a1a2e] px-5 py-[0.6rem] text-[0.95rem] font-semibold text-white no-underline transition-all duration-200 hover:bg-[#2d2d4a]"
           target="_blank"
           rel="noopener"
         >
@@ -277,18 +330,24 @@ const categories = [
         </a>
       </div>
 
-      <div class="error-actions" style="margin-top: 2rem;">
+      <div
+        class="mt-8 flex justify-center gap-4 max-[640px]:flex-col max-[640px]:items-center"
+      >
         <a
           href="/"
-          class="btn btn-secondary"
+          class="inline-flex items-center rounded-lg bg-[#f0f0f0] px-5 py-[0.6rem] text-[0.95rem] font-semibold text-[#333] no-underline transition-all duration-200 hover:bg-[#e0e0e0]"
           id="back-link-2"
           data-i18n-text="back">← 回首頁</a
         >
       </div>
 
-      <div class="explore-section" style="margin-top: 2rem;">
-        <p data-i18n="explore">或者探索這些主題：</p>
-        <div class="category-chips" id="category-chips-2">
+      <div
+        class="mt-8 [&_a:hover]:bg-[#1a1a2e] [&_a:hover]:text-white [&_a]:rounded-[20px] [&_a]:bg-[#f5f5f5] [&_a]:px-3 [&_a]:py-[0.35rem] [&_a]:text-[0.85rem] [&_a]:text-[#333] [&_a]:no-underline [&_a]:transition-all [&_a]:duration-200"
+      >
+        <p class="mb-3 text-[0.9rem] text-[#888]" data-i18n="explore">
+          或者探索這些主題：
+        </p>
+        <div class="flex flex-wrap justify-center gap-2" id="category-chips-2">
           {
             categories.map((cat) => (
               <a
@@ -400,11 +459,11 @@ const categories = [
 
         if (article && !article.langs.includes(lang)) {
           // Article exists but not in this language!
-          document.getElementById('notfound-generic').style.display = 'none';
+          document.getElementById('notfound-generic').classList.add('hidden');
           const untranslatedEl = document.getElementById(
             'notfound-untranslated',
           );
-          untranslatedEl.style.display = 'block';
+          untranslatedEl.classList.remove('hidden');
 
           // Build description
           const desc = document.getElementById('untranslated-desc');
@@ -427,7 +486,10 @@ const categories = [
             const chip = document.createElement('a');
             chip.href = langUrls[availLang] || '#';
             chip.textContent = strings[`lang.${availLang}`] || availLang;
-            chip.className = 'lang-chip';
+            // Tailwind utility string — keeps the JS-created chip
+            // consistent with the rest of the Tailwind-first markup
+            chip.className =
+              'inline-flex items-center rounded-lg border border-[#a5d6a7] bg-[#e8f5e9] px-4 py-2 text-[0.95rem] font-semibold text-[#2e7d32] no-underline transition-all duration-200 hover:border-[#66bb6a] hover:bg-[#c8e6c9]';
             chipsContainer.appendChild(chip);
           }
         }
@@ -438,217 +500,3 @@ const categories = [
     main.style.opacity = '1';
   })();
 </script>
-
-<style>
-  .error-page {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem var(--space-page-x);
-  }
-
-  .error-content {
-    max-width: 600px;
-    text-align: center;
-  }
-
-  .error-code {
-    font-size: clamp(4rem, 10vw, 8rem);
-    font-weight: 900;
-    color: #1a1a2e;
-    margin: 0;
-    line-height: 1;
-    opacity: 0.15;
-  }
-
-  .error-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
-    font-family: var(--font-editorial);
-  }
-
-  .error-desc {
-    color: #666;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-
-  .error-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background: #1a1a2e;
-    color: white;
-  }
-  .btn-primary:hover {
-    background: #2d2d4a;
-  }
-
-  .btn-secondary {
-    background: #f0f0f0;
-    color: #333;
-  }
-  .btn-secondary:hover {
-    background: #e0e0e0;
-  }
-
-  .search-section {
-    margin-bottom: 2.5rem;
-  }
-  .search-section p {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .search-form {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-
-  .search-input {
-    padding: 0.5rem 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    width: 280px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .search-input:focus {
-    border-color: #1a1a2e;
-  }
-
-  .report-section {
-    background: #fef3c7;
-    border: 1px solid #fcd34d;
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .report-title {
-    font-weight: 700;
-    margin: 0 0 0.4rem 0;
-    font-size: 1rem;
-  }
-  .report-desc {
-    color: #666;
-    font-size: 0.88rem;
-    margin: 0 0 1rem 0;
-  }
-
-  .btn-report {
-    background: #f59e0b;
-    color: white;
-    font-size: 0.9rem;
-  }
-  .btn-report:hover {
-    background: #d97706;
-  }
-
-  .explore-section p {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .category-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  .category-chips a {
-    padding: 0.35rem 0.75rem;
-    background: #f5f5f5;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.2s;
-  }
-  .category-chips a:hover {
-    background: #1a1a2e;
-    color: white;
-  }
-
-  /* Untranslated-specific styles */
-  .lang-links {
-    margin: 1.5rem 0;
-  }
-  .lang-links p {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-  .lang-chips {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .lang-chip {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background: #e8f5e9;
-    border: 1px solid #a5d6a7;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    text-decoration: none;
-    color: #2e7d32;
-    font-weight: 600;
-    transition: all 0.2s;
-  }
-  .lang-chip:hover {
-    background: #c8e6c9;
-    border-color: #66bb6a;
-  }
-
-  .contribute-section {
-    background: #e3f2fd;
-    border: 1px solid #90caf9;
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .contribute-section p {
-    font-weight: 600;
-    margin: 0 0 0.75rem 0;
-    color: #1565c0;
-  }
-
-  @media (max-width: 640px) {
-    .error-actions {
-      flex-direction: column;
-      align-items: center;
-    }
-    .search-form {
-      flex-direction: column;
-      align-items: center;
-    }
-    .search-input {
-      width: 100%;
-    }
-  }
-</style>
