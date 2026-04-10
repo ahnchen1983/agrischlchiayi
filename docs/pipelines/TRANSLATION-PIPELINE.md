@@ -147,6 +147,78 @@ Food > Culture > History > Nature > Art > Technology > Economy > Music > Society
 
 ---
 
+## 審核翻譯 PR（2026-04-11 新增）
+
+> 源自 2026-04-11 session α 審核 27 個翻譯 PR（柒藍 + Link1515 + dreamline2）的實戰經驗。
+
+### 核心診斷指標：ratio 檢查
+
+審核翻譯 PR 時，**最快也最可靠**的第一道檢查是字數比率。AI 工具的預設行為是「摘要式翻譯」，把長文章壓成一半。Ratio 指標能在不讀內容的前提下 10 秒內發現這個問題。
+
+**Ratio 公式**：`ratio = len(translated_body) / len(zh_source_body)`
+
+**健全範圍（2026-04-11 實測基準）**：
+
+| 語言對        | 健全 ratio  | 偏瘦（THIN） | 截斷（TRUNCATED） |
+| ------------- | ----------- | ------------ | ----------------- |
+| zh → en       | 0.80 - 1.30 | 0.65-0.79    | < 0.65            |
+| zh → ja       | 0.70 - 1.10 | 0.55-0.69    | < 0.55            |
+| zh → ko       | 0.80 - 1.10 | 0.65-0.79    | < 0.65            |
+| zh → es/fr/de | 2.0 - 4.0   | 1.5-2.0      | < 1.5             |
+
+**快速檢查工具**：
+
+```bash
+bash scripts/tools/translation-ratio-check.sh --pr 367
+# 或
+bash scripts/tools/translation-ratio-check.sh knowledge/ja/Society/article.md
+```
+
+### 五層審核流程（翻譯 PR 專用）
+
+```
+Layer 0: 安全性 → knowledge/{lang}/ 路徑，無系統檔案
+Layer 1: frontmatter → title/description/date/category/subcategory/translatedFrom 完整
+Layer 2: Ratio 檢查 → 用上表判斷 TRUNCATED / THIN / OK
+Layer 3: 結構對應 → zh_sections == ja_sections / zh_footnotes == ja_footnotes / zh_urls ≈ ja_urls
+Layer 4: 內容抽檢 → 至少讀 10%（隨機選 1-2 篇完整讀）
+```
+
+**通過標準**：
+
+- **PASS**：Layer 0-3 全過 + 抽檢無事實錯誤 → 直接 merge
+- **WARN**：Layer 2 偏瘦（THIN）或 Layer 3 URL loss 但非結構性 → merge + follow-up comment
+- **FAIL**：Layer 2 TRUNCATED 或 Layer 3 section 數量不對 → merge + 請求 follow-up PR 修正（不擋）
+
+**「先有再求好」原則**：即使是 TRUNCATED 的翻譯，也比沒有翻譯好——merge 後用 comment 請貢獻者補完即可。
+
+### SSODT 文章特殊規則
+
+SSODT 實驗文章（開頭有 `> **✦ 本文格式實驗說明：**` callout）的審核標準更嚴：
+
+- **perspective 面板數必須完全對應**：zh 5 個 `> **視角 │` = ja 5 個 `> **視点 │`
+- **基底向量結尾不能變成假平衡**：檢查結尾有沒有「兩邊都有道理」這種合成結論
+- **Format experiment callout 必須完整翻譯**：讀者需要知道這是 SSODT 文章
+
+如果 SSODT 文章的翻譯失去了 perspective 面板，**作者自己補寫**（這是作者責任，因為只有作者知道哪些結構不能丟）。
+
+### 主要 conflict 解法：`_translations.json`
+
+每個批次翻譯 PR 都會跟 `main` 在 `_translations.json` 衝突（雙方都新增 entries）。解決方式：**合併兩邊的新 entries + 字母排序 + dedupe**。
+
+造橋鋪路工具：`/tmp/merge-pr-helper.sh`（2026-04-11 session α 寫的一次性工具，未來可以內化成 `scripts/tools/merge-translation-pr.sh`）。
+
+### 跟貢獻者的溝通原則
+
+1. **用貢獻者的母語寫 comment**（日文貢獻者用日文、西文貢獻者用西文）
+2. **問題歸因到工具，不要歸因到人**——「AI 預設摘要」不是「你翻譯不好」
+3. **給具體可執行的 fix**：不要只說問題，給一份完整翻譯 prompt template
+4. **Master comment 模式**：在最嚴重的那個 PR 寫一份完整 explanation + fix template，其他 PR 簡短 reference 過去
+5. **稱讚具體的東西**：不要只說「感謝」，要指出一個段落、一個術語、一個決定的好處——這會讓貢獻者知道你**真的讀了**他們的翻譯
+6. **觀察品質曲線**：柒藍的品質從 50% 問題率 → 0% 問題率發生在 2 小時內。一個好的 master comment 能改變整個貢獻流程
+
+---
+
 ## 相關檔案
 
 | 檔案                               | 用途                            |
