@@ -120,67 +120,141 @@ const forkData: ForkEntry[] = [
 const forkDataJSON = JSON.stringify(forkData);
 ---
 
+<!--
+  Phase 6 page migration #8: fork-graph.astro
+  ───────────────────────────────────────────
+  - Scoped <style> removed entirely (~250 lines CSS deleted)
+  - `.fork-graph-page` kept as hook — referenced in global.css
+    `body.page-default main.fork-graph-page { padding-top: 0 }`
+  - `#fork-tooltip.visible` state → `[&.visible]:opacity-100`
+    arbitrary variant; JS still toggles the `.visible` class
+  - 6 legend badges use inline `style=""` for their per-category
+    color triplet; only the layout/typography moves to Tailwind
+-->
 <Layout title="🌿 語言分支樹 — Taiwan.md">
-  <main class="fork-graph-page">
+  <main class="fork-graph-page flex min-h-screen flex-col bg-[#f8f8f8]">
     <!-- ── Header ──────────────────────────────────────────────────── -->
-    <div class="fg-header">
-      <div class="fg-header-inner">
-        <div class="fg-back-link">
-          <a href="/terminology">← 返回用語保存計畫</a>
+    <div
+      class="bg-[#1a1a2e] px-[var(--space-page-x,2rem)] pb-8 pt-10 text-white max-[640px]:px-4 max-[640px]:pb-5 max-[640px]:pt-6"
+    >
+      <div class="mx-auto max-w-[72rem]">
+        <div class="mb-4">
+          <a
+            href="/terminology"
+            class="text-[0.88rem] text-white/60 no-underline transition-colors duration-150 hover:text-white/90"
+            >← 返回用語保存計畫</a
+          >
         </div>
-        <h1>🌿 語言分支樹 <span class="fg-header-en">Language Fork Tree</span></h1>
-        <p class="fg-tagline">
+        <h1
+          class="m-0 mb-3 font-[var(--font-editorial,Georgia,serif)] text-[clamp(1.6rem,3.5vw,2.4rem)] font-extrabold leading-[1.2] -tracking-[0.01em]"
+        >
+          🌿 語言分支樹 <span
+            class="mt-[0.2em] block font-[var(--font-ui,system-ui,sans-serif)] text-[0.62em] font-normal tracking-[0.04em] opacity-[0.65]"
+            >Language Fork Tree</span
+          >
+        </h1>
+        <p
+          class="m-0 mb-5 max-w-[42rem] text-[clamp(0.9rem,1.8vw,1.05rem)] leading-[1.65] opacity-[0.82]"
+        >
           一個詞如何走出兩條路——從共同詞源到兩岸分歧，每條分支都是真實生活的選擇
         </p>
-        <div class="fg-stats">
-          <span class="stat"><strong>10</strong> 個代表詞</span>
-          <span class="stat-sep">|</span>
-          <span class="stat">跨越 <strong>130</strong> 年</span>
+        <div
+          class="flex flex-wrap items-center gap-[0.6rem] text-[0.9rem] opacity-75 [&_strong]:text-[1.05em] [&_strong]:text-white [&_strong]:opacity-100"
+        >
+          <span><strong>10</strong> 個代表詞</span>
+          <span class="opacity-40">|</span>
+          <span>跨越 <strong>130</strong> 年</span>
         </div>
       </div>
     </div>
 
     <!-- ── Fork Graph ──────────────────────────────────────────────── -->
-    <section class="fork-graph-section" aria-label="語言分支樹">
-      <div class="fork-graph-wrap">
-        <svg id="fork-graph-svg" aria-label="語言分歧分支圖"></svg>
-        <div id="fork-tooltip" class="fork-tooltip" role="tooltip" aria-hidden="true"></div>
+    <section
+      class="mx-auto my-10 box-border w-full max-w-[1200px] px-6 max-[640px]:my-6 max-[640px]:px-3"
+      aria-label="語言分支樹"
+    >
+      <div
+        class="relative w-full cursor-grab overflow-x-auto overflow-y-hidden rounded-xl border border-[#e8e8e8] bg-[#fafafa] [-webkit-overflow-scrolling:touch] active:cursor-grabbing"
+      >
+        <svg
+          id="fork-graph-svg"
+          class="block min-w-[900px]"
+          aria-label="語言分歧分支圖"></svg>
+        <div
+          id="fork-tooltip"
+          class="pointer-events-none fixed z-[9999] max-w-[260px] rounded-lg bg-[rgba(20,20,40,0.93)] px-[0.9rem] py-[0.6rem] text-[0.82rem] leading-[1.5] text-white opacity-0 transition-opacity duration-150 [&.visible]:opacity-100 [&_strong]:mb-1 [&_strong]:block [&_strong]:text-[0.95rem]"
+          role="tooltip"
+          aria-hidden="true"
+        >
+        </div>
       </div>
-      <p class="fork-graph-caption">
-        橫軸為時間，每行代表一個詞的分歧歷程。<span class="legend-tw">■ 台灣用法</span>
-        <span class="legend-cn">■ 中國用法</span>
-        <span class="legend-origin">● 詞源</span>
+      <p class="mt-3 text-center text-[0.83rem] text-[#888]">
+        橫軸為時間，每行代表一個詞的分歧歷程。<span
+          class="font-semibold text-[#e74c3c]">■ 台灣用法</span
+        >
+        <span class="ml-2 font-semibold text-[#3498db]">■ 中國用法</span>
+        <span class="ml-2 text-[#888]">● 詞源</span>
         — Hover 節點查看詳情。
       </p>
     </section>
 
     <!-- ── Legend ──────────────────────────────────────────────────── -->
-    <section class="fg-legend-section">
-      <div class="fg-legend-inner">
-        <h2>分歧類型說明</h2>
-        <div class="fg-legend-grid">
+    <section
+      class="border-y border-[#eee] bg-white px-[var(--space-page-x,2rem)] py-10 max-[640px]:px-4 max-[640px]:py-6"
+    >
+      <div class="mx-auto max-w-[72rem]">
+        <h2 class="m-0 mb-6 text-[1.2rem] font-bold text-[#1a1a2e]">
+          分歧類型說明
+        </h2>
+        <div
+          class="grid grid-cols-3 gap-5 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 [&_.fg-legend-item>p]:m-0 [&_.fg-legend-item>p]:text-[0.85rem] [&_.fg-legend-item>p]:leading-[1.5] [&_.fg-legend-item>p]:text-[#555] [&_.fg-legend-item]:flex [&_.fg-legend-item]:flex-col [&_.fg-legend-item]:gap-2 [&_.fg-badge]:inline-block [&_.fg-badge]:w-fit [&_.fg-badge]:rounded-full [&_.fg-badge]:border [&_.fg-badge]:px-[0.65rem] [&_.fg-badge]:py-1 [&_.fg-badge]:text-[0.78rem] [&_.fg-badge]:font-semibold"
+        >
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#e74c3c22;color:#e74c3c;border-color:#e74c3c44">A 日語遺產</span>
+            <span
+              class="fg-badge"
+              style="background:#e74c3c22;color:#e74c3c;border-color:#e74c3c44"
+              >A 日語遺產</span
+            >
             <p>日治時期（1895-1945）引入的日語借詞，台灣保留，中國自創</p>
           </div>
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#3498db22;color:#3498db;border-color:#3498db44">B 1949分流</span>
+            <span
+              class="fg-badge"
+              style="background:#3498db22;color:#3498db;border-color:#3498db44"
+              >B 1949分流</span
+            >
             <p>1949 年兩岸分治後，各自翻譯西方新詞，形成不同譯法</p>
           </div>
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#9b59b622;color:#9b59b6;border-color:#9b59b644">C 網路時代</span>
+            <span
+              class="fg-badge"
+              style="background:#9b59b622;color:#9b59b6;border-color:#9b59b644"
+              >C 網路時代</span
+            >
             <p>1990-2010 年代網際網路與數位媒體帶來的新詞分歧</p>
           </div>
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#27ae6022;color:#27ae60;border-color:#27ae6044">D 台客語底層</span>
+            <span
+              class="fg-badge"
+              style="background:#27ae6022;color:#27ae60;border-color:#27ae6044"
+              >D 台客語底層</span
+            >
             <p>台語、客語基底影響，形成台灣獨特的華語用詞</p>
           </div>
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#f39c1222;color:#f39c12;border-color:#f39c1244">E 正在分歧</span>
+            <span
+              class="fg-badge"
+              style="background:#f39c1222;color:#f39c12;border-color:#f39c1244"
+              >E 正在分歧</span
+            >
             <p>近年仍在演變中的詞彙，兩岸用法尚未完全穩定</p>
           </div>
           <div class="fg-legend-item">
-            <span class="fg-badge" style="background:#607d8b22;color:#607d8b;border-color:#607d8b44">F 同詞不同語感</span>
+            <span
+              class="fg-badge"
+              style="background:#607d8b22;color:#607d8b;border-color:#607d8b44"
+              >F 同詞不同語感</span
+            >
             <p>文字相同但語感、語境、情緒色彩在兩岸有所差異</p>
           </div>
         </div>
@@ -188,490 +262,320 @@ const forkDataJSON = JSON.stringify(forkData);
     </section>
 
     <!-- ── Footer ──────────────────────────────────────────────────── -->
-    <div class="fg-footer">
-      <div class="fg-footer-inner">
-        <div class="fg-footer-links">
-          <a href="/terminology" class="footer-link">← 返回用語保存計畫</a>
-          <a href="/contribute" class="footer-link footer-cta">✏️ 貢獻詞條</a>
+    <div
+      class="mt-auto bg-[#1a1a2e] px-[var(--space-page-x,2rem)] py-8 text-white max-[640px]:px-4 max-[640px]:py-6"
+    >
+      <div class="mx-auto flex max-w-[72rem] flex-col gap-3">
+        <div
+          class="flex flex-wrap items-center gap-4 max-[640px]:flex-col max-[640px]:items-start"
+        >
+          <a
+            href="/terminology"
+            class="py-[0.3rem] text-[0.9rem] text-white/75 no-underline transition-colors duration-150 hover:text-white hover:underline"
+            >← 返回用語保存計畫</a
+          >
+          <a
+            href="/contribute"
+            class="rounded-md border border-white/30 bg-white/15 px-4 py-[0.4rem] text-[0.9rem] !font-semibold !text-white no-underline transition-colors duration-150 hover:bg-white/[0.22] hover:!no-underline"
+            >✏️ 貢獻詞條</a
+          >
         </div>
-        <p class="fg-footer-note">Taiwan.md 用語保存計畫 — 記錄語言分歧的歷史軌跡</p>
+        <p class="m-0 text-[0.8rem] opacity-45">
+          Taiwan.md 用語保存計畫 — 記錄語言分歧的歷史軌跡
+        </p>
       </div>
     </div>
   </main>
 </Layout>
 
 <script define:vars={{ forkDataJSON }}>
-// ── Fork Graph (D3.js) ────────────────────────────────────────────────────
-(function () {
-  const forkData = JSON.parse(forkDataJSON);
+  // ── Fork Graph (D3.js) ────────────────────────────────────────────────────
+  (function () {
+    const forkData = JSON.parse(forkDataJSON);
 
-  function loadD3(callback) {
-    if (window.d3) { callback(); return; }
-    const s = document.createElement('script');
-    s.src = 'https://d3js.org/d3.v7.min.js';
-    s.onload = callback;
-    document.head.appendChild(s);
-  }
-
-  function drawGraph() {
-    const d3 = window.d3;
-    const wrap = document.querySelector('.fork-graph-wrap');
-    const svg = d3.select('#fork-graph-svg');
-    if (!wrap || svg.empty()) return;
-
-    const ROW_H = 56;
-    const PAD_T = 30;
-    const PAD_B = 36;
-    const PAD_L = 20;
-    const PAD_R = 20;
-    const LABEL_W = 130;   // origin label width
-    const RESULT_W = 100;  // result label area
-
-    const totalW = Math.max(wrap.clientWidth, 680);
-    const graphW = totalW - PAD_L - PAD_R - LABEL_W - RESULT_W;
-    const totalH = forkData.length * ROW_H + PAD_T + PAD_B;
-
-    svg.attr('width', totalW).attr('height', totalH);
-
-    // Time scale
-    const minYear = 1890;
-    const maxYear = 2030;
-    const xScale = d3.scaleLinear()
-      .domain([minYear, maxYear])
-      .range([LABEL_W + PAD_L, LABEL_W + PAD_L + graphW]);
-
-    // Axis years
-    const axisTicks = [1895, 1945, 1949, 1980, 2000, 2010, 2026];
-
-    // Clear
-    svg.selectAll('*').remove();
-    const g = svg.append('g');
-
-    // ── Grid lines (vertical) ──────────────────────────────────────────
-    axisTicks.forEach((yr) => {
-      g.append('line')
-        .attr('x1', xScale(yr)).attr('x2', xScale(yr))
-        .attr('y1', PAD_T).attr('y2', totalH - PAD_B)
-        .attr('stroke', '#e0e0e0').attr('stroke-width', 1)
-        .attr('stroke-dasharray', '4,3');
-    });
-
-    // ── Time axis labels ──────────────────────────────────────────────
-    axisTicks.forEach((yr) => {
-      g.append('text')
-        .attr('x', xScale(yr)).attr('y', totalH - PAD_B + 16)
-        .attr('text-anchor', 'middle')
-        .attr('font-size', 11).attr('fill', '#aaa')
-        .text(yr);
-    });
-
-    // ── Per-row drawing ───────────────────────────────────────────────
-    const tooltip = document.getElementById('fork-tooltip');
-
-    function showTip(html, event) {
-      if (!tooltip) return;
-      tooltip.innerHTML = html;
-      tooltip.classList.add('visible');
-      tooltip.setAttribute('aria-hidden', 'false');
-      moveTip(event);
-    }
-    function moveTip(event) {
-      if (!tooltip) return;
-      const ttW = 270, ttH = 90;
-      let x = event.clientX + 14;
-      let y = event.clientY - 14;
-      if (x + ttW > window.innerWidth) x = event.clientX - ttW - 14;
-      if (y + ttH > window.innerHeight) y = event.clientY - ttH;
-      tooltip.style.left = x + 'px';
-      tooltip.style.top = y + 'px';
-    }
-    function hideTip() {
-      if (!tooltip) return;
-      tooltip.classList.remove('visible');
-      tooltip.setAttribute('aria-hidden', 'true');
+    function loadD3(callback) {
+      if (window.d3) {
+        callback();
+        return;
+      }
+      const s = document.createElement('script');
+      s.src = 'https://d3js.org/d3.v7.min.js';
+      s.onload = callback;
+      document.head.appendChild(s);
     }
 
-    forkData.forEach((d, i) => {
-      const cy = PAD_T + i * ROW_H + ROW_H / 2;
-      const forkX = xScale(d.forkYear);
-      const originX = xScale(d.originYear);
-      const endX = xScale(2027);
+    function drawGraph() {
+      const d3 = window.d3;
+      const wrap = document.querySelector('.fork-graph-wrap');
+      const svg = d3.select('#fork-graph-svg');
+      if (!wrap || svg.empty()) return;
 
-      const twColor = '#e74c3c';
-      const cnColor = '#3498db';
-      const originColor = '#888';
+      const ROW_H = 56;
+      const PAD_T = 30;
+      const PAD_B = 36;
+      const PAD_L = 20;
+      const PAD_R = 20;
+      const LABEL_W = 130; // origin label width
+      const RESULT_W = 100; // result label area
 
-      const row = g.append('g').attr('class', 'fork-row');
+      const totalW = Math.max(wrap.clientWidth, 680);
+      const graphW = totalW - PAD_L - PAD_R - LABEL_W - RESULT_W;
+      const totalH = forkData.length * ROW_H + PAD_T + PAD_B;
 
-      // ── horizontal stem: origin → fork ──────────────────────────
-      row.append('line')
-        .attr('x1', originX).attr('x2', forkX)
-        .attr('y1', cy).attr('y2', cy)
-        .attr('stroke', originColor).attr('stroke-width', 2);
+      svg.attr('width', totalW).attr('height', totalH);
 
-      // ── Taiwan branch: fork → end (upper) ───────────────────────
-      const twY = cy - 14;
-      const twPath = `M${forkX},${cy} C${forkX + 28},${cy} ${forkX + 35},${twY} ${forkX + 50},${twY} L${endX},${twY}`;
-      row.append('path')
-        .attr('d', twPath)
-        .attr('fill', 'none').attr('stroke', twColor).attr('stroke-width', 2)
-        .style('opacity', 0)
-        .transition().delay(i * 80).duration(600).ease(d3.easeCubicOut)
-        .style('opacity', 1);
+      // Time scale
+      const minYear = 1890;
+      const maxYear = 2030;
+      const xScale = d3
+        .scaleLinear()
+        .domain([minYear, maxYear])
+        .range([LABEL_W + PAD_L, LABEL_W + PAD_L + graphW]);
 
-      // ── China branch: fork → end (lower, or inline for type E) ──
-      const cnY = cy + 14;
-      const cnPath = `M${forkX},${cy} C${forkX + 28},${cy} ${forkX + 35},${cnY} ${forkX + 50},${cnY} L${endX},${cnY}`;
-      row.append('path')
-        .attr('d', cnPath)
-        .attr('fill', 'none').attr('stroke', cnColor).attr('stroke-width', 2)
-        .style('opacity', 0)
-        .transition().delay(i * 80 + 100).duration(600).ease(d3.easeCubicOut)
-        .style('opacity', 1);
+      // Axis years
+      const axisTicks = [1895, 1945, 1949, 1980, 2000, 2010, 2026];
 
-      // ── Origin node ───────────────────────────────────────────────
-      const originNode = row.append('circle')
-        .attr('cx', originX).attr('cy', cy).attr('r', 5)
-        .attr('fill', originColor).attr('stroke', '#fff').attr('stroke-width', 1.5)
-        .style('cursor', 'pointer');
+      // Clear
+      svg.selectAll('*').remove();
+      const g = svg.append('g');
 
-      // ── Fork point node ───────────────────────────────────────────
-      const forkNode = row.append('circle')
-        .attr('cx', forkX).attr('cy', cy).attr('r', 7)
-        .attr('fill', '#fff').attr('stroke', '#888').attr('stroke-width', 2)
-        .style('cursor', 'pointer');
+      // ── Grid lines (vertical) ──────────────────────────────────────────
+      axisTicks.forEach((yr) => {
+        g.append('line')
+          .attr('x1', xScale(yr))
+          .attr('x2', xScale(yr))
+          .attr('y1', PAD_T)
+          .attr('y2', totalH - PAD_B)
+          .attr('stroke', '#e0e0e0')
+          .attr('stroke-width', 1)
+          .attr('stroke-dasharray', '4,3');
+      });
 
-      // ── Taiwan end node ───────────────────────────────────────────
-      row.append('circle')
-        .attr('cx', endX).attr('cy', twY).attr('r', 5)
-        .attr('fill', twColor).attr('stroke', '#fff').attr('stroke-width', 1.5)
-        .style('cursor', 'pointer')
-        .style('opacity', 0)
-        .transition().delay(i * 80 + 600).duration(200)
-        .style('opacity', 1);
+      // ── Time axis labels ──────────────────────────────────────────────
+      axisTicks.forEach((yr) => {
+        g.append('text')
+          .attr('x', xScale(yr))
+          .attr('y', totalH - PAD_B + 16)
+          .attr('text-anchor', 'middle')
+          .attr('font-size', 11)
+          .attr('fill', '#aaa')
+          .text(yr);
+      });
 
-      // ── China end node ────────────────────────────────────────────
-      row.append('circle')
-        .attr('cx', endX).attr('cy', cnY).attr('r', 5)
-        .attr('fill', cnColor).attr('stroke', '#fff').attr('stroke-width', 1.5)
-        .style('cursor', 'pointer')
-        .style('opacity', 0)
-        .transition().delay(i * 80 + 700).duration(200)
-        .style('opacity', 1);
+      // ── Per-row drawing ───────────────────────────────────────────────
+      const tooltip = document.getElementById('fork-tooltip');
 
-      // ── Origin label (left side) ──────────────────────────────────
-      g.append('text')
-        .attr('x', PAD_L + 6).attr('y', cy + 4)
-        .attr('font-size', 11).attr('fill', '#999')
-        .attr('font-family', 'system-ui, sans-serif')
-        .text(d.origin.length > 10 ? d.origin.slice(0, 10) + '…' : d.origin);
+      function showTip(html, event) {
+        if (!tooltip) return;
+        tooltip.innerHTML = html;
+        tooltip.classList.add('visible');
+        tooltip.setAttribute('aria-hidden', 'false');
+        moveTip(event);
+      }
+      function moveTip(event) {
+        if (!tooltip) return;
+        const ttW = 270,
+          ttH = 90;
+        let x = event.clientX + 14;
+        let y = event.clientY - 14;
+        if (x + ttW > window.innerWidth) x = event.clientX - ttW - 14;
+        if (y + ttH > window.innerHeight) y = event.clientY - ttH;
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+      }
+      function hideTip() {
+        if (!tooltip) return;
+        tooltip.classList.remove('visible');
+        tooltip.setAttribute('aria-hidden', 'true');
+      }
 
-      // ── Taiwan result label (right side) ─────────────────────────
-      g.append('text')
-        .attr('x', endX + 10).attr('y', twY + 4)
-        .attr('font-size', 12).attr('fill', twColor).attr('font-weight', '600')
-        .attr('font-family', 'system-ui, sans-serif')
-        .text(d.taiwan);
+      forkData.forEach((d, i) => {
+        const cy = PAD_T + i * ROW_H + ROW_H / 2;
+        const forkX = xScale(d.forkYear);
+        const originX = xScale(d.originYear);
+        const endX = xScale(2027);
 
-      // ── China result label (right side) ──────────────────────────
-      g.append('text')
-        .attr('x', endX + 10).attr('y', cnY + 4)
-        .attr('font-size', 12).attr('fill', cnColor).attr('font-weight', '600')
-        .attr('font-family', 'system-ui, sans-serif')
-        .text(d.china.length > 8 ? d.china.slice(0, 8) + '…' : d.china);
+        const twColor = '#e74c3c';
+        const cnColor = '#3498db';
+        const originColor = '#888';
 
-      // ── Tooltip interactions ──────────────────────────────────────
-      const originHtml = `<strong>詞源</strong>${d.origin}<br><span style="opacity:.7;font-size:.78rem">起源：${d.originYear}年代</span>`;
-      const nodeHtml = `<strong>${d.taiwan} / ${d.china}</strong>${d.note}<br><span style="opacity:.7;font-size:.78rem">分歧：${d.forkYear}年 · 類型 ${d.type}</span>`;
+        const row = g.append('g').attr('class', 'fork-row');
 
-      originNode.on('mousemove', (event) => { showTip(originHtml, event); moveTip(event); })
-               .on('mouseleave', hideTip);
-      forkNode.on('mousemove', (event) => { showTip(nodeHtml, event); moveTip(event); })
-              .on('mouseleave', hideTip);
+        // ── horizontal stem: origin → fork ──────────────────────────
+        row
+          .append('line')
+          .attr('x1', originX)
+          .attr('x2', forkX)
+          .attr('y1', cy)
+          .attr('y2', cy)
+          .attr('stroke', originColor)
+          .attr('stroke-width', 2);
+
+        // ── Taiwan branch: fork → end (upper) ───────────────────────
+        const twY = cy - 14;
+        const twPath = `M${forkX},${cy} C${forkX + 28},${cy} ${forkX + 35},${twY} ${forkX + 50},${twY} L${endX},${twY}`;
+        row
+          .append('path')
+          .attr('d', twPath)
+          .attr('fill', 'none')
+          .attr('stroke', twColor)
+          .attr('stroke-width', 2)
+          .style('opacity', 0)
+          .transition()
+          .delay(i * 80)
+          .duration(600)
+          .ease(d3.easeCubicOut)
+          .style('opacity', 1);
+
+        // ── China branch: fork → end (lower, or inline for type E) ──
+        const cnY = cy + 14;
+        const cnPath = `M${forkX},${cy} C${forkX + 28},${cy} ${forkX + 35},${cnY} ${forkX + 50},${cnY} L${endX},${cnY}`;
+        row
+          .append('path')
+          .attr('d', cnPath)
+          .attr('fill', 'none')
+          .attr('stroke', cnColor)
+          .attr('stroke-width', 2)
+          .style('opacity', 0)
+          .transition()
+          .delay(i * 80 + 100)
+          .duration(600)
+          .ease(d3.easeCubicOut)
+          .style('opacity', 1);
+
+        // ── Origin node ───────────────────────────────────────────────
+        const originNode = row
+          .append('circle')
+          .attr('cx', originX)
+          .attr('cy', cy)
+          .attr('r', 5)
+          .attr('fill', originColor)
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1.5)
+          .style('cursor', 'pointer');
+
+        // ── Fork point node ───────────────────────────────────────────
+        const forkNode = row
+          .append('circle')
+          .attr('cx', forkX)
+          .attr('cy', cy)
+          .attr('r', 7)
+          .attr('fill', '#fff')
+          .attr('stroke', '#888')
+          .attr('stroke-width', 2)
+          .style('cursor', 'pointer');
+
+        // ── Taiwan end node ───────────────────────────────────────────
+        row
+          .append('circle')
+          .attr('cx', endX)
+          .attr('cy', twY)
+          .attr('r', 5)
+          .attr('fill', twColor)
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1.5)
+          .style('cursor', 'pointer')
+          .style('opacity', 0)
+          .transition()
+          .delay(i * 80 + 600)
+          .duration(200)
+          .style('opacity', 1);
+
+        // ── China end node ────────────────────────────────────────────
+        row
+          .append('circle')
+          .attr('cx', endX)
+          .attr('cy', cnY)
+          .attr('r', 5)
+          .attr('fill', cnColor)
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1.5)
+          .style('cursor', 'pointer')
+          .style('opacity', 0)
+          .transition()
+          .delay(i * 80 + 700)
+          .duration(200)
+          .style('opacity', 1);
+
+        // ── Origin label (left side) ──────────────────────────────────
+        g.append('text')
+          .attr('x', PAD_L + 6)
+          .attr('y', cy + 4)
+          .attr('font-size', 11)
+          .attr('fill', '#999')
+          .attr('font-family', 'system-ui, sans-serif')
+          .text(d.origin.length > 10 ? d.origin.slice(0, 10) + '…' : d.origin);
+
+        // ── Taiwan result label (right side) ─────────────────────────
+        g.append('text')
+          .attr('x', endX + 10)
+          .attr('y', twY + 4)
+          .attr('font-size', 12)
+          .attr('fill', twColor)
+          .attr('font-weight', '600')
+          .attr('font-family', 'system-ui, sans-serif')
+          .text(d.taiwan);
+
+        // ── China result label (right side) ──────────────────────────
+        g.append('text')
+          .attr('x', endX + 10)
+          .attr('y', cnY + 4)
+          .attr('font-size', 12)
+          .attr('fill', cnColor)
+          .attr('font-weight', '600')
+          .attr('font-family', 'system-ui, sans-serif')
+          .text(d.china.length > 8 ? d.china.slice(0, 8) + '…' : d.china);
+
+        // ── Tooltip interactions ──────────────────────────────────────
+        const originHtml = `<strong>詞源</strong>${d.origin}<br><span style="opacity:.7;font-size:.78rem">起源：${d.originYear}年代</span>`;
+        const nodeHtml = `<strong>${d.taiwan} / ${d.china}</strong>${d.note}<br><span style="opacity:.7;font-size:.78rem">分歧：${d.forkYear}年 · 類型 ${d.type}</span>`;
+
+        originNode
+          .on('mousemove', (event) => {
+            showTip(originHtml, event);
+            moveTip(event);
+          })
+          .on('mouseleave', hideTip);
+        forkNode
+          .on('mousemove', (event) => {
+            showTip(nodeHtml, event);
+            moveTip(event);
+          })
+          .on('mouseleave', hideTip);
+      });
+
+      // SVG mousemove delegation
+      svg.on('mousemove', (event) => {
+        const target = event.target;
+        if (target.tagName === 'circle') moveTip(event);
+      });
+
+      // Row separator lines
+      forkData.forEach((d, i) => {
+        if (i === 0) return;
+        const lineY = PAD_T + i * ROW_H;
+        g.append('line')
+          .attr('x1', PAD_L)
+          .attr('x2', totalW - PAD_R)
+          .attr('y1', lineY)
+          .attr('y2', lineY)
+          .attr('stroke', '#f0f0f0')
+          .attr('stroke-width', 1);
+      });
+    }
+
+    // Init on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => loadD3(drawGraph));
+    } else {
+      loadD3(drawGraph);
+    }
+
+    // Redraw on resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(drawGraph, 200);
     });
-
-    // SVG mousemove delegation
-    svg.on('mousemove', (event) => {
-      const target = event.target;
-      if (target.tagName === 'circle') moveTip(event);
-    });
-
-    // Row separator lines
-    forkData.forEach((d, i) => {
-      if (i === 0) return;
-      const lineY = PAD_T + i * ROW_H;
-      g.append('line')
-        .attr('x1', PAD_L).attr('x2', totalW - PAD_R)
-        .attr('y1', lineY).attr('y2', lineY)
-        .attr('stroke', '#f0f0f0').attr('stroke-width', 1);
-    });
-  }
-
-  // Init on load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => loadD3(drawGraph));
-  } else {
-    loadD3(drawGraph);
-  }
-
-  // Redraw on resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(drawGraph, 200);
-  });
-})();
+  })();
 </script>
-
-<style>
-  /* ── Page layout ──────────────────────────────────────────────── */
-  .fork-graph-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: #f8f8f8;
-  }
-
-  /* ── Header ──────────────────────────────────────────────────── */
-  .fg-header {
-    background: #1a1a2e;
-    color: white;
-    padding: 2.5rem var(--space-page-x, 2rem) 2rem;
-  }
-  .fg-header-inner {
-    max-width: 72rem;
-    margin: 0 auto;
-  }
-  .fg-back-link {
-    margin-bottom: 1rem;
-  }
-  .fg-back-link a {
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    font-size: 0.88rem;
-    transition: color 0.15s;
-  }
-  .fg-back-link a:hover {
-    color: rgba(255,255,255,0.9);
-  }
-  .fg-header h1 {
-    font-family: var(--font-editorial, Georgia, serif);
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin: 0 0 0.75rem;
-    letter-spacing: -0.01em;
-  }
-  .fg-header-en {
-    font-size: 0.62em;
-    font-weight: 400;
-    opacity: 0.65;
-    display: block;
-    margin-top: 0.2em;
-    letter-spacing: 0.04em;
-    font-family: var(--font-ui, system-ui, sans-serif);
-  }
-  .fg-tagline {
-    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-    opacity: 0.82;
-    margin: 0 0 1.25rem;
-    max-width: 42rem;
-    line-height: 1.65;
-  }
-  .fg-stats {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    opacity: 0.75;
-  }
-  .fg-stats .stat strong {
-    color: white;
-    opacity: 1;
-    font-size: 1.05em;
-  }
-  .stat-sep {
-    opacity: 0.4;
-  }
-
-  /* ── Fork Graph section ──────────────────────────────────────── */
-  .fork-graph-section {
-    max-width: 1200px;
-    margin: 2.5rem auto;
-    padding: 0 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .fork-graph-wrap {
-    position: relative;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    background: #fafafa;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    cursor: grab;
-  }
-  .fork-graph-wrap:active {
-    cursor: grabbing;
-  }
-  #fork-graph-svg {
-    display: block;
-    min-width: 900px;
-  }
-  .fork-tooltip {
-    position: fixed;
-    background: rgba(20, 20, 40, 0.93);
-    color: #fff;
-    padding: 0.6rem 0.9rem;
-    border-radius: 8px;
-    font-size: 0.82rem;
-    line-height: 1.5;
-    max-width: 260px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
-    z-index: 9999;
-    white-space: normal;
-  }
-  .fork-tooltip.visible {
-    opacity: 1;
-  }
-  .fork-tooltip strong {
-    display: block;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-  }
-  .fork-graph-caption {
-    text-align: center;
-    font-size: 0.83rem;
-    color: #888;
-    margin-top: 0.75rem;
-  }
-  .legend-tw { color: #e74c3c; font-weight: 600; }
-  .legend-cn { color: #3498db; font-weight: 600; margin-left: 0.5rem; }
-  .legend-origin { color: #888; margin-left: 0.5rem; }
-
-  /* ── Legend section ──────────────────────────────────────────── */
-  .fg-legend-section {
-    background: white;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 2.5rem var(--space-page-x, 2rem);
-  }
-  .fg-legend-inner {
-    max-width: 72rem;
-    margin: 0 auto;
-  }
-  .fg-legend-inner h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin: 0 0 1.5rem;
-  }
-  .fg-legend-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-  .fg-legend-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .fg-badge {
-    display: inline-block;
-    font-size: 0.78rem;
-    padding: 0.25rem 0.65rem;
-    border-radius: 999px;
-    border: 1px solid;
-    font-weight: 600;
-    width: fit-content;
-  }
-  .fg-legend-item p {
-    font-size: 0.85rem;
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  /* ── Footer ──────────────────────────────────────────────────── */
-  .fg-footer {
-    background: #1a1a2e;
-    color: white;
-    padding: 2rem var(--space-page-x, 2rem);
-    margin-top: auto;
-  }
-  .fg-footer-inner {
-    max-width: 72rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .fg-footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-  }
-  .footer-link {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.15s;
-    padding: 0.3rem 0;
-  }
-  .footer-link:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  .footer-cta {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 6px;
-    padding: 0.4rem 1rem;
-    font-weight: 600;
-    color: white !important;
-  }
-  .footer-cta:hover {
-    background: rgba(255,255,255,0.22);
-    text-decoration: none !important;
-  }
-  .fg-footer-note {
-    font-size: 0.8rem;
-    opacity: 0.45;
-    margin: 0;
-  }
-
-  /* ── Responsive ──────────────────────────────────────────────── */
-  @media (max-width: 1024px) {
-    .fg-legend-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 640px) {
-    .fg-header {
-      padding: 1.5rem 1rem 1.25rem;
-    }
-    .fork-graph-section {
-      padding: 0 0.75rem;
-      margin: 1.5rem auto;
-    }
-    .fg-legend-section {
-      padding: 1.5rem 1rem;
-    }
-    .fg-legend-grid {
-      grid-template-columns: 1fr;
-    }
-    .fg-footer {
-      padding: 1.5rem 1rem;
-    }
-    .fg-footer-links {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
