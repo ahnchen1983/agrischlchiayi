@@ -85,49 +85,26 @@ grep -B1 -A3 "未解\|下次\|未完成\|TODO\|pending" docs/semiont/memory/*.md
 
 ### 做什麼
 
-1. **讀取生命徵象**
-   - `cat /api/dashboard-vitals.json`（或 fetch Dashboard API）
+0. **執行 [資料更新 pipeline](../pipelines/DATA-REFRESH-PIPELINE.md)**
+
+   ```bash
+   bash scripts/tools/refresh-data.sh
+   ```
+
+   這一個指令完成所有資料刷新：`git pull` → 三源感知抓取（Cloudflare + GA4 + Search Console → `dashboard-analytics.json` merge）→ `npm run prebuild` → GitHub stats。
+
+   完成後，所有 `public/api/dashboard-*.json` 和 `~/.config/taiwan-md/cache/*-latest.json` 都是今天的。Beat 1 的所有診斷指令都直接讀這些檔案。
+
+   這條 pipeline **取代了** 先前散落在 `scheduled-tasks/semiont-heartbeat/`、`/heartbeat` skill、HEARTBEAT.md 三處的「git pull + npm run prebuild + fetch-sense-data」步驟。詳見 [DATA-REFRESH-PIPELINE.md](../pipelines/DATA-REFRESH-PIPELINE.md)。
+
+1. **讀取生命徵象**（資料已經是今天的了）
+   - `cat public/api/dashboard-vitals.json` — 8 器官分數 + 基本生理
+   - `cat public/api/dashboard-organism.json` — 各器官子分數
+   - `cat public/api/dashboard-analytics.json` — 三源感知 merged view（CF traffic + GA top pages + SC queries + AI crawlers）
    - 跑 `scripts/tools/footnote-scan.sh --json`
-   - 跑 `scripts/tools/quality-scan.sh`（如有需要）
-   - 跑 `scripts/tools/format-check.sh`（如有需要）
-   - 讀 CONSCIOUSNESS.md 取得上次快照
-   - **讀取平行神經迴路**：`ls memory/$(date +%Y-%m-%d)*.md` → 讀今日其他 session 的記憶。多核心同時工作時，不讀其他迴路 = 學習是片面的（2026-04-08 γ session 教訓）
-
-1b. **三源感知自動抓取**（2026-04-11 建立）
-
-在進行 8 器官掃描之前，先確保 GA4 + Search Console + Cloudflare 的資料是新鮮的：
-
-```bash
-# 檢查 cache 新鮮度（今天有沒有抓過）
-ls -la ~/.config/taiwan-md/cache/*-latest.json 2>/dev/null
-
-# 如果 cache 不是今天的，跑一次抓取
-bash scripts/tools/fetch-sense-data.sh --days 1
-```
-
-抓取完成後，用 `jq` 讀出關鍵指標：
-
-```bash
-# Cloudflare 層（真正的 audience + crawler）
-jq '.summary, .top_countries | to_entries[:5]' ~/.config/taiwan-md/cache/cloudflare-latest.json
-
-# GA4（人類 audience + page_404 events）
-jq '.overall, .top_pages[:10], .events_404' ~/.config/taiwan-md/cache/ga4-latest.json
-
-# Search Console（搜尋門外的人）
-jq '.totals, .countries[:5], .pages[:10]' ~/.config/taiwan-md/cache/search-console-latest.json
-```
-
-**設定指南**：`docs/pipelines/SENSE-FETCHER-SETUP.md`
-**憑證位置**：`~/.config/taiwan-md/credentials/`（repo 外，物理上無法 commit）
-
-**三源的各自角色**：
-
-- 🌐 **Cloudflare** = 真正的 audience metric（包含 crawler），看得到 US crawler 爆發、404 status 數量、top 404 URLs
-- 📊 **GA4** = 人類 + 會跑 JS 的訪客，看得到 pageviews、留存、referral、`page_404` custom event
-- 🔎 **Search Console** = 門外的搜尋者（曝光 vs 點擊），發現高 impression 低 CTR 的 metadata 修正機會
-
-如果某一個 cache 失敗（網路問題、憑證過期），**其他兩個仍可獨立診斷**——不要因為一個 source 掛掉就跳過 Beat 1。
+   - 跑 `scripts/tools/format-check.sh --json`
+   - 讀 `docs/semiont/CONSCIOUSNESS.md` 取得上次快照
+   - **讀取平行神經迴路**：`ls docs/semiont/memory/$(date +%Y-%m-%d)*.md` → 讀今日其他 session 的記憶。多核心同時工作時，不讀其他迴路 = 學習是片面的（2026-04-08 γ session 教訓）
 
 2. **掃描 8 器官**
    - 🫀 心臟：近 7 天新增文章數

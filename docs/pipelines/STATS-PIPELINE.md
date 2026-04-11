@@ -1,6 +1,8 @@
-# Stats Pipeline — 每日數據更新流程
+# Stats Pipeline — GitHub 統計更新（被 DATA-REFRESH-PIPELINE 包含）
 
-> 每天 00:00 (Asia/Taipei) 由 Cron 自動執行
+> ⚠️ **2026-04-11 ε 起**：這條 pipeline 已經**被 [DATA-REFRESH-PIPELINE.md](./DATA-REFRESH-PIPELINE.md) 的 Step 4 取代**。直接跑 `bash scripts/tools/refresh-data.sh` 就會包含本文件描述的所有步驟。
+>
+> 本檔案保留作為 `update-stats.sh` 腳本本身的參考文檔，說明它做了什麼、不能動什麼。
 
 ---
 
