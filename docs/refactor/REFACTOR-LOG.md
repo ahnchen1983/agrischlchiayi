@@ -735,6 +735,25 @@ Top 10 files by scoped CSS size:
 - `data.template.astro` (1539)：真正的大魔王，之後專門處理
 - `assets.template.astro` (181)：小檔，下次暖身時快速清掉
 
+#### Phase 7.6 batch 2 — 2026-04-11（`11ad6bed`）
+
+Tier 1 完結篇。處理最後 2 個檔案：
+
+| 檔案                    | 狀態       | 重點                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `assets.template.astro` | ✅ 全遷    | 4 個重複卡片區塊改成 data-driven `cards` array + map loop。`BTN_PRIMARY` / `BTN_OUTLINE` / `SECTION_HEADING` class string 抽成 local `const`。181 → 0 scoped 行。                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `data.template.astro`   | 🟡 partial | Hero + main wrapper + `.comparison-cards` grid + `.bubble-controls` / `.size-toggle` / `.sector-filters` 全部 inline。**保留 scoped**：`.section-divider` / `.story-intro` / `.section-title` / `.story-text` 跨 5-6 個 section 的共用基元（符合 DESIGN.md decision tree：共用 class 要不全遷要不全留）、`.comparison-card` / `.country-bar` / `.company-card` 重複卡片、`.toggle-btn` / `.sector-btn` 的 `.active` state、`:global(.tooltip)` 給 d3 bubble chart、population pyramid / democracy grid / enterprise bubble chart 全數 d3/SVG styling。1539 → 1447。 |
+
+**Guard 對照**：`16,512 → 16,239` (−273 行)，檔案數 `23 → 22`（−1）。Production build 驗證 2168 頁全數乾淨。
+
+**Tier 1 完結總計**（Phase 7.6 兩個 batch 加總）：
+
+- Files with scoped `<style>`：**30 → 22**（−8）
+- Total scoped CSS lines：**17,297 → 16,239**（−1,058）
+- 11 檔全處理完畢（7 個全清、4 個 partial），Tier 1 官方 inventory 清單完成。
+
+**剩下的 Tier 1 候選**：無。
+
 ### Phase 7.6 經驗
 
 1. **`@keyframes` → global.css 是穩定 pattern**：Phase 4 的 `float*`、Phase 7.6 的 `marquee-*` / `dice-roll` 都用同一招——keyframes 提升到 `global.css` 頂層，inline `[animation:name_duration_timing_iteration]` 從 Tailwind arbitrary 呼叫。不需要 Tailwind 的 `theme.extend.keyframes` 設定。
