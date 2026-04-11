@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -87,25 +88,19 @@ const municipalityFiles = [
     class="taiwan-shape-page mx-auto max-w-[980px] px-6 pb-16 text-[#1a1a1a]"
   >
     <!-- Hero -->
-    <section class="px-4 pb-12 pt-20 text-center">
-      <div class="mx-auto max-w-[820px]">
-        <p
-          class="mb-[0.8rem] text-[0.9rem] font-semibold uppercase tracking-[0.08em] text-[#c73e3a]"
-        >
-          {t('taiwanShape.hero.kicker')}
-        </p>
-        <h1
-          class="my-[0.2rem] mb-4 text-[clamp(2.2rem,6vw,3.6rem)] font-extrabold leading-[1.15] text-[#111]"
-        >
-          {t('taiwanShape.hero.title')}
-        </h1>
-        <p
-          class="mx-auto max-w-[640px] text-[clamp(1rem,2.4vw,1.25rem)] leading-[1.6] text-[#555]"
-        >
-          {t('taiwanShape.hero.subtitle')}
-        </p>
-      </div>
-    </section>
+    <PageHero
+      containerWidth={820}
+      padding="spacious"
+      titleFont="sans"
+      titleWeight="extrabold"
+      titleSize="clamp"
+      titleColor="#111"
+      accentColor="#c73e3a"
+      eyebrowTracking="tight"
+      eyebrow={t('taiwanShape.hero.kicker')}
+      title={t('taiwanShape.hero.title')}
+      subtitle={t('taiwanShape.hero.subtitle')}
+    />
 
     <!-- Story -->
     <section class="shape-story">

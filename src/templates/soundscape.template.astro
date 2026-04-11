@@ -21,6 +21,7 @@ import {
   categories,
   soundscapeUI,
   localize,
+  secondary,
   totalSounds,
   totalWishlist,
   totalCategories,
@@ -33,6 +34,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 const L = (field: Parameters<typeof localize>[0]) => localize(field, lang);
+const S = (field: Parameters<typeof secondary>[0]) => secondary(field, lang);
 
 const ui = soundscapeUI;
 
@@ -94,6 +96,11 @@ const statsText = L(ui.sections.statsFormat)
             <h2 class="mb-4 flex flex-wrap items-center gap-2 text-[1.5rem]">
               <span class="text-[1.3rem]">{cat.icon}</span>
               {L(cat.title)}
+              {S(cat.title) && (
+                <span class="text-[0.85rem] font-normal text-[#64748b]">
+                  {S(cat.title)}
+                </span>
+              )}
             </h2>
 
             {cat.sounds.length > 0 && (
@@ -106,12 +113,22 @@ const statsText = L(ui.sections.statsFormat)
                       </span>
                       <div>
                         <h3 class="m-0 text-[0.95rem] leading-[1.3]">
-                          {L(sound.location)}
+                          {L(sound.location)}{' '}
+                          {S(sound.location) && (
+                            <span class="m-0 text-[0.75rem] font-normal text-[#64748b]">
+                              {S(sound.location)}
+                            </span>
+                          )}
                         </h3>
                       </div>
                     </div>
                     <p class="m-0 text-[0.85rem] text-[#334155]">
-                      {L(sound.description)}
+                      {L(sound.description)}{' '}
+                      {S(sound.description) && (
+                        <span class="m-0 text-[0.75rem] text-[#64748b]">
+                          {S(sound.description)}
+                        </span>
+                      )}
                     </p>
                     <div class="flex items-center gap-[0.6rem] text-[0.75rem]">
                       <a

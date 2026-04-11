@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -23,8 +24,19 @@ const isEn = lang === 'en';
       anatomy, etc.) remain scoped — ~170 classes with tight JS
       coupling.
     -->
+    <!--
+      Dashboard hero is a structural outlier: a rounded-card gradient
+      shell with an animated EKG SVG background and a JS-updated stats
+      row. PageHero can't absorb the shell (would need `bgShape=rounded`
+      + `<slot name=background>` + new stats slot for one consumer), so
+      we NEST PageHero inside the custom shell to handle the standard
+      title/subtitle/footer axis, and keep the EKG + stats as custom
+      siblings. Partial migration: structural consistency for the
+      "this page has a title" part, custom code only where it's truly
+      unique.
+    -->
     <section
-      class="relative mb-4 overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#1a1a2e_0%,#2d1b69_60%,#1a1a2e_100%)] px-8 pb-8 pt-12 text-center text-white"
+      class="page-hero-dashboard-shell relative mb-4 overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#1a1a2e_0%,#2d1b69_60%,#1a1a2e_100%)] text-white"
     >
       <svg
         class="pointer-events-none absolute left-0 top-1/2 h-[60px] w-full -translate-y-1/2 opacity-60"
@@ -39,30 +51,37 @@ const isEn = lang === 'en';
           stroke="rgba(139,92,246,0.25)"
           stroke-width="2"></path>
       </svg>
-      <h1 class="hero-title relative mb-2 text-[2rem] max-md:text-[1.5rem]">
-        <span class="text-[1.8rem]">🔬</span>
-        {t('dashboard.hero.title')}
-      </h1>
-      <p class="relative mb-[0.3rem] text-[1.1rem] opacity-80">
-        {t('dashboard.hero.subtitle')}
-      </p>
-      <p class="relative text-[0.9rem] opacity-80">
-        {t('dashboard.hero.description')}
-      </p>
-      <a
-        href="https://github.com/frank890417/taiwan-md/tree/main/docs/semiont"
-        target="_blank"
-        rel="noopener"
-        class="mt-2 inline-block text-[0.85rem] text-[#94a3b8] no-underline opacity-80 transition-opacity duration-200 hover:text-[#cbd5e1] hover:opacity-100"
+      <PageHero
+        containerWidth="full"
+        padding="compact"
+        tone="dark"
+        titleVariant="inherit"
+        titleWeight="bold"
+        titleSize="sm"
       >
-        {
-          isEn
-            ? '→ Cognitive Layer (Self-Awareness System)'
-            : '→ 前往認知層（自我覺察系統）'
-        }
-      </a>
+        <Fragment slot="title">
+          <span class="relative text-[1.8rem]">🔬</span>
+          <span class="relative">{t('dashboard.hero.title')}</span>
+        </Fragment>
+        <Fragment slot="subtitle">{t('dashboard.hero.subtitle')}</Fragment>
+        <Fragment slot="meta">{t('dashboard.hero.description')}</Fragment>
+        <Fragment slot="footer">
+          <a
+            href="https://github.com/frank890417/taiwan-md/tree/main/docs/semiont"
+            target="_blank"
+            rel="noopener"
+            class="inline-block text-[0.85rem] text-[#94a3b8] no-underline opacity-80 transition-opacity duration-200 hover:text-[#cbd5e1] hover:opacity-100"
+          >
+            {
+              isEn
+                ? '→ Cognitive Layer (Self-Awareness System)'
+                : '→ 前往認知層（自我覺察系統）'
+            }
+          </a>
+        </Fragment>
+      </PageHero>
       <div
-        class="relative mt-6 flex justify-center gap-12 max-[768px]:gap-6"
+        class="relative mb-8 flex justify-center gap-12 max-[768px]:gap-6"
         id="hero-stats"
       >
         <div class="flex flex-col items-center">

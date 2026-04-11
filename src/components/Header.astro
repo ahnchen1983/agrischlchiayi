@@ -144,6 +144,13 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
+                          href={translatePath('/about')}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          {t('nav.about')}
+                        </a>
+                        <div class="dropdown-divider" />
+                        <a
                           href={`${translatePath('/about')}#story`}
                           class="dropdown-item"
                         >
@@ -191,6 +198,13 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
+                          href={item.fullPath}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          {t('nav.explore')}
+                        </a>
+                        <div class="dropdown-divider" />
+                        <a
                           href={translatePath('/graph')}
                           class="dropdown-item dropdown-section-header"
                         >
@@ -213,6 +227,36 @@ const categoryList = [
                   </Fragment>
                 );
               }
+              if (item.path === '/map') {
+                return (
+                  <Fragment>
+                    {showSep && <span class="nav-sep" />}
+                    <div class="nav-dropdown">
+                      <a
+                        href={item.fullPath}
+                        class:list={['nav-link', { active: item.active }]}
+                      >
+                        {item.label} <span class="dropdown-arrow">▾</span>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a
+                          href={translatePath('/map')}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          📍 {t('nav.map.explore')}
+                        </a>
+                        <div class="dropdown-divider" />
+                        <a
+                          href={translatePath('/taiwan-shape')}
+                          class="dropdown-item"
+                        >
+                          🗺️ {t('nav.data.shape')}
+                        </a>
+                      </div>
+                    </div>
+                  </Fragment>
+                );
+              }
               if (item.path === '/data') {
                 return (
                   <Fragment>
@@ -226,16 +270,17 @@ const categoryList = [
                       </a>
                       <div class="dropdown-menu">
                         <a
+                          href={translatePath('/data')}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          {t('nav.data')}
+                        </a>
+                        <div class="dropdown-divider" />
+                        <a
                           href={`${translatePath('/data')}#global`}
                           class="dropdown-item"
                         >
                           🌏 {t('nav.data.global')}
-                        </a>
-                        <a
-                          href={translatePath('/taiwan-shape')}
-                          class="dropdown-item"
-                        >
-                          🗺️ {t('nav.data.shape')}
                         </a>
                         <a
                           href={`${translatePath('/data')}#democracy`}
@@ -272,6 +317,13 @@ const categoryList = [
                         {item.label} <span class="dropdown-arrow">▾</span>
                       </a>
                       <div class="dropdown-menu">
+                        <a
+                          href={translatePath('/dashboard')}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          {t('nav.dashboard')}
+                        </a>
+                        <div class="dropdown-divider" />
                         <a
                           href={`${translatePath('/dashboard')}#vitals`}
                           class="dropdown-item"
@@ -343,6 +395,13 @@ const categoryList = [
                         {item.label} <span class="dropdown-arrow">▾</span>
                       </a>
                       <div class="dropdown-menu">
+                        <a
+                          href={translatePath('/contribute')}
+                          class="dropdown-item dropdown-section-header"
+                        >
+                          {t('nav.contribute')}
+                        </a>
+                        <div class="dropdown-divider" />
                         <a
                           href={`${translatePath('/contribute')}#form`}
                           class="dropdown-item"
@@ -504,6 +563,17 @@ const categoryList = [
                     onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                   >
                     📖 {t('nav.terminology')}
+                  </a>
+                </div>
+              )}
+              {item.path === '/map' && (
+                <div class="mobile-sub-links">
+                  <a
+                    href={translatePath('/taiwan-shape')}
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    🗺️ {t('nav.data.shape')}
                   </a>
                 </div>
               )}

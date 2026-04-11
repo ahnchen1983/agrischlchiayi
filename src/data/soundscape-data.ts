@@ -67,6 +67,25 @@ export function localize(field: Localized, lang: Lang): string {
   return field['zh-TW'];
 }
 
+/**
+ * Return the English secondary label for a Localized field, but ONLY when
+ * viewing from the zh-TW page. Used to show e.g. "都市日常的聲音密碼
+ * Urban Soundscape" — a bilingual editorial affordance that's useful for
+ * Chinese readers (English is a universal reference) but would be
+ * redundant for en/ja/ko readers.
+ *
+ * Returns empty string (= don't render) when:
+ * - lang is not 'zh-TW'
+ * - field has no `en` value
+ * - `en` is identical to `zh-TW` (would be visual noise)
+ */
+export function secondary(field: Localized, lang: Lang): string {
+  if (lang !== 'zh-TW') return '';
+  const en = field.en;
+  if (!en || en === field['zh-TW']) return '';
+  return en;
+}
+
 // ─── UI chrome (hero + section headings + CTA) ───
 export const soundscapeUI = {
   meta: {
