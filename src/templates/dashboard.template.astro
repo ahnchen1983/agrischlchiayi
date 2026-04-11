@@ -408,6 +408,20 @@ const isEn = lang === 'en';
   </main>
 </Layout>
 
+<!-- d3 + d3-cloud for Search Console word cloud layout (loaded globally as UMD,
+     attach to window.d3 and window.d3.layout.cloud). is:inline keeps Astro from
+     bundling. Use defer to not block first paint; renderAnalytics waits on d3
+     before drawing the cloud. -->
+<script
+  is:inline
+  defer
+  src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script
+  is:inline
+  defer
+  src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.7/build/d3.layout.cloud.min.js"
+></script>
+
 <script define:vars={{ lang }}>
   const isEn = lang === 'en';
   const categoryLabels = {
@@ -1599,6 +1613,155 @@ const isEn = lang === 'en';
 
   // ── Next Steps ──
   // ── GA4 Analytics ──
+  // Wait for d3 + d3-cloud to be available on window (they're loaded via
+  // `<script is:inline defer>` tags in the head, so they finish asynchronously).
+  // Returns a promise that resolves when both are ready, or rejects after timeout.
+  function waitForD3(timeoutMs = 5000) {
+    return new Promise((resolve, reject) => {
+      const start = Date.now();
+      const check = () => {
+        if (
+          typeof window.d3 !== 'undefined' &&
+          window.d3.layout &&
+          window.d3.layout.cloud
+        ) {
+          resolve(window.d3);
+        } else if (Date.now() - start > timeoutMs) {
+          reject(
+            new Error(
+              'd3 + d3-cloud failed to load within ' + timeoutMs + 'ms',
+            ),
+          );
+        } else {
+          setTimeout(check, 50);
+        }
+      };
+      check();
+    });
+  }
+
+  // Render a d3-cloud SVG into the given container. Responsive: 16:9 max aspect
+  // ratio, uses the container's own width. Based on
+  // https://observablehq.com/@d3/word-cloud
+  function renderWordCloudSvg(container, wordCloudData, isEn) {
+    if (!container || !wordCloudData || !wordCloudData.length) return;
+
+    waitForD3()
+      .then((d3) => {
+        const parentWidth =
+          container.clientWidth || container.parentElement?.clientWidth || 800;
+        // Max 16:9 aspect; scale height from width, bounded between 320 and 720
+        const width = Math.max(320, Math.min(1200, parentWidth));
+        const height = Math.max(
+          320,
+          Math.min(720, Math.round((width * 9) / 16)),
+        );
+
+        // Log-scaled font-size with a wide dynamic range so the long tail is
+        // visibly smaller than the top queries:
+        //   range: 9px → 78px (≈8.7x ratio)
+        //   1-impression query lands at exactly the minimum (t=0)
+        //   top query lands at maximum (t=1)
+        const maxImp = wordCloudData[0]?.impressions || 1;
+        const logMax = Math.log(Math.max(maxImp, 2));
+        const FONT_MIN = 9;
+        const FONT_MAX = 78;
+        const fontSizeFor = (imp) => {
+          if (logMax === 0) return Math.round((FONT_MIN + FONT_MAX) / 2);
+          // Math.max(imp, 1) ensures log is defined; log(1)=0 lands at FONT_MIN
+          const t = Math.log(Math.max(imp, 1)) / logMax;
+          return Math.round(FONT_MIN + (FONT_MAX - FONT_MIN) * t);
+        };
+
+        const words = wordCloudData.map((w) => ({
+          text: w.query,
+          size: fontSizeFor(w.impressions),
+          impressions: w.impressions,
+          clicks: w.clicks,
+        }));
+
+        // Fixed seed so layout is stable across renders (less jarring on refresh)
+        let seed = 1;
+        const seededRandom = () => {
+          seed = (seed * 9301 + 49297) % 233280;
+          return seed / 233280;
+        };
+
+        d3.layout
+          .cloud()
+          .size([width, height])
+          .words(words)
+          .padding(2)
+          .rotate(() => 0)
+          .font('"Noto Sans TC", "Source Han Sans TC", system-ui, sans-serif')
+          .fontSize((d) => d.size)
+          .random(seededRandom)
+          .spiral('archimedean')
+          .on('end', (laidOut) => {
+            drawWordCloud(container, laidOut, width, height, isEn);
+          })
+          .start();
+      })
+      .catch((err) => {
+        console.warn('[dashboard] word cloud fallback:', err.message);
+        container.innerHTML = `<div class="sc-wordcloud-fallback">${isEn ? 'Word cloud unavailable' : '文字雲載入失敗'}</div>`;
+        container.removeAttribute('aria-busy');
+      });
+  }
+
+  // Draw the laid-out word cloud into the container as an SVG. d3-cloud has
+  // positioned each word; we just translate to those coordinates.
+  function drawWordCloud(container, words, width, height, isEn) {
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    svg.setAttribute('class', 'sc-wordcloud-svg');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute(
+      'aria-label',
+      isEn ? 'Search Console query word cloud' : 'Search Console 關鍵字文字雲',
+    );
+
+    const g = document.createElementNS(svgNS, 'g');
+    g.setAttribute('transform', `translate(${width / 2}, ${height / 2})`);
+    svg.appendChild(g);
+
+    for (const w of words) {
+      const text = document.createElementNS(svgNS, 'text');
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute(
+        'transform',
+        `translate(${w.x.toFixed(1)}, ${w.y.toFixed(1)}) rotate(${w.rotate})`,
+      );
+      text.setAttribute('font-size', String(w.size));
+      text.setAttribute(
+        'font-family',
+        '"Noto Sans TC", "Source Han Sans TC", system-ui, sans-serif',
+      );
+      text.setAttribute('fill', w.clicks > 0 ? '#6366f1' : '#94a3b8');
+      text.setAttribute('font-weight', w.clicks > 0 ? '600' : '500');
+      text.setAttribute(
+        'class',
+        w.clicks > 0 ? 'sc-word sc-word-clicked' : 'sc-word',
+      );
+      text.textContent = w.text;
+
+      const titleEl = document.createElementNS(svgNS, 'title');
+      titleEl.textContent =
+        w.clicks > 0
+          ? `${w.text} — ${w.impressions} ${isEn ? 'impressions' : '曝光'} · ${w.clicks} ${isEn ? 'clicks' : '點擊'}`
+          : `${w.text} — ${w.impressions} ${isEn ? 'impressions' : '曝光'}`;
+      text.appendChild(titleEl);
+
+      g.appendChild(text);
+    }
+
+    container.innerHTML = '';
+    container.appendChild(svg);
+    container.removeAttribute('aria-busy');
+  }
+
   function renderAnalytics(data) {
     const totalsEl = document.getElementById('analytics-totals');
     const insightsEl = document.getElementById('analytics-insights');
@@ -1613,7 +1776,12 @@ const isEn = lang === 'en';
     const gaDays = ga.days || 28;
     const search = data.searchConsole7d || data.searchConsole24h || {};
     const searchPeriodDays = data.searchConsole7d ? 7 : 1;
-    const cloudflare = data.cloudflare24h || {};
+    // Prefer cloudflare7d (fresh from CF cache, 7-day window) over the older
+    // cloudflare24h which stayed hand-curated with the last known aiCrawlers
+    // breakdown. aiCrawlers is carried forward from cloudflare24h by the
+    // generator since Free tier can't refresh it.
+    const cloudflare = data.cloudflare7d || data.cloudflare24h || {};
+    const cloudflareDays = cloudflare.days || (data.cloudflare7d ? 7 : 1);
     const t = ga.totals || data.totals || {};
     const fmtNum = (n) => (typeof n === 'number' ? n.toLocaleString() : n);
     const fmtPct = (n) =>
@@ -1657,12 +1825,14 @@ const isEn = lang === 'en';
       {
         icon: '🔎',
         value: fmtNum(search.totals?.clicks),
-        label: isEn ? 'Search Clicks (24h)' : '搜尋點擊（24h）',
+        label: isEn
+          ? `Search Clicks (${searchPeriodDays}d)`
+          : `搜尋點擊（近 ${searchPeriodDays} 天）`,
       },
       {
         icon: '🤖',
         value: fmtNum(cloudflare.aiCrawlers?.detectedRequests),
-        label: isEn ? 'AI Crawls (24h)' : 'AI 爬取（24h）',
+        label: isEn ? 'AI Crawls' : 'AI 爬取',
       },
     ]
       .map(
@@ -1779,6 +1949,24 @@ const isEn = lang === 'en';
       const scLabel = isEn
         ? `🔎 Search Console (${searchPeriodDays}d)`
         : `🔎 Search Console（近 ${searchPeriodDays} 天）`;
+
+      // Word cloud: all queries with ≥1 impression. Rendered via d3-cloud
+      // layout (see https://observablehq.com/@d3/word-cloud) into an SVG
+      // with max 16:9 aspect ratio. The actual d3.layout.cloud() call happens
+      // after the innerHTML is set (see renderWordCloudSvg below).
+      const wordCloud = search.wordCloud || [];
+      let wordCloudHtml = '';
+      if (wordCloud.length) {
+        const cloudTitle = isEn
+          ? `☁️ All Queries (${wordCloud.length})`
+          : `☁️ 所有關鍵字（${wordCloud.length} 個）`;
+        wordCloudHtml =
+          `<h4 class="ga-block-title">${cloudTitle}</h4>` +
+          `<div class="sc-wordcloud-container" aria-busy="true">
+             <div class="sc-wordcloud-loading">${isEn ? 'Building cloud…' : '計算中⋯'}</div>
+           </div>`;
+      }
+
       searchEl.innerHTML =
         `<h3 class="subsection-title">${scLabel}</h3>` +
         `<div class="ga-subtle">${
@@ -1814,14 +2002,25 @@ const isEn = lang === 'en';
               )
               .join('') +
             '</div>'
-          : '');
+          : '') +
+        wordCloudHtml;
+
+      // Now the container exists in the DOM — render the d3-cloud SVG into it.
+      // Runs async (waits for d3 CDN scripts to finish loading).
+      if (wordCloud.length) {
+        renderWordCloudSvg(
+          searchEl.querySelector('.sc-wordcloud-container'),
+          wordCloud,
+          isEn,
+        );
+      }
     }
 
     // Cloudflare AI crawler watch
     if (crawlersEl && crawlers.length) {
       const maxRequests = crawlers[0]?.requests || 1;
       crawlersEl.innerHTML =
-        `<h3 class="subsection-title">${isEn ? '🤖 AI Crawl Watch (24h)' : '🤖 AI 爬行監測（24h）'}</h3>` +
+        `<h3 class="subsection-title">${isEn ? '🤖 AI Crawl Watch' : '🤖 AI 爬行監測'}${cloudflare.aiCrawlersStale ? ' <span class="ga-stale-hint" title="Last refreshed snapshot — Free tier cannot auto-fetch user-agent breakdown">●</span>' : ''}</h3>` +
         `<div class="ga-kpi-strip">
           <span>${isEn ? 'Allowed' : '允許'} ${fmtNum(cloudflare.aiCrawlers?.allowedRequests)}</span>
           <span>HTTP 200 ${fmtNum(cloudflare.aiCrawlers?.http200)}</span>
@@ -1872,7 +2071,7 @@ const isEn = lang === 'en';
       };
       const maxUsers = topCountries[0]?.requests || topCountries[0]?.users || 1;
       countriesEl.innerHTML =
-        `<h3 class="subsection-title">${isEn ? '🌍 Edge Geography (24h)' : '🌍 邊緣流量地理（24h）'}</h3>` +
+        `<h3 class="subsection-title">${isEn ? `🌍 Edge Geography (${cloudflareDays}d)` : `🌍 邊緣流量地理（近 ${cloudflareDays} 天）`}</h3>` +
         '<div class="ga-countries-list">' +
         topCountries
           .slice(0, 8)
@@ -3288,6 +3487,57 @@ const isEn = lang === 'en';
     font-size: 0.82rem;
     color: #334155;
   }
+  .ga-stale-hint {
+    display: inline-block;
+    color: #f59e0b;
+    font-size: 0.6rem;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+    cursor: help;
+  }
+  /* Search Console word cloud — d3-cloud SVG layout, 16:9 max aspect.
+     Container provides the dashed-purple "cloud field" background; the SVG
+     inside is auto-sized to fit. */
+  .sc-wordcloud-container {
+    margin-top: 0.4rem;
+    padding: 0.75rem;
+    background: rgba(99, 102, 241, 0.03);
+    border: 1px dashed rgba(99, 102, 241, 0.15);
+    border-radius: 12px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sc-wordcloud-container[aria-busy='true'] {
+    min-height: 320px;
+  }
+  .sc-wordcloud-loading,
+  .sc-wordcloud-fallback {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-style: italic;
+  }
+  .sc-wordcloud-svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  .sc-word {
+    cursor: default;
+    transition:
+      fill 0.15s ease,
+      opacity 0.15s ease;
+  }
+  .sc-word:hover {
+    fill: #4338ca !important;
+    opacity: 1;
+  }
+  .sc-wordcloud-svg:hover .sc-word:not(:hover) {
+    opacity: 0.5;
+  }
+
   /* Search Console 7d — richer per-query row */
   .sc-queries-grid {
     margin-top: 0.7rem;
