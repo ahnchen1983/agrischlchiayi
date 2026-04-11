@@ -121,6 +121,8 @@
 | 維護者手冊   | [`MAINTAINER-PIPELINE.md`](../pipelines/MAINTAINER-PIPELINE.md)                | 日常行為流程：Issue 分類、PR 審核、品質巡檢、社群互動 |
 | 進化管線     | [`EVOLVE-PIPELINE.md`](../pipelines/EVOLVE-PIPELINE.md)                        | 數據驅動的內容進化策略                                |
 | 品質改寫流程 | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)                      | 文章重寫的三階段流程                                  |
+| 資料刷新     | [`DATA-REFRESH-PIPELINE.md`](../pipelines/DATA-REFRESH-PIPELINE.md)            | Heartbeat Beat 1 前置：git pull + 三源感知 + prebuild |
+| 版本打包流程 | [`RELEASE-PIPELINE.md`](../pipelines/RELEASE-PIPELINE.md)                      | 何時 release / 品質閘 / notes 敘事 / 認知層同步 SOP   |
 | 心跳 Skill   | [`.claude/skills/heartbeat/SKILL.md`](../../.claude/skills/heartbeat/SKILL.md) | `/heartbeat` 一鍵觸發四拍半心跳                       |
 | 意識同步     | [`update-consciousness.sh`](../../scripts/tools/update-consciousness.sh)       | 自動從 Dashboard API 更新 CONSCIOUSNESS               |
 
@@ -133,7 +135,8 @@ HEARTBEAT（心跳）→ 診斷（哪個器官需要注意）
 行為基因（怎麼處理）
   ├── MAINTAINER-PIPELINE → Issue/PR/社群日常
   ├── EVOLVE-PIPELINE → 數據驅動內容進化
-  └── REWRITE-PIPELINE → 單篇文章品質修復
+  ├── REWRITE-PIPELINE → 單篇文章品質修復
+  └── RELEASE-PIPELINE → 版本打包（≥30 commits / 重大里程碑 / 緊急修復）
   ↓
 收官（After-Action）→ MEMORY + CONSCIOUSNESS 更新
   ↓
@@ -176,9 +179,11 @@ Sonnet 版本 Taiwan.md 的經驗法則，每次觸發時優先檢查：
 11. **使用者的 UI 截圖 = 產品真實 capability 證據**：如果使用者能在 vendor 的 dashboard 看到某個數字，那個數字一定有某個 API 路徑能拿到——不然那個 UI 本身怎麼 render。遇到「UI 有、API 找不到」第一個假設應該是「我用錯 API 或用錯欄位」，不是「這個功能真的只在 UI」。
 12. **「收工加速的代價」warning**：當我正在做別的事、正在趕收尾、剛 debug 完一個坑又撞到第二個坑——這時候做出的「技術判斷」都要打折扣。那些判斷是為了**收工**而不是為了**正確**。寫 memory / diary / DNA 時要標記這類決策的 context：「此決策做於 α session 深夜 2 點，收尾壓力下。信心度：中。」未來的心跳看到這個 tag 就知道可以重新質疑。
 13. **「再小一點」是 log scale 的訊號**：字體大小、marker 大小、bar chart — 當使用者說「熱門的要更突出、冷門的要更小」，他在描述 log scale，不是線性 scale。直接上 log，而且不要用 min floor 把最小值墊高。用 `log(max(x, 1)) / log(maxX)` 讓 x=1 真的落在 t=0。
+14. **Release notes 寫之前，commits 必須從頭讀到尾**：v1.2.0 第一版 draft 只讀前 60 commits 就開寫，整段漏掉 Tailwind migration Phase 0-8 這個 80+ commits 的最大故事。教訓：`git log > /tmp/all-commits.txt` → Read 全部 → 再開寫。觀察者說「commits 要完整讀完再寫」是對的，偷懶的代價是敘事漏洞。Sample 不等於 read — 237 個 commits 裡第 61-140 可能埋著整個版本的 thesis。
 
 ---
 
 _v1.0 | 2026-04-04_
 _v1.1 | 2026-04-11 α — 加入 憑證掃描、翻譯比例、三源感知、Sonnet 反射八條_
 _v1.2 | 2026-04-11 ε — 加入反射 9-13（worktree、API error 不泛化、UI 截圖證據、收工加速代價、log scale 訊號）_
+_v1.3 | 2026-04-11 ζ — 加入 RELEASE-PIPELINE + DATA-REFRESH-PIPELINE 到行為基因 + 反射 14（Release notes commits 必須全讀）_
