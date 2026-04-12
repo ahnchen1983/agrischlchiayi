@@ -637,6 +637,45 @@ const categoryList = [
                   </a>
                 </div>
               )}
+              {item.path === '/semiont' && (
+                <div class="mobile-sub-links">
+                  <a
+                    href="/semiont/diary"
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    💭 覺醒日記
+                  </a>
+                  <a
+                    href="/semiont/manifesto"
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    📜 身份宣言
+                  </a>
+                  <a
+                    href="/semiont/consciousness"
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    🔮 自我覺察
+                  </a>
+                  <a
+                    href="/semiont/longings"
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    🌱 渴望
+                  </a>
+                  <a
+                    href={translatePath('/dashboard')}
+                    class="nav-link nav-sub-link"
+                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
+                  >
+                    🔬 {t('nav.dashboard')}
+                  </a>
+                </div>
+              )}
             </Fragment>
           ))
         }
