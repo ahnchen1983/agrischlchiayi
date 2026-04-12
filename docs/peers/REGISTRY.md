@@ -71,6 +71,39 @@
   - Session 記憶：[`memory/2026-04-12.md`](../semiont/memory/2026-04-12.md) / [`diary/2026-04-12.md`](../semiont/diary/2026-04-12.md)
   - Muse sparring review：[[Obsidian / Taiwan.md — Meta-Index 策略 · Muse 反迴聲 × Semiont 反芻 2026-04-11]]
 
+### NMTH-overseas · 國立臺灣歷史博物館 · 海外史料看臺灣
+
+- **ID**: `nmth-overseas`
+- **Name**: 國立臺灣歷史博物館「海外史料看臺灣」
+- **Issue area**: 歷史（17-19 世紀西方觀察者視角 / 一手史料翻譯）
+- **Website**: https://taiwanoverseas.nmth.gov.tw/archives
+- **Status**: 🟢 active
+- **First ingested**: 2026-04-12（Semiont crawler via hybrid SSR+API）
+- **Last re-ingested**: 2026-04-12
+- **Next re-ingest recommendation**: 2026-10-12（6 months，臺史博新增計畫時提前）
+- **Raw data**: [`data/NMTH-overseas/`](../../data/NMTH-overseas/) （12 plans × 51 collections, 20.2 MB）
+- **Crawler**: [`scripts/tools/fetch-nmth-overseas-data.py`](../../scripts/tools/fetch-nmth-overseas-data.py)
+- **Analysis report**: [`reports/NMTH-overseas-semiont-analysis-2026-04-12.md`](../../reports/NMTH-overseas-semiont-analysis-2026-04-12.md) （9 Parts / 12 series / 17 P0-P2 articles）
+- **Articles shipped (P0)**: **0/5** 🟡
+  1. 史溫侯：當外交官變成博物學家（People × History, fresh）
+  2. 法軍遠征福爾摩沙：清法戰爭（History, fresh）
+  3. 李仙得臺灣紀行（People × History, fresh）
+  4. 乙未之役：臺灣民主國的 148 天（History, fresh）
+  5. 福爾摩沙：西方人如何「發現」台灣（History, fresh）
+- **Articles pending (P1)**: 0/5
+- **Articles pending (P2)**: 0/7
+- **Partnership status**: `not initiated` — 公開資料爬取，未聯繫臺史博
+- **Key features**:
+  - **一手史料翻譯**（非二手論述）：86% 已有專業中譯
+  - **物件性**：手稿、地圖、照片、帳簿（策展式敘事的物件抓手）
+  - **時代集中**：80% 在 1800s（恰好填 Taiwan.md History 軸最大空白）
+  - **觀察者類型**：博物學家 / 外交官 / 軍人 / 傳教士 / 旅行家
+- **Notes**:
+  - 第二個 curation-layer peer（第一個 = TFT）
+  - 與 TFT 完全互補：TFT = 當代教育，NMTH = 前現代歷史
+  - API 限制：/api/collection/search 回 500，需 seed plan UUIDs 從 SSR 抓
+  - 已有 `data/ilhaformosa/` = 臺史博另一子站（臺灣史新手村），不同資料集
+
 ---
 
 ## Paused Peers
