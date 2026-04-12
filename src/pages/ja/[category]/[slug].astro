@@ -184,18 +184,94 @@ export async function getStaticPaths() {
     return __gitCache;
   }
 
+  // ── Load _translations.json as canonical cross-language map ─────────────────
+  //
+  // Each entry: "<lang>/<Category>/<slug>.md" → "<Category>/<zh-slug>.md".
+  // Same zh file can be the value for many lang entries (it's the canonical id).
+  //
+  // Why we need this: ja files use ja-native slugs (e.g. "taiwan-youtuber.md")
+  // that DIFFER from en slugs (e.g. "taiwan-youtuber-industry.md"). Our URL
+  // structure uses EN slugs across all locales for stability (AI crawlers /
+  // inbound links never break), but the underlying file we READ from must be
+  // the correct-language file. _translations.json is the canonical mapping.
+  //
+  // Regression note (2026-04-12): Tailwind Phase 6 refactor `a7cffefd` changed
+  // this file to read from `knowledge/en/` instead of `knowledge/ja/` via a
+  // reversed sed. The result: every /ja/* URL served EN content with
+  // `lang="en"`, and all 257 JA translations were orphaned. Reading via the
+  // translation map is the only correct fix — using EN slugs for URLs AND
+  // loading JA content for bodies.
+  type Translations = Record<string, string>;
+  let translations: Translations = {};
+  try {
+    const translationsPath = resolve(
+      process.cwd(),
+      'knowledge',
+      '_translations.json',
+    );
+    translations = JSON.parse(await readFile(translationsPath, 'utf-8'));
+  } catch (e) {
+    console.error(
+      '[ja/getStaticPaths] Failed to load _translations.json:',
+      (e as Error).message,
+    );
+  }
+
+  // Reverse map: zhFile → jaFile (so we can go en → zh → ja via two lookups)
+  const zhToJa: Record<string, string> = {};
+  for (const [langFile, zhFile] of Object.entries(translations)) {
+    if (langFile.startsWith('ja/')) zhToJa[zhFile] = langFile;
+  }
+
   const paths: any[] = [];
+  let skippedNoTranslation = 0;
   for (const [categorySlug, folderName] of Object.entries(_categoryMapping)) {
     try {
-      const folderPath = resolve(process.cwd(), 'knowledge', 'en', folderName);
-      const files = await readdir(folderPath);
-      for (const file of files.filter(
+      const enFolderPath = resolve(
+        process.cwd(),
+        'knowledge',
+        'en',
+        folderName,
+      );
+      const enFiles = await readdir(enFolderPath);
+      for (const enFile of enFiles.filter(
         (f) => f.endsWith('.md') && !f.startsWith('_'),
       )) {
-        const filePath = join(folderPath, file).normalize('NFC');
-        const fileContent = await readFile(filePath, 'utf-8');
-        const { data: frontmatter, content } = safeMatter(fileContent);
-        const slug = basename(file, '.md');
+        const enSlug = basename(enFile, '.md');
+        // The translations.json key is "en/<Category>/<enSlug>.md"
+        const enKey = `en/${folderName}/${enFile}`;
+        const zhFile = translations[enKey];
+        if (!zhFile) {
+          skippedNoTranslation += 1;
+          continue;
+        }
+        const jaFile = zhToJa[zhFile];
+        if (!jaFile) {
+          // No JA translation for this article. Skip path generation —
+          // visiting /ja/<cat>/<enSlug>/ will 404 and Smart 404 will detect
+          // "article exists in other languages" via article-index.json.
+          skippedNoTranslation += 1;
+          continue;
+        }
+        const jaFilePath = resolve(
+          process.cwd(),
+          'knowledge',
+          jaFile,
+        ).normalize('NFC');
+        let jaContent = '';
+        let jaFrontmatter: Record<string, any> = {};
+        try {
+          const raw = await readFile(jaFilePath, 'utf-8');
+          const parsed = safeMatter(raw);
+          jaContent = parsed.content;
+          jaFrontmatter = parsed.data;
+        } catch (e) {
+          console.error(
+            `[ja/getStaticPaths] Failed to read JA file ${jaFile}:`,
+            (e as Error).message,
+          );
+          continue;
+        }
         let gitInfo = {
           contributors: [] as string[],
           lastModified: '',
@@ -203,15 +279,17 @@ export async function getStaticPaths() {
           revisionCount: 0,
         };
         try {
-          gitInfo = _buildGitCache().get(filePath) || gitInfo;
+          gitInfo = _buildGitCache().get(jaFilePath) || gitInfo;
         } catch {}
         paths.push({
-          params: { category: categorySlug, slug },
+          // URL uses EN slug (stable cross-locale URL structure); content
+          // comes from the JA-native-slug file under knowledge/ja/.
+          params: { category: categorySlug, slug: enSlug },
           props: {
-            title: frontmatter.title || slug,
-            description: frontmatter.description || '',
-            content,
-            frontmatter,
+            title: jaFrontmatter.title || enSlug,
+            description: jaFrontmatter.description || '',
+            content: jaContent,
+            frontmatter: jaFrontmatter,
             lang: 'ja',
             contributors: gitInfo.contributors,
             lastModified: gitInfo.lastModified,
@@ -222,16 +300,19 @@ export async function getStaticPaths() {
       }
     } catch (err) {
       console.error(
-        `[en/getStaticPaths] Error processing category "${categorySlug}":`,
+        `[ja/getStaticPaths] Error processing category "${categorySlug}":`,
         (err as Error).message,
       );
     }
   }
   if (paths.length === 0) {
     throw new Error(
-      '[en/getStaticPaths] Generated 0 paths — all categories failed.',
+      '[ja/getStaticPaths] Generated 0 paths — _translations.json or knowledge/ja/ likely missing.',
     );
   }
+  console.log(
+    `[ja/getStaticPaths] Generated ${paths.length} paths, skipped ${skippedNoTranslation} untranslated`,
+  );
   return paths;
 }
 
@@ -247,7 +328,7 @@ const {
   revisionCount = 0,
 } = Astro.props;
 const { category, slug } = Astro.params;
-const lang = 'en';
+const lang = 'ja';
 
 const t = useTranslations(lang);
 const categoryConfigs = getCategoryConfigs(t);
@@ -257,7 +338,26 @@ if (!categoryInfo) throw new Error(`Unknown category: ${category}`);
 // Category name is already localised by getCategoryConfigs(t)
 const categoryNameEn = categoryInfo.name;
 
-// ── Related articles (same category, up to 3) ─────────────────────────────────
+// ── Load translations.json for ja-only article filtering ──────────────────────
+// Related/explore lists must only show articles that have a JA translation,
+// otherwise clicking them leads to 404 (the slug page only generates paths
+// for ja-translated articles now).
+type Translations = Record<string, string>;
+let translationsRuntime: Translations = {};
+try {
+  const translationsPath = resolve(
+    process.cwd(),
+    'knowledge',
+    '_translations.json',
+  );
+  translationsRuntime = JSON.parse(await readFile(translationsPath, 'utf-8'));
+} catch {}
+const zhToJaRuntime: Record<string, string> = {};
+for (const [langFile, zhFile] of Object.entries(translationsRuntime)) {
+  if (langFile.startsWith('ja/')) zhToJaRuntime[zhFile] = langFile;
+}
+
+// ── Related articles (same category, up to 3, JA-translated only) ────────────
 let relatedArticles: any[] = [];
 try {
   const folderName = categoryMapping[category as string];
@@ -269,13 +369,24 @@ try {
     for (const file of files) {
       const articleSlug = basename(file, '.md');
       if (articleSlug === slug) continue;
-      const filePath = join(folderPath, file);
-      const { data: fm } = safeMatter(await readFile(filePath, 'utf-8'));
+      // Only include if JA translation exists
+      const enKey = `en/${folderName}/${file}`;
+      const zhFile = translationsRuntime[enKey];
+      if (!zhFile) continue;
+      const jaFile = zhToJaRuntime[zhFile];
+      if (!jaFile) continue;
+      // Read JA frontmatter (title/description in Japanese)
+      let jaFm: Record<string, any> = {};
+      try {
+        const jaPath = resolve(process.cwd(), 'knowledge', jaFile);
+        const parsed = safeMatter(await readFile(jaPath, 'utf-8'));
+        jaFm = parsed.data;
+      } catch {}
       relatedArticles.push({
-        title: fm.title || articleSlug,
+        title: jaFm.title || articleSlug,
         slug: articleSlug,
-        description: fm.description || '',
-        image: fm.image || '',
+        description: jaFm.description || '',
+        image: jaFm.image || '',
         category,
       });
     }
@@ -283,7 +394,7 @@ try {
   }
 } catch {}
 
-// ── Random explore list ───────────────────────────────────────────────────────
+// ── Random explore list (JA-translated only) ──────────────────────────────────
 let allArticles: Array<{ title: string; slug: string; category: string }> = [];
 try {
   for (const [catSlug, folderName] of Object.entries(categoryMapping)) {
@@ -294,11 +405,20 @@ try {
         (f) => f.endsWith('.md') && !f.startsWith('_'),
       )) {
         const articleSlug = basename(file, '.md');
-        const { data: fm } = safeMatter(
-          await readFile(join(catPath, file), 'utf-8'),
-        );
+        // Only include JA-translated articles
+        const enKey = `en/${folderName}/${file}`;
+        const zhFile = translationsRuntime[enKey];
+        if (!zhFile) continue;
+        const jaFile = zhToJaRuntime[zhFile];
+        if (!jaFile) continue;
+        let jaFm: Record<string, any> = {};
+        try {
+          const jaPath = resolve(process.cwd(), 'knowledge', jaFile);
+          const parsed = safeMatter(await readFile(jaPath, 'utf-8'));
+          jaFm = parsed.data;
+        } catch {}
         allArticles.push({
-          title: fm.title || articleSlug,
+          title: jaFm.title || articleSlug,
           slug: articleSlug,
           category: catSlug,
         });

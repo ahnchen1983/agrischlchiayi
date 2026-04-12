@@ -231,7 +231,23 @@ function generateArticleIndex() {
     return;
   }
 
-  const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+  const translationsRaw = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+  // Defensive filter: drop stale entries whose zh target doesn't exist.
+  // Prevents Smart 404 from showing suggestions for non-existent articles.
+  const translations = {};
+  let _staleEntries = 0;
+  for (const [lf, zf] of Object.entries(translationsRaw)) {
+    if (fs.existsSync(path.join(KNOWLEDGE_DIR, zf))) {
+      translations[lf] = zf;
+    } else {
+      _staleEntries += 1;
+    }
+  }
+  if (_staleEntries > 0) {
+    console.log(
+      `   ⚠️  Skipped ${_staleEntries} stale _translations.json entries (zh file missing)`,
+    );
+  }
   const categoryFolderToSlug = {
     History: 'history',
     Geography: 'geography',
@@ -248,6 +264,20 @@ function generateArticleIndex() {
     About: 'about',
     Resources: 'resources',
   };
+
+  // Reverse maps: zhFile → jaFile / koFile
+  //
+  // ja/ko translations use NATIVE slugs that differ from EN slugs
+  // (e.g. `ja/Culture/taiwan-youtuber.md` vs `en/Culture/taiwan-youtuber-industry.md`).
+  // The previous implementation checked `knowledge/ja/<Cat>/<enSlug>.md` which
+  // never matched for these cases, so Smart 404 always said "no ja version"
+  // even when one existed. Build canonical reverse maps via _translations.json.
+  const zhToJaFile = {};
+  const zhToKoFile = {};
+  for (const [langFile, zhFile] of Object.entries(translations)) {
+    if (langFile.startsWith('ja/')) zhToJaFile[zhFile] = langFile;
+    if (langFile.startsWith('ko/')) zhToKoFile[zhFile] = langFile;
+  }
 
   const index = {};
 
@@ -295,22 +325,18 @@ function generateArticleIndex() {
       } catch {}
     }
 
-    // Check which languages have this article
+    // Check which languages have this article — via _translations.json
+    // reverse lookup, because ja/ko files use native slugs that differ
+    // from the EN slug we're indexing under.
     const langs = ['zh-TW', 'en']; // zh-TW and en always exist if in _translations.json
-    const jaFilePath = path.join(
-      KNOWLEDGE_DIR,
-      'ja',
-      enCategoryFolder,
-      `${enSlug}.md`,
-    );
-    if (fs.existsSync(jaFilePath)) langs.push('ja');
-    const koFilePath = path.join(
-      KNOWLEDGE_DIR,
-      'ko',
-      enCategoryFolder,
-      `${enSlug}.md`,
-    );
-    if (fs.existsSync(koFilePath)) langs.push('ko');
+    const jaFileRel = zhToJaFile[zhFile];
+    if (jaFileRel && fs.existsSync(path.join(KNOWLEDGE_DIR, jaFileRel))) {
+      langs.push('ja');
+    }
+    const koFileRel = zhToKoFile[zhFile];
+    if (koFileRel && fs.existsSync(path.join(KNOWLEDGE_DIR, koFileRel))) {
+      langs.push('ko');
+    }
 
     index[key] = { zhTitle, enTitle, category: categorySlug, langs };
   }

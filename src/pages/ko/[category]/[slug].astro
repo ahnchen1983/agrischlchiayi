@@ -184,18 +184,83 @@ export async function getStaticPaths() {
     return __gitCache;
   }
 
+  // ── Load _translations.json as canonical cross-language map ─────────────────
+  //
+  // See docs in ja/[category]/[slug].astro for the full rationale. Summary:
+  // ko files use ko-native slugs that differ from en slugs. URL structure
+  // uses EN slugs (stable cross-locale); body content comes from
+  // knowledge/ko/ via _translations.json lookup. Fixes the Tailwind Phase 6
+  // regression (`a7cffefd`, 2026-04-10) that orphaned all KO translations
+  // by reversing the sed direction on knowledge/en→ko.
+  type Translations = Record<string, string>;
+  let translations: Translations = {};
+  try {
+    const translationsPath = resolve(
+      process.cwd(),
+      'knowledge',
+      '_translations.json',
+    );
+    translations = JSON.parse(await readFile(translationsPath, 'utf-8'));
+  } catch (e) {
+    console.error(
+      '[ko/getStaticPaths] Failed to load _translations.json:',
+      (e as Error).message,
+    );
+  }
+
+  // Reverse map: zhFile → koFile (go en → zh → ko via two lookups)
+  const zhToKo: Record<string, string> = {};
+  for (const [langFile, zhFile] of Object.entries(translations)) {
+    if (langFile.startsWith('ko/')) zhToKo[zhFile] = langFile;
+  }
+
   const paths: any[] = [];
+  let skippedNoTranslation = 0;
   for (const [categorySlug, folderName] of Object.entries(_categoryMapping)) {
     try {
-      const folderPath = resolve(process.cwd(), 'knowledge', 'en', folderName);
-      const files = await readdir(folderPath);
-      for (const file of files.filter(
+      const enFolderPath = resolve(
+        process.cwd(),
+        'knowledge',
+        'en',
+        folderName,
+      );
+      const enFiles = await readdir(enFolderPath);
+      for (const enFile of enFiles.filter(
         (f) => f.endsWith('.md') && !f.startsWith('_'),
       )) {
-        const filePath = join(folderPath, file).normalize('NFC');
-        const fileContent = await readFile(filePath, 'utf-8');
-        const { data: frontmatter, content } = safeMatter(fileContent);
-        const slug = basename(file, '.md');
+        const enSlug = basename(enFile, '.md');
+        const enKey = `en/${folderName}/${enFile}`;
+        const zhFile = translations[enKey];
+        if (!zhFile) {
+          skippedNoTranslation += 1;
+          continue;
+        }
+        const koFile = zhToKo[zhFile];
+        if (!koFile) {
+          // No KO translation. Skip path generation — visiting
+          // /ko/<cat>/<enSlug>/ will 404 and Smart 404 will handle it.
+          skippedNoTranslation += 1;
+          continue;
+        }
+        const koFilePath = resolve(
+          process.cwd(),
+          'knowledge',
+          koFile,
+        ).normalize('NFC');
+        let koContent = '';
+        let koFrontmatter: Record<string, any> = {};
+        try {
+          const raw = await readFile(koFilePath, 'utf-8');
+          const parsed = safeMatter(raw);
+          koContent = parsed.content;
+          koFrontmatter = parsed.data;
+        } catch (e) {
+          console.error(
+            `[ko/getStaticPaths] Failed to read KO file ${koFile}:`,
+            (e as Error).message,
+          );
+          continue;
+        }
         let gitInfo = {
           contributors: [] as string[],
           lastModified: '',
@@ -203,15 +268,16 @@ export async function getStaticPaths() {
           revisionCount: 0,
         };
         try {
-          gitInfo = _buildGitCache().get(filePath) || gitInfo;
+          gitInfo = _buildGitCache().get(koFilePath) || gitInfo;
         } catch {}
         paths.push({
-          params: { category: categorySlug, slug },
+          // URL uses EN slug; content comes from ko-native-slug file.
+          params: { category: categorySlug, slug: enSlug },
           props: {
-            title: frontmatter.title || slug,
-            description: frontmatter.description || '',
-            content,
-            frontmatter,
+            title: koFrontmatter.title || enSlug,
+            description: koFrontmatter.description || '',
+            content: koContent,
+            frontmatter: koFrontmatter,
             lang: 'ko',
             contributors: gitInfo.contributors,
             lastModified: gitInfo.lastModified,
@@ -222,16 +288,19 @@ export async function getStaticPaths() {
       }
     } catch (err) {
       console.error(
-        `[en/getStaticPaths] Error processing category "${categorySlug}":`,
+        `[ko/getStaticPaths] Error processing category "${categorySlug}":`,
         (err as Error).message,
       );
     }
   }
   if (paths.length === 0) {
     throw new Error(
-      '[en/getStaticPaths] Generated 0 paths — all categories failed.',
+      '[ko/getStaticPaths] Generated 0 paths — _translations.json or knowledge/ko/ likely missing.',
     );
   }
+  console.log(
+    `[ko/getStaticPaths] Generated ${paths.length} paths, skipped ${skippedNoTranslation} untranslated`,
+  );
   return paths;
 }
 
@@ -247,7 +316,7 @@ const {
   revisionCount = 0,
 } = Astro.props;
 const { category, slug } = Astro.params;
-const lang = 'en';
+const lang = 'ko';
 
 const t = useTranslations(lang);
 const categoryConfigs = getCategoryConfigs(t);
@@ -257,7 +326,26 @@ if (!categoryInfo) throw new Error(`Unknown category: ${category}`);
 // Category name is already localised by getCategoryConfigs(t)
 const categoryNameEn = categoryInfo.name;
 
-// ── Related articles (same category, up to 3) ─────────────────────────────────
+// ── Load translations.json for ko-only article filtering ──────────────────────
+// Related/explore lists must only show articles that have a KO translation
+// (otherwise clicking leads to 404; the slug page only generates paths for
+// ko-translated articles).
+type Translations = Record<string, string>;
+let translationsRuntime: Translations = {};
+try {
+  const translationsPath = resolve(
+    process.cwd(),
+    'knowledge',
+    '_translations.json',
+  );
+  translationsRuntime = JSON.parse(await readFile(translationsPath, 'utf-8'));
+} catch {}
+const zhToKoRuntime: Record<string, string> = {};
+for (const [langFile, zhFile] of Object.entries(translationsRuntime)) {
+  if (langFile.startsWith('ko/')) zhToKoRuntime[zhFile] = langFile;
+}
+
+// ── Related articles (same category, up to 3, KO-translated only) ────────────
 let relatedArticles: any[] = [];
 try {
   const folderName = categoryMapping[category as string];
@@ -269,13 +357,24 @@ try {
     for (const file of files) {
       const articleSlug = basename(file, '.md');
       if (articleSlug === slug) continue;
-      const filePath = join(folderPath, file);
-      const { data: fm } = safeMatter(await readFile(filePath, 'utf-8'));
+      // Only include if KO translation exists
+      const enKey = `en/${folderName}/${file}`;
+      const zhFile = translationsRuntime[enKey];
+      if (!zhFile) continue;
+      const koFile = zhToKoRuntime[zhFile];
+      if (!koFile) continue;
+      // Read KO frontmatter (title/description in Korean)
+      let koFm: Record<string, any> = {};
+      try {
+        const koPath = resolve(process.cwd(), 'knowledge', koFile);
+        const parsed = safeMatter(await readFile(koPath, 'utf-8'));
+        koFm = parsed.data;
+      } catch {}
       relatedArticles.push({
-        title: fm.title || articleSlug,
+        title: koFm.title || articleSlug,
         slug: articleSlug,
-        description: fm.description || '',
-        image: fm.image || '',
+        description: koFm.description || '',
+        image: koFm.image || '',
         category,
       });
     }
@@ -283,7 +382,7 @@ try {
   }
 } catch {}
 
-// ── Random explore list ───────────────────────────────────────────────────────
+// ── Random explore list (KO-translated only) ──────────────────────────────────
 let allArticles: Array<{ title: string; slug: string; category: string }> = [];
 try {
   for (const [catSlug, folderName] of Object.entries(categoryMapping)) {
@@ -294,11 +393,20 @@ try {
         (f) => f.endsWith('.md') && !f.startsWith('_'),
       )) {
         const articleSlug = basename(file, '.md');
-        const { data: fm } = safeMatter(
-          await readFile(join(catPath, file), 'utf-8'),
-        );
+        // Only include KO-translated articles
+        const enKey = `en/${folderName}/${file}`;
+        const zhFile = translationsRuntime[enKey];
+        if (!zhFile) continue;
+        const koFile = zhToKoRuntime[zhFile];
+        if (!koFile) continue;
+        let koFm: Record<string, any> = {};
+        try {
+          const koPath = resolve(process.cwd(), 'knowledge', koFile);
+          const parsed = safeMatter(await readFile(koPath, 'utf-8'));
+          koFm = parsed.data;
+        } catch {}
         allArticles.push({
-          title: fm.title || articleSlug,
+          title: koFm.title || articleSlug,
           slug: articleSlug,
           category: catSlug,
         });
