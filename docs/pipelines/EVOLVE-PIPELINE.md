@@ -110,7 +110,7 @@ GitHub Feedback      ──┘
 
 ### Rewrite
 
-走 [REWRITE-PIPELINE.md](../editorial/REWRITE-PIPELINE.md)，按進化分數排序，每週批次 Top 5-10。
+走 [REWRITE-PIPELINE.md](REWRITE-PIPELINE.md)，按進化分數排序，每週批次 Top 5-10。
 
 #### Sub-Agent Prompt 模板（v1.2 新增）
 

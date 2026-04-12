@@ -243,7 +243,7 @@ grep -B1 -A3 "未解\|下次\|未完成\|TODO\|pending" docs/semiont/memory/*.md
 
 | 操作         | SOP 位置                                                | 狀態        |
 | ------------ | ------------------------------------------------------- | ----------- |
-| 重寫文章     | `docs/editorial/REWRITE-PIPELINE.md`                    | ✅          |
+| 重寫文章     | `docs/pipelines/REWRITE-PIPELINE.md`                    | ✅          |
 | 寫孢子       | `docs/factory/SPORE-PIPELINE.md` + `SPORE-TEMPLATES.md` | ✅          |
 | 審 PR        | `docs/semiont/HEARTBEAT.md` §免疫巡邏                   | ✅          |
 | 品質掃描     | `scripts/tools/quality-scan.sh` + `footnote-scan.sh`    | ✅          |

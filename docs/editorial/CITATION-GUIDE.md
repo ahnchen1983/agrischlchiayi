@@ -2,7 +2,7 @@
 
 > 每篇文章的來源引用必須遵守這份規範。
 > 設計理念見 [CITATION-SYSTEM.md](../design/CITATION-SYSTEM.md)。
-> 寫作流程見 [REWRITE-PIPELINE.md](REWRITE-PIPELINE.md) Stage 2。
+> 寫作流程見 [REWRITE-PIPELINE.md](../pipelines/REWRITE-PIPELINE.md) Stage 2。
 
 ---
 

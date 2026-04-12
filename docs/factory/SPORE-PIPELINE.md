@@ -145,7 +145,7 @@ bash scripts/tools/quality-scan.sh knowledge/<Category>/<slug>.md
 
 ```bash
 # 讀 rewrite-pipeline 流程
-cat docs/editorial/REWRITE-PIPELINE.md
+cat docs/pipelines/REWRITE-PIPELINE.md
 cat docs/editorial/RESEARCH-TEMPLATE.md
 cat docs/editorial/EDITORIAL.md
 ```

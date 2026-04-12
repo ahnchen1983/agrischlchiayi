@@ -51,7 +51,7 @@ Stage 5: CROSS-LINK（掃 knowledge/ 建雙向延伸閱讀）
 ### 必讀文件（每篇文章動筆前）
 
 ```bash
-cat docs/editorial/REWRITE-PIPELINE.md   # 流程（501 行）
+cat docs/pipelines/REWRITE-PIPELINE.md   # 流程（501 行）
 cat docs/editorial/EDITORIAL.md           # 品質標準（715 行，不可截斷）
 cat docs/editorial/RESEARCH-TEMPLATE.md   # Stage 1 輸出格式
 cat docs/editorial/QUALITY-CHECKLIST.md   # Stage 3 逐項驗證

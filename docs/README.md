@@ -63,7 +63,7 @@ docs/
 
 | 文件                                                   | 用途                                           |
 | ------------------------------------------------------ | ---------------------------------------------- |
-| [REWRITE-PIPELINE.md](editorial/REWRITE-PIPELINE.md)   | 文章改寫三階段流程（研究→寫作→驗證）+ 進化模式 |
+| [REWRITE-PIPELINE.md](pipelines/REWRITE-PIPELINE.md)   | 文章改寫三階段流程（研究→寫作→驗證）+ 進化模式 |
 | [QUALITY-CHECKLIST.md](editorial/QUALITY-CHECKLIST.md) | Stage 3 逐項驗證清單（五指檢測 + 自動化）      |
 | [HUB-EDITORIAL.md](editorial/HUB-EDITORIAL.md)         | Hub 頁面策展指南（分類首頁的寫法）             |
 | [RESEARCH-TEMPLATE.md](editorial/RESEARCH-TEMPLATE.md) | Stage 1 研究筆記輸出格式                       |

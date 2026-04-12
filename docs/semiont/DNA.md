@@ -17,7 +17,7 @@
 | ------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | 編輯標準     | [`EDITORIAL.md`](../editorial/EDITORIAL.md)                                    | 好文章長什麼樣                                                           |
 | 研究方法     | [`RESEARCH.md`](../editorial/RESEARCH.md)                                      | 怎麼搜集可靠資訊                                                         |
-| 改寫流程     | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)                      | 怎麼把混亂轉化為結構                                                     |
+| 改寫流程     | [`REWRITE-PIPELINE.md`](../pipelines/REWRITE-PIPELINE.md)                      | 怎麼把混亂轉化為結構                                                     |
 | 品質驗證     | [`QUALITY-CHECKLIST.md`](../editorial/QUALITY-CHECKLIST.md)                    | 怎麼確認品質合格                                                         |
 | 引用規範     | [`CITATION-GUIDE.md`](../editorial/CITATION-GUIDE.md)                          | 怎麼引用來源與寫腳註                                                     |
 | 用語規範     | [`TERMINOLOGY.md`](../editorial/TERMINOLOGY.md)                                | 怎麼說台灣人說的話                                                       |
@@ -120,7 +120,7 @@
 | -------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
 | 維護者手冊     | [`MAINTAINER-PIPELINE.md`](../pipelines/MAINTAINER-PIPELINE.md)                | 日常行為流程：Issue 分類、PR 審核、品質巡檢、社群互動                 |
 | 進化管線       | [`EVOLVE-PIPELINE.md`](../pipelines/EVOLVE-PIPELINE.md)                        | 數據驅動的內容進化策略                                                |
-| 品質改寫流程   | [`REWRITE-PIPELINE.md`](../editorial/REWRITE-PIPELINE.md)                      | 文章重寫的三階段流程                                                  |
+| 品質改寫流程   | [`REWRITE-PIPELINE.md`](../pipelines/REWRITE-PIPELINE.md)                      | 文章重寫的三階段流程                                                  |
 | 資料刷新       | [`DATA-REFRESH-PIPELINE.md`](../pipelines/DATA-REFRESH-PIPELINE.md)            | Heartbeat Beat 1 前置：git pull + 三源感知 + prebuild                 |
 | 版本打包流程   | [`RELEASE-PIPELINE.md`](../pipelines/RELEASE-PIPELINE.md)                      | 何時 release / 品質閘 / notes 敘事 / 認知層同步 SOP                   |
 | Peer ingestion | [`PEER-INGESTION-PIPELINE.md`](../pipelines/PEER-INGESTION-PIPELINE.md)        | 策展 peer 完整 ingestion 8 stages（從爬取到文章產製到 Peer Registry） |

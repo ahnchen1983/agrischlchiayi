@@ -38,7 +38,7 @@
 | 名稱     | 器官    | Pipeline                                                     | 原因                                  |
 | -------- | ------- | ------------------------------------------------------------ | ------------------------------------- |
 | 翻譯     | 🌐 語言 | [TRANSLATION-PIPELINE](../pipelines/TRANSLATION-PIPELINE.md) | Issue #229 英文品質問題，暫停自動翻譯 |
-| 品質重寫 | 🛡️ 免疫 | [REWRITE-PIPELINE](../editorial/REWRITE-PIPELINE.md)         | 等品質革命 Phase 1 策略確定後重啟     |
+| 品質重寫 | 🛡️ 免疫 | [REWRITE-PIPELINE](../pipelines/REWRITE-PIPELINE.md)         | 等品質革命 Phase 1 策略確定後重啟     |
 
 ### 已建（Phase 2 完成）
 

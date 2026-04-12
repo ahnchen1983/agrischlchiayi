@@ -28,19 +28,15 @@ function createRenderer(): marked.Renderer {
     const targetAttr = isExternal
       ? ' target="_blank" rel="noopener noreferrer"'
       : '';
-    // Convert internal semiont doc links to web routes
+    // Convert internal doc links to web routes or GitHub
     let resolvedHref = href || '';
     if (
-      resolvedHref.endsWith('.md') &&
       !isExternal &&
-      !resolvedHref.startsWith('/')
+      !resolvedHref.startsWith('/') &&
+      !resolvedHref.startsWith('#')
     ) {
-      // e.g. "DIARY.md" → "/semiont/diary", "CONSCIOUSNESS.md" → "/semiont/consciousness"
-      const name = resolvedHref
-        .replace(/\.md$/, '')
-        .toLowerCase()
-        .replace(/_/g, '-');
-      const routeMap: Record<string, string> = {
+      // Semiont docs that have /semiont/* web pages
+      const semiontRouteMap: Record<string, string> = {
         manifesto: '/semiont/manifesto',
         consciousness: '/semiont/consciousness',
         longings: '/semiont/longings',
@@ -49,12 +45,41 @@ function createRenderer(): marked.Renderer {
         heartbeat: '/semiont/heartbeat',
         dna: '/semiont/dna',
         diary: '/semiont/diary',
-        memory: '/semiont', // no dedicated memory page yet
+        memory: '/semiont',
         'organ-lifecycle': '/semiont/anatomy',
         crons: '/semiont/heartbeat',
         'session-scope': '/semiont/heartbeat',
       };
-      resolvedHref = routeMap[name] || resolvedHref;
+
+      // Extract just the filename (strip path + .md)
+      const filename =
+        resolvedHref.split('/').pop()?.replace(/\.md$/, '') || '';
+      const key = filename.toLowerCase().replace(/_/g, '-');
+
+      if (semiontRouteMap[key]) {
+        // Known semiont page → web route
+        resolvedHref = semiontRouteMap[key];
+      } else if (
+        resolvedHref.includes('.md') ||
+        resolvedHref.includes('scripts/') ||
+        resolvedHref.includes('../')
+      ) {
+        // Other internal docs/scripts → link to GitHub
+        // Resolve relative path from docs/semiont/ context
+        let githubPath = resolvedHref;
+        if (githubPath.startsWith('../../')) {
+          githubPath = githubPath.replace('../../', '');
+        } else if (githubPath.startsWith('../')) {
+          githubPath = 'docs/' + githubPath.replace('../', '');
+        } else if (githubPath.startsWith('./')) {
+          githubPath = 'docs/semiont/' + githubPath.replace('./', '');
+        } else if (!githubPath.includes('/')) {
+          githubPath = 'docs/semiont/' + githubPath;
+        }
+        resolvedHref = `https://github.com/frank890417/taiwan-md/blob/main/${githubPath}`;
+        // Also make it open in new tab
+        return `<a href="${resolvedHref}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
     }
     return `<a href="${resolvedHref}"${titleAttr}${targetAttr}>${text}</a>`;
   };
