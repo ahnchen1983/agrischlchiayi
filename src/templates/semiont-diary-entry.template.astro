@@ -4,6 +4,7 @@ import SemiontBreadcrumb from '../components/semiont/SemiontBreadcrumb.astro';
 import DiaryNav from '../components/semiont/DiaryNav.astro';
 import { estimateReadingTime } from '../lib/semiont-diary';
 import type { DiaryEntry } from '../lib/semiont-diary';
+import '../styles/semiont.css';
 
 export interface Props {
   entry: DiaryEntry;
@@ -21,7 +22,7 @@ const showToc = entry.headings.filter((h) => h.level === 2).length >= 3;
   description={entry.excerpt}
   lang="zh-TW"
 >
-  <div class="min-h-screen bg-[#faf8f5]">
+  <div class="semiont-paper min-h-screen">
     <div class="mx-auto max-w-[800px] px-6 pb-24 pt-16 md:px-8">
       <SemiontBreadcrumb
         segments={[

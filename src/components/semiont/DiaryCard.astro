@@ -16,16 +16,14 @@ const readingTime = estimateReadingTime(entry.wordCount);
 
 <a
   href={`/semiont/diary/${entry.slug}`}
-  class="group block border-l-2 border-[#b8860b]/25 py-6 pl-6 pr-4 transition-colors hover:border-[#b8860b]/40 hover:bg-[#b8860b]/[0.03]"
+  class="semiont-diary-card group block py-6 pl-6 pr-4 transition-colors hover:bg-[#b8860b]/[0.03]"
 >
   {/* Date + session tag */}
   <div class="mb-2 flex items-center gap-2 font-mono text-xs text-[#b8860b]/80">
     <time datetime={entry.date}>{entry.date}</time>
     {
       entry.sessionGreek && (
-        <span class="inline-flex h-5 items-center rounded-full bg-[#b8860b]/15 px-2 text-[10px] font-medium text-[#b8860b]/85">
-          {entry.sessionGreek}
-        </span>
+        <span class="semiont-badge">{entry.sessionGreek}</span>
       )
     }
   </div>

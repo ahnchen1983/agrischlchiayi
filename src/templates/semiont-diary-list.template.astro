@@ -4,6 +4,7 @@ import SemiontHeader from '../components/semiont/SemiontHeader.astro';
 import SemiontBreadcrumb from '../components/semiont/SemiontBreadcrumb.astro';
 import DiaryCard from '../components/semiont/DiaryCard.astro';
 import { getAllDiaryEntries } from '../lib/semiont-diary';
+import '../styles/semiont.css';
 
 const entries = await getAllDiaryEntries();
 
@@ -27,7 +28,7 @@ const dateRange = entries.length
   lang="zh-TW"
 >
   {/* Warm paper background */}
-  <div class="min-h-screen bg-[#faf8f5]">
+  <div class="semiont-paper min-h-screen">
     <div class="mx-auto max-w-[800px] px-6 pb-24 pt-16 md:px-8">
       <SemiontBreadcrumb
         segments={[{ label: 'semiont', href: '/semiont' }, { label: 'diary' }]}
