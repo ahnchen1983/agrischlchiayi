@@ -1,0 +1,223 @@
+{
+  "planId": "0e501608-203e-468c-a2cd-86855e53afdb",
+  "planNumber": "I-J-009",
+  "name": "日本所藏臺灣近代政治社會運動資料蒐集及翻譯整理計畫",
+  "coverImgSrc": "219679b5-3f31-4638-b46f-90e3dcd76e06",
+  "coverImgDesc": "",
+  "description": "本計畫係針對日本典藏機構所藏日治時期臺灣社會運動相關史料進行調查，包含労働図書館的所藏社會運動通信、國會圖書館所藏戰前社會運動刊物與書籍、法政大學大原社會問題研究所所藏檔案、外務省外交資料館所藏不逞団關係雑件台湾人の部，共完成史料解題 15 篇，史料編目 677 件，其中翻譯 261件，達 63 萬字。因為內容量多，故分為兩冊，上冊含労働図書館的所藏社會運動通信、國會圖書館所藏戰前社會運動刊物與書籍。下冊含法政大學大原社會問題研究所所藏檔案、外務省外交資料館所藏不逞団關係雑件台湾人の部。\r\n\r\n完成年份：2019年\r\n\r\n計畫執行團隊\r\n內容力有限公司",
+  "sourceType": "結案報告書",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaImage": "",
+  "publishTime": "2025-03-18T07:15:36.783",
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "64dab87d-0b28-4d6d-8819-04e5379a25ee",
+      "title": "「日本所藏臺灣近代政治社會運動資料蒐集及翻譯整理」採購案期末報告書_下冊",
+      "coverImgSrc": "498040ec-75ea-4940-a890-89f642a15365.jpg",
+      "description": "本計畫係針對日本典藏機構所藏日治時期臺灣社會運動相關史料進行調查，包含労働図書館的所藏社會運動通信、國會圖書館所藏戰前社會運動刊物與書籍、法政大學大原社會問題研究所所收藏的檔案、外務省外交資料館所藏不逞団關係雑件台湾人の部，共完成史料解題 15 篇，史料編目 677 件，其中翻譯 261件，達 63 萬字。因為內容量多，故分為兩冊，下冊含法政大學大原社會問題研究所所藏檔案、外務省外交資料館所藏不逞団關係雑件台湾人の部。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"17444aad-b6bb-4a3c-b110-b29e7107b1fd\",\"Name\":\"日本外務省外交資料館\"}",
+          "{\"Id\":\"d5972de5-8c89-4ec8-a60a-f30cd4c053c7\",\"Name\":\"日本法政大學大原社會問題研究所\"}",
+          "{\"Id\":\"5c6baedc-9e12-45f3-8065-7cf8133cda6e\",\"Name\":\"日本國會圖書館東京本館\"}",
+          "{\"Id\":\"8d80efef-772c-466f-a313-c2a9256069b7\",\"Name\":\"日本勞働圖書館\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "執行單位 / 內容力有限公司",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "00289073-bf92-4b73-a020-36a44dcd068b",
+              "name": "結案報告書",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "5c6baedc-9e12-45f3-8065-7cf8133cda6e",
+              "name": "日本國會圖書館東京本館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "17444aad-b6bb-4a3c-b110-b29e7107b1fd",
+              "name": "日本外務省外交資料館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "8d80efef-772c-466f-a313-c2a9256069b7",
+              "name": "日本勞働圖書館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "d5972de5-8c89-4ec8-a60a-f30cd4c053c7",
+              "name": "日本法政大學大原社會問題研究所",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "b0bfca8c-c9bc-4676-8537-f0d5429418d1",
+      "title": "「日本所藏臺灣近代政治社會運動資料蒐集及翻譯整理」採購案期末報告書_上冊",
+      "coverImgSrc": "ed87e61a-f5da-4833-bb56-94b60804fdc6.jpg",
+      "description": "本計畫係針對日本典藏機構所藏日治時期臺灣社會運動相關史料進行調查，包含労働図書館的所藏社會運動通信、國會圖書館所藏戰前社會運動刊物與書籍、法政大學大原社會問題研究所的收藏檔案、外務省外交資料館所藏不逞団關係雑件台湾人の部，共完成史料解題 15 篇，史料編目 677 件，其中翻譯 261件，達 63 萬字。因為內容量多，故分為兩冊，上冊含労働図書館的所藏社會運動通信、國會圖書館所藏戰前社會運動刊物與書籍。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"17444aad-b6bb-4a3c-b110-b29e7107b1fd\",\"Name\":\"日本外務省外交資料館\"}",
+          "{\"Id\":\"d5972de5-8c89-4ec8-a60a-f30cd4c053c7\",\"Name\":\"日本法政大學大原社會問題研究所\"}",
+          "{\"Id\":\"5c6baedc-9e12-45f3-8065-7cf8133cda6e\",\"Name\":\"日本國會圖書館東京本館\"}",
+          "{\"Id\":\"8d80efef-772c-466f-a313-c2a9256069b7\",\"Name\":\"日本勞働圖書館\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "執行單位 / 內容力有限公司",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "00289073-bf92-4b73-a020-36a44dcd068b",
+              "name": "結案報告書",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "5c6baedc-9e12-45f3-8065-7cf8133cda6e",
+              "name": "日本國會圖書館東京本館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "17444aad-b6bb-4a3c-b110-b29e7107b1fd",
+              "name": "日本外務省外交資料館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "8d80efef-772c-466f-a313-c2a9256069b7",
+              "name": "日本勞働圖書館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "d5972de5-8c89-4ec8-a60a-f30cd4c053c7",
+              "name": "日本法政大學大原社會問題研究所",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

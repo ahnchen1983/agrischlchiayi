@@ -1,0 +1,157 @@
+{
+  "planId": "784a8fe1-2eda-4a2a-884e-03fac0904b5a",
+  "planNumber": "I-J-001",
+  "name": "日本（東京及關西為主）所藏 1895 至 1959 年間臺灣相關影片及聲音類資料館藏調查計畫",
+  "coverImgSrc": "5aea7715-25a9-4606-b434-b3538796ec37",
+  "coverImgDesc": "",
+  "description": "本計畫針對日本國內（以東京及關西地區為主），包含昭和館、東京國立近代美術館電影中心（Film Center)、NHK、國立民族學博物館、日活株式會社、毎日新聞社、「ユーキャン」公司自1895至1959年間所藏與臺灣相關之影片及聲音類資料收藏進行調查。依據本計劃搜羅之資料，大致可以分三類。第一類即為本次調查最主要的部份，與台灣直接相關之影片聲音資料，唯此一部分所藏並不充分。第二類，納入「提及台灣」之資料，希冀提供較完整的參考。第三類，為當時於台灣殖民地播放之電影或聲音資料。\r\n\r\n完成年份：2010年\r\n\r\n計畫執行團隊\r\n計畫主持人/黃耀進",
+  "sourceType": "結案報告書",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": null,
+  "metaDescription": null,
+  "metaImage": null,
+  "publishTime": "2025-05-01T04:00:00",
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "41423daa-125b-4f10-b68e-5d006c97fa74",
+      "title": "日本(東京及關西為主) 所藏 1895 至 1959 年間臺灣相關影片及聲音類資料館藏調查計畫報告書",
+      "coverImgSrc": "603b79d7-3a17-4104-83f1-b62ad60c633f.jpg",
+      "description": "本計畫針對日本國內（以東京及關西地區為主），包含昭和館、東京國立近代美術館電影中心（Film Center)、NHK、國立民族學博物館、日活株式會社、毎日新聞社、「ユーキャン」公司自1895至1959年間所藏與臺灣相關之影片及聲音類資料收藏進行調查。依據本計劃搜羅之資料，大致可以分三類。第一類即為本次調查最主要的部份，與台灣直接相關之影片聲音資料，唯此一部分所藏並不充分。第二類，納入「提及台灣」之資料，希冀提供較完整的參考。第三類，為當時於台灣殖民地播放之電影或聲音資料。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"374b4849-b976-4a9c-9345-0d59454827ff\",\"Name\":\"日本昭和館\"}",
+          "{\"Id\":\"fd4737da-7fe6-4469-9695-18ebcb6d00cf\",\"Name\":\"日本東京國立近代美術館film center\"}",
+          "{\"Id\":\"9eff1bff-38e4-4bb0-a8ef-657e993d9db3\",\"Name\":\"日本毎日新聞社\"}",
+          "{\"Id\":\"7488116d-91d1-4d40-bd00-74903e20ddeb\",\"Name\":\"日本日活株式會社\"}",
+          "{\"Id\":\"eafb6b85-b0fc-4bc7-a32d-7ce491830be6\",\"Name\":\"日本國立民族學博物館\"}",
+          "{\"Id\":\"935ecdc2-e6fa-4ebe-ae6f-98a58a55c219\",\"Name\":\"映画保存協会\"}",
+          "{\"Id\":\"f9f59cb2-9932-4705-a08a-c6035e89073b\",\"Name\":\"日本NHK\"}",
+          "{\"Id\":\"13ee021d-63db-46aa-aaef-4db7ccf38e35\",\"Name\":\"日本「ユーキャン」公司\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "主持人 / 黃耀進",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "374b4849-b976-4a9c-9345-0d59454827ff",
+              "name": "日本昭和館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "fd4737da-7fe6-4469-9695-18ebcb6d00cf",
+              "name": "日本東京國立近代美術館film center",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "13ee021d-63db-46aa-aaef-4db7ccf38e35",
+              "name": "日本「ユーキャン」公司",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "9eff1bff-38e4-4bb0-a8ef-657e993d9db3",
+              "name": "日本毎日新聞社",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "7488116d-91d1-4d40-bd00-74903e20ddeb",
+              "name": "日本日活株式會社",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "eafb6b85-b0fc-4bc7-a32d-7ce491830be6",
+              "name": "日本國立民族學博物館",
+              "coverImgSrc": null,
+              "description": null
+            },
+            {
+              "subCategoryId": "935ecdc2-e6fa-4ebe-ae6f-98a58a55c219",
+              "name": "映画保存協会",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "f9f59cb2-9932-4705-a08a-c6035e89073b",
+              "name": "日本NHK",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "00289073-bf92-4b73-a020-36a44dcd068b",
+              "name": "結案報告書",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "planId": "3145b874-860e-488e-8d2e-f2aef9e57f31",
+  "planNumber": "I-J-005",
+  "name": "日本東京外國語大學臺灣音像資料調查計畫",
+  "coverImgSrc": "07692a6a-cb92-439e-9806-28051bc312ef",
+  "coverImgDesc": "",
+  "description": "本調查計畫係調查國立東京外國語大學亞非語言文化研究所有關臺灣資料，主要是語言學家小川尚義（1869-1947）於1896-1936年間在臺灣任職期間所做的研究資料，以及淺井惠倫（1895-1969）於1930至1940年代在臺灣調查所得或收藏的語言資料，資料性質涵蓋田野筆記、資料手稿、複製稿、文獻抄本、文獻譯本、照片、無聲影片等。淺井惠倫因個人興趣，除田野調查筆記外，也拍攝許多原住民照片、動態影像以及音源資料，當中音像資料最為生動，紀錄著非文字類的聲音、語調、肢體動作與姿勢。這些珍貴資料直到1980年代開始，才漸漸被注意到，並由日本、臺灣學者進行整理分析。本調查計畫即以平埔族相關之照片、影音為核心，先整理其清單，並將其相關脈絡之田野筆記文書一併列出，希望能夠完善整理臺灣平埔族相關資料。\r\n\r\n完成年份：2010年\r\n\r\n\r\n計畫執行團隊\r\n臺灣民族音樂學會\r\n計畫主持人/林清財\r\n協同主持人/鄧相揚",
+  "sourceType": "結案報告書",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": null,
+  "metaDescription": null,
+  "metaImage": null,
+  "publishTime": null,
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "9d9afe41-2745-41e5-838b-2812a5c3f932",
+      "title": "日本東京外國語大學臺灣音像資料調查計畫成果報告書",
+      "coverImgSrc": "a8edb431-87ba-4000-9f77-1d5fc65678c3.jpg",
+      "description": "本調查計畫係調查國立東京外國語大學亞非語言文化研究所有關臺灣資料，主要是語言學家小川尚義（1869-1947）於1896-1936年間在臺灣任職期間所做的研究資料，以及淺井惠倫（1895-1969）於1930至1940年代在臺灣調查所得或收藏的語言資料，資料性質涵蓋田野筆記、資料手稿、複製稿、文獻抄本、文獻譯本、照片、無聲影片等。淺井惠倫因個人興趣，除田野調查筆記外，也拍攝許多原住民照片、動態影像以及音源資料，當中音像資料最為生動，紀錄著非文字類的聲音、語調、肢體動作與姿勢。這些珍貴資料直到1980年代開始，才漸漸被注意到，並由日本、臺灣學者進行整理分析。本調查計畫即以平埔族相關之照片、影音為核心，先整理其清單，並將其相關脈絡之田野筆記文書一併列出，希望能夠完善整理臺灣平埔族相關資料。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"1ff74275-a684-44aa-b9e1-9aeaf50e5caa\",\"Name\":\"日本東京外國語大學\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "執行單位 / 臺灣民族音樂學會\n主持人 / 林清財\n協同主持人 / 鄧相揚",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "70887628-8cca-4dec-8360-2d4d4e975359",
+              "name": "2010-2019",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "00289073-bf92-4b73-a020-36a44dcd068b",
+              "name": "結案報告書",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "7a4bdeb6-a611-4a02-8cfa-5f16749473d4",
+              "name": "南臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "1ff74275-a684-44aa-b9e1-9aeaf50e5caa",
+              "name": "日本東京外國語大學",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

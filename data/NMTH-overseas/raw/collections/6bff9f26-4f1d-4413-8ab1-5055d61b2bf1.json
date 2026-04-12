@@ -1,0 +1,197 @@
+{
+  "collectionId": "6bff9f26-4f1d-4413-8ab1-5055d61b2bf1",
+  "title": "福爾摩沙島植物誌",
+  "alternative": "List of plants from the island of Formosa or Taiwan",
+  "description": "紀錄史溫侯在福爾摩沙採集到246種植物的清單；植物標本存放於倫敦邱園標本館。",
+  "viewTimes": 3,
+  "isFeatured": false,
+  "rights": "歡迎自由取用",
+  "pages": "5",
+  "length": "",
+  "size": "",
+  "commissioningUnit": "",
+  "publishingUnit": "",
+  "publishStartYear": null,
+  "publishStartMonth": null,
+  "publishStartDay": null,
+  "publishEndYear": null,
+  "publishEndMonth": null,
+  "publishEndDay": null,
+  "completeStartYear": null,
+  "completeStartMonth": null,
+  "completeStartDay": null,
+  "completeEndYear": null,
+  "completeEndMonth": null,
+  "completeEndDay": null,
+  "archiveDate": null,
+  "identifier": "",
+  "collectionNumber": "",
+  "supplementaryExplanation": "作者 / Robert Swinhoe",
+  "status": "Published",
+  "publishTime": "2025-07-25T16:22:47.717",
+  "coverImgSrc": "5f0fe383-b138-448b-b857-6e81f5c8ac84.jpg",
+  "video": null,
+  "videoDescription": "",
+  "downloadDoc": null,
+  "downloadDocDescription": "",
+  "pageLink": null,
+  "frontDisplayDoc": null,
+  "frontDisplayDocDescription": "",
+  "link": [],
+  "relation": [
+    {
+      "name": "Reed Digital Collections:Formosa Nineteenth Century Images",
+      "url": "https://rdc.reed.edu/c/formosa/s/r?_pp=20&s=fbc2565d09aff6603f2e8d81298db27559c16c88&p=64&pp=1"
+    }
+  ],
+  "collectionList": [],
+  "moreInfo": [
+    {
+      "title": "來源",
+      "description": "Swinhoe, Robert.  List of plants from the island of Formosa or Taiwan.（羅伯特・史溫侯。〈福爾摩沙島植物誌〉。）"
+    }
+  ],
+  "collectionDate": {
+    "shootingYear": "",
+    "productionYear": "",
+    "collectionYear": "",
+    "acquisitionYear": "",
+    "reproductionYear": "",
+    "publicationYear": "1863--/"
+  },
+  "rightsHolder": {
+    "investigatingUnit": [],
+    "originalRightsHolder": [
+      "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+    ],
+    "originalArchivingUnit": []
+  },
+  "isFavorite": false,
+  "languageDocuments": [
+    {
+      "language": {
+        "languageId": "d4fc58d9-817b-4e2b-bef3-3b593d77b18c",
+        "name": "中文"
+      },
+      "text": "##--SPLIT--##\r\n福爾摩沙島植物誌[4]\r\n這份名錄所列的植物，大部分都是由我自己採集的，但並非全部。名錄中有些植物並不是我採集到的，而是之前賈祿先生（Chas）寄給倫敦皇家植物園[5]標本館的物種。威爾佛（Charles Wilford）是倫敦皇家植物園的蒐藏經理，他隨著皇家艦隊「不屈號」和我一起探勘福爾摩沙島上的部分地區。我將我帶回來的所有植物都寄給了威廉．虎克先生（William Hooker），並都將保存在公立標本館，他好心地將下列由標本館館長布列克先生（Alan Black）所擬定的植物名錄提供給我。可惜的是，有些標本受損過於嚴重，或是太不完整以至於無法辨識。標註有星號的13種植物[6]，威廉爵士（Sir William）注意到它們「可能是新種」。我們可以看到，在名錄中，最廣為人知的福爾摩沙植物「蓪草（Rice-paper Plant, Aralia papyrifer，目前學名 Tetrapanax papyriferus）」消失了。這不是因為它很稀有，在福爾摩沙島北部淡水（Tamsuy）的丘陵地上四處都長有蓪草。在這裡我要提醒一下，名錄中的植物沒有一種是採自於海拔3,000英呎以上。\r\n羅伯特‧史溫侯（Robert Swinhoe）\r\n毛茛科 （Ranunculaceae）\r\n   1. 串鼻龍 （Clematis grata, Wall.） \r\n   2. 威靈仙 （Clematis chinensis, Retz.?，目前學名  Clematis chinensis var. chinensis）\r\n   3. 禺毛茛 / 水辣菜 （Ranunculus fibrosus, Wall.，目前學名 Ranunculus cantoniensis） \r\n   4. 匍枝毛茛 （Ranunculus repens, L.）\r\n   5. 某種毛茛屬植物 （Ranunculus sp. ?）\r\n防己科 （Menispermeae，目前學名  Menispermaceae）\r\n   6. 木防己 （Cocculus cuneatus, Bth.，目前學名  Cocculus orbiculatus） \r\n白花菜科 （Capparideae，目前學名 Cleomaceae）\r\n   7. 白花菜 （Gynandropsis pentaphylla, D.C.，目前學名 Cleome gynandra）\r\n遠志科 （Polygalaceae）\r\n   8. 瓜子金 （Polygala japonica, Thb.） \r\n菫菜科 （Violarieae，目前學名 Violaceae） \r\n   9. 茶匙黃 （Viola diffusa, Ging.） \r\n   10. 箭葉堇菜 （Viola Patrini, D.C.，目前學名 Viola betonicifolia） \r\n石竹科 （Caryophylleae，目前學名 Caryophyllaceae，但下列植物除蠅子草屬(Silene)外目前皆屬於錦葵科Malvaceae） \r\n   11. 某種蠅子草屬植物 （Silene sp. ?）\r\n   12. 金午時花 （Sida rhombifolia, D.C.）\r\n   13. 澎湖金午時花 （Sida humilis, W. ? ，目前學名Sida veronicifolia）[7]\r\n   14. 細葉金午時花 （Sida acuta, Burm.） \r\n   15. 圓葉金午時花 （Sida cordifolia, L.）\r\n   16. 冬葵子 （Abeutilon asiaticum[8], Don.，目前學名 Abutilon indicum）\r\n   17. 黃槿 （Partritium tiliaceum, Juss.，目前學名  Hibiscus tiliaceus）\r\n   18. 木槿 （Hibiscus syriacus, L.）\r\n   19. 野棉花 （Urena lobata, L.）\r\n田麻科 （Tiliaceae，合併到錦葵科，列為椴樹亞科）\r\n   20. 某種垂桉草屬植物 （Triumfetta sp. ?）\r\n   21. 繩黃麻 （Corchorus acutangulus, Lamb.，目前學名 Corchorus aestuans） \r\n厚皮香科 （Ternstroemiaceae，目前併入五列木科 Pentaphylacaceae）\r\n   22. 某種紅淡比屬植物 （Cleyera sp. ?）\r\n柑橘科 （Aurantiaceae，目前屬於芸香科 Rutaceae）\r\n   23. 烏柑仔 （Sclerostylis buxifoli, Bth.，目前學名 Severinia buxifolia）\r\n   24. 某種柑橘屬植物 （Citrus sp. ?）\r\n花椒族 （Xanthoxyleae，目前屬於芸香科 Rutaceae）\r\n   25. 藤花椒 （Xanthoxylon cuspidatum, Champ.，目前學名  Zanthoxylum scandens）\r\n蒺藜族 （Zygophylleae，目前為蒺藜科 Zygophyllaceae）\r\n##--SPLIT--##\r\n   26. 蒺藜 （Tribulus terrestris, L.）\r\n鼠李族 （Rhamneae，目前為鼠李科Rhamnaceae）\r\n   27. 雀梅藤 （Sageretia theezans, Brong. ，目前學名Sageretia thea）\r\n   28. 馬甲子 （Paliurus aubletii, R & S.，目前學名  Paliurus ramosissimus）\r\n無患子科 （Sapindaceae）\r\n   29. 車桑子 （Dodonaea viscosa, L.）\r\n   30. 倒地鈴 （Cardiospermum halicacabum, L.）\r\n漆樹科 （Terebinthaceae，目前學名 Anacardiaceae）\r\n   31. 羅氏鹽膚木 （Rhus semialata, Murr.，目前學名 Rhus chinensis var. roxburghiana）\r\n清風藤科 （Sabiaceae）\r\n   32. *清風藤屬新種 （Sabia 【new species】，目前為臺灣清風藤【Sabia swinhoei】）\r\n葡萄科 （Viniferae，目前學名 Vitaceae）\r\n   33. 山葡萄 （Vitis heterophylla, Thb.，目前學名 Ampelopsis brevipedunculata）\r\n   34. 某種葡萄屬植物 （Vitis japonica Th. var. ?）\r\n豆科 （Leguminosae，目前學名 Fabaceae）\r\n   35. 黃香草木樨 （Melilotus officinalis, L.）\r\n   36. 天藍苜蓿 （Medicago lupulina, L.）\r\n   37. 百脈根 （Lotus corniculatus, L.）\r\n   38. 紫雲英 / 翹搖 （Astragalus lotoides, Lamk.，目前學名 Astragalus sinicus）\r\n   39. *灰毛豆屬新種 （Tephrosia 【new species】）\r\n   40. 灰毛豆 （Tephrosia purpurea, Pers）\r\n   41. 某種灰毛豆屬植物 （Tephrosia sp. ?）\r\n   42. 圓葉煉莢豆 （Alysicarpus nummulariaefolius, D.C.，【當時誤植，應為A. nummulariifolius】目前學名 Alysicarpus ovalifolius）\r\n   43. 煉莢豆 （Alysicarpus vaginatus,, D.C.，目前學名 Alysicarpus vaginalis）\r\n   44. 臺東葵草 （Zornia diphylla, L.，目前學名 Zornia intecta）[9]\r\n   45. 兔尾草 （Uraria crinita, Desv.）\r\n   46. 羽葉兔尾草 （Uraria picta, Desv.）\r\n   47. 某種刀豆屬 （Canavalia sp. ?）\r\n   48. *乳豆屬新種 （Galactia 【new species】）\r\n   49. 小葉括根 / 小鹿霍 （Rhynchosia minima, L.）[10]\r\n   50. 某種木豆屬植物 （Atylosia sp. ?，目前屬名 Cajanus）\r\n   51. 雞母珠（Abrus precatorius, L.）\r\n   52. 疏花魚藤 （Derris laxiflora, Bth.）\r\n   53. 老荊藤 / 江西崖豆藤 （Millettia reticulata, Bth.，目前學名 Callerya reticulata）\r\n   54. 臺灣山豆根 （Euchresta Horsfieldii[11], Benn.，目前學名   Euchresta formosana）[12]\r\n   55. 決明 （Cassia Tora[13], L.，目前學名 Senna tora）\r\n   56. 相思樹 （Acacia Ritchii. A. Gray?，目前學名 Acacia confusa）\r\n衛矛科 （Celastriniae，目前學名 Celastraceae）\r\n   57. 雷公藤 （Trupterygium wilfordii, Hook. F.，目前學名 Tripterygium wilfordii）\r\n薔薇科 （Rosaceae）\r\n   58. 某種翻白草屬植物 （Potetilla sp. ?，目前屬名Potentilla ）\r\n   59. 變葉懸鉤子 （Rubus villosus, Th. var. ?，目前學名 Rubus corchorifolius）\r\n   60. 刺莓 / 錫金懸鉤子 （Rubus rosaefolius, L.，目前學名 Rubus rosifolius）\r\n   61. 野薔薇 （Rosa involucrata, Roxb.，目前已裂解為多種薔薇屬植物）\r\n   62. 金櫻子 （Rosa sinica, Desf. ?，目前學名 Rosa laevigata）\r\n   63. 小葉石楠 （Photinia villosa, D.C.?，目前學名 Pourthiaea villosa var.  parvifolia）\r\n柳葉菜科 （Onagraceae）\r\n   64. 水丁香 （Jussienuea villosa[14], D.C.，目前學名 Ludwigia octovalvis）\r\n千屈菜科 （Lythraceae）\r\n   65. 水豬母乳 （Ameletia rotundifolia, W. & A.，目前學名  Rotala rotundifolia）\r\n野牡丹科 （Melastomaceae，目前科名 Melastomataceae）\r\n   66. 柏拉木 （Anplectrum parviflorum, Bth.，目前學名   Blastus cochinchinensis）\r\n   67. 金錦香 （Osbeckia linearis, D.C.，目前學名 Osbeckia chinensis）[15]\r\n桃金孃科 （Myrtaceae）\r\n   68. 某種赤楠屬植物 （Syzygium sp. ?）\r\n馬齒莧科 （Portulaceae，目前學名 Portulacaceae）\r\n   69. 馬齒莧 （Portulacca oleracea, L.）\r\n景天科 （Crassulaceae）\r\n   70. 某種佛甲草屬植物 （Sedum sp. ?）\r\n   71. *燈籠草屬新種 （Kalanchöe 【new species】，目前屬名 Kalanchoe）\r\n虎耳草科 （Saxifrageae，目前科名 Saxifragaceae） \r\n   72. *八仙花屬新種 （Hydrangea 【new species】，目前歸屬於八仙花科Hydrangeaceae）\r\n   73. 八仙花屬植物 （Hydrangea japonica, Siebold.，目前學名尚難確認）\r\n葫蘆科 （Cucurbitaceae）\r\n   74. 黑果馬㼎兒 （Zehneria mysorensis, W. & A.?，目前學名為 Zehneria mucronata）\r\n   75. 某種南瓜屬植物 （Cucurbita sp. ?）\r\n   76. 番木瓜 （Carica papaya, L. 【cultivated】，目前歸屬番木瓜科 Caricaceae）\r\n茜草科 （Rubiaceae）\r\n   77. 某種玉葉金花屬植物 （Mussaeuda sp. ?，目前屬名Mussaenda）\r\n   78. 蛇根草 （Ophiorrhyza japonica, Bl.，目前學名 Ophiorrhiza japonica）\r\n忍冬科 （Caprifoliaceae）\r\n   79. 忍冬 / 金銀花（Lonicera japonica, Thb.）\r\n\r\n##--SPLIT--##\r\n   80. *莢蒾屬， 與松田氏莢蒾相似 （Vibruum n. so. 【near erosum】，目前屬名 Viburnum）\r\n桔梗科（Campanulaceae）和半邊蓮科（Lobeliaceae，目前學名為半邊蓮亞科Lobelioideae）\r\n   81. 細葉蘭花參 （Wahlenbergia marginata, A.D.C.）\r\n   82. 普剌特草 （Piddingtonia nummularia, D.C.，目前學名 Lobelia nummularia）\r\n   83. 半邊蓮 （Isolobus Roxburghianus, A.D.C.，目前學名 Lobelia chinensis）\r\n   84. 草海桐 （Scaevola, Lobelia, L. ，目前學名 Scaevola sericea）[16]\r\n菊科 （Compositeae，目前學名 Asteraceae）\r\n   85. 一枝香 （Vernonia cinerea, Less.）\r\n   86. 燈豎朽 （Elephantopus scaber, L.）\r\n   87. 塔山澤蘭（Eupatorium Wallichii, D. C.，目前學名   Eupatorium chinense var. tozanense）\r\n   88. 某種澤蘭屬植物 （Eupatorium sp. ?）\r\n   89. 山白蘭 （Aster trinervius, Roxb. ，目前學名 Aster ageratoides）\r\n   90. 茯苓菜 （Dichrocephalus latifolia, D.C.，目前學名 Dichrocephala integrifolia）\r\n   91. 一枝黃花 （Solidago virgaurea，目前學名  Solidago virgaurea var. leiocarpa）\r\n   92. 毛將軍 （Blumea hieracifolia）\r\n   93. 豨薟 / 希占草 （Siegesbeckia orientalis, L.，目前學名 Sigesbeckia orientalis）\r\n   94. 鱧腸 （Eclipta alba, Hassk.，目前學名 Eclipta prostrata）\r\n   95. 某種旋覆花屬植物 （Inula sp. ?）\r\n   96. 蟛蜞菊 （Wedelia calendulacea, L.，目前學名 Sphagneticola calendulacea）\r\n   97. 白花鬼針 （Bidens pilosa, L.）\r\n   98. *香茹屬新種（Glossogyne 【new species】，目前屬名 Glossocardia）\r\n   99. 某種蒿屬植物 （Artemisia, sp. ?）\r\n   100. 白鳳菜 （Gynura pseudoclinia, D.C.，目前學名Gynura divaricata subsp. formosana）\r\n   101. 華薊 （Cirsium chinense, Gard. ，目前學名 Cirsium lineare）\r\n   102. 泥胡菜 / 喜林風毛菊 （Aplotaxis multicaulis, D.C.，目前學名 Hemisteptia lyrata）\r\n   103. 某種苦蕒菜屬植物 （Ixeris sp. ?）\r\n報春花科 （Priumlaceae，目前科名Primulaceae）\r\n   104. 地錢草 （Androsace patens, C. Wright.，目前學名 Androsace umbellata）\r\n   105. 異葉珍珠菜 （Lysimachia multiflora, Wall.，目前學名 Lysimachia decurrens）\r\n木犀科 （Jasminaea，目前學名 Oleaceae）\r\n   106. 某種素英屬植物 （Jasminum sp. ?）\r\n灰木科 （Stypaceae，目前學名 Symplocaceae）\r\n   107. 灰木 （Symplocos sinica, Kerr. ?，目前學名 Symplocos chinensis） \r\n夾竹桃科 （Apocyneae，目前學名 Apocynaceae）\r\n   108. 某種馬蹄花屬植物 （Tabernamontana sp. ?，目前屬名 Tabernaemontana）\r\n   109. 爬森藤 （Parsonsia spiralis, Br.，目前學名 Parsonsia alboflavescens）\r\n蘿藦亞科 （Asclepiadeae，目前屬於夾竹桃科）\r\n   110. 絨毛芙蓉蘭 （Marsdenia tinctoria, Br.，目前屬於夾竹桃科）\r\n   111. 某種鷗[17]蔓屬 （Tylophora sp. ?，目前屬於夾竹桃科）\r\n旋花科 （Convolvulaceae）\r\n   112. 九爪藤 （Ipomaea pes-tigridis, L.，目前學名  Ipomoea pestigridis）\r\n      馬鞍藤 （Ipomaea pes-caprae, L.，目前學名  Ipomoea pes-carprae）\r\n      盒果藤 （Ipomaea turpethum, L.，目前學名  Operculina turpethum）\r\n      戟葉菜欒藤 （Ipomaea filicaulis, Bl.，目前學名 Xenostegia tridentata）\r\n   113. 牽牛花 （Pharbites Nil, Chois.，目前學名  Ipomoea nil）\r\n   114. 銳葉牽牛 （Pharbites insularis, Chois.，目前學名 Ipomoea indica）\r\n   115. 娥房藤 （Jacquemonita violacea, Chois..，目前學名 Jacquemontia paniculata）\r\n   116. *鮮蕊藤屬新種（Lepistemon 【new species】）\r\n   117. 土丁桂 （Evolvolus alsinoides, L.，目前學名Evolvulus alsinoides）\r\n   118. 馬蹄金 （Dichondra repens, Forst.，目前學名 Dichondra micrantha）\r\n茄科 （Solaneae，目前學名 Solanaceae）\r\n   119. 龍葵 / 紅果龍葵 （Solanum nigrum, L.）[18]\r\n   120. 曼陀羅 / 洋金花 （Datura alba, Wall.，目前學名 Datura metel）\r\n   121. 小酸漿 （Physalis minima, L.）\r\n紫草科 （Borragineae，目前學名 Boraginaceae） \r\n   122. 某種厚殼樹屬植物 （Ehretia sp. ?，目前屬於 Ehretiaceae  厚殼樹科）\r\n   123. 滿福木屬植物（Carmorea heterophylla，目前學名尚難確定）\r\n   124. 某種天芹菜屬植物 （Tournefortia sp. ?，目前學名Heliotropium）\r\n   125. 細纍子草 （Bothriospermum asperugoides, Bge.，目前學名 Bothriospermum zeylanicum）\r\n唇形科 （Labiateae，目前學名  Lamiaceae）\r\n   126. 香苦草 （Hyptis suaveolens, Poir.）\r\n   127. 耳葉刺蕊草 / 密花節節紅 （Dysophylla auriculata, Bl.，目前學名 Pogostemon auricularius）\r\n   128. 風輪菜 （Calamintha chinensis. Bth.，目前學名 Clinopodium chinense ）\r\n   129. 金劍草 / 魚針草 （Anisomeles ovata, Br.，目前學名  Anisomeles indica）\r\n   130. 疏毛白絨草 （Leucas mollisima, Wall.，目前學名Leucas mollissima）\r\n   131. 印度黃芩 （Scutellaria indica, L）\r\n   132. 向天盞 （Scutellaria rivularis, Wall, var. ?，目前學名 Scutellaria barbata）\r\n   133. 長葉水蘇 （Stachys oblougifolia, Wall. ?，目前學名 Stachys oblongifolia）\r\n   134. 某種水蘇屬植物 （Stachys sp. ?）\r\n馬鞭草科 （Verbenaceae）\r\n\r\n##--SPLIT--##\r\n   135. 某種海州常山屬植物 （Clerodendron bracteatum, Wall? ，目前學名尚難確定）\r\n   136. 某種海州常山屬 （Clerodendron sp. ?，目前屬名 Clerodendrum）\r\n   137. 白花苦林盤 （Clerodendron inerme, Br.，目前學名Clerodendrum inerme）\r\n   138. 黃荊 （Vitex negundo, L.）\r\n   139. 三葉蔓荊 （Vitex trifolia, L.）\r\n   140. 某種紫珠屬植物 （Callicarpa sp. ?）\r\n   141. 某種魚臭木屬植物 （Premua sp. ?，目前屬名 Premna）\r\n爵床科 （Acanthaceae）\r\n   142. 橢苞爵床 （Rostellularia rotundifolia, Nees.，目前學名  Justicia nepalensis）\r\n   143. 六角英 （Herpestes purpurea, Nees，目前學名 Hypoestes purpurea） \r\n   144. *哈哼花屬新種 （Ebermeiera 【new species】，目前屬名 Staurogyne）\r\n苦苣苔亞目 （Cyrtandreae，目前為苦苣苔科，學名 Gesneriaceae）\r\n   145. *旋蒴苣苔屬新種 （Baea 【new species】，目前學名 Boea）\r\n 胡麻亞目 （Sesameae，目前為胡麻科，學名 Pedaliaceae）\r\n   146. 胡麻 （Sesamum indicum, L.）\r\n玄參科 （Serophularineae，目前學名 Scrophulariaceae）\r\n   147.  定經草 （Vandellia pedunculata, Bth.，目前學名 Lindernia anagalli）\r\n   148. 過長沙 / 假馬齒莧 （Herpestes mouniera, L.，目前屬於車前科【Plantaginaceae】，學名為 Bacopa monnieri）\r\n   149. （Josenia rubens, Bth.）[19]\r\n   150. 通泉草 （Mazus rugosus, Lour.，目前屬於通泉草科【Mazaceae】，學名為 Mazus pumilus）\r\n藍雪科 （Plumbagineae，目前學名 Plumbaginaceae）\r\n   151. 烏面馬 （Plumbago zeylaniea, L.，目前學名Plumbago zeylanica）\r\n蓼科 （Polygoneae，目前學名 Polygonaceae）\r\n   152. （Polygonum lanuginosum, Bv.）[20]\r\n   153. 刺藜頭 （Polygonum perfoliatum, Bv.，目前學名 Persicaria perfoliata）\r\n紫茉莉科 （Nyctagineae，目前學名 Nyctaginaceae）\r\n   154. 某種黃細心屬植物 （Boerhaavia sp. ?，目前屬名Boerhavia）\r\n藜科 （Chenopodiaceae，目前改為藜屬 Chenopodium，歸屬於莧科 Amaranthaceae）\r\n   155. 裸花鹼蓬 （Chenpodina maritima, Moq.，目前學名 Suaeda maritima）\r\n   156. 某種濱藜屬植物 （Atriplex sp. ?）\r\n商陸科 （Phytolaccaceae）\r\n   157. 某種商陸屬植物 （Phytolacca sp. ?）\r\n樟科 （Laurineae，目前學名 Lauraceae）\r\n   158. 樟樹 （Champhora officinarum, L.，目前學名 Cinnamomum camphora）\r\n   159. 無根草 （Cassytha filiformis, L.）\r\n   160. 南嶺蕘花 （Wickstroemia viridiflora, Meisn，目前學名 Wikstroemia indica，歸屬於錦葵目 【Malvales】 瑞香科 【Thymelaeaceae】）\r\n山龍眼科 （Proteaceae）\r\n   161. 某種山龍眼屬 （Helicia sp. ?）\r\n三白草科 （Saurureae，目前學名 Saururaceae）\r\n   162. 蕺菜 / 魚腥草 （Houttynia cordata, Thb.，目前學名Houttuynia cordata）\r\n   163. 三白草 （Saururopsis chinensis, Tarcz.，目前學名 Saururus chinensis）\r\n大戟科 （Euphorbiaceae）\r\n   164. 千根草 （Euphorbia thymifolia, L.，目前學名 Chamaesyce thymifolia）\r\n   165. 華南大戟 （Euphorbia vachellii, H. & A.，目前學名 Chamaesyce vachellii）\r\n   166. 假紫斑大戟 / 通奶草 （Euphorbia hypericifolia, L.，目前學名 Chamaesyce hypericifolia）[21]\r\n   167. 某種鐵莧屬植物 （Acalypha sp. ?）\r\n   168. 某種野桐屬植物 （Rottlera sp. ? ，目前學名 Mallotus）\r\n   169. 某種野桐屬植物 （Rottlera sp. ? ，目前學名 Mallotus）\r\n   170. 某種白樹屬植物 （Gelonium sp. ?，目前學名 Suregada）\r\n   171. *饅頭果屬新種 （Glochidion 【new species】，目前歸屬於葉下珠科 【Phyllanthaceae】）\r\n   \r\n##--SPLIT--##\r\n大麻科 （Cettideae.，目前科名 Cannabaceae）\r\n   172. 某種朴屬植物 （Cettis sp. ?，目前屬名 Celtis）\r\n蕁麻科 （Urticeae，目前學名 Urticaceae）\r\n   173. 花點草 （Nanocnide japonica, Bl.）\r\n   174. 密花苧麻 （Boehmeria densiflora, H. & A.）\r\n   175. 華南苧麻 （Boehmeria platyphilla. Wedd.，目前學名 Boehmeria pilosiuscula）\r\n   176. *桑葉麻屬新種 （Laportea ? 【new species】）\r\n   177. 某種澳洲麻屬植物 （Australina. ?）\r\n桑科 （Moreae，目前學名）\r\n   178. 小桑樹 （Morus indica, L.，目前學名 Morus australis）\r\n   179. 某種榕屬植物 （Ficus sp. ?）\r\n   180. 某種榕屬植物 （Ficus sp. ?）\r\n   181. 某種榕屬植物 （Ficus sp. ?）\r\n   182. 某種榕屬植物 （Ficus sp. ?）\r\n棕櫚科 （Palmeae，目前學名 Arecaceae）\r\n   183. 某種省藤屬植物 （Calamus sp. ?）\r\n天南星科 （Aroideae，目前學名  Araceae）\r\n   184. 某種天南星屬植物 （Arisaema sp. ?）\r\n蘭科 （Orchideae，目前學名 Orchidaceae）\r\n   185.  綬草 （Spiranthes australis, Lindl.，目前學名Spiranthes sinensis）\r\n澤瀉科 （Alismaceae，目前學名 Alismataceae）\r\n   186. 慈姑 （Sagittaria sagittifolia, L.）\r\n鳶尾科 （Irideae，目前學名 Iridaceae）\r\n   187. 射干 （Pardanthus chinensis, Ker.，目前學名 Iris domestica）\r\n雨久花科 （Pontederiaceae）\r\n   188. 鴨舌草 （Monochoria vaginalis, Pr.）\r\n百合科 （Liliaceae）\r\n   189. 粗莖麝香百合 / 鐵砲百合 （Lilium longiflorum, Thb.）\r\n   190. 桔梗蘭 / 山菅蘭（Dianella ensifolia, Lamck.，目前歸屬於阿福花科 Asphodelaceae）\r\n   191. 菝葜 （Smilax china, L.，目前歸屬於菝葜科 Smilacaceae）\r\n薯蕷科 （Dioscoreae，目前學名 Dioscoreaceae）\r\n   192. 某種薯蕷屬植物 （Dioscorea sp. ?）\r\n   193. 某種薯蕷屬植物 （Dioscorea sp. ?）\r\n黑葯花科 （Melanthaceae）\r\n   194. *某種胡麻花屬新種 （Heloniopsis ? 【new species】）\r\n燈心草科 （Junceae，目前學名 Juncaceae ）\r\n   195. 錢蒲 （Juncus Leschenaultii, J. Gray.）\r\n鴨跖草科 （Commelyneae.，目前學名 Commelinaceae）  \r\n   196. 鴨跖草 （Commelynia communis, L.，目前學名 Commelina communis）\r\n   197. 某種假鴨跖草屬植物 （Aneilema sp. ?）\r\n   198. （Aneilema nudiflora, Br.）[22]\r\n莎草科 （Cyperaceae）\r\n   199. 多枝扁莎 （Cyperus polystaclyus, L.，目前學名  Pycreus polystachyos）\r\n   200. 香附子 （Cyperus  rotundus, L.）\r\n   201. 某種薹屬植物 （Carex sp. ?）\r\n禾本科 （Gramineae，目前學名）\r\n   202. 鴨姆草 （Paspalum scrobiculatum, L.）\r\n   203. 海雀稗 （Paspalum vaginatum, L.）\r\n   204. 馬唐 （Digitaria sanguinalis, L.）\r\n   205. 四生臂形草 （Panicum distachyum, L.，目前學名  Brachiaria subquadripara）\r\n   206. 稗 （Panicum crus-galli, L.，目前學名  Echinochloa crus-galli）\r\n   207. 牛筋草 （Eleusine indica, Gaert.）\r\n   208. 龍爪茅 （Dactyloctenium aegyptiacum, Willd.）\r\n   209. 鯽魚草 （Eragrostis plumosa, Link.，目前學名  Eragrostis amabilis）\r\n   210. 某種鼠尾栗屬植物 （Sporobolus sp. ?）\r\n   211. 黃茅 （Heteropogon hirtus, Pers.，目前學名 Heteropogon contortus）\r\n   212. （Cymbopogon marginatus, Steud.）[23]\r\n   213. 白茅 （Imperata arundinacea, Cyr.，目前學名 Imperata cylindrica）\r\n蕨類 （Filice）\r\n   214. 筆筒樹 （Alsophila lepifera, J. Sms.，目前學名 Cyathea lepifera）\r\n   215. 邊緣鱗蓋蕨 （Davallia villosa, Wall.?，目前學名 Microlepia marginata）\r\n   216. 粗毛鱗蓋蕨 （Davallia khasyana, Hook, var B.，目前學名 Microlepia strigosa）\r\n   217. 鐵線蕨 （Adiantum capillis-veneris, L.，目前學名 Adiantum capillus-veneris var. capillus-veneris）\r\n   218. 網脈陵齒蕨 （Lindsea cultrata, Sw., var B.）\r\n   219. 蕨 （Pteris aquilina, L.，目前學名  Pteridium latiusculum）\r\n   220. 高山金粉蕨 （Ouychium lucidum, Spreng.，目前學名 Onychium lucidum）\r\n   221. 栗蕨 （Pteris Vespertilionis, Lab.，目前學名 Histiopteris incisa）\r\n   222. 某種耳蕨屬植物 （Polystichum sp. ?）\r\n   223. 某種耳蕨屬植物 （Polystichum sp. ?）\r\n   224. 野毛蕨 （Nephrodium molle. var.. Desv.，目前學名 Cyclosorus dentatus）\r\n   225. 腎蕨 （Nephrolepis tuberosa, Pr.，目前學名 Nephrolepis cordifolia）\r\n   226. 南海鱗毛蕨 （Aspidium varium. Sw.，目前學名  Dryopteris varia）\r\n   227. 東洋蹄蓋蕨 （Asplenium decussatum, Wall.，目前學名 Deparia petersenii）\r\n   228. 多生菜蕨 （Diplazium sylvaticum, Bl.，目前學名 Diplazium proliferum）\r\n   229. 褐鱗雙蓋蕨 （Diplazium diversifolium, Bl.，目前學名 Diplazium phaeolepis）\r\n   230. 東方狗脊蕨 （Woodwardia orientalis, Sw.）\r\n   231. 萊氏線蕨 （Selliguea pedunculata, Pr.，目前學名 Colysis wrightii）\r\n   232. 萊蕨 （Selliguea decurrens, Pr.，目前學名 Leptochilus decurrens）\r\n   233. 石葦 （Niphobolus lingua, Spr.，目前學名 Pyrrosia lingua）\r\n   234. 三葉茀蕨（Polypodium hastatum, Thn.，目前學名 Selliguea hastata）\r\n   235. 粉葉蕨 （Gymnogramme elongata, Hook & Geev..，目前學名 Pityrogramma calomelanos）\r\n   236. 威氏聖蕨 （Hemionitis Wilfordi, Hook.，目前學名 Dictyocline griffithii）\r\n   237. 垂葉書帶蕨 （Vittaria elongata, Sw. ?，目前學名 Vittaria zosterifolia）\r\n   238. 馬來實蕨 （Heteroneuron repandum, Zee.，目前學名Bolbitis repanda） \r\n   239. 某種茀蕨屬植物 （Phymatodes sp. ?）\r\n   240. 鹵蕨 （Acrostichum aureum, L.）\r\n   241. 崖薑蕨 （Drynaria coronans, J. Sm.，目前學名 Aglaomorpha coronans）\r\n   242. 抱樹蕨 （Drymoglossum carnosum, Hook.，目前學名 Lemmaphyllum microphyllum）\r\n   243. 石松 （Lycopodium gnidioides, L.，目前學名Huperzia gnidioides）\r\n   244. 某種石松屬植物 （Lycopodium sp. ?）\r\n   245. 過山龍 （Lycopodium cernuum, L.，目前學名  Lycopodiella cernua\r\n var. cernua）\r\n   246. 海金沙 （Hydroglossum japonicum, Wild.）\r\n\r\n\r\n________________\r\n[1] 編註：原稿的數字是239（應該是139，但打錯）。繕打仍依序排列。\r\n[2] 編註：原稿的數字是176（應該是166，但打錯）。繕打仍依序排列。\r\n[3] 譯註：由於本文年代久遠，如果需要確認史溫侯當年真正所採集的植物為何，必須到英國的標本館檢視當時所採集的模式標本。有些標本可能已經損會或難以辨識，考究難度相當高。因此，本文就翻譯的程度，提供的中文名以來自「臺灣物種名錄」（https://taibnet.sinica.edu.tw/home.php）為主；追溯分類變遷的部分，以臺灣物種名錄及「全球生物多樣性資訊機構（Global Biodiversity Information Facility, GBIF, https://www.gbif.org/）」所登載的同物異名來追溯。\r\n[4] 譯註：以TaiBNET為主要依據，http://taibnet.sinica.edu.tw/home.php。\r\n[5] 譯註：Kew， Royal Gardens of Kew。\r\n[6] 譯註：分別為編號32、39、48、71、72、80、98、116、144、145、171、176、194。\r\n[7] 譯註：Sida humilis → Sida cordata → Sida veronicifolia。\r\n[8] 譯註：Abeutilon asiaticum → Abutilon guineense → Abutilon indicum。\r\n[9] 譯註：參考TaiCOL，https://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=203256。\r\n[10] 譯註：參考TaiCOL，https://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=432454。\r\n[11] 譯註：H應該小寫，但保留原文獻的寫法。\r\n[12] 譯註：參考TaiCOL，https://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=ILD-20812-16729。\r\n[13] 譯註：T應該小寫，但保留原文獻的寫法。\r\n[14] 譯註：當時正確的拼法是Jussiaea villosa。\r\n[15] 譯註：參考TaiCOL，https://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=ac2013:05840。\r\n[16] 譯註：參考GBIF和TaiCOL，https://www.gbif.org/species/7544936。\r\n[17] 譯註：雖然TaiBNET TaiBIF都採【歐】，但【鷗】才是正確的寫法。\r\n[18] 譯註：參考TaiCOL，https://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=204733。\r\n[19] 譯註：本種尚難確定物種。\r\n[20] 譯註：本種尚難確定物種。\r\n[21] 譯註：參考TaiCOL，\r\nhttps://taibnet.sinica.edu.tw/chi/taibnet_species_detail.php?name_code=Kew-80216。\r\n[22] 譯註：本種尚難確定物種。\r\n[23] 譯註：本種尚難確定物種。",
+      "languageType": "TRANSLATION"
+    },
+    {
+      "language": {
+        "languageId": "08b96104-e0da-4df2-a149-9f4cb4981b5e",
+        "name": "英文"
+      },
+      "text": "##--SPLIT--##\r\nLIST OF PLANTS\r\nFROM THE\r\nISLAND OF FORMOSA, OR TAIWAN.\r\n—————————\r\nThe majority of these Plants were collected by myself, but not all. Some included in the List I did not procure, but they had been previously sent to the Kew Herbarium by Mr. Chas. Wilford, Collector for the Royal Gardens of Kew, who explored parts of the Island in company with myself, in 1857, in H.M.S. “Inflexible.” Sir William Hooker, to whom I sent all the plants I brought home, to be deposited in the Public Herbarium, has kindly supplied me with the following list of names, drawn up by Mr. Black, Curator of the Herbarium. Some of the specimens unfortunately were too damaged, and others were too imperfect for identification. The 13 marked with asterisks Sir William observes, are “seemingly new species.” It will be seen that the name of the best known Formosan plant, the Aralia papyrifera (Rice-paper plant) is missing. This is not owing to its rarity; for about the North end of Formosa, and about Tamsuy it grows abundantly on the hill sides. I may here remark that none of these plants were gathered at a higher altitude than 3,000 feet.\r\nROBERT SWINHOE.\r\n\r\n\r\n        RANUNCULACEÆ.\r\n1. Clematis grata, Wall.\r\n2. ——— chinensis, Retz.?\r\n3. Ranunculus fibrosus, Wall.\r\n4. ————— repens, L.\r\n5. ————— sp.?\r\n        MENISPERMEÆ.\r\n6. Cocculus cuneatus, Bth.\r\n        CAPPARIDEÆ.\r\n7. Gynandropsis pentaphylla, D.C.\r\n        POLYGALEÆ.\r\n8. Polygala japonica, Thb.\r\n        VIOLARIEÆ.\r\n9. Viola diffusa, Ging.\r\n10. —— Patrini, D.C.\r\n        CARYOPHYLLEÆ.\r\n11. Silene sp.?\r\n        MALVACEÆ.\r\n12. Sida rhombifolia, D.C.\r\n13. —— humilis, W.?\r\n14. —— acuta, Burm.\r\n15. —— cordifolia, L.\r\n16. Abeatilon asiaticum, Don.\r\n17. Paritium tiliaceum, Juss.\r\n18. Hibiscus syriacus, L.\r\n19. Urena lobata, L.\r\n        TILIACEÆ.\r\n20. Triumfetta sp.?\r\n21. Corchorus acutangulus, Lamb.\r\n        TERUSTRŒMIACEÆ.\r\n22. Cleyera sp.?\r\n        AURANTIACEÆ.\r\n23. Sclerostylis buxifolia, Bth.\r\n24. Citrus sp.?\r\n        XANTHOXYLEÆ.\r\n25. Xanthoxylon cuspidatum, Champ.\n\r\n##--SPLIT--##\r\n26. Tribulus terrestris, L.\r\n        RHAMNEÆ.\r\n27. Sageratia theesans, Brong.\r\n28. Paliurus Aubletii, R. & S.\r\n        SAPINDACEÆ.\r\n29. Dodonæa viscosa, L.\r\n30. Cardiospermum halicacabum, L.\r\n        TEREBINTHACEÆ.\r\n31. Rhus semialata, Murr.\r\n        SABIACEÆ.\r\n32. * Sabia (new species)\r\n        VINIFERÆ.\r\n33. Vitis heterophylla, Thb.\r\n34. —— japonica Th. var.?\r\n        LEGUMINOSÆ.\r\n35. Melilotus officinalis, L.\r\n36. Medicago Lupulina, L.\r\n37. Lotus corniculatus, L.\r\n38. Astragalus lotoides, Lamk.\r\n39. * Tephrosia (new species).\r\n40. ————— purpurea, Pers.\r\n41. ————— sp.\r\n42. Alysicarpus nummulariæfolius, D.C.\r\n43. ————— vaginatus, D.C.\r\n44. Zornia diphylla, L.\r\n45. Uraria crinita, Desv.\r\n46. ——— picta, Desv.\r\n47. Canavalia sp.?\r\n48. * Galactia (new species).\r\n49. Rhynchosia minima, L.\r\n50. Atylosia sp.?\r\n51. Abrus precatorius, L.\r\n52. Derris laxiflora, Bth.\r\n53. Millettia reticulata, Bth.\r\n54. Euchresta Horsfieldii, Benn.\r\n55. Cassia Tora, L.\r\n56. Acacia Ritchii. A. Gray.?\r\n        CELASTRINIÆ.\r\n57. Tripterygium Wilfordii, Hook. F.\r\n        ROSACEÆ.\r\n58. Potentilla sp.?\r\n59. Rubus villosus, Th. var.?\r\n60. ——— rosæfolius, L.?\r\n61. Rosa involucrata, Roxb.\r\n62. —— sinica, Desf.?\r\n63. Photinia villosa, D.C.?\r\n        ONAGRACEÆ.\r\n64. Jussieuea villosa, D.C.\r\n65. Ameletia rotundifolia, W. & A.\r\n        MELASTOMACEÆ.\r\n66. Anplectrum parviflorum, Bth.\r\n67. Osbeckia linearis, D.C.\r\n        MYRTACEÆ.\r\n68. Syzygium sp.?\r\n        PORTULACEÆ.\r\n69. Portulacca oleracea, L.\r\n        CRASSULACEÆ.\r\n70. Sedum sp.?\r\n71. * Kalanchöe (new species)\r\n        SAXIFRAGEÆ.\r\n72. * Hydrangea (new species).\r\n73. ————— japonica, Siebold.\r\n        CUCURBITACEÆ.\r\n74. Zehneria mysorensis, W. & A.?\r\n75. Cucurbita sp.?\r\n76. Carica papaya, L. (cultivated).\r\n        RUBIACEÆ.\r\n77. Mussæuda sp?\r\n78. Ophiorrhyza japonica, Bl.\n\n##--SPLIT--##\r\n        CAPRIFOLIACEÆ.\r\n79. Lonicera japonica, Thb.\r\n80. * Viburnum n. sp. (near erosum).\r\n        CAMPANULACEÆ & LOBELIACEÆ.\r\n81. Wahlenbergia marginata, A.D.C.\r\n82. Piddingtonia nummularia, D.C.\r\n83. Isolobus Roxburghianus, A.D.C.\r\n84. Scævola, Lobelia, L.\r\n        COMPOSITEÆ.\r\n85. Vernonia cinerea, Less.\r\n86. Elephantopus scaber, L.\r\n87. Eupatorium Wallichii, D.C.\r\n88. —— —— sp.?\r\n89. Aster trinervius, Roxb.\r\n90. Dichrocephalus latifolia, D.C.\r\n91. Solidago virgaurea, L.\r\n92. Blumea hieraciifolia, D.C.\r\n93. Siegesbeckia orientalis, L.\r\n94. Eclipta alba, Hassk.\r\n95. Inula sp.?\r\n96. Wedelia calendulacea, L.\r\n97. Bidens pilosa, L.\r\n98. * Glossogyne (new species).\r\n99. Artemisia, sp.?\r\n100. Gynura pseudoclinia, D.C.\r\n101. Cirsium chinense, Gard.\r\n102. Aplotaxis multicaulis, D.C.\r\n103. Ixeris sp.?\r\n        PRIMULACEÆ.\r\n104. Androsace patens, C. Wright.\r\n105. Lysimachia multiflora, Wall.\r\n        JASMINEÆ.\r\n106. Jasminum sp.?\r\n        STYRACEÆ.\r\n107. Symplocos sinica, Kerr.?\r\n        APOCYNEÆ.\r\n108. Tabernamontana sp.?\r\n109. Parsonsia spiralis, Br.\r\n        ASCLEPIADEÆ.\r\n110. Marsdenia tinctoria, Br.\r\n111. Tylophora sp.?\r\n        CONVOLVULACEÆ.\r\n112. Ipomæa pes-tigridis, L.\r\n———— pes-capræ, L.\r\n———— turpethum, L.\r\n———— filicaulis, Bl.\r\n113. Pharbites Nil, Chois.\r\n114. ———— insularis, Chois.\r\n115. Jacquemontia violacea, Chois.\r\n116. * Lepistemon (new species)\r\n117. Evolvolus alsinoides, L.\r\n118. Dichondra repens, Forst.\r\n        SOLANEÆ.\r\n   119. Solanum nigrum, L.\r\n   120. Datura alba, Wall.\r\n   121. Physalis minima, L.?\r\n        BORRAGINEÆ.\r\n   122. Ehretia sp.?\r\n   123. Carmorea heterophylla, Cav.\r\n   124. Tournefortia sp.?\r\n   125. Bothriospermum asperugoides, Bge.\r\n        LABIATEÆ.\r\n   126. Hyptis suaveolens, Poir.\r\n   127. Dysophylla auriculata, Bl.\r\n   128. Calamintha chinensis. Bth.\r\n   129. Anisomeles ovata, Br.\r\n   130. Leucas mollisima, Wall.\r\n   131. Scutellaria indica, L.\r\n   132. ———— rivularis, Wall, var.?\r\n   133. Stachys oblongifolia, Wall.?\n\n##--SPLIT--##\r\n   134. ———— sp.?\r\n        VERBENACEÆ.\r\n   135. Clerodendron bracteatum, Wall.?\r\n   136. ———— sp.?\r\n   137. ———— inerme, Br.\r\n   138. Vitex negundo, L.\r\n   139. ———— trifolia, L., var, unifoliata.[1]\r\n   140. Callicarpa sp.?\r\n   141. Premna sp.?\r\n        ACANTHACEÆ.\r\n   142. Rostellularia rotundifolia, Nees.\r\n   143. Herpestes purpurea, Nees.\r\n   144. * Ebermeiera (new species).\r\n        CYRTANDREÆ.\r\n   145. * Bæa (new species).\r\n        SESAMEÆ.\r\n   146. Sesamum indicum, L.\r\n        SEROPHULARINEÆ.\r\n   147. Vandellia pedunculata, Bth.\r\n   148. Herpestes mouniera, L.\r\n   149. Josenia rubens, Bth.\r\n   150. Mazus rugosus, Lour. \r\n        PLUMBAGINEÆ.\r\n   151. Plumbago zeylanica, L.\r\n        POLYGONEÆ.\r\n   152. Polygonum lanuginosum, Bv.\r\n   153. ———— perfoliatum, L.\r\n        NYCTAGINEÆ.\r\n   154. Boerhaavia sp.?\r\n        CHENOPODIACEÆ.\r\n   155. Chenopodina maritima, Moq.\r\n   156. Atriplex sp.?\r\n        PHYTOLACCACEÆ.\r\n   157. Phytolacca sp.?\r\n        LAURINEAÆ.\r\n   158. Camphora officinarum, Nees.\r\n   159. Cassytha filiformis, L.\r\n        THYMELEÆ.\r\n   160. Wickstrœmia viridiflora, Meisn.\r\n        PROTEACEÆ.\r\n   161. Helicia sp.?\r\n        SAURUREÆ.\r\n   162. Houttynia cordata, Thb.\r\n   163. Saururopsis chinensis, Tarcz.\r\n        EUPHORBIACEÆ.\r\n   164. Euphorbia thymifolia, L.\r\n   165. ———— vachellii, H. & A.\r\n   166. ———— hypericifolia, L.[2]\r\n   167. Acalypha sp.?\r\n   168. Rottlera sp.?\r\n   169. ———— sp.?\r\n   170. Gelonium sp.?\r\n   171. * Glochidion (new species).\n\r\n##--SPLIT--##\r\n        CETTIDEÆ.\r\n   172. Cettis sp.?\r\n        URTICEÆ.\r\n   173. Namocnide japonica, Bl.\r\n   174. Bœhmeria densiflora, H. & A.\r\n   175. ———— platyphilla. Wedd.\r\n   176. * Laportea? (new species).\r\n   177. Australina.?\r\n        MOREÆ.\r\n   178. Morus indica, L.\r\n   179. Ficus sp.?\r\n   180. —— sp.?\r\n   181. —— sp.?\r\n   182. —— sp.?\r\n        PALMEÆ.\r\n   183. Calamus sp.?\r\n        AROIDEÆ.\r\n   184. Arisæma sp.?\r\n        ORCHIDEÆ.\r\n   185. Spiranthes australis, Lindl.\r\n        ALISMACEÆ.\r\n   186. Sagittaria sagittifolia, L.\r\n        IRIDEÆ.\r\n   187. Pardanthus chinensis, Ker.\r\n        PONTEDERIACEÆ.\r\n   188. Monochoria vaginalis, Pr.\r\n        LILIACEÆ.\r\n   189. Lilium longiflorum, Thb.\r\n   190. Dianella ensifolia, Lamck.\r\n   191. Smilax china, L.\r\n        DIOSCOREÆ.\r\n   192. Dioscorea sp.?\r\n   193. ———— sp.?\r\n        MELANTHACEÆ.\r\n   194. * Heloniopsis? (new species)\r\n        JUNCEÆ.\r\n   195. Juncus Leschenaultii, J. Gray.\r\n        COMMELYNEÆ.\r\n   196. Commelynia communis, L.\r\n   197. Aneilema sp.?\r\n   198. ———— nudiflora, Br.\r\n        CYPERACEÆ.\r\n   199. Cyperus polystaclyus, L.\r\n   200. ———— rotundus, L.\r\n   201. Carex sp.?\r\n        GRAMINEÆ.\r\n   202. Paspalum scrobiculatum, L.\r\n   203. ———— vaginatum, L.\r\n   204. Digitaria sanguinalis, L.\r\n   205. Panicum distachyum, L.\r\n   206. ———— crus-galli, L.\r\n   207. Eleusine indica, Gaert.\r\n   208. Dactyloctenium ægyptiacum, Willd.\r\n   209. Eragrostis plumosa, Link.\r\n   210. Sporobolus sp.?\r\n   211. Heteropogon hirtus, Pers.\r\n   212. Cymbopogon marginatus, Steud.\r\n   213. Imperata arundinacea, Cyr.\r\n        FILICES.\r\n   214. Alsophila lepifera, J. Sms.\r\n   215. Davallia villosa, Wall.?\r\n   216. ———— khasyana, Hook, var β.\r\n   217. Adiantum capillis-veneris, L.\r\n   218. Lindsea cultrata, Sw., var β.\r\n   219. Pteris aquilina, L.\r\n   220. Onychium lucidum, Spreng.\r\n   221. Pteris Vespertilionis, Lab.\r\n   222. Polystichum sp.?\r\n   223. ———— sp.?\r\n   224. Nephrodium molle. var., Desv.\r\n   225. Nephrolepis tuberosa, Pr.\r\n   226. Aspidium varium. Sw.\r\n   227. Asplenium decussatum, Wall.\r\n   228. Diplazium sylvaticum, Pr.\r\n   229. ———— diversifolium, Bl.?\r\n   230. Woodwardia orientalis, Sw.\r\n   231. Selliguea pedunculata, Pr.\r\n   232. ———— decurrens, Pr.\r\n   233. Niphobolus lingua, Spr.\r\n   234. Polypodium hastatum, Thn.\r\n   235. Gymnogramme elongata, Hook & Geev.\r\n   236. Hemionitis Wilfordi, Hook.\r\n   237. Vittaria elongata, Sw.?\r\n   238. Heteroneuron repandum, Zee.\r\n   239. Phymatodes sp.?\r\n   240. Acrostichum aureum, L.\r\n   241. Drynatia coronans, J. Sm.\r\n   242. Drymoglossum carnosum, Hook.\r\n   243. Lycopodium gnidioides, L.\r\n   244. ———— sp.?\r\n   245. ———— cernuum, L.\r\n   246. Hydroglossum japonicum, Wild.\r\n\r\n\r\n—————————————————————————————————\r\nFREDERICK BELL, MACHINE PRINTER, 133, KING’S ROAD, CHELSEA.\r\n\r\n",
+      "languageType": "ORIGINAL"
+    }
+  ],
+  "attachments": [
+    {
+      "type": "pdf",
+      "description": null,
+      "src": "/attachments/IE005v13.pdf",
+      "source": "frontDisplayDoc"
+    },
+    {
+      "type": "pdf",
+      "description": null,
+      "src": "/attachments/IE005v13.pdf",
+      "source": "downloadDoc"
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+      "name": "文物描述地點",
+      "subCategories": [
+        {
+          "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+          "name": "全臺灣",
+          "coverImgSrc": null,
+          "description": "",
+          "sourceType": "",
+          "continents": []
+        }
+      ]
+    },
+    {
+      "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+      "name": "資源類型",
+      "subCategories": [
+        {
+          "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+          "name": "檔案與文獻",
+          "coverImgSrc": null,
+          "description": " ",
+          "sourceType": "",
+          "continents": []
+        }
+      ]
+    },
+    {
+      "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+      "name": "時代",
+      "subCategories": [
+        {
+          "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+          "name": "1800-1899",
+          "coverImgSrc": null,
+          "description": "",
+          "sourceType": "",
+          "continents": []
+        }
+      ]
+    },
+    {
+      "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+      "name": "典藏機構",
+      "subCategories": [
+        {
+          "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+          "name": "國立臺灣歷史博物館",
+          "coverImgSrc": null,
+          "description": null,
+          "sourceType": "",
+          "continents": []
+        }
+      ]
+    },
+    {
+      "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+      "name": "檔案格式",
+      "subCategories": [
+        {
+          "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+          "name": "文字檔",
+          "coverImgSrc": null,
+          "description": "pdf、doc、txt",
+          "sourceType": "",
+          "continents": []
+        }
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "planId": "78acece6-2e0a-4459-acb7-51c290850829",
+      "planNumber": "I-E-005",
+      "name": "19世紀西方台灣書寫史料翻譯整理計畫",
+      "coverImgSrc": "f7fe8e09-0c05-4152-99f6-b7ec5b104a76",
+      "description": "本計畫翻譯法文史料與英文史料。法文史料《法軍遠征福爾摩沙1884-1885》作者手稿及其附錄《法軍遠征福爾摩沙1884-1885 》地圖手繪稿，為法國軍官嘉諾（Eugène Germain Garnot）紀錄清法戰爭期間在雞籠、淡水、澎湖等地的見聞。此書為清法戰爭現存最詳盡的西文資料，1894年曾於法國出版，1960年由臺灣銀行經濟研究室出版中譯本《法軍侵台始末》，是研究清法戰爭臺灣之役的重要參考。此外，英文史料為臺灣自然史相關論文30篇，是英國博物學家史溫侯（Robert Swinhoe, 1836-1877，亦翻譯為郇和、斯文豪、士委諾）在19世紀中葉擔任英國駐臺領事期間所撰寫的，紀錄臺灣的自然生態與物產，是當時西方世界了解臺灣的重要資料。另外本案包含史溫侯所撰臺灣相關文章清單1份，是費德廉老師所整理的。\r\n\r\n完成年份：2020年\r\n\r\n計畫執行團隊\r\n內容力有限公司",
+      "sourceType": "結案報告書",
+      "status": "Published",
+      "pageLink": "",
+      "metaTitle": null,
+      "metaDescription": null,
+      "metaImage": null,
+      "publishTime": null,
+      "continents": [
+        {
+          "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+          "name": "亞洲"
+        }
+      ]
+    }
+  ],
+  "collectionRelation": []
+}

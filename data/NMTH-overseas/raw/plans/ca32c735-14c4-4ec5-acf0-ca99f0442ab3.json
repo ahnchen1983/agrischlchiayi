@@ -1,0 +1,181 @@
+{
+  "planId": "ca32c735-14c4-4ec5-acf0-ca99f0442ab3",
+  "planNumber": "I-U-002",
+  "name": "99 年館藏美國 NARA 拷貝影帶數位轉製級分鏡表製作計畫",
+  "coverImgSrc": "eff5eb71-044b-4fad-8a4f-b66c4616b615",
+  "coverImgDesc": "",
+  "description": "本案係針對美國國家檔案館（Nara）所藏臺灣相關影音，以二次大戰的內容為主，包含第一，日文片：日本所製宣揚天皇及戰爭之影片；第二、英文片：內容第一部分是美國所製戰爭的進程報告，二次世界大戰（太平洋戰爭）各大戰役及重要事件的精華剪輯，第二部分是浪琴節目：政論性節目，均為冷戰時期的時局討論，而第三部分是台灣相關：含金門及台灣介紹；第三、 義大利語的影片：片中主要顯示日本侵略東南亞的歷程；第四、 中文影片：轉製序號 42、43，報導世界各地發生時事。第五、 無聲剪輯帶：主要為二次世界大戰之後的世界形勢；第六、 拍攝帶：主要為美軍援助越南的拍攝帶（台灣部份影像很少），不過於當時美軍於越南的行動部份與台灣相關，故仍收錄，總計64件。且為避免錯誤，均有對照Nara場記，並對照國內外各大歷史新聞相關網站。\r\n\r\n完成年份：2010年\r\n\r\n團隊成員\r\n計畫執行：光聚視覺創意影像創作",
+  "sourceType": "結案報告書",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaImage": "",
+  "publishTime": "2025-03-18T07:15:36.783",
+  "continent": [
+    {
+      "continentId": "623d1e73-eb63-4752-b7a4-ce3475160b8f",
+      "name": "美洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "b69731dc-7eb7-439c-83ff-3083080b4b74",
+      "title": "99 年館藏美國 NARA 拷貝影帶數位轉製及分鏡表製作採購案成果報告書",
+      "coverImgSrc": "dae6b8c4-53ec-4401-a88f-98573c7d5748.jpg",
+      "description": "本案係針對美國國家檔案館（Nara）所藏臺灣相關影音，以二次大戰的內容為主，包含第一，日文片：日本所製宣揚天皇及戰爭之影片；第二、英文片：內容第一部分是美國所製戰爭的進程報告，二次世界大戰（太平洋戰爭）各大戰役及重要事件的精華剪輯，第二部分是浪琴節目：政論性節目，均為冷戰時期的時局討論，而第三部分是台灣相關：含金門及台灣介紹；第三、 義大利語的影片：片中主要顯示日本侵略東南亞的歷程；第四、 中文影片：轉製序號 42、43，報導世界各地發生時事。第五、 無聲剪輯帶：主要為二次世界大戰之後的世界形勢；第六、 拍攝帶：主要為美軍援助越南的拍攝帶（台灣部份影像很少），不過於當時美軍於越南的行動部份與台灣相關，故仍收錄，總計64件。且為避免錯誤，均有對照Nara場記，並對照國內外各大歷史新聞相關網站。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"f0b81f46-db37-46bd-8946-9da47dc1250c\",\"Name\":\"美國國家檔案館\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "執行單位 / 光聚視覺創意影像創作",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "00289073-bf92-4b73-a020-36a44dcd068b",
+              "name": "結案報告書",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "f0b81f46-db37-46bd-8946-9da47dc1250c",
+              "name": "美國國家檔案館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "f5ba9737-73b4-4af2-9d91-47551458f01a",
+      "title": "美國國家檔案館藏影片清冊與資料",
+      "coverImgSrc": "6053fc05-30ee-4f30-8acc-20e73dde6c9f.jpg",
+      "description": "本案係99年館藏美國 NARA 拷貝影帶數位轉製及分鏡表製作採購案成果報告書附件，為美國國家檔案館（Nara）所藏臺灣相關影音，內容以二戰為主，計64件影片。",
+      "commissioningUnit": "國立臺灣歷史博物館",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [
+          "{\"Id\":\"f0b81f46-db37-46bd-8946-9da47dc1250c\",\"Name\":\"美國國家檔案館\"}"
+        ],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "執行單位 / 光聚視覺創意影像創作",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "ea25e92e-557d-4cf2-80ad-332752eb49ea",
+              "name": "藏品清單",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "f022f078-7cfb-4fcf-a56b-67d5f44501ec",
+              "name": "統計表",
+              "coverImgSrc": null,
+              "description": "CSV、Excel"
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "f0b81f46-db37-46bd-8946-9da47dc1250c",
+              "name": "美國國家檔案館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

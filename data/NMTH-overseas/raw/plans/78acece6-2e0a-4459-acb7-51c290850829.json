@@ -1,0 +1,2477 @@
+{
+  "planId": "78acece6-2e0a-4459-acb7-51c290850829",
+  "planNumber": "I-E-005",
+  "name": "19世紀西方台灣書寫史料翻譯整理計畫",
+  "coverImgSrc": "f7fe8e09-0c05-4152-99f6-b7ec5b104a76",
+  "coverImgDesc": "",
+  "description": "本計畫翻譯法文史料與英文史料。法文史料《法軍遠征福爾摩沙1884-1885》作者手稿及其附錄《法軍遠征福爾摩沙1884-1885 》地圖手繪稿，為法國軍官嘉諾（Eugène Germain Garnot）紀錄清法戰爭期間在雞籠、淡水、澎湖等地的見聞。此書為清法戰爭現存最詳盡的西文資料，1894年曾於法國出版，1960年由臺灣銀行經濟研究室出版中譯本《法軍侵台始末》，是研究清法戰爭臺灣之役的重要參考。此外，英文史料為臺灣自然史相關論文30篇，是英國博物學家史溫侯（Robert Swinhoe, 1836-1877，亦翻譯為郇和、斯文豪、士委諾）在19世紀中葉擔任英國駐臺領事期間所撰寫的，紀錄臺灣的自然生態與物產，是當時西方世界了解臺灣的重要資料。另外本案包含史溫侯所撰臺灣相關文章清單1份，是費德廉老師所整理的。\r\n\r\n完成年份：2020年\r\n\r\n計畫執行團隊\r\n內容力有限公司",
+  "sourceType": "結案報告書",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": null,
+  "metaDescription": null,
+  "metaImage": null,
+  "publishTime": null,
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "eac5b946-5bc2-46d0-86fe-03641dee8879",
+      "title": "福爾摩沙島紀行",
+      "coverImgSrc": "bd031920-d62e-49dd-91df-db264829af13.jpg",
+      "description": "本件是史溫侯在皇家亞洲學會（Royal Asiatic Society）華北分會學報發表的福爾摩沙島訪問紀，內容提到1858年6月搭乘英國軍艦「不屈號」（Inflexible）擔任隨船翻譯官， 乘船以逆時針方向從臺灣府開始繞行臺灣一圈。表面上，英國外交單位大費周章遣人繞島調查，是為了釐清史密斯（Smith）和奈（Nye）二人被臺灣土著滯留的傳聞。不過，本次航行目的不能視為英國官方尋人而已，應該要視為英國官方首次主動地，也是全面地探勘臺灣的海岸線，甚至登上了幾個離岸邊不遠的城鎮或村落，包含府城、枋寮、瑯橋灣、蘇澳港、雞籠港、滬尾和南岬。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "fd4e13e4-c4b7-431b-ae1a-10cdf636110d",
+      "title": "對〈廈門鳥類學〉的進一步更正與補充，以及對福爾摩沙鳥類的一些評註",
+      "coverImgSrc": "a7dc35af-c310-41c8-87ed-a004c95985be.jpg",
+      "description": "史溫侯補充廈門大部分的鳥類，都可以在島上找到。事實上，我在廈門收到的標本，其中大多數都來自福爾摩沙。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "f4bcbf39-9c96-4bfc-a003-10dc8d485fe2",
+      "title": "論在中國各地收集的爬蟲類與蝙蝠科動物",
+      "coverImgSrc": "e68bf1a7-8857-4515-bfb8-3f591edf9110.jpg",
+      "description": "史溫侯描述福爾摩沙的爬蟲類和蝙蝠類動物，包含革龜（Dermochelys coriacea （L.））、斯文豪氏攀蜥（Iapalura swinhoii, Günth. l. c.，目前學名 Diploderma swinhonis）、龜殼花（原文Trimeresurus mucrosquamatus （Cantor）; Günth. l. c.，目前學名Protobothrops mucrosquamatus）等18種爬蟲類。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "cf434dcf-1ef4-4991-92ae-11264f9ce54d",
+      "title": "史溫侯著作目錄",
+      "coverImgSrc": "f0145a49-0216-4752-838a-555932eb96cf.jpeg",
+      "description": "史溫侯1856至1877年間有關臺灣（福爾摩沙）的著作目錄，計有48篇。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / 費德廉(Douglas L. Fix)",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "7a4bdeb6-a611-4a02-8cfa-5f16749473d4",
+              "name": "南臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "ea25e92e-557d-4cf2-80ad-332752eb49ea",
+              "name": "藏品清單",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "79abe9f3-812c-44d4-b9fb-1be30bdc5774",
+      "title": "福爾摩沙四個新鳥種的描述，以及島上鳥類學的深入說明",
+      "coverImgSrc": "97440033-4e3a-450c-94c4-8f2ae65002cf.jpg",
+      "description": "羅伯特·史溫侯。〈福爾摩沙四個新鳥種的描述，以及島上鳥類學的深入說明〉（Descriptions of four new species of Formosan birds; with further notes on the ornithology of the island）。《英國鳥類科學期刊》卷6（1864年）第361-370頁。1864年3月25日撰於淡水。掃描檔。白耳畫眉（Kittacincla auricularis，目前學名 Heterophaisa auricularis）、白尾鴝（Myiomela montium，目前學名Myiomela leucura，為臺灣特有亞種）、黃腹琉璃（Cyornis vivida，目前學名Niltava vivida）、白頭鶇（Turdus albiceps，目前學名Turdus poliocephalus）、白琵鷺（Platalea major，目前學名Platalea leucorodia）與黑面琵鷺（Platalea minor）。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "77ea6a55-7513-4bb2-a377-21e64c958534",
+      "title": "福爾摩沙鳥類學",
+      "coverImgSrc": "8ef74324-138e-4275-ba7f-8fa735f30c6e.jpg",
+      "description": "史溫侯紀錄在福爾摩沙所發現的201種鳥類，敘述鳥類的名稱、所發現地域，以及牠們的體貌與習性。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "1b957a57-8d79-4010-9e27-22630f252561",
+      "title": "中國揚子江以南與福爾摩沙島的哺乳動物誌",
+      "coverImgSrc": "e8da8410-352e-416d-b1da-b61ca6214a97.jpg",
+      "description": "史溫侯紀錄福爾摩沙哺乳類，以下物種為可在福爾摩沙所見，臺灣獼猴（Macacus cyclopis，目前學名Macaca cyclopis）、臺灣鼴鼠（Talpa insularis）、福爾摩沙黑熊、鼬獾臺灣亞種（Helictis subaurantiaca，目前學名Melogale moschata subaurantiaca）、雲豹（Felis macrocelis, Temminck，目前學名Neofelis nebulosa）、漁貓（Felis viverrina, Bennett，目前學名Prionailurus viverrinus）、石虎（Felis chinensis，目前學名Prionailurus bengalensis）、麝香貓（Viverricula malaccensis, Gmelin）、赤腹松鼠（Sciurus castaneoventris，目前學名Callosciurus erythraeus）、大赤鼯鼠（Pteromys grandis，目前學名Petaurista petaurista）、溝鼠（Mus decumanus, Pall.，目前學名Rattus norvegicus）、玄鼠（Mus indicus, Geoffroy.，目前學名Rattus rattus）、刺鼠（Mus coxinga，目前學名Niviventer coninga）、臺灣野豬（Sus taivanus，目前學名Sus scrofa taivanus）、臺灣梅花鹿（Cervus Pseudaxis, Eydoux & Souleyet.，目前學名Cervus nippon taiouanus）、臺灣水鹿（Cervus （Rusa） swinhoii，目前學名Rusa unicolor swinhoei）臺灣野山羊（Capricornis swinhoii，目前學名Capricornis swinhoei），全部名單總計82種。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "0f458a25-2b1c-4c28-8210-44381b364181",
+      "title": "福爾摩沙的宣紙",
+      "coverImgSrc": "4b4f55a5-433f-4b9a-aace-428edef6c16d.jpg",
+      "description": "史溫侯描述用來製作蓪草紙（宣紙）的植物應該是植物學家稱之為蓪草（Aralia papyrifera，目前學名 Tetrapanax papyriferus）的植物。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "68059959-79f7-4aca-b4bd-46d5126594d5",
+      "title": "臺史博藏《法軍遠征福爾摩沙 1884-1885》地圖手稿",
+      "coverImgSrc": "bdba68be-c9f5-4f8d-8004-41cd13397f24.jpg",
+      "description": "法國非洲軍團上尉嘉諾（Eugène Germain Garnot, Captain Garnot）在《法軍遠征福爾摩沙 1884-1885》（L’Expédition française de Formose, 1884-1885）手稿隨附了10張手繪彩色地圖，以視覺化方式說明各個戰場的地形地貌、兩軍佈陣及交鋒動態，包含1幅福爾摩沙暨離島地圖，1幅北臺灣地圖、6幅基隆地區地圖，1幅淡水港地圖及1幅澎湖地圖。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": [
+          "{\"Id\":\"0b399bd0-887e-4010-ae7b-8cc810c3b5cd\",\"Name\":\"法國國家圖書館\"}"
+        ]
+      },
+      "supplementaryExplanation": "製作者 / Eugène Germain Garnot",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "8ac20695-1d84-4547-8440-514d0781171d",
+              "name": "圖片檔",
+              "coverImgSrc": null,
+              "description": "jpg"
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "ccd47c7c-1869-4814-9b55-51bd9e99bd9d",
+              "name": "地圖",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "0b399bd0-887e-4010-ae7b-8cc810c3b5cd",
+              "name": "法國國家圖書館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "6bff9f26-4f1d-4413-8ab1-5055d61b2bf1",
+      "title": "福爾摩沙島植物誌",
+      "coverImgSrc": "5f0fe383-b138-448b-b857-6e81f5c8ac84.jpg",
+      "description": "紀錄史溫侯在福爾摩沙採集到246種植物的清單；植物標本存放於倫敦邱園標本館。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "783700e8-8b0e-4eb6-83fb-53efb73de651",
+      "title": "福爾摩沙的樟腦",
+      "coverImgSrc": "33dbb9b3-c93d-40b5-99fc-7094adf1c0f9.jpg",
+      "description": "史溫侯描述福爾摩沙的樟腦被少數人壟斷，以及在這個壟斷體系的商業運作模式。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "6f44f1f0-b929-49dc-bf70-5c98dc17865e",
+      "title": "福爾摩沙自然史筆記",
+      "coverImgSrc": "0b5c13be-0496-4fed-a260-de74070edd9f.jpg",
+      "description": "史溫侯描述福爾摩沙水生生物，包含在海洋生活的物種以及在溪流生活的物種，有白海豚（white porpoise）、魚鷹（osprey）、蝸牛屬（Helix）、淡水螺貝（Melania屬）、國姓螺（Koksing Shell）、南露脊鯨（Blaena australis，目前學名Eubalaena australis），並且敘述東亞漁民捕鯨的技術。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "cec72c4a-25e6-46f4-af45-75645434ec0b",
+      "title": "福爾摩沙島新鳥種紀錄",
+      "coverImgSrc": "455f5117-a8b6-41b7-8a12-2d802df394e6.jpg",
+      "description": "介紹8種鳥類的物理特徵、習性與土名，棕扇尾鶯Calamanthella tinnabulans）、黃頭扇尾鶯（Calamanthella volitans）、斑紋鷦鶯、福爾摩沙河烏（Hydrobata marila，目前學名Cinclus pallasi）、畫眉（Garrulax Taewanus） 、小彎嘴（Pomatorrhinus musicus，目前學名Pomatorhinus musicus）、番鵑（Centropus dimidiatus，目前學名 Centropus bengalensis）、玄燕鷗（Anöus pileatus，Scop.）",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "26659313-aecf-47e3-ad8a-772f39748ac3",
+      "title": "福爾摩沙領事史溫侯致信葛雷博士之信件節錄",
+      "coverImgSrc": "50574025-86c9-4a70-a8e0-c8de2b241075.jpg",
+      "description": "史溫侯寫信介紹福爾摩沙的哺乳類，包含大靈貓（Viverra ashtoni, n. sp，目前學名Viverra zibetha）、臺灣獼猴（Macacus cyclopis）、臺灣黑熊、臺灣雲豹（Leopardus brachyurus）、白鼻心（Paguma larvata）、蝙蝠科（Vespertilionidae）、野豬（Porcula taivana，目前學名Sus scrofa）、歐亞水獺（Lutra nair，目前學名 Lutra lutra）、臺灣穿山甲（Manis brachyurus，目前學名 Manis pentadactyla pentadactyla？）、臭鼩（Sorex myorurus，中國麝鼠）、溝鼠 （Mus decumanus）、家鼷鼠（Mus musculus，家鼠）、臺灣刺鼠（Mus coninga，目前學名Niviventer coninga）。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "abd05f27-1007-44b9-a1d4-795a186c2237",
+      "title": "福爾摩沙島紀事",
+      "coverImgSrc": "4049fd74-1de7-4128-b603-ce97db23f9a2.jpg",
+      "description": "第一個重要主題是福爾摩沙的地理位置和地緣關係，但調查方式不對，嚴重影響英國在此的貿易。第二個重要主題則是中國墾民（Chinese colonisation）（中國人的殖民似乎不太像正式的殖民統治，而是中國人對福爾摩沙原住民（aborigines）的侵略），這議題影響了中國的中央政府以及這塊殖民地的關係及其貿易願景。第三點則是福爾摩沙的原住民（aborigines）族群。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "883a44d3-c07a-4efe-876f-81d54ec12cb0",
+      "title": "史溫侯的福爾摩沙自然史",
+      "coverImgSrc": "ccd44ead-1e5d-4f55-b680-51baf130f0ca.jpg",
+      "description": "本文為他人撰述史溫侯作為福爾摩沙自然史研究權威，包含地理環境、18種哺乳動物、201種鳥類、15種爬蟲類、246種植物，另外也提及史溫侯聘僱了30名隨從專門負責採集鳥類標本的工作，另外6名隨從則是花了好幾個月製作剝製鳥類標本，",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Anon",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "98bf60ec-faf3-4258-b0f2-91af268edb17",
+      "title": "福爾摩沙概述",
+      "coverImgSrc": "4babd550-0045-410c-b590-e6661a89d989.jpg",
+      "description": "史溫侯紀錄1860年底擔任副領事一職，從打狗到臺灣府陸路前行的所見所聞，隨行者普魯士的馬龍(Hermann Maron)。以及1861年底與1862年在淡水的經歷，包含爬觀音山。本文內容1863年出版的〈福爾摩沙筆記〉（Notes on the island of Formosa）相同。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "113789de-449e-499b-86f2-93f1cf2547fb",
+      "title": "論福爾摩沙的一個新鳥種",
+      "coverImgSrc": "1a853680-1e04-4b10-a0ab-1ad19a064e24.jpg",
+      "description": "史蒂瑞博士（Dr. Steere）在福爾摩沙發現了藪眉屬（Liocichla），命名為黃胸藪眉（Liocichla steerii），寄給史溫侯確認。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "424513cf-6241-47fd-ada0-96df5c9ccbbd",
+      "title": "致英國鳥類科學期刊編輯",
+      "coverImgSrc": "c24c9d13-6102-40af-8e79-e1d4d3b03dce.jpg",
+      "description": "史溫侯描述攝影師愛德華茲先生（Mr. Edwards）從鄰近山區返回後，帶回了一些傀儡番人的照片，也帶回了一張臺灣藍鵲（Urocissa caerulea）的毛皮。以及助手所提供的綠鳩（Green Dove）、麻鷺（Tiger-Bittern，學名為 Gorsachius goisagi）。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "6eb8aaf2-b72b-49b7-80bc-a0c662f0ba5b",
+      "title": "福爾摩沙16種新鳥種描述，由皇家副領事羅伯特・史溫侯騎士於福爾摩沙採集",
+      "coverImgSrc": "358e6a2a-15fb-400f-b8fb-01941532b2c5.jpg",
+      "description": "顧爾德紀錄16種史溫侯提供的福爾摩沙新鳥種的資訊，包含赤腹山雀（Parus castaneoventris, Gould.，目前學名Sittiparus castaneoventris）、頭烏線（Alcipper brunnea, Gould.，目前學名Schoeniparus brunneus）、臺灣紫嘯鶇（Myiophoneus insularis, Gould.，目前學名 Myophonus insularis）、臺灣白喉噪眉（Garrulax ruficeps, Gould.，目前學名 Ianthocincla ruficeps）、棕噪眉（Garrulax poecilirhyncha, Gould.，目前學名 Ianthocincla poecilorhyncha）、大彎嘴（Pomatorhinus erythrocnemis, Gould. ，目前學名Megapomatorhinus erythrocnemis）、紅嘴黑鵯臺灣亞種（Hypsipetes nigerrima, Gould，目前學名Hypsipetes leucocephalus）、灰喉山椒（Pericrocotus griseogularis, Gould，目前學名Pericrocotus solaris）、松鴉臺灣亞種（Garrulus taivanus, Gould，目前學名Garrulus glandarius taivanus）、臺灣藍鵲（Urocissa caerulea, Gould.）、五色鳥（Megalaema nuchalis, Gould，目前學名 Psilopogon nuchalis）、大赤啄木臺灣亞種（Picus insularis, Gould，目前學名Dendrocopos leucotos insularis）、綠啄木臺灣亞種（Gencinus tancolo, Gould，目前學名Picus canus tancolo）、藍腹鷴（Euplocamus swinhoii, Gould，目前學名Lophura swinhoii ）、竹雞屬（Genus Bambusicola, Gould）、臺灣竹雞（Bambusicola sonorivox, Gould）、黦鷸（Numennius rufescen, Gould，目前學名Numenius madagascariensis）、雌性藍馬雞（Crossoptilon auritum, Pallas）",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / John Gould",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "b700e73f-cd54-4253-b58c-b380f38b38e9",
+      "title": "福爾摩沙筆記",
+      "coverImgSrc": "47e7cfd3-bdbf-4468-9d94-b95a150ccac9.jpg",
+      "description": "史溫侯紀錄1860年底擔任副領事一職，從打狗到臺灣府陸路前行的所見所聞，隨行者普魯士的馬龍(Hermann Maron)。以及1861年底與1862年在淡水的經歷，包含爬觀音山。內容與1864和1865年陸續出版的〈福爾摩沙概述〉（General description of the island of Formosa）同。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "9363fe10-7487-4a99-91db-b77b2d9e8e59",
+      "title": "福爾摩沙海岸上的香山之旅",
+      "coverImgSrc": "6f38e943-b9ca-4e48-b258-82bc0bd9842d.jpg",
+      "description": "史溫侯撰寫1856年3月於新竹香山的考察過程，唯分析全文可見，「樟腦」是郇和此行的調查主軸。在即將入港之前，郇和以聞到濃濃的樟腦味作為引子，暗示此處的樟腦產業應十分活絡。順利登岸之後，史溫侯拜訪當地的樟腦商人，包含一位壟斷樟腦貨源的貿易商，以及一位協助西洋人購買樟腦的銀師。就史溫侯與腦商、銀師的談話內容， 可知史溫侯欲購買樟腦，更想進入樟腦林一探究竟。不過，腦商予以否決，史溫侯赴香山購買樟腦，最終失敗而歸。 至於史溫侯到訪香山的動機，有可能是為了未來英國在臺開港通商做準備，但是英國外交部檔案隻字未提這次的香山之行。因此，史溫侯亦有可能為了滿足個人來臺經商的私慾，才特地來到新竹香山考察樟腦。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "2ad9dad5-fe69-49b3-8a8e-babe84951f73",
+      "title": "史溫侯先生來信",
+      "coverImgSrc": "05662843-b827-4be1-8564-0d80a6865d84.jpg",
+      "description": "史溫侯剛從福爾摩沙回到英格蘭，獲得新種藍鵲（Urocissa）、新種擬啄木（Megalaema，目前屬名Psilopogon）、兩種鉤嘴鶥（Pomatorhini ，目前屬名Pomatorhinus）、三種噪鶥（Garrulaxes）、一種山鷓鴣（Arboricola），雄性與雌性均有，另外有描述尼泊爾的朱鸝（P. traillii）。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "9f3786ac-22ab-49a2-8f38-bf379348acae",
+      "title": "史溫侯在中國與福爾摩沙所採集的十種陸域與淡水貝類的新種描述",
+      "coverImgSrc": "d9d52978-cc52-476d-bb31-a9ee9caa0671.jpg",
+      "description": "作者描述史溫侯發現的貝類，以下物種為可在福爾摩沙所見，白高腰蝸牛（Helix （Satsuma） albida）, H. Ad.，目前學名 Satsuma albida）、臺灣山蝸牛（Cyclotus taivanus），全部名單總計10種。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Henry Adam",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "08507e48-0b69-4ab2-985f-d293fa2ab062",
+      "title": "福爾摩沙爬蟲類動物名錄；以及對少數物種與一種魚類（翻車魨屬）的評註",
+      "coverImgSrc": "1af8917e-eb1b-49b6-a71e-ca1f9f887153.jpg",
+      "description": "史溫侯在福爾摩沙取得了15種爬行類，這些爬行類已經存放在大英博物館，包含陸龜、蜥蜴和蛇類。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "8b97dd19-e4e8-4c97-9081-d3ed134daacc",
+      "title": "中國與其島嶼之鳥類目錄修正版，包括新種描述、過往注釋參照與評註",
+      "coverImgSrc": "d6d0b6f1-84be-43cf-be94-fbf730b56b88.jpg",
+      "description": "史溫侯補充中國沿海與附近島嶼所見鳥種，以下物種為可在福爾摩沙所見，朱鸝臺灣亞種（Psaropholus ardens, Swinh.，目前學名Oriolus traillii）白肩鵰（Aquila bifasciata, J. E. Gray.，目前學名Aquila heliaca）、東方鵟（Buteo asiaticus, Lath.）、熊鷹（Spizaetus nipalensis, Hodgs.，目前學名Nisaetus nipalensis）、大冠鷲（Spilornis cheela, Daud.）、魚鷹（Pandion haliaetus, L.）、遊隼（Falco peregrinus, L.）、紅隼（Tinnunculus alaudarius, var. japonicus.，目前學名Falco tinnunculus）、黑鳶南亞亞種（Milvus govinda, Sykes，目前學名Milvus migrans）、鳳頭蒼鷹（Lophospiza trivirgata, Cuv.，目前學名Accipiter trivirgatus）、鵂鶹臺灣亞種（Athene pardalota，目前學名Glaucidium brodiei pardalotum）、褐鷹鴞（Ninox japonica, Temm. et Schleg.）、黃嘴角鴞臺灣亞種（Lempijius hambroecki，目前學名Otus spilocephalus hambroecki）、褐林鴞臺灣亞種（Bulaca nemvarensis, Hodgs.，目前學名Strix leptogrammica caligata）、東方草鴞（Strix candida, Tickell，目前學名Tyto longimembris）、南亞夜鷹臺灣亞種（Caprimulgus stictomus，目前學名Caprimulgus affinis stictomus）、小雨燕（Cypselus subfurcatus, Blyth，目前學名Apus nipalensis）、家燕白腹亞種（Hirundo gutturalis, Scop.，目前學名Hirundo rustica gutturalis）、赤腰燕（Cecropis striolata, Temm. & Schleg.）、赤翡翠（Halcyon coromandeliana, Scop.，目前學名Halcyon coromanda）、棕扇尾鶯（Cisticola schoenicola, Bp.，目前學名Cisticola juncidis）、黃頭扇尾鶯臺灣亞種（Cisticola volitans, Swinh.，目前學名Cisticola exilis volitans）、遠東樹鶯（Herbivox minuta，目前學名Horornis canturians）、短尾鶯（Tribura squamiceps, Swinhoe，目前學名Urosphena squameiceps、黑喉鴝（Pratincola indica, Blyth，目前學名Saxicola maurus）、青背山雀臺灣亞種（Parus insperatus, Swinh.，目前學名Parus monticolus insperatus）、赤腹山雀（Parus castaneoventris, Gould，目前學名Sittiparus castaneoventris）、東方黃鶺鴒黃眉亞種（Budytes taivanus, Swinh.，目前學名Motacilla tschutschensis taivana）、赤腹鶇（Turdus chrysolaus, Temm.）、白眉鶇（Turdus obscurus, Gmel.）、藍磯鶇棕腹亞種（Petrocincla manilla, Bodd.，目前學名Monticola solitarius philippensis）、 白耳畫眉（Sibia auricularis, Swinh.，目前學名Heterophasia auricularis）、小彎嘴（Pomatorhinus musicus, Swinh.）、臺灣白喉噪鶥（Garrulax ruficeps, Gould，目前學名 Ianthocincla ruficeps）、粉紅鸚嘴臺灣亞種（Suthora bulomachus，Swinh.，目前學名Sinosuthora webbiana bulomacha）、朱鸝臺灣亞種（Psaropholus ardens, Swinh.，目前學名Oriolus traillii），全部名單總計675種。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "7e6ea6ba-5662-410c-afcc-d515ccbee8ee",
+      "title": "臺史博藏《法軍遠征福爾摩沙1884-1885》回憶錄手稿",
+      "coverImgSrc": "745398b3-88c9-4579-ba1f-ed820f6a072c.jpg",
+      "description": "本件《法軍遠征福爾摩沙 1884-1885》（L’Expédition française de Formose, 1884-1885）為國立臺灣歷史博物館藏品。法國非洲軍團上尉嘉諾（Eugène Germain Garnot, Captain Garnot）描述在基隆、澎湖與淡水的所見所聞，是目前已知有關清法戰爭最為詳盡的紀錄，1894年在法國出版。書中使用大量的官方文書（如孤拔中將和其他軍官的報告、與法國政府的電報、指令、備忘 錄等）、報刊、私人文件等史料，並參考戰役期間在凱旋號 （Triomphante）上服役的莫里斯． 盧瓦（Maurice Loir, 1852-1924） 撰寫的《孤拔上將的艦隊》（L’Escadre de l’Amiral Courbet）。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ]
+      },
+      "supplementaryExplanation": "作者 / Eugène Germain Garnot",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "02388910-e448-457a-b53f-ea1b2ce2ae46",
+      "title": "史溫侯先生在1862年1月17日寫的信",
+      "coverImgSrc": "db7b0cff-b9ab-4346-9bae-1f09a678a302.jpg",
+      "description": "史溫侯紀錄之前在廈門、澳門等地鳥類觀察。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "b6da15ea-b304-4e92-a1b2-eb07433ed8fd",
+      "title": "福爾摩沙島紀事",
+      "coverImgSrc": "e7c14810-3ee6-472a-a43d-d968f73602f8.jpg",
+      "description": "史溫侯撰寫福爾摩沙的地理環境與作物，包含稻米、糖、黃麻、苧麻纖維、蓪草紙、藤、大麥與小麥、樟腦。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "b4c71dab-c9f9-4d5c-bbd7-f19b8f606bfa",
+      "title": "論福爾摩沙的新種老鼠",
+      "coverImgSrc": "60c36ce0-10e6-4901-a166-3ca2434b64b8.jpg",
+      "description": "史溫侯撰文介紹臺灣刺鼠（Mus coninga，目前學名 Niviventer coninga）",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "8565270b-9f66-4288-905f-f4dcad0d45bf",
+      "title": "福爾摩沙補遺",
+      "coverImgSrc": "91404540-5cc3-46d1-9c4b-eeca48941394.jpg",
+      "description": "史溫侯描述1865年福爾摩沙東北部的訪問，以蘇澳灣、龜山島周遭為主，聚焦當地漢人與原住民的衝突與相處；福爾摩沙西南部部分，訪問了瑯嶠灣。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "fbcec3ef-5393-4ae7-b3a8-20c49ccdb5dc",
+              "name": "東臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "7a4bdeb6-a611-4a02-8cfa-5f16749473d4",
+              "name": "南臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "37be7594-782a-45de-937c-ff8928362f67",
+      "title": "福爾摩沙民族學評註",
+      "coverImgSrc": "7d032d0d-d1cf-45bb-aebb-4d87bb5d11f1.jpg",
+      "description": "史溫侯指出福爾摩沙及周邊附屬地區住著兩個種族──明顯屬於馬來人種的野蠻原住民（aborigines）及其後裔，包含平埔族（Pepos）、傀儡番（Kalees）、生番（Chin hwan）；以及屬於蒙古人種、精於商業（commercially-civilized）的中國墾民。本文敘述1862年中考察福爾摩沙南部地區的原住民。",
+      "commissioningUnit": "",
+      "publishingUnit": "",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "作者 / Robert Swinhoe",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "7a4bdeb6-a611-4a02-8cfa-5f16749473d4",
+              "name": "南臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "424d004c-586b-4f89-b760-6b5279f4d5b8",
+              "name": "檔案與文獻",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

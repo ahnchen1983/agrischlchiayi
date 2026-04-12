@@ -1,0 +1,102 @@
+{
+  "planId": "69a054a3-fda6-42dc-9ff6-6c929ea59721",
+  "planNumber": "P-E-004",
+  "name": "十七世紀北臺灣的西班牙帳簿第一冊 (1626-1633)",
+  "coverImgSrc": "cd92abc1-0430-40b1-b786-d33fce2925f6",
+  "coverImgDesc": "",
+  "description": "本書收錄了西班牙殖民菲律賓時期馬尼拉當地財政人員所記錄的帳簿，此類會計室檔案史料重要性在於，1可見626 至 1642 年西班牙人佔領北臺灣期間,派遣船隻從馬尼拉載員運貨前往北臺灣援助,這些開銷與派駐人員的資料,以及船隻往返兩地等內容。其中，內含1000多份關於北臺灣的珍貴文件,去除一些重複相同的文件,計有800多份的手稿，共有十五大捆卷宗,編號從 AGI, Contaduría, 1211 至 AGI, Contaduría, 1225A,文件形成的年代從西班牙人佔領北臺灣的1626年到退出北臺灣後的1645年，而本書整理收錄了自1626年到1633年之間的帳簿文件。透過這批資料，足見往1. 返北臺灣的船隻、2. 西班牙當局與福建官員交涉讓福建商船到北臺灣的過程、3派往北臺灣的人員與族群、4.北臺灣堡壘的興築、5.北臺灣與馬尼拉的貿易情形、6.投入的人力與財力、7.西班牙的亞洲-太平洋貿易網絡、8.海外小人物的生命史等議題。\r\n\r\n完成年份：2017年\r\n\r\n編譯團隊\r\n譯註傳抄/方眞眞\r\n協譯/方淑如\r\n\r\n出版單位\r\n國立臺灣歷史博物館",
+  "sourceType": "史料出版品",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaImage": "",
+  "publishTime": "2025-03-18T07:15:36.783",
+  "continent": [
+    {
+      "continentId": "a92fb5a9-5494-42c8-aa67-65d7579ef06d",
+      "name": "歐洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "2a89c17f-eb10-42a7-8f46-4de8e660a77b",
+      "title": "十七世紀北臺灣的西班牙帳簿 第一冊 ( 1626- 1633)",
+      "coverImgSrc": "b7fa13a2-4736-4abf-b9e6-4cb92e50ff4a.jpg",
+      "description": "本書收錄了西班牙殖民菲律賓時期馬尼拉當地財政人員所記錄的帳簿，此類會計室檔案史料重要性在於，1可見626 至 1642 年西班牙人佔領北臺灣期間,派遣船隻從馬尼拉載員運貨前往北臺灣援助,這些開銷與派駐人員的資料,以及船隻往返兩地等內容。其中，內含1000多份關於北臺灣的珍貴文件,去除一些重複相同的文件,計有800多份的手稿，共有十五大捆卷宗,編號從 AGI, Contaduria, 1211 至 AGI, Contaduria, 1225A,文件形成的年代從西班牙人佔領北臺灣的1626年到退出北臺灣後的1645年，而本書整理收錄了自1626年到1633年之間的帳簿文件。透過這批資料，足見往1. 返北臺灣的船隻、2. 西班牙當局與福建官員交涉讓福建商船到北臺灣的過程、3派往北臺灣的人員與族群、4.北臺灣堡壘的興築、5.北臺灣與馬尼拉的貿易情形、6.投入的人力與財力、7.西班牙的亞洲-太平洋貿易網絡、8.海外小人物的生命史等議題。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": [
+          "{\"Id\":\"63d82f2f-67bc-493b-98f6-86adf506418f\",\"Name\":\"西班牙賽維亞(Sevilla)印地安斯檔案館\"}"
+        ]
+      },
+      "supplementaryExplanation": "譯者/ 方眞眞、方淑如",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "0a959836-459f-4935-a13f-14431d7a204d",
+              "name": "北臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "63d82f2f-67bc-493b-98f6-86adf506418f",
+              "name": "西班牙賽維亞(Sevilla)印地安斯檔案館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "2a6c46a7-0cb5-4be6-83f9-fceb0695d39e",
+              "name": "1600-1699",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

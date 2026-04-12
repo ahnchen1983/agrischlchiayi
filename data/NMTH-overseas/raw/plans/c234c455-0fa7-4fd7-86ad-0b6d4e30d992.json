@@ -1,0 +1,193 @@
+{
+  "planId": "c234c455-0fa7-4fd7-86ad-0b6d4e30d992",
+  "planNumber": "P-E-010",
+  "name": "《福爾摩沙詳盡的地理與歷史》編譯出版計畫 ",
+  "coverImgSrc": "e5f29a9d-7f63-4089-a607-dc24948602cf",
+  "coverImgDesc": "",
+  "description": "《福爾摩沙詳盡的地理與歷史》是西班牙道明會神父白若瑟（P. José Maria Álvarez）1930年所完成之2大冊專書，是西班牙語系世界第一部以臺灣為主題的研究專著，此次亦為國內首次的全書中文翻譯。白神父在1895年抵臺傳教，1897至1899年間負責彰化羅厝教務，之後奉派到日本。白神父在臺期間剛好是臺灣政權交替的初期，他見證了當時臺灣社會的轉變，他廣泛搜集閱讀與臺灣相關的書籍與文獻資料，成為日後寫作《福爾摩沙詳盡的歷史與地理》一書的基礎。這二大冊的臺灣史地專書，不只對於臺灣的歷史與地理，內容包含甚廣，舉凡氣候、動植物、風俗文化、種族、宗教、礦產、經濟等，皆有所交代。除文字外，書內還附有160餘張關於臺灣各項主題之照片，藉由這次的出版，許多照片也是首次得見。\r\n\r\n完成年份：2017年\r\n\r\n編譯團隊\r\n原著/白若瑟神父（P. José Maria Álvarez）\r\n譯註/黃建龍、柳嘉信、石雅如、林芳旭、葉子銘、陳岱鈴 \r\n審稿/方真真、林盛彬\r\n校註、導讀/翁佳音\r\n\r\n出版單位\r\n國立臺灣歷史博物館",
+  "sourceType": "史料出版品",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaImage": "",
+  "publishTime": "2025-03-18T07:15:36.783",
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "92a746da-c764-4f76-9fd5-9be004fef3e7",
+      "title": "福爾摩沙詳盡的地理與歷史第二冊*O-2",
+      "coverImgSrc": "805ee77f-1754-4730-bac7-79593f71b130.jpg",
+      "description": "此書是西班牙道明會神父白若瑟（P. Jose Maria Alvarez）1930年所完成之2大冊專書，是西班牙語系世界第一部以臺灣為主題的研究專著，此次亦為國內首次的全書中文翻譯。白神父在1895年抵臺傳教，1897至1899年間負責彰化羅厝教務，之後奉派到日本。白神父在臺期間剛好是臺灣政權交替的初期，他見證了當時臺灣社會的轉變，他廣泛搜集閱讀與臺灣相關的書籍與文獻資料，成為日後寫作《福爾摩沙詳盡的歷史與地理》一書的基礎。這二大冊的臺灣史地專書，不只對於臺灣的歷史與地理，內容包含甚廣，舉凡氣候、動植物、風俗文化、種族、宗教、礦產、經濟等，皆有所交代。除文字外，書內還附有160餘張關於臺灣各項主題之照片，藉由這次的出版，許多照片也是首次得見。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ]
+      },
+      "supplementaryExplanation": "原作/ 白若瑟神父（P. José Maria Álvarez）\n譯者/ 黃建龍\n導讀/ 翁佳音\n其他/ 方眞眞、林盛彬\n譯註/ 黃建龍、柳嘉信、石雅如、林芳旭、葉子銘、陳岱鈴",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "48ba811d-fc3a-4184-82f9-e01434c8477c",
+      "title": "福爾摩沙詳盡的地理與歷史第一冊*O-1",
+      "coverImgSrc": "c32a0924-72c1-404c-a963-1af89b4c6390.jpg",
+      "description": "此書是西班牙道明會神父白若瑟（P. Jose Maria Alvarez）1930年所完成之2大冊專書，是西班牙語系世界第一部以臺灣為主題的研究專著，此次亦為國內首次的全書中文翻譯。白神父在1895年抵臺傳教，1897至1899年間負責彰化羅厝教務，之後奉派到日本。白神父在臺期間剛好是臺灣政權交替的初期，他見證了當時臺灣社會的轉變，他廣泛搜集閱讀與臺灣相關的書籍與文獻資料，成為日後寫作《福爾摩沙詳盡的歷史與地理》一書的基礎。這二大冊的臺灣史地專書，不只對於臺灣的歷史與地理，內容包含甚廣，舉凡氣候、動植物、風俗文化、種族、宗教、礦產、經濟等，皆有所交代。除文字外，書內還附有160餘張關於臺灣各項主題之照片，藉由這次的出版，許多照片也是首次得見。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": [
+          "{\"Id\":\"3dfde3df-d526-4c55-97bc-8cacf9d5623c\",\"Name\":\"國立臺灣歷史博物館\"}"
+        ]
+      },
+      "supplementaryExplanation": "原作/ 白若瑟神父（P. José Maria Álvarez）\n譯者/ 黃建龍\n導讀/ 翁佳音\n其他/ 方眞眞、林盛彬\n譯註/ 黃建龍、柳嘉信、石雅如、林芳旭、葉子銘、陳岱鈴",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "f19440dd-e553-4a25-85bf-63e2a8e7ab7c",
+          "name": "文物描述地點",
+          "subCategories": [
+            {
+              "subCategoryId": "5b7082a2-5bf2-4e9d-af21-312fb4c76138",
+              "name": "全臺灣",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "4814e6c7-0931-4671-b57e-6f492c35b6b1",
+              "name": "1900-1999",
+              "coverImgSrc": null,
+              "description": ""
+            },
+            {
+              "subCategoryId": "c67a9b15-6b66-44be-83e9-7f37860db83b",
+              "name": "1800-1899",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "9c3c60f0-ac9c-4c34-a34f-3a354321eff7",
+          "name": "典藏機構",
+          "subCategories": [
+            {
+              "subCategoryId": "3dfde3df-d526-4c55-97bc-8cacf9d5623c",
+              "name": "國立臺灣歷史博物館",
+              "coverImgSrc": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-04-12T04:07:15.431592+00:00",
+  "source": "https://taiwanoverseas.nmth.gov.tw",
+  "peerName": "國立臺灣歷史博物館 — 海外史料看臺灣",
+  "peerId": "nmth-overseas",
+  "counts": {
+    "plans": 12,
+    "collections": 51,
+    "seedPlanUuids": 12,
+    "discoveredPlanUuids": 0
+  },
+  "distributions": {
+    "timePeriods": {
+      "1600-1699": 1,
+      "1800-1899": 41,
+      "1900-1999": 9,
+      "2010-2019": 5
+    },
+    "resourceTypes": {
+      "檔案與文獻": 32,
+      "出版計畫": 9,
+      "結案報告書": 5,
+      "書籍與小冊子": 2,
+      "藏品清單": 2,
+      "地圖": 1
+    },
+    "languages": {
+      "中文 (TRANSLATION)": 44,
+      "英文 (ORIGINAL)": 32,
+      "中文 (ORIGINAL)": 7,
+      "法文 (ORIGINAL)": 5,
+      "西班牙文 (ORIGINAL)": 5,
+      "日文 (ORIGINAL)": 2,
+      " (TRANSLATION)": 1
+    },
+    "locations": {
+      "全臺灣": 29,
+      "北臺灣": 6,
+      "南臺灣": 5,
+      "中臺灣": 2,
+      "東臺灣": 1
+    }
+  },
+  "planIndex": {
+    "3145b874-860e-488e-8d2e-f2aef9e57f31": {
+      "number": "I-J-005",
+      "name": "日本東京外國語大學臺灣音像資料調查計畫",
+      "collectionCount": 0
+    },
+    "784a8fe1-2eda-4a2a-884e-03fac0904b5a": {
+      "number": "I-J-001",
+      "name": "日本（東京及關西為主）所藏 1895 至 1959 年間臺灣相關影片及聲音類資料館藏調查計畫",
+      "collectionCount": 0
+    },
+    "0e501608-203e-468c-a2cd-86855e53afdb": {
+      "number": "I-J-009",
+      "name": "日本所藏臺灣近代政治社會運動資料蒐集及翻譯整理計畫",
+      "collectionCount": 0
+    },
+    "69a054a3-fda6-42dc-9ff6-6c929ea59721": {
+      "number": "P-E-004",
+      "name": "十七世紀北臺灣的西班牙帳簿第一冊 (1626-1633)",
+      "collectionCount": 0
+    },
+    "043ad591-881c-4e40-bd0d-73568fca0673": {
+      "number": "I-E-004",
+      "name": "西班牙文、法文臺灣資料蒐集與翻譯計畫",
+      "collectionCount": 0
+    },
+    "78acece6-2e0a-4459-acb7-51c290850829": {
+      "number": "I-E-005",
+      "name": "19世紀西方台灣書寫史料翻譯整理計畫",
+      "collectionCount": 0
+    },
+    "56c6b0e6-55f3-48cf-bd58-f7a2a9f12f64": {
+      "number": "P-U-003",
+      "name": "李仙得臺灣紀行",
+      "collectionCount": 0
+    },
+    "e640fb93-bbd1-4053-8347-38c9ebb295dc": {
+      "number": "P-J-003",
+      "name": "乙未之役史料編譯出版計畫",
+      "collectionCount": 0
+    },
+    "a84fd3a9-88ec-48f3-b3d4-2c9f7089b597": {
+      "number": "P-E-014",
+      "name": "《福爾摩沙之歷史與地誌》編譯研究計畫",
+      "collectionCount": 0
+    },
+    "c234c455-0fa7-4fd7-86ad-0b6d4e30d992": {
+      "number": "P-E-010",
+      "name": "《福爾摩沙詳盡的地理與歷史》編譯出版計畫 ",
+      "collectionCount": 0
+    },
+    "7a5f55e3-dcfa-4bce-8b27-7da8d61a9bd2": {
+      "number": "P-J-002",
+      "name": "乙未之役隨軍見聞錄",
+      "collectionCount": 0
+    },
+    "ca32c735-14c4-4ec5-acf0-ca99f0442ab3": {
+      "number": "I-U-002",
+      "name": "99 年館藏美國 NARA 拷貝影帶數位轉製級分鏡表製作計畫",
+      "collectionCount": 0
+    }
+  }
+}

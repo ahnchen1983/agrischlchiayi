@@ -1,0 +1,235 @@
+{
+  "planId": "e640fb93-bbd1-4053-8347-38c9ebb295dc",
+  "planNumber": "P-J-003",
+  "name": "乙未之役史料編譯出版計畫",
+  "coverImgSrc": "f356d087-4153-4944-b845-d827659cc963",
+  "coverImgDesc": "",
+  "description": "《乙未之役資料彙編》叢書計有4本。1895 年乙未之役為臺灣歷史上最大規模的全島性戰役，臺灣人為抗拒馬關條約後割讓日本，組建「臺灣民主國」，抗拒日軍的接收。另一方面從史料上可知，臺灣人為求安定，並認為日本為合法接收，而傾向協助日本接收臺灣。在政權輪替之際，臺灣島上的人民面臨數百年來未有之變局，有選擇接受、有協力、有抵抗，也有逃難（臺語俗諺即有「走番仔反」一詞）。臺史博依照不同語言別，分別出版中文、英文與日文編。\r\n\r\n乙未之役資料彙編 （一）＿乙未之役中文史料\r\n完成年份：2015年\r\n\r\n編譯團隊\r\n編 輯 / 陳怡宏\r\n臺 語 翻 譯 / 陳怡宏、陳亭靜\r\n文 句 標 點 / 吳密察、郭明芳、陳怡宏\r\n導 讀 / 陳怡宏\r\n校 稿 / 許佩玟、許暟婕、陳怡宏\r\n\r\n出版單位\r\n國立臺灣歷史博物館、潘思源\r\n\r\n乙未之役資料彙編 （二）(三）（四）＿乙未之役外文史料\r\n完成年份：2018年、2019年\r\n\r\n編譯團隊\r\n編 輯 / 陳怡宏\r\n導 讀 / 陳怡宏\r\n翻 譯 / 百年翻譯社\r\n校 對 / 利文曄、陳怡宏\r\n\r\n出版單位\r\n國立臺灣歷史博物館、潘思源",
+  "sourceType": "史料出版品",
+  "status": "Published",
+  "pageLink": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "metaImage": "",
+  "publishTime": "2025-12-16T14:25:55.06",
+  "continent": [
+    {
+      "continentId": "9254ac01-0a81-4b86-aea4-25bb79ea25a9",
+      "name": "亞洲"
+    }
+  ],
+  "collection": [
+    {
+      "collectionId": "9d9bad7e-90db-4c86-9090-472f18ac99c4",
+      "title": "乙未之役資料彙編 （四）＿乙未之役外文史料編譯三*O-4",
+      "coverImgSrc": "787626ef-bcfd-44c5-b061-7d8427ab7b2e.jpg",
+      "description": "本書係叢書「乙未之役資料彙編」的成果。1895 年乙未之役為臺灣歷史上最大規模的全島性戰役，臺灣人為抗拒馬關條約後割讓日本，組建「臺灣民主國」，抗拒日軍的接收。另一方面從史料上可知，臺灣人為求安定，並認為日本為合法接收，而傾向協助日本接收臺灣。在政權輪替之際，臺灣島上的人民面臨數百年來未有之變局，有選擇接受、有協力、有抵抗，也有逃難（臺語俗諺即有「走番仔反」一詞）。臺史博依照不同語言別，分別出版英文、日文編。本編為日文部分，《奧羽日日新聞》及《東北新聞》報紙資料選譯，時間自1895年11月到1896年1月，以及陣中日誌及從軍日記選譯，包含近衛步兵第 3 聯隊陣中日誌（日清戰役）、緒方三郎〈征清日記〉選譯、森林太郎〈徂征日記〉及〈臺灣總督府醫報草?〉 選譯、鈴木今治〈從軍日記（付書翰）〉選譯、野澤武三郎〈明治二十七八年戰役從軍記〉選譯、清水安太郎〈日清戰爭日露戰爭回顧錄〉選譯。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館、潘思源",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "主編/ 陳怡宏\n譯者/ 百年翻譯社\n導讀/ 陳怡宏\n校對/ 陳怡宏、利文曄",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "70887628-8cca-4dec-8360-2d4d4e975359",
+              "name": "2010-2019",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "e3fbde8d-d7d2-4a99-b6d0-5a0da811a38e",
+      "title": "乙未之役資料彙編 （一）＿乙未之役中文史料*O-1",
+      "coverImgSrc": "78c86773-5fdb-4371-895c-442184d48fde.jpg",
+      "description": "本書係叢書「乙未之役資料彙編」的成果。1895 年乙未之役為臺灣歷史上最大規模的全島性戰役，臺灣人為抗拒馬關條約後割讓日本，組建「臺灣民主國」，抗拒日軍的接收。另一方面從史料上可知，臺灣人為求安定，並認為日本為合法接收，而傾向協助日本接收臺灣。在政權輪替之際，臺灣島上的人民面臨數百年來未有之變局，有選擇接受、有協力、有抵抗，也有逃難（臺語俗諺即有「走番仔反」一詞）。臺史博依照不同語言別，分別出版中文、日文編。本編為中文編，包含：1. 割臺經過相關文書，伊藤博文與李鴻章的問答內容、馬關條約中文本（並收錄附約及議定專約）、〈交接臺灣文據〉（日文稱為「臺灣受渡公文」）2. 在臺官吏的紀錄：乙未戰役前後官方告示；負責北臺防衛之官吏與幕僚史料，含俞明震《臺灣八日記》及陳昌基《臺島劫灰》；劉永福相關史料；地方官員及幕僚，包含臺東直隸州知州胡傳的日記與稟啟、鳳山縣知縣的黃家鼎的詩詞（附註釋），以及黎景嵩以思痛子名義留下之著作、方豪曾於《臺灣文獻》介紹並標校史久龍的《憶臺雜記》、孫波庵的〈臺灣經過二十八首又追感四首〉及〈台灣脫險回里六首〉3. 臺灣紳商的紀錄：北部選錄丘逢甲書信、李春生以鷺江氏名義於 1896 年發表於《臺灣新報》的〈平心論〉及〈續平心論〉；中部選錄吳德功關於乙未之役著作以《讓臺記》、洪棄生《瀛海偕亡記》（又名《臺灣戰紀》、連橫《臺灣通史》；南部選錄林維朝〈勞生略歷〉、世英（1848-1901）及賴世觀（1857-1918）的詩及著作4. 報刊：《臺南府城教會報》反映傳教士立場5. 外國史料來源之中文資料：含《日本外交文書》、日方告示、總督府檔案、《日清戰爭實記》、《秘書類纂 臺灣資料》、北部淡水領事相關中文史料6. 雜錄：《甲午中日戰輯》電報選錄、《漢文臺灣日日新報》、臺灣地方文獻刊物一系列耆老訪談（姜紹祖、陳豬乳）、郭朝成〈林學恭傳記〉",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館、潘思源",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "主編/ 陳怡宏\n導讀/ 陳怡宏\n臺語翻譯/ 陳怡宏、陳亭靜\n文句標點/ 吳密察、郭明芳、陳怡宏\n校稿/ 許佩玟、許暟婕、陳怡宏",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "70887628-8cca-4dec-8360-2d4d4e975359",
+              "name": "2010-2019",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "4d76d7b2-e557-4bc4-b82e-bb60c26abba0",
+      "title": "乙未之役資料彙編 （二）＿乙未之役外文史料編譯一*O-2",
+      "coverImgSrc": "9cea8ec6-83b9-43b2-a1cb-e351411710dd.jpg",
+      "description": "本書係叢書「乙未之役資料彙編」的成果。1895 年乙未之役為臺灣歷史上最大規模的全島性戰役，臺灣人為抗拒馬關條約後割讓日本，組建「臺灣民主國」，抗拒日軍的接收。另一方面從史料上可知，臺灣人為求安定，並認為日本為合法接收，而傾向協助日本接收臺灣。在政權輪替之際，臺灣島上的人民面臨數百年來未有之變局，有選擇接受、有協力、有抵抗，也有逃難（臺語俗諺即有「走番仔反」一詞）。臺史博依照不同語言別，分別出版英文、日文編。本編為英文部分，英文編分別收錄了清國海關1895年淡水臺南貿易報告、英國淡水領事報告，以及其他書籍及報導選譯。其中英國淡水領事總共寫了17篇報告及1篇貿易報告，鉅細靡遺地向英國駐北京公使報告當時情形。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館、潘思源",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "主編/ 陳怡宏\n譯者/ 百年翻譯社\n導讀/ 陳怡宏\n校對/ 陳怡宏、利文曄",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "70887628-8cca-4dec-8360-2d4d4e975359",
+              "name": "2010-2019",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "539a8e0a-341f-4c0d-8530-cdb05cc8a0e4",
+      "title": "乙未之役資料彙編 （三）＿乙未之役外文史料編譯二*O-3",
+      "coverImgSrc": "b83e44f5-b3bd-43dd-bf0e-93d89cf5ed15.jpg",
+      "description": "本書係叢書「乙未之役資料彙編」的成果。1895 年乙未之役為臺灣歷史上最大規模的全島性戰役，臺灣人為抗拒馬關條約後割讓日本，組建「臺灣民主國」，抗拒日軍的接收。另一方面從史料上可知，臺灣人為求安定，並認為日本為合法接收，而傾向協助日本接收臺灣。在政權輪替之際，臺灣島上的人民面臨數百年來未有之變局，有選擇接受、有協力、有抵抗，也有逃難（臺語俗諺即有「走番仔反」一詞）。臺史博依照不同語言別，分別出版英文、日文編。本編為日文部分，《奧羽日日新聞》及《東北新聞》報紙資料選譯，時間自1895年6月到1895年11月。",
+      "commissioningUnit": "",
+      "publishingUnit": "國立臺灣歷史博物館、潘思源",
+      "rightsHolder": {
+        "investigatingUnit": [],
+        "originalRightsHolder": [],
+        "originalArchivingUnit": []
+      },
+      "supplementaryExplanation": "主編/ 陳怡宏\n譯者/ 百年翻譯社\n導讀/ 陳怡宏\n校對/ 陳怡宏、利文曄",
+      "status": "Published",
+      "categories": [
+        {
+          "categoryId": "213d2412-4571-4c50-837d-0981134a5678",
+          "name": "時代",
+          "subCategories": [
+            {
+              "subCategoryId": "70887628-8cca-4dec-8360-2d4d4e975359",
+              "name": "2010-2019",
+              "coverImgSrc": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "categoryId": "5f4f621b-dc7e-4309-be08-061c3518ed6f",
+          "name": "資源類型",
+          "subCategories": [
+            {
+              "subCategoryId": "57e5cbfa-12c4-4390-b336-47fb80d33009",
+              "name": "出版計畫",
+              "coverImgSrc": null,
+              "description": " "
+            }
+          ]
+        },
+        {
+          "categoryId": "7727f93f-a6aa-48c0-a176-a1d798879571",
+          "name": "檔案格式",
+          "subCategories": [
+            {
+              "subCategoryId": "b7083bcc-6835-4988-98d8-a5bdde0c58d1",
+              "name": "文字檔",
+              "coverImgSrc": null,
+              "description": "pdf、doc、txt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
