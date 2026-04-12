@@ -1900,30 +1900,39 @@ const isEn = lang === 'en';
 
     // Helper: render a GA page/article list (clickable rows → new tab, 2-col layout)
     const renderGaList = (rows, titleText) => {
-      return (
-        `<h3 class="subsection-title">${titleText}</h3>` +
-        '<div class="ga-pages-list ga-pages-list-2col">' +
-        rows
-          .slice(0, 20)
-          .map((p, i) => {
-            const rawTitle = p.title
-              ? p.title.replace(/\s+\|\s+Taiwan\.md$/, '')
-              : '';
-            const fallbackName =
-              p.path === '/' || p.path === ''
-                ? isEn
-                  ? 'Home'
-                  : '首頁'
-                : decodeURIComponent((p.path || '').replace(/^\/|\/$/g, ''));
-            const name = rawTitle || fallbackName;
-            const href = p.path || '/';
-            return `<a class="ga-page-row ga-page-row-link" href="${href}" target="_blank" rel="noopener noreferrer">
+      const items = rows.slice(0, 20);
+      const mid = Math.ceil(items.length / 2);
+      const leftItems = items.slice(0, mid);
+      const rightItems = items.slice(mid);
+
+      const renderItem = (p, i) => {
+        const rawTitle = p.title
+          ? p.title.replace(/\s+\|\s+Taiwan\.md$/, '')
+          : '';
+        const fallbackName =
+          p.path === '/' || p.path === ''
+            ? isEn
+              ? 'Home'
+              : '首頁'
+            : decodeURIComponent((p.path || '').replace(/^\/|\/$/g, ''));
+        const name = rawTitle || fallbackName;
+        const href = p.path || '/';
+        return `<a class="ga-page-row ga-page-row-link" href="${href}" target="_blank" rel="noopener noreferrer">
             <span class="ga-page-rank">${i + 1}</span>
             <span class="ga-page-name">${name}</span>
             <span class="ga-page-pv">${fmtNum(p.views || p.pageViews)} ${isEn ? 'views' : '瀏覽'}</span>
           </a>`;
-          })
-          .join('') +
+      };
+
+      return (
+        `<h3 class="subsection-title">${titleText}</h3>` +
+        '<div class="ga-pages-list-2col">' +
+        '<div class="ga-pages-list-col">' +
+        leftItems.map((p, i) => renderItem(p, i)).join('') +
+        '</div>' +
+        '<div class="ga-pages-list-col">' +
+        rightItems.map((p, i) => renderItem(p, i + mid)).join('') +
+        '</div>' +
         '</div>'
       );
     };
@@ -1974,21 +1983,34 @@ const isEn = lang === 'en';
             ? `${fmtNum(search.totals?.impressions)} impressions · ${fmtNum(search.totals?.clicks)} clicks · ${fmtPct(search.totals?.ctr)} CTR`
             : `${fmtNum(search.totals?.impressions)} 曝光 · ${fmtNum(search.totals?.clicks)} 點擊 · ${fmtPct(search.totals?.ctr)} CTR`
         }</div>` +
-        '<div class="sc-queries-grid">' +
-        topQueries
-          .slice(0, 20)
-          .map(
-            (q, i) => `<div class="sc-query-row">
+        (() => {
+          const qItems = topQueries.slice(0, 20);
+          const qMid = Math.ceil(qItems.length / 2);
+          const renderQ = (q, i) => `<div class="sc-query-row">
               <span class="sc-query-rank">${i + 1}</span>
               <span class="sc-query-label">${q.query}</span>
               <span class="sc-query-clicks">${fmtNum(q.clicks)} ${isEn ? 'clicks' : '點擊'}</span>
               <span class="sc-query-impr">${fmtNum(q.impressions)} ${isEn ? 'impr' : '曝光'}</span>
               <span class="sc-query-ctr">${fmtPct(q.ctr)}</span>
               <span class="sc-query-pos">#${fmtRank(q.position)}</span>
-            </div>`,
-          )
-          .join('') +
-        '</div>' +
+            </div>`;
+          return (
+            '<div class="sc-queries-grid">' +
+            '<div class="sc-queries-col">' +
+            qItems
+              .slice(0, qMid)
+              .map((q, i) => renderQ(q, i))
+              .join('') +
+            '</div>' +
+            '<div class="sc-queries-col">' +
+            qItems
+              .slice(qMid)
+              .map((q, i) => renderQ(q, i + qMid))
+              .join('') +
+            '</div>' +
+            '</div>'
+          );
+        })() +
         (opportunities.length
           ? `<h4 class="ga-block-title">${isEn ? 'Best Next Fixes' : '優先補洞'}</h4>` +
             '<div class="ga-mini-list">' +
@@ -3298,17 +3320,20 @@ const isEn = lang === 'en';
     grid-column: 1 / -1;
   }
   .ga-pages-list-2col {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.5rem;
-    row-gap: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .ga-pages-list-col {
+    flex: 1;
+    min-width: 0;
   }
   @media (max-width: 720px) {
     .analytics-detail-grid {
       grid-template-columns: 1fr;
     }
     .ga-pages-list-2col {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      gap: 0;
     }
   }
   .analytics-pages,
@@ -3541,14 +3566,17 @@ const isEn = lang === 'en';
   /* Search Console 7d — richer per-query row */
   .sc-queries-grid {
     margin-top: 0.7rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 0;
+    display: flex;
+    gap: 1.5rem;
   }
-  @media (min-width: 960px) {
+  .sc-queries-col {
+    flex: 1;
+    min-width: 0;
+  }
+  @media (max-width: 720px) {
     .sc-queries-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 1.5rem;
+      flex-direction: column;
+      gap: 0;
     }
   }
   .sc-query-row {
