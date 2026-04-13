@@ -11,6 +11,7 @@ import ArticleSidebar from '../../components/ArticleSidebar.astro';
 import RelatedArticleCard from '../../components/RelatedArticleCard.astro';
 import Perspectives from '../../components/Perspectives.astro';
 import SporeFootprint from '../../components/SporeFootprint.astro';
+import DiaryTeaser from '../../components/DiaryTeaser.astro';
 import { useTranslations } from '../../i18n/utils';
 import {
   categoryList as categories,
@@ -485,6 +486,30 @@ const encodedTitle = encodeURIComponent(title);
           )
         }
 
+        {/* ── SSODT: Perspectives + Spore Footprint + Diary ── */}
+        {
+          frontmatter.perspectives && frontmatter.perspectives.length > 0 && (
+            <Perspectives
+              perspectives={frontmatter.perspectives}
+              lang="zh-TW"
+            />
+          )
+        }
+        {
+          frontmatter.sporeLinks && frontmatter.sporeLinks.length > 0 && (
+            <SporeFootprint sporeLinks={frontmatter.sporeLinks} lang="zh-TW" />
+          )
+        }
+        {
+          frontmatter.diaryLink && (
+            <DiaryTeaser
+              diaryLink={frontmatter.diaryLink}
+              diaryExcerpt={frontmatter.diaryExcerpt}
+              lang="zh-TW"
+            />
+          )
+        }
+
         <!-- AI Disclaimer -->
         <div
           class="my-12 mb-8 flex items-start gap-4 rounded-xl border border-[rgba(193,125,94,0.18)] bg-[rgba(193,125,94,0.06)] px-6 py-5"
@@ -716,24 +741,7 @@ const encodedTitle = encodeURIComponent(title);
       </div>
     </div><!-- /article-shell -->
 
-    <!-- ── SSODT: Perspectives + Spore Footprint ──────────────────── -->
-    {
-      frontmatter.perspectives && frontmatter.perspectives.length > 0 && (
-        <div class="mx-auto max-w-[800px] px-8 max-[640px]:px-4">
-          <Perspectives perspectives={frontmatter.perspectives} lang="zh-TW" />
-        </div>
-      )
-    }
-    {
-      (frontmatter.sporeLinks || frontmatter.diaryLink) && (
-        <div class="mx-auto max-w-[800px] px-8 max-[640px]:px-4">
-          <SporeFootprint
-            sporeLinks={frontmatter.sporeLinks || []}
-            diaryLink={frontmatter.diaryLink}
-            lang="zh-TW"
-          />
-        </div>
-      )
+    {/* SSODT sections moved inside article-shell, before AI Disclaimer */}
     }
 
     <!-- ── Related articles ───────────────────────────────────────── -->

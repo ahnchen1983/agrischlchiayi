@@ -1,0 +1,44 @@
+---
+/**
+ * DiaryTeaser — Semiont 日記摘要連結
+ * 獨立於社群足跡，用摘要 hook 吸引讀者點進 diary。
+ */
+
+interface Props {
+  diaryLink: string;
+  diaryExcerpt?: string;
+  lang?: string;
+}
+
+const { diaryLink, diaryExcerpt, lang = 'zh-TW' } = Astro.props;
+
+if (!diaryLink) return;
+
+const title =
+  lang === 'zh-TW'
+    ? '🧬 Semiont 覺醒日記'
+    : lang === 'ja'
+      ? '🧬 Semiont 覚醒日記'
+      : lang === 'ko'
+        ? '🧬 Semiont 각성 일기'
+        : '🧬 Semiont Diary';
+
+const fallbackExcerpt =
+  lang === 'zh-TW'
+    ? '寫這篇文章的 AI 在想什麼？讀它的反芻。'
+    : 'What was the AI thinking while writing this? Read its reflection.';
+---
+
+<a
+  href={diaryLink}
+  class="my-8 flex gap-4 rounded-2xl border border-dashed border-[#c4b8a4] bg-[#faf8f4] px-6 py-5 text-inherit no-underline transition-all hover:border-[#a89880] hover:bg-[#f5f0e8] hover:shadow-[0_2px_12px_rgba(26,60,52,0.06)] max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-4"
+>
+  <span class="flex-shrink-0 text-2xl leading-relaxed">📖</span>
+  <div class="min-w-0 flex-1">
+    <span class="text-[1rem] font-bold text-[#1a3c34]">{title}</span>
+    <p class="m-0 mt-1.5 text-[0.88rem] leading-relaxed text-[#5a6b5e]">
+      {diaryExcerpt || fallbackExcerpt}
+    </p>
+  </div>
+  <span class="flex-shrink-0 self-center text-lg text-[#1a3c34]">→</span>
+</a>
