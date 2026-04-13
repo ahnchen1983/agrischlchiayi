@@ -1,18 +1,14 @@
 ---
 /**
- * Perspectives — SSODT 讀者觀點 Section
- * 顯示精選的社群留言作為文章的多元觀點面板。
- * 資料來自文章 frontmatter 的 perspectives 欄位。
+ * Perspectives — SSODT 多面向觀點
+ * 紀實文學風格。不遊戲化、不數據導向。
+ * 呈現同一個議題在不同讀者心中的不同形狀。
  */
 
 interface Perspective {
   author: string;
-  platform: string;
-  date: string;
-  icon: string;
   text: string;
-  likes: number;
-  source_url?: string;
+  dimension?: string;
 }
 
 interface Props {
@@ -26,63 +22,62 @@ if (!perspectives || perspectives.length === 0) return;
 
 const title =
   lang === 'zh-TW'
-    ? '讀者觀點'
+    ? '這篇文章在不同人心中的形狀'
     : lang === 'ja'
-      ? '読者の視点'
+      ? 'この記事が読者の心に映った形'
       : lang === 'ko'
-        ? '독자 관점'
-        : 'Reader Perspectives';
-const disclaimer =
+        ? '이 글이 독자 마음에 비친 모습'
+        : 'How this story landed differently';
+
+const footer =
   lang === 'zh-TW'
-    ? '觀點由社群讀者提供，不代表 Taiwan.md 立場。Taiwan.md 策展多元觀點，不裁判對錯。'
-    : lang === 'ja'
-      ? 'コミュニティ読者による視点です。Taiwan.md の立場を代表するものではありません。'
-      : lang === 'ko'
-        ? '커뮤니티 독자의 관점입니다. Taiwan.md의 입장을 대변하지 않습니다.'
-        : 'Perspectives from community readers. They do not represent the position of Taiwan.md.';
-const platformLabel = (p: string) =>
-  p === 'threads' ? 'Threads' : p === 'x' ? '𝕏' : p;
+    ? '以上觀點來自社群讀者，呈現同一件事的不同面向。Taiwan.md 策展多元觀點，不裁判對錯。'
+    : 'Perspectives from community readers. Taiwan.md curates diverse viewpoints without judging right or wrong.';
+
+const source =
+  lang === 'zh-TW'
+    ? '觀點來源：Threads 留言，2026-04-13'
+    : 'Source: Threads comments, 2026-04-13';
 ---
 
-<section
-  class="my-12 rounded-2xl border border-[#e8e0d4] bg-[#faf8f5] px-6 py-8 max-[768px]:px-4 max-[768px]:py-6"
->
-  <div class="mb-6 flex items-center gap-3">
-    <span class="text-xl">🔮</span>
-    <h2 class="m-0 text-[1.2rem] font-bold text-[#1a3c34]">{title}</h2>
-    <span class="ml-auto text-xs text-[#94a3b8]"
-      >from {
-        [...new Set(perspectives.map((p) => platformLabel(p.platform)))].join(
-          ' · ',
-        )
-      }</span
+<section class="my-14">
+  {/* Section title — subtle, editorial */}
+  <div class="mb-8 border-b border-[#d4cec4] pb-3">
+    <p
+      class="m-0 font-['Georgia','Noto_Serif_TC',serif] text-[0.95rem] italic text-[#6b6358]"
     >
+      {title}
+    </p>
   </div>
 
-  <div class="flex flex-col gap-4">
+  {/* Perspectives — each as a quiet block quote */}
+  <div class="flex flex-col gap-6">
     {
-      perspectives
-        .sort((a, b) => b.likes - a.likes)
-        .map((p) => (
-          <div class="group flex gap-4 rounded-xl border border-[#e2ddd6] bg-white/80 px-5 py-4 transition-all hover:border-[#c4bdb4] hover:shadow-[0_2px_8px_rgba(26,60,52,0.06)] max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-3">
-            <span class="flex-shrink-0 text-xl leading-relaxed">{p.icon}</span>
-            <div class="min-w-0 flex-1">
-              <p class="m-0 whitespace-pre-line text-[0.95rem] leading-relaxed text-[#374151]">
-                {p.text}
-              </p>
-              <div class="mt-2 flex flex-wrap items-center gap-3 text-[0.78rem] text-[#94a3b8]">
-                <span class="font-semibold text-[#64748b]">{p.author}</span>
-                <span>{platformLabel(p.platform)}</span>
-                <span>{p.date}</span>
-                <span class="font-semibold text-[#f59e0b]">{p.likes} ❤</span>
-              </div>
-            </div>
-          </div>
-        ))
+      perspectives.map((p) => (
+        <div class="border-l-2 border-[#c4b8a4] py-1 pl-5 max-[768px]:pl-4">
+          <p class="m-0 whitespace-pre-line font-['Georgia','Noto_Serif_TC',serif] text-[0.95rem] leading-[1.85] text-[#3d3530]">
+            {p.text}
+          </p>
+          <p class="m-0 mt-2 text-[0.8rem] text-[#9a8e80]">
+            — {p.author}
+            {p.dimension && (
+              <span class="ml-2 rounded border border-[#ddd5c8] px-1.5 py-0.5 text-[0.7rem] text-[#a09484]">
+                {p.dimension}
+              </span>
+            )}
+          </p>
+        </div>
+      ))
     }
   </div>
 
-  <p class="m-0 mt-5 text-center text-[0.75rem] leading-relaxed text-[#94a3b8]">
-    {disclaimer}
-  </p>
+  {/* Footer — source + disclaimer */}
+  <div class="mt-8 border-t border-[#e4ddd4] pt-4">
+    <p
+      class="m-0 font-['Georgia','Noto_Serif_TC',serif] text-[0.75rem] leading-relaxed text-[#b0a494]"
+    >
+      {footer}
+    </p>
+    <p class="m-0 mt-1 text-[0.7rem] text-[#c4b8a8]">{source}</p>
+  </div>
 </section>
