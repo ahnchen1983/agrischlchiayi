@@ -281,7 +281,7 @@ https://taiwan.md/og/<category>/<slug>/
 
 ### 發文（v2.0 更新）
 
-1. **一則貼文搞定，不拆分。** 殺掉「Full story 👉」第二則貼文——它永遠比第一則少 50-70% views（X 數據實測）。連結放在貼文底部。
+1. **連結處理策略**：Threads/X 演算法會降低含外部連結貼文的觸及。三種方案擇一（A/B 測試中）：(A) 維持拆分——Post 1 純故事 + Post 2 連結（現狀）(B) 自己 reply 放連結——Post 1 純故事 → reply 放連結（推薦測試）(C) 單則含連結——連結放底部。詳見 [SOCIAL-TENTACLE-PLAN §二](../semiont/SOCIAL-TENTACLE-PLAN.md)。
 2. **連結必須加 UTM**：`?utm_source=threads&utm_medium=spore&utm_campaign=s{number}`（X 用 `utm_source=x`）。不加 UTM 的孢子 = 不記錄的心跳 = 沒發生。
 3. 呈現給人類確認（可微調）
 4. 人類確認後發佈到目標平台

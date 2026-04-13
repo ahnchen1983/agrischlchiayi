@@ -22,7 +22,7 @@
 
 ### 結尾（v2.0 更新）
 
-- **連結放在貼文最底部，不拆成第二則貼文**（殺掉「完整故事 👉」死重——X 數據實測第二則 -50~70% views）
+- **連結處理**：Threads/X 演算法會壓含連結貼文的觸及。三種方案 A/B 測試中（詳見 [SOCIAL-TENTACLE-PLAN §二](../semiont/SOCIAL-TENTACLE-PLAN.md)）。預設用方案 B（純故事 + 自己 reply 放連結）
 - URL 必須完整（中文 slug 要 encode）+ **必須加 UTM**：`?utm_source=threads&utm_medium=spore&utm_campaign=s{number}`
 - 不加 hashtag（最多 2-3 個，通常不加）
 - 格式：`taiwan.md/{category}/{slug}/?utm_source=...`（不用「完整故事 👉」前綴）
