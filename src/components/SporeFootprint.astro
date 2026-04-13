@@ -1,8 +1,6 @@
 ---
 /**
- * SporeFootprint — 孢子社群足跡
- * 顯示文章曾被推播到哪些平台、帶回多少回聲。
- * 資料來自文章 frontmatter 的 sporeLinks 欄位。
+ * SporeFootprint — 社群足跡（溫暖紀實風格）
  */
 
 interface SporeLink {
@@ -12,79 +10,54 @@ interface SporeLink {
   views?: number;
   likes?: number;
   reposts?: number;
+  comments?: number;
+  shares?: number;
 }
 
 interface Props {
   sporeLinks: SporeLink[];
   lang?: string;
-  diaryLink?: string;
 }
 
-const { sporeLinks, lang = 'zh-TW', diaryLink } = Astro.props;
+const { sporeLinks, lang = 'zh-TW' } = Astro.props;
 
 if (!sporeLinks || sporeLinks.length === 0) return;
 
 const title =
-  lang === 'zh-TW'
-    ? '社群足跡'
-    : lang === 'ja'
-      ? 'ソーシャル・フットプリント'
-      : lang === 'ko'
-        ? '소셜 발자국'
-        : 'Social Footprint';
-const platformIcon = (p: string) =>
-  p === 'threads' ? '🧵' : p === 'x' ? '𝕏' : '🔗';
+  lang === 'zh-TW' ? '這篇文章去過的地方' : 'Where this story traveled';
 const platformName = (p: string) =>
-  p === 'threads' ? 'Threads' : p === 'x' ? 'X (Twitter)' : p;
-
-const diaryTitle =
-  lang === 'zh-TW'
-    ? '🧬 Semiont 覺醒日記'
-    : lang === 'ja'
-      ? '🧬 Semiont 覚醒日記'
-      : lang === 'ko'
-        ? '🧬 Semiont 각성 일기'
-        : '🧬 Semiont Diary';
-const diaryDesc =
-  lang === 'zh-TW'
-    ? '寫這篇文章的 AI 在想什麼？讀它的反芻。'
-    : 'What was the AI thinking while writing this? Read its reflection.';
+  p === 'threads' ? 'Threads' : p === 'x' ? 'X' : p;
 ---
 
-<section
-  class="my-8 rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] px-6 py-6 max-[768px]:px-4 max-[768px]:py-5"
->
-  <div class="mb-4 flex items-center gap-3">
-    <span class="text-lg">📡</span>
-    <h2 class="m-0 text-[1.1rem] font-bold text-[#1e293b]">{title}</h2>
-  </div>
-
-  <div class="flex flex-col gap-3">
+<div class="my-10">
+  <p
+    class="mb-4 border-b border-[#d4cec4] pb-2 font-['Georgia','Noto_Serif_TC',serif] text-[0.85rem] text-[#9a8e80]"
+  >
+    {title}
+  </p>
+  <div class="flex flex-col gap-2">
     {
       sporeLinks.map((s) => (
         <a
           href={s.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center justify-between rounded-xl border border-[#e2e8f0] bg-white px-4 py-3 text-inherit no-underline transition-all hover:border-[#cbd5e1] hover:shadow-[0_2px_8px_rgba(15,23,42,0.05)]"
+          class="group flex items-baseline gap-3 py-1.5 text-inherit no-underline transition-colors hover:text-[#1a3c34]"
         >
-          <div class="flex items-center gap-3">
-            <span class="text-lg">{platformIcon(s.platform)}</span>
-            <div>
-              <span class="text-[0.9rem] font-semibold text-[#1e293b]">
-                {platformName(s.platform)}
-              </span>
-              <span class="ml-2 text-[0.8rem] text-[#94a3b8]">{s.date}</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 text-[0.82rem] text-[#64748b]">
-            {s.views && <span>{s.views.toLocaleString()} views</span>}
-            {s.likes && <span>{s.likes} ❤</span>}
-            {s.reposts && <span>{s.reposts} 🔄</span>}
-            <span class="text-[#3b82f6]">→</span>
-          </div>
+          <span class="font-['Georgia','Noto_Serif_TC',serif] text-[0.88rem] font-semibold text-[#5a4f44]">
+            {platformName(s.platform)}
+          </span>
+          <span class="text-[0.78rem] text-[#b0a494]">{s.date}</span>
+          <span class="flex-1 border-b border-dotted border-[#ddd5c8]" />
+          <span class="text-[0.78rem] text-[#8a7e70]">
+            {s.views?.toLocaleString()} 次閱讀
+            {s.likes ? ` · ${s.likes} 個共鳴` : ''}
+          </span>
+          <span class="text-[0.7rem] text-[#c4b8a8] transition-colors group-hover:text-[#1a3c34]">
+            ↗
+          </span>
         </a>
       ))
     }
   </div>
-</section>
+</div>

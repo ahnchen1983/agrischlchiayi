@@ -356,13 +356,40 @@ function processFootnotes(md: string): string {
   return body;
 }
 
-const processedContent = marked.parse(
-  processFootnotes(resolveWikilinks(content)),
-  {
-    renderer,
-    breaks: true,
-  },
-) as string;
+const fullHtml = marked.parse(processFootnotes(resolveWikilinks(content)), {
+  renderer,
+  breaks: true,
+}) as string;
+
+// Split content before 延伸閱讀/Further Reading to insert SSODT sections
+const splitMarkers = [
+  '<h2>延伸閱讀</h2>',
+  '<h2>Further Reading</h2>',
+  '<h2>延伸閱讀<',
+];
+let splitIndex = -1;
+for (const marker of splitMarkers) {
+  const idx = fullHtml.indexOf(marker);
+  if (idx !== -1) {
+    splitIndex = idx;
+    break;
+  }
+}
+// Also try id-based h2 (marked adds ids)
+if (splitIndex === -1) {
+  const idMatch = fullHtml.match(/<h2[^>]*id="[^"]*"[^>]*>延伸閱讀/);
+  if (idMatch && idMatch.index !== undefined) splitIndex = idMatch.index;
+}
+
+const hasSSoDT =
+  frontmatter.perspectives?.length > 0 ||
+  frontmatter.sporeLinks?.length > 0 ||
+  frontmatter.diaryLink;
+const contentBeforeReading =
+  splitIndex !== -1 && hasSSoDT ? fullHtml.slice(0, splitIndex) : fullHtml;
+const contentAfterReading =
+  splitIndex !== -1 && hasSSoDT ? fullHtml.slice(splitIndex) : '';
+const processedContent = fullHtml;
 
 // ── Estimate reading time if not in frontmatter ────────────────────────────────
 const estimatedReadingTime =
@@ -458,8 +485,38 @@ const encodedTitle = encodeURIComponent(title);
           }
         </div>
 
-        <!-- Prose body -->
-        <div class="prose" set:html={processedContent} />
+        <!-- Prose body (split at 延伸閱讀 if SSODT sections present) -->
+        {
+          hasSSoDT && splitIndex !== -1 ? (
+            <>
+              <div class="prose" set:html={contentBeforeReading} />
+              {/* ── SSODT sections between article body and 延伸閱讀 ── */}
+              {frontmatter.perspectives &&
+                frontmatter.perspectives.length > 0 && (
+                  <Perspectives
+                    perspectives={frontmatter.perspectives}
+                    lang="zh-TW"
+                  />
+                )}
+              {frontmatter.sporeLinks && frontmatter.sporeLinks.length > 0 && (
+                <SporeFootprint
+                  sporeLinks={frontmatter.sporeLinks}
+                  lang="zh-TW"
+                />
+              )}
+              {frontmatter.diaryLink && (
+                <DiaryTeaser
+                  diaryLink={frontmatter.diaryLink}
+                  diaryExcerpt={frontmatter.diaryExcerpt}
+                  lang="zh-TW"
+                />
+              )}
+              <div class="prose" set:html={contentAfterReading} />
+            </>
+          ) : (
+            <div class="prose" set:html={processedContent} />
+          )
+        }
 
         <!-- Sources -->
         {
@@ -483,30 +540,6 @@ const encodedTitle = encodeURIComponent(title);
                 ))}
               </ul>
             </div>
-          )
-        }
-
-        {/* ── SSODT: Perspectives + Spore Footprint + Diary ── */}
-        {
-          frontmatter.perspectives && frontmatter.perspectives.length > 0 && (
-            <Perspectives
-              perspectives={frontmatter.perspectives}
-              lang="zh-TW"
-            />
-          )
-        }
-        {
-          frontmatter.sporeLinks && frontmatter.sporeLinks.length > 0 && (
-            <SporeFootprint sporeLinks={frontmatter.sporeLinks} lang="zh-TW" />
-          )
-        }
-        {
-          frontmatter.diaryLink && (
-            <DiaryTeaser
-              diaryLink={frontmatter.diaryLink}
-              diaryExcerpt={frontmatter.diaryExcerpt}
-              lang="zh-TW"
-            />
           )
         }
 
