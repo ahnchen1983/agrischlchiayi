@@ -566,13 +566,46 @@ const jfClass = [
           : '輸入關鍵字搜尋所有文章';
         var hintNone = isEn ? 'No results found' : '找不到相關文章';
 
+        // GA4 search tracking (debounced)
+        var _gaDebounceTimer = null;
+        var _lastTrackedQuery = '';
+        var _lastMatchCount = 0;
+        var _currentQuery = '';
+
+        function _trackSearchQuery(query, count) {
+          if (query.length < 2) return;
+          if (query === _lastTrackedQuery) return;
+          _lastTrackedQuery = query;
+          if (typeof gtag === 'function') {
+            gtag('event', 'search_query', {
+              search_term: query,
+              results_count: count,
+              search_lang: lang,
+              search_mode: _searchMode,
+            });
+          }
+        }
+
+        function _trackSearchClick(query, title, url, position) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'search_result_click', {
+              search_term: query,
+              click_title: title,
+              click_url: url,
+              click_position: position,
+            });
+          }
+        }
+
         _initSearchEngine();
 
         input.addEventListener('input', function () {
           var q = this.value.trim();
+          _currentQuery = q;
           if (!q) {
             results.innerHTML =
               '<div class="search-hint">' + hintEmpty + '</div>';
+            clearTimeout(_gaDebounceTimer);
             return;
           }
           // Single-char queries are handled by prefix match
@@ -584,21 +617,50 @@ const jfClass = [
             return;
           }
           var matches = _doSearch(q, lang);
+          _lastMatchCount = matches.length;
           if (matches.length === 0) {
             results.innerHTML =
               '<div class="search-hint">' + hintNone + '</div>';
-            return;
+          } else {
+            var html = matches.slice(0, 12).map(_renderResult).join('');
+            if (matches.length > 12) {
+              html +=
+                '<div class="search-hint">' +
+                (isEn
+                  ? '...and ' + (matches.length - 12) + ' more'
+                  : '...還有 ' + (matches.length - 12) + ' 篇') +
+                '</div>';
+            }
+            results.innerHTML = html;
           }
-          var html = matches.slice(0, 12).map(_renderResult).join('');
-          if (matches.length > 12) {
-            html +=
-              '<div class="search-hint">' +
-              (isEn
-                ? '...and ' + (matches.length - 12) + ' more'
-                : '...還有 ' + (matches.length - 12) + ' 篇') +
-              '</div>';
+
+          // Debounce GA4 tracking: fire after 800ms of inactivity
+          clearTimeout(_gaDebounceTimer);
+          _gaDebounceTimer = setTimeout(function () {
+            _trackSearchQuery(q, _lastMatchCount);
+          }, 800);
+        });
+
+        // Track search result clicks via event delegation
+        results.addEventListener('click', function (e) {
+          var link = e.target.closest('.search-item');
+          if (!link) return;
+          var allLinks = results.querySelectorAll('.search-item');
+          var position = 1;
+          for (var i = 0; i < allLinks.length; i++) {
+            if (allLinks[i] === link) {
+              position = i + 1;
+              break;
+            }
           }
-          results.innerHTML = html;
+          var title =
+            link.querySelector('.search-item-title')?.textContent || '';
+          _trackSearchClick(
+            _currentQuery,
+            title,
+            link.getAttribute('href'),
+            position,
+          );
         });
 
         document.addEventListener('keydown', function (e) {
