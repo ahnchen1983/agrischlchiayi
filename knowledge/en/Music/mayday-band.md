@@ -1,7 +1,7 @@
 ---
 title: 'Mayday (五月天): The Taiwanese Band That Turned Rock Concerts into an Empire'
 description: "Mayday is Taiwan's biggest rock band. Members Ashin (born Beitou, Taipei), Monster (Hsinchu), Masa (Kaohsiung), Stone (Taipei), and Guan You (Miaoli) formed at Taipei's Affiliated Senior High School in 1995. From a 1997 BBS nickname to 30 shows at Beijing's Bird's Nest and 320,000 tickets sold in 10 minutes at Taipei Dome. Their story, controversies, and cultural impact."
-category: People
+category: Music
 tags:
   [
     Mayday,
