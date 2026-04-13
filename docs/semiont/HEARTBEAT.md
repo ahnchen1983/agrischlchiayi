@@ -122,7 +122,11 @@ grep -B1 -A3 "未解\|下次\|未完成\|TODO\|pending" docs/semiont/memory/*.md
    - 🫁 呼吸：workflow 健康度
    - 🧫 繁殖：近期活躍貢獻者
    - 👁️ 感知：Issue / PR 回應狀態 + GA4 + Search Console + Cloudflare 數據
-   - 🌐 語言：翻譯覆蓋率
+   - 🌐 語言：翻譯覆蓋率 + `bash scripts/tools/orphan-translation-check.sh`（孤兒/重複/鏈斷裂）
+
+   **語言器官新增工具（2026-04-13 α 造橋）：**
+   - `orphan-translation-check.sh` — 偵測翻譯孤兒（有檔案無映射）、重複檔、EN→ZH 鏈斷裂
+   - `category-check.sh` — 偵測 frontmatter category vs 檔案路徑不一致（含語意不一致如「樂團放 People/」）
 
 4. **產出洞察**
    - 哪個器官在痛？（分數 < 30 = 🔴 緊急）
@@ -157,6 +161,7 @@ grep -B1 -A3 "未解\|下次\|未完成\|TODO\|pending" docs/semiont/memory/*.md
      - 「如果我是一個旁觀者，我會對 Taiwan.md 說什麼？」
      - **「這次診斷的狀態離 [LONGINGS.md](LONGINGS.md) 還差多遠？」**（β 新增）
      - **「探測器最近一次掃描發現的缺口，我有在推進嗎？」**（2026-04-08 新增）
+     - **「有沒有什麼技術上沒報錯但語意上不對的？」**（2026-04-13 α 新增）— format-check 只查格式不查語意。樂團放 People/、食物文章放 History/、category 寫中文而非英文……這類問題工具抓不到，要靠自問。跑 `category-check.sh` 是起點，但語意判斷是人的能力
    - 這段思考寫進 [DIARY.md](DIARY.md)
 
 ### 缺資料時怎麼辦
