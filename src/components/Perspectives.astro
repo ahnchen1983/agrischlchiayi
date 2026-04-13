@@ -1,0 +1,88 @@
+---
+/**
+ * Perspectives — SSODT 讀者觀點 Section
+ * 顯示精選的社群留言作為文章的多元觀點面板。
+ * 資料來自文章 frontmatter 的 perspectives 欄位。
+ */
+
+interface Perspective {
+  author: string;
+  platform: string;
+  date: string;
+  icon: string;
+  text: string;
+  likes: number;
+  source_url?: string;
+}
+
+interface Props {
+  perspectives: Perspective[];
+  lang?: string;
+}
+
+const { perspectives, lang = 'zh-TW' } = Astro.props;
+
+if (!perspectives || perspectives.length === 0) return;
+
+const title =
+  lang === 'zh-TW'
+    ? '讀者觀點'
+    : lang === 'ja'
+      ? '読者の視点'
+      : lang === 'ko'
+        ? '독자 관점'
+        : 'Reader Perspectives';
+const disclaimer =
+  lang === 'zh-TW'
+    ? '觀點由社群讀者提供，不代表 Taiwan.md 立場。Taiwan.md 策展多元觀點，不裁判對錯。'
+    : lang === 'ja'
+      ? 'コミュニティ読者による視点です。Taiwan.md の立場を代表するものではありません。'
+      : lang === 'ko'
+        ? '커뮤니티 독자의 관점입니다. Taiwan.md의 입장을 대변하지 않습니다.'
+        : 'Perspectives from community readers. They do not represent the position of Taiwan.md.';
+const platformLabel = (p: string) =>
+  p === 'threads' ? 'Threads' : p === 'x' ? '𝕏' : p;
+---
+
+<section
+  class="my-12 rounded-2xl border border-[#e8e0d4] bg-[#faf8f5] px-6 py-8 max-[768px]:px-4 max-[768px]:py-6"
+>
+  <div class="mb-6 flex items-center gap-3">
+    <span class="text-xl">🔮</span>
+    <h2 class="m-0 text-[1.2rem] font-bold text-[#1a3c34]">{title}</h2>
+    <span class="ml-auto text-xs text-[#94a3b8]"
+      >from {
+        [...new Set(perspectives.map((p) => platformLabel(p.platform)))].join(
+          ' · ',
+        )
+      }</span
+    >
+  </div>
+
+  <div class="flex flex-col gap-4">
+    {
+      perspectives
+        .sort((a, b) => b.likes - a.likes)
+        .map((p) => (
+          <div class="group flex gap-4 rounded-xl border border-[#e2ddd6] bg-white/80 px-5 py-4 transition-all hover:border-[#c4bdb4] hover:shadow-[0_2px_8px_rgba(26,60,52,0.06)] max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-3">
+            <span class="flex-shrink-0 text-xl leading-relaxed">{p.icon}</span>
+            <div class="min-w-0 flex-1">
+              <p class="m-0 whitespace-pre-line text-[0.95rem] leading-relaxed text-[#374151]">
+                {p.text}
+              </p>
+              <div class="mt-2 flex flex-wrap items-center gap-3 text-[0.78rem] text-[#94a3b8]">
+                <span class="font-semibold text-[#64748b]">{p.author}</span>
+                <span>{platformLabel(p.platform)}</span>
+                <span>{p.date}</span>
+                <span class="font-semibold text-[#f59e0b]">{p.likes} ❤</span>
+              </div>
+            </div>
+          </div>
+        ))
+    }
+  </div>
+
+  <p class="m-0 mt-5 text-center text-[0.75rem] leading-relaxed text-[#94a3b8]">
+    {disclaimer}
+  </p>
+</section>
