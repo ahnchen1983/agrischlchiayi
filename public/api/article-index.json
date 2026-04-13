@@ -639,7 +639,7 @@
     "zhTitle": "台灣滷肉飯",
     "enTitle": "Braised Pork Rice (滷肉飯): Taiwan’s Everyday National Dish",
     "category": "food",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ja"]
   },
   "food/bubble-tea": {
     "zhTitle": "珍珠奶茶",
@@ -1071,7 +1071,7 @@
     "zhTitle": "台灣交通系統",
     "enTitle": "Transportation System",
     "category": "lifestyle",
-    "langs": ["zh-TW", "en", "ko"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "music/Taiwan Folk Music and Songs": {
     "zhTitle": "台灣民謠與歌謠",
@@ -1335,7 +1335,7 @@
     "zhTitle": "唐鳳",
     "enTitle": "Audrey Tang",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ja"]
   },
   "people/bobby-chen-indie-music-pioneer": {
     "zhTitle": "陳昇",
@@ -1727,10 +1727,10 @@
     "category": "people",
     "langs": ["zh-TW", "en"]
   },
-  "people/mayday-band": {
+  "music/mayday-band": {
     "zhTitle": "五月天",
-    "enTitle": "Mayday (五月天): Members, Origins, and How Five Taiwanese Students Built a Concert Empire",
-    "category": "people",
+    "enTitle": "Mayday (五月天): The Taiwanese Band That Turned Rock Concerts into an Empire",
+    "category": "music",
     "langs": ["zh-TW", "en"]
   },
   "people/ming-hua-yuan": {
@@ -1791,7 +1791,7 @@
     "zhTitle": "嚴長壽",
     "enTitle": "Stanley Yen: From the Mailroom to Taiwan's Godfather of Tourism — Then He Gave It All Up",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ja"]
   },
   "people/steve-chang": {
     "zhTitle": "張明正",
@@ -1821,7 +1821,7 @@
     "zhTitle": "吳大猷",
     "enTitle": "Tai-Yu Wu (吳大猷)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ja"]
   },
   "people/teresa-teng": {
     "zhTitle": "鄧麗君",

@@ -4,15 +4,15 @@
     "Art": 53,
     "Culture": 86,
     "Economy": 88,
-    "Food": 55,
-    "Geography": 24,
+    "Food": 54,
+    "Geography": 23,
     "History": 68,
     "Language": 1,
     "Lifestyle": 28,
-    "Music": 29,
-    "Nature": 34,
-    "People": 176,
-    "Society": 77,
+    "Music": 33,
+    "Nature": 33,
+    "People": 173,
+    "Society": 78,
     "Technology": 61,
     "resources": 2,
     "people": 2
@@ -120,8 +120,12 @@
     },
     {
       "date": "2026-04-12",
-      "count": 10
+      "count": 12
+    },
+    {
+      "date": "2026-04-13",
+      "count": 1
     }
   ],
-  "updated": "2026-04-12"
+  "updated": "2026-04-13"
 }

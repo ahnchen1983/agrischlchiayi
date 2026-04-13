@@ -2,24 +2,24 @@
   "languages": ["zh-TW", "en", "es", "ja", "ko"],
   "summary": {
     "zh-TW": {
-      "total": 469,
+      "total": 471,
       "percentage": 100
     },
     "en": {
-      "total": 394,
-      "percentage": 84
+      "total": 395,
+      "percentage": 83.9
     },
     "es": {
       "total": 36,
-      "percentage": 7.7
+      "percentage": 7.6
     },
     "ja": {
-      "total": 258,
-      "percentage": 55
+      "total": 255,
+      "percentage": 54.1
     },
     "ko": {
       "total": 28,
-      "percentage": 6
+      "percentage": 5.9
     }
   },
   "matrix": {
@@ -55,14 +55,14 @@
       "zh-TW": 29,
       "en": 30,
       "es": 5,
-      "ja": 12,
+      "ja": 11,
       "ko": 9
     },
     "geography": {
       "zh-TW": 19,
       "en": 16,
       "es": 0,
-      "ja": 3,
+      "ja": 2,
       "ko": 2
     },
     "history": {
@@ -80,28 +80,28 @@
       "ko": 2
     },
     "music": {
-      "zh-TW": 22,
-      "en": 21,
+      "zh-TW": 25,
+      "en": 22,
       "es": 0,
-      "ja": 5,
+      "ja": 6,
       "ko": 2
     },
     "nature": {
       "zh-TW": 26,
       "en": 21,
       "es": 0,
-      "ja": 7,
+      "ja": 6,
       "ko": 1
     },
     "people": {
-      "zh-TW": 137,
+      "zh-TW": 135,
       "en": 115,
       "es": 10,
-      "ja": 27,
+      "ja": 26,
       "ko": 2
     },
     "society": {
-      "zh-TW": 38,
+      "zh-TW": 39,
       "en": 27,
       "es": 5,
       "ja": 33,
@@ -117,6 +117,11 @@
   },
   "missing": {
     "en": [
+      "Music/五月天.md",
+      "Music/小虎隊.md",
+      "Music/從張懸到安溥——兩個名字，同一個問題.md",
+      "Music/滅火器樂團.md",
+      "Society/TikTok.md",
       "History/乙未之役：臺灣民主國的 148 天.md",
       "History/臺灣島史觀：被反覆統治的島，如何發明自己的主體性.md",
       "History/台灣鐵道史.md",
@@ -126,7 +131,6 @@
       "History/福爾摩沙：西方人如何「發現」一座早就有人住的島.md",
       "History/荷西明鄭時期.md",
       "Music/台灣獨立音樂：一間發不出薪水的唱片行，如何替一座島嶼打開耳朵.md",
-      "Music/從張懸到安溥——兩個名字，同一個問題.md",
       "Nature/台灣藍鵲：山林裡的藍色幫派.md",
       "Nature/特有種.md",
       "People/劉安婷.md",
@@ -258,7 +262,6 @@
       "Food/台灣小吃.md",
       "Lifestyle/小綠人：從交通號誌到國家符號的25年傳奇.md",
       "Music/流行音樂與金曲獎.md",
-      "People/小虎隊.md",
       "People/林宥嘉：在苦情歌王與『愛是王』之間，那場長達八年的自我救贖.md",
       "People/江蕙：從北投硫磺煙中走出的台語天后，與她長達九年的秘密戰爭.md",
       "People/王小棣：花甲男孩與台灣電視的溫柔革命.md",
@@ -342,7 +345,6 @@
       "Nature/台灣海洋生態.md",
       "Nature/台灣溫泉與地熱.md",
       "Nature/國家公園.md",
-      "People/五月天.md",
       "People/周杰倫.md",
       "People/李梅樹.md",
       "People/林懷民.md",
@@ -580,6 +582,11 @@
       "Technology/台灣音響產業發展.md"
     ],
     "es": [
+      "Music/五月天.md",
+      "Music/小虎隊.md",
+      "Music/從張懸到安溥——兩個名字，同一個問題.md",
+      "Music/滅火器樂團.md",
+      "Society/TikTok.md",
       "History/乙未之役：臺灣民主國的 148 天.md",
       "History/臺灣島史觀：被反覆統治的島，如何發明自己的主體性.md",
       "History/台灣民主轉型——威權自掘的墳墓.md",
@@ -591,7 +598,6 @@
       "History/荷西明鄭時期.md",
       "Lifestyle/台灣咖啡文化：便利商店一年賣六億杯的島嶼.md",
       "Music/台灣獨立音樂：一間發不出薪水的唱片行，如何替一座島嶼打開耳朵.md",
-      "Music/從張懸到安溥——兩個名字，同一個問題.md",
       "Nature/台灣藍鵲：山林裡的藍色幫派.md",
       "Nature/特有種.md",
       "People/劉安婷.md",
@@ -724,7 +730,6 @@
       "Food/台灣小吃.md",
       "Lifestyle/小綠人：從交通號誌到國家符號的25年傳奇.md",
       "Music/流行音樂與金曲獎.md",
-      "People/小虎隊.md",
       "People/林宥嘉：在苦情歌王與『愛是王』之間，那場長達八年的自我救贖.md",
       "People/江蕙：從北投硫磺煙中走出的台語天后，與她長達九年的秘密戰爭.md",
       "People/王小棣：花甲男孩與台灣電視的溫柔革命.md",
@@ -808,7 +813,6 @@
       "Nature/台灣海洋生態.md",
       "Nature/台灣溫泉與地熱.md",
       "Nature/國家公園.md",
-      "People/五月天.md",
       "People/李梅樹.md",
       "People/林懷民.md",
       "People/楊右任：從街頭塗鴉中輟生到非洲舊鞋救命的台灣青年英雄.md",
@@ -1046,12 +1050,16 @@
       "Technology/台灣音響產業發展.md"
     ],
     "ja": [
+      "Music/五月天.md",
+      "Music/小虎隊.md",
+      "Music/從張懸到安溥——兩個名字，同一個問題.md",
+      "Music/滅火器樂團.md",
+      "Society/TikTok.md",
       "History/乙未之役：臺灣民主國的 148 天.md",
       "History/日治時期.md",
       "History/清法戰爭：基隆與淡水的八個月.md",
       "History/福爾摩沙：西方人如何「發現」一座早就有人住的島.md",
       "Lifestyle/台灣咖啡文化：便利商店一年賣六億杯的島嶼.md",
-      "Music/從張懸到安溥——兩個名字，同一個問題.md",
       "Nature/台灣藍鵲：山林裡的藍色幫派.md",
       "Nature/特有種.md",
       "People/劉安婷.md",
@@ -1146,7 +1154,6 @@
       "Nature/台灣海洋生態.md",
       "Nature/台灣溫泉與地熱.md",
       "Nature/國家公園.md",
-      "People/五月天.md",
       "People/周杰倫.md",
       "People/李梅樹.md",
       "People/林懷民.md",
@@ -1298,6 +1305,11 @@
       "Technology/台灣5G網路建設與數位轉型.md"
     ],
     "ko": [
+      "Music/五月天.md",
+      "Music/小虎隊.md",
+      "Music/從張懸到安溥——兩個名字，同一個問題.md",
+      "Music/滅火器樂團.md",
+      "Society/TikTok.md",
       "History/乙未之役：臺灣民主國的 148 天.md",
       "History/臺灣島史觀：被反覆統治的島，如何發明自己的主體性.md",
       "History/台灣民主轉型——威權自掘的墳墓.md",
@@ -1309,7 +1321,6 @@
       "History/荷西明鄭時期.md",
       "Lifestyle/台灣咖啡文化：便利商店一年賣六億杯的島嶼.md",
       "Music/台灣獨立音樂：一間發不出薪水的唱片行，如何替一座島嶼打開耳朵.md",
-      "Music/從張懸到安溥——兩個名字，同一個問題.md",
       "Nature/台灣藍鵲：山林裡的藍色幫派.md",
       "Nature/特有種.md",
       "People/劉安婷.md",
@@ -1445,7 +1456,6 @@
       "Food/台灣小吃.md",
       "Lifestyle/小綠人：從交通號誌到國家符號的25年傳奇.md",
       "Music/流行音樂與金曲獎.md",
-      "People/小虎隊.md",
       "People/林宥嘉：在苦情歌王與『愛是王』之間，那場長達八年的自我救贖.md",
       "People/江蕙：從北投硫磺煙中走出的台語天后，與她長達九年的秘密戰爭.md",
       "People/王小棣：花甲男孩與台灣電視的溫柔革命.md",
@@ -1529,7 +1539,6 @@
       "Nature/台灣海洋生態.md",
       "Nature/台灣溫泉與地熱.md",
       "Nature/國家公園.md",
-      "People/五月天.md",
       "People/周杰倫.md",
       "People/李梅樹.md",
       "People/林懷民.md",

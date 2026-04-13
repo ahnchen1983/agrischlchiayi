@@ -255,30 +255,24 @@
   {
     "title": "小虎隊",
     "description": "1988年從華視選秀節目中誕生的小虎隊，由吳奇隆、陳志朋、蘇有朋組成，憑藉陽光活力形象與勵志舞曲，成為台灣第一個男子偶像團體，開啟華語流行音樂的青春偶像時代，並成為兩岸三地共同的青春記憶。",
-    "category": "People",
+    "category": "Music",
     "tags": ["台灣流行音樂", "偶像團體", "小虎隊", "80年代音樂", "青春文化"],
-    "url": "https://taiwan.md/People/%E5%B0%8F%E8%99%8E%E9%9A%8A",
+    "url": "https://taiwan.md/Music/%E5%B0%8F%E8%99%8E%E9%9A%8A",
     "readingTime": 8,
     "featured": false,
     "date": "2026-03-24T23:00:00Z",
-    "path": "People/小虎隊.md"
+    "path": "Music/小虎隊.md"
   },
   {
     "title": "小虎隊（シャオフードゥイ）",
     "description": "1988年に台湾の華視オーディション番組から誕生した小虎隊は、ウー・チーロン、チェン・ジーペン、スー・ヨウポンの3人で構成され、爽やかで活力あふれるイメージと前向きなダンスナンバーで台湾初の男性アイドルグループとなり、中国語圏ポップミュージックの青春アイドル時代を切り開いた。",
     "category": "ja",
-    "tags": [
-      "台湾ポップミュージック",
-      "アイドルグループ",
-      "小虎隊",
-      "80年代音楽",
-      "青春文化"
-    ],
-    "url": "https://taiwan.md/ja/People/little-tigers",
+    "tags": [],
+    "url": "https://taiwan.md/ja/Music/little-tigers",
     "readingTime": 11,
     "featured": false,
     "date": "2026-03-24T23:00:00Z",
-    "path": "ja/People/little-tigers.md"
+    "path": "ja/Music/little-tigers.md"
   },
   {
     "title": "小綠人：從交通號誌到國家符號的25年傳奇",
@@ -362,22 +356,14 @@
   },
   {
     "title": "五月天",
-    "description": "一個高中生樂團，用30年時間重新定義了亞洲的演唱會經濟學",
-    "category": "People",
-    "tags": [
-      "人物",
-      "樂團",
-      "搖滾樂",
-      "華語音樂",
-      "金曲獎",
-      "演唱會",
-      "音樂產業"
-    ],
-    "url": "https://taiwan.md/People/%E4%BA%94%E6%9C%88%E5%A4%A9",
-    "readingTime": 11,
+    "description": "1997 年，五個師大附中的高中生在野台開唱用 BBS 代號報了名。三十年後，他們在台北大巨蛋十分鐘賣掉 32 萬張票，在北京鳥巢唱了 30 場，卻也在同一個舞台上說出讓台灣人心碎的四個字。",
+    "category": "Music",
+    "tags": [],
+    "url": "https://taiwan.md/Music/%E4%BA%94%E6%9C%88%E5%A4%A9",
+    "readingTime": 15,
     "featured": false,
     "date": "2026-03-23",
-    "path": "People/五月天.md"
+    "path": "Music/五月天.md"
   },
   {
     "title": "仁寶電腦",
@@ -1622,17 +1608,6 @@
     "path": "ja/Society/same-sex-marriage.md"
   },
   {
-    "title": "台湾の地図はどう読むのか――サツマイモから衛星まで、400年のまなざし",
-    "description": "1554年、あるポルトガル人地図製作者は、8枚の羊皮紙からなる世界地図の上に「I. Fremosa」と記されたぼんやりした島を描いた。彼自身はその島に一度も上陸していない。470年以上後、Google Maps に表示される台湾の姿は、あなたがどの国から見ているかによって変わる。これは技術の問題ではなく、政治の問題である。",
-    "category": "ja",
-    "tags": [],
-    "url": "https://taiwan.md/ja/Geography/how-to-read-maps-of-taiwan",
-    "readingTime": 28,
-    "featured": false,
-    "date": "2026-04-07",
-    "path": "ja/Geography/how-to-read-maps-of-taiwan.md"
-  },
-  {
     "title": "台湾の地図をどう読むか――サツマイモから衛星まで四百年",
     "description": "1554年、ポルトガルの地図師が羊皮紙8枚に「I. Fremosa」と記した島を描いた。彼はその島を踏んだことがなかった。四百七十年後、Google Mapsに映る台湾の姿は、あなたがどの国にいるかによって変わる——これは技術の問題ではなく、政治の問題だ。",
     "category": "ja",
@@ -1659,17 +1634,6 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "ja/Society/community-and-li-culture.md"
-  },
-  {
-    "title": "台湾の気候危機とネットゼロ移行",
-    "description": "激化する異常気象から2050年ネットゼロ排出目標まで。台湾が直面する気候危機と、エネルギー転換の機会と課題を読み解きます。",
-    "category": "ja",
-    "tags": [],
-    "url": "https://taiwan.md/ja/Nature/taiwan-climate-change-net-zero-transition",
-    "readingTime": 28,
-    "featured": false,
-    "date": "2026-03-20",
-    "path": "ja/Nature/taiwan-climate-change-net-zero-transition.md"
   },
   {
     "title": "台湾の気候危機とネットゼロへの転換",
@@ -6887,9 +6851,18 @@
     "title": "從張懸到安溥——兩個名字，同一個問題",
     "description": "13 歲寫出〈寶貝〉，32 歲因一面旗子被中國封殺，34 歲親手殺死自己的藝名。焦安溥用兩段人生回答了一個台灣人都在問的問題：你到底站哪邊？",
     "category": "Music",
-    "tags": ["獨立音樂", "社會運動", "身份認同"],
+    "tags": [
+      "獨立音樂",
+      "社會運動",
+      "身份認同",
+      "張懸",
+      "安溥",
+      "焦安溥",
+      "金曲獎",
+      "太陽花學運"
+    ],
     "url": "https://taiwan.md/Music/%E5%BC%B5%E6%87%B8%E8%88%87%E5%AE%89%E6%BA%A5",
-    "readingTime": 19,
+    "readingTime": 29,
     "featured": false,
     "date": "2026-04-12",
     "path": "Music/張懸與安溥.md"
@@ -7811,6 +7784,26 @@
     "featured": false,
     "date": "2026-03-22",
     "path": "Lifestyle/溫泉文化.md"
+  },
+  {
+    "title": "滅火器樂團",
+    "description": "從高雄高中生組團，到唱出世代心聲的台語龐克樂團，滅火器用音樂記錄了台灣二十年來的憤怒、迷惘與希望，並以「火氣音樂」證明南方也能是音樂產業的中心。",
+    "category": "Music",
+    "tags": [
+      "搖滾",
+      "龐克",
+      "高雄",
+      "島嶼天光",
+      "太陽花學運",
+      "台語音樂",
+      "火氣音樂",
+      "楊大正"
+    ],
+    "url": "https://taiwan.md/Music/%E6%BB%85%E7%81%AB%E5%99%A8%E6%A8%82%E5%9C%98",
+    "readingTime": 9,
+    "featured": false,
+    "date": "2026-04-12",
+    "path": "Music/滅火器樂團.md"
   },
   {
     "title": "當代台灣文學：破格與重構的年代",
@@ -10310,12 +10303,12 @@
     "path": "en/About/founder.md"
   },
   {
-    "title": "From Deserts Chang to Anpu — Two Names, One Question",
-    "description": "She wrote her most famous song at 13, got banned from China at 32 for holding a flag, and killed her own stage name at 34. Chiao An-pu lived two careers under two names — and still could not escape the question: whose side are you on?",
+    "title": "From Deserts Chang to Anpu: Two Names, One Question",
+    "description": "She wrote her most famous song at 13, got banned from China at 32 for holding a flag, and killed her own stage name at 34. In 2024, she congratulated China on its national day — and broke Taiwan's heart. The story of Chiao An-pu, two audiences lost, for opposite reasons.",
     "category": "en",
-    "tags": ["indie music", "social movements", "identity"],
+    "tags": [],
     "url": "https://taiwan.md/en/Music/deserts-chang-anpu",
-    "readingTime": 51,
+    "readingTime": 71,
     "featured": false,
     "date": "2026-04-12",
     "path": "en/Music/deserts-chang-anpu.md"
@@ -10427,6 +10420,17 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "en/Food/hakka-food-culture.md"
+  },
+  {
+    "title": "Han Kuo-yu: Recalled by 939,000 Voters, Then Elected Speaker of Parliament",
+    "description": "The first mayor in Taiwan history to be recalled from office — removed by a 37-to-1 margin in 2020. Four years later, he became Speaker of the Legislative Yuan, the highest position in Taiwan parliament. How does a democracy handle political resurrection?",
+    "category": "en",
+    "tags": [],
+    "url": "https://taiwan.md/en/People/han-kuo-yu",
+    "readingTime": 68,
+    "featured": true,
+    "date": "2026-04-13",
+    "path": "en/People/han-kuo-yu.md"
   },
   {
     "title": "Handmade Taiwanese Cuisine",
@@ -11355,15 +11359,15 @@
     "path": "en/History/martial-law-era.md"
   },
   {
-    "title": "Mayday (五月天): Members, Origins, and How Five Taiwanese Students Built a Concert Empire",
-    "description": "Ashin, Monster, Stone, Masa, and Ming from Taipei — Mayday's five members have sold 21 million concert tickets and played 30 shows at Beijing's Bird's Nest. From a 1997 high school BBS nickname to Asia's biggest rock band. Members, history, and impact.",
+    "title": "Mayday (五月天): The Taiwanese Band That Turned Rock Concerts into an Empire",
+    "description": "Mayday is Taiwan's biggest rock band. Members Ashin (born Beitou, Taipei), Monster (Hsinchu), Masa (Kaohsiung), Stone (Taipei), and Guan You (Miaoli) formed at Taipei's Affiliated Senior High School in 1995. From a 1997 BBS nickname to 30 shows at Beijing's Bird's Nest and 320,000 tickets sold in 10 minutes at Taipei Dome. Their story, controversies, and cultural impact.",
     "category": "en",
     "tags": [],
-    "url": "https://taiwan.md/en/People/mayday-band",
-    "readingTime": 32,
+    "url": "https://taiwan.md/en/Music/mayday-band",
+    "readingTime": 36,
     "featured": false,
     "date": "2026-03-23",
-    "path": "en/People/mayday-band.md"
+    "path": "en/Music/mayday-band.md"
   },
   {
     "title": "Media and Press Freedom in Taiwan",
@@ -14184,17 +14188,6 @@
     "path": "en/Culture/taiwanese-tea-culture-and-living-aesthetics.md"
   },
   {
-    "title": "tapioca-milk-tea",
-    "description": "",
-    "category": "ja",
-    "tags": [],
-    "url": "https://taiwan.md/ja/Food/tapioca-milk-tea",
-    "readingTime": 24,
-    "featured": false,
-    "date": null,
-    "path": "ja/Food/tapioca-milk-tea.md"
-  },
-  {
     "title": "Té de Burbujas",
     "description": "De los puestos de mercado nocturno taiwaneses al imperio mundial de bebidas: la controversia del origen y el viaje de conquista cultural del té de burbujas",
     "category": "es",
@@ -14459,6 +14452,17 @@
     "featured": false,
     "date": "2026-03-24",
     "path": "ja/Technology/threads-in-taiwan.md"
+  },
+  {
+    "title": "TikTok",
+    "description": "從 15 秒的快樂到隱形的認知作戰，TikTok 如何透過極致的個人化推播與「影海戰術」，悄然重塑台灣青少年的世界觀與政治認同。",
+    "category": "Society",
+    "tags": [],
+    "url": "https://taiwan.md/Society/TikTok",
+    "readingTime": 16,
+    "featured": false,
+    "date": "2026-04-12",
+    "path": "Society/TikTok.md"
   },
   {
     "title": "Topography and Geology",
