@@ -1,8 +1,8 @@
 {
-  "totalArticles": 1489,
-  "totalCategories": 20,
-  "estimatedContributors": 100,
-  "totalTags": 3910,
+  "totalArticles": 1647,
+  "totalCategories": 21,
+  "estimatedContributors": 51,
+  "totalTags": 4054,
   "categories": [
     {
       "name": "ko",
@@ -77,6 +77,10 @@
       "count": 1
     },
     {
+      "name": "fr",
+      "count": 158
+    },
+    {
       "name": "es",
       "count": 36
     },
@@ -87,16 +91,16 @@
   ],
   "topTags": [
     {
-      "name": "Economy",
-      "count": 62
-    },
-    {
       "name": "企業",
       "count": 58
     },
     {
       "name": "人物",
       "count": 54
+    },
+    {
+      "name": "Economy",
+      "count": 50
     },
     {
       "name": "기업",
@@ -123,8 +127,12 @@
       "count": 19
     },
     {
-      "name": "ODM",
+      "name": "g0v",
       "count": 18
+    },
+    {
+      "name": "ODM",
+      "count": 17
     },
     {
       "name": "文化",
@@ -139,15 +147,11 @@
       "count": 15
     },
     {
-      "name": "TSMC",
-      "count": 15
-    },
-    {
       "name": "半導體",
       "count": 15
     },
     {
-      "name": "g0v",
+      "name": "TSMC",
       "count": 15
     },
     {
@@ -168,8 +172,13 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 1489,
+    "zh-TW": 1647,
     "en": 0
   },
-  "lastUpdated": "2026-04-14T03:45:17.325Z"
+  "lastUpdated": "2026-04-14T04:41:38.940Z",
+  "stars": 927,
+  "forks": 130,
+  "zhPages": 1248,
+  "enPages": 399,
+  "totalPages": 1647
 }

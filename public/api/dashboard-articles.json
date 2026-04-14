@@ -17,7 +17,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "887af6c4",
@@ -115,7 +115,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -147,7 +147,7 @@
     "tags": ["台灣流行音樂", "偶像團體", "小虎隊", "80年代音樂", "青春文化"],
     "translations": {
       "en": false,
-      "ja": false,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -181,7 +181,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "92f224cf",
@@ -222,7 +222,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "9a2361b6",
@@ -249,11 +249,11 @@
     "tagCount": 5,
     "tags": ["歷史", "島嶼", "史觀", "曹永和", "海洋"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "53610439",
@@ -282,9 +282,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "f4dfb120",
@@ -319,11 +319,11 @@
       "台鐵"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "956a36f3",
@@ -350,11 +350,11 @@
     "tagCount": 4,
     "tags": ["History", "日本統治", "現代化", "皇民化運動"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 14,
     "commitHash": "9a2361b6",
@@ -385,7 +385,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 17,
     "commitHash": "9a2361b6",
@@ -425,7 +425,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "956a36f3",
@@ -465,7 +465,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "53610439",
@@ -496,7 +496,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 14,
     "commitHash": "53610439",
@@ -532,7 +532,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -568,7 +568,7 @@
       "音樂產業"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -599,7 +599,7 @@
     "tagCount": 5,
     "tags": ["特有種", "保育類", "鳥類", "生態", "長尾山娘"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -630,7 +630,7 @@
     "tagCount": 5,
     "tags": ["Nature", "特有種", "生物多樣性", "台灣黑熊", "櫻花鉤吻鮭"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -775,7 +775,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "e5be81a5",
@@ -806,7 +806,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "8e0d85f2",
@@ -833,11 +833,11 @@
     "tagCount": 4,
     "tags": ["社會運動", "民主", "兩岸關係", "公民科技"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "f4dfb120",
@@ -868,7 +868,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "e22337b2",
@@ -895,11 +895,11 @@
     "tagCount": 7,
     "tags": ["宗教", "寺廟", "民間信仰", "媽祖", "佛教", "道教", "保安宮"],
     "translations": {
-      "en": false,
-      "ja": false,
-      "ko": false,
+      "en": true,
+      "ja": true,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "67fe687d",
@@ -930,7 +930,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "5dfae94a",
@@ -958,7 +958,7 @@
     "tags": [],
     "translations": {
       "en": false,
-      "ja": false,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -988,11 +988,11 @@
     "tagCount": 5,
     "tags": ["兩岸關係", "台海危機", "歷史", "國際關係", "地緣政治"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "89c6015e",
@@ -1019,9 +1019,9 @@
     "tagCount": 5,
     "tags": ["國樂", "傳統音樂", "臺北市立國樂團", "民族音樂", "文化融合"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -1050,8 +1050,8 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
       "es": false,
       "fr": false
@@ -1081,7 +1081,7 @@
     "tagCount": 6,
     "tags": ["教育", "翻轉教育", "PaGamO", "遊戲化學習", "台大", "教育創新"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -1151,7 +1151,7 @@
     "tagCount": 6,
     "tags": ["總統", "醫師", "政治人物", "民主進步黨", "公共衛生", "台南"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -1182,7 +1182,7 @@
     "tagCount": 5,
     "tags": ["政治人物", "國民黨", "兩岸關係", "學運世代", "2026"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -1265,7 +1265,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "056136d7",
@@ -1296,7 +1296,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "45b62300",
@@ -1331,11 +1331,11 @@
       "全民防衛"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "89c6015e",
@@ -1366,7 +1366,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "6c11ef53",
@@ -1400,11 +1400,11 @@
       "數位民主"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "89c6015e",
@@ -1432,10 +1432,10 @@
     "tags": ["半導體", "TSMC", "台積電", "先進製程", "科技島", "矽盾"],
     "translations": {
       "en": false,
-      "ja": false,
+      "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 15,
     "commitHash": "6c11ef53",
@@ -1463,10 +1463,10 @@
     "tags": [],
     "translations": {
       "en": false,
-      "ja": false,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "fa95d5e0",
@@ -1493,11 +1493,11 @@
     "tagCount": 6,
     "tags": ["無人機", "國防", "雷虎科技", "非紅供應鏈", "軍工", "AI"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "6c11ef53",
@@ -1536,7 +1536,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "d13e3670",
@@ -1564,9 +1564,9 @@
     "tags": [],
     "translations": {
       "en": false,
-      "ja": false,
+      "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 11,
@@ -1594,11 +1594,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 7,
     "commitHash": "ecb173b1",
@@ -1625,11 +1625,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 2,
     "commitHash": "1d7e529c",
@@ -1664,11 +1664,11 @@
       "領養文化"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 11,
     "commitHash": "ecb173b1",
@@ -1695,11 +1695,11 @@
     "tagCount": 5,
     "tags": ["外交", "邦交國", "國際關係", "兩岸", "聯合國"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "429d3cf0",
@@ -1726,11 +1726,11 @@
     "tagCount": 6,
     "tags": ["太空產業", "衛星", "TASA", "福衛", "太空科技", "商業太空"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "429d3cf0",
@@ -1761,7 +1761,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "ecb173b1",
@@ -1788,11 +1788,11 @@
     "tagCount": 5,
     "tags": ["資安產業", "網路安全", "數位發展", "資安政策", "技術創新"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "429d3cf0",
@@ -1823,7 +1823,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "c5415878",
@@ -1859,11 +1859,11 @@
       "偏遠地區"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "c0820463",
@@ -1890,7 +1890,7 @@
     "tagCount": 3,
     "tags": ["about", "origin", "taiwan-md"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -1925,7 +1925,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "f4e7a8af",
@@ -1952,7 +1952,7 @@
     "tagCount": 6,
     "tags": ["台股", "證券交易所", "資本市場", "ETF", "台積電", "散戶"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -1983,7 +1983,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -2014,11 +2014,11 @@
     "tagCount": 6,
     "tags": ["公衛", "SARS", "COVID-19", "防疫", "全民健保", "疾管署"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "6e9dc32c",
@@ -2049,7 +2049,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "257ae187",
@@ -2165,7 +2165,7 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2196,7 +2196,7 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2264,11 +2264,11 @@
       "馬場町"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "c0e572fd",
@@ -2295,11 +2295,11 @@
     "tagCount": 5,
     "tags": ["選舉", "民主化", "政黨政治", "黨外運動", "總統直選"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "001ae5fb",
@@ -2330,7 +2330,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "c0e572fd",
@@ -2357,7 +2357,7 @@
     "tagCount": 4,
     "tags": ["人物", "政治", "民主化", "總統"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -2450,9 +2450,9 @@
     "tagCount": 8,
     "tags": ["人物", "黃仁勳", "NVIDIA", "AI", "半導體", "科技", "台南", "GPU"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2493,7 +2493,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "bf1be5e5",
@@ -2551,9 +2551,9 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2583,8 +2583,8 @@
     "tags": ["交通", "高鐵", "捷運", "機車", "YouBike", "Gogoro", "悠遊卡"],
     "translations": {
       "en": false,
-      "ja": false,
-      "ko": false,
+      "ja": true,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2651,11 +2651,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "e844a4b8",
@@ -2682,11 +2682,11 @@
     "tagCount": 6,
     "tags": ["客家", "語言", "文化", "硬頸精神", "六堆", "還我母語運動"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "5b8ea228",
@@ -2717,7 +2717,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "a9bade27",
@@ -2792,7 +2792,7 @@
       "原住民族"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -2832,7 +2832,7 @@
       "適性學習"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -2863,7 +2863,7 @@
     "tagCount": 7,
     "tags": ["人物", "江振誠", "名廚", "米其林", "RAW", "餐飲", "台灣"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -2934,7 +2934,7 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2963,9 +2963,9 @@
     "tagCount": 5,
     "tags": ["台灣文學", "白先勇", "鄉土文學論戰", "吳明益", "現代主義"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -2994,8 +2994,8 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -3025,7 +3025,7 @@
     "tagCount": 7,
     "tags": ["文化", "族群", "原住民族", "客家", "閩南", "外省", "新住民"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -3056,11 +3056,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
-      "ko": false,
+      "en": true,
+      "ja": true,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "24546fe6",
@@ -3087,7 +3087,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -3118,8 +3118,8 @@
     "tagCount": 5,
     "tags": ["人物", "科學家", "物理學", "教育", "中研院"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
       "es": false,
       "fr": false
@@ -3159,7 +3159,7 @@
     ],
     "translations": {
       "en": true,
-      "ja": false,
+      "ja": true,
       "ko": false,
       "es": true,
       "fr": false
@@ -3189,10 +3189,10 @@
     "tagCount": 7,
     "tags": ["人物", "李遠哲", "諾貝爾獎", "化學", "科學家", "中研院", "台灣"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 12,
@@ -3261,7 +3261,7 @@
       "原住民族"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -3292,11 +3292,11 @@
     "tagCount": 5,
     "tags": ["人工智慧", "AI", "半導體", "科技政策", "數位轉型"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "a97494be",
@@ -3385,7 +3385,7 @@
     "tagCount": 6,
     "tags": ["周子瑜", "TWICE", "韓國", "K-POP", "國旗事件", "台灣認同"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": false,
       "es": false,
@@ -3425,9 +3425,9 @@
       "TPBL"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -3464,7 +3464,7 @@
       "教育捐款"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -3530,7 +3530,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "2bd5ec24",
@@ -3597,7 +3597,7 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -3630,7 +3630,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "f376de31",
@@ -3657,11 +3657,11 @@
     "tagCount": 6,
     "tags": ["台灣美食", "傳統料理", "辦桌", "手路菜", "總鋪師", "飲食文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "e3f90096",
@@ -3700,7 +3700,7 @@
       "ja": true,
       "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "11f80544",
@@ -3731,7 +3731,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "26967033",
@@ -3762,7 +3762,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "26967033",
@@ -3789,7 +3789,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -3851,7 +3851,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -3921,7 +3921,7 @@
       "沃爾夫獎"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -3983,7 +3983,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -4049,7 +4049,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "da13cc42",
@@ -4078,9 +4078,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "0beb32d0",
@@ -4107,7 +4107,7 @@
     "tagCount": 6,
     "tags": ["AI", "資訊戰", "開源", "SSOT", "知識主權", "台灣"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -4169,11 +4169,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "837f703b",
@@ -4201,10 +4201,10 @@
     "tags": ["美食", "珍珠奶茶", "手搖飲", "全球化", "軟實力", "文化外交"],
     "translations": {
       "en": true,
-      "ja": false,
-      "ko": false,
+      "ja": true,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 17,
     "commitHash": "722315d9",
@@ -4235,7 +4235,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "c8a997a5",
@@ -4262,7 +4262,7 @@
     "tagCount": 7,
     "tags": ["石虎", "保育", "路殺", "棲地", "苗栗", "瀕危物種", "生態"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -4293,7 +4293,7 @@
     "tagCount": 5,
     "tags": ["杜奕瑾", "PTT", "Taiwan AI Labs", "數位民主", "人工智慧"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -4324,7 +4324,7 @@
     "tagCount": 6,
     "tags": ["人物", "政治", "台北市長", "台灣民眾黨", "醫師", "第三勢力"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": false,
       "es": false,
@@ -4355,7 +4355,7 @@
     "tagCount": 6,
     "tags": ["總統", "政黨輪替", "民進黨", "台北市長", "民主化", "人權立法"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -4386,7 +4386,7 @@
     "tagCount": 5,
     "tags": ["總統", "國民黨", "兩岸關係", "ECFA", "台北市長"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -4417,7 +4417,7 @@
     "tagCount": 5,
     "tags": ["建築", "文化", "歷史", "原住民", "日治"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -4448,11 +4448,11 @@
     "tagCount": 5,
     "tags": ["原住民族", "文化", "祭典", "語言", "當代創作"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "0ae179a8",
@@ -4479,11 +4479,11 @@
     "tagCount": 5,
     "tags": ["原住民族", "語言復振", "族語教育", "語言政策", "文化傳承"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "0ae179a8",
@@ -4514,7 +4514,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "62a1e48f",
@@ -4572,11 +4572,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 14,
     "commitHash": "0ae179a8",
@@ -4603,11 +4603,11 @@
     "tagCount": 6,
     "tags": ["豆漿", "早餐店", "永和豆漿", "燒餅油條", "蛋餅", "眷村飲食"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "dd41d207",
@@ -4634,11 +4634,11 @@
     "tagCount": 5,
     "tags": ["原住民族", "正名運動", "身份認同", "社會運動", "文化保存"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "0ae179a8",
@@ -4672,7 +4672,7 @@
       "青年文化"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -4738,7 +4738,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "789172ac",
@@ -4765,11 +4765,11 @@
     "tagCount": 6,
     "tags": ["AI", "人工智慧", "LINE", "智慧醫療", "智慧農業", "日常科技"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "603c9ea7",
@@ -4804,11 +4804,11 @@
       "社群平台"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "ddf58597",
@@ -4835,11 +4835,11 @@
     "tagCount": 6,
     "tags": ["開源", "g0v", "COSCUP", "GitHub", "公民科技", "自由軟體"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "0dc53eee",
@@ -4866,11 +4866,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 16,
     "commitHash": "bd7dc5a5",
@@ -4943,11 +4943,11 @@
       "移民飲食"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
-      "es": false,
-      "fr": false
+      "ko": true,
+      "es": true,
+      "fr": true
     },
     "revision": 15,
     "commitHash": "b1297b1e",
@@ -5005,8 +5005,8 @@
     "tagCount": 5,
     "tags": ["金曲獎", "流行音樂", "獨立音樂", "原住民音樂", "華語音樂"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -5129,7 +5129,7 @@
     "tagCount": 5,
     "tags": ["台灣文史", "藏書家", "黃震南", "台灣歷史", "活水來冊房"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -5160,11 +5160,11 @@
     "tagCount": 6,
     "tags": ["志工服務", "公益團體", "慈濟", "NPO", "社區營造", "故事媽媽"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "c539986e",
@@ -5198,11 +5198,11 @@
       "社區網路"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "bd7dc5a5",
@@ -5240,7 +5240,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "6c753913",
@@ -5267,11 +5267,11 @@
     "tagCount": 4,
     "tags": ["文化", "科技", "直播", "虛擬偶像"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "f91cb391",
@@ -5333,7 +5333,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "27f64657",
@@ -5363,8 +5363,8 @@
       "en": false,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 17,
     "commitHash": "643de970",
@@ -5500,8 +5500,8 @@
     "tagCount": 5,
     "tags": ["關聖帝君", "恩主公", "行天宮", "民間信仰", "廟宇文化"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -5543,7 +5543,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "dcf35cb8",
@@ -5570,7 +5570,7 @@
     "tagCount": 4,
     "tags": ["城邦媒體", "出版業", "數位轉型", "自慢"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -5601,11 +5601,11 @@
     "tagCount": 5,
     "tags": ["茶文化", "茶道", "生活美學", "東方美人茶", "紫藤廬"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "33af20e9",
@@ -5632,8 +5632,8 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "半導體", "科技", "製造業", "台積電"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -5663,7 +5663,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "半導體", "晶片設計", "IC設計", "聯發科"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -5703,7 +5703,7 @@
       "交通"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -5812,7 +5812,7 @@
       "台灣獨立"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -5852,7 +5852,7 @@
       "環境"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -5883,11 +5883,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "b3c2ce22",
@@ -5914,7 +5914,7 @@
     "tagCount": 4,
     "tags": ["about", "founder", "artist", "新媒體藝術"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -5953,7 +5953,7 @@
       "數位藝術"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -5984,7 +5984,7 @@
     "tagCount": 5,
     "tags": ["文學", "原住民", "口傳文學", "南島語系", "文化復振"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6023,7 +6023,7 @@
       "文化保存"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6054,7 +6054,7 @@
     "tagCount": 6,
     "tags": ["散文", "文學", "台灣文學史", "女性作家", "生活書寫", "自然書寫"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6085,7 +6085,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6116,7 +6116,7 @@
     "tagCount": 5,
     "tags": ["策展人", "當代藝術", "文化建構", "美術館", "藝術論述"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6147,7 +6147,7 @@
     "tagCount": 5,
     "tags": ["戰後文學", "鄉土文學", "現代主義", "女性文學", "語言轉換"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6209,7 +6209,7 @@
     "tagCount": 4,
     "tags": ["art", "contemporary", "culture", "museums"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6240,11 +6240,11 @@
     "tagCount": 6,
     "tags": ["傳統節慶", "民俗", "媽祖遶境", "鹽水蜂炮", "春節", "中秋烤肉"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "c625bc75",
@@ -6271,11 +6271,11 @@
     "tagCount": 5,
     "tags": ["迷因", "網路文化", "台灣本土", "PTT", "社群媒體"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "2335911b",
@@ -6302,7 +6302,7 @@
     "tagCount": 6,
     "tags": ["注音", "語言", "教育", "文化認同", "輸入法", "ㄅㄆㄇ"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6341,7 +6341,7 @@
       "創業精神"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6372,7 +6372,7 @@
     "tagCount": 6,
     "tags": ["企業", "集團企業", "多元經營", "紡織業", "台商", "政治風險"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6403,7 +6403,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "海運業", "物流", "國際貿易"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6434,7 +6434,7 @@
     "tagCount": 5,
     "tags": ["動畫產業", "代工外包", "宏廣卡通", "東方迪士尼", "台灣藝術"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -6465,11 +6465,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "f9695ce2",
@@ -6504,11 +6504,11 @@
       "擔仔麵"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "6a31f0b6",
@@ -6535,7 +6535,7 @@
     "tagCount": 5,
     "tags": ["海岸地形", "海洋地景", "板塊構造", "地質作用", "自然景觀"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -6608,7 +6608,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "b1f05c3d",
@@ -6675,7 +6675,7 @@
       "黑潮"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -6744,10 +6744,10 @@
       "長鏡頭"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 10,
@@ -6775,7 +6775,7 @@
     "tagCount": 6,
     "tags": ["新媒體藝術", "生成藝術", "程式創作", "NFT", "教育", "人物"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -6837,7 +6837,7 @@
     "tagCount": 6,
     "tags": ["人物", "歌手", "演藝圈", "LGBTQ+權益", "流行音樂", "金曲獎"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -6880,7 +6880,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "5bbb9b11",
@@ -6914,11 +6914,11 @@
       "網路論壇"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "da1cd251",
@@ -6945,11 +6945,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "066d5727",
@@ -7014,7 +7014,7 @@
     "tagCount": 4,
     "tags": ["文學", "詩", "現代詩", "鄉土文學"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -7076,11 +7076,11 @@
     "tagCount": 5,
     "tags": ["語言學", "社會語言學", "台灣文化", "語言接觸", "外來語"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "66b00864",
@@ -7107,7 +7107,7 @@
     "tagCount": 5,
     "tags": ["網路歷史", "社群媒體", "BBS", "部落格", "Yahoo併購"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -7138,7 +7138,7 @@
     "tagCount": 5,
     "tags": ["Economy", "台灣經濟", "中小企業", "科學園區", "半導體"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7169,11 +7169,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "fb853712",
@@ -7200,11 +7200,11 @@
     "tagCount": 5,
     "tags": ["米其林", "精緻餐飲", "星級餐廳", "台灣美食", "餐飲產業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "59ebfd37",
@@ -7231,11 +7231,11 @@
     "tagCount": 6,
     "tags": ["米食", "稻米", "傳統文化", "節慶食品", "農業", "飲食變遷"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "d4090627",
@@ -7262,11 +7262,11 @@
     "tagCount": 6,
     "tags": ["Food", "茶文化", "烏龍茶", "高山茶", "手搖飲", "珍珠奶茶"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
-      "es": false,
-      "fr": false
+      "ko": true,
+      "es": true,
+      "fr": true
     },
     "revision": 18,
     "commitHash": "63fd53be",
@@ -7293,7 +7293,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7324,7 +7324,7 @@
     "tagCount": 5,
     "tags": ["國家風景區", "觀光政策", "環境保育", "永續旅遊", "國土規劃"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7355,7 +7355,7 @@
     "tagCount": 6,
     "tags": ["溫泉", "地質", "火山", "溫泉文化", "觀光", "板塊運動"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7386,7 +7386,7 @@
     "tagCount": 6,
     "tags": ["地理", "地質", "板塊運動", "造山運動", "地震", "溫泉"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7417,7 +7417,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7448,11 +7448,11 @@
     "tagCount": 5,
     "tags": ["眷村", "外省移民", "國共內戰", "文化保存", "都市更新"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "c480ac45",
@@ -7479,7 +7479,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7522,7 +7522,7 @@
       "財務"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7565,7 +7565,7 @@
       "en": false,
       "ja": false,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 12,
@@ -7602,7 +7602,7 @@
       "布農族"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7633,7 +7633,7 @@
     "tagCount": 6,
     "tags": ["森林生態", "垂直分布", "台灣杉", "檜木", "雲霧帶", "生物多樣性"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7695,7 +7695,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7726,7 +7726,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7757,7 +7757,7 @@
     "tagCount": 5,
     "tags": ["自然", "國家公園", "生態保育", "觀光", "環境保護"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -7788,7 +7788,7 @@
     "tagCount": 7,
     "tags": ["人物", "周杰倫", "華語流行音樂", "歌手", "創作", "R&B", "中國風"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": true,
@@ -7819,7 +7819,7 @@
     "tagCount": 7,
     "tags": ["人物", "藝術", "美術", "三峽", "祖師廟", "寫實主義", "台展"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7850,7 +7850,7 @@
     "tagCount": 5,
     "tags": ["人物", "舞蹈", "藝術", "表演藝術", "雲門舞集"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7888,7 +7888,7 @@
       "基督教事工"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -7926,7 +7926,7 @@
       "台灣"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": false,
       "es": false,
@@ -7957,7 +7957,7 @@
     "tagCount": 4,
     "tags": ["語言學家", "台語文運動", "母語教育", "越南研究"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -8019,11 +8019,11 @@
     "tagCount": 5,
     "tags": ["全齡共融", "無障礙旅遊", "超高齡社會", "家庭文化", "社會韌性"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "47640e45",
@@ -8050,11 +8050,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "0be979ef",
@@ -8085,7 +8085,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "07da0ecc",
@@ -8112,11 +8112,11 @@
     "tagCount": 4,
     "tags": ["Technology", "開源社群", "g0v", "公民科技"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 14,
     "commitHash": "53604597",
@@ -8143,7 +8143,7 @@
     "tagCount": 5,
     "tags": ["劇場", "表演藝術", "舞蹈", "雲門舞集", "當代傳奇劇場"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8174,7 +8174,7 @@
     "tagCount": 4,
     "tags": ["當代藝術", "美術館", "高雄", "文化空間"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8205,7 +8205,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "電源管理", "綠能科技", "工業自動化", "ESG"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8244,7 +8244,7 @@
       "架構創新"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8283,7 +8283,7 @@
       "數位轉型"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8323,7 +8323,7 @@
       "電動自行車"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -8354,11 +8354,11 @@
     "tagCount": 5,
     "tags": ["冰品", "芒果冰", "雪花冰", "剉冰", "ICE MONSTER"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "d7ee5e4e",
@@ -8385,11 +8385,11 @@
     "tagCount": 6,
     "tags": ["美食", "手搖飲", "珍珠奶茶", "茶飲", "文化輸出", "品牌國際化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "d7ee5e4e",
@@ -8416,11 +8416,11 @@
     "tagCount": 5,
     "tags": ["新住民美食", "東南亞料理", "文化融合", "多元飲食", "移民文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "d7ee5e4e",
@@ -8455,11 +8455,11 @@
       "豆漿店"
     ],
     "translations": {
-      "en": false,
-      "ja": false,
-      "ko": false,
+      "en": true,
+      "ja": true,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "d7ee5e4e",
@@ -8486,11 +8486,11 @@
     "tagCount": 5,
     "tags": ["海鮮", "漁港", "島嶼文化", "蚵仔煎", "海鮮料理"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "d7ee5e4e",
@@ -8517,11 +8517,11 @@
     "tagCount": 5,
     "tags": ["滷肉飯", "肉燥飯", "眷村菜", "國民美食", "南北差異"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "d7ee5e4e",
@@ -8556,11 +8556,11 @@
       "微生物"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "d7ee5e4e",
@@ -8587,11 +8587,11 @@
     "tagCount": 5,
     "tags": ["眷村菜", "外省菜", "牛肉麵", "大遷移", "竹籬笆"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "d7ee5e4e",
@@ -8618,11 +8618,11 @@
     "tagCount": 5,
     "tags": ["素食", "佛教", "素料", "慈濟", "素食餐廳"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "d7ee5e4e",
@@ -8649,11 +8649,11 @@
     "tagCount": 5,
     "tags": ["醬料", "調味料", "飲食文化", "台灣味", "發酵食品"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "d7ee5e4e",
@@ -8680,11 +8680,11 @@
     "tagCount": 5,
     "tags": ["鹹酥雞", "宵夜文化", "炸物", "九層塔", "夜市"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "d7ee5e4e",
@@ -8711,11 +8711,11 @@
     "tagCount": 5,
     "tags": ["麵包", "烘焙", "吳寶春", "台式麵包", "85度C"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "d7ee5e4e",
@@ -8742,11 +8742,11 @@
     "tagCount": 5,
     "tags": ["夜市", "小吃", "文化", "觀光", "庶民生活"],
     "translations": {
-      "en": false,
-      "ja": false,
-      "ko": false,
-      "es": false,
-      "fr": false
+      "en": true,
+      "ja": true,
+      "ko": true,
+      "es": true,
+      "fr": true
     },
     "revision": 17,
     "commitHash": "866bbdd4",
@@ -8773,11 +8773,11 @@
     "tagCount": 6,
     "tags": ["Food", "客家", "擂茶", "野薑花粽", "傳統美食", "族群文化"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "d7ee5e4e",
@@ -8804,11 +8804,11 @@
     "tagCount": 6,
     "tags": ["美食", "牛肉麵", "外省菜", "文化融合", "台北牛肉麵節", "米其林"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "a70c17f8",
@@ -8844,7 +8844,7 @@
       "實用主義"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -8884,10 +8884,10 @@
       "療癒文化"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 13,
@@ -8915,7 +8915,7 @@
     "tagCount": 5,
     "tags": ["人物", "政治家", "女權運動", "副總統", "美麗島事件"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -8946,7 +8946,7 @@
     "tagCount": 5,
     "tags": ["人物", "企業家", "科技", "宏碁", "微笑曲線"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -8984,7 +8984,7 @@
       "台灣之光"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9024,7 +9024,7 @@
       "日職"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9064,7 +9064,7 @@
       "施明德"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9103,11 +9103,11 @@
       "LGBTQ+"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "44d13f37",
@@ -9134,11 +9134,11 @@
     "tagCount": 5,
     "tags": ["長期照顧", "高齡化", "外籍看護", "長照2.0", "制度矛盾"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "01d785ab",
@@ -9165,7 +9165,7 @@
     "tagCount": 5,
     "tags": ["攝影", "視覺藝術", "張照堂", "阮義忠", "紀實"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9196,7 +9196,7 @@
     "tagCount": 6,
     "tags": ["漫畫", "插畫", "視覺藝術", "鄭問", "蔡志忠", "金漫獎"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9227,11 +9227,11 @@
     "tagCount": 4,
     "tags": ["台灣文化", "民俗信仰", "科技業", "都市傳說"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "2c4e67a1",
@@ -9258,11 +9258,11 @@
     "tagCount": 6,
     "tags": ["廟會", "陣頭", "民間信仰", "電音三太子", "八家將", "媽祖遶境"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "a2998a5d",
@@ -9289,11 +9289,11 @@
     "tagCount": 4,
     "tags": ["台灣文化", "民俗信仰", "諧音文化", "數字禁忌"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "2c4e67a1",
@@ -9320,11 +9320,11 @@
     "tagCount": 5,
     "tags": ["台灣文化", "民俗信仰", "媽祖", "保生大帝", "氣象諺語"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "2c4e67a1",
@@ -9351,7 +9351,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "電子代工", "ODM", "AI雲端", "筆記型電腦"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9382,7 +9382,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "半導體業", "封裝測試", "科技製造"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9413,7 +9413,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "食品業", "零售業", "品牌經營"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9444,7 +9444,7 @@
     "tagCount": 6,
     "tags": ["經濟", "夜市", "台灣", "商業模式", "觀光", "小吃"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -9475,7 +9475,7 @@
     "tagCount": 5,
     "tags": ["生態", "生物多樣性", "特有種", "保育", "國家公園"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9506,7 +9506,7 @@
     "tagCount": 5,
     "tags": ["生態多樣性", "特有種", "生物保育", "生態系統", "環境保護"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -9545,10 +9545,10 @@
       "小說家"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 10,
@@ -9576,10 +9576,10 @@
     "tagCount": 7,
     "tags": ["人物", "戴資穎", "羽球", "世界球后", "奧運", "運動員", "台灣"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 12,
@@ -9647,7 +9647,7 @@
       "台灣"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9688,7 +9688,7 @@
       "排灣族"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9728,7 +9728,7 @@
       "台灣"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -9759,11 +9759,11 @@
     "tagCount": 5,
     "tags": ["環保", "永續發展", "淨零排放", "循環經濟", "氣候變遷"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "a2998a5d",
@@ -9790,11 +9790,11 @@
     "tagCount": 6,
     "tags": ["PTT", "BBS", "網路文化", "鄉民", "數位民主", "社群媒體"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "3064b9bf",
@@ -9828,7 +9828,7 @@
       "文化復振"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9859,11 +9859,11 @@
     "tagCount": 5,
     "tags": ["漫畫", "動漫", "文化創意", "次文化", "青少年文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "f0fe192c",
@@ -9890,11 +9890,11 @@
     "tagCount": 5,
     "tags": ["老街", "歷史街區", "文化保存", "觀光", "建築"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "873bd2ea",
@@ -9921,11 +9921,11 @@
     "tagCount": 5,
     "tags": ["街頭藝術", "塗鴉", "都市文化", "公共藝術", "次文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "f0fe192c",
@@ -9952,7 +9952,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "鋼鐵業", "十大建設", "重工業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -9983,7 +9983,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "金融業", "公營銀行", "國際金融"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10014,7 +10014,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "水泥業", "建材", "國營民營化", "綠色轉型"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10045,7 +10045,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "化學工業", "高分子材料", "台南企業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10076,7 +10076,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "科技業", "VR", "智慧手機", "創新"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10107,7 +10107,7 @@
     "tagCount": 4,
     "tags": ["Economy", "企業", "金融業", "數位轉型"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10138,7 +10138,7 @@
     "tagCount": 4,
     "tags": ["Economy", "企業", "半導體", "IC設計"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10169,7 +10169,7 @@
     "tagCount": 4,
     "tags": ["Economy", "企業", "石化業", "化工"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10200,8 +10200,8 @@
     "tagCount": 6,
     "tags": ["交通運輸", "高鐵", "捷運", "公路", "航空", "港口"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
       "es": false,
       "fr": false
@@ -10231,7 +10231,7 @@
     "tagCount": 5,
     "tags": ["水資源", "水庫", "缺水", "水利工程", "氣候變遷"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -10262,7 +10262,7 @@
     "tagCount": 5,
     "tags": ["都市發展", "城鄉差距", "六都", "人口流動", "區域發展"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -10293,11 +10293,11 @@
     "tagCount": 5,
     "tags": ["海洋貿易", "大航海時代", "國際貿易", "海盜", "港口城市"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "f0fe192c",
@@ -10324,7 +10324,7 @@
     "tagCount": 4,
     "tags": ["Lifestyle", "騎樓", "街景", "都市文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -10355,7 +10355,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -10394,7 +10394,7 @@
       "永續發展"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -10463,7 +10463,7 @@
       "海洋保護"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -10501,7 +10501,7 @@
       "氣候變遷"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -10532,7 +10532,7 @@
     "tagCount": 6,
     "tags": ["教育", "閱讀素養", "品學堂", "閱讀理解", "教育創新", "素養教育"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -10570,11 +10570,11 @@
       "土地權利"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "1bb1eeb9",
@@ -10601,11 +10601,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "1bb1eeb9",
@@ -10632,11 +10632,11 @@
     "tagCount": 4,
     "tags": ["Technology", "AI", "人工智慧", "科技產業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "de86194e",
@@ -10665,9 +10665,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "183080c4",
@@ -10694,11 +10694,11 @@
     "tagCount": 5,
     "tags": ["數位影像", "動畫", "視覺特效", "文創產業", "影視工業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 11,
     "commitHash": "4fa34eeb",
@@ -10756,7 +10756,7 @@
     "tagCount": 5,
     "tags": ["Art", "watercolor", "painting", "水彩", "美術史"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -10787,11 +10787,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "730a9315",
@@ -10818,11 +10818,11 @@
     "tagCount": 6,
     "tags": ["文化", "客家", "紡織", "設計", "本土化", "文化復興"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "90558a84",
@@ -10856,8 +10856,8 @@
       "十大建設"
     ],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
       "fr": false
@@ -10960,7 +10960,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "9f958053",
@@ -10995,10 +10995,10 @@
       "現代生活"
     ],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 10,
@@ -11026,7 +11026,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11057,7 +11057,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11088,7 +11088,7 @@
     "tagCount": 7,
     "tags": ["音樂", "嘻哈", "饒舌", "Hip-Hop", "Rap", "金曲獎", "流行音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11119,7 +11119,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11157,7 +11157,7 @@
       "台灣工藝"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11188,7 +11188,7 @@
     "tagCount": 6,
     "tags": ["電子音樂", "Rave", "派對文化", "DJ", "電音節", "地下音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11219,7 +11219,7 @@
     "tagCount": 6,
     "tags": ["音樂產業", "串流音樂", "KKBOX", "數位音樂", "唱片行", "獨立音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11250,7 +11250,7 @@
     "tagCount": 4,
     "tags": ["自然", "步道", "公民科學", "生態保育"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11281,7 +11281,7 @@
     "tagCount": 7,
     "tags": ["皇蛾", "蛇頭蛾", "Atlas Moth", "蛾類", "保育", "昆蟲", "生態"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -11343,7 +11343,7 @@
     "tagCount": 6,
     "tags": ["音樂", "搖滾", "台語歌曲", "嘉義", "本土搖滾", "吉他"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11374,7 +11374,7 @@
     "tagCount": 4,
     "tags": ["台積電", "半導體", "地緣政治", "企業領導"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11413,7 +11413,7 @@
       "散文家"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11444,7 +11444,7 @@
     "tagCount": 7,
     "tags": ["人物", "繪本作家", "插畫", "文學", "血癌", "宜蘭", "電影改編"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11483,10 +11483,10 @@
       "護國神山"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 10,
@@ -11514,7 +11514,7 @@
     "tagCount": 6,
     "tags": ["音樂", "原住民", "卑南族", "天后", "同志平權", "流行音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11545,7 +11545,7 @@
     "tagCount": 4,
     "tags": ["趨勢科技", "資安產業", "軟體業", "國際化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11576,7 +11576,7 @@
     "tagCount": 5,
     "tags": ["電影", "導演", "演員", "歌手", "編劇"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11607,7 +11607,7 @@
     "tagCount": 5,
     "tags": ["設計師", "視覺識別", "金曲獎", "金馬獎", "究方社"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11638,7 +11638,7 @@
     "tagCount": 5,
     "tags": ["民主運動", "美麗島事件", "政治受難者", "倒扁紅衫軍", "政治領袖"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11708,7 +11708,7 @@
       "三三文學"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11739,7 +11739,7 @@
     "tagCount": 5,
     "tags": ["物理學家", "超導體", "諾貝爾獎候選人", "中研院", "休士頓大學"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11770,7 +11770,7 @@
     "tagCount": 5,
     "tags": ["李國修", "屏風表演班", "喜劇", "劇場", "台灣戲劇"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11801,10 +11801,10 @@
     "tagCount": 7,
     "tags": ["人物", "李安", "導演", "奧斯卡", "電影", "跨文化", "好萊塢"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 9,
@@ -11839,7 +11839,7 @@
       "人生哲學"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11909,7 +11909,7 @@
     "tagCount": 6,
     "tags": ["音樂", "創作歌手", "華語流行", "新加坡", "流行音樂", "金曲獎"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -11977,7 +11977,7 @@
       "慈林教育基金會"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12008,7 +12008,7 @@
     "tagCount": 5,
     "tags": ["林青霞", "演員", "瓊瑤電影", "東方不敗", "華語電影"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12039,7 +12039,7 @@
     "tagCount": 5,
     "tags": ["桂綸鎂", "演員", "不能說的秘密", "國際影展", "演技派"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12070,7 +12070,7 @@
     "tagCount": 6,
     "tags": ["體育", "田徑", "奧運", "十項全能", "原住民", "阿美族"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12101,7 +12101,7 @@
     "tagCount": 5,
     "tags": ["導演", "台灣新電影", "楊德昌", "坎城影展", "都市電影"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12132,7 +12132,7 @@
     "tagCount": 4,
     "tags": ["人物", "棒球", "運動", "職業運動員"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12163,7 +12163,7 @@
     "tagCount": 4,
     "tags": ["企業家", "台塑集團", "石化工業", "經營管理"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12202,7 +12202,7 @@
       "文學大師"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12233,7 +12233,7 @@
     "tagCount": 5,
     "tags": ["體育", "網球", "奧運", "溫布頓", "職業網球"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12264,7 +12264,7 @@
     "tagCount": 4,
     "tags": ["和碩聯合", "科技產業", "人文思想", "誠品書店"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12295,7 +12295,7 @@
     "tagCount": 4,
     "tags": ["Google", "人工智慧", "科技產業", "人才培育"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12326,7 +12326,7 @@
     "tagCount": 4,
     "tags": ["體育", "田徑", "奧運", "跨欄"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12357,7 +12357,7 @@
     "tagCount": 5,
     "tags": ["音樂", "創作歌手", "社會批判", "台語歌曲", "流行音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12388,7 +12388,7 @@
     "tagCount": 5,
     "tags": ["體育", "桌球", "奧運", "職業桌球", "歐洲聯賽"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12419,7 +12419,7 @@
     "tagCount": 4,
     "tags": ["英業達", "電子代工", "ODM", "筆記型電腦"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12450,7 +12450,7 @@
     "tagCount": 5,
     "tags": ["導演", "蔡明亮", "慢電影", "威尼斯影展", "馬來西亞華人"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12481,7 +12481,7 @@
     "tagCount": 5,
     "tags": ["設計師", "葛萊美獎", "專輯包裝", "視覺設計", "台灣文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12512,7 +12512,7 @@
     "tagCount": 5,
     "tags": ["奇美集團", "企業家", "音樂藝術", "博物館", "文化推廣"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12543,7 +12543,7 @@
     "tagCount": 5,
     "tags": ["體育", "舉重", "奧運", "金牌", "53公斤級"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12574,7 +12574,7 @@
     "tagCount": 5,
     "tags": ["舞蹈", "表演藝術", "瑪乘舞團", "拉芳", "現代舞"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12605,7 +12605,7 @@
     "tagCount": 6,
     "tags": ["體育", "網球", "溫布頓", "大滿貫", "女雙", "職業網球"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12636,7 +12636,7 @@
     "tagCount": 5,
     "tags": ["豬哥亮", "秀場", "喜劇", "綜藝", "台語"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12667,7 +12667,7 @@
     "tagCount": 5,
     "tags": ["賴聲川", "劇場", "表演工作坊", "暗戀桃花源", "戲劇導演"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12698,7 +12698,7 @@
     "tagCount": 4,
     "tags": ["人物", "企業家", "科技", "製造業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12729,7 +12729,7 @@
     "tagCount": 5,
     "tags": ["體育", "棒球", "MLB", "道奇隊", "左投"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12760,7 +12760,7 @@
     "tagCount": 6,
     "tags": ["音樂", "台語歌謠", "作曲家", "日治時期", "古典音樂", "桃園"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12799,10 +12799,10 @@
       "文化影響"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 9,
@@ -12830,7 +12830,7 @@
     "tagCount": 5,
     "tags": ["體育", "田徑", "標槍", "世大運", "亞洲紀錄"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12861,7 +12861,7 @@
     "tagCount": 5,
     "tags": ["鈕承澤", "導演", "演員", "艋舺", "爭議"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12899,7 +12899,7 @@
       "鄉土文學"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12930,7 +12930,7 @@
     "tagCount": 5,
     "tags": ["設計師", "平面設計", "設計教育", "自由落體", "設計詩人"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -12992,7 +12992,7 @@
     "tagCount": 6,
     "tags": ["音樂", "獨立音樂", "創作歌手", "跨年演唱會", "民謠", "搖滾"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13031,7 +13031,7 @@
       "第三世界"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13062,7 +13062,7 @@
     "tagCount": 6,
     "tags": ["陳玉勳", "導演", "喜劇電影", "熱帶魚", "總鋪師", "消失的情人節"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13093,7 +13093,7 @@
     "tagCount": 7,
     "tags": ["體育", "棒球", "日職", "巨人隊", "外野手", "原住民", "阿美族"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13124,7 +13124,7 @@
     "tagCount": 4,
     "tags": ["台積電", "半導體製程", "技術創新", "製造工藝"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13163,7 +13163,7 @@
       "賽德克巴萊"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13194,8 +13194,8 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": false,
       "es": false,
       "fr": false
@@ -13233,7 +13233,7 @@
       "小人物"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13272,7 +13272,7 @@
       "公共知識分子"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13303,11 +13303,11 @@
     "tagCount": 5,
     "tags": ["人工智慧", "智慧醫療", "杜奕瑾", "科技創新", "資訊戰防制"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "1d057a35",
@@ -13334,11 +13334,11 @@
     "tagCount": 5,
     "tags": ["遊戲產業", "數位娛樂", "文化創意", "科技業", "獨立遊戲"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "740a66e6",
@@ -13365,11 +13365,11 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "84a7a00e",
@@ -13396,7 +13396,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -13427,7 +13427,7 @@
     "tagCount": 3,
     "tags": ["文學", "日治時期", "殖民文學"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -13458,11 +13458,11 @@
     "tagCount": 6,
     "tags": ["婚禮", "喪禮", "人生禮俗", "辦桌文化", "傳統習俗", "現代轉化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "f13d7fea",
@@ -13497,11 +13497,11 @@
       "大谷翔平效應"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "b8865630",
@@ -13528,11 +13528,11 @@
     "tagCount": 6,
     "tags": ["製香", "傳統工藝", "宗教文化", "嘉義", "香腳", "民間信仰"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "6c5d0f53",
@@ -13559,7 +13559,7 @@
     "tagCount": 6,
     "tags": ["語言", "母語", "台語", "客家話", "原住民語", "多元文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -13598,7 +13598,7 @@
       "半導體"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13629,7 +13629,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13699,7 +13699,7 @@
     "tagCount": 5,
     "tags": ["精緻農業", "農業科技", "蘭花", "鳳梨釋迦", "智慧農業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13730,7 +13730,7 @@
     "tagCount": 6,
     "tags": ["地理", "地形", "山脈", "平原", "台灣", "自然地理"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13761,7 +13761,7 @@
     "tagCount": 5,
     "tags": ["地質", "板塊運動", "地震", "活動斷層", "自然災害"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13792,7 +13792,7 @@
     "tagCount": 7,
     "tags": ["地理", "河川", "水文", "濁水溪", "高屏溪", "淡水河", "水資源"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13823,7 +13823,7 @@
     "tagCount": 5,
     "tags": ["城市", "區域文化", "地方特色", "都市發展", "文化地理"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -13854,7 +13854,7 @@
     "tagCount": 5,
     "tags": ["原住民", "傳統音樂", "文化傳承", "樂器", "祭典"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13885,7 +13885,7 @@
     "tagCount": 5,
     "tags": ["搖滾樂", "音樂史", "地下音樂", "樂團", "台灣音樂"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13916,7 +13916,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13947,7 +13947,7 @@
     "tagCount": 5,
     "tags": ["原住民歌手", "流行音樂", "文化融合", "金曲獎", "當代創作"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13986,9 +13986,9 @@
       "國家公園"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -14017,11 +14017,11 @@
     "tagCount": 6,
     "tags": ["ISO 3166", "國際標準", "開源軟體", "g0v", "數位主權", "台灣標示"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "15319020",
@@ -14048,11 +14048,11 @@
     "tagCount": 6,
     "tags": ["教育", "升學", "十二年國教", "技職教育", "教育改革", "競爭文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "41af818d",
@@ -14079,11 +14079,11 @@
     "tagCount": 5,
     "tags": ["社會住宅", "居住正義", "住宅政策", "包租代管", "都市更新"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "b8863683",
@@ -14117,11 +14117,11 @@
       "社會改革"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "6d7b6220",
@@ -14148,11 +14148,11 @@
     "tagCount": 4,
     "tags": ["軟體產業", "資訊服務", "數位轉型", "新創"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "27dc0149",
@@ -14179,7 +14179,7 @@
     "tagCount": 4,
     "tags": ["quotes", "history", "literature", "culture"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14214,7 +14214,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "60b9cd78",
@@ -14241,10 +14241,10 @@
     "tagCount": 5,
     "tags": ["生活", "夜生活", "KTV", "深夜食堂", "台灣"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": false
     },
     "revision": 7,
@@ -14272,11 +14272,11 @@
     "tagCount": 5,
     "tags": ["Society", "人權", "性別平等", "同性婚姻", "轉型正義"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 12,
     "commitHash": "eec1bc99",
@@ -14303,11 +14303,11 @@
     "tagCount": 4,
     "tags": ["Society", "民主化", "解嚴", "總統直選"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
-      "fr": false
+      "es": true,
+      "fr": true
     },
     "revision": 12,
     "commitHash": "eec1bc99",
@@ -14334,7 +14334,7 @@
     "tagCount": 5,
     "tags": ["藝術教育", "美術系", "藝術大學", "師資培育", "學院發展"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14365,11 +14365,11 @@
     "tagCount": 5,
     "tags": ["文化", "數位文化", "YouTuber", "網路影音", "社會影響"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14396,11 +14396,11 @@
     "tagCount": 5,
     "tags": ["文創園區", "舊建築活化", "創意產業", "都市更新", "文化保存"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "",
@@ -14427,11 +14427,11 @@
     "tagCount": 6,
     "tags": ["宗教", "佛教", "一貫道", "人間佛教", "心靈文化", "慈善事業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "",
@@ -14458,11 +14458,11 @@
     "tagCount": 6,
     "tags": ["茶文化", "凍頂烏龍", "高山茶", "手搖飲", "珍珠奶茶", "農業文化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "",
@@ -14489,7 +14489,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "電信業", "數位轉型", "國營企業民營化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14520,7 +14520,7 @@
     "tagCount": 4,
     "tags": ["Economy", "企業", "電子代工", "ODM"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14551,7 +14551,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "石化工業", "台塑集團", "傳統產業", "台塑四寶"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14582,7 +14582,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "電子代工", "製造業", "ODM"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14613,7 +14613,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "金融業", "金控", "銀行", "保險"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14644,7 +14644,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "個人電腦", "品牌", "全球化"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14675,7 +14675,7 @@
     "tagCount": 4,
     "tags": ["Economy", "企業", "工業電腦", "IoT"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14706,7 +14706,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "電子代工", "製造業", "ODM"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14737,7 +14737,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "半導體", "晶圓代工", "科技"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14768,7 +14768,7 @@
     "tagCount": 5,
     "tags": ["Economy", "企業", "電腦硬體", "品牌", "科技"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14799,7 +14799,7 @@
     "tagCount": 6,
     "tags": ["Economy", "企業", "電子製造", "代工", "鴻海", "富士康"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14830,7 +14830,7 @@
     "tagCount": 7,
     "tags": ["經濟", "貿易政策", "CPTPP", "新南向", "ECFA", "FTA", "國際經貿"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14861,7 +14861,7 @@
     "tagCount": 6,
     "tags": ["經濟", "產業政策", "轉型升級", "創新", "製造業", "高科技"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -14954,7 +14954,7 @@
     "tagCount": 5,
     "tags": ["地理", "地質", "島嶼", "板塊運動", "地形"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -14985,7 +14985,7 @@
     "tagCount": 5,
     "tags": ["農業", "地景", "產業", "糧食安全", "地理"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -15025,7 +15025,7 @@
       "軍事遺跡"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -15063,11 +15063,11 @@
       "工業化"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -15094,7 +15094,7 @@
     "tagCount": 5,
     "tags": ["公園", "休閒", "社交文化", "跨世代", "日常生活"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -15125,7 +15125,7 @@
     "tagCount": 5,
     "tags": ["傳統市場", "庶民文化", "社會功能", "都市計畫", "社區經濟"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -15163,7 +15163,7 @@
       "音樂產業"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -15194,7 +15194,7 @@
     "tagCount": 5,
     "tags": ["國家公園", "生態保育", "自然地景", "生物多樣性", "環境保護"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -15225,7 +15225,7 @@
     "tagCount": 5,
     "tags": ["海洋保育", "海洋污染", "海洋廢棄物", "海洋委員會", "永續漁業"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -15256,7 +15256,7 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -15295,7 +15295,7 @@
       "AMP"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": false,
       "es": false,
@@ -15326,11 +15326,11 @@
     "tagCount": 5,
     "tags": ["媒體", "新聞自由", "民主化", "數位轉型", "媒體識讀"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",
@@ -15357,11 +15357,11 @@
     "tagCount": 5,
     "tags": ["里鄰制度", "社區營造", "社區大學", "公民參與", "地方自治"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",
@@ -15388,11 +15388,11 @@
     "tagCount": 5,
     "tags": ["5G", "數位轉型", "數位發展部", "智慧城市", "電信產業"],
     "translations": {
-      "en": false,
-      "ja": false,
+      "en": true,
+      "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",
@@ -15419,11 +15419,11 @@
     "tagCount": 5,
     "tags": ["新創企業", "創業生態系", "創投基金", "加速器", "創新育成"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "",
@@ -15450,11 +15450,11 @@
     "tagCount": 5,
     "tags": ["電動車", "電池技術", "充電基礎設施", "淨零轉型", "綠色運輸"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",
@@ -15481,11 +15481,11 @@
     "tagCount": 5,
     "tags": ["音響產業", "電子製造", "聲學技術", "Hi-Fi", "專業音響"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",

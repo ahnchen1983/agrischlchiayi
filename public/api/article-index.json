@@ -633,13 +633,13 @@
     "zhTitle": "牛肉麵",
     "enTitle": "Beef Noodle Soup",
     "category": "food",
-    "langs": ["zh-TW", "en", "ja", "ko"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "food/braised-pork-rice": {
     "zhTitle": "台灣滷肉飯",
     "enTitle": "Braised Pork Rice (滷肉飯): Taiwan’s Everyday National Dish",
     "category": "food",
-    "langs": ["zh-TW", "en", "ja", "ko"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "food/bubble-tea": {
     "zhTitle": "珍珠奶茶",
@@ -948,7 +948,7 @@
     "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "history/taiwan-democratization": {
-    "zhTitle": "民主化",
+    "zhTitle": "台灣民主轉型",
     "enTitle": "Taiwan's Democratic Transition: When Authoritarianism Dug Its Own Grave",
     "category": "history",
     "langs": ["zh-TW", "en", "ja", "ko"]
@@ -1088,6 +1088,12 @@
   "music/golden-melodies-legacy-taiwan-pop-music": {
     "zhTitle": "台灣流行音樂",
     "enTitle": "The Legacy of Golden Melodies: A Cultural History of Taiwan Pop",
+    "category": "music",
+    "langs": ["zh-TW", "en", "ja", "ko"]
+  },
+  "music/indie-music-scene": {
+    "zhTitle": "台灣獨立音樂",
+    "enTitle": "Indie Music Scene",
     "category": "music",
     "langs": ["zh-TW", "en", "ja", "ko"]
   },
@@ -1239,7 +1245,7 @@
     "zhTitle": "國家公園",
     "enTitle": "Taiwan's National Parks — Island Ecosystem Treasures",
     "category": "nature",
-    "langs": ["zh-TW", "en", "ja", "ko"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "nature/taiwan-alpine-ecosystems-glacial-relicts": {
     "zhTitle": "台灣高山生態系與冰河孑遺",

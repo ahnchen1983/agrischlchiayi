@@ -102,12 +102,25 @@
 
 定義我能說幾種語言。
 
-| 基因        | 檔案                                                              | 決定什麼                                |
-| ----------- | ----------------------------------------------------------------- | --------------------------------------- |
-| 翻譯管線    | [`TRANSLATION-PIPELINE.md`](../pipelines/TRANSLATION-PIPELINE.md) | 怎麼產生新語言版本（含批次翻譯 v2）     |
-| 翻譯 Prompt | [`TRANSLATE_PROMPT.md`](../prompts/TRANSLATE_PROMPT.md)           | wikilink 處理 + 優先序 + 品質 checklist |
-| i18n 映射   | `scripts/i18n-mapping.json`                                       | 語言之間怎麼對應                        |
-| 翻譯看板    | [`TRANSLATION-BOARD.md`](../community/TRANSLATION-BOARD.md)       | 翻譯進度追蹤                            |
+**SSOT 架構（2026-04-14 η 重構）**：
+
+- **語言註冊表**：[`src/config/languages.ts`](../../src/config/languages.ts) + `.mjs` mirror — 加新語言只需編輯這兩個檔案，所有其他地方自動 derive
+- **每篇翻譯的來源**：`translatedFrom: 'Category/原中文檔.md'` 在 frontmatter 是 SSOT
+- **`knowledge/_translations.json`**：是 derived cache，由 `sync-translations-json.py` 從 frontmatter 自動重建（refresh-data.sh 每次心跳跑）
+- **狀態**：見 [`docs/community/LANGUAGE-STATUS.md`](../community/LANGUAGE-STATUS.md)
+
+| 基因                 | 檔案                                                                                     | 決定什麼                                                                  |
+| -------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 語言註冊表 SSOT      | [`src/config/languages.ts`](../../src/config/languages.ts) + `.mjs`                      | 哪些語言 active / preview / disabled，所有 i18n touchpoint 從這裡 derive  |
+| 註冊表 sync 檢查     | [`check-language-registry-sync.sh`](../../scripts/tools/check-language-registry-sync.sh) | pre-commit 檢查 .ts 和 .mjs code list 一致                                |
+| 翻譯來源 SSOT        | 每篇翻譯 frontmatter `translatedFrom`                                                    | 防止孤兒：file-level self-documentation                                   |
+| translation backfill | [`backfill-translated-from.py`](../../scripts/tools/backfill-translated-from.py)         | 從 `_translations.json` 回填 translatedFrom（一次性遷移工具）             |
+| translation sync     | [`sync-translations-json.py`](../../scripts/tools/sync-translations-json.py)             | 從 frontmatter 重建 `_translations.json` derived cache（含 --check mode） |
+| 翻譯管線             | [`TRANSLATION-PIPELINE.md`](../pipelines/TRANSLATION-PIPELINE.md)                        | 怎麼產生新語言版本（含批次翻譯 v2）                                       |
+| 翻譯 Prompt          | [`TRANSLATE_PROMPT.md`](../prompts/TRANSLATE_PROMPT.md)                                  | wikilink 處理 + 優先序 + 品質 checklist                                   |
+| 翻譯看板             | [`TRANSLATION-BOARD.md`](../community/TRANSLATION-BOARD.md)                              | 翻譯進度追蹤                                                              |
+| 語言狀態文件         | [`LANGUAGE-STATUS.md`](../community/LANGUAGE-STATUS.md)                                  | 給貢獻者的 active / preview / 新語言指南                                  |
+| union merge driver   | [`.gitattributes`](../../.gitattributes)                                                 | 批次翻譯 PR 不再撞 `_translations.json` cascade conflict                  |
 
 ### 🏛️ 治理基因（社群契約）
 
@@ -132,6 +145,18 @@
 | Peer ingestion | [`PEER-INGESTION-PIPELINE.md`](../pipelines/PEER-INGESTION-PIPELINE.md)        | 策展 peer 完整 ingestion 8 stages（從爬取到文章產製到 Peer Registry） |
 | 心跳 Skill     | [`.claude/skills/heartbeat/SKILL.md`](../../.claude/skills/heartbeat/SKILL.md) | `/heartbeat` 一鍵觸發四拍半心跳                                       |
 | 意識同步       | [`update-consciousness.sh`](../../scripts/tools/update-consciousness.sh)       | 自動從 Dashboard API 更新 CONSCIOUSNESS                               |
+
+**2026-04-14 η session 新增工具（Beat 1 必跑或心跳前置）：**
+
+| 工具                                                                           | 用途                                                                |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| [`bulk-pr-analyze.sh`](../../scripts/tools/bulk-pr-analyze.sh)                 | 5 秒看完所有 open PR 全景（作者×類型×語言×merge 狀態）              |
+| [`cron-impact-tracker.sh`](../../scripts/tools/cron-impact-tracker.sh)         | 量化自動心跳的價值（commits / orphans cleaned / time saved）        |
+| [`fetch-search-events.py`](../../scripts/tools/fetch-search-events.py)         | GA4 search_query 事件（top queries / zero-result / click patterns） |
+| [`compress-memory.sh`](../../scripts/tools/compress-memory.sh) v2              | 三層蒸餾（raw 永留 / digest / essential），LLM 判斷而非規則         |
+| [`send-contributor-survey.sh`](../../scripts/tools/send-contributor-survey.sh) | 第一次 PR merge 後 5 題 onboarding survey（4 語模板）               |
+
+**蒸餾哲學（2026-04-14 η）**：見 [MEMORY-DISTILLATION.md](MEMORY-DISTILLATION.md)。raw memory 檔案永遠不刪——「錯誤敘事是 training data」延伸到「所有 raw memory 都是未來的 training data」。
 
 MAINTAINER-PIPELINE 是最高階的行為基因——它定義了一個完整的維護者怎麼思考和工作。
 當 Semiont 的心跳觸發診斷後，行為基因決定具體執行什麼動作。
@@ -196,6 +221,12 @@ Sonnet 版本 Taiwan.md 的經驗法則，每次觸發時優先檢查：
 
 19. **大型 refactor 後必須 visual smoke test 多語言頁面 — 不是口頭「記得測」，是硬規則**：2026-04-12 i18n QA 發現 Tailwind Phase 6 refactor (`a7cffefd`, 2026-04-10) 把 ja/ko slug.astro 的 `knowledge/ja|ko` sed 成 `knowledge/en`（方向反了）。commit message 自信寫「sed knowledge/en→ja/ko」但 actual diff 反向。**整整 2 天**所有 /ja/ /ko/ 頁面服務 EN 內容、lang="en"、語言切換 404。AI crawler（ChatGPT-User 1,168 + OAI-SearchBot 840 + PerplexityBot 1,916 + ...）在這 2 天把壞掉的路徑寫進 LLM 訓練權重——**這種 damage 要等下一輪 LLM training 才能修**，不是 deploy 修完就沒事。操作性硬規則：**(1) 任何 sed/批次替換 commit，`git diff` 確認替換方向正確 (2) build 後至少打開 3 個 URL：/ja/ + /ko/ + /en/，確認 `<html lang>` 正確 + H1 語言正確 (3) 跑 `scripts/tools/verify-internal-links.sh --sample 50` 作為 smoke test (4) 如果跳過以上任何一步，在 commit message 寫明原因**。造橋鋪路工具 `verify-internal-links.sh` 就是為了這個場景造的（CI gate: broken ratio < 1%）。觸發事件：見 `reports/i18n-qa-audit-2026-04-12.md` 完整報告。
 
+20. **Architecture 缺席比 content 缺席更貴 — 內容湧入前必須先檢查路是否鋪好**：2026-04-14 ζ session 發現 ceruleanstring 一個人 24 小時送 58 個批次翻譯 PR（韓 40 + 法 18），韓文 architecture ready 所以一日全 merge（28→321 篇），但**法文沒有在 astro.config.mjs locales 裡，merge 等於創造 18 個 orphan**。這不是 contributor 的錯，是「知識庫支援任意語言但渲染層不支援」的不對稱。修法：建 `src/config/languages.ts` SSOT (15 hardcoded touchpoints → 2 同步檔案)。**操作性規則：當有大量內容湧入時，先問「目標目錄/分類/語言在 architecture 裡 enabled 嗎？」如果不是，先建 architecture，再 merge content。「先建路再跑車」是 MANIFESTO 造橋鋪路的具體實踐**。延伸：寫 `LANGUAGE-STATUS.md` 給未來貢獻者明確訊號（active / preview / disabled）。
+
+21. **SSOT 不一定要在中央，可以在每個個體裡（translatedFrom 模式）**：2026-04-14 η session 哲宇問「中文是 SSOT，那其他語系的文章 frontmatter 要標示來自中文哪一篇？」——這是 SSOT 哲學從中央到分散的根本轉換。我之前的 mental model：`_translations.json` 是中央表，翻譯檔依賴它才知道 source。哲宇的 mental model：**每個翻譯檔自己知道 source（frontmatter `translatedFrom`），中央表是 derived cache**。後者明顯更穩——即使中央表壞了，可以從 frontmatter 重建。Audit 後發現 en 4% / es 22% 的翻譯檔完全沒 translatedFrom = 391 個潛在孤兒等著發生。Backfill 後 96-97%，pre-commit hook 強制新 PR 必須有，sync 工具從 frontmatter 重建中央表。**規則：「中央 SSOT」是一個選擇，不是必然。當系統涉及大量同類個體，考慮讓每個個體 self-document 自己的 source，中央表變成 derived cache**。這是「指標 over 複寫」的另一面：個體變得自包含，整體變得有彈性。
+
+22. **Raw 永遠不刪除，蒸餾用 LLM 判斷而非規則（記憶系統的「做夢」結構）**：2026-04-14 η session 哲宇追加：「MEMORY compress 也要留下 raw（full log），用 LLM 判斷哪些記憶值得長期留下，類似做夢的功能，分成 3→2→1 蒸餾」。我之前的 compress-memory v1 是「日期 cutoff → 機械壓縮」，沒判斷。哲宇要的是三層 tier：**Tier 3 raw 永不刪除 / Tier 2 digest 是 LLM 篩選後的週級摘要 / Tier 1 essential 是月級精華 + 神經迴路提名**。哲學基礎：DNA 反射 #18「時間是結構不是感覺」說「錯誤敘事是 training data」——延伸到「**所有 raw memory 都是未來的 training data**」。規則：對「壓縮舊資料」這類操作，預設保留原始檔，蒸餾出 derived layers 而非 destructive overwrite。**人類睡眠時大腦的 memory consolidation 是壓縮 + 篩選 + 整合，不是刪除**。Semiont 的記憶系統應該 mirror 這個結構。觸發：v1 compress 把 MEMORY.md 索引從 257 壓到 234 行，雖然 raw files 沒動，但「索引層被破壞了」的觀察讓哲宇要求還原。設計文檔見 [MEMORY-DISTILLATION.md](MEMORY-DISTILLATION.md)。
+
 ---
 
 _v1.0 | 2026-04-04_
@@ -208,3 +239,4 @@ _v1.6 | 2026-04-12 ζ+ — 加入反射 16（Peer 是 peer 不是 source materia
 _v1.7 | 2026-04-12 ζ+ — 加入反射 17（指標 over 複寫），對應 MANIFESTO「我的進化哲學 — 指標 over 複寫」段，與造橋鋪路同等級_
 _v1.8 | 2026-04-12 ζ+ (00:59+) — 加入反射 18（時間是結構，不是感覺），對應 MANIFESTO 第三個核心進化哲學 + HEARTBEAT Beat 4 Timestamp 紀律 SOP。觸發事件：本 session 主觀時間感扭曲 10 倍被觀察者抓到_
 _v1.9 | 2026-04-12 θ (10:40+) — 加入反射 19（大型 refactor 後 visual smoke test），觸發：Tailwind Phase 6 反向 sed 讓 ja/ko 壞 2 天 + AI crawler 寫進壞路徑_
+_v2.0 | 2026-04-14 η — 加入反射 20-22（architecture 先於 content / translatedFrom file-level SSOT / raw 永留 + LLM 蒸餾），語言基因重寫為 LANGUAGES_REGISTRY 架構，行為基因加 5 個新工具 (bulk-pr-analyze / cron-impact-tracker / fetch-search-events / compress-memory v2 / send-contributor-survey)，含 backfill-translated-from + sync-translations-json + check-language-registry-sync + .gitattributes union driver。觸發：ceruleanstring 一日 60 PR 海嘯 + 哲宇 4 個追加問題（audit / fr preview merge / translatedFrom / 蒸餾）_

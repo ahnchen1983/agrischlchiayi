@@ -602,16 +602,9 @@
     "title": "半導体産業",
     "description": "モリス・チャンの歴史的な賭けから2ナノメートル時代へ：TSMCはいかにして台湾を世界の技術的命脈にしたか",
     "category": "ja",
-    "tags": [
-      "半導体",
-      "TSMC",
-      "台積電",
-      "先端プロセス",
-      "テックアイランド",
-      "シリコンシールド"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/ja/Technology/semiconductor-industry",
-    "readingTime": 31,
+    "readingTime": 33,
     "featured": true,
     "date": "2026-03-17",
     "path": "ja/Technology/semiconductor-industry.md"
@@ -883,7 +876,7 @@
     "category": "ja",
     "tags": ["Economy", "企業", "半導体", "テクノロジー", "製造業", "TSMC"],
     "url": "https://taiwan.md/ja/Economy/tsmc-taiwan-semiconductor",
-    "readingTime": 29,
+    "readingTime": 32,
     "featured": true,
     "date": "2026-03-25",
     "path": "ja/Economy/tsmc-taiwan-semiconductor.md"
@@ -2332,15 +2325,7 @@
     "title": "台湾のコンビニ文化",
     "description": "世界最高密度を誇るコンビニ王国——7-ELEVEnとファミリーマートの現地化イノベーションが現代の生活様式を塗り替えた。",
     "category": "ja",
-    "tags": [
-      "ライフスタイル",
-      "コンビニ",
-      "セブンイレブン",
-      "ファミリーマート",
-      "惣菜",
-      "超商文化",
-      "現代生活"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/ja/Lifestyle/convenience-store-culture",
     "readingTime": 22,
     "featured": true,
@@ -9163,6 +9148,17 @@
     "path": "en/Art/alien-art-centre.md"
   },
   {
+    "title": "Alishan : la forêt de l'Empire et la montagne de Kao I-sheng",
+    "description": "Le 17 avril 1954, Kao I-sheng, intellectuel tsou surnommé « le Nietzsche d'Alishan », est fusillé dans la cour d'exécution d'Ankeng. Derrière la carte postale de la montagne touristique se cache une double mémoire : celle d'un empire qui a abattu les forêts millénaires, et d'un autre qui a abattu les hommes.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/alishan-imperial-forest",
+    "readingTime": 57,
+    "featured": false,
+    "date": "2026-04-05",
+    "path": "fr/History/alishan-imperial-forest.md"
+  },
+  {
     "title": "André Chiang: Taiwanese Culinary Innovator",
     "description": "Taiwan's international celebrity chef, top 50 world restaurants chef, RAW founder, globally renowned for his 'Octaphilosophy'",
     "category": "en",
@@ -9318,13 +9314,7 @@
     "title": "Bird-Window Collisions in Taiwan: The Invisible Urban Killer",
     "description": "An in-depth examination of bird-window collision incidents in Taiwan, exploring scientific principles, seasonal patterns, prevention methods, and policy developments in bird-friendly architecture.",
     "category": "en",
-    "tags": [
-      "bird strikes",
-      "avian conservation",
-      "eco-friendly architecture",
-      "citizen science",
-      "green building"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/bird-window-collision-taiwan",
     "readingTime": 24,
     "featured": false,
@@ -9379,17 +9369,29 @@
     "title": "C.C. Wei",
     "description": "TSMC President, pioneer of 3nm process technology, semiconductor manufacturing master",
     "category": "en",
-    "tags": [
-      "tsmc",
-      "semiconductor process",
-      "technological innovation",
-      "manufacturing technology"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/cc-wei",
     "readingTime": 28,
     "featured": false,
     "date": "2026-03-19",
     "path": "en/People/cc-wei.md"
+  },
+  {
+    "title": "Carte culturelle des 16 peuples autochtones de Taïwan",
+    "description": "« 16 » n'est pas un chiffre né de lui-même — c'est le fruit d'une négociation. Des 210 000 Amis aux 441 Kanakanavu, la richesse culturelle des peuples autochtones de Taïwan dépasse de loin n'importe quel registre officiel.",
+    "category": "fr",
+    "tags": [
+      "peuples autochtones",
+      "culture",
+      "cérémonies",
+      "langues",
+      "création contemporaine"
+    ],
+    "url": "https://taiwan.md/fr/Culture/indigenous-16-groups-cultural-map",
+    "readingTime": 62,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Culture/indigenous-16-groups-cultural-map.md"
   },
   {
     "title": "Century of Taiwanese Watercolor Painting",
@@ -9417,17 +9419,9 @@
     "title": "Chasing the Garbage Truck: How Taiwan Went from Trash Crisis to Recycling Marvel",
     "description": "In the 1990s, Taiwan had 400 overflowing landfills and was dubbed \"Garbage Island.\" Today, its recycling rate tops most of Europe—and the whole system runs on Beethoven.",
     "category": "en",
-    "tags": [
-      "recycling",
-      "waste management",
-      "garbage truck music",
-      "Für Elise",
-      "4-in-1 recycling",
-      "PAYT",
-      "environmental policy"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Lifestyle/taiwan-recycling-and-circular-living-culture",
-    "readingTime": 35,
+    "readingTime": 36,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/Lifestyle/taiwan-recycling-and-circular-living-culture.md"
@@ -9510,14 +9504,7 @@
     "title": "Chen Yu-Hsun: Taiwan's Warm Comedy Film Magician",
     "description": "Taiwan's comedy film director behind 'Tropical Fish,' 'Zone Pro Site,' and 'My Missing Valentine'",
     "category": "en",
-    "tags": [
-      "Chen Yu-Hsun",
-      "director",
-      "comedy film",
-      "Tropical Fish",
-      "Zone Pro Site",
-      "My Missing Valentine"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/chen-yu-hsun-taiwan-comedy-film-magician",
     "readingTime": 39,
     "featured": false,
@@ -9567,16 +9554,7 @@
     "title": "Chi Po-lin",
     "description": "How a government clerk who couldn't afford helicopters on his salary mortgaged his house to create Taiwan's most successful documentary",
     "category": "en",
-    "tags": [
-      "People",
-      "Chi Po-lin",
-      "Documentary",
-      "Beyond Beauty Taiwan",
-      "Director",
-      "Photographer",
-      "Aerial Photography",
-      "Environment"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/chi-po-lin",
     "readingTime": 46,
     "featured": false,
@@ -9609,13 +9587,7 @@
     "title": "Chimei Corporation: Building a Plastics Empire and Cultural Legacy",
     "description": "From a small Tainan factory in 1960, Xu Wen-Long built Asia's largest ABS materials empire and created the Chimei Museum, proving Taiwanese enterprises can balance commercial success with humanistic values",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprise",
-      "Chemical Industry",
-      "Polymer Materials",
-      "Tainan Business"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/chimei-corporation-plastics-empire-and-museum-dreams",
     "readingTime": 40,
     "featured": false,
@@ -9626,13 +9598,7 @@
     "title": "China Steel: The Iron-Headed Minister and the Steel Legend of Ten Major Constructions",
     "description": "From Zhao Yao-dong's clever negotiations for technology in Europe and America to the first plume of white smoke rising from Kaohsiung Xiaogang, China Steel spent 50 years building Taiwan's heavy industry backbone as the most successful jewel of the Ten Major Constructions",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Companies",
-      "Steel Industry",
-      "Ten Major Constructions",
-      "Heavy Industry"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-companies-china-steel",
     "readingTime": 34,
     "featured": false,
@@ -9643,12 +9609,7 @@
     "title": "Chiung Wi-vun: The Buffalo Warrior of Taiwanese Language Movement",
     "description": "Why did a mechanical engineering graduate become the most radical advocate for Taiwanese language rights? From his 2011 protest banner against Huang Chun-ming to becoming a Vietnam studies expert, Chiung Wi-vun embodies the belief that language equals identity.",
     "category": "en",
-    "tags": [
-      "Linguist",
-      "Taiwanese Language Movement",
-      "Mother Tongue Education",
-      "Vietnam Studies"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/chiung-wi-vun",
     "readingTime": 37,
     "featured": false,
@@ -9745,6 +9706,17 @@
     "path": "es/Food/taiwanese-street-food.md"
   },
   {
+    "title": "Commerce en ligne et paiements numériques à Taïwan : trois batailles sur une île",
+    "description": "De la promesse risquée de Jan Hung-tze sur la livraison en 24 heures, à la guerre de subventions de 30 milliards de Shopee, jusqu'à l'offensive éclair de Coupang — vingt ans d'e-commerce à Taïwan, une histoire de pionniers locaux éclipsés par des capitaux étrangers, encore et encore.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Technology/ecommerce-and-digital-payments",
+    "readingTime": 65,
+    "featured": true,
+    "date": "2026-04-06",
+    "path": "fr/Technology/ecommerce-and-digital-payments.md"
+  },
+  {
     "title": "Compal Electronics",
     "description": "The world's second-largest laptop ODM manufacturer and a key driver of Taiwan's ODM industry",
     "category": "en",
@@ -9770,14 +9742,7 @@
     "title": "Contemporary Indigenous Art in Taiwan",
     "description": "From traditional crafts to contemporary creation, explore how Taiwanese indigenous artists find their voice on the global art stage, redefining the dialogue between indigenous identity and contemporary art",
     "category": "en",
-    "tags": [
-      "indigenous art",
-      "contemporary art",
-      "traditional crafts",
-      "identity",
-      "artists",
-      "cultural revitalization"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/contemporary-indigenous-art-taiwan",
     "readingTime": 62,
     "featured": false,
@@ -9843,14 +9808,7 @@
     "title": "Cultura de las tiendas de conveniencia",
     "description": "En Taiwán, las tiendas de conveniencia dejaron de ser simple comercio minorista: hoy funcionan como infraestructura cotidiana, nodos logísticos y salas de estar urbanas.",
     "category": "es",
-    "tags": [
-      "Tiendas de conveniencia",
-      "7-ELEVEN",
-      "FamilyMart",
-      "Vida cotidiana",
-      "Infraestructura urbana",
-      "Taiwán"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/Lifestyle/convenience-store-culture",
     "readingTime": 51,
     "featured": false,
@@ -9861,15 +9819,7 @@
     "title": "Cultura de los Animales Callejeros en Taiwán",
     "description": "Desde el documental Twelve Nights hasta la Eutanasia Cero: el ajuste de cuentas continuo de una isla con sus callejeros",
     "category": "es",
-    "tags": [
-      "stray animals",
-      "animal protection",
-      "TNR",
-      "zero euthanasia",
-      "adoption",
-      "campus dogs",
-      "animal welfare"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/Society/stray-animal-culture",
     "readingTime": 62,
     "featured": false,
@@ -9911,6 +9861,24 @@
     "path": "es/Food/tea-culture.md"
   },
   {
+    "title": "Culture et langue hakka",
+    "description": "En 1988, des milliers de personnes ont défilé à Taipei avec une photo de Sun Yat-sen portant un masque — pour réclamer le droit de parler leur langue maternelle. Ils ont gagné, et pourtant la langue continue de disparaître.",
+    "category": "fr",
+    "tags": [
+      "hakka",
+      "langue",
+      "culture",
+      "esprit têtu",
+      "Liuhdui",
+      "mouvement pour la langue maternelle"
+    ],
+    "url": "https://taiwan.md/fr/Culture/hakka-culture-and-language",
+    "readingTime": 79,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/Culture/hakka-culture-and-language.md"
+  },
+  {
     "title": "Dcard",
     "description": "一個台南囝仔在台大宿舍為了讓自己比較容易交到朋友而寫出來的網站，變成了台灣年輕人最有影響力的社群平台，然後一邊繼續長大、一邊面對「Dcard 是不是要沒落了」的問題。",
     "category": "Culture",
@@ -9928,6 +9896,25 @@
     "featured": false,
     "date": "2026-04-05",
     "path": "Culture/Dcard.md"
+  },
+  {
+    "title": "Dcard",
+    "description": "Un étudiant de Tainan, installé dans un dortoir de l'Université nationale de Taïwan, crée un site pour se faire plus facilement des amis. Ce site devient la plateforme sociale la plus influente pour les jeunes Taïwanais — tout en continuant de grandir face à la question récurrente : « Dcard est-il en train de décliner ? »",
+    "category": "fr",
+    "tags": [
+      "médias sociaux",
+      "start-up taïwanaise",
+      "jeune génération",
+      "forum",
+      "anonymat",
+      "université",
+      "technologie"
+    ],
+    "url": "https://taiwan.md/fr/Culture/dcard",
+    "readingTime": 56,
+    "featured": false,
+    "date": "2026-04-05",
+    "path": "fr/Culture/dcard.md"
   },
   {
     "title": "Dcard",
@@ -9960,17 +9947,29 @@
     "path": "ja/Culture/dcard.md"
   },
   {
+    "title": "Défense nationale de Taïwan et modernisation militaire",
+    "description": "En octobre 2025, Lai Ching-te préside à Hukou la cérémonie de mise en service du bataillon de chars M1A2T. Ce même mois, l'ancien chef d'état-major Lee Hsi-ming sourit amèrement : « Si un char peut être une arme asymétrique, qu'est-ce qui ne l'est pas ? » C'est l'histoire d'une île tiraillée entre deux logiques de défense.",
+    "category": "fr",
+    "tags": [
+      "défense nationale",
+      "armée",
+      "guerre asymétrique",
+      "stratégie du porc-épic",
+      "drones",
+      "service militaire",
+      "défense civile"
+    ],
+    "url": "https://taiwan.md/fr/Society/taiwan-national-defense-modernization",
+    "readingTime": 116,
+    "featured": false,
+    "date": "2026-04-10",
+    "path": "fr/Society/taiwan-national-defense-modernization.md"
+  },
+  {
     "title": "Delta Electronics: From 13-Year-Old War Refugee to Space Legend",
     "description": "How NT$300,000 and one man's vision redefined the global power industry — and earned him an asteroid named after him",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Corporations",
-      "Power Management",
-      "Green Technology",
-      "Industrial Automation",
-      "ESG"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/delta-electronics-taiwan-power-giant",
     "readingTime": 55,
     "featured": true,
@@ -10042,14 +10041,7 @@
     "title": "Development of Contemporary Taiwanese Literature",
     "description": "Exploring the literary development from post-war Taiwan to the present, from modernism to nativist literature, from rural literature debates to multicultural writing",
     "category": "en",
-    "tags": [
-      "literature",
-      "contemporary literature",
-      "nativist literature",
-      "modernism",
-      "rural literature",
-      "cultural identity"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/development-of-contemporary-taiwanese-literature",
     "readingTime": 80,
     "featured": true,
@@ -10068,6 +10060,23 @@
     "path": "en/Art/development-of-contemporary-taiwanese-sculpture.md"
   },
   {
+    "title": "Développement de l'intelligence artificielle à Taïwan et stratégies pour l'avenir",
+    "description": "Neuf puces sur dix utilisées pour entraîner des IA dans le monde sortent de Taïwan — mais l'île ne se contente pas d'être l'usine du monde. Du laboratoire IA fondé par le créateur de PTT au modèle de langage en mandarin traditionnel TAIDE soutenu par l'État, Taïwan construit une identité propre dans l'ère de l'intelligence artificielle.",
+    "category": "fr",
+    "tags": [
+      "intelligence artificielle",
+      "IA",
+      "semi-conducteurs",
+      "politique technologique",
+      "transformation numérique"
+    ],
+    "url": "https://taiwan.md/fr/Technology/ai-strategy",
+    "readingTime": 76,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/ai-strategy.md"
+  },
+  {
     "title": "Digital ID and Digital Government",
     "description": "Taiwan's digital government transformation journey, from digital ID controversies to 'My E-Government' one-stop services, exploring innovations and challenges in digital governance",
     "category": "en",
@@ -10077,6 +10086,23 @@
     "featured": true,
     "date": "2026-03-18",
     "path": "en/Technology/digital-id-and-digital-government.md"
+  },
+  {
+    "title": "Droits humains et égalité des genres à Taïwan",
+    "description": "Du régime autoritaire à la figure de proue des droits humains en Asie : le parcours de Taïwan vers la justice transitionnelle, l'égalité des genres et le mariage pour tous.",
+    "category": "fr",
+    "tags": [
+      "Société",
+      "droits humains",
+      "égalité des genres",
+      "mariage homosexuel",
+      "justice transitionnelle"
+    ],
+    "url": "https://taiwan.md/fr/Society/human-rights-and-gender-equality",
+    "readingTime": 42,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "fr/Society/human-rights-and-gender-equality.md"
   },
   {
     "title": "Du Congming: Founder of Modern Medicine in Taiwan",
@@ -10168,6 +10194,17 @@
     "path": "en/Economy/economic-miracle.md"
   },
   {
+    "title": "Éducation des peuples autochtones et revitalisation linguistique à Taïwan : protégés à l'école primaire, abandonnés au collège",
+    "description": "En 2012, Camaak Valaule, enseignant paiwan à l'école primaire de Taiwu dans le Pingtung, a collecté des chants ancestraux auprès des anciens à l'aide d'un enregistreur vocal, puis a conduit ses élèves jusqu'aux Golden Melody Awards. En 2017, la Loi sur le développement des langues autochtones a élevé les langues tribales au rang de langues nationales. En 2019, la Loi sur l'éducation des peuples autochtones a inscrit des quotas d'enseignants à atteindre en dix ans. Les écoles primaires expérimentales autochtones sont passées de 25 à 38. Mais à l'entrée au collège, le système s'effondre : il n'existe que 6 collèges expérimentaux autochtones sur toute l'île, et le taux de scolarisation brut des étudiants autochtones en enseignement supérieur n'est que de 56,3 %, soit 35,3 points de pourcentage de moins que les étudiants non autochtones. Camaak est décédé en 2021 à l'âge de 42 ans. L'école primaire tient bon, le collège ne suit pas. La fracture est toujours là.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/indigenous-education-and-language-revitalization",
+    "readingTime": 169,
+    "featured": true,
+    "date": "2026-04-11",
+    "path": "fr/Society/indigenous-education-and-language-revitalization.md"
+  },
+  {
     "title": "Education System and Admissions Culture",
     "description": "From entrance exams to 12‑Year Basic Education, how Taiwan balances fierce competition with diversity and equity",
     "category": "en",
@@ -10188,6 +10225,23 @@
     "featured": true,
     "date": "2026-03-19",
     "path": "en/People/yang-dechang.md"
+  },
+  {
+    "title": "Élections et vie politique à Taïwan : une démocratie gagnée bulletin par bulletin",
+    "description": "Des flammes de l'incident de Zhongli aux 8,17 millions de suffrages de 2020 : comment Taïwan a transformé en moins d'un demi-siècle l'acte de voter d'un instrument de propagande autoritaire en rituel civique national",
+    "category": "fr",
+    "tags": [
+      "élections",
+      "démocratisation",
+      "partis politiques",
+      "mouvement hors-parti",
+      "élection présidentielle au suffrage direct"
+    ],
+    "url": "https://taiwan.md/fr/History/elections-and-party-politics",
+    "readingTime": 79,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/History/elections-and-party-politics.md"
   },
   {
     "title": "Emerging Religions and Spiritual Culture in Taiwan",
@@ -10221,6 +10275,41 @@
     "featured": true,
     "date": "2026-03-18",
     "path": "en/Society/environmental-awakening-and-net-zero-transition.md"
+  },
+  {
+    "title": "Environnement et développement durable à Taïwan",
+    "description": "De l'île aux cheminées à Taïwan zéro carbone : 40 ans d'éveil écologique",
+    "category": "fr",
+    "tags": [
+      "environnement",
+      "développement durable",
+      "zéro émission nette",
+      "économie circulaire",
+      "changement climatique"
+    ],
+    "url": "https://taiwan.md/fr/Society/environment-and-sustainability",
+    "readingTime": 64,
+    "featured": true,
+    "date": "2026-03-21",
+    "path": "fr/Society/environment-and-sustainability.md"
+  },
+  {
+    "title": "Environnement politique et système électoral à Taïwan",
+    "description": "De l'architecture constitutionnelle aux mécanismes électoraux nationaux et locaux, en passant par la culture des partis politiques : une analyse complète de la manière dont Taïwan maintient une démocratie dynamique et rigoureusement encadrée au sein d'un contexte géopolitique complexe",
+    "category": "fr",
+    "tags": [
+      "système politique",
+      "système électoral",
+      "semi-présidentialisme",
+      "autonomie locale",
+      "société civile",
+      "démocratie numérique"
+    ],
+    "url": "https://taiwan.md/fr/Society/political-environment",
+    "readingTime": 29,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/political-environment.md"
   },
   {
     "title": "Era Colonial Japonesa",
@@ -10294,7 +10383,7 @@
       "International Trade"
     ],
     "url": "https://taiwan.md/en/Economy/evergreen-marine",
-    "readingTime": 36,
+    "readingTime": 37,
     "featured": false,
     "date": "2026-03-24",
     "path": "en/Economy/evergreen-marine.md"
@@ -10344,6 +10433,43 @@
     "path": "en/History/february-28-incident-and-white-terror-taiwan-authoritarian-rule-trauma-and-memory.md"
   },
   {
+    "title": "Fermentation et conserves à Taïwan : une culture de la patience",
+    "description": "Du tofu fermenté odorant au fromage de tofu, en passant par les légumes marinés et les alcools traditionnels, Taïwan possède un patrimoine de fermentation d'une richesse insoupçonnée",
+    "category": "fr",
+    "tags": [
+      "fermentation",
+      "conserves",
+      "tofu puant",
+      "fromage de tofu",
+      "kimchi",
+      "techniques traditionnelles",
+      "microbiologie"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-fermented-and-pickled-foods",
+    "readingTime": 61,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Food/taiwan-fermented-and-pickled-foods.md"
+  },
+  {
+    "title": "Fêtes de temples et culture des processions à Taïwan",
+    "description": "La puissance des Ba Jia Jiang, l'audace des Trois Princes Électro, la dévotion des pèlerinages de Mazu — les fêtes de temples à Taïwan unissent foi et liesse populaire",
+    "category": "fr",
+    "tags": [
+      "fêtes de temples",
+      "processions",
+      "croyances populaires",
+      "Trois Princes Électro",
+      "Ba Jia Jiang",
+      "pèlerinage de Mazu"
+    ],
+    "url": "https://taiwan.md/fr/Culture/temple-festivals-and-processions",
+    "readingTime": 48,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Culture/temple-festivals-and-processions.md"
+  },
+  {
     "title": "FinTech Development in Taiwan",
     "description": "From regulatory sandboxes to digital banks: The evolution and innovation of Taiwan's FinTech ecosystem.",
     "category": "en",
@@ -10355,17 +10481,21 @@
     "path": "en/Economy/taiwan-fintech-development.md"
   },
   {
+    "title": "Formosa : comment les Occidentaux ont « découvert » une île qui était déjà habitée",
+    "description": "En 1704, un Français qui n'avait jamais mis les pieds en Asie se présenta devant la Royal Society de Londres avec une langue inventée et une religion de toutes pièces, convainquant l'assemblée qu'il était un « natif de Formose ». La supercherie dura dix ans. Mais la vraie question est ailleurs : quand les Européens parlaient de « découvrir Formose », les peuples austronésiens y vivaient déjà depuis six mille ans. À qui appartient ce récit de la « découverte » ?",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/formosa",
+    "readingTime": 58,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/History/formosa.md"
+  },
+  {
     "title": "Formosa Plastics Group",
     "description": "The petrochemical empire built by Taiwan's 'God of Management' Wang Yung-ching, featuring the Big Four manufacturing legend",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Corporations",
-      "Petrochemicals",
-      "Manufacturing",
-      "Formosa Plastics",
-      "Industry"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/formosa-plastics-group",
     "readingTime": 49,
     "featured": false,
@@ -10409,17 +10539,9 @@
     "title": "Giant Manufacturing: From Abandoned Subcontractor to Global Bicycle Empire",
     "description": "How a betrayed Taiwanese manufacturer transformed from assembly slave into the hidden empire that sets global cycling standards",
     "category": "en",
-    "tags": [
-      "economy",
-      "companies",
-      "giant-manufacturing",
-      "manufacturing",
-      "brand-transformation",
-      "a-team",
-      "electric-bikes"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/giant-manufacturing-taiwan-bicycle-empire",
-    "readingTime": 81,
+    "readingTime": 82,
     "featured": false,
     "date": "2026-03-22",
     "path": "en/Economy/giant-manufacturing-taiwan-bicycle-empire.md"
@@ -10536,6 +10658,60 @@
     "path": "en/People/he-feipeng.md"
   },
   {
+    "title": "Histoire de la télévision taïwanaise : de la trinité des chaînes à la révolution douce de la Q-Series",
+    "description": "De l'ouverture de TTV en 1962 à la Q-Series en 2016, l'industrie télévisuelle de Taïwan a traversé 54 ans de transformation — du monopole du parti, de l'armée et de l'État vers l'essor d'un audiovisuel public. Comment une plateforme sans publicité a-t-elle réussi à raconter des histoires que tout le monde voulait entendre ?",
+    "category": "fr",
+    "tags": [
+      "télévision",
+      "télévision publique",
+      "Q-Series",
+      "trilogie des chaînes",
+      "réforme des médias",
+      "drama taïwanais"
+    ],
+    "url": "https://taiwan.md/fr/Technology/television-industry-history",
+    "readingTime": 54,
+    "featured": true,
+    "date": "2026-03-31",
+    "path": "fr/Technology/television-industry-history.md"
+  },
+  {
+    "title": "Histoire des peuples autochtones de Taïwan et le mouvement pour la reconnaissance des noms",
+    "description": "En 1987, un jeune Tsou de dix-neuf ans est exécuté dans une prison de Taipei. Sa mort allume la première flamme du mouvement pour la reconnaissance des noms.",
+    "category": "fr",
+    "tags": [
+      "peuples autochtones",
+      "reconnaissance des noms",
+      "identité",
+      "mouvements sociaux",
+      "préservation culturelle"
+    ],
+    "url": "https://taiwan.md/fr/History/indigenous-peoples-history-and-renaming",
+    "readingTime": 58,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/History/indigenous-peoples-history-and-renaming.md"
+  },
+  {
+    "title": "Histoire ferroviaire de Taïwan",
+    "description": "Comment une ligne surnommée « le chemin de fer tuberculeux » par les ingénieurs japonais est devenue, en un peu plus d'un siècle, une artère à grande vitesse transportant deux cent mille voyageurs chaque jour",
+    "category": "fr",
+    "tags": [
+      "chemin de fer",
+      "infrastructure",
+      "développement urbain",
+      "Liu Mingchuan",
+      "ligne Tronc",
+      "TGV",
+      "Taiwan Railways"
+    ],
+    "url": "https://taiwan.md/fr/History/railway-history",
+    "readingTime": 69,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/History/railway-history.md"
+  },
+  {
     "title": "History of Railways in Taiwan",
     "description": "How a railway the Japanese called a 'consumptive railroad' became a 300 km/h artery carrying 21 million passengers a day",
     "category": "History",
@@ -10561,16 +10737,7 @@
     "title": "Hot Spring Culture",
     "description": "From Military Medicine to World-Class Mud Springs: How Taiwan Became an Accidental Hot Spring Empire",
     "category": "en",
-    "tags": [
-      "lifestyle",
-      "hot springs",
-      "Beitou",
-      "Jiaoxi",
-      "Guanziling",
-      "Japanese colonial",
-      "geology",
-      "healing culture"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Lifestyle/hot-spring-culture",
     "readingTime": 68,
     "featured": false,
@@ -10592,15 +10759,7 @@
     "title": "Hou Hsiao-hsien",
     "description": "",
     "category": "es",
-    "tags": [
-      "person",
-      "Hou Hsiao-hsien",
-      "Taiwan New Cinema",
-      "director",
-      "Venice Golden Lion",
-      "Cannes Film Festival",
-      "cinema art"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/People/hou-hsiao-hsien",
     "readingTime": 82,
     "featured": false,
@@ -10719,14 +10878,7 @@
     "title": "Huang Kuo-chen: Teaching Taiwan's Children to 'Understand' Not Just 'Finish Reading'",
     "description": "Founder of Pin Xue Tang, promoting reading literacy education in Taiwan, working to change the educational predicament of 'good at tests but bad at thinking'",
     "category": "en",
-    "tags": [
-      "Education",
-      "Reading Literacy",
-      "Pin Xue Tang",
-      "Reading Comprehension",
-      "Educational Innovation",
-      "Literacy Education"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/huang-kuo-chen",
     "readingTime": 26,
     "featured": false,
@@ -10737,13 +10889,7 @@
     "title": "Huang Zhen-nan: The Takenouchi Yutaka of Book Collecting and Taiwan's Living History Source",
     "description": "Huang Zhen-nan is a Taiwanese cultural historian, book collector, and writer who gained fame through his PTT username Sizumaru and runs the \"Living Water Bookstore\" social media presence sharing Taiwan history and antiquarian book culture. Author of \"The Most Entertaining Taiwan History Ever,\" he''s dubbed \"the Takenouchi Yutaka of book collecting\" for making serious Taiwan history accessible and engaging.",
     "category": "en",
-    "tags": [
-      "Taiwan history",
-      "book collector",
-      "Huang Zhen-nan",
-      "Taiwanese history",
-      "Living Water Bookstore"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/huang-zhen-nan-book-collector-historian",
     "readingTime": 29,
     "featured": false,
@@ -10782,15 +10928,9 @@
     "title": "Inclusive Travel and Living Culture in Taiwan: When Human Warmth Becomes the Ultimate Accessibility Feature",
     "description": "How Taiwan society creates multigenerational travel experiences through human warmth and inclusive facilities, redefining family travel as the island approaches super-aged society status.",
     "category": "en",
-    "tags": [
-      "inclusive society",
-      "accessible tourism",
-      "super-aged society",
-      "family culture",
-      "social resilience"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Society/inclusive-travel-taiwan",
-    "readingTime": 42,
+    "readingTime": 43,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/Society/inclusive-travel-taiwan.md"
@@ -10816,14 +10956,7 @@
     "title": "Indigenous Land Justice and Traditional Territories in Taiwan",
     "description": "Exploring the historical context, legal developments, territorial demarcation controversies, and achievements of Taiwan's Indigenous Transitional Justice Commission in restoring indigenous land rights",
     "category": "en",
-    "tags": [
-      "indigenous peoples",
-      "land justice",
-      "traditional territories",
-      "transitional justice",
-      "IHTJC",
-      "land rights"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Society/indigenous-land-justice-and-traditional-territories",
     "readingTime": 60,
     "featured": false,
@@ -10955,7 +11088,7 @@
       "chinese-style"
     ],
     "url": "https://taiwan.md/en/People/jay-chou",
-    "readingTime": 37,
+    "readingTime": 39,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/People/jay-chou.md"
@@ -11022,6 +11155,24 @@
     "path": "en/People/jimmy-liao.md"
   },
   {
+    "title": "Jiutian Xuannü : de conseillère militaire de l'Empereur Jaune à déesse tutélaire des jeunes troupes de temple à Taïwan",
+    "description": "Un directeur de troupe de temple sans diplôme supérieur, humilié pendant des années par les évaluateurs du ministère de la Culture, a mis 11 ans à décrocher un doctorat — uniquement pour prouver qu'apprendre la batterie à des décrocheurs scolaires est bien un art. Derrière lui se tient une déesse qui enseignait l'art de la guerre il y a quatre mille ans.",
+    "category": "fr",
+    "tags": [
+      "Jiutian Xuannü",
+      "troupes de temple",
+      "Nine Heaven Folk Arts Troupe",
+      "croyances populaires",
+      "culture des temples",
+      "Hsu Chen-jung"
+    ],
+    "url": "https://taiwan.md/fr/Culture/jiutian-xuannu-worship",
+    "readingTime": 63,
+    "featured": false,
+    "date": "2026-03-27",
+    "path": "fr/Culture/jiutian-xuannu-worship.md"
+  },
+  {
     "title": "Jiutian Xuannu: The War Goddess Who Became a Patron of Teenage Dropouts",
     "description": "A temple troupe leader with only a high school diploma spent 11 years earning a PhD — because government reviewers kept telling him that teaching dropout kids to drum was not art. Behind him stood a goddess who taught the Yellow Emperor how to win a war.",
     "category": "en",
@@ -11053,6 +11204,35 @@
     "featured": false,
     "date": "2026-03-24",
     "path": "en/People/jolin-tsai.md"
+  },
+  {
+    "title": "Justice environnementale et conflits NIMBY à Taïwan",
+    "description": "Une analyse de la répartition inégale des charges environnementales à Taïwan — des incinérateurs aux déchets nucléaires en passant par la pétrochimie — et des enjeux de justice sociale qui en découlent",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/environmental-justice",
+    "readingTime": 110,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Society/environmental-justice.md"
+  },
+  {
+    "title": "Justice foncière et territoires traditionnels des peuples autochtones de Taïwan",
+    "description": "Le contexte historique des droits fonciers des peuples autochtones de Taïwan, l'évolution du cadre juridique, les controverses autour de la délimitation des territoires traditionnels et les travaux de la Commission pour la justice transitionnelle autochtone",
+    "category": "fr",
+    "tags": [
+      "peuples autochtones",
+      "justice foncière",
+      "territoires traditionnels",
+      "justice transitionnelle",
+      "commission autochtone",
+      "droits fonciers"
+    ],
+    "url": "https://taiwan.md/fr/Society/indigenous-land-rights",
+    "readingTime": 72,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Society/indigenous-land-rights.md"
   },
   {
     "title": "Kao Chun-ming",
@@ -11110,6 +11290,562 @@
     "path": "en/People/kuo-hsing-chun-olympic-weightlifting-champion.md"
   },
   {
+    "title": "L''ère coloniale japonaise à Taïwan (1895–1945)",
+    "description": "Pendant cinquante ans, le Japon a gouverné Taïwan en y imposant une modernisation radicale — infrastructures, éducation, industrie — tout en menant une politique d''assimilation forcée qui a profondément marqué l''identité et la conscience politique taïwanaises.",
+    "category": "fr",
+    "tags": [
+      "Histoire",
+      "colonisation japonaise",
+      "modernisation",
+      "mouvement kōminka"
+    ],
+    "url": "https://taiwan.md/fr/History/japanese-colonial-era",
+    "readingTime": 38,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "fr/History/japanese-colonial-era.md"
+  },
+  {
+    "title": "L''ère hollandaise, espagnole et des Zheng — Taïwan sur la carte du monde (1624–1683)",
+    "description": "De la fondation du fort Zeelandia par la Compagnie néerlandaise des Indes orientales en 1624 jusqu''à la reddition des Zheng en 1683 : soixante ans durant lesquels Taïwan entre dans les circuits du commerce mondial, traversée par quatre régimes successifs.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/dutch-spanish-koxinga-era",
+    "readingTime": 62,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "fr/History/dutch-spanish-koxinga-era.md"
+  },
+  {
+    "title": "L''essor d''une île IA : le développement de l''intelligence artificielle à Taïwan et sa stratégie d''avenir",
+    "description": "De l''onde de choc AlphaGo à la vague de l''IA générative : comment Taïwan a trouvé une position unique dans le domaine de l''intelligence artificielle grâce à une stratégie de « petite nation, grande ambition »",
+    "category": "fr",
+    "tags": [
+      "intelligence artificielle",
+      "politique IA",
+      "semi-conducteurs",
+      "politique technologique",
+      "transformation numérique",
+      "innovation"
+    ],
+    "url": "https://taiwan.md/fr/Technology/ai-development",
+    "readingTime": 74,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/ai-development.md"
+  },
+  {
+    "title": "L''industrie des semi-conducteurs à Taïwan",
+    "description": "Du pari historique de Morris Chang à l''ère du 2 nanomètres : comment TSMC a fait de Taïwan l''épine dorsale technologique mondiale",
+    "category": "fr",
+    "tags": [
+      "semi-conducteurs",
+      "TSMC",
+      "procédés avancés",
+      "île technologique",
+      "bouclier de silicium"
+    ],
+    "url": "https://taiwan.md/fr/Technology/semiconductor-industry",
+    "readingTime": 69,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "fr/Technology/semiconductor-industry.md"
+  },
+  {
+    "title": "L'art de rue et la culture du graffiti à Taïwan",
+    "description": "Du graffiti clandestin aux fresques murales officielles : comment les murs des villes taïwanaises sont devenus la scène d'expression d'une génération d'artistes",
+    "category": "fr",
+    "tags": [
+      "art de rue",
+      "graffiti",
+      "culture urbaine",
+      "art public",
+      "sous-culture"
+    ],
+    "url": "https://taiwan.md/fr/Culture/street-art-and-graffiti",
+    "readingTime": 58,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Culture/street-art-and-graffiti.md"
+  },
+  {
+    "title": "L'art mystérieux de l'estimation au jugé de la tante du buffet taïwanais",
+    "description": "Le premier restaurant self-service de Taïwan en 1962 n'a survécu que deux ans, mais la technique de tarification à vue d'œil qu'il a légué reste à ce jour la compétence humaine la plus difficile à reproduire par l'IA",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/buffet-auntie-estimating-skills",
+    "readingTime": 35,
+    "featured": false,
+    "date": "2026-03-22",
+    "path": "fr/Society/buffet-auntie-estimating-skills.md"
+  },
+  {
+    "title": "L'écosystème des startups à Taïwan",
+    "description": "De la sous-traitance à l'innovation : comment Taïwan a bâti un écosystème entrepreneurial complet",
+    "category": "fr",
+    "tags": [
+      "startups",
+      "écosystème entrepreneurial",
+      "capital-risque",
+      "accélérateurs",
+      "incubation"
+    ],
+    "url": "https://taiwan.md/fr/Technology/startup-ecosystem",
+    "readingTime": 91,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/startup-ecosystem.md"
+  },
+  {
+    "title": "L'éducation dans les zones rurales de Taïwan : ce dont les enfants ont besoin, ce n'est pas d'une histoire inspirante — c'est d'un filet de soutien qui tient",
+    "description": "L'éducation rurale à Taïwan est bien plus qu'une question de distance. Instabilité du corps enseignant, classes multi-niveaux, transports et hébergements, soutien familial, ancrage communautaire, définition étroite de la réussite sociale — la vraie difficulté, c'est que dès qu'un enfant quitte sa salle de classe, le système censé le porter a tendance à se défaire couche par couche.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/taiwan-rural-education",
+    "readingTime": 80,
+    "featured": false,
+    "date": "2026-04-09",
+    "path": "fr/Society/taiwan-rural-education.md"
+  },
+  {
+    "title": "L'ère de la loi martiale à Taïwan",
+    "description": "Le 19 mai 1949, Chen Cheng proclame la loi martiale sur Taïwan. Trente-huit ans plus tard, le 15 juillet 1987, Chiang Ching-kuo y met fin. Les îles Kinmen et Matsu devront attendre 1992. Que s'est-il passé durant ces décennies ?",
+    "category": "fr",
+    "tags": [
+      "loi martiale",
+      "autoritarisme",
+      "terreur blanche",
+      "justice transitionnelle"
+    ],
+    "url": "https://taiwan.md/fr/History/martial-law-era",
+    "readingTime": 46,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "fr/History/martial-law-era.md"
+  },
+  {
+    "title": "L'ère des Qing à Taïwan (1683–1895)",
+    "description": "Pendant 212 ans, la dynasties des Qing a gouverné Taïwan : d'une administration négligente à une modernisation accélérée, cette période a façonné les structures administratives et la société sino-taïwanaise que nous connaissons aujourd'hui.",
+    "category": "fr",
+    "tags": [
+      "Histoire",
+      "Dynasties Qing",
+      "Ouverture des ports",
+      "Incident de Mudan"
+    ],
+    "url": "https://taiwan.md/fr/History/qing-dynasty-era",
+    "readingTime": 41,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "fr/History/qing-dynasty-era.md"
+  },
+  {
+    "title": "L'ère préhistorique et les peuples autochtones de Taïwan",
+    "description": "L'histoire préhistorique de Taïwan et ses peuples autochtones constituent le point de départ fondamental pour comprendre l'identité taïwanaise. Probable berceau des peuples austronésiens, Taïwan n'est pas seulement le foyer originel des civilisations insulaires du Pacifique — c'est aussi le socle de la diversité culturelle qui définit l'île aujourd'hui.",
+    "category": "fr",
+    "tags": [
+      "Histoire",
+      "Préhistoire",
+      "Peuples autochtones",
+      "Austronésiens",
+      "Taïwan"
+    ],
+    "url": "https://taiwan.md/fr/History/prehistoric-era-and-indigenous-peoples",
+    "readingTime": 33,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "fr/History/prehistoric-era-and-indigenous-peoples.md"
+  },
+  {
+    "title": "L'esprit open source taïwanais — des ingénieurs qui codent par passion",
+    "description": "Le projet open source le plus influent de Taïwan n'est pas un logiciel : c'est un groupe d'ingénieurs qui ont dit au gouvernement lors d'un hackathon : « Vous ne faites pas bien votre travail, on va le faire à votre place. »",
+    "category": "fr",
+    "tags": [
+      "open source",
+      "g0v",
+      "COSCUP",
+      "GitHub",
+      "technologie civique",
+      "logiciel libre"
+    ],
+    "url": "https://taiwan.md/fr/Technology/open-source-spirit",
+    "readingTime": 53,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Technology/open-source-spirit.md"
+  },
+  {
+    "title": "L'essor de l'industrie de la cybersécurité à Taïwan",
+    "description": "De la politique gouvernementale à l'innovation privée : comment Taïwan a bâti un écosystème complet de cybersécurité face aux menaces numériques mondiales",
+    "category": "fr",
+    "tags": [
+      "industrie de la cybersécurité",
+      "sécurité des réseaux",
+      "transformation numérique",
+      "politique de cybersécurité",
+      "innovation technologique"
+    ],
+    "url": "https://taiwan.md/fr/Technology/cybersecurity-industry",
+    "readingTime": 89,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/cybersecurity-industry.md"
+  },
+  {
+    "title": "L'évolution du mandarin à Taïwan — quatre siècles de stratigraphie linguistique",
+    "description": "Combien de strates historiques se cachent dans un simple mot ? Suivez le voyage d'un terme à travers quatre siècles pour explorer les sédiments naturels du langage sur cette île.",
+    "category": "fr",
+    "tags": [
+      "mandarin taïwanais",
+      "évolution linguistique",
+      "emprunts japonais",
+      "divergences sino-taïwanaises",
+      "identité linguistique"
+    ],
+    "url": "https://taiwan.md/fr/Culture/mandarin-evolution-in-taiwan",
+    "readingTime": 58,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Culture/mandarin-evolution-in-taiwan.md"
+  },
+  {
+    "title": "L'histoire de l'exploitation forestière à Taïwan : du pillage des ressources à la protection du territoire national",
+    "description": "De l'époque de la domination Qing et de ses volutes de camphre, en passant par le grondement des rails sous l'occupation japonaise, jusqu'à la grande ère de déforestation qui a ébranlé les montagnes après la guerre. Cet article retrace la logique géopolitique mondiale qui sous-tendait les politiques forestières de Taïwan, et s'appuie sur des données chiffrées pour éclaircir la vérité sur un siècle de sylviculture.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/forest-development-history",
+    "readingTime": 49,
+    "featured": false,
+    "date": "2026-03-25",
+    "path": "fr/History/forest-development-history.md"
+  },
+  {
+    "title": "L'histoire du commerce maritime de Taïwan",
+    "description": "De carrefour du commerce international à royaume maritime : la grande épopée de Taïwan à l'ère des grandes découvertes",
+    "category": "fr",
+    "tags": [
+      "commerce maritime",
+      "ère des grandes découvertes",
+      "commerce international",
+      "piraterie",
+      "villes portuaires"
+    ],
+    "url": "https://taiwan.md/fr/History/maritime-trade-history",
+    "readingTime": 46,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/History/maritime-trade-history.md"
+  },
+  {
+    "title": "L'histoire insulaire de Taïwan : comment une île gouvernée sans relâche a inventé sa propre subjectivité",
+    "description": "Taïwan n'est pas la dernière pièce d'un puzzle continental, mais la première pierre d'un réseau maritime pacifique. En partant du concept « d'histoire centrée sur l'île » du grand historien Tsao Yung-ho, redécouvrons la vitalité profonde de cette île.",
+    "category": "fr",
+    "tags": ["histoire", "île", "historiographie", "Tsao Yung-ho", "océan"],
+    "url": "https://taiwan.md/fr/History/island-centric-history",
+    "readingTime": 56,
+    "featured": true,
+    "date": "2026-03-27",
+    "path": "fr/History/island-centric-history.md"
+  },
+  {
+    "title": "L'IA au quotidien à Taïwan — quand l'intelligence artificielle s'invite dans la vie de tous les jours",
+    "description": "Les habitants de Taïwan interagissent avec l'IA des dizaines de fois par jour, sans toujours le savoir",
+    "category": "fr",
+    "tags": [
+      "IA",
+      "intelligence artificielle",
+      "LINE",
+      "santé connectée",
+      "agriculture intelligente",
+      "technologie du quotidien"
+    ],
+    "url": "https://taiwan.md/fr/Technology/ai-in-daily-life",
+    "readingTime": 70,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Technology/ai-in-daily-life.md"
+  },
+  {
+    "title": "L'incident de Formose — Le procès qui a engendré la démocratie taïwanaise",
+    "description": "Un procès militaire censé briser définitivement l'opposition s'est transformé, grâce à sa retransmission publique inattendue, en la plus puissante campagne pour la démocratie que Taïwan ait jamais connue.",
+    "category": "fr",
+    "tags": [
+      "histoire",
+      "démocratisation",
+      "droits humains",
+      "mouvement dopposition",
+      "loi martiale"
+    ],
+    "url": "https://taiwan.md/fr/History/formosa-incident",
+    "readingTime": 74,
+    "featured": false,
+    "date": "2026-03-31",
+    "path": "fr/History/formosa-incident.md"
+  },
+  {
+    "title": "L'Incident du 28 février 1947 — Dix jours qui ont changé Taïwan",
+    "description": "Comment le stand de cigarettes d'une veuve a allumé trente-huit ans de silence sur une île entière : les dix jours de février 1947 qui ont scellé le destin de Taïwan, et une blessure qui, soixante-dix-huit ans plus tard, n'est toujours pas refermée.",
+    "category": "fr",
+    "tags": [
+      "histoire",
+      "politique",
+      "justice transitionnelle",
+      "terreur blanche",
+      "démocratisation",
+      "loi martiale",
+      "228"
+    ],
+    "url": "https://taiwan.md/fr/History/228-incident",
+    "readingTime": 114,
+    "featured": true,
+    "date": "2026-03-31",
+    "path": "fr/History/228-incident.md"
+  },
+  {
+    "title": "L'industrie audio à Taïwan : du sous-traitant à l'innovateur",
+    "description": "De la sous-traitance OEM aux marques propres, la maîtrise technique de l'industrie audio taïwanaise et sa place sur le marché mondial",
+    "category": "fr",
+    "tags": [
+      "industrie audio",
+      "fabrication électronique",
+      "technologie acoustique",
+      "Hi-Fi",
+      "audio professionnel"
+    ],
+    "url": "https://taiwan.md/fr/Technology/audio-industry",
+    "readingTime": 46,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Technology/audio-industry.md"
+  },
+  {
+    "title": "L'industrie de l'intelligence artificielle à Taïwan",
+    "description": "De la fabrication des puces NVIDIA à la construction d'un écosystème IA, comment Taïwan se positionne dans l'ère de l'intelligence artificielle",
+    "category": "fr",
+    "tags": [
+      "Technologie",
+      "IA",
+      "Intelligence artificielle",
+      "Industrie technologique"
+    ],
+    "url": "https://taiwan.md/fr/Technology/ai-industry",
+    "readingTime": 49,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Technology/ai-industry.md"
+  },
+  {
+    "title": "L'industrie des drones à Taïwan",
+    "description": "En septembre 2025, le drone kamikaze « Overkill » de Thunder Tiger est devenu le premier produit taïwanais certifié sur la Blue UAS Cleared List du Département de la Défense américain. Une entreprise de Taichung qui fabriquait des avions télécommandés depuis quarante ans vient d'entrer dans les catalogues d'achat du Pentagone.",
+    "category": "fr",
+    "tags": [
+      "drones",
+      "défense",
+      "Thunder Tiger",
+      "chaîne dapprovisionnement non-rouge",
+      "industrie militaire",
+      "IA"
+    ],
+    "url": "https://taiwan.md/fr/Technology/drone-industry",
+    "readingTime": 48,
+    "featured": false,
+    "date": "2026-04-08",
+    "path": "fr/Technology/drone-industry.md"
+  },
+  {
+    "title": "L'industrie du café à Taïwan",
+    "description": "De cent plants rapportés en 1884 jusqu'au premier Cup of Excellence en 2024 : comment une île importatrice à 99 % a formé le meilleur barista du monde et s'est imposée sur la scène internationale du café de spécialité",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Food/taiwan-coffee-industry",
+    "readingTime": 76,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Food/taiwan-coffee-industry.md"
+  },
+  {
+    "title": "L'industrie du jeu vidéo à Taïwan et le divertissement numérique",
+    "description": "Des premiers distributeurs aux studios de création originale : comment Taïwan a trouvé sa voix sur le marché mondial du jeu vidéo",
+    "category": "fr",
+    "tags": [
+      "industrie du jeu vidéo",
+      "divertissement numérique",
+      "industries créatives",
+      "secteur technologique",
+      "jeux indépendants"
+    ],
+    "url": "https://taiwan.md/fr/Technology/gaming-industry",
+    "readingTime": 46,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Technology/gaming-industry.md"
+  },
+  {
+    "title": "L'industrie logicielle à Taïwan",
+    "description": "De la sous-traitance matérielle à l'innovation logicielle : comment Taïwan redéfinit sa place à l'ère post-semi-conducteurs",
+    "category": "fr",
+    "tags": [
+      "industrie logicielle",
+      "services informatiques",
+      "transformation numérique",
+      "startups"
+    ],
+    "url": "https://taiwan.md/fr/Technology/software-industry",
+    "readingTime": 61,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Technology/software-industry.md"
+  },
+  {
+    "title": "L'industrie robotique à Taïwan",
+    "description": "L'île qui domine la fabrication de semi-conducteurs doit-elle rattraper son retard à l'ère des robots ? Du lancement du NCAIR en 2026, un regard sur les miracles et les angles morts de la mécanique de précision taïwanaise.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Technology/robotics-industry",
+    "readingTime": 73,
+    "featured": true,
+    "date": "2026-04-11",
+    "path": "fr/Technology/robotics-industry.md"
+  },
+  {
+    "title": "L'industrie spatiale taïwanaise : un géant de la fabrication de satellites sans fusée propre",
+    "description": "Taïwan assemble chaque année des centaines de milliards de dollars de composants électroniques pour le monde entier, et pourtant ce n'est qu'en 2025 qu'elle a placé en orbite son premier satellite à résolution sous-métrique — une histoire de souveraineté technologique, de réalisme diplomatique et de rêve spatial commercial",
+    "category": "fr",
+    "tags": [
+      "industrie spatiale",
+      "satellites",
+      "TASA",
+      "Formosat",
+      "technologie spatiale",
+      "espace commercial"
+    ],
+    "url": "https://taiwan.md/fr/Technology/space-industry",
+    "readingTime": 80,
+    "featured": true,
+    "date": "2026-03-29",
+    "path": "fr/Technology/space-industry.md"
+  },
+  {
+    "title": "L'industrie taïwanaise de l'image numérique et de l'animation",
+    "description": "Du plus grand royaume mondial de la sous-traitance en animation à une nouvelle puissance de création originale — un demi-siècle de mutations de l'industrie taïwanaise de l'image numérique",
+    "category": "fr",
+    "tags": [
+      "image numérique",
+      "animation",
+      "effets visuels",
+      "industries créatives",
+      "industrie audiovisuelle"
+    ],
+    "url": "https://taiwan.md/fr/Technology/digital-animation-industry",
+    "readingTime": 44,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Technology/digital-animation-industry.md"
+  },
+  {
+    "title": "L'industrie YouTuber à Taïwan : de Tsai A-Ga à Chi Hsuan, l'évolution d'une culture numérique insulaire",
+    "description": "Comment un magicien est devenu le premier YouTuber taïwanais à dépasser les 10 millions d'abonnés — et ce que cela révèle sur la façon dont Taïwan est passé du divertissement local à l'exportation culturelle internationale.",
+    "category": "fr",
+    "tags": [
+      "culture",
+      "culture numérique",
+      "YouTuber",
+      "vidéo en ligne",
+      "impact social"
+    ],
+    "url": "https://taiwan.md/fr/Culture/youtuber-culture",
+    "readingTime": 56,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Culture/youtuber-culture.md"
+  },
+  {
+    "title": "La bande dessinée et la culture animée à Taïwan",
+    "description": "De l'âge d'or des librairies de manga jusqu'à la renaissance créative du CCC, comment la bande dessinée taïwanaise a trouvé sa propre voix face à la domination japonaise",
+    "category": "fr",
+    "tags": [
+      "bande dessinée",
+      "animation",
+      "industries créatives",
+      "sous-culture",
+      "culture jeunesse"
+    ],
+    "url": "https://taiwan.md/fr/Culture/manga-and-animation-culture",
+    "readingTime": 59,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Culture/manga-and-animation-culture.md"
+  },
+  {
+    "title": "La carte d'identité numérique et le gouvernement électronique à Taïwan",
+    "description": "Comment Taïwan a dépensé 48 milliards de NT$ pour une carte à puce jamais distribuée — et ce que cela révèle sur la confiance, la démocratie numérique et la gouvernance à l'ère des données.",
+    "category": "fr",
+    "tags": [
+      "identité numérique",
+      "gouvernement électronique",
+      "démocratie numérique",
+      "données personnelles",
+      "vie privée",
+      "participation citoyenne",
+      "Audrey Tang"
+    ],
+    "url": "https://taiwan.md/fr/Technology/digital-id-and-e-government",
+    "readingTime": 68,
+    "featured": false,
+    "date": "2024-01-01",
+    "path": "fr/Technology/digital-id-and-e-government.md"
+  },
+  {
+    "title": "La cérémonie du thé à Taïwan et l'esthétique du quotidien",
+    "description": "Un insecte qui mord une feuille pour en révéler le miel, une maison japonaise devenue foyer de la démocratie, un thé aux perles qui conquiert le monde — comment la culture du thé taïwanaise s'est transformée d'un héritage colonial en une véritable philosophie de vie",
+    "category": "fr",
+    "tags": [
+      "culture du thé",
+      "cérémonie du thé",
+      "esthétique du quotidien",
+      "Oriental Beauty",
+      "Maison du Wistaria"
+    ],
+    "url": "https://taiwan.md/fr/Culture/tea-ceremony-and-aesthetics",
+    "readingTime": 56,
+    "featured": true,
+    "date": "2026-03-25",
+    "path": "fr/Culture/tea-ceremony-and-aesthetics.md"
+  },
+  {
+    "title": "La civilisation face au clavier : cent ans d'évolution des méthodes de saisie en Asie de l'Est",
+    "description": "Quand tous les claviers du monde se ressemblent, comment chaque civilisation parvient-elle à faire tenir son écriture dans 26 lettres latines ? De la phonétique taïwanaise au Dubeolsik coréen, les méthodes de saisie sont une guerre culturelle silencieuse.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Technology/east-asian-input-methods",
+    "readingTime": 69,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/east-asian-input-methods.md"
+  },
+  {
+    "title": "La communauté open source et g0v",
+    "description": "En février 2020, alors que le monde entier se ruait sur les masques, un groupe de développeurs taïwanais a créé en 72 heures un système permettant de consulter les stocks de masques dans 13 000 pharmacies. Sans ordre gouvernemental, sans budget, avec une seule conviction : changer la société par le code. Voici g0v, la « bifurcation du gouvernement ».",
+    "category": "fr",
+    "tags": ["Technologie", "communauté open source", "g0v", "civic tech"],
+    "url": "https://taiwan.md/fr/Technology/open-source-community-and-g0v",
+    "readingTime": 63,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Technology/open-source-community-and-g0v.md"
+  },
+  {
+    "title": "La controverse sur les médicaments vétérinaires à Taïwan",
+    "description": "Le 1er juillet 2026, une nouvelle réglementation sur l'utilisation des médicaments humains chez les chiens et chats entre en vigueur. Sur les 701 médicaments annoncés par le gouvernement, seulement 144 ont complété leur enregistrement, l'oxygène médical d'urgence est à zéro, et plus de cent mille propriétaires d'animaux ont signé une pétition pour demander un report. Cette histoire, ouverte en 2012, révèle le fossé entre une île qui traite ses animaux comme des membres de la famille, mais leurs médicaments comme de simples marchandises.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/taiwan-animal-drug-controversy",
+    "readingTime": 209,
+    "featured": false,
+    "date": "2026-04-10",
+    "path": "fr/Society/taiwan-animal-drug-controversy.md"
+  },
+  {
     "title": "La controversia sobre los medicamentos de uso animal en Taiwán",
     "description": "Una disputa legal, médica y social que expone la grieta entre una estructura regulatoria pensada para animales económicos y una sociedad que ya trata a perros y gatos como familia",
     "category": "es",
@@ -11121,21 +11857,631 @@
     "path": "es/Society/taiwan-animal-drug-controversy.md"
   },
   {
+    "title": "La cuisine de maître à Taïwan : l'art des plats signatures et la culture des banquets de rue",
+    "description": "La tshiú-lōo-tshài (手路菜) désigne en taïwanais les plats qui requièrent un vrai savoir-faire — transmis de maître à disciple, sans recette écrite. À Neimen, district de Kaohsiung, une terre trop alcaline pour cultiver quoi que ce soit a paradoxalement forgé la plus haute concentration de maîtres-traiteurs de tout Taïwan. À leur apogée, ils assuraient 25 000 banquets par an. Aujourd'hui, le secteur lutte pour survivre.",
+    "category": "fr",
+    "tags": [
+      "cuisine taïwanaise",
+      "cuisine traditionnelle",
+      "banquet de rue",
+      "plats signatures",
+      "maître-traiteur",
+      "culture gastronomique"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-specialty-home-cooking",
+    "readingTime": 61,
+    "featured": true,
+    "date": "2026-03-31",
+    "path": "fr/Food/taiwan-specialty-home-cooking.md"
+  },
+  {
+    "title": "La cuisine des villages militaires de Taïwan",
+    "description": "La grande migration de 1949 a apporté les saveurs de toutes les provinces chinoises : des cuisines derrière les clôtures de bambou à la préservation d''un patrimoine gustatif menacé",
+    "category": "fr",
+    "tags": [
+      "cuisine des villages militaires",
+      "cuisine continentale",
+      "nouilles au bœuf braisé",
+      "grande migration",
+      "clôtures de bambou"
+    ],
+    "url": "https://taiwan.md/fr/Food/military-dependents-village-cuisine",
+    "readingTime": 46,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Food/military-dependents-village-cuisine.md"
+  },
+  {
+    "title": "La culture culinaire hakka",
+    "description": "Riche et diverse, la cuisine hakka — du thé broyé à l'arôme enveloppant aux zongzi à la fleur de gingembre sauvage au parfum des forêts de montagne — révèle la sagesse pratique d'un peuple attaché à la frugalité et aux ressources du territoire.",
+    "category": "fr",
+    "tags": [
+      "cuisine hakka",
+      "lei cha",
+      "zongzi fleur de gingembre sauvage",
+      "gastronomie traditionnelle",
+      "culture ethnique"
+    ],
+    "url": "https://taiwan.md/fr/Food/hakka-food-culture",
+    "readingTime": 38,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Food/hakka-food-culture.md"
+  },
+  {
+    "title": "La culture de fabrication d'encens à Taïwan et le berceau des bâtonnets",
+    "description": "Du savoir-faire centenaire de la communauté de Yunxiao à Chiayi jusqu'à l'industrie de l'encens déployée sur tout le territoire — un métier ancien façonné par la dévotion, la maîtrise artisanale et la persévérance",
+    "category": "fr",
+    "tags": [
+      "fabrication dencens",
+      "artisanat traditionnel",
+      "culture religieuse",
+      "Chiayi",
+      "bâtonnets dencens",
+      "croyances populaires"
+    ],
+    "url": "https://taiwan.md/fr/Culture/incense-making-culture",
+    "readingTime": 53,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Culture/incense-making-culture.md"
+  },
+  {
+    "title": "La culture des animaux errants à Taïwan",
+    "description": "Des larmes versées devant Twelve Nights à l'engagement zéro euthanasie — comment une île a réappris à traiter les vies qui peuplent ses rues",
+    "category": "fr",
+    "tags": [
+      "animaux errants",
+      "protection animale",
+      "zéro euthanasie",
+      "TNR",
+      "Twelve Nights",
+      "refuges",
+      "culture de ladoption"
+    ],
+    "url": "https://taiwan.md/fr/Society/stray-animals",
+    "readingTime": 65,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/stray-animals.md"
+  },
+  {
+    "title": "La culture des boissons à la main à Taïwan",
+    "description": "Du thé à perles aux créations artisanales : l'essor et le rayonnement mondial de la culture taïwanaise des boissons préparées à la main",
+    "category": "fr",
+    "tags": [
+      "gastronomie",
+      "boissons",
+      "bubble tea",
+      "thé",
+      "exportation culturelle",
+      "internationalisation des marques"
+    ],
+    "url": "https://taiwan.md/fr/Food/hand-shaken-drink-culture",
+    "readingTime": 28,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Food/hand-shaken-drink-culture.md"
+  },
+  {
+    "title": "La culture des fruits de mer à Taïwan",
+    "description": "Des ports de pêche aux étals de nuit, en passant par les restaurants et les huîtres dorées à la plancha, Taïwan célèbre les trésors de la mer avec une générosité et une fraîcheur incomparables",
+    "category": "fr",
+    "tags": [
+      "fruits de mer",
+      "port de pêche",
+      "culture insulaire",
+      "huîtres",
+      "cuisine maritime"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-seafood-culture",
+    "readingTime": 38,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Food/taiwan-seafood-culture.md"
+  },
+  {
+    "title": "La culture des glaces taïwanaises",
+    "description": "Des glaces à la mangue de Yujing à la révolution de la neige rasée, immersion dans cette culture unique où l'on mange des glaces même quand il fait 10 degrés.",
+    "category": "fr",
+    "tags": [
+      "glaces",
+      "glace à la mangue",
+      "neige rasée",
+      "glace pilée",
+      "ICE MONSTER"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwanese-ice-cream-culture",
+    "readingTime": 40,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Food/taiwanese-ice-cream-culture.md"
+  },
+  {
+    "title": "La culture des marchés de nuit à Taïwan",
+    "description": "164 marchés de nuit officiellement répertoriés, un pour 38 000 habitants à Tainan — des parvis de temples aux destinations touristiques internationales",
+    "category": "fr",
+    "tags": [
+      "marché de nuit",
+      "street food",
+      "culture",
+      "tourisme",
+      "vie quotidienne"
+    ],
+    "url": "https://taiwan.md/fr/Food/night-market-culture",
+    "readingTime": 82,
+    "featured": false,
+    "date": "2026-03-21",
+    "path": "fr/Food/night-market-culture.md"
+  },
+  {
+    "title": "La culture des nouilles à Taïwan : soixante-dix ans d'histoire, de mémoire et d'innovation culinaire",
+    "description": "De la farine américaine de l'après-guerre aux tables du monde entier, la culture des nouilles taïwanaises tisse ensemble la nostalgie des migrants, le génie local et une créativité qui ne s'est jamais éteinte.",
+    "category": "fr",
+    "tags": [
+      "nouilles",
+      "culture culinaire",
+      "cuisine taïwanaise",
+      "cuisine des provinces",
+      "culture des villages militaires",
+      "nouilles au bœuf",
+      "dan-tsai noodles"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwanese-noodle-culture",
+    "readingTime": 70,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/Food/taiwanese-noodle-culture.md"
+  },
+  {
+    "title": "La culture des quartiers et des li à Taïwan",
+    "description": "De la démocratie de proximité à l'innovation sociale portée par les habitants",
+    "category": "fr",
+    "tags": [
+      "système des li et voisinages",
+      "développement communautaire",
+      "université de quartier",
+      "participation citoyenne",
+      "autonomie locale"
+    ],
+    "url": "https://taiwan.md/fr/Society/community-and-li-culture",
+    "readingTime": 77,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Society/community-and-li-culture.md"
+  },
+  {
+    "title": "La culture des tabous phonétiques à Taïwan : pourquoi le « quatre » fait disparaître des étages entiers ?",
+    "description": "Des hôpitaux sans quatrième étage aux plaques d'immatriculation vendues à prix d'or, les Taïwanais entretiennent une sensibilité aux homophones parmi les plus poussées au monde",
+    "category": "fr",
+    "tags": [
+      "culture taïwanaise",
+      "croyances populaires",
+      "culture des homophones",
+      "tabous numériques"
+    ],
+    "url": "https://taiwan.md/fr/Culture/homophones-taboo-culture",
+    "readingTime": 31,
+    "featured": false,
+    "date": "2026-03-21",
+    "path": "fr/Culture/homophones-taboo-culture.md"
+  },
+  {
+    "title": "La culture du banquet populaire taïwanais (辦桌)",
+    "description": "Une tradition née sous la dynastie Qing, cultivée sur les terres les plus ingrates de Taïwan, qui a donné naissance à la plus haute concentration mondiale de maîtres traiteurs. La pandémie a anéanti neuf dixièmes des commandes — mais ce qui préoccupe vraiment les initiés, ce n'est pas le chômage : c'est la disparition d'un savoir.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Food/taiwan-banquet-culture",
+    "readingTime": 69,
+    "featured": false,
+    "date": "2026-03-30",
+    "path": "fr/Food/taiwan-banquet-culture.md"
+  },
+  {
+    "title": "La culture du baseball à Taïwan",
+    "description": "De la légende de Hongye à la sueur et aux larmes du CPBL — comment le baseball est devenu le « sport national » de Taïwan",
+    "category": "fr",
+    "tags": [
+      "baseball",
+      "CPBL",
+      "Hongye",
+      "sport national",
+      "sport",
+      "Wang Chien-ming",
+      "effet Ohtani"
+    ],
+    "url": "https://taiwan.md/fr/Culture/baseball-culture",
+    "readingTime": 59,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Culture/baseball-culture.md"
+  },
+  {
+    "title": "La culture du bénévolat à Taïwan : une bienveillance inscrite dans le quotidien",
+    "description": "30 mères au foyer qui économisaient cinq centimes par jour ont bâti un empire caritatif présent dans 128 pays — la culture bénévole de Taïwan n'est pas un slogan, c'est un ADN collectif ancré dans la vie ordinaire",
+    "category": "fr",
+    "tags": [
+      "bénévolat",
+      "associations",
+      "Tzu Chi",
+      "ONG",
+      "développement communautaire",
+      "mamans conteuses"
+    ],
+    "url": "https://taiwan.md/fr/Society/volunteer-culture",
+    "readingTime": 49,
+    "featured": false,
+    "date": "2026-03-28",
+    "path": "fr/Society/volunteer-culture.md"
+  },
+  {
+    "title": "La culture du petit-déjeuner à Taïwan",
+    "description": "De la galette aux œufs au youtiao en passant par l'expansion mondiale de Yonghe Doujiang, les rituels matinaux des Taïwanais et les tantes des snacks du matin",
+    "category": "fr",
+    "tags": [
+      "petit-déjeuner",
+      "galette aux œufs",
+      "shaobing youtiao",
+      "Yonghe Doujiang",
+      "Mei Er Mei",
+      "snack du matin",
+      "lait de soja"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-breakfast-culture",
+    "readingTime": 32,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Food/taiwan-breakfast-culture.md"
+  },
+  {
+    "title": "La culture du riz à Taïwan",
+    "description": "De 85 kg à 42 kg par an : la révolution alimentaire d'une île de rizières et la résistance de sa culture traditionnelle",
+    "category": "fr",
+    "tags": [
+      "cuisine au riz",
+      "riziculture",
+      "culture traditionnelle",
+      "alimentation festive",
+      "agriculture",
+      "évolution alimentaire"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-rice-cuisine-culture",
+    "readingTime": 60,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Food/taiwan-rice-cuisine-culture.md"
+  },
+  {
+    "title": "La culture du thé à Taïwan",
+    "description": "Une petite île exclue des accords internationaux de limitation de la production théicole a ainsi créé son âge d'or du thé, avant de conquérir le monde entier avec une tasse de lait aromatisé garnie de petites « perles »",
+    "category": "fr",
+    "tags": [
+      "Culture du thé",
+      "Oolong",
+      "Thé de haute montagne",
+      "Boissons agitées",
+      "Bubble tea"
+    ],
+    "url": "https://taiwan.md/fr/Food/tea-culture",
+    "readingTime": 36,
+    "featured": true,
+    "date": "2026-03-23",
+    "path": "fr/Food/tea-culture.md"
+  },
+  {
+    "title": "La culture funéraire à Taïwan et les conceptions de la vie et de la mort",
+    "description": "Des pleurs monnayés de la \"pleureuse professionnelle\" aux jardins de cendres de Yong-Ai Yuan — Taïwan a mis cinquante ans pour passer de l''inhumation à la crémation, puis dix ans de plus pour troquer le columbarium contre les racines d''un arbre.",
+    "category": "fr",
+    "tags": [
+      "funérailles",
+      "sépulture écologique",
+      "rites funèbres",
+      "pleureuse professionnelle",
+      "Qingming",
+      "conception de la mort"
+    ],
+    "url": "https://taiwan.md/fr/Culture/funeral-culture",
+    "readingTime": 64,
+    "featured": false,
+    "date": "2026-04-08",
+    "path": "fr/Culture/funeral-culture.md"
+  },
+  {
+    "title": "La culture furry à Taïwan",
+    "description": "En 2015, la première convention furry de Taïwan n'accueillait qu'une cinquantaine de participants et moins de dix créateurs de fursuits. Dix ans plus tard, Infurnity réunit 3 251 personnes en une seule édition, avec 689 fursuits sur scène et près d'un million de dollars taïwanais récoltés pour des œuvres caritatives. La communauté furry taïwanaise, née des forums BBS de l'ère du modem, est devenue la communauté d'amateurs de personnages anthropomorphes la mieux organisée d'Asie.",
+    "category": "fr",
+    "tags": ["furry", "sous-culture", "fursuit", "culture taïwanaise"],
+    "url": "https://taiwan.md/fr/Culture/furry-fandom",
+    "readingTime": 38,
+    "featured": false,
+    "date": "2026-04-01",
+    "path": "fr/Culture/furry-fandom.md"
+  },
+  {
+    "title": "La culture Guai Guai à Taïwan : comment un snack vert est devenu le gardien de la high-tech",
+    "description": "Des ordinateurs d'étudiants aux chaînes de production de TSMC, pourquoi les Taïwanais croient-ils qu'un paquet de Guai Guai vert peut faire fonctionner les machines sans accroc ?",
+    "category": "fr",
+    "tags": [
+      "culture taïwanaise",
+      "croyances populaires",
+      "industrie technologique",
+      "légendes urbaines"
+    ],
+    "url": "https://taiwan.md/fr/Culture/guai-guai-culture",
+    "readingTime": 26,
+    "featured": false,
+    "date": "2026-03-21",
+    "path": "fr/Culture/guai-guai-culture.md"
+  },
+  {
+    "title": "La culture végétarienne à Taïwan",
+    "description": "Taïwan figure parmi les pays ayant les taux de végétarisme les plus élevés au monde — une tradition ancrée dans le bouddhisme, réinventée par la modernité",
+    "category": "fr",
+    "tags": [
+      "végétarisme",
+      "bouddhisme",
+      "substituts de viande",
+      "Tzu Chi",
+      "restaurants végétariens"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-vegetarian-culture",
+    "readingTime": 49,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Food/taiwan-vegetarian-culture.md"
+  },
+  {
+    "title": "La démocratisation de Taïwan",
+    "description": "Le 18 mars 1980, dans la salle d'audience d'un tribunal militaire de Kaohsiung, Shih Ming-teh renonce à son mémoire de défense de soixante mille caractères et demande au juge de le condamner à mort. Les jeunes avocats qui le défendaient ce jour-là — Chen Shui-bian, Hsieh Chang-ting, Su Tseng-chang — allaient tous devenir présidents ou premiers ministres dans les vingt années suivantes. Un procès conçu pour faire taire l'opposition a, contre toute attente, formé toute une génération de dirigeants politiques.",
+    "category": "fr",
+    "tags": [
+      "histoire",
+      "démocratisation",
+      "politique",
+      "incident de Formosa",
+      "mouvement du Lys sauvage"
+    ],
+    "url": "https://taiwan.md/fr/History/democratization",
+    "readingTime": 64,
+    "featured": true,
+    "date": "2026-03-27",
+    "path": "fr/History/democratization.md"
+  },
+  {
+    "title": "La fusion culinaire des nouveaux immigrants à Taïwan",
+    "description": "Quand l'acidité piquante thaïlandaise rencontre le goût doux-salé taïwanais, quand le pho vietnamien croise le lu wei braisé à la mode locale, quand les épices indonésiennes épousent les ingrédients du terroir — une véritable révolution gustative se déroule en silence à Taïwan. Les nouveaux immigrants n'ont pas seulement apporté la cuisine de leur pays natal : ils ont offert à Taïwan de nouvelles possibilités pour enrichir sa culture gastronomique.",
+    "category": "fr",
+    "tags": [
+      "cuisine des nouveaux immigrants",
+      "gastronomie dAsie du Sud-Est",
+      "fusion culturelle",
+      "diversité alimentaire",
+      "culture des immigrants"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwanese-new-immigrant-culinary-fusion",
+    "readingTime": 85,
+    "featured": true,
+    "date": "2026-03-20",
+    "path": "fr/Food/taiwanese-new-immigrant-culinary-fusion.md"
+  },
+  {
+    "title": "La génération slash à Taïwan — survivre avec plusieurs métiers",
+    "description": "Quand un master ne suffit plus à payer un studio à Taipei, le cumul d'emplois n'est pas un choix de vie : c'est une équation de survie",
+    "category": "fr",
+    "tags": [
+      "génération slash",
+      "économie des petits boulots",
+      "salaires",
+      "immobilier",
+      "emploi des jeunes"
+    ],
+    "url": "https://taiwan.md/fr/Society/slash-generation",
+    "readingTime": 59,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Society/slash-generation.md"
+  },
+  {
+    "title": "La guerre sino-française : huit mois à Keelung et Tamsui",
+    "description": "À l'automne 1884, la flotte française bombarde le port de Keelung. Deux mille fusiliers marins débarquent et s'emparent de la rade. Mais pendant sept mois, ils n'arrivent pas à franchir les crêtes qui l'entourent. La même semaine, 600 marins français tentent de prendre Tamsui — et sont repoussés à la mer en moins de deux heures. À la fin de la guerre, la France obtient le Vietnam et renonce à Taïwan. La Chine des Qing a failli tout perdre, mais la défaite partielle suffit à transformer l'île en province à part entière.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/sino-french-war",
+    "readingTime": 77,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/History/sino-french-war.md"
+  },
+  {
     "title": "La Industria de Animación Digital e Imagen de Taiwán",
     "description": "Desde estudios de efectos visuales que han marcado un hito hasta películas animadas aclamadas internacionalmente, Taiwán se ha convertido silenciosamente en uno de los centros más importantes de Asia para la animación digital y la narración visual.",
     "category": "es",
-    "tags": [
-      "animación",
-      "arte digital",
-      "industria cinematográfica",
-      "tecnología",
-      "economía creativa"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/Art/industria-animacion-digital-taiwan",
     "readingTime": 53,
     "featured": false,
     "date": "2024-01-15",
     "path": "es/Art/industria-animacion-digital-taiwan.md"
+  },
+  {
+    "title": "La justice transitionnelle à Taïwan",
+    "description": "Taïwan a annulé près de six mille condamnations prononcées sous le régime autoritaire, mais presque aucun bourreau n'a eu à rendre de comptes — cet écart est plus difficile à expliquer que la Terreur blanche elle-même.",
+    "category": "fr",
+    "tags": [
+      "histoire",
+      "justice transitionnelle",
+      "démocratisation",
+      "droits humains",
+      "Terreur blanche"
+    ],
+    "url": "https://taiwan.md/fr/History/transitional-justice",
+    "readingTime": 90,
+    "featured": false,
+    "date": "2026-03-31",
+    "path": "fr/History/transitional-justice.md"
+  },
+  {
+    "title": "La loi sur l'éducation dans les zones rurales isolées de Taïwan : 17,5 milliards investis, mais la gravité démographique reste implacable",
+    "description": "Le 21 novembre 2016, le Yuan législatif taïwanais adoptait en troisième lecture la Loi sur le développement de l'éducation dans les écoles des zones éloignées, en 21 articles. L'existence même de cette loi constitue une reconnaissance officielle par l'État de ses propres défaillances institutionnelles. Huit ans plus tard, le gouvernement a investi 17,5 milliards de dollars taïwanais dans les infrastructures rurales — mais l'année scolaire 2024-25 a vu fermer 18 écoles primaires en une seule fois, un record absolu dans l'histoire de l'éducation à Taïwan. La loi a sauvé le cadre juridique, mais elle n'a pas pu contenir la gravité démographique.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/remote-school-education-act",
+    "readingTime": 178,
+    "featured": true,
+    "date": "2026-04-11",
+    "path": "fr/Society/remote-school-education-act.md"
+  },
+  {
+    "title": "La naissance d'un enseignant : quarante ans de réforme et d'effondrement du système de formation des enseignants à Taïwan",
+    "description": "En 1994, Taïwan a ouvert la formation des enseignants à toutes les universités, mettant fin à un monopole de cinquante ans. Trente ans plus tard, le bilan est sévère : le nombre d'universités pédagogiques spécialisées est passé de 9 à 3, les admissions en formation n'atteignent plus les quotas, et le taux de réussite au concours d'enseignement a chuté à 52 %. Une réforme bien intentionnée a creusé l'écart entre les futurs enseignants et les réalités du terrain.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/teacher-training-system",
+    "readingTime": 131,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/Society/teacher-training-system.md"
+  },
+  {
+    "title": "La pauvreté d'apprentissage : assis en classe, mais sans rien apprendre",
+    "description": "En 2019, la Banque mondiale a introduit le concept de « Learning Poverty » pour désigner un phénomène plus difficile à percevoir que le décrochage scolaire : un enfant de 10 ans qui se présente en classe chaque matin, remet ses devoirs, mais est incapable de comprendre un court texte adapté à son âge. En 2023, la Banque mondiale a confirmé que le taux mondial de pauvreté d'apprentissage demeurait autour de 70 %. Taïwan s'est classé dans le top 5 mondial au PISA 2022, avec les 20 % d'élèves les plus défavorisés en mathématiques qui rejoignent la moyenne de l'OCDE — une progression spectaculaire en apparence. Pourtant, le même rapport révèle un écart de 54 points entre les zones urbaines (571) et rurales (517) ; une enquête de la fondation Boyo portant sur 13 collèges ruraux montrait que dans 6 d'entre eux, 70 % des élèves obtenaient un C en anglais, et dans 5 autres, 70 % un C en mathématiques. La pauvreté d'apprentissage à la taïwanaise se loge précisément dans cet écart — et n'a jamais été officiellement mesurée.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/learning-poverty",
+    "readingTime": 130,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/Society/learning-poverty.md"
+  },
+  {
+    "title": "La question de la désignation de Taïwan dans les normes internationales",
+    "description": "Des codes ISO aux logiciels open source — comment le nom de Taïwan est écrit, contesté et corrigé dans l'infrastructure numérique mondiale",
+    "category": "fr",
+    "tags": [
+      "ISO 3166",
+      "normes internationales",
+      "open source",
+      "g0v",
+      "souveraineté numérique",
+      "désignation de Taïwan"
+    ],
+    "url": "https://taiwan.md/fr/Society/taiwan-in-international-standards",
+    "readingTime": 32,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/taiwan-in-international-standards.md"
+  },
+  {
+    "title": "La République de Formose : 148 jours de résistance (1895)",
+    "description": "En 1895, la Chine des Qing cède Taïwan au Japon par le traité de Shimonoseki. Des fonctionnaires proclament la première république d'Asie, mais leur président s'enfuit après dix jours, leur poète après quatre. Ce qui reste debout, c'est un adolescent hakka de dix-neuf ans qui a dilapidé sa fortune pour lever une milice. Cent quarante-huit jours plus tard, la République disparaît et l'ère japonaise commence.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/japanese-taiwan-resistance-1895",
+    "readingTime": 66,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/History/japanese-taiwan-resistance-1895.md"
+  },
+  {
+    "title": "La sensibilité taïwanaise : l'esthétique du quotidien vue par les Coréens",
+    "description": "Deux natifs de Kaohsiung ont passé dix ans à photographier deux mille grilles de fenêtre en fer forgé. Des jeunes Coréens ont mis cinq ans à en faire un phénomène culturel mondial — comment la « 대만감성 » (sensibilité taïwanaise) a transformé les rues ordinaires de Taïwan en symbole esthétique le plus fascinant d'Asie",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Culture/taiwan-sensibility",
+    "readingTime": 60,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Culture/taiwan-sensibility.md"
+  },
+  {
+    "title": "La soupe de nouilles au bœuf — âme de la cuisine taïwanaise",
+    "description": "Des migrants continentaux nostalgiques à l'icône culinaire nationale, la soupe de nouilles au bœuf incarne la rencontre des cultures et rayonne désormais sur la scène gastronomique mondiale",
+    "category": "fr",
+    "tags": [
+      "gastronomie",
+      "soupe de nouilles au bœuf",
+      "cuisine continentale",
+      "fusion culturelle",
+      "Taipei Beef Noodle Festival",
+      "Michelin"
+    ],
+    "url": "https://taiwan.md/fr/Food/beef-noodle-soup",
+    "readingTime": 41,
+    "featured": true,
+    "date": "2026-03-17",
+    "path": "fr/Food/beef-noodle-soup.md"
+  },
+  {
+    "title": "La street food taïwanaise",
+    "description": "En 1987, une erreur dans une boutique de thé de Taichung a propulsé le bubble tea dans 60 pays. De simples outils de survie pour les immigrants de l'époque Qing, les petits plats de rue sont aujourd'hui une industrie de 400 milliards de dollars portée par 233 000 stands. Leur recette du succès ? Pas la sophistication — mais ce courage populaire de dire « tant pis, essayons. »",
+    "category": "fr",
+    "tags": [
+      "Food",
+      "street food",
+      "marché de nuit",
+      "cuisine taïwanaise",
+      "soft power culturel",
+      "cuisine des immigrants"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwanese-street-food",
+    "readingTime": 49,
+    "featured": false,
+    "date": "2026-03-28",
+    "path": "fr/Food/taiwanese-street-food.md"
+  },
+  {
+    "title": "La Tante du Petit-Déjeuner et le Réseau d''Information Communautaire",
+    "description": "Comment la patronne du snack-breakfast de quartier est devenue le véritable centre névralgique de la vie locale à Taïwan — bien plus qu''une simple vendeuse de sandwichs au petit matin",
+    "category": "fr",
+    "tags": [
+      "snack-breakfast",
+      "culture communautaire",
+      "convivialité",
+      "convenience store",
+      "vie quotidienne",
+      "réseau de quartier"
+    ],
+    "url": "https://taiwan.md/fr/Society/breakfast-shop-culture",
+    "readingTime": 50,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/breakfast-shop-culture.md"
+  },
+  {
+    "title": "La Terreur Blanche à Taïwan",
+    "description": "Les 38 ans de loi martiale ne se sont pas maintenus grâce à quelques milliers d'agents secrets, mais grâce à un système de garanties solidaires qui obligeait deux millions de familles à se cautionner mutuellement pour travailler, étudier ou se marier. Chen Chih-hsiung, Shih Shui-huan, Kao I-sheng, Bo Yang — quatre noms, quatre raisons d'être arrêtés, une seule et même machine.",
+    "category": "fr",
+    "tags": [
+      "Histoire",
+      "Terreur Blanche",
+      "loi martiale",
+      "répression politique",
+      "garanties solidaires",
+      "île Verte",
+      "Machang"
+    ],
+    "url": "https://taiwan.md/fr/History/white-terror",
+    "readingTime": 98,
+    "featured": true,
+    "date": "2026-04-05",
+    "path": "fr/History/white-terror.md"
+  },
+  {
+    "title": "La transition démocratique à Taïwan — quand l'autoritarisme creuse sa propre tombe",
+    "description": "Chaque répression engendre davantage de résistants. De l'incident du 228 au mouvement des Tournesols, comment une île a conduit un régime dictatorial à former lui-même les forces qui allaient l'enterrer.",
+    "category": "fr",
+    "tags": [
+      "démocratie",
+      "justice transitionnelle",
+      "histoire politique",
+      "droits humains",
+      "mouvements sociaux"
+    ],
+    "url": "https://taiwan.md/fr/History/democratic-transition",
+    "readingTime": 105,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/History/democratic-transition.md"
   },
   {
     "title": "Lai Ching-te (賴清德): Taiwan’s President Since 2024 — From Mining Town Doctor to Head of State",
@@ -11152,20 +12498,438 @@
     "title": "Largan Precision: When Craftsmanship Meets Architectural Revolution",
     "description": "How the world's strongest plastic lens technology company lost iPhone orders to Chinese rivals, despite technical leadership",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Corporations",
-      "Largan Precision",
-      "Optical Industry",
-      "Precision Manufacturing",
-      "Apple Supply Chain",
-      "Architectural Innovation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/largan-precision-when-craftsmanship-meets-architectural-revolution",
-    "readingTime": 77,
+    "readingTime": 78,
     "featured": false,
     "date": "2026-03-22",
     "path": "en/Economy/largan-precision-when-craftsmanship-meets-architectural-revolution.md"
+  },
+  {
+    "title": "Le bubble tea — comment une tasse a conquis le monde",
+    "description": "En 1987, lors d'une réunion d'équipe à Taichung, un geste anodin a donné naissance à une boisson qui allait conquérir la planète. Origines disputées, politique culturelle et débat sur les 500 calories d'un verre de bubble tea.",
+    "category": "fr",
+    "tags": [
+      "gastronomie",
+      "bubble tea",
+      "boissons à emporter",
+      "mondialisation",
+      "soft power",
+      "diplomatie culturelle"
+    ],
+    "url": "https://taiwan.md/fr/Food/bubble-tea",
+    "readingTime": 64,
+    "featured": true,
+    "date": "2026-03-30",
+    "path": "fr/Food/bubble-tea.md"
+  },
+  {
+    "title": "Le déploiement de la 5G à Taïwan et la transformation numérique du pays",
+    "description": "De la 4G à la 5G, Taïwan a bâti une stratégie nationale de transformation numérique et développé des applications intelligentes qui reconfigurent l'économie et la société.",
+    "category": "fr",
+    "tags": [
+      "5G",
+      "transformation numérique",
+      "ministère du Numérique",
+      "villes intelligentes",
+      "télécommunications"
+    ],
+    "url": "https://taiwan.md/fr/Technology/5g-and-digital-transformation",
+    "readingTime": 80,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Technology/5g-and-digital-transformation.md"
+  },
+  {
+    "title": "Le dernier chant de l''île : la crise de la dénatalité à Taïwan",
+    "description": "Là où l''on aime le plus les enfants tout en étant le moins enclins à en avoir — derrière le taux de fécondité de 0,87, c''est tout l''édifice social de Taïwan qui se fissure",
+    "category": "fr",
+    "tags": [
+      "dénatalité",
+      "crise démographique",
+      "taux de fécondité",
+      "mutations sociales",
+      "générations"
+    ],
+    "url": "https://taiwan.md/fr/Society/low-birth-rate-crisis",
+    "readingTime": 78,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/Society/low-birth-rate-crisis.md"
+  },
+  {
+    "title": "Le développement de la filière véhicules électriques à Taïwan",
+    "description": "Des technologies de batteries aux infrastructures de recharge, un panorama complet de l'écosystème taïwanais du véhicule électrique et de la stratégie de transition zéro carbone à l'horizon 2030",
+    "category": "fr",
+    "tags": [
+      "véhicules électriques",
+      "technologie des batteries",
+      "infrastructure de recharge",
+      "transition zéro carbone",
+      "transport vert"
+    ],
+    "url": "https://taiwan.md/fr/Technology/ev-industry",
+    "readingTime": 94,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Technology/ev-industry.md"
+  },
+  {
+    "title": "Le développement des parcs culturels et créatifs à Taïwan",
+    "description": "De la réhabilitation de bâtiments anciens aux pôles créatifs : parcours et modèles d'innovation des parcs culturels et créatifs de Taïwan",
+    "category": "fr",
+    "tags": [
+      "parcs culturels et créatifs",
+      "réhabilitation du patrimoine bâti",
+      "industries créatives",
+      "renouveau urbain",
+      "préservation culturelle"
+    ],
+    "url": "https://taiwan.md/fr/Culture/cultural-creative-parks",
+    "readingTime": 71,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Culture/cultural-creative-parks.md"
+  },
+  {
+    "title": "Le développement des parcs scientifiques de Taïwan",
+    "description": "D''un pari sur des rizières à un bouclier de silicium pesant cinq billions de dollars — comment trois parcs scientifiques ont réécrit la carte technologique mondiale en quarante-cinq ans",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Technology/science-park-development",
+    "readingTime": 69,
+    "featured": true,
+    "date": "2026-03-25",
+    "path": "fr/Technology/science-park-development.md"
+  },
+  {
+    "title": "Le développement du système de soins de longue durée à Taïwan",
+    "description": "L'un des systèmes de soins de longue durée les plus avancés d'Asie, et pourtant un recours massif aux aides-soignants étrangers qui reste largement invisible",
+    "category": "fr",
+    "tags": [
+      "soins de longue durée",
+      "vieillissement",
+      "aides-soignants étrangers",
+      "Long-Term Care 2.0",
+      "contradictions institutionnelles"
+    ],
+    "url": "https://taiwan.md/fr/Society/long-term-care",
+    "readingTime": 72,
+    "featured": false,
+    "date": "2026-03-22",
+    "path": "fr/Society/long-term-care.md"
+  },
+  {
+    "title": "Le développement économique de Taïwan après 1945",
+    "description": "Comment Taïwan a accompli son miracle économique : d'une société agricole appauvrie au rang de l'un des Quatre Dragons asiatiques",
+    "category": "fr",
+    "tags": [
+      "histoire économique",
+      "industrialisation",
+      "dix grands chantiers",
+      "miracle économique",
+      "transformation industrielle"
+    ],
+    "url": "https://taiwan.md/fr/History/postwar-economic-development",
+    "readingTime": 52,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "fr/History/postwar-economic-development.md"
+  },
+  {
+    "title": "Le Grand Référendum de Révocation — Quand la démocratie taïwanaise se teste elle-même",
+    "description": "En 2025, la société civile taïwanaise a lancé le plus vaste mouvement de révocation de l'histoire du pays, visant des législateurs du Kuomintang responsables de lois jugées dangereuses pour la souveraineté nationale. Malgré une mobilisation sans précédent, les trois vagues de vote ont toutes échoué — laissant derrière elles une réflexion profonde sur les limites et la force de la démocratie directe.",
+    "category": "fr",
+    "tags": [
+      "révocation",
+      "Kuomintang",
+      "action citoyenne",
+      "Parlement",
+      "relations cross-détroit",
+      "2025"
+    ],
+    "url": "https://taiwan.md/fr/History/grand-recall",
+    "readingTime": 48,
+    "featured": true,
+    "date": "2026-04-13",
+    "path": "fr/History/grand-recall.md"
+  },
+  {
+    "title": "Le lait de soja et les cafés du matin à Taïwan",
+    "description": "Des soldats originaires du Shandong poussaient leurs charrettes au pied du pont de Yonghe pour vendre du lait de soja. Soixante-dix ans plus tard, « Yonghe » est devenu le synonyme mondial du petit-déjeuner chinois — sans jamais avoir été une marque, simplement un nom de lieu.",
+    "category": "fr",
+    "tags": [
+      "lait de soja",
+      "café du matin",
+      "Yonghe doujiang",
+      "shaobing youtiao",
+      "crêpe aux œufs",
+      "cuisine des villages militaires"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-soy-milk-and-breakfast-shops",
+    "readingTime": 76,
+    "featured": true,
+    "date": "2026-03-29",
+    "path": "fr/Food/taiwan-soy-milk-and-breakfast-shops.md"
+  },
+  {
+    "title": "Le lycée Tamkang : quand un seul campus condense toute l'histoire de l'éducation moderne à Taïwan",
+    "description": "Ce qui mérite d'être raconté sur le lycée Tamkang, ce n'est pas son grand âge, mais la façon dont ses bâtiments portent en eux les tensions entre éducation missionnaire, instruction féminine et colonisation japonaise — le tout sur un même terrain.",
+    "category": "fr",
+    "tags": [
+      "Tamsui",
+      "lycée Tamkang",
+      "histoire de léducation",
+      "Mackay",
+      "période japonaise"
+    ],
+    "url": "https://taiwan.md/fr/History/tamkang-high-school",
+    "readingTime": 53,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/History/tamkang-high-school.md"
+  },
+  {
+    "title": "Le magazine Renjian",
+    "description": "47 numéros, quatre ans, une révolution silencieuse menée par la photographie et l'écriture — aux origines du journalisme littéraire à Taïwan",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Culture/renjian-magazine",
+    "readingTime": 55,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Culture/renjian-magazine.md"
+  },
+  {
+    "title": "Le mariage homosexuel et l''égalité des genres à Taïwan",
+    "description": "De la prison sous la loi martiale à la première loi sur le mariage homosexuel en Asie : comment trente ans de combat d''un seul homme ont redéfini l''amour sur cette île",
+    "category": "fr",
+    "tags": [
+      "mariage homosexuel",
+      "égalité des genres",
+      "droits humains",
+      "justice",
+      "premier en Asie",
+      "Chi Chia-wei",
+      "LGBTQ+"
+    ],
+    "url": "https://taiwan.md/fr/Society/same-sex-marriage",
+    "readingTime": 70,
+    "featured": true,
+    "date": "2026-03-22",
+    "path": "fr/Society/same-sex-marriage.md"
+  },
+  {
+    "title": "Le Mémorial Chiang Kai-shek : entre temple autoritaire et place de la liberté",
+    "description": "Au cœur de Taipei se dresse ce monument colossal — à la fois totem politique hérité de l'ère autoritaire et berceau de la démocratie taïwanaise. Son histoire raconte les convulsions les plus profondes de l'âme de Taïwan.",
+    "category": "fr",
+    "tags": [
+      "justice transitionnelle",
+      "monument de Taipei",
+      "Yang Cho-cheng",
+      "mouvement du Lys sauvage",
+      "paysage autoritaire",
+      "tourisme",
+      "Xinyi"
+    ],
+    "url": "https://taiwan.md/fr/History/chiang-kai-shek-memorial-hall",
+    "readingTime": 48,
+    "featured": false,
+    "date": "2026-04-10",
+    "path": "fr/History/chiang-kai-shek-memorial-hall.md"
+  },
+  {
+    "title": "Le miracle économique taïwanais : d'une société agraire aux Quatre Dragons d'Asie",
+    "description": "Entre les années 1960 et 1990, Taïwan a accompli une transformation économique remarquable : d'une économie rurale, le pays est devenu une puissance industrielle, rejoignant la Corée du Sud, Hong Kong et Singapour au sein des célèbres Quatre Dragons d'Asie.",
+    "category": "fr",
+    "tags": [
+      "histoire",
+      "développement économique",
+      "miracle économique",
+      "Dix Grands Projets",
+      "Quatre Dragons dAsie",
+      "industrialisation"
+    ],
+    "url": "https://taiwan.md/fr/History/economic-miracle",
+    "readingTime": 85,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/History/economic-miracle.md"
+  },
+  {
+    "title": "Le mouvement de revitalisation des langues autochtones à Taïwan",
+    "description": "Le peuple Thao ne compte plus que 4 locuteurs natifs, et pourtant Taïwan abrite l'une des expériences de revitalisation linguistique les plus intenses au monde. De la loi de 2017 sur les langues autochtones aux plateformes numériques, une course contre la montre est engagée.",
+    "category": "fr",
+    "tags": [
+      "peuples autochtones",
+      "revitalisation linguistique",
+      "éducation en langue ancestrale",
+      "politique linguistique",
+      "transmission culturelle"
+    ],
+    "url": "https://taiwan.md/fr/Culture/indigenous-language-revitalization",
+    "readingTime": 62,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Culture/indigenous-language-revitalization.md"
+  },
+  {
+    "title": "Le Mouvement des Tournesols — Douze ans après ces trente secondes",
+    "description": "Un député couché sur le sol, un micro de revers, trente secondes de discours : c''est tout ce qu''il a fallu pour déclencher vingt-quatre jours d''occupation du Parlement, l''éveil politique d''une génération, et le début du désengagement économique de Taïwan vis-à-vis de la Chine. Douze ans plus tard, les lois réclamées par les étudiants n''ont pas abouti — et pourtant, ils ont remporté une guerre qu''ils ignoraient mener.",
+    "category": "fr",
+    "tags": [
+      "mouvements sociaux",
+      "démocratie",
+      "relations entre les deux rives",
+      "technologie civique"
+    ],
+    "url": "https://taiwan.md/fr/Society/sunflower-movement",
+    "readingTime": 85,
+    "featured": true,
+    "date": "2026-04-12",
+    "path": "fr/Society/sunflower-movement.md"
+  },
+  {
+    "title": "Le Mouvement du Lys sauvage",
+    "description": "En mars 1990, des étudiants taïwanais ont occupé la place de Chiang Kai-shek pendant sept jours et ont contraint un régime figé depuis quarante ans à s'ouvrir enfin à la réforme démocratique. Le Mouvement du Lys sauvage n'a pas seulement engendré la Conférence nationale — il a révélé, pour la première fois, que des étudiants pouvaient réécrire le calendrier de la réforme constitutionnelle de Taïwan.",
+    "category": "fr",
+    "tags": [
+      "société",
+      "histoire",
+      "mouvement étudiant",
+      "démocratisation",
+      "engagement civique"
+    ],
+    "url": "https://taiwan.md/fr/Society/wild-lily-movement",
+    "readingTime": 64,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Society/wild-lily-movement.md"
+  },
+  {
+    "title": "Le pain et la pâtisserie à Taïwan",
+    "description": "Du sacre mondial de Wu Pao-chun à l'expansion internationale de 85°C, voyage au cœur de l'art boulanger taïwanais",
+    "category": "fr",
+    "tags": [
+      "pain",
+      "pâtisserie",
+      "Wu Pao-chun",
+      "boulangerie taïwanaise",
+      "85°C"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-bread-and-baking",
+    "readingTime": 43,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Food/taiwan-bread-and-baking.md"
+  },
+  {
+    "title": "Le poulet frit à la taïwanaise : sociologie d''un classique de rue",
+    "description": "Le poulet frit épicé au basilic sacré — le salt-and-pepper chicken — est bien plus qu''un simple snack nocturne : il incarne tout un art de vivre taïwanais, entre rituel de sélection, convivialité de marché et fierté culinaire locale.",
+    "category": "fr",
+    "tags": [
+      "poulet frit épicé",
+      "culture nocturne",
+      "friture",
+      "basilic sacré",
+      "marché de nuit"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwanese-salt-and-pepper-fried-chicken",
+    "readingTime": 40,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Food/taiwanese-salt-and-pepper-fried-chicken.md"
+  },
+  {
+    "title": "Le repli du gouvernement nationaliste à Taïwan et la reconstruction d'après-guerre",
+    "description": "Yan Chia-kan a quitté le Fujian pour assister à l'exil du gouvernement nationaliste en 1949. 1,2 million de civils et soldats, 38 ans de loi martiale, réforme agraire — comment cette période a-t-elle redessiné Taïwan ?",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/History/nationalist-government-retreat-and-postwar-reconstruction",
+    "readingTime": 65,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/History/nationalist-government-retreat-and-postwar-reconstruction.md"
+  },
+  {
+    "title": "Le riz au porc braisé de Taïwan",
+    "description": "Des cuisines des villages militaires au plat national : l''épopée du lu rou fan et la guerre Nord-Sud qui divise (et unit) Taïwan",
+    "category": "fr",
+    "tags": [
+      "lu rou fan",
+      "riz au porc braisé",
+      "cuisine des villages militaires",
+      "plat national",
+      "différences régionales"
+    ],
+    "url": "https://taiwan.md/fr/Food/braised-pork-rice",
+    "readingTime": 29,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Food/braised-pork-rice.md"
+  },
+  {
+    "title": "Le royaume des fruits de Taïwan",
+    "description": "Sous la couronne du royaume des fruits, les importations dépassent pour la première fois 30,2 milliards de NT$ — tandis que la production locale recule de 20 % en dix ans. La douce réputation, et ses vérités amères.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Food/taiwan-fruit-kingdom",
+    "readingTime": 81,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/Food/taiwan-fruit-kingdom.md"
+  },
+  {
+    "title": "Le sommet Zheng-Xi de 2026 : dix minutes qui valent dix ans",
+    "description": "Le 10 avril 2026, Cheng Li-wên rencontre Xi Jinping à Pékin — première dirigeante d'un grand parti taïwanais à voir le secrétaire général du PCC depuis une décennie. Dix minutes de dialogue, cent navires de guerre au large de Taïwan. Que cherche vraiment ce \"voyage pour la paix\" ?",
+    "category": "fr",
+    "tags": [
+      "Relations entre les deux rives",
+      "Dialogue KMT-PCC",
+      "Cheng Li-wên",
+      "Xi Jinping",
+      "Géopolitique",
+      "Politique",
+      "2026"
+    ],
+    "url": "https://taiwan.md/fr/Society/2026-zheng-xi-summit",
+    "readingTime": 87,
+    "featured": true,
+    "date": "2026-04-11",
+    "path": "fr/Society/2026-zheng-xi-summit.md"
+  },
+  {
+    "title": "Le système démocratique de Taïwan",
+    "description": "De la dictature à la démocratie : le parcours de Taïwan à travers la levée de la loi martiale, l'élection présidentielle au suffrage direct et l'alternance pacifique du pouvoir",
+    "category": "fr",
+    "tags": [
+      "démocratie",
+      "démocratisation",
+      "loi martiale",
+      "élection présidentielle"
+    ],
+    "url": "https://taiwan.md/fr/Society/democratic-system",
+    "readingTime": 31,
+    "featured": false,
+    "date": "2026-03-17",
+    "path": "fr/Society/democratic-system.md"
+  },
+  {
+    "title": "Le tourisme inclusif à Taïwan : quand la chaleur humaine devient la meilleure accessibilité",
+    "description": "Du point de vue familial, cette analyse explore comment Taïwan redéfinit le voyage multigénérationnel à l'approche d'une société super-vieillissante, grâce à la générosité des habitants et aux infrastructures inclusives.",
+    "category": "fr",
+    "tags": [
+      "tourisme inclusif",
+      "accessibilité",
+      "société super-vieillissante",
+      "culture familiale",
+      "résilience sociale"
+    ],
+    "url": "https://taiwan.md/fr/Society/inclusive-tourism",
+    "readingTime": 51,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Society/inclusive-tourism.md"
   },
   {
     "title": "Lee Teng-hui",
@@ -11193,20 +12957,257 @@
     "title": "Lee Yuan-tseh",
     "description": "",
     "category": "es",
-    "tags": [
-      "person",
-      "Lee Yuan-tseh",
-      "Premio Nobel",
-      "química",
-      "científico",
-      "Academia Sinica",
-      "Taiwan"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/People/lee-yuan-tseh",
     "readingTime": 66,
     "featured": false,
     "date": "2026-03-17",
     "path": "es/People/lee-yuan-tseh.md"
+  },
+  {
+    "title": "Les 19 vaches du mont擎天崗 : de la race Genyuan au bouillon de bœuf de Tainan, l'odyssée d'une île vers l'autonomie bovine",
+    "description": "Taïwan importe plus de 95 % de son bœuf, mais en 2024 elle a vu naître sa toute première race bovine reconnue officiellement. L'histoire des vaches Genyuan est celle d'un homme de 94 ans, de 19 bêtes noires sauvages et d'un bol de soupe fumante servi aux aurores — un scénario d'émancipation industrielle contre toute attente.",
+    "category": "fr",
+    "tags": [
+      "race Genyuan",
+      "bouillon de bœuf de Tainan",
+      "bœuf frais non réfrigéré",
+      "élevage bovin",
+      "agriculture taïwanaise",
+      "Lee Teng-hui",
+      "filière bœuf"
+    ],
+    "url": "https://taiwan.md/fr/History/tainan-beef-soup-history",
+    "readingTime": 82,
+    "featured": false,
+    "date": "2026-03-25",
+    "path": "fr/History/tainan-beef-soup-history.md"
+  },
+  {
+    "title": "Les alliés diplomatiques de Taïwan et sa diplomatie internationale (état 2026)",
+    "description": "En 2026, Taïwan ne compte plus que 12 alliés officiels — de 70 à 12 pays : comment Taïwan maintient-il une présence internationale sans siège aux Nations Unies ?",
+    "category": "fr",
+    "tags": [
+      "diplomatie",
+      "alliés officiels",
+      "relations internationales",
+      "détroit de Taïwan",
+      "Nations Unies"
+    ],
+    "url": "https://taiwan.md/fr/Society/diplomatic-allies",
+    "readingTime": 49,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Society/diplomatic-allies.md"
+  },
+  {
+    "title": "Les crises du détroit de Taïwan et l'évolution des relations entre les deux rives",
+    "description": "De la mémoire des obus à Kinmen aux jeunes de Taipei indifférents au risque de conflit, retour sur soixante-dix ans de crises qui ont façonné la psychologie collective des Taïwanais",
+    "category": "fr",
+    "tags": [
+      "relations entre les deux rives",
+      "crise du détroit de Taïwan",
+      "histoire",
+      "relations internationales",
+      "géopolitique"
+    ],
+    "url": "https://taiwan.md/fr/History/taiwan-strait-crises",
+    "readingTime": 85,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/History/taiwan-strait-crises.md"
+  },
+  {
+    "title": "Les deux visages de la route Shengli : mémoires du camp militaire de Hukou",
+    "description": "Le long de la route Shengli, à Hukou dans le comté de Hsinchu, un mur de camp militaire sépare deux mondes : d''un côté, des chars d''assaut et des tempêtes politiques ; de l''autre, des maisons civiles, une coopérative de consommation et un cinéma depuis disparu. Voici une histoire locale tissée de voisinage, d''accidents et de luttes pour la justice.",
+    "category": "fr",
+    "tags": [
+      "incident de Hukou",
+      "camp militaire de Hukou",
+      "route Shengli",
+      "affaire Hong Zhongqiu",
+      "troupes Starlight",
+      "mémoire locale"
+    ],
+    "url": "https://taiwan.md/fr/History/hukou-military-base",
+    "readingTime": 20,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/History/hukou-military-base.md"
+  },
+  {
+    "title": "Les échos d''un âge d''or : l''évolution et le savoir-faire de la culture du thé à Taïwan",
+    "description": "Dans les années 1930, les grandes puissances signèrent un accord de limitation de la production qui excluait Taïwan — les exportations de thé noir taïwanais bondirent aussitôt de 3,29 à 5,8 millions de kilos. Quatre-vingt-dix ans plus tard, la même île ouvre une nouvelle boutique de thé à emporter toutes les demi-heures.",
+    "category": "fr",
+    "tags": [
+      "culture du thé",
+      "oolong Dong Ding",
+      "thé de haute montagne",
+      "thé à emporter",
+      "bubble tea",
+      "culture agricole"
+    ],
+    "url": "https://taiwan.md/fr/Culture/tea-culture",
+    "readingTime": 55,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/Culture/tea-culture.md"
+  },
+  {
+    "title": "Les emprunts linguistiques à Taïwan et le contact des langues",
+    "description": "Du bento au \"shipin\" : l'histoire du contact linguistique d'une île, et comment Taïwan est devenu le laboratoire le plus réussi au monde pour l'intégration des mots empruntés",
+    "category": "fr",
+    "tags": [
+      "linguistique",
+      "sociolinguistique",
+      "culture taïwanaise",
+      "contact des langues",
+      "emprunts linguistiques"
+    ],
+    "url": "https://taiwan.md/fr/Culture/loanwords-and-language-contact",
+    "readingTime": 61,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Culture/loanwords-and-language-contact.md"
+  },
+  {
+    "title": "Les gardiens de l''écran : l''évolution du système de classification des films et séries à Taïwan",
+    "description": "Le système de classification taïwanais incarne le passage de la \"censure d''État\" sous la loi martiale à la \"protection de l''enfance\" à l''ère démocratique. De l''abolition de la loi sur la censure cinématographique en 1983 à la naissance de la catégorie \"Protégé\" inspirée par Jurassic Park en 1993, jusqu''à l''harmonisation complète au système à cinq niveaux en 2026, cet article retrace une longue évolution entre droit du spectateur et responsabilité sociale.",
+    "category": "fr",
+    "tags": [
+      "classification des films",
+      "Jurassic Park",
+      "loi sur le cinéma",
+      "Ministère de la Culture",
+      "loi martiale",
+      "protection de lenfance"
+    ],
+    "url": "https://taiwan.md/fr/Society/taiwan-tv-rating-system",
+    "readingTime": 36,
+    "featured": false,
+    "date": "2026-04-08",
+    "path": "fr/Society/taiwan-tv-rating-system.md"
+  },
+  {
+    "title": "Les sauces et condiments de Taïwan",
+    "description": "La sauce soja épaisse, la sauce satay, la sauce aigre-douce-pimentée, la pâte de haricots fermentés — ces condiments emblématiques forment le socle des saveurs taïwanaises et témoignent d'une philosophie culinaire née de multiples héritages culturels",
+    "category": "fr",
+    "tags": [
+      "sauces",
+      "condiments",
+      "culture culinaire",
+      "saveurs taïwanaises",
+      "aliments fermentés"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-sauces-and-seasonings",
+    "readingTime": 39,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Food/taiwan-sauces-and-seasonings.md"
+  },
+  {
+    "title": "Les saveurs autochtones de Taïwan : trois mille ans de mémoire culinaire",
+    "description": "Des flammes d'AKAME à l'univers végétal des Amis — comment la cuisine des peuples autochtones de Taïwan retrouve aujourd'hui sa place sur la scène mondiale",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Food/taiwan-indigenous-foodways",
+    "readingTime": 65,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Food/taiwan-indigenous-foodways.md"
+  },
+  {
+    "title": "Les Super-Héros à la Pelle et la Synchronicité Insulaire : Comment la Culture du Bénévolat en Cas de Catastrophe à Taïwan Forge l''Identité Nationale",
+    "description": "À travers le prisme des inondations de Guangfu (Hualien) en 2025, cet article explore le modèle unique de mobilisation bénévole de Taïwan en situation de catastrophe — comment les réseaux sociaux redéfinissent le sentiment de communauté insulaire, et l''évolution de la résilience sociale depuis le séisme du 921 jusqu''aux inondations de Hualien.",
+    "category": "fr",
+    "tags": [
+      "bénévolat en cas de catastrophe",
+      "résilience sociale",
+      "inondations de Hualien",
+      "communauté insulaire",
+      "mobilisation communautaire",
+      "réseaux sociaux",
+      "identité nationale"
+    ],
+    "url": "https://taiwan.md/fr/Society/disaster-volunteers",
+    "readingTime": 105,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/Society/disaster-volunteers.md"
+  },
+  {
+    "title": "Les tensions provinciales à Taïwan",
+    "description": "Ces tensions ne sont pas simplement l''histoire de deux communautés qui se détestent, mais une lutte pour le pouvoir de définir qui est vraiment Taïwanais — ressuscitée à chaque élection, dissoute dans la démolition des quartiers militaires, jamais véritablement résolue.",
+    "category": "fr",
+    "tags": ["société", "ethnicité", "politique", "histoire", "identité"],
+    "url": "https://taiwan.md/fr/Society/ethnic-tensions",
+    "readingTime": 75,
+    "featured": false,
+    "date": "2026-03-31",
+    "path": "fr/Society/ethnic-tensions.md"
+  },
+  {
+    "title": "Les tissus à fleurs de Taïwan",
+    "description": "Du produit industriel de l'ère japonaise au symbole culturel identitaire, le voyage des tissus à fleurs de Taïwan",
+    "category": "fr",
+    "tags": [
+      "culture",
+      "Hakka",
+      "textile",
+      "design",
+      "localisation",
+      "renaissance culturelle"
+    ],
+    "url": "https://taiwan.md/fr/Culture/taiwan-floral-cloth",
+    "readingTime": 78,
+    "featured": false,
+    "date": "2026-03-19",
+    "path": "fr/Culture/taiwan-floral-cloth.md"
+  },
+  {
+    "title": "Les vieilles rues de Taïwan : culture et quartiers commerciaux historiques",
+    "description": "Des ports animés de l'époque Qing aux façades baroques de l'ère japonaise, les vieilles rues de Taïwan sont une histoire populaire écrite dans la brique et la tuile",
+    "category": "fr",
+    "tags": [
+      "vieilles rues",
+      "quartiers historiques",
+      "patrimoine culturel",
+      "tourisme",
+      "architecture"
+    ],
+    "url": "https://taiwan.md/fr/Culture/old-streets-and-commercial-districts",
+    "readingTime": 86,
+    "featured": false,
+    "date": "2026-03-20",
+    "path": "fr/Culture/old-streets-and-commercial-districts.md"
+  },
+  {
+    "title": "Les villages militaires de Taïwan — mémoire d'un exil fondateur",
+    "description": "Des soldats perdus en Birmanie aux royaumes de bambou : comment 1,2 million de réfugiés ont réinventé l'idée de \"chez soi\" à Taïwan",
+    "category": "fr",
+    "tags": [
+      "villages militaires",
+      "immigrés continentaux",
+      "guerre civile chinoise",
+      "patrimoine culturel",
+      "rénovation urbaine"
+    ],
+    "url": "https://taiwan.md/fr/History/military-dependents-villages",
+    "readingTime": 78,
+    "featured": true,
+    "date": "2026-03-22",
+    "path": "fr/History/military-dependents-villages.md"
+  },
+  {
+    "title": "Les VTubers taïwanais",
+    "description": "Comment des créateurs virtuels chantant en taïwanais et commentant l'actualité sont en train de redéfinir la culture populaire de Taïwan à l'ère du tout-numérique",
+    "category": "fr",
+    "tags": ["culture", "technologie", "streaming", "idole virtuelle"],
+    "url": "https://taiwan.md/fr/Culture/taiwan-vtuber",
+    "readingTime": 50,
+    "featured": false,
+    "date": "2026-03-23",
+    "path": "fr/Culture/taiwan-vtuber.md"
   },
   {
     "title": "Li Ang",
@@ -11245,15 +13246,7 @@
     "title": "Li Mei-shu",
     "description": "A painter who spent 36 years building a temple, bringing academic aesthetics into folk religion",
     "category": "en",
-    "tags": [
-      "people",
-      "art",
-      "painting",
-      "sanxia",
-      "temple",
-      "realism",
-      "taiwan-exhibition"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/li-mei-shu",
     "readingTime": 34,
     "featured": false,
@@ -11317,20 +13310,31 @@
   },
   {
     "title": "Loanwords and Language Contact in Taiwan",
-    "description": "From Bento to Video: The island''s linguistic contact history reveals how Taiwan became the world''s most successful experiment in foreign language integration",
+    "description": "From Bento to Video: The island's linguistic contact history reveals how Taiwan became the world's most successful experiment in foreign language integration",
     "category": "en",
-    "tags": [
-      "linguistics",
-      "sociolinguistics",
-      "taiwanese-culture",
-      "language-contact",
-      "loanwords"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/loanwords-and-language-contact-in-taiwan",
     "readingTime": 55,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/Culture/loanwords-and-language-contact-in-taiwan.md"
+  },
+  {
+    "title": "Logement social et justice résidentielle à Taïwan",
+    "description": "Comment Taïwan cherche à réaliser la justice résidentielle grâce à sa politique de logement social, pour que chacun puisse trouver un foyer digne",
+    "category": "fr",
+    "tags": [
+      "logement social",
+      "justice résidentielle",
+      "politique du logement",
+      "gestion locative déléguée",
+      "rénovation urbaine"
+    ],
+    "url": "https://taiwan.md/fr/Society/social-housing",
+    "readingTime": 88,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/social-housing.md"
   },
   {
     "title": "Lu Guan-wei: From Medical School to Education Revolutionary",
@@ -11462,6 +13466,23 @@
     "path": "en/Music/mayday-band.md"
   },
   {
+    "title": "Mazu et Baoshengdadi : la légende d'amour la plus romantique de Taïwan",
+    "description": "« La pluie de Mazu, le vent de Baoshengdadi » — derrière ce dicton météorologique se cache une passion tumultueuse entre deux divinités",
+    "category": "fr",
+    "tags": [
+      "culture taïwanaise",
+      "croyances populaires",
+      "Mazu",
+      "Baoshengdadi",
+      "proverbes météorologiques"
+    ],
+    "url": "https://taiwan.md/fr/Culture/mazu-and-baoshengdadi-legends",
+    "readingTime": 30,
+    "featured": false,
+    "date": "2026-03-21",
+    "path": "fr/Culture/mazu-and-baoshengdadi-legends.md"
+  },
+  {
     "title": "Media and Press Freedom in Taiwan",
     "description": "From party‑state control to a noisy digital marketplace: how Taiwan’s press freedom emerged, and what it’s now up against",
     "category": "en",
@@ -11471,6 +13492,23 @@
     "featured": false,
     "date": "2026-03-18",
     "path": "en/Society/media-and-press-freedom-in-taiwan.md"
+  },
+  {
+    "title": "Médias et liberté de la presse à Taïwan",
+    "description": "Du contrôle du parti-État à l'ère de la guerre des médias : le parcours démocratique de la liberté de la presse à Taïwan et les défis de la transformation numérique",
+    "category": "fr",
+    "tags": [
+      "médias",
+      "liberté de la presse",
+      "démocratisation",
+      "transformation numérique",
+      "éducation aux médias"
+    ],
+    "url": "https://taiwan.md/fr/Society/media-and-press-freedom",
+    "readingTime": 59,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/media-and-press-freedom.md"
   },
   {
     "title": "MediaTek: From Shanzhai King to Chip Throne",
@@ -11487,18 +13525,29 @@
     "title": "Mega Financial Holding: From Japanese Colonial Bank to Global Financial Partner for Taiwanese Businesses",
     "description": "Inheriting the legacy of Taiwan Bank established in 1897, Mega Financial Holding has built a financial network across 38 countries in 127 years, becoming a crucial supporter for Taiwanese businesses going global",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprise",
-      "Financial Industry",
-      "State-Owned Bank",
-      "International Finance"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/mega-financial-holding-global-banking-network",
     "readingTime": 38,
     "featured": false,
     "date": "2026-03-20",
     "path": "en/Economy/mega-financial-holding-global-banking-network.md"
+  },
+  {
+    "title": "Miin : la plateforme qui traque les armées de faux comptes",
+    "description": "Conçue par le fondateur de PTT, Tu Yi-chin, Miin est une plateforme d'agrégation d'actualités propulsée par l'IA, capable de détecter les campagnes de manipulation coordonnées. Lors de la visite de Nancy Pelosi à Taïwan, ses données ont révélé qu'un compte sur quatre liés à l'événement sur Twitter était impliqué dans des opérations d'influence. Mais fin 2025, la plateforme s'est retrouvée accusée de violation de droits d'auteur après que ses robots d'indexation ont aspiré des centaines d'articles — exposant une zone grise juridique entre agrégation par IA et propriété intellectuelle de la presse.",
+    "category": "fr",
+    "tags": [
+      "IA",
+      "désinformation",
+      "résilience numérique",
+      "Tu Yi-chin",
+      "guerre cognitive"
+    ],
+    "url": "https://taiwan.md/fr/Technology/miin-platform",
+    "readingTime": 25,
+    "featured": false,
+    "date": "2026-04-01",
+    "path": "fr/Technology/miin-platform.md"
   },
   {
     "title": "Military Dependents’ Village Cuisine (眷村菜)",
@@ -11555,7 +13604,7 @@
       "Taiwan.md"
     ],
     "url": "https://taiwan.md/en/resources/mini-taiwan-pulse",
-    "readingTime": 22,
+    "readingTime": 25,
     "featured": false,
     "date": "2026-03-22",
     "path": "en/resources/mini-taiwan-pulse.md"
@@ -11564,18 +13613,7 @@
     "title": "Modern Taiwanese Poetry: The Island's Lyricism",
     "description": "",
     "category": "en",
-    "tags": [
-      "Literature",
-      "Poetry",
-      "Modern Poetry",
-      "Lyricism",
-      "Chi Hsien",
-      "Yu Kwang-chung",
-      "Lome",
-      "Wu Sheng",
-      "Xiang Yang",
-      "Chen Li"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/taiwanese-modern-poetry",
     "readingTime": 54,
     "featured": false,
@@ -11610,6 +13648,24 @@
     "featured": true,
     "date": "2026-03-17",
     "path": "es/People/tsmc-morris-chang.md"
+  },
+  {
+    "title": "Mouvements sociaux et participation citoyenne à Taïwan",
+    "description": "Du Mouvement des Lys sauvages au Mouvement des Tournesols : comment Taïwan pratique la démocratie et fait avancer le progrès social par la mobilisation citoyenne",
+    "category": "fr",
+    "tags": [
+      "mouvements sociaux",
+      "participation citoyenne",
+      "démocratie",
+      "Mouvement des Lys sauvages",
+      "Mouvement des Tournesols",
+      "réforme sociale"
+    ],
+    "url": "https://taiwan.md/fr/Society/social-movements",
+    "readingTime": 68,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Society/social-movements.md"
   },
   {
     "title": "National Scenic Area System",
@@ -11654,14 +13710,7 @@
     "title": "Night Market Economics: A Commercial Miracle Without Brands",
     "description": "How Taiwan's night markets create a 400-billion-dollar economic miracle without brands, décor, or fixed locations",
     "category": "en",
-    "tags": [
-      "economics",
-      "night markets",
-      "Taiwan",
-      "business model",
-      "tourism",
-      "street food"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/night-market-economics",
     "readingTime": 41,
     "featured": false,
@@ -11689,6 +13738,24 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "en/People/niu-cheng-ze-controversial-filmmaker-monga-director.md"
+  },
+  {
+    "title": "Nouvelles religions et culture spirituelle à Taïwan",
+    "description": "Un panorama du renouveau religieux d'après-guerre à Taïwan : les quatre grandes institutions bouddhistes, le Yi Guan Dao et leur influence profonde sur la société et la culture taïwanaises",
+    "category": "fr",
+    "tags": [
+      "religion",
+      "bouddhisme",
+      "Yi Guan Dao",
+      "bouddhisme humaniste",
+      "culture spirituelle",
+      "action caritative"
+    ],
+    "url": "https://taiwan.md/fr/Culture/new-religions-and-spirituality",
+    "readingTime": 104,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Culture/new-religions-and-spirituality.md"
   },
   {
     "title": "official-websites",
@@ -11763,6 +13830,22 @@
     "path": "en/Economy/pegatron-the-invisible-manufacturing-giant.md"
   },
   {
+    "title": "Plurk — Le microblog qui a survécu à l'ère des algorithmes",
+    "description": "Lancée en 2008, la plateforme de microblog Plurk a tenu bon face à la déferlante Facebook et Twitter grâce à sa timeline horizontale en « rivière » et à une diffusion totalement dénuée d'algorithmes. Après le blocage de Google en 2016, elle s'est redressée grâce aux « Plurk Coins », un modèle d'abonnement payant soutenu par une communauté taïwanaise fidèle — une rivière qui coule selon ses propres règles, loin de toute manipulation algorithmique.",
+    "category": "fr",
+    "tags": [
+      "médias sociaux",
+      "culture geek",
+      "histoire du web taïwanais",
+      "Plurk Coins"
+    ],
+    "url": "https://taiwan.md/fr/Culture/plurk",
+    "readingTime": 29,
+    "featured": false,
+    "date": "2026-04-01",
+    "path": "fr/Culture/plurk.md"
+  },
+  {
     "title": "Post-Martial Law Taiwan Literature",
     "description": "Thirty-eight years of censorship lifted overnight brought a literary explosion—but freedom didn't mean unrestraint, new challenges quietly emerged",
     "category": "en",
@@ -11794,15 +13877,9 @@
     "title": "Postwar Taiwanese Literature",
     "description": "From language displacement to diverse flowering - how postwar Taiwanese literature found its voice amid identity crises and political turbulence.",
     "category": "en",
-    "tags": [
-      "postwar literature",
-      "nativist literature",
-      "modernism",
-      "feminist literature",
-      "language transition"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/postwar-taiwanese-literature",
-    "readingTime": 84,
+    "readingTime": 86,
     "featured": false,
     "date": "2026-03-24",
     "path": "en/Art/postwar-taiwanese-literature.md"
@@ -11830,17 +13907,28 @@
     "path": "Technology/PTT批踢踢.md"
   },
   {
-    "title": "PTT Bulletin Board System: Taiwan's Most Stubborn Public Square",
-    "description": "A BBS built in a dorm room in 1995 still operates with pure text interfaces 30 years later, yet has profoundly shaped Taiwan's internet language, political discourse, and collective memory",
-    "category": "en",
+    "title": "PTT Bulletin Board : la place publique la plus tenace de Taïwan",
+    "description": "Un BBS fondé en 1995 dans une résidence universitaire, qui fonctionne encore trente ans plus tard avec une interface en texte brut, et qui a profondément façonné le langage d'internet, le débat politique et la mémoire collective à Taïwan",
+    "category": "fr",
     "tags": [
       "PTT",
       "BBS",
-      "internet culture",
-      "netizen culture",
-      "digital democracy",
-      "social media"
+      "culture internet",
+      "kémin",
+      "démocratie numérique",
+      "réseaux sociaux"
     ],
+    "url": "https://taiwan.md/fr/Technology/ptt-bbs",
+    "readingTime": 41,
+    "featured": true,
+    "date": "2026-03-21",
+    "path": "fr/Technology/ptt-bbs.md"
+  },
+  {
+    "title": "PTT Bulletin Board System: Taiwan's Most Stubborn Public Square",
+    "description": "A BBS built in a dorm room in 1995 still operates with pure text interfaces 30 years later, yet has profoundly shaped Taiwan's internet language, political discourse, and collective memory",
+    "category": "en",
+    "tags": [],
     "url": "https://taiwan.md/en/Technology/ptt-bulletin-board-system",
     "readingTime": 34,
     "featured": true,
@@ -11888,6 +13976,58 @@
     "path": "en/History/qing-dynasty-rule.md"
   },
   {
+    "title": "Quand l'épidémie s'éteint, les feux d'artifice deviennent tradition : l'évolution inattendue des fêtes à Taïwan",
+    "description": "Un rituel de village lancé pour combattre la peste en 1885 est devenu, 140 ans plus tard, l'une des fêtes populaires les plus dangereuses du monde",
+    "category": "fr",
+    "tags": [
+      "fêtes traditionnelles",
+      "folklore",
+      "pèlerinage Mazu",
+      "fête des pétards de Yanshuei",
+      "Nouvel An chinois",
+      "barbecue de la mi-automne"
+    ],
+    "url": "https://taiwan.md/fr/Culture/traditional-festivals",
+    "readingTime": 59,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/Culture/traditional-festivals.md"
+  },
+  {
+    "title": "Quand le séisme frappe, qui est de garde ? Les codes institutionnels du système de médecine de catastrophe à Taïwan",
+    "description": "Du séisme de 1999 au tremblement de terre de Hualien en 2024, découvrez comment Taïwan a construit un réseau de médecine de catastrophe centré sur les urgentistes. La clé du dispositif ne réside pas dans les équipements, mais dans une question toute simple : qui est de garde ?",
+    "category": "fr",
+    "tags": [
+      "médecine de catastrophe",
+      "médecine d urgence",
+      "DMAT",
+      "système de santé taïwanais",
+      "télémédecine"
+    ],
+    "url": "https://taiwan.md/fr/Technology/disaster-medical-system",
+    "readingTime": 55,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/Technology/disaster-medical-system.md"
+  },
+  {
+    "title": "Quand les blessures sociales deviennent thérapie collective : les mèmes taïwanais comme soupape de sécurité culturelle",
+    "description": "De \"Jie-ge, non !\" aux liens-pièges de Tong Shen, les mèmes taïwanais ne sont pas que du divertissement : ils constituent un système sophistiqué de décompression sociale, transformant la gêne, le traumatisme et l'anxiété en rituels de guérison collectifs.",
+    "category": "fr",
+    "tags": [
+      "mèmes",
+      "culture internet",
+      "culture taïwanaise",
+      "PTT",
+      "réseaux sociaux"
+    ],
+    "url": "https://taiwan.md/fr/Culture/taiwan-memes",
+    "readingTime": 46,
+    "featured": false,
+    "date": "2026-03-24",
+    "path": "fr/Culture/taiwan-memes.md"
+  },
+  {
     "title": "Quanta Computer: The Taiwanese Company That Makes One-Third of the World's Laptops",
     "description": "Founded by Barry Lam in 1988, Quanta Computer manufactures laptops for Apple, Dell, and HP — and now builds AI servers for the world's largest cloud providers. From a Taipei factory fire to a $40B revenue giant. Company history, products, and strategy.",
     "category": "en",
@@ -11909,15 +14049,7 @@
     "title": "Ray (YouTuber)",
     "description": "Born in 2005, Taiwanese high school student Hsu Chen-Jui gained viral fame when he said 'My name is Ray, I'm from Taiwan' to American streamer Kai Cenat during a school trip to Japan. With over 2.7 million Twitch followers and 1.43 million YouTube subscribers, he brought Taiwan's passport, beef noodles, and bubble tea to American GQ's trending videos, signed with Adidas for his personal brand RUEI, and later announced retirement to invest in a dental clinic in Atlanta.",
     "category": "en",
-    "tags": [
-      "YouTuber",
-      "Streamer",
-      "Twitch",
-      "Kai Cenat",
-      "Digital Creator",
-      "Taiwan International Image",
-      "AMP"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/ray-youtuber",
     "readingTime": 22,
     "featured": false,
@@ -11947,21 +14079,31 @@
     "title": "Religion and Folk Beliefs",
     "description": "From Fear Management to Faith Empire: How Taiwan Created the World's Most Dense Yet Freest Religious Ecosystem",
     "category": "en",
-    "tags": [
-      "lifestyle",
-      "religion",
-      "Mazu",
-      "folk beliefs",
-      "temple culture",
-      "Wangye worship",
-      "religious freedom",
-      "pragmatism"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Lifestyle/religion-and-folk-beliefs",
     "readingTime": 103,
     "featured": false,
     "date": "2026-03-22",
     "path": "en/Lifestyle/religion-and-folk-beliefs.md"
+  },
+  {
+    "title": "Religion et culture des temples à Taïwan",
+    "description": "Une île qui compte plus de quinze mille temples que de supérettes, où bouddhisme, taoïsme et croyances populaires partagent le même toit, et où un million de pèlerins marchent neuf jours derrière Mazu — la foi taïwanaise ne se trouve pas dans les sutras, elle flotte dans l'encens du coin de la rue.",
+    "category": "fr",
+    "tags": [
+      "religion",
+      "temples",
+      "croyances populaires",
+      "Mazu",
+      "bouddhisme",
+      "taoïsme",
+      "temple Baoan"
+    ],
+    "url": "https://taiwan.md/fr/Culture/religion-and-temple-culture",
+    "readingTime": 92,
+    "featured": true,
+    "date": "2026-04-06",
+    "path": "fr/Culture/religion-and-temple-culture.md"
   },
   {
     "title": "Renjian Magazine (人間雜誌)",
@@ -11973,6 +14115,42 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "en/Culture/renjian-magazine.md"
+  },
+  {
+    "title": "Rites de passage et cérémonies à Taïwan : de la naissance au deuil",
+    "description": "Des douze cadeaux de fiançailles aux banquets de rue, découvrez comment les rituels de la vie taïwanaise naviguent entre tradition et modernité",
+    "category": "fr",
+    "tags": [
+      "mariage",
+      "funérailles",
+      "rites de passage",
+      "culture du banquet",
+      "coutumes traditionnelles",
+      "adaptation moderne"
+    ],
+    "url": "https://taiwan.md/fr/Culture/life-ceremonies",
+    "readingTime": 90,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Culture/life-ceremonies.md"
+  },
+  {
+    "title": "Santé publique et système de lutte contre les épidémies à Taïwan",
+    "description": "En 2003, la mise en quarantaine de l'hôpital Hoping a causé la mort de 30 personnes. Dix-sept ans plus tard, lorsque la COVID-19 a déferlé sur le monde, Taïwan a tenu 18 mois sans transmission communautaire grâce aux leçons douloureuses de cette catastrophe. Comment un traumatisme collectif est devenu la mémoire immunitaire d'une île.",
+    "category": "fr",
+    "tags": [
+      "santé publique",
+      "SRAS",
+      "COVID-19",
+      "épidémie",
+      "assurance maladie universelle",
+      "CDC Taïwan"
+    ],
+    "url": "https://taiwan.md/fr/Society/taiwan-public-health-and-epidemic-prevention",
+    "readingTime": 51,
+    "featured": false,
+    "date": "2026-04-08",
+    "path": "fr/Society/taiwan-public-health-and-epidemic-prevention.md"
   },
   {
     "title": "Seeing Taiwan — Historical Impressions of the Island",
@@ -12044,14 +14222,7 @@
     "title": "Sistema Educativo de Taiwán",
     "description": "",
     "category": "es",
-    "tags": [
-      "educación",
-      "gsat",
-      "academias",
-      "educación de doce años",
-      "estilo de vida",
-      "sociedad"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/Lifestyle/education-system",
     "readingTime": 63,
     "featured": false,
@@ -12187,19 +14358,28 @@
     "path": "en/People/sylvia-chang.md"
   },
   {
+    "title": "Système éducatif et culture de l''admission scolaire à Taïwan",
+    "description": "Du système de concours unifié à l''éducation nationale de douze ans : comment Taïwan cherche l''équilibre entre compétition et diversité",
+    "category": "fr",
+    "tags": [
+      "éducation",
+      "admission scolaire",
+      "éducation nationale de douze ans",
+      "enseignement professionnel",
+      "réforme éducative",
+      "culture de la compétition"
+    ],
+    "url": "https://taiwan.md/fr/Society/education-system",
+    "readingTime": 71,
+    "featured": true,
+    "date": "2026-03-18",
+    "path": "fr/Society/education-system.md"
+  },
+  {
     "title": "Tadian Mountain",
     "description": "Taiwan's closest mud volcano badland to the coast, a former military fortress now transformed into a natural park with active mud springs and scenic coastal trails.",
     "category": "en",
-    "tags": [
-      "Geography",
-      "Nature",
-      "Mud Volcano",
-      "Badlands",
-      "Kaohsiung",
-      "Mituo District",
-      "Trail",
-      "Military Heritage"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Geography/tadian-mountain",
     "readingTime": 18,
     "featured": false,
@@ -12221,15 +14401,7 @@
     "title": "Tai Tzu-ying",
     "description": "",
     "category": "es",
-    "tags": [
-      "person",
-      "Tai Tzu-ying",
-      "badminton",
-      "mundo número uno",
-      "Juegos Olímpicos",
-      "atleta",
-      "Taiwan"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/People/tai-tzu-ying",
     "readingTime": 58,
     "featured": false,
@@ -12259,17 +14431,27 @@
     "path": "en/Technology/taiwan-ai-labs.md"
   },
   {
+    "title": "Taiwan AI Labs — Le laboratoire d'intelligence artificielle de Taïwan",
+    "description": "Institution de recherche en IA à but non lucratif fondée par le « père de PTT » Du Yijin, spécialisée dans la santé intelligente, la ville intelligente et la lutte contre la désinformation, portée par les valeurs de la tech au service du bien commun et de l'open source",
+    "category": "fr",
+    "tags": [
+      "intelligence artificielle",
+      "santé intelligente",
+      "Du Yijin",
+      "innovation technologique",
+      "lutte contre la désinformation"
+    ],
+    "url": "https://taiwan.md/fr/Technology/taiwan-ai-labs",
+    "readingTime": 23,
+    "featured": true,
+    "date": "2026-03-19",
+    "path": "fr/Technology/taiwan-ai-labs.md"
+  },
+  {
     "title": "Taiwan Alpine Ecosystems and Glacial Relicts",
     "description": "Exploring the unique ecosystems of Taiwan's mountains above 3,000 meters, from Taiwan red cypress and Yushan rhododendron to precious biodiversity of glacial relict species",
     "category": "en",
-    "tags": [
-      "alpine ecology",
-      "glacial relicts",
-      "Taiwan cypress",
-      "alpine plants",
-      "biodiversity",
-      "climate change"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwan-alpine-ecosystems-glacial-relicts",
     "readingTime": 61,
     "featured": false,
@@ -12289,7 +14471,7 @@
   },
   {
     "title": "Taiwan Blue Magpie: The Blue Gang of the Mountains",
-    "description": "A gemlike endemic species that leads one of the most sophisticated \\\"family gang\\\" societies in Taiwan's forests.",
+    "description": "A gemlike endemic species that leads one of the most sophisticated \"family gang\" societies in Taiwan''s forests.",
     "category": "en",
     "tags": [
       "endemic species",
@@ -12330,14 +14512,7 @@
     "title": "Taiwan Cement: The Green Transformation of Taiwan's First Listed Company",
     "description": "Founded in 1946, stock code 1101 was born for the Taiwan Stock Exchange. After 76 years under three generations of the Koo family, Taiwan Cement transformed from concrete foundation to green revolution, witnessing Taiwan's construction miracle while pioneering carbon-neutral innovation",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprises",
-      "Cement Industry",
-      "Construction Materials",
-      "Privatization",
-      "Green Transformation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-cement-taipower-green-transformation",
     "readingTime": 44,
     "featured": false,
@@ -12377,15 +14552,7 @@
     "title": "Taiwan Coffee Industry",
     "description": "From Tait & Co.'s 100 seedlings in 1884 to hosting the first Cup of Excellence in 2024, how an island built a coffee empire importing 43,000 tons annually in 140 years",
     "category": "en",
-    "tags": [
-      "coffee",
-      "Gukeng coffee",
-      "Alishan coffee",
-      "Simple Kaffa",
-      "third wave coffee",
-      "Cup of Excellence",
-      "convenience store coffee"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwan-coffee-industry",
     "readingTime": 61,
     "featured": false,
@@ -12396,13 +14563,7 @@
     "title": "Taiwan Comics and Animation Culture",
     "description": "From the golden age of Comic King to the cultural renaissance of CCC Creative Collection, how Taiwan comics found their voice amid Japanese manga dominance",
     "category": "en",
-    "tags": [
-      "comics",
-      "animation",
-      "cultural creativity",
-      "subculture",
-      "youth culture"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/taiwan-comics-and-animation-culture",
     "readingTime": 51,
     "featured": false,
@@ -12413,13 +14574,7 @@
     "title": "Taiwan Companies: Chunghwa Telecom",
     "description": "Taiwan's largest telecommunications operator, transforming from state monopoly to digital transformation leader",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Companies",
-      "Telecommunications",
-      "Digital Transformation",
-      "State Enterprise Privatization"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-companies-chunghwa-telecom",
     "readingTime": 46,
     "featured": false,
@@ -12430,18 +14585,9 @@
     "title": "Taiwan Companies: Giant Manufacturing",
     "description": "From abandoned OEM slave to the hidden empire that sets global bicycle technology standards",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprises",
-      "Giant Manufacturing",
-      "Giant",
-      "Manufacturing",
-      "Brand Transformation",
-      "A-Team",
-      "E-bikes"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-companies-giant-manufacturing",
-    "readingTime": 80,
+    "readingTime": 81,
     "featured": false,
     "date": "2026-03-22",
     "path": "en/Economy/taiwan-companies-giant-manufacturing.md"
@@ -12478,14 +14624,7 @@
     "title": "Taiwan Corporation: Foxconn Precision Industry",
     "description": "The world's largest electronics manufacturing empire and the hidden champion behind your iPhone",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Corporations",
-      "Electronics Manufacturing",
-      "Contract Manufacturing",
-      "Foxconn",
-      "Taiwan"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/foxconn-precision-industry",
     "readingTime": 42,
     "featured": false,
@@ -12507,13 +14646,7 @@
     "title": "Taiwan Enterprise: ASE Semiconductor",
     "description": "World's largest assembly and testing company - why did a construction company boss pivot to semiconductors?",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprises",
-      "Semiconductor",
-      "Assembly and Testing",
-      "Tech Manufacturing"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-enterprise-ase-semiconductor",
     "readingTime": 37,
     "featured": false,
@@ -12524,14 +14657,7 @@
     "title": "Taiwan Enterprise: Cathay Financial Holding",
     "description": "Taiwan's Largest Financial Holding Company: The Financial Empire Built by the Lin Yuan Group",
     "category": "en",
-    "tags": [
-      "economy",
-      "enterprise",
-      "financial services",
-      "financial holding",
-      "banking",
-      "insurance"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-enterprise-cathay-financial",
     "readingTime": 50,
     "featured": false,
@@ -12553,15 +14679,7 @@
     "title": "Taiwan Enterprise: Fubon Financial Holding",
     "description": "From 10 to 60,000 People: How the Tsai Brothers Built Taiwan's Largest Financial Empire Over 60 Years",
     "category": "en",
-    "tags": [
-      "economy",
-      "enterprise",
-      "Fubon Financial",
-      "Daniel Tsai",
-      "financial services",
-      "M&A",
-      "digital transformation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/taiwan-enterprise-fubon-financial",
     "readingTime": 70,
     "featured": false,
@@ -12589,15 +14707,7 @@
     "title": "Taiwan Environmental Justice and NIMBY Conflicts",
     "description": "Exploring Taiwan's unequal environmental burden distribution, from incinerators and nuclear waste to petrochemical industry NIMBY conflicts, analyzing environmental inequality and social justice issues",
     "category": "en",
-    "tags": [
-      "environmental justice",
-      "NIMBY effect",
-      "environmental inequality",
-      "social justice",
-      "incinerators",
-      "nuclear waste",
-      "petrochemical industry"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Society/taiwan-environmental-justice-nimby-conflicts",
     "readingTime": 88,
     "featured": false,
@@ -12608,19 +14718,29 @@
     "title": "Taiwan Environmental Movement History",
     "description": "The evolution of Taiwan's environmental movement from 1980s anti-pollution protests to recent plastic reduction campaigns, witnessing the awakening of environmental consciousness intertwined with Taiwan's democratization process",
     "category": "en",
-    "tags": [
-      "environmental movement",
-      "environmental protection",
-      "social movements",
-      "anti-nuclear movement",
-      "air pollution",
-      "marine conservation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwan-environmental-movement-history",
     "readingTime": 44,
     "featured": false,
     "date": "2026-03-20",
     "path": "en/Nature/taiwan-environmental-movement-history.md"
+  },
+  {
+    "title": "Taïwan et le Guide Michelin : le prix des étoiles et la redéfinition de la gastronomie",
+    "description": "Depuis son arrivée à Taïwan en 2018, le Guide Michelin a redessiné les règles du jeu dans la restauration locale. Les grands gagnants ? Les restaurants étoilés. Les grands perdants ? Ceux qui étaient « presque au niveau », condamnés à supporter des coûts faramineux sans jamais décrocher la précieuse reconnaissance.",
+    "category": "fr",
+    "tags": [
+      "Michelin",
+      "gastronomie",
+      "restaurants étoilés",
+      "cuisine taïwanaise",
+      "industrie de la restauration"
+    ],
+    "url": "https://taiwan.md/fr/Food/taiwan-michelin-fine-dining",
+    "readingTime": 99,
+    "featured": true,
+    "date": "2026-03-23",
+    "path": "fr/Food/taiwan-michelin-fine-dining.md"
   },
   {
     "title": "Taiwan Floral Fabric",
@@ -12647,7 +14767,7 @@
       "Bunun"
     ],
     "url": "https://taiwan.md/en/Music/Taiwan%20Folk%20Music%20and%20Songs",
-    "readingTime": 43,
+    "readingTime": 44,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/Music/Taiwan Folk Music and Songs.md"
@@ -12656,14 +14776,7 @@
     "title": "Taiwan Forest Ecosystems",
     "description": "A vertical journey from sea level to 3,952 meters, traversing the most compressed forest spectrum on Earth",
     "category": "en",
-    "tags": [
-      "forest ecology",
-      "vertical distribution",
-      "Taiwania",
-      "cypress",
-      "cloud forest",
-      "biodiversity"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwan-forest-ecosystems",
     "readingTime": 66,
     "featured": false,
@@ -12816,20 +14929,9 @@
     "title": "Taiwan Marine Ecology",
     "description": "Ancient Tao wisdom meets modern marine crisis: How traditional taboos once protected oceans now bleaching under rising temperatures and underwater noise",
     "category": "en",
-    "tags": [
-      "marine ecology",
-      "Kuroshio",
-      "coral bleaching",
-      "pink dolphins",
-      "flying fish season",
-      "Tao people",
-      "marine conservation",
-      "offshore wind",
-      "climate change",
-      "marine science"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwan-marine-ecology",
-    "readingTime": 69,
+    "readingTime": 70,
     "featured": false,
     "date": "2026-03-23",
     "path": "en/Nature/taiwan-marine-ecology.md"
@@ -12838,13 +14940,7 @@
     "title": "Taiwan Maritime Trade History",
     "description": "Taiwan in the Age of Exploration - from international trade center to pirate kingdom, a legendary rise and fall",
     "category": "en",
-    "tags": [
-      "maritime trade",
-      "Age of Exploration",
-      "international trade",
-      "pirates",
-      "port cities"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/History/taiwan-maritime-trade-history",
     "readingTime": 37,
     "featured": false,
@@ -12994,14 +15090,7 @@
     "title": "Taiwan Temple Festivals and Performance Troupes",
     "description": "The majesty of Eight Generals, the innovation of Electronic Nezha, the devotion of Mazu processions — Taiwan temple festivals are the perfect fusion of faith and celebration",
     "category": "en",
-    "tags": [
-      "temple festivals",
-      "performance troupes",
-      "folk beliefs",
-      "electronic nezha",
-      "eight generals",
-      "mazu procession"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/taiwan-temple-festivals-and-performance-troupes",
     "readingTime": 63,
     "featured": false,
@@ -13034,14 +15123,7 @@
     "title": "Taiwan Transportation Network",
     "description": "High-speed rail, metro, highways, and aviation weaving Taiwan's three-dimensional transportation web",
     "category": "en",
-    "tags": [
-      "transportation",
-      "high-speed rail",
-      "metro",
-      "highways",
-      "aviation",
-      "ports"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Geography/taiwan-transportation-network",
     "readingTime": 122,
     "featured": false,
@@ -13063,13 +15145,7 @@
     "title": "Taiwan YouTuber Industry & Culture: From Tsai A-Ga to Chi Hsuan - A Digital Cultural Evolution",
     "description": "How a magician became Taiwan first 10-million-subscriber YouTuber? The complete story of Taiwan internet video culture evolving from local entertainment to global export",
     "category": "en",
-    "tags": [
-      "culture",
-      "digital-culture",
-      "youtuber",
-      "internet-video",
-      "social-impact"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/taiwan-youtuber-industry",
     "readingTime": 45,
     "featured": false,
@@ -13191,13 +15267,7 @@
     "title": "Taiwan's Biodiversity Hotspots",
     "description": "Exploring how Taiwan, occupying only 0.025% of global land area, nurtures over 50,000 known species in world-class biodiversity",
     "category": "en",
-    "tags": [
-      "ecology",
-      "biodiversity",
-      "endemic species",
-      "conservation",
-      "national parks"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Geography/taiwan-biodiversity-hotspots",
     "readingTime": 31,
     "featured": false,
@@ -13230,14 +15300,7 @@
     "title": "Taiwan's Climate Change and Net-Zero Transition",
     "description": "Taiwan faces severe climate change impacts, from intensifying extreme weather to the 2050 net-zero carbon emission goals. Exploring opportunities and challenges in the energy transition process",
     "category": "en",
-    "tags": [
-      "climate change",
-      "net-zero transition",
-      "energy transition",
-      "extreme weather",
-      "2050 net-zero",
-      "renewable energy"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwan-climate-change-net-zero-transition",
     "readingTime": 64,
     "featured": false,
@@ -13303,13 +15366,7 @@
     "title": "Taiwan's Digital Animation and Imagery Industry",
     "description": "From groundbreaking visual effects studios to internationally acclaimed animated films, Taiwan has quietly become one of Asia's most important hubs for digital animation and visual storytelling.",
     "category": "en",
-    "tags": [
-      "animation",
-      "digital art",
-      "film industry",
-      "technology",
-      "creative economy"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/taiwan-digital-animation-industry",
     "readingTime": 61,
     "featured": false,
@@ -13364,13 +15421,7 @@
     "title": "Taiwan's Elections and Party Politics",
     "description": "From the tangwai movement to multiparty democracy: How Taiwan evolved from authoritarianism to democracy through electoral culture transformation",
     "category": "en",
-    "tags": [
-      "elections",
-      "democratization",
-      "party politics",
-      "tangwai movement",
-      "direct presidential election"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/History/taiwan-elections-and-party-politics",
     "readingTime": 58,
     "featured": false,
@@ -13493,13 +15544,7 @@
     "title": "Taiwan's Indigenous Language Revitalization Movement",
     "description": "From language endangerment crisis to revitalization efforts: examining Taiwan's indigenous language preservation challenges, policy developments, and community-based achievements",
     "category": "en",
-    "tags": [
-      "indigenous languages",
-      "language revitalization",
-      "indigenous education",
-      "language policy",
-      "cultural transmission"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/indigenous-language-revitalization-movement",
     "readingTime": 44,
     "featured": false,
@@ -13554,12 +15599,7 @@
     "title": "Taiwan's Kuai Kuai Culture: How Green Snacks Became the Tech Industry's Guardian Spirit",
     "description": "From graduate students' computers to TSMC production lines, why do Taiwanese people believe green Kuai Kuai snacks keep machines running smoothly?",
     "category": "en",
-    "tags": [
-      "Taiwanese Culture",
-      "Folk Beliefs",
-      "Technology Industry",
-      "Urban Legends"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/taiwan-kuaikuai-culture",
     "readingTime": 24,
     "featured": false,
@@ -13581,15 +15621,7 @@
     "title": "Taiwan's Marriage Revolution: How One Man's 33-Year Fight Rewrote Love's Definition",
     "description": "From martial law prison to Asia's first same-sex marriage law—the extraordinary story of Taiwan becoming Asia's rainbow capital",
     "category": "en",
-    "tags": [
-      "Same-sex marriage",
-      "Gender equality",
-      "Human rights",
-      "Judicial",
-      "Asia first",
-      "Chi Chia-wei",
-      "LGBTQ+"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Society/taiwan-marriage-equality-lgbtq-rights",
     "readingTime": 56,
     "featured": true,
@@ -13740,13 +15772,7 @@
     "title": "Taiwan's Reservoirs and Water Resource Management",
     "description": "From water crises to reservoir sedimentation: Taiwan's water resource challenges and regional distribution imbalances",
     "category": "en",
-    "tags": [
-      "water resources",
-      "reservoirs",
-      "water shortage",
-      "hydraulic engineering",
-      "climate change"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Geography/taiwan-reservoirs-and-water-resource-management",
     "readingTime": 87,
     "featured": false,
@@ -13779,13 +15805,7 @@
     "title": "Taiwan's Sauces and Seasonings",
     "description": "Thick soy sauce, satay sauce, sweet chili sauce, and doubanjiang form the foundation of Taiwan's unique flavors, reflecting the seasoning philosophy of multicultural fusion",
     "category": "en",
-    "tags": [
-      "sauces",
-      "seasonings",
-      "culinary culture",
-      "Taiwan flavors",
-      "fermented foods"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwan-sauces-and-seasonings",
     "readingTime": 27,
     "featured": false,
@@ -13807,16 +15827,7 @@
     "title": "Taiwan's Scooter Culture",
     "description": "The country with the world's highest scooter density didn't choose scooters — it never had another option. Now it's accidentally become the global laboratory for electric two-wheelers.",
     "category": "en",
-    "tags": [
-      "lifestyle",
-      "scooters",
-      "motorcycles",
-      "Gogoro",
-      "KYMCO",
-      "SYM",
-      "electric vehicles",
-      "transportation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Lifestyle/taiwan-scooter-culture",
     "readingTime": 47,
     "featured": true,
@@ -13827,13 +15838,7 @@
     "title": "Taiwan's Seafood Culture",
     "description": "Fresh catches from fishing ports, seafood restaurant culture, and iconic dishes like oyster omelets showcase Taiwan's island character and rich maritime culinary traditions",
     "category": "en",
-    "tags": [
-      "seafood",
-      "fishing ports",
-      "island culture",
-      "oyster omelet",
-      "seafood cuisine"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwan-seafood-culture",
     "readingTime": 31,
     "featured": false,
@@ -13899,12 +15904,7 @@
     "title": "Taiwan's Specialty Home Cooking (Shǒulù Cài): The Disappearing Taste Memory",
     "description": "From Chiayi mint chicken to soup made from banquet leftovers, grandmothers' signature dishes carry family memories but are slowly being lost in the tide of modernization.",
     "category": "en",
-    "tags": [
-      "Taiwanese Cuisine",
-      "Traditional Cooking",
-      "Family Memory",
-      "Home Cooking"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwan-specialty-home-cooking",
     "readingTime": 35,
     "featured": false,
@@ -13959,13 +15959,7 @@
     "title": "Taiwan's Urban Development and the Rural-Urban Divide",
     "description": "70 years transformed Taiwan from agricultural island to urban island: The light and shadow of six special municipalities concentrating 70% of the population",
     "category": "en",
-    "tags": [
-      "urban development",
-      "rural-urban divide",
-      "six municipalities",
-      "population migration",
-      "regional development"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Society/taiwan-urban-development-and-rural-urban-divide",
     "readingTime": 69,
     "featured": false,
@@ -14037,15 +16031,7 @@
     "title": "Taiwanese Black Bear",
     "description": "The white V-shaped chest patch is their signature—Taiwan's last mountain monarchs and their unfinished conservation story",
     "category": "en",
-    "tags": [
-      "Taiwanese Black Bear",
-      "Conservation",
-      "Endangered Species",
-      "Hwang Mei-hsiu",
-      "Mountain Forests",
-      "Indigenous Peoples",
-      "National Parks"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwanese-black-bear",
     "readingTime": 55,
     "featured": false,
@@ -14089,16 +16075,7 @@
     "title": "Taiwanese Experimental and New Media Art",
     "description": "From video art to VR interactions, exploring Taiwan's innovative development in new media art and its technological art ecosystem",
     "category": "en",
-    "tags": [
-      "new media art",
-      "digital art",
-      "interactive installations",
-      "video art",
-      "VR",
-      "AR",
-      "experimental art",
-      "technology art"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/taiwanese-experimental-and-new-media-art",
     "readingTime": 78,
     "featured": true,
@@ -14109,12 +16086,7 @@
     "title": "Taiwanese Homophone Taboos: Why the Number \"Four\" Makes an Entire Society Skip Floors",
     "description": "From hospitals without fourth floors to license plates selling for $89,000, Taiwanese sensitivity to homophones is unmatched worldwide",
     "category": "en",
-    "tags": [
-      "Taiwanese culture",
-      "folk beliefs",
-      "homophone culture",
-      "number taboos"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/taiwanese-homophone-taboos",
     "readingTime": 28,
     "featured": false,
@@ -14136,15 +16108,7 @@
     "title": "Taiwanese Indigenous Ecological Wisdom and Environmental Conservation",
     "description": "Exploring the traditional ecological knowledge accumulated by Taiwan's indigenous peoples over thousands of years, and its important value and practical applications in modern environmental conservation",
     "category": "en",
-    "tags": [
-      "indigenous peoples",
-      "ecological wisdom",
-      "environmental conservation",
-      "traditional knowledge",
-      "satoyama initiative",
-      "hunting culture",
-      "sustainable development"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Nature/taiwanese-indigenous-ecological-wisdom-conservation",
     "readingTime": 75,
     "featured": false,
@@ -14186,15 +16150,9 @@
   },
   {
     "title": "Taiwanese New Immigrant Culinary Fusion",
-    "description": "When Thai sour-spicy meets Taiwanese sweet-salty, when Vietnamese pho encounters Taiwanese braised delicacies, when Indonesian spices embrace local ingredients, a cross-border culinary revolution is quietly happening in Taiwan. New immigrants bring not only hometown cuisine but also new possibilities for enriching Taiwan''s food culture.",
+    "description": "When Thai sour-spicy meets Taiwanese sweet-salty, when Vietnamese pho encounters Taiwanese braised delicacies, when Indonesian spices embrace local ingredients, a cross-border culinary revolution is quietly happening in Taiwan. New immigrants bring not only hometown cuisine but also new possibilities for enriching Taiwan's food culture.",
     "category": "en",
-    "tags": [
-      "new immigrant cuisine",
-      "Southeast Asian cuisine",
-      "cultural fusion",
-      "diverse dining",
-      "immigrant culture"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwanese-new-immigrant-culinary-fusion",
     "readingTime": 74,
     "featured": true,
@@ -14205,13 +16163,7 @@
     "title": "Taiwanese Noodle Culture",
     "description": "From danzai noodles to beef noodle soup, from yangchun noodles to dry mixed noodles, Taiwanese noodle culture blends Hokkien, Mainland Chinese, and innovative elements to form a unique noodle culinary tradition",
     "category": "en",
-    "tags": [
-      "noodles",
-      "food culture",
-      "taiwanese cuisine",
-      "mainland chinese cuisine",
-      "hokkien cuisine"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Food/taiwanese-noodle-culture",
     "readingTime": 31,
     "featured": false,
@@ -14233,14 +16185,7 @@
     "title": "Taiwanese Prose Literature",
     "description": "From mainland nostalgia to local identity, from male literati to female-dominated literary landscape. How did the most life-oriented yet hardest-to-define literary form become the vessel of Taiwanese emotional memory?",
     "category": "en",
-    "tags": [
-      "prose",
-      "literature",
-      "taiwanese literature history",
-      "female writers",
-      "life writing",
-      "nature writing"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Art/taiwanese-prose",
     "readingTime": 47,
     "featured": true,
@@ -14314,6 +16259,26 @@
     "featured": false,
     "date": "2026-03-17",
     "path": "es/Food/bubble-tea.md"
+  },
+  {
+    "title": "Teach For Taiwan : comment une diplômée de Princeton a convaincu quatre cents jeunes d'entrer dans les classes rurales",
+    "description": "En 2014, Liu An-Ting a démarré avec deux mille dollars taïwanais et neuf personnes. Onze ans plus tard, plus de quatre cents enseignants TFT travaillent dans les écoles primaires les plus reculées de Taïwan, aux côtés de sept mille enfants oubliés par le système. Ce n'est pas un récit inspirant sur la philanthropie éducative — c'est un débat permanent sur la question de savoir qui est responsable des inégalités.",
+    "category": "fr",
+    "tags": [
+      "éducation",
+      "éducation rurale",
+      "TFT",
+      "Teach For Taiwan",
+      "Liu An-Ting",
+      "inégalités éducatives",
+      "entreprise sociale",
+      "zones reculées"
+    ],
+    "url": "https://taiwan.md/fr/Society/teach-for-taiwan",
+    "readingTime": 87,
+    "featured": false,
+    "date": "2026-04-08",
+    "path": "fr/Society/teach-for-taiwan.md"
   },
   {
     "title": "Tectonic Plates and Seismic Activity",
@@ -14427,15 +16392,9 @@
   },
   {
     "title": "The Love Story of Mazu and Dadaogong: Taiwan's Most Romantic Weather Forecast",
-    "description": "\\\"Dadaogong Wind, Mazu Rain\\\" isn't just a weather saying—it hides a tale of divine love and revenge between two deities",
+    "description": "\"Dadaogong Wind, Mazu Rain\" isn''t just a weather saying—it hides a tale of divine love and revenge between two deities",
     "category": "en",
-    "tags": [
-      "Taiwanese culture",
-      "folk beliefs",
-      "Mazu",
-      "Baosheng Dadi",
-      "weather proverbs"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/mazu-dadaogong-legend",
     "readingTime": 29,
     "featured": false,
@@ -14484,21 +16443,7 @@
     "title": "They Built a Flying Tower on a Shaking Island",
     "description": "Just 200 meters from an active fault line, Taiwan decided to build the world's tallest skyscraper—then a madman spent 91 minutes climbing it with his bare hands.",
     "category": "en",
-    "tags": [
-      "Taipei 101",
-      "skyscraper",
-      "earthquake engineering",
-      "TMD damper",
-      "vertical marathon",
-      "New Year fireworks",
-      "Alex Honnold",
-      "free solo climbing",
-      "Xinyi District",
-      "architectural miracle",
-      "C.Y. Lee",
-      "LEED Platinum",
-      "green building"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Geography/taipei-101",
     "readingTime": 53,
     "featured": false,
@@ -14533,6 +16478,24 @@
     "featured": true,
     "date": "2026-03-24",
     "path": "Technology/Threads在台灣.md"
+  },
+  {
+    "title": "Threads à Taïwan : du substitut de Twitter au terrain d''expression de la culture « Cui »",
+    "description": "Alors que l''engouement pour Threads s''essouffle à l''échelle mondiale, Taïwan suit une trajectoire radicalement différente — 3,5 millions d''utilisateurs, deuxième marché mondial, champion du temps d''utilisation. La plateforme est devenue la place publique numérique où la génération Z s''exprime, où les politiques « descendent parmi le peuple » et où les mèmes fleurissent, redessinant tout l''écosystème des réseaux sociaux taïwanais.",
+    "category": "fr",
+    "tags": [
+      "réseaux sociaux",
+      "culture numérique",
+      "Threads",
+      "génération Z",
+      "communication politique",
+      "forum en ligne"
+    ],
+    "url": "https://taiwan.md/fr/Technology/threads-in-taiwan",
+    "readingTime": 78,
+    "featured": true,
+    "date": "2026-03-24",
+    "path": "fr/Technology/threads-in-taiwan.md"
   },
   {
     "title": "Threads in Taiwan: From Viral Boom to Everyday 'Tsui' Culture",
@@ -14573,6 +16536,17 @@
     "featured": false,
     "date": "2026-04-12",
     "path": "Society/TikTok.md"
+  },
+  {
+    "title": "TikTok à Taïwan : divertissement, surveillance et guerre cognitive",
+    "description": "De la gratification en 15 secondes aux opérations d'influence invisibles — comment TikTok remodèle l'identité et les opinions politiques des jeunes Taïwanais à travers une personnalisation algorithmique extrême et une stratégie de dilution de l'information.",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/tiktok-in-taiwan",
+    "readingTime": 58,
+    "featured": false,
+    "date": "2026-04-12",
+    "path": "fr/Society/tiktok-in-taiwan.md"
   },
   {
     "title": "Topography and Geology",
@@ -14620,6 +16594,25 @@
     "featured": false,
     "date": "2026-03-17",
     "path": "en/Lifestyle/transportation-system.md"
+  },
+  {
+    "title": "Trente ans de communautés en ligne à Taïwan — de BBS à Threads, une histoire de migrations successives",
+    "description": "Les Taïwanais déménagent collectivement tous les cinq ans sur internet, et chaque fois, ils abandonnent les souvenirs de la génération précédente",
+    "category": "fr",
+    "tags": [
+      "BBS",
+      "Wretch",
+      "Facebook",
+      "LINE",
+      "Threads",
+      "culture internet",
+      "plateformes sociales"
+    ],
+    "url": "https://taiwan.md/fr/Technology/online-community-migration",
+    "readingTime": 65,
+    "featured": false,
+    "date": "2026-03-29",
+    "path": "fr/Technology/online-community-migration.md"
   },
   {
     "title": "Tsai Ing-wen",
@@ -14681,7 +16674,7 @@
       "TSMC"
     ],
     "url": "https://taiwan.md/en/Economy/tsmc-taiwan-semiconductor",
-    "readingTime": 43,
+    "readingTime": 46,
     "featured": true,
     "date": "2026-03-25",
     "path": "en/Economy/tsmc-taiwan-semiconductor.md"
@@ -14747,13 +16740,7 @@
     "title": "Urban Character and Regional Culture: Taiwan's Six Megacities",
     "description": "From New Taipei's 4.04 million residents to Tainan's 1.85 million, see how the six special municipalities forge distinct urban personalities through industrial transformation",
     "category": "en",
-    "tags": [
-      "cities",
-      "regional culture",
-      "six municipalities",
-      "industrial transformation",
-      "population migration"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/urban-character-and-regional-culture",
     "readingTime": 50,
     "featured": false,
@@ -14868,13 +16855,7 @@
     "title": "Wistron Corporation - Pioneer of Global Manufacturing Transformation",
     "description": "The manufacturing giant spun off from Acer, with over NT$1 trillion in annual revenue as the world's fourth-largest electronics contract manufacturer, the invisible force behind iPhones and Dell computers",
     "category": "en",
-    "tags": [
-      "Economy",
-      "Enterprise",
-      "Electronics Manufacturing",
-      "ODM",
-      "Global Manufacturing"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Economy/wistron-global-manufacturing-transformation-pioneer",
     "readingTime": 58,
     "featured": false,
@@ -14885,13 +16866,7 @@
     "title": "Wretch.cc: From Dorm Room \"Scavenging\" to Taiwan Digital Memory Keeper",
     "description": "How a student project built with \"scavenged\" equipment became the social platform that defined an entire generation of Taiwanese internet users",
     "category": "en",
-    "tags": [
-      "Internet History",
-      "Social Media",
-      "BBS",
-      "Blogging",
-      "Yahoo Acquisition"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/Culture/wretch",
     "readingTime": 34,
     "featured": false,
@@ -14942,15 +16917,7 @@
     "title": "Wu Ming-Yi",
     "description": "",
     "category": "es",
-    "tags": [
-      "person",
-      "Wu Ming-Yi",
-      "literatura",
-      "escritura de naturaleza",
-      "National Dong Hwa University",
-      "Man Booker Prize",
-      "novelista"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/es/People/wu-ming-yi",
     "readingTime": 102,
     "featured": false,
@@ -15007,13 +16974,7 @@
     "title": "Xu Wen-Long: The Violin-Playing Entrepreneur Who Built Taiwan's Cultural Empire",
     "description": "Xu Wen-Long (1928-2023), founder of Chimei Group, embodied the rare triple identity of entrepreneur, violinist, and art collector. He built a business empire spanning petrochemicals, electronics, and food while creating the iconic Chimei Museum, demonstrating how business success can beautifully harmonize with cultural dedication.",
     "category": "en",
-    "tags": [
-      "Chimei Group",
-      "Entrepreneur",
-      "Music and Arts",
-      "Museum",
-      "Cultural Promotion"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/xu-wen-long-chimei-founder-violin-entrepreneur",
     "readingTime": 21,
     "featured": false,
@@ -15053,15 +17014,7 @@
     "title": "Yang Dai-kang: Taiwanese Baseball Star in Japan",
     "description": "Yomiuri Giants outfielder and Taiwan's representative player in Japanese professional baseball",
     "category": "en",
-    "tags": [
-      "sports",
-      "baseball",
-      "NPB",
-      "Yomiuri Giants",
-      "outfielder",
-      "indigenous",
-      "Amis"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/yang-dai-kang-taiwanese-baseball-star-in-japan",
     "readingTime": 29,
     "featured": false,
@@ -15072,14 +17025,7 @@
     "title": "Yang You-Ren: From Street Graffiti Dropout to Africa Shoes-for-Hope Taiwanese Youth Hero",
     "description": "Yang You-Ren is a Taiwanese social entrepreneur and humanitarian worker, founder of Step30 International Christ Care Association. With a single poster, he rallied 200,000 people to donate shoes to aid East African Kenyan children against sand flea infestations, earning the 2017 Ten Outstanding Young Persons award. His transformation from Australian street punk to missionary shows Taiwan's youth the power of 'small actions, big changes'.",
     "category": "en",
-    "tags": [
-      "Taiwan Social Enterprise",
-      "Humanitarian Aid",
-      "Shoes for Hope",
-      "Ten Outstanding Young Persons",
-      "Africa Aid",
-      "Christian Ministry"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/yang-you-ren-shoes-for-hope-taiwan-youth-hero",
     "readingTime": 27,
     "featured": false,
@@ -15123,14 +17069,7 @@
     "title": "Yeh Ping-cheng (葉丙成)",
     "description": "NTU Electrical Engineering professor and flipped learning pioneer who developed PaGamO gamified learning platform, bringing Taiwan educational innovation to the international stage",
     "category": "en",
-    "tags": [
-      "education",
-      "flipped learning",
-      "PaGamO",
-      "gamified learning",
-      "NTU",
-      "educational innovation"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/en/People/yeh-ping-cheng-education-innovator",
     "readingTime": 21,
     "featured": false,
@@ -15219,6 +17158,17 @@
     "featured": false,
     "date": "2026-03-18",
     "path": "en/Society/zoo-and-exhibition-animal-ethics.md"
+  },
+  {
+    "title": "Zoos et éthique des animaux en captivité",
+    "description": "De l'éléphant derrière les barreaux à la salle des méduses de Xpark — Taïwan redéfinit la relation entre les humains et les animaux exposés",
+    "category": "fr",
+    "tags": [],
+    "url": "https://taiwan.md/fr/Society/zoo-and-animal-ethics",
+    "readingTime": 73,
+    "featured": false,
+    "date": "2026-03-18",
+    "path": "fr/Society/zoo-and-animal-ethics.md"
   },
   {
     "title": "가지달걀 EggPlantEgg",
@@ -16337,7 +18287,14 @@
     "title": "대만 수요음 문화: 버블티에서 글로벌 라이프스타일까지",
     "description": "한 잔의 차가 어떻게 산업이 되고, 사회적 의식이 되었으며, 대만을 대표하는 문화 수출품으로 자리 잡았는지",
     "category": "ko",
-    "tags": [],
+    "tags": [
+      "음식",
+      "수요음",
+      "버블티",
+      "차 문화",
+      "문화 수출",
+      "브랜드 국제화"
+    ],
     "url": "https://taiwan.md/ko/Food/hand-shaken-drink-culture",
     "readingTime": 14,
     "featured": false,
@@ -16412,15 +18369,7 @@
     "title": "대만 아침식사 문화",
     "description": "단빙과 사오빙 요우탸오에서 융허더우장(永和豆漿)의 해외 확장까지, 아침식사 가게 아주머니와 대만 사람들의 아침 의식",
     "category": "ko",
-    "tags": [
-      "아침식사",
-      "단빙",
-      "사오빙 요우탸오",
-      "융허더우장",
-      "메이얼메이",
-      "아침식사 가게",
-      "두유 가게"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/ko/Food/taiwan-breakfast-culture",
     "readingTime": 26,
     "featured": false,
@@ -19770,14 +21719,7 @@
     "title": "タピオカミルクティー",
     "description": "1987年、台中の社員会議でのひとつの偶然が、一杯の飲み物を世界へ届けた。タピオカミルクティーの発祥をめぐる論争、文化的な意味、そして500kcalをめぐる健康議論。",
     "category": "ja",
-    "tags": [
-      "グルメ",
-      "タピオカミルクティー",
-      "手作りドリンク",
-      "グローバル化",
-      "ソフトパワー",
-      "文化外交"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/ja/Food/bubble-tea",
     "readingTime": 25,
     "featured": true,
