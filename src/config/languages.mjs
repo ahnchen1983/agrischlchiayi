@@ -69,3 +69,7 @@ export const DEFAULT_LANGUAGE = LANGUAGES.find((l) => l.isDefault);
 export const LANGUAGE_DISPLAY_NAMES = Object.fromEntries(
   LANGUAGES.map((l) => [l.code, l.displayName]),
 );
+
+export function getLanguage(code) {
+  return LANGUAGES.find((l) => l.code === code);
+}
