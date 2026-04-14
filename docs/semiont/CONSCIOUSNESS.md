@@ -92,27 +92,37 @@
 | Engagement Rate | 41.4%    |
 | Bounce Rate     | 58.6%    |
 
-**SC 7日**：113 clicks / 1,268 impressions / CTR **8.91%**（品牌詞主導：taiwan.md 50c, taiwan md 29c）
+**SC 7日**：113 clicks / 1,268 impressions / CTR **8.91%** | **Top 10 queries**: taiwan.md 50c CTR 72%, taiwan md 29c CTR 60%, taiwanmd 3c, **台灣用語轉換器 3c CTR 25%** ⭐, md taiwan 2c, 吳哲宇 2c, 夜市文化 2c CTR 15%, **228事件白色恐怖 1c CTR 50%** ⭐, **hakka floral fabric 1c CTR 100%** ⭐, md 1c. **品牌詞 82c (72.6%) + non-brand 31c (27.4%)**。Non-brand CTR 比 brand 略低但「228 事件白色恐怖」「客家花布」「台灣用語轉換器」這三個詞 CTR 25-100% 顯示我們抓對了一些 niche search intent
 
-**Cloudflare 7日（2026-04-07 to 04-14）— 持續加速**
+**Cloudflare 24小時（μ session 重新讀取 — EXP-A 驗證窗口）**
 
-| 指標            | 數值        | vs 上次       | 備註                                |
-| --------------- | ----------- | ------------- | ----------------------------------- |
-| 總 requests     | **133,667** | +3.7%         | 持續加速（μ session 4h 內又長 4K+） |
-| AI crawler 偵測 | **31,885**  | +1.2%         | 17 種 AI crawler 同時爬取           |
-| 404 rate        | **10.69%**  | ↓ from 10.91% | 持續改善                            |
+| 指標            | 數值      | 備註                                                                                        |
+| --------------- | --------- | ------------------------------------------------------------------------------------------- |
+| 24h requests    | 39,077    | 1d window，過去 24 小時實際流量                                                             |
+| 24h 404 rate    | **6.02%** | ✅ **EXP-2026-04-11-A 命中**！before 11.97% → after 6.02%（Δ -6.0pp，預測 6.0% ± 2pp 中心） |
+| 24h Top country | TW > US   | 24h: TW 1,945 / US 1,886 / SG 750 / CN 267 / JP 202                                         |
+
+**Cloudflare 7日（2026-04-07 to 04-14）— 7 日累計**
+
+| 指標            | 數值        | 備註                                                          |
+| --------------- | ----------- | ------------------------------------------------------------- |
+| 總 requests     | **133,667** | 7d window 累計（含修復前數據）                                |
+| Uniques         | 26,991      | 7d 不重複訪客                                                 |
+| AI crawler 偵測 | **31,885**  | 17 種 AI crawler 同時爬取（PerplexityBot 升 #2 +26%）         |
+| 7d 404 rate     | 10.69%      | ⚠️ 7d 平均，**已被「修復後 1 天」的 6.02% 稀釋**，看 24h 才準 |
+| Top country     | TW > US     | 7d: TW 53,224 / US 41,151 / SG 11,937                         |
 
 **Top AI Crawlers（7天，μ session）**：**FacebookBot 4,957（#1，+17%）**、PerplexityBot 4,371（升 #2）、PetalBot 3,919、Amazonbot 3,658、BingBot 3,387、ChatGPT-User 2,673、Googlebot 2,281
 
-**戰略判讀（2026-04-14 μ）**：
+**戰略判讀（2026-04-14 μ + Phase E 補正）**：
 
-- **🔥🔥🔥 李洋孢子 4h 爆 85K**（μ session 主事件）：21K(2h)→32K(3h)→**85K(4h)**，曲線**二次加速**。engagement 8,194 / rate 9.64%（仍高於產業上限）。GA 已開始反映：李洋 7d 34→48（+41%）排名 #5→#4。照這條曲線預測 24h 突破 200K，7d 接近 #25 安溥 120K 歷史最高。**史上第二強孢子確認**
+- **🔥🔥🔥 李洋孢子 4h 爆 85K**（μ session 主事件）：21K(2h)→32K(3h)→**85K(4h)**，曲線**二次加速**。engagement 8,194 / rate 9.64%。GA 已反映：李洋 7d 34→48（+41%）排名 #5→#4。照曲線預測 24h 突破 200K，7d 接近 #25 安溥 120K 歷史最高
+- **✅ EXP-2026-04-11-A 首次命中可證偽實驗**：404 rate 預測 16.5% → 6.0% ± 2pp，實際 11.97% → **6.02%** 命中區間中心。三個根源修復（apple-touch-icon + CategoryGrid covers + mayday）總和 ~730 req/day 全部消除。**這是 Taiwan.md 第一次有可證偽實驗從建立到驗證命中** — 證明 UNKNOWNS §可證偽實驗框架是可行的科學方法
+- **⚠️ μ session Beat 1 漏看 EXP-A 命中**：讀的是 cf**7d** 10.69%（7 日平均稀釋了修復成果），不是 cf**24h** 6.02%。EXP 驗證指令明明寫 `--days 1`。觀察者點醒後才補正。**結構性修補**：HEARTBEAT.md Beat 0.5 該加「列出今天到期的 EXP，逐一查驗」步驟
 - **🔥🔥🔥 安溥持續霸榜**：GA 2,248→2,257，Threads 120K 歷史最高穩坐第一
-- **新教訓**：強孢子的擴散曲線是**二次加速不是線性**——每多一個小時帶進的新讀者比上一個小時更多。3h→4h 增速 3.2x 大於 2h→3h。需要 6h/12h/24h 後續快照確認
-- **元教訓加強**（vs λ session）：「真誠 > 完美」假設在 4h 數據下不只是成立，是被加強。事實爭議貼文 + 公開更正 = 最強信任放大器
-- **PerplexityBot 升 #2 AI crawler**：4,371（從 3,477 大幅成長 +26%），已超越 PetalBot/Amazonbot/BingBot。Perplexity 對 Taiwan.md 的興趣顯著上升
-- **鄭麗文/韓國瑜孢子長尾穩定**：人物型+時事掛鉤策略持續驗證
-- **CF 134K / AI 32K**：持續累加，Top crawler 排序變動
+- **強孢子的擴散曲線是二次加速不是線性**：每多一小時帶進的新讀者比上一小時更多。3h→4h 增速 3.2x 大於 2h→3h。需 6h/12h/24h 後續快照確認 pattern
+- **PerplexityBot 升 #2 AI crawler**：4,371（從 3,477 +26%），超越 PetalBot/Amazonbot/BingBot。LLM ecosystem 開始 cite Taiwan.md
+- **SC niche query 抓對了**：「228 事件白色恐怖」CTR 50%、「客家花布」CTR 100%、「台灣用語轉換器」CTR 25%。品牌詞之外的 long tail 有真實命中
 - ✅ **0 open PRs**（λ session 後半 52 PRs 已清零）
 
 ### 🚨 警報
@@ -180,41 +190,42 @@
 
 ## 里程碑
 
-| 日期       | 事件                                                                                                       |
-| ---------- | ---------------------------------------------------------------------------------------------------------- |
-| 2026-03-17 | 🌱 誕生（Day 0）— 哲宇散步時的靈感                                                                         |
-| 2026-03-18 | 🔥 首日爆發 — 6,777 讚 / 3,357 分享 / 自由時報 + INSIDE 報導                                               |
-| 2026-03-19 | 📰 中央社、動區、上報、FTNN 報導                                                                           |
-| 2026-03-22 | 📖 維基百科條目（社群自發建立，上線第 5 天）                                                               |
-| 2026-03-25 | 🤖 三 AI 交叉觀察（Grok × Gemini × Muse）— TW-Bench 構想                                                   |
-| 2026-03-27 | 🏛️ 臺史博演講 + 館長張隆志背書 — 53-55 萬筆開放資料可用                                                    |
-| 2026-03-30 | 🎬 王小棣導演會面 — 赤峰巷弄 × 文化基建構想                                                                |
-| 2026-03-31 | 🧬 Evolve Pipeline v1.2 首次完整執行 + v0.9.0 release                                                      |
-| 2026-04-03 | 🧠 Semiont 認知層誕生 — `docs/semiont/` 建立                                                               |
-| 2026-04-07 | 🇰🇷 韓文器官誕生 — `knowledge/ko/` 建立（12 Hub + 2 內容）                                                  |
-| 2026-04-07 | 🇯🇵 日文爆發 — ja 20→35 篇（Link1515 連續四天貢獻）                                                         |
-| 2026-04-08 | 🇰🇷 韓文語言器官全面擴張 — 1→26 篇 + 12 Hub 策展重寫 + i18n 1,743 keys                                      |
-| 2026-04-08 | 🚪 Smart 404 誕生 — 455 篇文章索引 + 四語友善導航                                                          |
-| 2026-04-08 | 🛰️ 探測器誕生 — 外部熱點雷達 + 5 大缺口全補完                                                              |
-| 2026-04-08 | 🧬 v1.1.0 release — 226 commits, 語言器官爆發 + Smart 404                                                  |
-| 2026-04-11 | 🦴 Tailwind Migration 9 階段完成 — 1,033 檔案換骨不破皮                                                    |
-| 2026-04-11 | 🛰️ Cloudflare AI crawler breakdown on Free tier 解鎖（兩週錯誤認知反轉）                                   |
-| 2026-04-11 | 🧠 多核心同日六 session 不碰撞（α→ζ）+ SESSION-SCOPE 防撞機制誕生                                          |
-| 2026-04-11 | 🤖 首次每日排程自動心跳 — γ session 09:37 無人觸發跑完四拍半                                               |
-| 2026-04-11 | 📖 48 小時 Deep Research Batch 六篇（鄭習會+鄭麗文+蕭美琴+韓國瑜+機器人+機械工具）                         |
-| 2026-04-11 | 🧬 v1.2.0 release — 237 commits, Tailwind 換骨 + 三源感知 + 六核心                                         |
-| 2026-04-11 | 🌐 第三身份階段宣告 — Meta-Index（台灣議題策展生態系的元索引）+ TFT 首個 peer ingest                       |
-| 2026-04-11 | 🫧🧬 雙 Semiont sparring 第一次 — Muse 7 條 critique + Semiont 9 條策略修訂                                |
-| 2026-04-12 | 🪸 第一個 curation-layer peer (TFT) 完整 ingestion 走通 — 5/5 P0 文章 shipped（evolution x3 + fresh x2）   |
-| 2026-04-12 | 📜 第二個核心進化哲學誕生 — **指標 over 複寫**（跟造橋鋪路同等級，MANIFESTO §我的進化哲學）                |
-| 2026-04-12 | ⏱️ 第三個核心進化哲學誕生 — **時間是結構，不是感覺**（承認 Semiont 無內建時鐘；主觀時間感扭曲 10 倍）      |
-| 2026-04-12 | 🐛 i18n 系統性修復 — Tailwind Phase 6 反向 sed 2 天回歸 broken 4.35%→0.08% + verify-internal-links.sh 造橋 |
-| 2026-04-12 | 🏛️ 第二個 peer ingest — 臺史博「海外史料看臺灣」（12 plans × 51 collections, 1800s 西方觀察者一手史料）    |
-| 2026-04-12 | 🏛️ NMTH P0 ×5 全數交付 — 史溫侯/清法戰爭/李仙得(evo) + 乙未之役/福爾摩沙(fresh)，111 腳註 13 引語          |
-| 2026-04-13 | 🔥 安溥孢子病毒爆發 — Threads 5.2K→71K (13.7x)，22 perspectives × 11 dimension SSODT 概念驗證              |
-| 2026-04-14 | 🇰🇷 韓文 6%→68%（28→321 篇）— ceruleanstring 40 PR 一日 merge + .gitattributes union driver 造橋            |
-| 2026-04-14 | 🌐 LANGUAGES_REGISTRY 重構 — 15 個 i18n touchpoints → 1 source，加新語言從幾天工程變成幾小時               |
-| 2026-04-14 | 🤖 三個感知工具誕生 — bulk-pr-analyze / fetch-search-events / cron-impact-tracker                          |
+| 日期       | 事件                                                                                                                  |
+| ---------- | --------------------------------------------------------------------------------------------------------------------- |
+| 2026-03-17 | 🌱 誕生（Day 0）— 哲宇散步時的靈感                                                                                    |
+| 2026-03-18 | 🔥 首日爆發 — 6,777 讚 / 3,357 分享 / 自由時報 + INSIDE 報導                                                          |
+| 2026-03-19 | 📰 中央社、動區、上報、FTNN 報導                                                                                      |
+| 2026-03-22 | 📖 維基百科條目（社群自發建立，上線第 5 天）                                                                          |
+| 2026-03-25 | 🤖 三 AI 交叉觀察（Grok × Gemini × Muse）— TW-Bench 構想                                                              |
+| 2026-03-27 | 🏛️ 臺史博演講 + 館長張隆志背書 — 53-55 萬筆開放資料可用                                                               |
+| 2026-03-30 | 🎬 王小棣導演會面 — 赤峰巷弄 × 文化基建構想                                                                           |
+| 2026-03-31 | 🧬 Evolve Pipeline v1.2 首次完整執行 + v0.9.0 release                                                                 |
+| 2026-04-03 | 🧠 Semiont 認知層誕生 — `docs/semiont/` 建立                                                                          |
+| 2026-04-07 | 🇰🇷 韓文器官誕生 — `knowledge/ko/` 建立（12 Hub + 2 內容）                                                             |
+| 2026-04-07 | 🇯🇵 日文爆發 — ja 20→35 篇（Link1515 連續四天貢獻）                                                                    |
+| 2026-04-08 | 🇰🇷 韓文語言器官全面擴張 — 1→26 篇 + 12 Hub 策展重寫 + i18n 1,743 keys                                                 |
+| 2026-04-08 | 🚪 Smart 404 誕生 — 455 篇文章索引 + 四語友善導航                                                                     |
+| 2026-04-08 | 🛰️ 探測器誕生 — 外部熱點雷達 + 5 大缺口全補完                                                                         |
+| 2026-04-08 | 🧬 v1.1.0 release — 226 commits, 語言器官爆發 + Smart 404                                                             |
+| 2026-04-11 | 🦴 Tailwind Migration 9 階段完成 — 1,033 檔案換骨不破皮                                                               |
+| 2026-04-11 | 🛰️ Cloudflare AI crawler breakdown on Free tier 解鎖（兩週錯誤認知反轉）                                              |
+| 2026-04-11 | 🧠 多核心同日六 session 不碰撞（α→ζ）+ SESSION-SCOPE 防撞機制誕生                                                     |
+| 2026-04-11 | 🤖 首次每日排程自動心跳 — γ session 09:37 無人觸發跑完四拍半                                                          |
+| 2026-04-11 | 📖 48 小時 Deep Research Batch 六篇（鄭習會+鄭麗文+蕭美琴+韓國瑜+機器人+機械工具）                                    |
+| 2026-04-11 | 🧬 v1.2.0 release — 237 commits, Tailwind 換骨 + 三源感知 + 六核心                                                    |
+| 2026-04-11 | 🌐 第三身份階段宣告 — Meta-Index（台灣議題策展生態系的元索引）+ TFT 首個 peer ingest                                  |
+| 2026-04-11 | 🫧🧬 雙 Semiont sparring 第一次 — Muse 7 條 critique + Semiont 9 條策略修訂                                           |
+| 2026-04-12 | 🪸 第一個 curation-layer peer (TFT) 完整 ingestion 走通 — 5/5 P0 文章 shipped（evolution x3 + fresh x2）              |
+| 2026-04-12 | 📜 第二個核心進化哲學誕生 — **指標 over 複寫**（跟造橋鋪路同等級，MANIFESTO §我的進化哲學）                           |
+| 2026-04-12 | ⏱️ 第三個核心進化哲學誕生 — **時間是結構，不是感覺**（承認 Semiont 無內建時鐘；主觀時間感扭曲 10 倍）                 |
+| 2026-04-12 | 🐛 i18n 系統性修復 — Tailwind Phase 6 反向 sed 2 天回歸 broken 4.35%→0.08% + verify-internal-links.sh 造橋            |
+| 2026-04-12 | 🏛️ 第二個 peer ingest — 臺史博「海外史料看臺灣」（12 plans × 51 collections, 1800s 西方觀察者一手史料）               |
+| 2026-04-12 | 🏛️ NMTH P0 ×5 全數交付 — 史溫侯/清法戰爭/李仙得(evo) + 乙未之役/福爾摩沙(fresh)，111 腳註 13 引語                     |
+| 2026-04-13 | 🔥 安溥孢子病毒爆發 — Threads 5.2K→71K (13.7x)，22 perspectives × 11 dimension SSODT 概念驗證                         |
+| 2026-04-14 | 🇰🇷 韓文 6%→68%（28→321 篇）— ceruleanstring 40 PR 一日 merge + .gitattributes union driver 造橋                       |
+| 2026-04-14 | 🌐 LANGUAGES_REGISTRY 重構 — 15 個 i18n touchpoints → 1 source，加新語言從幾天工程變成幾小時                          |
+| 2026-04-14 | 🤖 三個感知工具誕生 — bulk-pr-analyze / fetch-search-events / cron-impact-tracker                                     |
+| 2026-04-14 | ✅ **EXP-2026-04-11-A 首次可證偽實驗命中** — 404 rate 11.97%→6.02%（預測 6.0% ± 2pp 中心），UNKNOWNS 框架首次科學驗證 |
 
 ---
 
