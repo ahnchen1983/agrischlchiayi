@@ -351,7 +351,7 @@
     "zhTitle": "城市特色與區域文化",
     "enTitle": "Urban Character and Regional Culture: Taiwan's Six Megacities",
     "category": "culture",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "culture/wretch": {
     "zhTitle": "無名小站",
@@ -801,91 +801,91 @@
     "zhTitle": "台灣島嶼地理特色與形成",
     "enTitle": "Taiwan's Geography and Geology",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/national-scenic-area-system": {
     "zhTitle": "台灣國家風景區系統",
     "enTitle": "National Scenic Area System",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/offshore-islands-and-maritime-culture": {
     "zhTitle": "離島與海洋文化",
     "enTitle": "Islands and Maritime Culture: From World's Densest Fish Weirs to Flying Fish Season Laws",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/tadian-mountain": {
     "zhTitle": "漯底山",
     "enTitle": "Tadian Mountain",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taipei-101": {
     "zhTitle": "台北101",
     "enTitle": "They Built a Flying Tower on a Shaking Island",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-agricultural-landscapes-and-industry-belts": {
     "zhTitle": "台灣農業地景與產業分布",
     "enTitle": "Taiwan’s Agricultural Landscapes and Industry Belts",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-biodiversity-hotspots": {
     "zhTitle": "台灣生態多樣性熱點",
     "enTitle": "Taiwan's Biodiversity Hotspots",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-coastal-landforms-and-seascapes": {
     "zhTitle": "台灣海岸地形與海洋地景",
     "enTitle": "Taiwan's Coastal Landscapes and Marine Geology",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-five-major-landforms-and-geographic-structure": {
     "zhTitle": "台灣五大地形與地理結構",
     "enTitle": "Taiwan’s Five Major Landforms: From Mountain Spines to Fertile Plains",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-hot-springs-landscape": {
     "zhTitle": "台灣溫泉地景",
     "enTitle": "Taiwan Hot Springs Landscape",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-reservoirs-and-water-resource-management": {
     "zhTitle": "台灣水庫與水資源管理",
     "enTitle": "Taiwan's Reservoirs and Water Resource Management",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-river-systems-and-hydrology": {
     "zhTitle": "台灣河川系統與水文特色",
     "enTitle": "Taiwan’s River Systems and Hydrology: Short, Fast, and Seasonally Extreme",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/taiwan-transportation-network": {
     "zhTitle": "台灣交通運輸網絡",
     "enTitle": "Taiwan Transportation Network",
     "category": "geography",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "geography/tectonic-plates-and-seismic-activity": {
     "zhTitle": "台灣板塊運動與地震活動",
     "enTitle": "Tectonic Plates and Seismic Activity",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "geography/terrain-and-geology": {
     "zhTitle": "地形與地質",
     "enTitle": "Topography and Geology",
     "category": "geography",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "history/228-incident": {
     "zhTitle": "二二八事件",
@@ -1323,43 +1323,43 @@
     "zhTitle": "張惠妹",
     "enTitle": "A‑Mei (張惠妹)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/andre-chiang-taiwanese-culinary-innovator": {
     "zhTitle": "江振誠",
     "enTitle": "André Chiang: Taiwanese Culinary Innovator",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ang-lee": {
     "zhTitle": "李安",
     "enTitle": "Ang Lee — Cinematic Bridge Between East and West",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/annette-lu": {
     "zhTitle": "呂秀蓮",
     "enTitle": "Annette Lu Hsiu-lien",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/audrey-tang": {
     "zhTitle": "唐鳳",
     "enTitle": "Audrey Tang",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/bobby-chen-indie-music-pioneer": {
     "zhTitle": "陳昇",
     "enTitle": "Bobby Chen (陳昇)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/brigitte-lin-legendary-actress": {
     "zhTitle": "林青霞",
     "enTitle": "Brigitte Lin: From Romance Icon to Martial Arts Legend",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/cc-wei": {
     "zhTitle": "魏哲家",
@@ -1371,73 +1371,73 @@
     "zhTitle": "吳哲宇",
     "enTitle": "Che-Yu Wu (吳哲宇) — A Media Artist Who Grows Life in Code",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-chien-jen": {
     "zhTitle": "陳建仁",
     "enTitle": "Chen Chien-jen",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-chun-liang-design-poet": {
     "zhTitle": "陳俊良",
     "enTitle": "Chen Chun-liang: The Design Poet of Taiwan",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-shu-chu-vegetable-vendor-philanthropist": {
     "zhTitle": "陳樹菊",
     "enTitle": "Chen Shu-chu",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-shui-bian-controversial-president": {
     "zhTitle": "陳水扁",
     "enTitle": "Chen Shui-bian: The Controversial Pioneer of Democratic Transition",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-wei-yin-mlb-pitcher": {
     "zhTitle": "陳偉殷",
     "enTitle": "Wei-Yin Chen",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-yingzhen": {
     "zhTitle": "陳映真",
     "enTitle": "Chen Yingzhen",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chen-yu-hsun-taiwan-comedy-film-magician": {
     "zhTitle": "陳玉勳",
     "enTitle": "Chen Yu-Hsun: Taiwan's Warm Comedy Film Magician",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/cheng-chao-tsun-javelin-asian-king": {
     "zhTitle": "鄭兆村",
     "enTitle": "Cheng Chao-tsun: The Javelin King of Asia",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/cheng-li-wun": {
     "zhTitle": "鄭麗文",
     "enTitle": "Cheng Li-wun: From Hunger Strike for Taiwan Independence to Meeting Xi Jinping",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chi-cheng-flying-antelope": {
     "zhTitle": "紀政",
     "enTitle": "Chi Cheng: The Flying Antelope",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chi-huey-wong-glycoscience-pioneer": {
     "zhTitle": "翁啟惠",
     "enTitle": "Chi-Huey Wong: Pioneer of Glycoscience",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chi-po-lin": {
     "zhTitle": "齊柏林",
@@ -1449,103 +1449,103 @@
     "zhTitle": "王建民",
     "enTitle": "Chien-Ming Wang: Taiwan's Sinker Ball Ace Who Conquered MLB",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chiung-wi-vun": {
     "zhTitle": "蔣為文",
     "enTitle": "Chiung Wi-vun: The Buffalo Warrior of Taiwanese Language Movement",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/cho-yun-hsu-bridging-historian": {
     "zhTitle": "許倬雲",
     "enTitle": "Cho-yun Hsu: Bridging East and West as a Master Historian",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chu-ching-wu": {
     "zhTitle": "朱經武",
     "enTitle": "Chu Ching-Wu (朱經武)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chu-tien-wen": {
     "zhTitle": "朱天文",
     "enTitle": "Chu Tien-wen",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/chuang-chih-yuan-table-tennis-legend": {
     "zhTitle": "莊智淵",
     "enTitle": "Chuang Chih-yuan",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/crowd-lu-indie-folk-treasure": {
     "zhTitle": "盧廣仲",
     "enTitle": "Crowd Lu (盧廣仲)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/deng-yu-xian-taiwanese-song-composer": {
     "zhTitle": "鄧雨賢",
     "enTitle": "Deng Yu-xian",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/du-congming-founder-of-modern-medicine-in-taiwan": {
     "zhTitle": "杜聰明",
     "enTitle": "Du Congming: Founder of Modern Medicine in Taiwan",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ethan-tu": {
     "zhTitle": "杜奕瑾",
     "enTitle": "Ethan Tu (杜奕瑾)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/fang-hsu-chung": {
     "zhTitle": "方序中",
     "enTitle": "Fang Hsu-Chung (方序中)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/fang-yi-sheu-body-storyteller": {
     "zhTitle": "許芳宜",
     "enTitle": "Fang-Yi Sheu (許芳宜)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/gwei-lun-mei-versatile-taiwanese-actress": {
     "zhTitle": "桂綸鎂",
     "enTitle": "Gwei Lun-Mei",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/he-feipeng": {
     "zhTitle": "何飛鵬",
     "enTitle": "He Feipeng (何飛鵬)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/hong-chih-kuo-taiwanese-left-handed-pitcher": {
     "zhTitle": "郭泓志",
     "enTitle": "Hong-Chih Kuo: Taiwan's Left-Handed Ace",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/hou-hsiao-hsien": {
     "zhTitle": "侯孝賢",
     "enTitle": "Hou Hsiao-hsien",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/hsu-shu-ching-olympic-weightlifting-champion": {
     "zhTitle": "許淑淨",
     "enTitle": "Hsu Shu-ching: Taiwan's Weightlifting Goddess",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/huang-chun-ming-taiwanese-literary-master": {
     "zhTitle": "黃春明",
@@ -1569,13 +1569,13 @@
     "zhTitle": "簡立峰",
     "enTitle": "Jamie Lin (Chien-Li Feng)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/jay-chou": {
     "zhTitle": "周杰倫",
     "enTitle": "Jay Chou",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/jensen-huang": {
     "zhTitle": "黃仁勳",
@@ -1593,19 +1593,19 @@
     "zhTitle": "幾米",
     "enTitle": "Jimmy Liao",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/jj-lin-singaporean-mandopop-king": {
     "zhTitle": "林俊傑",
     "enTitle": "JJ Lin (Lin Jun Jie)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/jolin-tsai": {
     "zhTitle": "蔡依林",
     "enTitle": "Jolin Tsai (蔡依林): Taiwanese Pop Queen — Career, Age, and Rise to Stardom",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/kao-chun-ming": {
     "zhTitle": "高俊明",
@@ -1617,79 +1617,79 @@
     "zhTitle": "林義傑",
     "enTitle": "Kevin Lin (Lin Yi-jie)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ko-wen-je": {
     "zhTitle": "柯文哲",
     "enTitle": "Ko Wen-je",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/kuo-hsing-chun-olympic-weightlifting-champion": {
     "zhTitle": "郭婞淳",
     "enTitle": "Kuo Hsing-chun",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lai-ching-te": {
     "zhTitle": "賴清德",
     "enTitle": "Lai Ching-te (賴清德): Taiwan’s President Since 2024 — From Mining Town Doctor to Head of State",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lee-teng-hui": {
     "zhTitle": "李登輝",
     "enTitle": "Lee Teng-hui",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lee-yuan-tseh": {
     "zhTitle": "李遠哲",
     "enTitle": "Lee Yuan-tseh",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/li-ang": {
     "zhTitle": "李昂",
     "enTitle": "Li Ang",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/li-chih-kai": {
     "zhTitle": "李智凱",
     "enTitle": "Li Chih-Kai (李智凱)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/li-guoxiu": {
     "zhTitle": "李國修",
     "enTitle": "Li Guoxiu (李國修)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/li-mei-shu": {
     "zhTitle": "李梅樹",
     "enTitle": "Li Mei-shu",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/li-zongsheng": {
     "zhTitle": "李宗盛",
     "enTitle": "Li Zongsheng (Jonathan Lee)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lin-bai-li": {
     "zhTitle": "林百里",
     "enTitle": "Lin Bai-li",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lin-hwai-min": {
     "zhTitle": "林懷民",
     "enTitle": "Lin Hwai-min",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lin-yang-duo-taiwan-badminton-champions": {
     "zhTitle": "麟洋配",
@@ -1701,19 +1701,19 @@
     "zhTitle": "林義雄",
     "enTitle": "Lin Yi-hsiung",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lu-guan-wei-junyiacademy-founder": {
     "zhTitle": "呂冠緯",
     "enTitle": "Lu Guan-wei: From Medical School to Education Revolutionary",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lu-yen-hsun-tennis-champion": {
     "zhTitle": "盧彥勳",
     "enTitle": "Lu Yen-hsun (盧彥勳)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/lung-ying-tai": {
     "zhTitle": "龍應台",
@@ -1725,7 +1725,7 @@
     "zhTitle": "羅大佑",
     "enTitle": "Luo Dayou (羅大佑)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ma-ying-jeou-cross-strait-reconciliation-leader": {
     "zhTitle": "馬英九",
@@ -1737,85 +1737,85 @@
     "zhTitle": "劉德音",
     "enTitle": "Mark Liu (劉德音)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ming-hua-yuan": {
     "zhTitle": "明華園",
     "enTitle": "Ming Hua Yuan",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/nieh-yung-jen": {
     "zhTitle": "聶永真",
     "enTitle": "Nieh Yung-jen (聶永真)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/niu-cheng-ze-controversial-filmmaker-monga-director": {
     "zhTitle": "鈕承澤",
     "enTitle": "Niu Cheng-Ze: Talent and Controversy in Taiwan Cinema",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/pai-hsien-yung-literary-master": {
     "zhTitle": "白先勇",
     "enTitle": "Pai Hsien-yung (白先勇)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ray-youtuber": {
     "zhTitle": "Ray",
     "enTitle": "Ray (YouTuber)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/shen-sheng-po": {
     "zhTitle": "沈聖博",
     "enTitle": "Shen Sheng-Po",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/shih-ming-te": {
     "zhTitle": "施明德",
     "enTitle": "Shih Ming-te",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/stan-lai-theater-innovation-master": {
     "zhTitle": "賴聲川",
     "enTitle": "Stan Lai: Master of Theater Innovation",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/stan-shih": {
     "zhTitle": "施振榮",
     "enTitle": "Stan Shih",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/stanley-yen": {
     "zhTitle": "嚴長壽",
     "enTitle": "Stanley Yen: From the Mailroom to Taiwan's Godfather of Tourism — Then He Gave It All Up",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/steve-chang": {
     "zhTitle": "張明正",
     "enTitle": "Steve Chang (張明正)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/su-wei-hsieh-wimbledon-champion": {
     "zhTitle": "謝淑薇",
     "enTitle": "Su-Wei Hsieh: Taiwan's Tennis Trailblazer",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/sylvia-chang": {
     "zhTitle": "張艾嘉",
     "enTitle": "Sylvia Chang (張艾嘉)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tai-tzu-ying": {
     "zhTitle": "戴資穎",
@@ -1827,49 +1827,49 @@
     "zhTitle": "吳大猷",
     "enTitle": "Tai-Yu Wu (吳大猷)",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/teresa-teng": {
     "zhTitle": "鄧麗君",
     "enTitle": "Teresa Teng — The Voice That United Asia",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/terry-gou": {
     "zhTitle": "郭台銘",
     "enTitle": "Terry Gou",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tsai-ing-wen": {
     "zhTitle": "蔡英文",
     "enTitle": "Tsai Ing-wen",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tsai-ming-liang": {
     "zhTitle": "蔡明亮",
     "enTitle": "Tsai Ming‑liang",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tsmc-morris-chang": {
     "zhTitle": "張忠謀",
     "enTitle": "Morris Chang — Architect of Taiwan's Silicon Shield",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tung-tzu-hsien-tech-humanist": {
     "zhTitle": "童子賢",
     "enTitle": "Tung Tzu-hsien (童子賢)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/tzuyu": {
     "zhTitle": "周子瑜",
     "enTitle": "Tzuyu",
     "category": "people",
-    "langs": ["zh-TW", "en", "ja"]
+    "langs": ["zh-TW", "en", "ja", "ko"]
   },
   "people/wei-te-sheng-taiwanese-epic-filmmaker": {
     "zhTitle": "魏德聖",
@@ -1881,115 +1881,115 @@
     "zhTitle": "伍佰",
     "enTitle": "Wu Bai (伍佰)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/wu-bao-chun": {
     "zhTitle": "吳寶春",
     "enTitle": "Wu Pao-chun",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/wu-ming-yi": {
     "zhTitle": "吳明益",
     "enTitle": "Wu Ming-Yi",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/xiao-qing-yang-grammy-designer": {
     "zhTitle": "蕭青陽",
     "enTitle": "Xiao Qing-yang",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/ximurong": {
     "zhTitle": "席慕蓉",
     "enTitle": "Xi Murong (席慕蓉)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/xu-wen-long-chimei-founder-violin-entrepreneur": {
     "zhTitle": "許文龍",
     "enTitle": "Xu Wen-Long: The Violin-Playing Entrepreneur Who Built Taiwan's Cultural Empire",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yang-chuan-kwang-asian-iron-man": {
     "zhTitle": "楊傳廣",
     "enTitle": "Yang Chuan-Kwang",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yang-dai-kang-taiwanese-baseball-star-in-japan": {
     "zhTitle": "陽岱鋼",
     "enTitle": "Yang Dai-kang: Taiwanese Baseball Star in Japan",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yang-dechang": {
     "zhTitle": "楊德昌",
     "enTitle": "Edward Yang (楊德昌)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yang-you-ren-shoes-for-hope-taiwan-youth-hero": {
     "zhTitle": "楊右任",
     "enTitle": "Yang You-Ren: From Street Graffiti Dropout to Africa Shoes-for-Hope Taiwanese Youth Hero",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yang-yung-wei-judo-olympic-silver": {
     "zhTitle": "楊勇緯",
     "enTitle": "Yang Yung-Wei",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yani-tseng": {
     "zhTitle": "曾雅妮",
     "enTitle": "Yani Tseng",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yeh-kuo-yi-electronics-manufacturing-pioneer": {
     "zhTitle": "葉國一",
     "enTitle": "Yeh Kuo-Yi",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yeh-ping-cheng-education-innovator": {
     "zhTitle": "葉丙成",
     "enTitle": "Yeh Ping-cheng (葉丙成)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/yung-ching-wang-formosa-plastics-founder": {
     "zhTitle": "王永慶",
     "enTitle": "Y.C. Wang: From Rice Shop to Petrochemical Empire - Taiwan's Management God",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/zheng-nanrong": {
     "zhTitle": "鄭南榕",
     "enTitle": "Zheng Nanrong",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/zhong-lihe-nativeland-eternal-seeker": {
     "zhTitle": "鍾理和",
     "enTitle": "Zhong Lihe: The Eternal Seeker of Nativeland",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/zhu-zong-qing": {
     "zhTitle": "朱宗慶",
     "enTitle": "Zhu Zong-qing",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "people/zhuge-liang-showman": {
     "zhTitle": "豬哥亮",
     "enTitle": "Zhuge Liang (Showman)",
     "category": "people",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "society/breakfast-shops-and-community-intelligence-network": {
     "zhTitle": "早餐店阿姨與社區情報網",
@@ -2127,7 +2127,7 @@
     "zhTitle": "台灣都市發展與城鄉差距",
     "enTitle": "Taiwan's Urban Development and the Rural-Urban Divide",
     "category": "society",
-    "langs": ["zh-TW", "en"]
+    "langs": ["zh-TW", "en", "ko"]
   },
   "society/taiwans-labeling-in-international-standards": {
     "zhTitle": "台灣在國際標準中的標示問題",

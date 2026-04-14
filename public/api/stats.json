@@ -1,12 +1,12 @@
 {
-  "totalArticles": 1647,
+  "totalArticles": 2031,
   "totalCategories": 21,
   "estimatedContributors": 51,
-  "totalTags": 4054,
+  "totalTags": 5233,
   "categories": [
     {
       "name": "ko",
-      "count": 321
+      "count": 458
     },
     {
       "name": "Society",
@@ -38,11 +38,11 @@
     },
     {
       "name": "Lifestyle",
-      "count": 16
+      "count": 17
     },
     {
       "name": "People",
-      "count": 135
+      "count": 136
     },
     {
       "name": "Art",
@@ -78,7 +78,7 @@
     },
     {
       "name": "fr",
-      "count": 158
+      "count": 403
     },
     {
       "name": "es",
@@ -100,7 +100,11 @@
     },
     {
       "name": "Economy",
-      "count": 50
+      "count": 52
+    },
+    {
+      "name": "인물",
+      "count": 41
     },
     {
       "name": "기업",
@@ -115,8 +119,28 @@
       "count": 25
     },
     {
+      "name": "ODM",
+      "count": 25
+    },
+    {
+      "name": "Économie",
+      "count": 25
+    },
+    {
+      "name": "TSMC",
+      "count": 22
+    },
+    {
       "name": "AI",
       "count": 22
+    },
+    {
+      "name": "g0v",
+      "count": 20
+    },
+    {
+      "name": "personnalité",
+      "count": 20
     },
     {
       "name": "民主化",
@@ -127,58 +151,34 @@
       "count": 19
     },
     {
-      "name": "g0v",
-      "count": 18
-    },
-    {
-      "name": "ODM",
-      "count": 17
-    },
-    {
       "name": "文化",
       "count": 17
     },
     {
-      "name": "民間信仰",
-      "count": 15
+      "name": "culture",
+      "count": 17
     },
     {
-      "name": "歴史",
-      "count": 15
-    },
-    {
-      "name": "半導體",
-      "count": 15
-    },
-    {
-      "name": "TSMC",
-      "count": 15
+      "name": "peuples autochtones",
+      "count": 17
     },
     {
       "name": "반도체",
-      "count": 15
+      "count": 17
     },
     {
       "name": "역사",
-      "count": 14
-    },
-    {
-      "name": "教育",
-      "count": 14
-    },
-    {
-      "name": "台灣",
-      "count": 14
+      "count": 15
     }
   ],
   "languageDistribution": {
-    "zh-TW": 1647,
+    "zh-TW": 2031,
     "en": 0
   },
-  "lastUpdated": "2026-04-14T04:41:38.940Z",
-  "stars": 927,
+  "lastUpdated": "2026-04-14T13:03:47.354Z",
+  "stars": 929,
   "forks": 130,
-  "zhPages": 1248,
+  "zhPages": 1632,
   "enPages": 399,
-  "totalPages": 1647
+  "totalPages": 2031
 }

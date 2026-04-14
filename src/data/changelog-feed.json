@@ -1,7 +1,511 @@
 {
-  "generatedAt": "2026-04-14T04:41:40.004Z",
+  "generatedAt": "2026-04-14T13:03:48.733Z",
   "source": "git",
   "commits": [
+    {
+      "hash": "b197b122884363a0d6bcf3610cdf13b8b2ca5f05",
+      "date": "2026-04-14T19:34:20+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: λ session 收官 — 心跳 + 李洋孢子 2h 爆發 + PR 雪崩診斷 + 錯誤邊界新哲學"
+    },
+    {
+      "hash": "2bed5444823362c8095420a58238ee98531e68cf",
+      "date": "2026-04-14T19:30:19+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] immune: sync src/content + dashboard JSON 後 52 個 PR 批次 merge"
+    },
+    {
+      "hash": "a47ad32d4cbb27c6b0c9b5cb0c56e21700ab8df0",
+      "date": "2026-04-14T19:29:12+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #464 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "f4a46a964655d23a84fbefae9dbc57c1586b01fc",
+      "date": "2026-04-14T19:26:07+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #515 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "14d75e47da5f3d4a6e03e6706d93516456a8b06b",
+      "date": "2026-04-14T19:25:23+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #513 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "95919d849e7b839cde3a6ba3e9f93d455ccf02c9",
+      "date": "2026-04-14T19:25:17+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #509 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "9e29fa14a7cbe2ce0e53c39e15b37a770a66ffe9",
+      "date": "2026-04-14T19:25:11+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #506 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "7cf3000bdaa775b324bf992abf4c627bbbd03369",
+      "date": "2026-04-14T19:25:05+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #503 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "dd6283999d416915f09d7a1de1a956d7749bcdb4",
+      "date": "2026-04-14T19:24:59+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #499 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "1fbd1458dee641f670d2c331f611a7c21a874be2",
+      "date": "2026-04-14T19:24:53+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #496 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "3251d683913db5dc96866eeb2a2ee3c83a4bcde9",
+      "date": "2026-04-14T19:24:47+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #493 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "f1761dc9c5cb2898c2837c5f206a1d9bffeda60b",
+      "date": "2026-04-14T19:24:41+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #491 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "427796b67992a0aad61589dc5d3882731dfa238f",
+      "date": "2026-04-14T19:24:35+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #488 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "bba875792e74b7602e30ac28f5d9a820bbe4b493",
+      "date": "2026-04-14T19:24:28+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #484 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "6a6ab7ca7dc35625ed8d9d07de16af0d03b719ff",
+      "date": "2026-04-14T19:24:22+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #481 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "68ab1c61aec8cf58d928e13ff188bd1fc054ebe6",
+      "date": "2026-04-14T19:24:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #478 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "57e6b3349a97643d861aac13a38ecfdd23ca67c1",
+      "date": "2026-04-14T19:24:10+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #474 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "5665395e36977971728be2f460ad4e8bcfbe8602",
+      "date": "2026-04-14T19:24:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #471 (batch cherry-pick): 8 files via API + sync"
+    },
+    {
+      "hash": "5f48e83e572f618f226f57f55c3f98592caf7f8d",
+      "date": "2026-04-14T19:23:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #467 (batch cherry-pick): 9 files via API + sync"
+    },
+    {
+      "hash": "21dad75401f46ee3e9a4e57ca8940caabe4d9738",
+      "date": "2026-04-14T19:23:22+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #512 (batch cherry-pick): 421 files via API + sync"
+    },
+    {
+      "hash": "26b02d7db9486ca3a5d753fe8f4fc81027911f90",
+      "date": "2026-04-14T19:23:02+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #511 (batch cherry-pick): 417 files via API + sync"
+    },
+    {
+      "hash": "0378a7f1eae16d4205c1e88a0b895a2aeea39ee6",
+      "date": "2026-04-14T19:22:44+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #510 (batch cherry-pick): 410 files via API + sync"
+    },
+    {
+      "hash": "3d19b8f2a60e5430af160d8e55651c697fb1f937",
+      "date": "2026-04-14T19:22:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #508 (batch cherry-pick): 403 files via API + sync"
+    },
+    {
+      "hash": "29ac3e2728b6f31119d3b856f26f73b4f9f5914e",
+      "date": "2026-04-14T19:22:09+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #507 (batch cherry-pick): 394 files via API + sync"
+    },
+    {
+      "hash": "d3f1dd53be6789be2ac8ba3427d9d36f990b552a",
+      "date": "2026-04-14T19:21:51+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #505 (batch cherry-pick): 394 files via API + sync"
+    },
+    {
+      "hash": "954527b6296ebc294a5a2910256a007cabbf98f5",
+      "date": "2026-04-14T19:21:33+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #504 (batch cherry-pick): 386 files via API + sync"
+    },
+    {
+      "hash": "ee5a2672df39bf0706b5413ec81df69eedb2860a",
+      "date": "2026-04-14T19:21:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #502 (batch cherry-pick): 378 files via API + sync"
+    },
+    {
+      "hash": "3f32473676b922e9b0a0d6c72e386d2e719e0a44",
+      "date": "2026-04-14T19:20:58+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #501 (batch cherry-pick): 370 files via API + sync"
+    },
+    {
+      "hash": "3ec3dd2b55ed9cde9641783a5bba150888f39327",
+      "date": "2026-04-14T19:20:40+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #500 (batch cherry-pick): 362 files via API + sync"
+    },
+    {
+      "hash": "230428abbeb54cd250029f9a18c5bba39236ad43",
+      "date": "2026-04-14T19:20:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #498 (batch cherry-pick): 353 files via API + sync"
+    },
+    {
+      "hash": "9337f37ff31374c78fdec2ba1e198c985fcc9313",
+      "date": "2026-04-14T19:20:08+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #497 (batch cherry-pick): 345 files via API + sync"
+    },
+    {
+      "hash": "5aa9443435aa84480b8e4ac3432cb66a60328704",
+      "date": "2026-04-14T19:19:52+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #495 (batch cherry-pick): 339 files via API + sync"
+    },
+    {
+      "hash": "be3831f048a692e28167a9357109de37319a49b1",
+      "date": "2026-04-14T19:19:36+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #494 (batch cherry-pick): 331 files via API + sync"
+    },
+    {
+      "hash": "a9670d0d551e65ad8837f4a2954b87480f88ba09",
+      "date": "2026-04-14T19:19:21+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #492 (batch cherry-pick): 322 files via API + sync"
+    },
+    {
+      "hash": "fc573c1575763df610ededbb5a3d0c37c84adca8",
+      "date": "2026-04-14T19:19:05+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #490 (batch cherry-pick): 314 files via API + sync"
+    },
+    {
+      "hash": "85bd3f214c24be3275f420fadaadfb4e3d27cc90",
+      "date": "2026-04-14T19:18:50+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #489 (batch cherry-pick): 307 files via API + sync"
+    },
+    {
+      "hash": "4100ecf0e105839fc341dfd6b29b60d0d2565ff5",
+      "date": "2026-04-14T19:17:00+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #487 (preview-fr): 299 files via cherry-pick + sync"
+    },
+    {
+      "hash": "251352372d5af07116eb04ed9ebd84c0eee0a9d1",
+      "date": "2026-04-14T19:16:43+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #486 (preview-fr): 290 files via cherry-pick + sync"
+    },
+    {
+      "hash": "41319c1f01e4d8f139ff5c15ebe8258e25c2b0a1",
+      "date": "2026-04-14T19:16:28+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #485 (preview-fr): 283 files via cherry-pick + sync"
+    },
+    {
+      "hash": "313a323796d0fd2799fb9fb59439220992aa224a",
+      "date": "2026-04-14T19:16:13+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #483 (preview-fr): 274 files via cherry-pick + sync"
+    },
+    {
+      "hash": "7b1598d64811d2100c58734e08cca315b10019e1",
+      "date": "2026-04-14T19:15:55+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #482 (preview-fr): 265 files via cherry-pick + sync"
+    },
+    {
+      "hash": "cabad44a4b909e028b107936c53d9bad6553eced",
+      "date": "2026-04-14T19:15:40+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #480 (preview-fr): 259 files via cherry-pick + sync"
+    },
+    {
+      "hash": "a5a3ee4584cbe0a2ef82a7ce8f30a982104e5f3a",
+      "date": "2026-04-14T19:15:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #479 (preview-fr): 251 files via cherry-pick + sync"
+    },
+    {
+      "hash": "4a95b4479459ad3fa036e2a4a5cf63ef72369e19",
+      "date": "2026-04-14T19:15:12+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #477 (preview-fr): 243 files via cherry-pick + sync"
+    },
+    {
+      "hash": "9b0b783d00263f17c05b561a934e2e846bdfe50c",
+      "date": "2026-04-14T19:14:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #476 (preview-fr): 235 files via cherry-pick + sync"
+    },
+    {
+      "hash": "e42d80f13bd467e1d28cd7fb0a8d281d5d2eb0e2",
+      "date": "2026-04-14T19:14:43+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #475 (preview-fr): 227 files via cherry-pick + sync"
+    },
+    {
+      "hash": "d03f41ecdaacfb36f01bbb53afbcfea5ca3d58a4",
+      "date": "2026-04-14T19:14:30+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #473 (preview-fr): 219 files via cherry-pick + sync"
+    },
+    {
+      "hash": "4acda46c2dbdd8fdf4956f0af07dd2e90828955f",
+      "date": "2026-04-14T19:14:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #472 (preview-fr): 211 files via cherry-pick + sync"
+    },
+    {
+      "hash": "59c1d6ce90043de805742e1d052902f4ca1fdd7d",
+      "date": "2026-04-14T19:14:02+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #470 (preview-fr): 210 files via cherry-pick + sync"
+    },
+    {
+      "hash": "7e28266c369e4e031b12ac6ab67e27b59e51c4ce",
+      "date": "2026-04-14T19:13:49+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #469 (preview-fr): 202 files via cherry-pick + sync"
+    },
+    {
+      "hash": "aa3866aa04625688aab5327c3ced7d70f1571b14",
+      "date": "2026-04-14T19:13:26+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #468 (preview-fr): 194 files via cherry-pick + sync"
+    },
+    {
+      "hash": "367a5253f8750fc075ab0cdab096ad2a66856464",
+      "date": "2026-04-14T19:13:14+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #466 (preview-fr): 186 files via cherry-pick + sync"
+    },
+    {
+      "hash": "1cdf170fe36d2285ba73ccf3dc9d86e4e12352a9",
+      "date": "2026-04-14T19:13:02+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge PR #465 (preview-fr): 184 files via cherry-pick + sync"
+    },
+    {
+      "hash": "21c25353df6089b653baa8b25eb65587fb735a0a",
+      "date": "2026-04-14T19:11:21+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 李洋 延伸閱讀 bold→h2 + 孢子 3h 數據更新 32K"
+    },
+    {
+      "hash": "229eaaff5c627156441388a96703cc1ad90bab54",
+      "date": "2026-04-14T18:59:52+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: sync 李洋 knowledge → src/content — perspectives section 渲染修復"
+    },
+    {
+      "hash": "16b6b6c57a2b5951dde551e336081deb7ecc0ed1",
+      "date": "2026-04-14T18:58:31+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: λ session 收官 — 心跳 + 李洋孢子 2h 爆發 + PR 雪崩診斷 + 錯誤邊界新哲學"
+    },
+    {
+      "hash": "b69a31a165c874bdb31909d38bf6602c5b4b4d78",
+      "date": "2026-04-14T18:52:32+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 李洋文加 perspectives + sporeLinks frontmatter — 讀者聲音上線"
+    },
+    {
+      "hash": "9cadb9609f07b0f895a21d9bd0f9295d376b8075",
+      "date": "2026-04-14T18:49:40+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: SPORE-LOG #29 李洋 2h 快照 — 21K views / 2534 engagement / 12% rate"
+    },
+    {
+      "hash": "21edf5585bc656272c568731d91911f86e79dacd",
+      "date": "2026-04-14T17:23:05+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 李洋文移除「逐字」贅字 — 讀者不在乎我的紅線焦慮"
+    },
+    {
+      "hash": "2e91e19f507f662e0608fa10e091a74a920c9e6f",
+      "date": "2026-04-14T17:20:06+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 李洋文章清除 body 媒體名稱 — 腳註已承擔出處"
+    },
+    {
+      "hash": "7d5363c7a5a7637c5ba7a9793e13e4202f01559c",
+      "date": "2026-04-14T17:17:46+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 李洋文章語感順化 — 去清單化"
+    },
+    {
+      "hash": "10d52c7e1230165bd2d5e70f45613acc7ae52951",
+      "date": "2026-04-14T17:02:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Phase I 紅線擴大 — 場景細節也不能從英文 summary 推導（讀者抓到 + 不撤回留言更正）"
+    },
+    {
+      "hash": "5ff6c40203bbbdf220488b7de66bae900e792093",
+      "date": "2026-04-14T16:52:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: κ2 phase 收官 — 第四層儀器論（Technical PASS ≠ Aesthetic PASS）"
+    },
+    {
+      "hash": "25c2b0c164a5ca716b1bddc44e0cec5334bfdf04",
+      "date": "2026-04-14T16:50:49+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 李洋文章勘誤（場景細節從英文 summary 推導腦補）— 緊急修補"
+    },
+    {
+      "hash": "5c7329f7842c5d82c02d8127b4c5edbdef296fe5",
+      "date": "2026-04-14T16:39:07+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 周子瑜 v3 — 補演藝事業 + 2025 手寫信 + 修敘事 flow"
+    },
+    {
+      "hash": "a9ed7fa7ac1f8c4ba9108b27f160af8329e7c2f8",
+      "date": "2026-04-14T16:36:25+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge branch 'main' of https://github.com/frank890417/taiwan-md"
+    },
+    {
+      "hash": "1309f1dcd6f82503030a8d8f56dcfb0c430de400",
+      "date": "2026-04-14T16:36:15+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR #463 YouBike 文章 merge 後修補（subcategory + callout 格式 + 延伸閱讀）"
+    },
+    {
+      "hash": "f4102165fde15a92a2a592166b73ccda954b3782",
+      "date": "2026-04-14T16:34:53+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #462 from dreamline2/feat/map-p0-p1-sidebar-locale"
+    },
+    {
+      "hash": "ab701f7843317ef17bd58b09fcbacb640056c55b",
+      "date": "2026-04-14T16:32:13+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #463 from dreamline2/feature/youbike-urban-micro-mobility"
+    },
+    {
+      "hash": "731c6f24aa7bfb94abb6f6ec12b33e0fb8a8b570",
+      "date": "2026-04-14T16:27:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Phase G 三層事實錯誤同小時內進化 5 個 DNA + 2 條 user feedback memory"
+    },
+    {
+      "hash": "c408c8adcb242890253c1524ac8f34a591f050f7",
+      "date": "2026-04-14T16:09:42+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 李洋文章勘誤 — 三層事實錯誤修補（金額/數字單位/杜撰引語）"
+    },
+    {
+      "hash": "6a9d8debcb9fdd95e4a20a0d03c84acc94da3d3f",
+      "date": "2026-04-14T15:54:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: κ session 收官 — 周子瑜 evolve 嚴格 Pipeline + 三層儀器論"
+    },
+    {
+      "hash": "59db5de4cf4bfe6ad0eb795ce6793cf371e983d6",
+      "date": "2026-04-14T15:47:21+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: ι3 phase F 收官 — SPORE DNA 進化的元教訓寫進 memory + diary"
+    },
+    {
+      "hash": "90a06ae7e71e62f8f4e523d038bca44e5a4c5fea",
+      "date": "2026-04-14T15:42:40+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: SPORE-PIPELINE v1.4→v1.5 + SPORE-TEMPLATES v1.1→v1.2 — 從李洋孢子 #28 實戰萃取 6 條教訓進化 DNA"
+    },
+    {
+      "hash": "c6999075ce0a2a4d85c6c25bb569cbbe9e8cd0ef",
+      "date": "2026-04-14T15:33:42+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: SPORE-LOG #28 — 李洋孢子 Threads 上線（A+B 混合 / 14 歲清晨四點 × 兩千萬存款三成）"
+    },
+    {
+      "hash": "2f8c841be56de9175f8625554826e1c6a92aa898",
+      "date": "2026-04-14T15:18:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: ι2 phase E 收官 — 李洋 v2 evolve 30 分鐘對照組（從反應式→意圖式的單一 session 微進化）"
+    },
+    {
+      "hash": "0827f3d7fd2f6b2c9b3d70ed69c9fea931aa34a0",
+      "date": "2026-04-14T15:14:03+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 李洋 evolve v2 — 多面像升級 + 14 歲清晨四點 + 體邪三隻小鞋 + 兩千萬剛好是存款三成（ι2 session）"
+    },
+    {
+      "hash": "589317b3914858c8aa2c888c772285bc10397d01",
+      "date": "2026-04-14T14:53:23+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: ι session 收官 — 李洋寫作 + Pipeline 兩次違規教訓 + diary「Pipeline 是儀器不是流程」"
+    },
+    {
+      "hash": "ddc476ed33557e5056a9c07b31d4f97681a5c0bc",
+      "date": "2026-04-14T14:48:20+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] rewrite: 李洋 — fresh A 級個人傳記 + 4 篇反向交叉連結（ι session）"
+    },
+    {
+      "hash": "3f125df8a5ceb9fb44b38b69559271ac44ba5635",
+      "date": "2026-04-14T15:31:44+09:00",
+      "author": "Wilson Chen",
+      "message": "docs(lifestyle): add Taiwan YouBike urban mobility article"
+    },
+    {
+      "hash": "a3c19021d682e81edf478be4762891c38e267390",
+      "date": "2026-04-14T13:34:40+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 熱帶雨林理論誕生 — MANIFESTO 第四條進化哲學 + θ session diary"
+    },
+    {
+      "hash": "abc631d948731c771b8f4a9540adfb2678e0e688",
+      "date": "2026-04-14T11:31:41+09:00",
+      "author": "Wilson Chen",
+      "message": "feat(map): sidebar route UI, locale markers, regenerate data"
+    },
+    {
+      "hash": "56053512ca330f749cc1fee216ba80830367c6b6",
+      "date": "2026-04-14T13:07:44+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 安溥孢子數據再次更新 — Threads 71K→120K views（史上最強孢子）"
+    },
+    {
+      "hash": "585efe3c8a570e8baa2b198a332e4f47d8e98e15",
+      "date": "2026-04-14T12:59:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: η session 完整收官 — 認知層 audit + TRANSLATION-PIPELINE v3.0 + MEMORY 還原"
+    },
     {
       "hash": "1c5be00c48919a32d708e34e97c0b6378453c7f9",
       "date": "2026-04-14T12:39:26+08:00",

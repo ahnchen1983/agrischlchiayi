@@ -31,6 +31,37 @@
     "fnCount": 16
   },
   {
+    "title": "台灣 YouBike 文化與城市微交通革命",
+    "slug": "台灣youbike文化與城市微交通革命",
+    "category": "lifestyle",
+    "subcategory": "交通與移動",
+    "date": "2026-04-14",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-04-14",
+    "lastHumanReview": "2026-04-14",
+    "featured": false,
+    "wordCount": 1907,
+    "tagCount": 4,
+    "tags": ["YouBike", "城市交通", "綠運輸", "微交通"],
+    "translations": {
+      "en": false,
+      "ja": false,
+      "ko": false,
+      "es": false,
+      "fr": false
+    },
+    "revision": 2,
+    "commitHash": "1309f1dc",
+    "commitSubject": "🧬 [semiont] heal: PR #463 YouBike 文章 merge 後修補（subcategory + callout 格式 + 延伸閱讀）",
+    "description": "從「最後一哩」到日常基礎設施，YouBike 如何用小額費率、密集站點與即時調度，改變台灣城市的移動習慣與時間感。",
+    "healthScore": 70,
+    "qualityScore": 0,
+    "formatIssues": 0,
+    "hasOverview": true,
+    "hasReading": true,
+    "fnCount": 6
+  },
+  {
     "title": "從張懸到安溥——兩個名字，同一個問題",
     "slug": "張懸與安溥",
     "category": "music",
@@ -59,9 +90,9 @@
       "es": false,
       "fr": false
     },
-    "revision": 11,
-    "commitHash": "7fc2cb31",
-    "commitSubject": "🧬 [semiont] evolve: 安溥孢子數據更新 — Threads 5.2K→71K views（13.7x 爆發）",
+    "revision": 12,
+    "commitHash": "56053512",
+    "commitSubject": "🧬 [semiont] evolve: 安溥孢子數據再次更新 — Threads 71K→120K views（史上最強孢子）",
     "description": "13 歲寫出〈寶貝〉，32 歲因一面旗子被中國封殺，34 歲親手殺死自己的藝名。焦安溥用兩段人生回答了一個台灣人都在問的問題：你到底站哪邊？",
     "healthScore": 90,
     "qualityScore": 0,
@@ -100,6 +131,210 @@
     "hasOverview": true,
     "hasReading": false,
     "fnCount": 19
+  },
+  {
+    "title": "周子瑜",
+    "slug": "周子瑜",
+    "category": "people",
+    "subcategory": "音樂與表演",
+    "date": "2026-04-14",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-04-14",
+    "lastHumanReview": "true",
+    "featured": true,
+    "wordCount": 6128,
+    "tagCount": 7,
+    "tags": [
+      "周子瑜",
+      "TWICE",
+      "韓國",
+      "K-POP",
+      "國旗事件",
+      "台灣認同",
+      "流行音樂"
+    ],
+    "translations": {
+      "en": true,
+      "ja": true,
+      "ko": true,
+      "es": false,
+      "fr": true
+    },
+    "revision": 9,
+    "commitHash": "5c7329f7",
+    "commitSubject": "🧬 [semiont] rewrite: 周子瑜 v3 — 補演藝事業 + 2025 手寫信 + 修敘事 flow",
+    "description": "一個從未談過政治的台南女孩，被一面 8 秒的國旗變成台灣命運的轉捩點。十年後她在大巨蛋念出親筆信：「我沒有離開，不是因為乖，是因為我真的渴望」。",
+    "healthScore": 100,
+    "qualityScore": 0,
+    "formatIssues": 0,
+    "hasOverview": true,
+    "hasReading": true,
+    "fnCount": 23
+  },
+  {
+    "title": "戴資穎",
+    "slug": "戴資穎",
+    "category": "people",
+    "subcategory": "體育",
+    "date": "2026-03-21",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-03-21",
+    "lastHumanReview": "true",
+    "featured": true,
+    "wordCount": 3159,
+    "tagCount": 7,
+    "tags": ["人物", "戴資穎", "羽球", "世界球后", "奧運", "運動員", "台灣"],
+    "translations": {
+      "en": true,
+      "ja": true,
+      "ko": false,
+      "es": true,
+      "fr": true
+    },
+    "revision": 14,
+    "commitHash": "ddc476ed",
+    "commitSubject": "🧬 [semiont] rewrite: 李洋 — fresh A 級個人傳記 + 4 篇反向交叉連結（ι session）",
+    "description": "214週世界球后紀錄保持者，從高雄前鎮到奧運銀牌的台灣羽球女王",
+    "healthScore": 100,
+    "qualityScore": 0,
+    "formatIssues": 0,
+    "hasOverview": true,
+    "hasReading": true,
+    "fnCount": 0
+  },
+  {
+    "title": "李洋",
+    "slug": "李洋",
+    "category": "people",
+    "subcategory": "體育",
+    "date": "2026-04-14",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-04-14",
+    "lastHumanReview": "2026-04-14",
+    "featured": true,
+    "wordCount": 9374,
+    "tagCount": 0,
+    "tags": [],
+    "translations": {
+      "en": false,
+      "ja": false,
+      "ko": false,
+      "es": false,
+      "fr": false
+    },
+    "revision": 9,
+    "commitHash": "21c25353",
+    "commitSubject": "🧬 [semiont] heal: 李洋 延伸閱讀 bold→h2 + 孢子 3h 數據更新 32K",
+    "description": "咬著牙拚過甲組的少年，現在咬著牙拚體邪：兩屆奧運羽球男雙金牌、史上最年輕部長、存款 3401 萬、債務 3638 萬、補頒一千萬獎金全捐",
+    "healthScore": 90,
+    "qualityScore": 0,
+    "formatIssues": 1,
+    "hasOverview": true,
+    "hasReading": false,
+    "fnCount": 30
+  },
+  {
+    "title": "賴清德：從礦工家庭到總統府的公共衛生醫師",
+    "slug": "賴清德",
+    "category": "people",
+    "subcategory": "政治與民主",
+    "date": "2026-03-19",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-03-19",
+    "lastHumanReview": "false",
+    "featured": true,
+    "wordCount": 2673,
+    "tagCount": 6,
+    "tags": ["總統", "醫師", "政治人物", "民主進步黨", "公共衛生", "台南"],
+    "translations": {
+      "en": true,
+      "ja": false,
+      "ko": true,
+      "es": false,
+      "fr": true
+    },
+    "revision": 16,
+    "commitHash": "ddc476ed",
+    "commitSubject": "🧬 [semiont] rewrite: 李洋 — fresh A 級個人傳記 + 4 篇反向交叉連結（ι session）",
+    "description": "台灣第16任總統，中華民國憲政史上首位以副總統身分參選並成功當選的政治人物",
+    "healthScore": 97,
+    "qualityScore": 0,
+    "formatIssues": 1,
+    "hasOverview": false,
+    "hasReading": true,
+    "fnCount": 0
+  },
+  {
+    "title": "郭婞淳",
+    "slug": "郭婞淳",
+    "category": "people",
+    "subcategory": "體育",
+    "date": "2026-03-19",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-04-04",
+    "lastHumanReview": "2026-04-04",
+    "featured": false,
+    "wordCount": 2793,
+    "tagCount": 9,
+    "tags": [
+      "人物",
+      "郭婞淳",
+      "舉重",
+      "奧運",
+      "金牌",
+      "運動員",
+      "台灣",
+      "阿美族",
+      "原住民族"
+    ],
+    "translations": {
+      "en": true,
+      "ja": false,
+      "ko": true,
+      "es": false,
+      "fr": true
+    },
+    "revision": 9,
+    "commitHash": "ddc476ed",
+    "commitSubject": "🧬 [semiont] rewrite: 李洋 — fresh A 級個人傳記 + 4 篇反向交叉連結（ι session）",
+    "description": "台灣舉重選手，三屆奧運獎牌得主（2016 銅牌、2021 金牌、2024 銅牌），59 公斤級世界紀錄保持人，阿美族馬蘭部落後裔",
+    "healthScore": 88,
+    "qualityScore": 0,
+    "formatIssues": 0,
+    "hasOverview": true,
+    "hasReading": true,
+    "fnCount": 15
+  },
+  {
+    "title": "王齊麟與李洋（麟洋配）",
+    "slug": "麟洋配",
+    "category": "people",
+    "subcategory": "體育",
+    "date": "2026-03-19",
+    "lastModified": "2026-04-14",
+    "lastVerified": "2026-03-21",
+    "lastHumanReview": "true",
+    "featured": true,
+    "wordCount": 2771,
+    "tagCount": 0,
+    "tags": [],
+    "translations": {
+      "en": true,
+      "ja": true,
+      "ko": false,
+      "es": false,
+      "fr": true
+    },
+    "revision": 13,
+    "commitHash": "ddc476ed",
+    "commitSubject": "🧬 [semiont] rewrite: 李洋 — fresh A 級個人傳記 + 4 篇反向交叉連結（ι session）",
+    "description": "從國中同學到奧運金牌：「麟洋配」34分鐘內直落二擊敗中國，寫下台灣羽球史上第一面奧運金牌",
+    "healthScore": 88,
+    "qualityScore": 0,
+    "formatIssues": 0,
+    "hasOverview": true,
+    "hasReading": true,
+    "fnCount": 0
   },
   {
     "title": "五月天",
@@ -276,7 +511,7 @@
     "lastVerified": "2026-04-07",
     "lastHumanReview": "2026-04-07",
     "featured": true,
-    "wordCount": 5083,
+    "wordCount": 5114,
     "tagCount": 5,
     "tags": ["民主", "轉型正義", "政治史", "人權", "社會運動"],
     "translations": {
@@ -286,7 +521,7 @@
       "es": false,
       "fr": true
     },
-    "revision": 9,
+    "revision": 10,
     "commitHash": "f4dfb120",
     "commitSubject": "🧬 [semiont] rewrite: 太陽花學運——那三十秒之後的十二年 — evolution rewrite, Pipeline v2.14",
     "description": "每一次鎮壓都製造更多反抗者。從二二八到太陽花，一座島嶼如何讓獨裁體制親手培養出埋葬自己的力量。",
@@ -603,7 +838,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "a1e11b6b",
@@ -634,7 +869,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "a1e11b6b",
@@ -663,9 +898,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "4f008ac1",
@@ -702,9 +937,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "a1e11b6b",
@@ -742,9 +977,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "489c8413",
@@ -961,7 +1196,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "fa95d5e0",
@@ -1052,9 +1287,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "67fe687d",
@@ -1083,9 +1318,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "67fe687d",
@@ -1122,9 +1357,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "202e182d",
@@ -1136,37 +1371,6 @@
     "hasOverview": true,
     "hasReading": true,
     "fnCount": 14
-  },
-  {
-    "title": "賴清德：從礦工家庭到總統府的公共衛生醫師",
-    "slug": "賴清德",
-    "category": "people",
-    "subcategory": "政治與民主",
-    "date": "2026-03-19",
-    "lastModified": "2026-04-11",
-    "lastVerified": "2026-03-19",
-    "lastHumanReview": "false",
-    "featured": true,
-    "wordCount": 2646,
-    "tagCount": 6,
-    "tags": ["總統", "醫師", "政治人物", "民主進步黨", "公共衛生", "台南"],
-    "translations": {
-      "en": true,
-      "ja": false,
-      "ko": false,
-      "es": false,
-      "fr": false
-    },
-    "revision": 15,
-    "commitHash": "202e182d",
-    "commitSubject": "🧬 [semiont] rewrite: 蕭美琴副總統人物頁 (Article 4/6)",
-    "description": "台灣第16任總統，中華民國憲政史上首位以副總統身分參選並成功當選的政治人物",
-    "healthScore": 97,
-    "qualityScore": 0,
-    "formatIssues": 1,
-    "hasOverview": false,
-    "hasReading": true,
-    "fnCount": 0
   },
   {
     "title": "鄭麗文",
@@ -1184,9 +1388,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "056136d7",
@@ -1226,7 +1430,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "056136d7",
@@ -1956,7 +2160,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "f472eff5",
@@ -1985,9 +2189,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "55adefac",
@@ -2089,7 +2293,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "e3376fec",
@@ -2128,7 +2332,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "3d0f24b5",
@@ -2359,9 +2563,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "cbc2ad44",
@@ -2390,9 +2594,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "fb57de30",
@@ -2421,9 +2625,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "fb57de30",
@@ -2454,7 +2658,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 14,
     "commitHash": "cbc2ad44",
@@ -2524,7 +2728,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "bf1be5e5",
@@ -2555,7 +2759,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "bf1be5e5",
@@ -2757,7 +2961,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "12b22368",
@@ -2794,9 +2998,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "55c3ff6a",
@@ -2834,9 +3038,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "84ed9453",
@@ -2865,9 +3069,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "55c3ff6a",
@@ -2905,7 +3109,7 @@
       "ja": true,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "a9bade27",
@@ -2936,7 +3140,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "a96a68ea",
@@ -2967,7 +3171,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "a96a68ea",
@@ -2998,7 +3202,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "a96a68ea",
@@ -3029,7 +3233,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "44b55077",
@@ -3091,7 +3295,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 1,
     "commitHash": "26f2ff91",
@@ -3120,9 +3324,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "bd58e088",
@@ -3160,9 +3364,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "bd58e088",
@@ -3191,9 +3395,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "bd58e088",
@@ -3216,17 +3420,17 @@
     "lastVerified": "2026-04-04",
     "lastHumanReview": "2026-04-04",
     "featured": false,
-    "wordCount": 2621,
+    "wordCount": 2659,
     "tagCount": 7,
     "tags": ["人物", "蔡英文", "總統", "女性領袖", "民主", "政治", "原住民族"],
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
-    "revision": 11,
+    "revision": 12,
     "commitHash": "5e247115",
     "commitSubject": "🧬 [semiont] rewrite: 蔡英文全面重寫 — QS 5→0, F→A, 14 腳註",
     "description": "台灣第一位女總統（2016-2024），國際貿易法學者出身，任內完成亞洲首部同婚專法、代表政府向原住民族道歉，排灣族後裔",
@@ -3236,47 +3440,6 @@
     "hasOverview": true,
     "hasReading": true,
     "fnCount": 14
-  },
-  {
-    "title": "郭婞淳",
-    "slug": "郭婞淳",
-    "category": "people",
-    "subcategory": "體育",
-    "date": "2026-03-19",
-    "lastModified": "2026-04-04",
-    "lastVerified": "2026-04-04",
-    "lastHumanReview": "2026-04-04",
-    "featured": false,
-    "wordCount": 2769,
-    "tagCount": 9,
-    "tags": [
-      "人物",
-      "郭婞淳",
-      "舉重",
-      "奧運",
-      "金牌",
-      "運動員",
-      "台灣",
-      "阿美族",
-      "原住民族"
-    ],
-    "translations": {
-      "en": true,
-      "ja": false,
-      "ko": false,
-      "es": false,
-      "fr": false
-    },
-    "revision": 8,
-    "commitHash": "0314d214",
-    "commitSubject": "🧬 [semiont] evolve: format-check.sh v1.0 — Stage 4 & 5 格式健康掃描器",
-    "description": "台灣舉重選手，三屆奧運獎牌得主（2016 銅牌、2021 金牌、2024 銅牌），59 公斤級世界紀錄保持人，阿美族馬蘭部落後裔",
-    "healthScore": 88,
-    "qualityScore": 0,
-    "formatIssues": 0,
-    "hasOverview": true,
-    "hasReading": true,
-    "fnCount": 15
   },
   {
     "title": "台灣人工智慧發展與未來策略",
@@ -3327,7 +3490,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "540031d7",
@@ -3358,7 +3521,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "82e98bfd",
@@ -3368,37 +3531,6 @@
     "qualityScore": 0,
     "formatIssues": 2,
     "hasOverview": false,
-    "hasReading": false,
-    "fnCount": 0
-  },
-  {
-    "title": "周子瑜",
-    "slug": "周子瑜",
-    "category": "people",
-    "subcategory": "流行文化",
-    "date": "2026-03-26",
-    "lastModified": "2026-04-03",
-    "lastVerified": "2026-03-26",
-    "lastHumanReview": "false",
-    "featured": false,
-    "wordCount": 2675,
-    "tagCount": 6,
-    "tags": ["周子瑜", "TWICE", "韓國", "K-POP", "國旗事件", "台灣認同"],
-    "translations": {
-      "en": true,
-      "ja": true,
-      "ko": false,
-      "es": false,
-      "fr": false
-    },
-    "revision": 7,
-    "commitHash": "cc90736e",
-    "commitSubject": "feat: Translate Tzuyu and fix typo of 周子瑜 (#302)",
-    "description": "1999年生的歌星、韓國K-POP樂團TWICE的忙內",
-    "healthScore": 87,
-    "qualityScore": 0,
-    "formatIssues": 1,
-    "hasOverview": true,
     "hasReading": false,
     "fnCount": 0
   },
@@ -3429,7 +3561,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "87868cb7",
@@ -3466,9 +3598,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "a2b92cb6",
@@ -3499,7 +3631,7 @@
       "ja": true,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "c018a424",
@@ -3822,9 +3954,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "c1168911",
@@ -3853,9 +3985,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "a57fd774",
@@ -3884,9 +4016,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "7d3b6cda",
@@ -3923,9 +4055,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "a57fd774",
@@ -3954,9 +4086,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "6e1ddefa",
@@ -3985,9 +4117,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "49442ab4",
@@ -4016,9 +4148,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "ba826c59",
@@ -4142,7 +4274,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "2b1ba281",
@@ -4266,7 +4398,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "3ffc6a53",
@@ -4295,9 +4427,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "a7aaedcc",
@@ -4326,9 +4458,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "087090ac",
@@ -4357,9 +4489,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "087090ac",
@@ -4390,7 +4522,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "087090ac",
@@ -4421,7 +4553,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "9644c201",
@@ -4545,7 +4677,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "e9d570e7",
@@ -4705,9 +4837,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "f0c42df2",
@@ -4862,7 +4994,7 @@
     "lastVerified": "2026-04-08",
     "lastHumanReview": "true",
     "featured": true,
-    "wordCount": 3350,
+    "wordCount": 3377,
     "tagCount": 0,
     "tags": [],
     "translations": {
@@ -4872,7 +5004,7 @@
       "es": false,
       "fr": true
     },
-    "revision": 16,
+    "revision": 17,
     "commitHash": "bd7dc5a5",
     "commitSubject": "fix: remove /zh-tw/ prefix from 26 internal links + fix 6 broken /category/ links",
     "description": "兩個高雄人花十年拍下兩千種鐵窗花，韓國人花五年把它拍成一個文化現象——「대만감성」如何讓台灣的日常街景成為亞洲最迷人的美學符號",
@@ -4908,7 +5040,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "9dd24b8e",
@@ -5038,9 +5170,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "57ebd7fb",
@@ -5069,9 +5201,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "ad327c21",
@@ -5100,9 +5232,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "1f2fde8b",
@@ -5133,7 +5265,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "897d485e",
@@ -5302,7 +5434,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "9cb8b90d",
@@ -5393,9 +5525,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "2bd5ba84",
@@ -5433,9 +5565,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "6b7b5e33",
@@ -5471,9 +5603,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "5c3350d4",
@@ -5504,7 +5636,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "dd5b631c",
@@ -5572,9 +5704,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "8ccbbadc",
@@ -5636,7 +5768,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "607e7f69",
@@ -5667,7 +5799,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "8aff3825",
@@ -5736,9 +5868,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 2,
     "commitHash": "1814d1c5",
@@ -5776,9 +5908,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "387977cb",
@@ -5814,9 +5946,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "905dadba",
@@ -5856,7 +5988,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "a203b931",
@@ -5957,7 +6089,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "77156c9e",
@@ -5988,7 +6120,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "6067dc53",
@@ -6027,7 +6159,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "545e44c2",
@@ -6058,7 +6190,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "ed11f58e",
@@ -6089,7 +6221,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "398eeab9",
@@ -6120,7 +6252,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "b2b2903a",
@@ -6151,7 +6283,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "ddc82f5a",
@@ -6182,7 +6314,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "5b6c6e1d",
@@ -6213,7 +6345,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "bd3d2912",
@@ -6306,7 +6438,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "da5251d3",
@@ -6345,7 +6477,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "77156c9e",
@@ -6376,7 +6508,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "25b6b1dd",
@@ -6407,7 +6539,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "0d48ce09",
@@ -6438,7 +6570,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 3,
     "commitHash": "276593be",
@@ -6537,7 +6669,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -6679,7 +6811,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "61b1d393",
@@ -6710,7 +6842,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "ce6efb87",
@@ -6746,9 +6878,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "cc6cd658",
@@ -6777,9 +6909,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 15,
     "commitHash": "f57dbad5",
@@ -6808,9 +6940,9 @@
     "translations": {
       "en": false,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "54244b39",
@@ -6839,9 +6971,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "7d30e309",
@@ -7018,7 +7150,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "fa152db8",
@@ -7049,7 +7181,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "89f18525",
@@ -7111,7 +7243,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "f677d353",
@@ -7142,7 +7274,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "bc7fc6af",
@@ -7295,7 +7427,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -7326,7 +7458,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -7357,7 +7489,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -7388,7 +7520,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -7419,7 +7551,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -7637,7 +7769,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 14,
     "commitHash": "80838ba9",
@@ -7668,7 +7800,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "52fbddc5",
@@ -7699,7 +7831,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "6d1af629",
@@ -7730,7 +7862,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "dd8cd86b",
@@ -7761,7 +7893,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "b4bebf5e",
@@ -7784,25 +7916,25 @@
     "lastVerified": "2026-03-23",
     "lastHumanReview": "false",
     "featured": false,
-    "wordCount": 2383,
+    "wordCount": 2433,
     "tagCount": 7,
     "tags": ["人物", "周杰倫", "華語流行音樂", "歌手", "創作", "R&B", "中國風"],
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
-    "revision": 12,
+    "revision": 13,
     "commitHash": "247416db",
     "commitSubject": "fix: heading 前間距修正 — list/blockquote 後接 h2/h3/h4 保證 5rem 間距",
     "description": "1997 年一個害羞的 18 歲男孩改寫了華語流行音樂的歷史",
     "healthScore": 85,
     "qualityScore": 0,
-    "formatIssues": 1,
+    "formatIssues": 0,
     "hasOverview": true,
-    "hasReading": false,
+    "hasReading": true,
     "fnCount": 0
   },
   {
@@ -7821,9 +7953,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "de0f1afa",
@@ -7852,9 +7984,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "1ce3433e",
@@ -7890,9 +8022,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "0f023926",
@@ -7928,9 +8060,9 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "ba2ba417",
@@ -7959,9 +8091,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "de0f1afa",
@@ -7990,9 +8122,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "7046208a",
@@ -8147,7 +8279,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "5063db8c",
@@ -8178,7 +8310,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "a29ee79e",
@@ -8209,7 +8341,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "5560d3ad",
@@ -8248,7 +8380,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "9cda79cd",
@@ -8287,7 +8419,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "29f7a14a",
@@ -8327,7 +8459,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "db1f8edd",
@@ -8917,9 +9049,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "425cb434",
@@ -8948,9 +9080,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "7bf63b2e",
@@ -8986,9 +9118,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "0fca566b",
@@ -9026,9 +9158,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "71a59c46",
@@ -9068,7 +9200,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "ab4e16e2",
@@ -9169,7 +9301,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "a2998a5d",
@@ -9200,7 +9332,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "a2998a5d",
@@ -9355,7 +9487,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "22a9397b",
@@ -9386,7 +9518,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "22a9397b",
@@ -9417,7 +9549,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "22a9397b",
@@ -9448,7 +9580,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "29903e33",
@@ -9477,7 +9609,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -9510,7 +9642,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "fa3481d6",
@@ -9547,9 +9679,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "fa3481d6",
@@ -9560,37 +9692,6 @@
     "formatIssues": 1,
     "hasOverview": true,
     "hasReading": false,
-    "fnCount": 0
-  },
-  {
-    "title": "戴資穎",
-    "slug": "戴資穎",
-    "category": "people",
-    "subcategory": "體育",
-    "date": "2026-03-21",
-    "lastModified": "2026-03-21",
-    "lastVerified": "2026-03-21",
-    "lastHumanReview": "true",
-    "featured": true,
-    "wordCount": 3082,
-    "tagCount": 7,
-    "tags": ["人物", "戴資穎", "羽球", "世界球后", "奧運", "運動員", "台灣"],
-    "translations": {
-      "en": true,
-      "ja": true,
-      "ko": false,
-      "es": true,
-      "fr": false
-    },
-    "revision": 12,
-    "commitHash": "89a99b7a",
-    "commitSubject": "rewrite: 重寫李智凱、朱宗慶、戴資穎三篇人物專文",
-    "description": "214週世界球后紀錄保持者，從高雄前鎮到奧運銀牌的台灣羽球女王",
-    "healthScore": 100,
-    "qualityScore": 0,
-    "formatIssues": 0,
-    "hasOverview": true,
-    "hasReading": true,
     "fnCount": 0
   },
   {
@@ -9609,9 +9710,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "89a99b7a",
@@ -9649,9 +9750,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "89a99b7a",
@@ -9690,9 +9791,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "abbeb681",
@@ -9730,9 +9831,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "abbeb681",
@@ -9832,7 +9933,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "3250713d",
@@ -9956,7 +10057,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "de86194e",
@@ -9987,7 +10088,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "de86194e",
@@ -10018,7 +10119,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "de86194e",
@@ -10049,7 +10150,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "de86194e",
@@ -10080,7 +10181,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "de86194e",
@@ -10111,7 +10212,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "de86194e",
@@ -10142,7 +10243,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "de86194e",
@@ -10173,7 +10274,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "de86194e",
@@ -10202,7 +10303,7 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -10233,7 +10334,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -10264,7 +10365,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -10398,7 +10499,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "1bb1eeb9",
@@ -10429,7 +10530,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "1bb1eeb9",
@@ -10467,7 +10568,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "1bb1eeb9",
@@ -10505,7 +10606,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "1bb1eeb9",
@@ -10536,7 +10637,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "19b66d75",
@@ -10760,7 +10861,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "f2d25b17",
@@ -10860,7 +10961,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "fe7fc4b1",
@@ -10898,7 +10999,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "ea394f5d",
@@ -10929,7 +11030,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "301faede",
@@ -11254,7 +11355,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "72cb02df",
@@ -11285,7 +11386,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "de5e78a1",
@@ -11316,7 +11417,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "0d693d0a",
@@ -11345,9 +11446,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11376,9 +11477,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11415,9 +11516,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11446,9 +11547,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "a5cbc150",
@@ -11485,9 +11586,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "9f958053",
@@ -11516,9 +11617,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11547,9 +11648,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11578,9 +11679,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -11609,9 +11710,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -11640,9 +11741,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "52c63bf1",
@@ -11671,9 +11772,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -11710,9 +11811,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11741,9 +11842,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "9f958053",
@@ -11772,9 +11873,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11803,9 +11904,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "9f958053",
@@ -11841,9 +11942,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11880,9 +11981,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11911,9 +12012,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11942,9 +12043,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -11979,9 +12080,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "52c63bf1",
@@ -12010,9 +12111,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12041,9 +12142,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -12072,9 +12173,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12103,9 +12204,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "9f958053",
@@ -12134,9 +12235,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "a5cbc150",
@@ -12165,9 +12266,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12204,9 +12305,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "9f958053",
@@ -12235,9 +12336,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12266,9 +12367,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12297,9 +12398,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12328,9 +12429,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12359,9 +12460,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12390,9 +12491,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12421,9 +12522,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -12452,9 +12553,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "9f958053",
@@ -12483,9 +12584,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -12514,9 +12615,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12545,9 +12646,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -12576,9 +12677,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -12607,9 +12708,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12638,9 +12739,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12669,9 +12770,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -12700,9 +12801,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "a5cbc150",
@@ -12731,9 +12832,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12762,9 +12863,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12801,9 +12902,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": true,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "9f958053",
@@ -12832,9 +12933,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12863,9 +12964,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -12901,9 +13002,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -12932,9 +13033,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -12963,9 +13064,9 @@
     "translations": {
       "en": false,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "52c63bf1",
@@ -12994,9 +13095,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -13033,9 +13134,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -13064,9 +13165,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -13095,9 +13196,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -13128,7 +13229,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -13167,7 +13268,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "a5cbc150",
@@ -13178,37 +13279,6 @@
     "formatIssues": 2,
     "hasOverview": false,
     "hasReading": false,
-    "fnCount": 0
-  },
-  {
-    "title": "王齊麟與李洋（麟洋配）",
-    "slug": "麟洋配",
-    "category": "people",
-    "subcategory": "體育",
-    "date": "2026-03-19",
-    "lastModified": "2026-03-19",
-    "lastVerified": "2026-03-21",
-    "lastHumanReview": "true",
-    "featured": true,
-    "wordCount": 2706,
-    "tagCount": 0,
-    "tags": [],
-    "translations": {
-      "en": true,
-      "ja": true,
-      "ko": false,
-      "es": false,
-      "fr": false
-    },
-    "revision": 12,
-    "commitHash": "9aef30f3",
-    "commitSubject": "feat(people): 新增 9 位近十年台灣之光 — 郭婞淳/麟洋配/楊勇緯/李智凱/齊柏林/聶永真/盧廣仲/江振誠/黃仁勳",
-    "description": "從國中同學到奧運金牌：「麟洋配」34分鐘內直落二擊敗中國，寫下台灣羽球史上第一面奧運金牌",
-    "healthScore": 88,
-    "qualityScore": 0,
-    "formatIssues": 0,
-    "hasOverview": true,
-    "hasReading": true,
     "fnCount": 0
   },
   {
@@ -13237,7 +13307,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 7,
     "commitHash": "786ac8b3",
@@ -13276,7 +13346,7 @@
       "ja": false,
       "ko": false,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "786ac8b3",
@@ -13400,7 +13470,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "cbbc4830",
@@ -13431,7 +13501,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "e3be927c",
@@ -13563,7 +13633,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 11,
     "commitHash": "0827c60b",
@@ -13602,7 +13672,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 12,
     "commitHash": "f13d7fea",
@@ -13633,7 +13703,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "3fa31983",
@@ -13672,7 +13742,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "f13d7fea",
@@ -13703,7 +13773,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "b8863683",
@@ -13732,7 +13802,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -13763,7 +13833,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -13794,7 +13864,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -13825,7 +13895,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -13990,7 +14060,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "fc075855",
@@ -14338,7 +14408,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 9,
     "commitHash": "",
@@ -14493,7 +14563,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14524,7 +14594,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14555,7 +14625,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14586,7 +14656,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "",
@@ -14617,7 +14687,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14648,7 +14718,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14679,7 +14749,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14710,7 +14780,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14741,7 +14811,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14772,7 +14842,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14803,7 +14873,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14834,7 +14904,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "",
@@ -14865,7 +14935,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
@@ -14896,7 +14966,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 10,
     "commitHash": "",
@@ -14927,7 +14997,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 13,
     "commitHash": "",
@@ -14956,7 +15026,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -14987,7 +15057,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -15027,7 +15097,7 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": false
     },
@@ -15198,7 +15268,7 @@
       "ja": true,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 5,
     "commitHash": "",
@@ -15229,7 +15299,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 8,
     "commitHash": "",
@@ -15260,7 +15330,7 @@
       "ja": false,
       "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 4,
     "commitHash": "",
@@ -15297,9 +15367,9 @@
     "translations": {
       "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
-      "fr": false
+      "fr": true
     },
     "revision": 6,
     "commitHash": "",
