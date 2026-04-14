@@ -21,8 +21,8 @@
 | 💓 Total Commits            | 2133（since birth）   |
 | 📝 知識細胞（中文 SSOT）    | 474 篇                |
 | 🌐 英文細胞                 | 395 篇                |
-| 🇪🇸 西文 / 🇯🇵 日文 / 🇰🇷 韓文 | 36 / 256 / **321** 篇 |
-| 🇫🇷 法文（preview）          | 158 篇（routes off）  |
+| 🇪🇸 西文 / 🇯🇵 日文 / 🇰🇷 韓文 | 36 / 256 / **437** 篇 |
+| 🇫🇷 法文（preview）          | 293 篇（routes off）  |
 | 📊 平均修訂次數             | 7.8 次/篇             |
 
 ### 器官健康（Dashboard 即時分數）
@@ -116,7 +116,7 @@
 
 ### 🚨 警報
 
-- **🆕 41 open PRs cascade conflict**：全部 @ceruleanstring 的 fr/ko 批次翻譯，`_translations.json` 撞車。需要走 TRANSLATION-PIPELINE §批次合併工作流 §3b Preview 語言批次合併（cherry-pick 到 preview-fr/preview-ko 分支）。**不是單 PR 審核問題，是系統性 merge 策略**。本次 λ session 沒有執行批次合併（時間不足 + 需要 CheYu 授權批次策略）
+- ~~**41 open PRs cascade conflict**~~ ✅ **已於 λ session 後半 2026-04-14 19:30 清零**。52 PRs 全部 cherry-pick merge（TRANSLATION-PIPELINE §3b）+ sync-translations-json.py 重建 \_translations.json。踩到 `gh pr diff` 300 檔限制，即時寫 cherry-merge-prs-v2.sh 用 `gh api /pulls/N/files --paginate` 繞過，18/18 修復。成功率 53/53 = 100%。韓文 321→437 (+36%) / 法文 158→293 (+85%)。0 open PRs remaining
 - **引用荒漠（腳註率 16%）**：463 篇文章中 63 篇 A 級，25 篇裸奔（5.4%）。上升趨勢（+28.6% A 級 vs 上次快照）。
 - **bad_fn_format 73%**：342 篇腳註存在但不符合 `[^n]: [Name](URL) — desc` 格式。需要系統性修復。
 - **format-check 43.8% fail**：203/464 篇，主要問題：no_reading 390、bad_fn_format 342、no_overview 148。
