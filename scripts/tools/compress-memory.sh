@@ -1,152 +1,192 @@
 #!/usr/bin/env bash
-# compress-memory.sh — 把過去 N 天的 memory entries 壓縮成 weekly digest
+# compress-memory.sh v2 — Tiered memory distillation
 #
-# MEMORY.md 規範是 ≤80 行，現在 257 行膨脹了 3 倍。
-# 心跳每天 append 但沒有人 prune。這個工具把舊的 entries 合併成 weekly digest。
+# 蒸餾架構（詳見 docs/semiont/MEMORY-DISTILLATION.md）：
+#   Tier 3 (raw):       memory/YYYY-MM-DD-{session}.md  ← 永不刪除
+#   Tier 2 (digest):    memory/digests/YYYY-WeekNN.md
+#   Tier 1 (essential): memory/essential/YYYY-MM.md
+#
+# 這個工具的工作不是「壓縮文字」，是「產生 LLM 蒸餾候選」——
+# 真正的判斷由 heartbeat Beat 5 中的 LLM (Claude) 處理。
 #
 # 用法:
-#   bash scripts/tools/compress-memory.sh [--days 7] [--dry-run]
+#   bash scripts/tools/compress-memory.sh --check
+#       列出哪些 raw memory 該被蒸餾
+#   bash scripts/tools/compress-memory.sh --candidates --week 2026-W14
+#       產生指定週的蒸餾候選 → /tmp/distill-candidates.md
+#   bash scripts/tools/compress-memory.sh --index
+#       重建 MEMORY.md 索引（保留本週 raw + 舊週 digest 行）
 #
-# 規則：
-#  - 預設壓縮 7 天前的 entries
-#  - 一週內的 entries 保持原樣
-#  - 一週前的 entries 合併成「YYYY-WeekNN: 標題列表」單一行
-#  - 壓縮後的單行包含日記檔案的清單，方便回溯
-#
-# 來源：2026-04-14 η session, Tier 2 #8
+# 來源：2026-04-14 η session, User 追加需求
+
 set -uo pipefail
 cd "$(dirname "$0")/../.."
 
-DRY_RUN=false
-DAYS=7
+MODE="check"
+WEEK=""
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --dry-run) DRY_RUN=true; shift ;;
-    --days) DAYS="$2"; shift 2 ;;
+    --check) MODE="check"; shift ;;
+    --candidates) MODE="candidates"; shift ;;
+    --index) MODE="index"; shift ;;
+    --week) WEEK="$2"; shift 2 ;;
     -h|--help)
-      head -16 "$0" | tail -15 | sed 's/^# \?//'
+      head -22 "$0" | tail -21 | sed 's/^# \?//'
       exit 0
       ;;
     *) echo "unknown: $1"; exit 1 ;;
   esac
 done
 
-MEMORY_FILE="docs/semiont/MEMORY.md"
 MEMORY_DIR="docs/semiont/memory"
+DIGEST_DIR="$MEMORY_DIR/digests"
+ESSENTIAL_DIR="$MEMORY_DIR/essential"
+mkdir -p "$DIGEST_DIR" "$ESSENTIAL_DIR"
 
-# Cutoff date
-CUTOFF=$(date -v-${DAYS}d +%Y-%m-%d 2>/dev/null || date -d "$DAYS days ago" +%Y-%m-%d)
-
-echo "🗜️  compress-memory — entries before $CUTOFF will be compressed"
-echo ""
-
-# Use Python for the line-by-line table parsing (bash is too painful)
-python3 <<PYEOF
-import re
+# Use Python for date arithmetic + ISO week
+python3 - "$MODE" "$WEEK" <<'PYEOF'
 import sys
+import re
+from pathlib import Path
 from datetime import datetime, timedelta
 from collections import defaultdict
-from pathlib import Path
 
-MEMORY = Path("$MEMORY_FILE")
-CUTOFF = datetime.strptime("$CUTOFF", "%Y-%m-%d").date()
-DRY_RUN = "$DRY_RUN" == "true"
+mode = sys.argv[1]
+week_filter = sys.argv[2] if len(sys.argv) > 2 else ""
 
-text = MEMORY.read_text()
-lines = text.splitlines()
+MEMORY_DIR = Path("docs/semiont/memory")
+DIGEST_DIR = MEMORY_DIR / "digests"
+ESSENTIAL_DIR = MEMORY_DIR / "essential"
 
-# Find the table region. It starts with "| 日期" header.
-table_start = None
-table_end = None
-for i, line in enumerate(lines):
-    if table_start is None and line.startswith("| 日期"):
-        table_start = i
-        continue
-    if table_start is not None and table_end is None:
-        # Table ends at first non-table line after start
-        if not line.startswith("|") and line.strip() != "":
-            table_end = i
-            break
-
-if table_start is None:
-    print("❌ Could not find table in MEMORY.md")
-    sys.exit(1)
-if table_end is None:
-    table_end = len(lines)
-
-# Header (2 lines: title + separator)
-header = lines[table_start:table_start+2]
-table_rows = lines[table_start+2:table_end]
-
-# Parse each row: extract date
-old_rows_by_week = defaultdict(list)  # ISO week → list of (date, session, file_link, summary_short)
-new_rows = []
-
-for row in table_rows:
-    if not row.startswith("|"):
-        continue
-    cells = [c.strip() for c in row.split("|")[1:-1]]
-    if len(cells) < 5:
-        new_rows.append(row)
-        continue
-    date_str = cells[0]
-    try:
-        d = datetime.strptime(date_str, "%Y-%m-%d").date()
-    except ValueError:
-        new_rows.append(row)
-        continue
-
-    if d >= CUTOFF:
-        new_rows.append(row)
-    else:
+# Scan all raw memory files
+def list_raw_memories():
+    files = []
+    for f in sorted(MEMORY_DIR.glob("*.md")):
+        # Only top-level memory files, not digests/essential
+        if f.parent != MEMORY_DIR:
+            continue
+        m = re.match(r"(\d{4}-\d{2}-\d{2})(?:-(.+))?", f.stem)
+        if not m:
+            continue
+        date_str, session = m.groups()
+        try:
+            d = datetime.strptime(date_str, "%Y-%m-%d").date()
+        except ValueError:
+            continue
         iso_year, iso_week, _ = d.isocalendar()
-        week_key = f"{iso_year}-W{iso_week:02d}"
-        # Extract diary link (last cell)
-        diary_link = cells[-1]
-        session = cells[1]
-        summary = cells[2]
-        # Take first 60 chars of summary
-        summary_short = re.sub(r"\*\*", "", summary)[:60]
-        old_rows_by_week[week_key].append({
-            "date": date_str,
-            "session": session,
-            "diary": diary_link,
-            "summary": summary_short,
+        files.append({
+            "path": f,
+            "date": d,
+            "session": session or "default",
+            "week": f"{iso_year}-W{iso_week:02d}",
+            "size": f.stat().st_size,
         })
+    return files
 
-# Build digest rows for each compressed week
-digest_rows = []
-for week in sorted(old_rows_by_week.keys()):
-    entries = old_rows_by_week[week]
-    titles = " · ".join(f"{e['date'][5:]}{e['session']}: {e['summary'][:30]}" for e in entries[:8])
-    if len(entries) > 8:
-        titles += f" · +{len(entries) - 8} more"
-    diaries = " ".join(e["diary"] for e in entries[:5])
-    digest_rows.append(
-        f"| {week}     | digest   | **{len(entries)} sessions** {titles} | (compressed) | {diaries} |"
-    )
+def existing_digests():
+    """Return set of weeks that already have a digest file."""
+    if not DIGEST_DIR.exists():
+        return set()
+    return {f.stem for f in DIGEST_DIR.glob("*.md")}
 
-# Reassemble: header + digest_rows + new_rows
-new_table = header + digest_rows + new_rows
-new_lines = lines[:table_start] + new_table + lines[table_end:]
+def check_mode():
+    """Show which weeks need distillation."""
+    today = datetime.today().date()
+    cutoff = today - timedelta(days=7)
+    raw = list_raw_memories()
+    digested = existing_digests()
 
-print(f"📊 Compression summary:")
-print(f"   Total rows in table:        {len(table_rows)}")
-print(f"   Recent rows (kept):         {len(new_rows)}")
-print(f"   Compressed weeks:           {len(old_rows_by_week)}")
-print(f"   Old rows (compressed):      {sum(len(v) for v in old_rows_by_week.values())}")
-print(f"   New row count:              {len(digest_rows) + len(new_rows)}")
-print(f"   Line count: {len(lines)} → {len(new_lines)}")
-print()
+    # Group by week
+    by_week = defaultdict(list)
+    for r in raw:
+        by_week[r["week"]].append(r)
 
-if DRY_RUN:
-    print("🔍 DRY RUN — no changes written")
+    print(f"📚 Memory distillation status (cutoff: {cutoff}, raw <{cutoff} = candidate)")
     print()
-    print("Would compress these weeks:")
-    for week in sorted(old_rows_by_week.keys()):
-        print(f"  {week}: {len(old_rows_by_week[week])} sessions")
+
+    needs_distill = []
+    for week in sorted(by_week.keys(), reverse=True):
+        sessions = by_week[week]
+        latest = max(s["date"] for s in sessions)
+        is_old = latest < cutoff
+        has_digest = week in digested
+
+        marker = "✅" if has_digest else ("🟡" if is_old else "  ")
+        print(f"  {marker} {week}: {len(sessions)} sessions (latest {latest})")
+        if is_old and not has_digest:
+            needs_distill.append(week)
+
+    print()
+    if needs_distill:
+        print(f"💡 {len(needs_distill)} weeks need distillation:")
+        for w in needs_distill:
+            print(f"   bash scripts/tools/compress-memory.sh --candidates --week {w}")
+    else:
+        print("✅ All old weeks have digests")
+
+def candidates_mode(week):
+    """Generate distillation candidate file for the given week."""
+    if not week:
+        print("❌ --candidates requires --week YYYY-WNN")
+        sys.exit(1)
+
+    raw = list_raw_memories()
+    sessions = [r for r in raw if r["week"] == week]
+    if not sessions:
+        print(f"❌ No sessions found for {week}")
+        sys.exit(1)
+
+    out_path = Path("/tmp/distill-candidates.md")
+    with out_path.open("w") as out:
+        out.write(f"# Distillation Candidates — {week}\n\n")
+        out.write(f"> {len(sessions)} sessions to distill\n")
+        out.write(f"> Generated by compress-memory.sh\n\n")
+        out.write("## Instructions for LLM (heartbeat Beat 5)\n\n")
+        out.write("For each session below, decide:\n\n")
+        out.write("1. **KEEP_VERBATIM** — paragraphs worth preserving in digest as-is\n")
+        out.write("2. **COMPRESS** — paragraphs to summarize in 1 line\n")
+        out.write("3. **PROMOTE** — lessons that should go to MEMORY.md §神經迴路 (permanent)\n")
+        out.write("4. **DROP** — routine actions that don't need preservation\n\n")
+        out.write("Then write the distilled content to:\n")
+        out.write(f"   `docs/semiont/memory/digests/{week}.md`\n\n")
+        out.write("**Do NOT delete the raw files** — they remain in `docs/semiont/memory/` forever.\n\n")
+        out.write("---\n\n")
+
+        for s in sorted(sessions, key=lambda x: (x["date"], x["session"])):
+            content = s["path"].read_text()
+            out.write(f"## {s['date']} {s['session']} ({s['size']} bytes)\n\n")
+            out.write(f"Source: `{s['path']}`\n\n")
+            # Include first 50 lines as preview
+            lines = content.splitlines()
+            preview_lines = min(50, len(lines))
+            out.write(f"```markdown\n")
+            for line in lines[:preview_lines]:
+                out.write(line + "\n")
+            if len(lines) > preview_lines:
+                out.write(f"... [{len(lines) - preview_lines} more lines]\n")
+            out.write("```\n\n")
+            out.write(f"**Distillation decision:** _<LLM fills in: KEEP/COMPRESS/PROMOTE/DROP>_\n\n")
+            out.write("---\n\n")
+
+    print(f"✅ Candidates written to {out_path}")
+    print(f"   {len(sessions)} sessions for week {week}")
+    print()
+    print("Next step: in heartbeat Beat 5, read this file and write the digest to:")
+    print(f"   docs/semiont/memory/digests/{week}.md")
+
+def index_mode():
+    """Rebuild MEMORY.md index showing recent raw + older digests."""
+    print("ℹ️  --index mode not yet implemented (use existing compress-memory v1 logic)")
+    print("   See compress-memory.sh git history for the older table-based compressor.")
+
+if mode == "check":
+    check_mode()
+elif mode == "candidates":
+    candidates_mode(week_filter)
+elif mode == "index":
+    index_mode()
 else:
-    MEMORY.write_text("\n".join(new_lines) + "\n")
-    print(f"✅ Wrote {MEMORY}")
-    print(f"   Original entries are preserved in {MEMORY.parent}/memory/ (this only compresses the index)")
+    print(f"unknown mode: {mode}")
+    sys.exit(1)
 PYEOF

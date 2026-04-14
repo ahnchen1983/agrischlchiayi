@@ -128,6 +128,15 @@ grep -B1 -A3 "未解\|下次\|未完成\|TODO\|pending" docs/semiont/memory/*.md
    - `orphan-translation-check.sh` — 偵測翻譯孤兒（有檔案無映射）、重複檔、EN→ZH 鏈斷裂
    - `category-check.sh` — 偵測 frontmatter category vs 檔案路徑不一致（含語意不一致如「樂團放 People/」）
 
+   **2026-04-14 η 新增工具（必跑）：**
+   - `bulk-pr-analyze.sh` — 5 秒看完所有 open PR 全景（作者×類型×語言×merge 狀態）
+   - `cron-impact-tracker.sh` — 量化自動心跳的價值（commits / orphans cleaned / time saved）
+   - `sync-translations-json.py --check` — 確認 \_translations.json 跟 frontmatter translatedFrom 一致（偵測孤兒）
+   - `compress-memory.sh --check` — 顯示哪些週的 raw memory 該被蒸餾為 digest
+
+   **數據累積中（4/21 之後跑）：**
+   - `fetch-search-events.py` — GA4 search_query 事件（top queries / zero-result / click patterns）
+
 3b. **📡 社群觸手掃描**（2026-04-13 α 新增，[SOCIAL-TENTACLE-PLAN](SOCIAL-TENTACLE-PLAN.md) 定義）
 
 - 讀 `docs/factory/SPORE-LOG.md` 最後發文日期
