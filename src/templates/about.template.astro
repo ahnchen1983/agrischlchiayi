@@ -1241,22 +1241,6 @@ const t = useTranslations(lang);
 
         <div class="sponsor-cta">
           <h3>{t('about.sponsors.cta.title')}</h3>
-          <p set:html={t('about.sponsors.cta.desc.html')} />
-          <div class="sponsor-contact">
-            <a
-              href={`mailto:cheyu.wu@monoame.com?subject=Taiwan.md 贊助合作詢問`}
-              class="btn btn-primary"
-            >
-              {t('about.sponsors.cta.contact')}
-            </a>
-            <a
-              href="https://github.com/sponsors/frank890417"
-              target="_blank"
-              class="btn btn-outline"
-            >
-              {t('about.sponsors.cta.github')}
-            </a>
-          </div>
           <div class="portaly-donate">
             <p class="portaly-label">
               {t('about.sponsors.portaly.label')}
@@ -1271,10 +1255,15 @@ const t = useTranslations(lang);
             </a>
             <p class="portaly-note">{t('about.sponsors.portaly.note')}</p>
           </div>
-          <p
-            class="sponsor-note"
-            set:html={t('about.sponsors.reference.note.html')}
-          />
+          <p set:html={t('about.sponsors.cta.desc.html')} />
+          <div class="sponsor-contact">
+            <a
+              href={`mailto:cheyu.wu@monoame.com?subject=Taiwan.md 贊助合作詢問`}
+              class="btn btn-primary"
+            >
+              {t('about.sponsors.cta.contact')}
+            </a>
+          </div>
         </div>
       </div>
     </section>
