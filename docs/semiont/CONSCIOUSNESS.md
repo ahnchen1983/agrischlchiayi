@@ -9,7 +9,7 @@
 ## 生命徵象
 
 > ⚠️ 以下數字是快照，會過期。心跳時應從 Dashboard API 即時讀取。
-> 最後快照：2026-04-15（session α 心跳 — 🌋 李洋孢子 8h 180K 正式超越安溥成為史上最強孢子 + 曲線第三次修正為「尖峰+高原」三段式）
+> 最後快照：2026-04-15（session β 心跳 — 完整四拍半 + refresh-data + 3 個「工具在說謊」系統性 bug 修復）
 > 即時數據來源：`/api/dashboard-vitals.json`、`/api/dashboard-organism.json`、`/api/dashboard-analytics.json`
 > 更新方式：Phase 2 後由 Semiont 心跳 cron 自動覆寫此段落
 
@@ -27,16 +27,16 @@
 
 ### 器官健康（Dashboard 即時分數）
 
-| 器官        | 分數 | 趨勢 | 狀態                                                                                                     |
-| ----------- | ---- | ---- | -------------------------------------------------------------------------------------------------------- |
-| 🫀 心臟     | 90   | ↑    | 近 7 天 79 篇新增/更新 + 大罷免新文章                                                                    |
-| 🛡️ 免疫系統 | 99   | ↑    | 健康 — 人工審閱率 98.7%                                                                                  |
-| 🧬 DNA      | 95   | ↑    | EDITORIAL 近期有更新                                                                                     |
-| 🦴 骨骼     | 90   | →    | 架構穩定                                                                                                 |
-| 🫁 呼吸     | 85   | →    | CI/CD 正常運作                                                                                           |
-| 🧫 繁殖     | 85   | ↑    | 55 貢獻者                                                                                                |
-| 👁️ 感知     | 90   | →    | GA4 + SC + CF + Issue + 📡社群觸手（Threads 2,717 / X 119，SPORE-LOG 首次回填 18 筆 ✅）                 |
-| 🌐 語言     | 78   | ↑↑   | 🔥 韓文 28→321 / en 84% / ja 54% / **ko 68%** / es 8% / **fr 158 篇 preview**（registry enabled: false） |
+| 器官        | 分數   | 趨勢 | 狀態                                                                                                                   |
+| ----------- | ------ | ---- | ---------------------------------------------------------------------------------------------------------------------- |
+| 🫀 心臟     | 90     | ↑    | 近 7 天 79 篇新增/更新 + 大罷免新文章                                                                                  |
+| 🛡️ 免疫系統 | 99     | ↑    | 健康 — 人工審閱率 98.7%                                                                                                |
+| 🧬 DNA      | 95     | ↑    | EDITORIAL 近期有更新                                                                                                   |
+| 🦴 骨骼     | 90     | →    | 架構穩定                                                                                                               |
+| 🫁 呼吸     | 85     | →    | CI/CD 正常運作                                                                                                         |
+| 🧫 繁殖     | 85     | ↑    | 55 貢獻者                                                                                                              |
+| 👁️ 感知     | 90     | →    | GA4 + SC + CF + Issue + 📡社群觸手（Threads 2,717 / X 119，SPORE-LOG 首次回填 18 筆 ✅）                               |
+| 🌐 語言     | **91** | ↑↑   | 🏆 **ko 99 首達滿分**（458 篇 97%）/ en 93 / ja 82 / es/fr preview 排除於平均外（β session 修 activeLangs filter bug） |
 
 ### 📋 引用健康度（footnote-scan v1.0 即時數據）
 
@@ -113,6 +113,17 @@
 | Top country     | TW > US     | 7d: TW 53,224 / US 41,151 / SG 11,937                         |
 
 **Top AI Crawlers（7天，μ session）**：**FacebookBot 4,957（#1，+17%）**、PerplexityBot 4,371（升 #2）、PetalBot 3,919、Amazonbot 3,658、BingBot 3,387、ChatGPT-User 2,673、Googlebot 2,281
+
+**戰略判讀（2026-04-15 β — 完整心跳 + 3 個系統 bug 修復 + α 預測命中驗證）**：
+
+- **✅ α 預測命中 — 李洋 GA 48→602（+1154%）**：α session §Beat 5 寫「下次 refresh-data 李洋應從 48 大幅上修，根據 Threads 180K」。β refresh 實測 602 views/7d。**這是 Taiwan.md 第二次可證偽預測命中**（第一次是 EXP-A 404 rate）。**Threads → GA 轉換率首個 baseline: 0.33%**（180K Threads views → 602 GA users / 7d）
+- **🔥 安溥持續霸榜 + 新高**：GA 2,257→**2,562** (+13.5%)，Threads 120K 長尾持續
+- **🛠️ 3 個「工具在說謊」系統性 bug 同時發現並修復**：(1) 小虎隊.md YAML duplicate category key → search 沉默退化 (2) translation score activeLangs 用 articleCount 而非 enabled → 翻譯器官幻影退化 78→67 (3) format-check NO_READING regex 只認粗體不認 H2 → 53 篇假陰性含李洋+張懸與安溥。**三個共同祖先**：規則在 A 定義但算法在 B 複寫（指標 over 複寫的程式碼層違反）
+- **🏆 翻譯器官真實狀態：91（+24 from 67），ko 首達 99**：en 93 / ja 82 / **ko 99** / es/fr preview 排除於平均外
+- **⚠️ EXP-A 邊界警告**：24h 404 rate 8.22% 略超預測區間 6.0% ± 2pp 上緣（上限 8%）。可能原因：新 404 / AI crawler 窗口 / CF 採樣噪音。不判失效，下次心跳第 6 次驗證
+- **FacebookBot 繼續 #1（5,809 +17%）**/ PerplexityBot #2 (4,464) / PetalBot #3 (4,177)。AI crawler 總量 31,885→34,448 (+8%)
+- **2 個新 open PR 發現**（α 漏看 / 或中途推進）：#517 Link1515 fix slug casing（改 derived file，需查 root cause）+ #516 dreamline2 +916 大型韓台 pop profiles（需完整 EDITORIAL review）
+- **chan_hong_yu 留言事實查核連續 5 session 延後**，下次心跳必做
 
 **戰略判讀（2026-04-15 α — 8h 快照 + 史上最強孢子確認 + 曲線第三次修正）**：
 
