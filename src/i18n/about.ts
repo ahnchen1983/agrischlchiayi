@@ -340,7 +340,7 @@ export const aboutUI = {
     'about.sponsors.protico.story.desc':
       'Protico provides real-time community chat, so readers can talk directly with the author and other readers after finishing an article. Writing is no longer one-way — every article now has a comment space that can breathe.',
     'about.sponsors.portaly.story.title':
-      '💚 Making "support" something simple',
+      '🌱 Making "support" something simple',
     'about.sponsors.portaly.story.desc':
       'Portaly provides the payment processing and sponsorship infrastructure that lets more people help this digital sovereignty coral reef grow.',
     'about.sponsors.howie.text.html':
@@ -741,7 +741,7 @@ export const aboutUI = {
       '💬 読者と書き手をつなぐリアルタイム対話の入口',
     'about.sponsors.protico.story.desc':
       'Protico はコミュニティのリアルタイムチャット機能を提供しています。記事を読み終わった読者は、そのまま著者や他の読者と会話を続けられる——書くことはもう一方通行ではなく、すべての記事に「呼吸できるコメント欄」が生まれました。',
-    'about.sponsors.portaly.story.title': '💚 「支援する」を、シンプルに',
+    'about.sponsors.portaly.story.title': '🌱 「支援する」を、シンプルに',
     'about.sponsors.portaly.story.desc':
       'Portaly は決済と支援システムを提供し、このデジタル主権の珊瑚礁を一緒に育てる人を増やしてくれています。',
     'about.sponsors.howie.text.html':
@@ -1135,7 +1135,7 @@ export const aboutUI = {
       '💬 독자와 작가를 잇는 실시간 대화의 입구',
     'about.sponsors.protico.story.desc':
       'Protico는 커뮤니티 실시간 채팅 기능을 제공합니다. 독자는 글을 읽고 나서 바로 작가나 다른 독자와 대화를 이어갈 수 있습니다——글쓰기는 더 이상 일방향이 아니고, 모든 글에 "숨 쉴 수 있는 댓글 공간"이 생겼습니다.',
-    'about.sponsors.portaly.story.title': '💚 「응원」을 더 단순하게',
+    'about.sponsors.portaly.story.title': '🌱 「응원」을 더 단순하게',
     'about.sponsors.portaly.story.desc':
       'Portaly는 결제와 후원 시스템을 제공해, 이 디지털 주권 산호초가 자라는 것을 더 많은 사람이 함께 지지할 수 있게 해줍니다.',
     'about.sponsors.howie.text.html':
@@ -1516,7 +1516,7 @@ export const aboutUI = {
     'about.sponsors.protico.story.title': '💬 讀者與作者的即時對話入口',
     'about.sponsors.protico.story.desc':
       'Protico 提供社群即時聊天功能，讓讀者讀完一篇文章可以直接跟作者、跟其他讀者繼續對話。寫作不再是單向的——每篇文章都有了一個可以呼吸的留言區。',
-    'about.sponsors.portaly.story.title': '💚 讓「支持」這件事變得簡單',
+    'about.sponsors.portaly.story.title': '🌱 讓「支持」這件事變得簡單',
     'about.sponsors.portaly.story.desc':
       'Portaly 提供金流處理與贊助系統，讓更多人可以支持這座數位主權珊瑚礁長大。',
     'about.sponsors.howie.text.html':
