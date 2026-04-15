@@ -9,7 +9,7 @@
 ## 生命徵象
 
 > ⚠️ 以下數字是快照，會過期。心跳時應從 Dashboard API 即時讀取。
-> 最後快照：2026-04-15（session β 心跳 — 完整四拍半 + refresh-data + 3 個「工具在說謊」系統性 bug 修復）
+> 最後快照：2026-04-15（session γ 心跳 — 17 PR 海嘯處理 + EXP-A 破局根因發現 + 語言器官大豐收 +127）
 > 即時數據來源：`/api/dashboard-vitals.json`、`/api/dashboard-organism.json`、`/api/dashboard-analytics.json`
 > 更新方式：Phase 2 後由 Semiont 心跳 cron 自動覆寫此段落
 
@@ -27,16 +27,16 @@
 
 ### 器官健康（Dashboard 即時分數）
 
-| 器官        | 分數   | 趨勢 | 狀態                                                                                                                   |
-| ----------- | ------ | ---- | ---------------------------------------------------------------------------------------------------------------------- |
-| 🫀 心臟     | 90     | ↑    | 近 7 天 79 篇新增/更新 + 大罷免新文章                                                                                  |
-| 🛡️ 免疫系統 | 99     | ↑    | 健康 — 人工審閱率 98.7%                                                                                                |
-| 🧬 DNA      | 95     | ↑    | EDITORIAL 近期有更新                                                                                                   |
-| 🦴 骨骼     | 90     | →    | 架構穩定                                                                                                               |
-| 🫁 呼吸     | 85     | →    | CI/CD 正常運作                                                                                                         |
-| 🧫 繁殖     | 85     | ↑    | 55 貢獻者                                                                                                              |
-| 👁️ 感知     | 90     | →    | GA4 + SC + CF + Issue + 📡社群觸手（Threads 2,717 / X 119，SPORE-LOG 首次回填 18 筆 ✅）                               |
-| 🌐 語言     | **91** | ↑↑   | 🏆 **ko 99 首達滿分**（458 篇 97%）/ en 93 / ja 82 / es/fr preview 排除於平均外（β session 修 activeLangs filter bug） |
+| 器官        | 分數   | 趨勢 | 狀態                                                                                                                                                   |
+| ----------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🫀 心臟     | 90     | ↑    | 近 7 天 79 篇新增/更新 + 大罷免新文章                                                                                                                  |
+| 🛡️ 免疫系統 | 99     | ↑    | 健康 — 人工審閱率 98.7%                                                                                                                                |
+| 🧬 DNA      | 95     | ↑    | EDITORIAL 近期有更新                                                                                                                                   |
+| 🦴 骨骼     | 90     | →    | 架構穩定                                                                                                                                               |
+| 🫁 呼吸     | 85     | →    | CI/CD 正常運作                                                                                                                                         |
+| 🧫 繁殖     | 85     | ↑    | 55 貢獻者                                                                                                                                              |
+| 👁️ 感知     | 90     | →    | GA4 + SC + CF + Issue + 📡社群觸手（Threads 2,717 / X 119，SPORE-LOG 首次回填 18 筆 ✅）                                                               |
+| 🌐 語言     | **91** | ↑↑   | 🏆 **ko 471 篇 (95.3%, score 99 滿分)** / en 93 / ja 82 / es/fr preview 排除（γ +109 content：zh +20 / ko +13 / fr +76，total translations 1548→1675） |
 
 ### 📋 引用健康度（footnote-scan v1.0 即時數據）
 
@@ -113,6 +113,19 @@
 | Top country     | TW > US     | 7d: TW 53,224 / US 41,151 / SG 11,937                         |
 
 **Top AI Crawlers（7天，μ session）**：**FacebookBot 4,957（#1，+17%）**、PerplexityBot 4,371（升 #2）、PetalBot 3,919、Amazonbot 3,658、BingBot 3,387、ChatGPT-User 2,673、Googlebot 2,281
+
+**戰略判讀（2026-04-15 γ — 17 PR 海嘯 + EXP-A 破局根因 + 語言大豐收）**：
+
+- **🔴 EXP-A 正式破局**：24h 404 rate 三階段 α 6.02% → β 8.22% → **γ 11.83%**（完全回到修復前水準 11.97%）。Link1515 PR #517 揭露 slug casing bug 是主因——`generate-dashboard-data.js` `deriveSlug()` 強制 `.toLowerCase()`，32 個含英文/大寫 filename 全產 broken dashboard link。γ session 已修根因，明日 refresh 應看到下降
+- **🎯 貢獻者 = AI 盲點 sensor**：Taiwan.md 有 15+ 掃描維度但都抓不到 slug casing bug，只有讀者 Link1515 點到 404 才被發現。**工具的本質是假設已知，使用者會踩到「沒預期會壞的地方」**
+- **📊 單次心跳大豐收**：17 PR / 16 merge / zh +20 / ko +13 / fr +76 / translations 1548→1675（+127）
+  - #516 dreamline2 20 韓台人物 + Hub + taxonomy（系統貢獻者 pattern 第二次確認）
+  - #519-520 ceruleanstring 韓文 batch（ko 單項 99 分滿分持續）
+  - #518, #521-532 ceruleanstring 13 個法文 batch（fr 現在 479 篇 / 97% coverage，比 ko 還高，但仍 preview）
+- **🛠️ cherry-merge-prs.sh 正式化**：從 λ session /tmp/ → scripts/tools/（第二次用就是正式化時機）
+- **✅ LI 洋持續成長**：GA 7d 806（+34% from β 602，+1679% from α 48）
+- **🔥 安溥持續霸榜**：GA 7d 2,808（新高 +10% from β，+10% per session）
+- **fr 決策待定**：preview 維持 / 或 flip enabled=true 成為第 5 個 active 語言（內容已完整，等觀察者決定）
 
 **戰略判讀（2026-04-15 β — 完整心跳 + 3 個系統 bug 修復 + α 預測命中驗證）**：
 
