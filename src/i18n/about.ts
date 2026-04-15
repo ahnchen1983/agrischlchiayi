@@ -337,6 +337,8 @@ export const aboutUI = {
       "A knowledge base about Taiwan deserves to be written with Taiwan's own fonts. justfont sponsored the Webfont solution, making the warmth of Lanyang Mingti, the Taiwanese flavor of Citrus Honey, and the historical weight of Rixing Song become the first impression of every article. Typography is not just a typesetting tool — it carries the way a culture views itself.",
     'about.sponsors.protico.text.html':
       '<strong>Protico</strong> — Providing community real-time chat functionality, enabling direct communication between readers and contributors',
+    'about.sponsors.portaly.community.text.html':
+      '<strong>Portaly</strong> — Provides payment processing and sponsorship infrastructure that lets more people help this digital sovereignty coral reef grow',
     'about.sponsors.howie.text.html':
       '<strong>Howie Young</strong> — Protico founder, also sponsoring as an individual',
 
@@ -733,6 +735,8 @@ export const aboutUI = {
       '台湾についてのナレッジベースは、台湾の書体で書かれるべきです。justfont が Webfont ソリューションを提供し、蘭陽明朝体の温もり、柑仔蜜の台湾テイスト、日星宋体の歴史的重みが、すべての記事の第一印象となりました。書体はただの組版ツールではありません——それは文化が自分自身を見つめる方法を体現しています。',
     'about.sponsors.protico.text.html':
       '<strong>Protico</strong> — コミュニティのリアルタイムチャット機能を提供し、読者とコントリビューターの直接交流を実現',
+    'about.sponsors.portaly.community.text.html':
+      '<strong>Portaly</strong> — 決済と支援システムを提供し、このデジタル主権の珊瑚礁を一緒に育てる人を増やしてくれている',
     'about.sponsors.howie.text.html':
       '<strong>Howie Young</strong> — Protico 創設者、個人としてもスポンサー',
 
@@ -1122,6 +1126,8 @@ export const aboutUI = {
       '대만에 관한 지식 베이스는 대만의 서체로 쓰여야 합니다. justfont가 Webfont 솔루션을 후원하여 란양명조의 온화함, 감자꿀의 대만 맛, 일성송체의 역사적 무게가 모든 문서의 첫인상이 되었습니다. 서체는 단순한 조판 도구가 아닙니다 — 하나의 문화가 스스로를 바라보는 방식을 담고 있습니다.',
     'about.sponsors.protico.text.html':
       '<strong>Protico</strong> — 커뮤니티 실시간 채팅 기능을 제공하여 독자와 기여자가 직접 소통할 수 있도록',
+    'about.sponsors.portaly.community.text.html':
+      '<strong>Portaly</strong> — 결제와 후원 시스템을 제공해, 이 디지털 주권 산호초가 자라는 것을 더 많은 사람이 함께 지지할 수 있도록',
     'about.sponsors.howie.text.html':
       '<strong>Howie Young</strong> — Protico 창립자, 개인 자격으로도 후원',
 
@@ -1499,6 +1505,8 @@ export const aboutUI = {
       '一個關於台灣的知識庫，值得用台灣的字體來書寫。justfont 贊助了 Webfont 方案，讓蘭陽明體的溫潤、柑仔蜜的台味、日星宋體的歷史重量，成為每一篇文章的第一印象。字體不只是排版工具——它承載著一個文化看待自己的方式。',
     'about.sponsors.protico.text.html':
       '<strong>Protico</strong> — 提供社群即時聊天功能，讓讀者與貢獻者能直接交流',
+    'about.sponsors.portaly.community.text.html':
+      '<strong>Portaly</strong> — 提供金流處理與贊助系統，讓更多人可以支持這座數位主權珊瑚礁長大',
     'about.sponsors.howie.text.html':
       '<strong>Howie Young</strong> — Protico 創辦人，同時以個人身份贊助',
 

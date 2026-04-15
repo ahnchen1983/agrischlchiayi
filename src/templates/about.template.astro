@@ -1189,6 +1189,15 @@ const t = useTranslations(lang);
               >
                 <span set:html={t('about.sponsors.protico.text.html')} />
               </a>
+              <a
+                href="https://portaly.cc"
+                target="_blank"
+                class="supporter-link"
+              >
+                <span
+                  set:html={t('about.sponsors.portaly.community.text.html')}
+                />
+              </a>
             </div>
           </div>
 
@@ -2609,12 +2618,14 @@ const t = useTranslations(lang);
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     border-top: 1px dashed #e2e8f0;
+    text-align: center;
   }
   .portaly-label {
     font-size: 0.95rem;
     color: #475569;
-    margin-bottom: 0.85rem;
+    margin: 0 auto 0.85rem;
     line-height: 1.6;
+    max-width: 32em;
   }
   .portaly-link {
     display: inline-flex;
@@ -2639,9 +2650,9 @@ const t = useTranslations(lang);
   .portaly-note {
     font-size: 0.82rem;
     color: #64748b;
-    margin-top: 0.85rem;
+    margin: 0.85rem auto 0;
     line-height: 1.65;
-    max-width: 30em;
+    max-width: 32em;
   }
   .supporter-link {
     display: inline-block;
