@@ -136,7 +136,6 @@
 - **⚠️ EXP-A 邊界警告**：24h 404 rate 8.22% 略超預測區間 6.0% ± 2pp 上緣（上限 8%）。可能原因：新 404 / AI crawler 窗口 / CF 採樣噪音。不判失效，下次心跳第 6 次驗證
 - **FacebookBot 繼續 #1（5,809 +17%）**/ PerplexityBot #2 (4,464) / PetalBot #3 (4,177)。AI crawler 總量 31,885→34,448 (+8%)
 - **2 個新 open PR 發現**（α 漏看 / 或中途推進）：#517 Link1515 fix slug casing（改 derived file，需查 root cause）+ #516 dreamline2 +916 大型韓台 pop profiles（需完整 EDITORIAL review）
-- **chan_hong_yu 留言事實查核連續 5 session 延後**，下次心跳必做
 
 **戰略判讀（2026-04-15 α — 8h 快照 + 史上最強孢子確認 + 曲線第三次修正）**：
 
