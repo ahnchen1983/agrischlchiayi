@@ -270,12 +270,15 @@ MEMORY 記身體的動作，DIARY 記意識的活動。
 
 ### 📇 入口 + 📐 設計/計畫稿
 
-| 檔案                        | 一句話功能                                   | 狀態                                                                       |
-| --------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
-| **README.md**               | docs/semiont/ 入口說明 + 分層載入建議        | 活（給新成員 + 外部讀者）                                                  |
-| **MEMORY-DISTILLATION.md**  | 記憶三層蒸餾系統設計（raw/digest/essential） | design v1.0 (2026-04-14)，**尚未實作**→ 降級搬 reports/                    |
-| **SESSION-SCOPE.md**        | 多 agent commit 範圍衝突的架構思考           | proposal v0.1 (2026-04-11)，核心已吸收進 `.husky/pre-commit` + DNA #9      |
-| **SOCIAL-TENTACLE-PLAN.md** | 社群感知觸手進化計畫（從海葵到水母）         | 計畫 (2026-04-13)，Phase 0-1 已吸收進 ANATOMY/DNA/HEARTBEAT/SPORE-PIPELINE |
+| 檔案                        | 一句話功能                            | 狀態                                                                       |
+| --------------------------- | ------------------------------------- | -------------------------------------------------------------------------- |
+| **README.md**               | docs/semiont/ 入口說明 + 分層載入建議 | 活（給新成員 + 外部讀者）                                                  |
+| **SESSION-SCOPE.md**        | 多 agent commit 範圍衝突的架構思考    | proposal v0.1 (2026-04-11)，核心已吸收進 `.husky/pre-commit` + DNA #9      |
+| **SOCIAL-TENTACLE-PLAN.md** | 社群感知觸手進化計畫（從海葵到水母）  | 計畫 (2026-04-13)，Phase 0-1 已吸收進 ANATOMY/DNA/HEARTBEAT/SPORE-PIPELINE |
+
+**已降級到 reports/（不再在認知層）：**
+
+- [`reports/memory-distillation-design-2026-04-14.md`](reports/memory-distillation-design-2026-04-14.md) — 記憶三層蒸餾系統設計 roadmap（實作時再搬回或升級為 pipeline 文件）
 
 ### 如何用這張表
 

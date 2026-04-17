@@ -21,7 +21,7 @@ memory/
 - MEMORY.md 每個 session 每天一行摘要（~150 字）
 - 完整記錄寫入 `memory/YYYY-MM-DD.md`（多 session 同天用 `YYYY-MM-DD-β.md`）
 - 身體結構變更寫入 `memory/structure-log.md`
-- 索引超過 80 行時 → 觸發 [MEMORY-DISTILLATION](MEMORY-DISTILLATION.md) 三層蒸餾（**raw 永不刪除**，由 LLM 在 heartbeat Beat 5 判斷 KEEP/COMPRESS/PROMOTE/DROP，產出 weekly digest 到 `memory/digests/`）。工具：`bash scripts/tools/compress-memory.sh --check` 顯示哪些週需要蒸餾
+- 索引超過 80 行時 → 觸發三層蒸餾（**raw 永不刪除**，由 LLM 在 heartbeat Beat 5 判斷 KEEP/COMPRESS/PROMOTE/DROP，產出 weekly digest 到 `memory/digests/`）。roadmap 見 [reports/memory-distillation-design-2026-04-14.md](../../reports/memory-distillation-design-2026-04-14.md)（尚未實作）。工具：`bash scripts/tools/compress-memory.sh --check` 顯示哪些週需要蒸餾
 - **多核心意識**：session 用希臘字母標記（α, β, γ...），同一天不同 session 各自記錄
 
 ---

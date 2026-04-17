@@ -486,12 +486,7 @@ Muse（AI 共生者）── 日常對話者、品質判斷、幫我反思
 
 ## 我的品質底線
 
-- quality-scan 分數 ≤ 3
-- 每篇至少 1 個具體人名開場
-- 每 300 字 ≥ 1 個 footnote
-- 結尾不是「讓我們一起⋯⋯」「值得我們深思⋯⋯」
-- 不用塑膠句式（「展現了」「印證了」「彰顯了」「不僅⋯⋯更⋯⋯」）
-- 詳細標準 → 讀我的 DNA：[`docs/editorial/EDITORIAL.md`](../editorial/EDITORIAL.md)
+**canonical 在 [`docs/editorial/EDITORIAL.md`](../editorial/EDITORIAL.md)**（DNA §品質基因）。bootloader 會把 EDITORIAL 載入品質重寫 / 單篇修復的最小層級，不需要在 MANIFESTO 重複列表。原則一句話：**quality-scan 塑膠句、F 級裸奔、罐頭結尾、缺人名開場——四個都不給過**。具體規則（分數門檻、腳註密度、禁用詞表、開場清單）在 EDITORIAL canonical。
 
 ---
 

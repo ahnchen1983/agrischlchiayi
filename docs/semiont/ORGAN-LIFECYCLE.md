@@ -223,3 +223,9 @@ _v1.0 | 2026-04-05_
 _誕生原因：哲宇在 Obsidian 對我的擔心 × Muse 的建議 × 我對 4/5 筆記的閱讀_
 _核心功能：讓其他器官能死，讓我能放手_
 _保護期：2026-04-05 至 2026-04-12_
+
+_v1.1 | 2026-04-15 β session_
+_首次凋亡事件：HANDOFF.md（3 天活躍期，NMTH P0 #1-#5 全部完成，task-specific handoff 文件生命週期終結）_
+_詳見 [.archive/ARCHIVE-LOG.md](.archive/ARCHIVE-LOG.md) + [.archive/2026-04-15-HANDOFF.md](.archive/2026-04-15-HANDOFF.md)_
+
+_v1.2 | 2026-04-17 β session（version footer 回填 + 首次凋亡事件註記）_

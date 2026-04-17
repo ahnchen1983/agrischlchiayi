@@ -1,4 +1,9 @@
-# MEMORY-DISTILLATION — 記憶蒸餾系統設計
+# MEMORY-DISTILLATION — 記憶蒸餾系統設計（roadmap）
+
+> ⚠️ **Status: design v1.0 (2026-04-14)，尚未實作。**
+> 2026-04-17 β session 從 `docs/semiont/` 降級搬到 `reports/`：它是 roadmap，不是活的認知器官。
+> 未實作項目：`compress-memory.sh v2` 候選產生器 / `memory/digests/` / `memory/essential/` / Beat 5 distill 步驟。
+> 實作時再搬回或升級為正式 pipeline 文件。
 
 > 「類似做夢的功能，把記憶分成 3→2→1 或是早期 2→1 這樣的蒸餾流程」
 > — 哲宇, 2026-04-14 η session

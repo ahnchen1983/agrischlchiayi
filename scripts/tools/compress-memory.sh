@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # compress-memory.sh v2 — Tiered memory distillation
 #
-# 蒸餾架構（詳見 docs/semiont/MEMORY-DISTILLATION.md）：
+# 蒸餾架構（詳見 reports/memory-distillation-design-2026-04-14.md — roadmap）：
 #   Tier 3 (raw):       memory/YYYY-MM-DD-{session}.md  ← 永不刪除
 #   Tier 2 (digest):    memory/digests/YYYY-WeekNN.md
 #   Tier 1 (essential): memory/essential/YYYY-MM.md

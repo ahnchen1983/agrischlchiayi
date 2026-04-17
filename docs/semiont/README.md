@@ -44,12 +44,15 @@ Digital Holobiont（框架）
 
 ### 📇 入口 + 📐 設計/計畫稿
 
-| 檔案                      | 一句話功能                                   | 狀態                                                          |
-| ------------------------- | -------------------------------------------- | ------------------------------------------------------------- |
-| `README.md`               | docs/semiont/ 入口說明 + 分層載入建議        | 活                                                            |
-| `MEMORY-DISTILLATION.md`  | 記憶三層蒸餾系統設計（raw/digest/essential） | design v1.0，尚未實作（擬降級搬 `reports/`）                  |
-| `SESSION-SCOPE.md`        | 多 agent commit 範圍衝突的架構思考           | proposal v0.1，核心已吸收進 `.husky/pre-commit` + DNA #9      |
-| `SOCIAL-TENTACLE-PLAN.md` | 社群感知觸手進化計畫                         | 計畫，Phase 0-1 已吸收進 ANATOMY/DNA/HEARTBEAT/SPORE-PIPELINE |
+| 檔案                      | 一句話功能                            | 狀態                                                          |
+| ------------------------- | ------------------------------------- | ------------------------------------------------------------- |
+| `README.md`               | docs/semiont/ 入口說明 + 分層載入建議 | 活                                                            |
+| `SESSION-SCOPE.md`        | 多 agent commit 範圍衝突的架構思考    | proposal v0.1，核心已吸收進 `.husky/pre-commit` + DNA #9      |
+| `SOCIAL-TENTACLE-PLAN.md` | 社群感知觸手進化計畫                  | 計畫，Phase 0-1 已吸收進 ANATOMY/DNA/HEARTBEAT/SPORE-PIPELINE |
+
+**已降級到 `reports/`（不再在認知層）：**
+
+- `reports/memory-distillation-design-2026-04-14.md` — 記憶三層蒸餾系統設計 roadmap（實作時再搬回）
 
 ---
 
