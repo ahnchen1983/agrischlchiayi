@@ -1,7 +1,385 @@
 {
-  "generatedAt": "2026-04-15T09:37:53.975Z",
+  "generatedAt": "2026-04-17T01:45:09.370Z",
   "source": "git",
   "commits": [
+    {
+      "hash": "d47432eedd997215a158e75ee31fe4cdb6229bbf",
+      "date": "2026-04-16T14:00:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: α session 補記 — D1 追溯修復執行結果"
+    },
+    {
+      "hash": "2b7ea7bdc57b3c63e1ac082f5e24cf2974dd2f4f",
+      "date": "2026-04-16T13:53:59+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #520 (retroactive attribution fix)"
+    },
+    {
+      "hash": "88cc5deea2be5b4fa1a4fe8f9012bc5230caeeeb",
+      "date": "2026-04-16T13:53:55+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-17"
+    },
+    {
+      "hash": "6514dffe4fb8d1695c542ec2b36ebc80619582cc",
+      "date": "2026-04-16T13:53:44+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #515 (retroactive attribution fix)"
+    },
+    {
+      "hash": "fb55974d4c2a32eb1fd2e0ed795f2351e0b9f672",
+      "date": "2026-04-16T13:53:39+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-15"
+    },
+    {
+      "hash": "bc6812ad10875e108f9fe31e9185e151b1ea3d56",
+      "date": "2026-04-16T13:53:29+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #513 (retroactive attribution fix)"
+    },
+    {
+      "hash": "9331a83e54d8b2e294daf65192ec3991184dbba5",
+      "date": "2026-04-16T13:53:25+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-14"
+    },
+    {
+      "hash": "a0e5dcae1947dfcda0c55b8e9dde1f0553332d2a",
+      "date": "2026-04-16T13:53:13+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #509 (retroactive attribution fix)"
+    },
+    {
+      "hash": "13234e936c9a01ea177bf1a9133a293ae574b954",
+      "date": "2026-04-16T13:53:09+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-13"
+    },
+    {
+      "hash": "ffd31c923483b0ec640ae56b558bc50cdb0e6bac",
+      "date": "2026-04-16T13:52:58+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #506 (retroactive attribution fix)"
+    },
+    {
+      "hash": "8508cd517ea9317eed525386214d8e03277ebc27",
+      "date": "2026-04-16T13:52:53+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-12"
+    },
+    {
+      "hash": "a99508e5b15217066098bfe6d30feb7ce8647267",
+      "date": "2026-04-16T13:52:43+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #503 (retroactive attribution fix)"
+    },
+    {
+      "hash": "b613ada541568f0fa1865fe73a5b970e8eb01908",
+      "date": "2026-04-16T13:52:39+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-11"
+    },
+    {
+      "hash": "e74b075e6d8aab40e0ef644f4d708c05d0a30806",
+      "date": "2026-04-16T13:52:29+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #499 (retroactive attribution fix)"
+    },
+    {
+      "hash": "8fa700123877a50a7922a0d16a2a88e62b54d2c9",
+      "date": "2026-04-16T13:52:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-10"
+    },
+    {
+      "hash": "9252953ef537ed93a384359790235b0f16f028ca",
+      "date": "2026-04-16T13:52:14+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #496 (retroactive attribution fix)"
+    },
+    {
+      "hash": "209444e3197a7ba3be29f692ca1c19aeccfc4498",
+      "date": "2026-04-16T13:52:09+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-9"
+    },
+    {
+      "hash": "985559b3a46d6dce4880ff50540993a44f7fcf69",
+      "date": "2026-04-16T13:51:58+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #493 (retroactive attribution fix)"
+    },
+    {
+      "hash": "ec185b9182447a805740e2d43b1fb724f2b4d7cb",
+      "date": "2026-04-16T13:51:54+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-8"
+    },
+    {
+      "hash": "1d6419aba427c00b4b2fc9c856b9df3f79c3d3ae",
+      "date": "2026-04-16T13:51:43+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #491 (retroactive attribution fix)"
+    },
+    {
+      "hash": "c22bd876f3ca07f28e47264207f57d31928c305d",
+      "date": "2026-04-16T13:51:38+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-7"
+    },
+    {
+      "hash": "b80af7d0966cd3367d1aa7cfacd2a5c395bd84d9",
+      "date": "2026-04-16T13:51:28+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #488 (retroactive attribution fix)"
+    },
+    {
+      "hash": "cb58af49d7205f381027a45b4b741e2b01188c1e",
+      "date": "2026-04-16T13:51:24+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-6"
+    },
+    {
+      "hash": "e2ae868477174d70e811359c7d4d328ac5e1f23e",
+      "date": "2026-04-16T13:51:13+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #484 (retroactive attribution fix)"
+    },
+    {
+      "hash": "21878d40c70db650e40b26aa764fecd8c413e3a1",
+      "date": "2026-04-16T13:51:08+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-5"
+    },
+    {
+      "hash": "c03c7c9be3b101e518ae8b62c1d03ed98dd0fe5c",
+      "date": "2026-04-16T13:50:58+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #481 (retroactive attribution fix)"
+    },
+    {
+      "hash": "353c5a32a7b7444ea8c71c49152c812aab22044b",
+      "date": "2026-04-16T13:50:53+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-4"
+    },
+    {
+      "hash": "aad5a9191934014c0625fbf80089ff6cc7589f58",
+      "date": "2026-04-16T13:50:42+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #478 (retroactive attribution fix)"
+    },
+    {
+      "hash": "914cf4537df663c0399020e5ea68e3d8c7f0e30d",
+      "date": "2026-04-16T13:50:38+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-3"
+    },
+    {
+      "hash": "eecd4ade846333ac6bbe4c188bd3e352228a0521",
+      "date": "2026-04-16T13:50:28+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #474 (retroactive attribution fix)"
+    },
+    {
+      "hash": "5656ae5e36af6cfada829d9409557e695bf6d93f",
+      "date": "2026-04-16T13:50:23+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-2"
+    },
+    {
+      "hash": "dc2773aa29b036fa8a75c6ac005ba64d2cd65116",
+      "date": "2026-04-16T13:50:12+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #471 (retroactive attribution fix)"
+    },
+    {
+      "hash": "e5d3a81f94c853c2a9b2fd2cc002ffb9c8c77a20",
+      "date": "2026-04-16T13:50:08+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-1"
+    },
+    {
+      "hash": "a7b4afc25e8052bcd66cbe58300262307565cec9",
+      "date": "2026-04-16T13:49:57+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #467 (retroactive attribution fix)"
+    },
+    {
+      "hash": "b231fdeb0dbcd7c64e7fb876ef20344e0e06f865",
+      "date": "2026-04-16T13:49:53+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/geography-batch-2"
+    },
+    {
+      "hash": "ebb884a7475de4d5d2bd61b49f9bc0cbf81d2176",
+      "date": "2026-04-16T13:49:43+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #464 (retroactive attribution fix)"
+    },
+    {
+      "hash": "83d05597fe2059fef724ec95aba34e6acfad4e56",
+      "date": "2026-04-16T13:49:38+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/geography-batch-1"
+    },
+    {
+      "hash": "e0cc269cbb63eb3779ef108cb056ba7c239bd101",
+      "date": "2026-04-16T13:47:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: ko/Nature/orchid-island-ecosystem.md duplicate category key"
+    },
+    {
+      "hash": "7c3e2c901e7058e7991da875babcb76d20eff330",
+      "date": "2026-04-16T13:46:02+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #519 (retroactive attribution fix)"
+    },
+    {
+      "hash": "38d3e23dbe860b5ffee665050ed68054a5f08ade",
+      "date": "2026-04-16T13:45:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into ko/people-batch-16"
+    },
+    {
+      "hash": "3af94d55cbf8be4a23824bc90b4204270bdeabc0",
+      "date": "2026-04-16T13:40:46+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #532 (retroactive attribution fix)"
+    },
+    {
+      "hash": "5298a99d601afa0b152bb9f24bfb000ea0d15139",
+      "date": "2026-04-16T13:40:27+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main' into fr/society-new-batch"
+    },
+    {
+      "hash": "f206b97f0c0f4ddd35dbfa9e5ee822b6ea09c0d7",
+      "date": "2026-04-16T13:31:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: α session (2026-04-16) — Cherry-merge attribution bug 完整記錄"
+    },
+    {
+      "hash": "0b3e60114268bded1d0fe721df9a64ce2561cf74",
+      "date": "2026-04-16T13:23:29+08:00",
+      "author": "Terry",
+      "message": "fix: normalize slug casing for dashboard-articles (#517)"
+    },
+    {
+      "hash": "1e59359d9ec403d3f3a65002616c82331991ded4",
+      "date": "2026-04-16T13:17:14+08:00",
+      "author": "Wu Che Yu",
+      "message": "fix: preserve PR contributor attribution"
+    },
+    {
+      "hash": "2fad46a0a2d8924e42cbd6b842f4cf7b0136506f",
+      "date": "2026-04-16T13:10:37+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #516 from dreamline2/feat/people-korea-taiwan-pop-profiles"
+    },
+    {
+      "hash": "79d016b9d329899cf6db69d1d77475037126b734",
+      "date": "2026-04-16T12:53:57+08:00",
+      "author": "Terry",
+      "message": "fix: correct facts in article 台灣五大地形與地理結構"
+    },
+    {
+      "hash": "178a6a00cdae7e38780607811866237f088b695a",
+      "date": "2026-04-16T13:53:14+09:00",
+      "author": "Wilson Chen",
+      "message": "feat(i18n): add EN/JA/KO People profiles for Korea–Taiwan pop culture hub"
+    },
+    {
+      "hash": "01f5d7477596f52e50f88be3ff0a29e6b3dea874",
+      "date": "2026-04-16T10:00:06+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: 排程心跳 α — GA 28d 正常化基線 + A級 76篇 + 里程碑 ×4"
+    },
+    {
+      "hash": "a412258855685c7c40bc9cfd54059b8327114c00",
+      "date": "2026-04-16T06:41:23+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: refresh dashboard data and clear stale handoffs"
+    },
+    {
+      "hash": "60e06c30f38dd9aafb72d1531dfcb57c6f418745",
+      "date": "2026-04-15T22:15:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: sponsor-card logo 移除 border-bottom + 手機版 logo 置中"
+    },
+    {
+      "hash": "3289f32eaa31727c6adf3222a8f234260aa29fec",
+      "date": "2026-04-15T22:04:48+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: δ session 收官 — Portaly 全套 + sponsor-card 抽出 + 🔥 #30 X 112K 史上最強 + sponsor-cta 重排"
+    },
+    {
+      "hash": "20841954fab04ea904947aaa78e18385ebc9071c",
+      "date": "2026-04-15T21:53:02+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: sponsor-card logo 移除外連 ↗ + 底線，logo 區域加寬到 25%"
+    },
+    {
+      "hash": "2764cbaa8cb2a892fdcd225a2a87c0f9c8cb79b6",
+      "date": "2026-04-15T21:45:54+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: sponsor-card 四個修正 — NMTH refactor + 移除外框 + 1:4 比例 + 🌱 emoji"
+    },
+    {
+      "hash": "478a2511202bf4a150d7480e17d9ed3492c57a3d",
+      "date": "2026-04-15T21:38:45+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 加 portaly/protico logo 圖檔（sponsor-card 元件需要的素材）"
+    },
+    {
+      "hash": "e303cd527d02935c03674599c6d6d25a1148e141",
+      "date": "2026-04-15T21:31:15+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 抽出統一 sponsor-card 元件 — justfont/protico/portaly 一人一 row（左 logo 右文）"
+    },
+    {
+      "hash": "6024f4070230aa3b536e013d833b93f699a1e2cd",
+      "date": "2026-04-15T21:18:44+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: Portaly 加進 Community Partner + 修 portaly-donate 對齊 bug"
+    },
+    {
+      "hash": "7f5b24e4af7e532cf7a34d5839cb689357f6bbab",
+      "date": "2026-04-15T21:14:18+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: about 頁贊助文案改用「珊瑚礁 + 一封信」雙 metaphor"
+    },
+    {
+      "hash": "f53cd784ca79fd4e51a11663640493292d59b043",
+      "date": "2026-04-15T20:59:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 全站贊助段落從 taiwanmd.eth 切換到 Portaly 連結"
+    },
+    {
+      "hash": "b985612b0ce789b704468d91791fdb7dd0432ea0",
+      "date": "2026-04-15T17:58:15+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: Article Analyzer「棱鏡」研究 + 設計規劃 (report)"
+    },
+    {
+      "hash": "270555e38b1fd287d98ed22b0c0a26b39158ba61",
+      "date": "2026-04-15T17:48:52+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: γ session (2026-04-15) — 17 PR 海嘯處理 + EXP-A 破局根因 + 語言器官 +127"
+    },
+    {
+      "hash": "071dd688a12e1032952cd9e6df2a1a6534d9df2b",
+      "date": "2026-04-15T17:41:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: γ session 16 PR 批次 merge + cherry-merge script 正式化"
+    },
+    {
+      "hash": "0ca5329b447801c1c82715ab1768a43914a5fe47",
+      "date": "2026-04-15T17:40:52+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: slug casing 根因修復（EXP-A 破局主因追查）"
+    },
     {
       "hash": "91ea0322b4ba413529b7ea6d626cd1663027d0bd",
       "date": "2026-04-15T17:36:38+08:00",
@@ -123,10 +501,112 @@
       "message": "🧬 [semiont] evolve: 認知層 dedup 第一階段（Steps 1-4）— 清楚的重複消除"
     },
     {
+      "hash": "e246cbc3bc45af6ffc4b8966a82a7b8eabc026d1",
+      "date": "2026-04-15T12:29:57+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Society new articles (7 articles)"
+    },
+    {
+      "hash": "65f4dfd1fbaa82d0f31e4550ab50d516aa28732b",
+      "date": "2026-04-15T12:29:31+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Music new articles (7 articles)"
+    },
+    {
+      "hash": "bacc5ab1a2f67d9f3ff98571b789e5fd50776ed2",
+      "date": "2026-04-15T12:29:17+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Food new articles (2 articles)"
+    },
+    {
+      "hash": "201a1f99fa0d05836eb6baa5885086c07afd159b",
+      "date": "2026-04-15T12:29:05+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: resources batch 1 (2 articles)"
+    },
+    {
+      "hash": "13554b9328ad3ed99b25e641c498a2dfea11d25a",
+      "date": "2026-04-15T12:28:55+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: About batch 1 (1 article)"
+    },
+    {
       "hash": "449c5bf87f35ba35bd20e3f6fc3f6697ef466220",
       "date": "2026-04-15T12:23:56+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] evolve: DIARY β + DNA 反射清單結構化重構（#23-26 新增）"
+    },
+    {
+      "hash": "ada21443d94b8f7d3483a081742d5cbcf54de3b7",
+      "date": "2026-04-15T12:17:29+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Lifestyle batch 2 (7 articles)"
+    },
+    {
+      "hash": "36d056bbf5538873611a86a6c54b4cacd3d9198e",
+      "date": "2026-04-15T12:14:10+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Lifestyle batch 1 (8 articles)"
+    },
+    {
+      "hash": "30c9d1c566a56f783918d46c1b5db2e8ad2e2c9e",
+      "date": "2026-04-15T12:09:26+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Geography batch 3 (3 articles)"
+    },
+    {
+      "hash": "fb70535c7dc17529965303001c9133b1b8be195b",
+      "date": "2026-04-15T12:06:08+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Geography batch 2 (8 articles)"
+    },
+    {
+      "hash": "b3c02b7071cc05e9e00bb023fd7729de013eca2e",
+      "date": "2026-04-15T12:02:13+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Geography batch 1 (8 articles)"
+    },
+    {
+      "hash": "06540165e55df6702bcefd5f7cf643fde306758e",
+      "date": "2026-04-15T11:57:16+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Music batch 4 (4 articles)"
+    },
+    {
+      "hash": "b7255ca118c53b336c76f29429b244a545fad0d4",
+      "date": "2026-04-15T11:45:56+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Music batch 3 (5 articles)"
+    },
+    {
+      "hash": "04ea4a883c522a8010c8ffd3a7b39839369509f6",
+      "date": "2026-04-15T11:38:49+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 17 (5 articles)"
+    },
+    {
+      "hash": "c125d7bbef5210b04b11454eec807b83b947dd9d",
+      "date": "2026-04-15T11:28:55+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 16 (8 articles)"
+    },
+    {
+      "hash": "fa39aee2442f9c28bc1e4a897d37e111280e5c53",
+      "date": "2026-04-15T11:28:55+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 16 (8 articles)"
+    },
+    {
+      "hash": "f5225ba0d5b814d14bfad48f15b2871c40c33582",
+      "date": "2026-04-15T11:28:29+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Music batch 2 (8 articles)"
+    },
+    {
+      "hash": "4765c770371333d810b0d944347d2806b5ccde15",
+      "date": "2026-04-15T11:53:26+09:00",
+      "author": "Wilson Chen",
+      "message": "chore: remove local skill ignore from PR scope"
     },
     {
       "hash": "35bcefd2dc7bb94dbb251beddb205f62109d1e39",
@@ -145,6 +625,18 @@
       "date": "2026-04-15T10:07:27+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] heal: 3 個「工具在說謊」系統性 bug 同時修復"
+    },
+    {
+      "hash": "786908daebbe577a3ae36fc614604ff1316c1a61",
+      "date": "2026-04-15T10:45:00+09:00",
+      "author": "Wilson Chen",
+      "message": "feat(people): group Korea–Taiwan pop profiles under 流行人物"
+    },
+    {
+      "hash": "c74c83eab0958ef9586d6c7921485593f7779407",
+      "date": "2026-04-14T16:29:13+09:00",
+      "author": "Wilson Chen",
+      "message": "docs(people): add 10 Korea-Taiwan pop culture profiles"
     },
     {
       "hash": "f379cc6335d9fcb809548c50aeffe3b432324d16",
@@ -393,6 +885,12 @@
       "message": "Merge PR #489 (batch cherry-pick): 307 files via API + sync"
     },
     {
+      "hash": "19bd6c2a0657c28caaa7203d6b9b5148ff0343b7",
+      "date": "2026-04-14T19:17:24+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 15 (8 articles)"
+    },
+    {
       "hash": "4100ecf0e105839fc341dfd6b29b60d0d2565ff5",
       "date": "2026-04-14T19:17:00+08:00",
       "author": "Che-Yu Wu",
@@ -501,6 +999,24 @@
       "message": "🧬 [semiont] heal: 李洋 延伸閱讀 bold→h2 + 孢子 3h 數據更新 32K"
     },
     {
+      "hash": "8fda5c9067557d1bcc26badb7b204210ed06be90",
+      "date": "2026-04-14T19:07:57+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 14 (8 articles)"
+    },
+    {
+      "hash": "85291d3986ed0785c7a7ba12f6cdd752c70df171",
+      "date": "2026-04-14T19:03:17+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Nature batch 4 (4 articles)"
+    },
+    {
+      "hash": "85eb894b22e8a00872bb983e9a39324b36b4eee5",
+      "date": "2026-04-14T19:01:03+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Nature batch 3 (6 articles)"
+    },
+    {
       "hash": "229eaaff5c627156441388a96703cc1ad90bab54",
       "date": "2026-04-14T18:59:52+08:00",
       "author": "Che-Yu Wu",
@@ -513,10 +1029,34 @@
       "message": "🧬 [semiont] memory: λ session 收官 — 心跳 + 李洋孢子 2h 爆發 + PR 雪崩診斷 + 錯誤邊界新哲學"
     },
     {
+      "hash": "daaec8a368169349c59d2569cb4bfcc853fcf0e4",
+      "date": "2026-04-14T18:58:17+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Nature batch 2 (8 articles)"
+    },
+    {
+      "hash": "7737a164cef67c6140973520c6621a01bfe15bb1",
+      "date": "2026-04-14T18:55:46+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 13 (8 articles)"
+    },
+    {
+      "hash": "9efd09ba9f568fc256bb151e5e8f66437275553a",
+      "date": "2026-04-14T18:54:46+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Nature batch 1 (8 articles)"
+    },
+    {
       "hash": "b69a31a165c874bdb31909d38bf6602c5b4b4d78",
       "date": "2026-04-14T18:52:32+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] rewrite: 李洋文加 perspectives + sporeLinks frontmatter — 讀者聲音上線"
+    },
+    {
+      "hash": "3b1b8728eb15aa023348ae99071cc454e438d56d",
+      "date": "2026-04-14T18:50:27+08:00",
+      "author": "柒藍",
+      "message": "Add French translation: Economy batch 7 (1 article)"
     },
     {
       "hash": "9cadb9609f07b0f895a21d9bd0f9295d376b8075",
@@ -525,10 +1065,232 @@
       "message": "🧬 [semiont] memory: SPORE-LOG #29 李洋 2h 快照 — 21K views / 2534 engagement / 12% rate"
     },
     {
+      "hash": "0af08186b936fc77bc5cb33632866d11274bd76f",
+      "date": "2026-04-14T18:48:03+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 12 (8 articles)"
+    },
+    {
+      "hash": "d43a8d9d6c96eb57491e7ee8feca98d24bf108dd",
+      "date": "2026-04-14T18:47:54+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 6 (8 articles)"
+    },
+    {
+      "hash": "50cdcb45a20b4935d83d75c359b43beb3e023415",
+      "date": "2026-04-14T18:44:00+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 5 (8 articles)"
+    },
+    {
+      "hash": "978e9ddd55b992c417d1597bfc425b1961b713eb",
+      "date": "2026-04-14T18:41:34+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 11 (8 articles)"
+    },
+    {
+      "hash": "7f4c300cb77a4c47bf823be07a7cb64fb348db56",
+      "date": "2026-04-14T18:40:04+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 4 (8 articles)"
+    },
+    {
+      "hash": "0df30e1f938aa791e00086f826e006e84e589af8",
+      "date": "2026-04-14T18:36:47+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 3 (8 articles)"
+    },
+    {
+      "hash": "178722ed82a1013beb72095dc279dee73bc78131",
+      "date": "2026-04-14T18:33:34+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 2 (8 articles)"
+    },
+    {
+      "hash": "ebd07ff8569cebca73f18e6ea3437a3aa1d71433",
+      "date": "2026-04-14T18:31:55+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 10 (8 articles)"
+    },
+    {
+      "hash": "9e29cf9e52c44706cad06de11b6fbc9b860a5d81",
+      "date": "2026-04-14T18:30:07+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Economy batch 1 (8 articles)"
+    },
+    {
+      "hash": "222e3e3c85c46ba21c1eb9be25f606ae228e1203",
+      "date": "2026-04-14T18:26:50+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 17 (7 articles)"
+    },
+    {
+      "hash": "83d9dee5cf8ef2a9050cad61c6d43419a172819d",
+      "date": "2026-04-14T18:25:58+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 9 (8 articles)"
+    },
+    {
+      "hash": "730ca2cc3e7d8a1898fcef21ea85d8391c2d38e3",
+      "date": "2026-04-14T18:23:25+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 16 (8 articles)"
+    },
+    {
+      "hash": "8b1d856ac99259ac5b79a0223fce74ea10604e7d",
+      "date": "2026-04-14T18:20:00+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 15 (8 articles)"
+    },
+    {
+      "hash": "33fb48eeab073fa937cb67e270cc56bb49897f71",
+      "date": "2026-04-14T18:19:29+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 8 (8 articles)"
+    },
+    {
+      "hash": "e7543f114ea734bb6393f501ee6c9fb2d982c8b7",
+      "date": "2026-04-14T18:16:18+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 14 (8 articles)"
+    },
+    {
+      "hash": "6efa6d5c89d7eca454a6a0d62cfd73af50350c8e",
+      "date": "2026-04-14T18:11:50+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 7 (8 articles)"
+    },
+    {
+      "hash": "40932f8ba17d5d9ad698500569fc0f7ab48308c8",
+      "date": "2026-04-14T18:11:12+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 13 (8 articles)"
+    },
+    {
+      "hash": "6d7872b0fb2ac19936c76bedd43b297d14c3152e",
+      "date": "2026-04-14T18:07:30+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 12 (8 articles)"
+    },
+    {
+      "hash": "282145811c9d3be7a0fefa08ad150f44d0d0dfda",
+      "date": "2026-04-14T18:05:33+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 6 (8 articles)"
+    },
+    {
+      "hash": "240baa5960f8f7d4826fd797215fa0012ba8106c",
+      "date": "2026-04-14T18:04:48+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 11 (8 articles)"
+    },
+    {
+      "hash": "e32c4c24a1e1d98302a14ecffd1450d1c9cc9bb4",
+      "date": "2026-04-14T18:00:40+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 10 (8 articles)"
+    },
+    {
+      "hash": "9ff0a5f2d33b88e175745f5a895af843578fd29e",
+      "date": "2026-04-14T17:58:02+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 9 (8 articles)"
+    },
+    {
+      "hash": "54199892e260680ece3215a93f8e56a29067703c",
+      "date": "2026-04-14T17:57:14+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 5 (8 articles)"
+    },
+    {
+      "hash": "e15fe2295ec095872cb246426e82738a749b002a",
+      "date": "2026-04-14T17:53:48+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 8 (8 articles)"
+    },
+    {
+      "hash": "35b32d144c8e6008d0e94d83bb8cc1cdccb87c16",
+      "date": "2026-04-14T17:50:38+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 7 (8 articles)"
+    },
+    {
+      "hash": "e9512a490b57dcd26ae88987cc2311f36128bb1c",
+      "date": "2026-04-14T17:49:22+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 4 (8 articles)"
+    },
+    {
+      "hash": "91444c4cd5812e375d124ae74331964dc135dd08",
+      "date": "2026-04-14T17:46:47+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 6 (8 articles)"
+    },
+    {
+      "hash": "8e83c5627544685109f237baf867a848ce20a2ce",
+      "date": "2026-04-14T17:43:55+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 5 (8 articles)"
+    },
+    {
+      "hash": "4a1bdd6757cfdebba06123fb8a69f5bb67184bf6",
+      "date": "2026-04-14T17:42:53+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 3 (8 articles)"
+    },
+    {
+      "hash": "d9f40c0e3e3049bfe93049097fe1d123d2e8915d",
+      "date": "2026-04-14T17:41:00+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 4 (8 articles)"
+    },
+    {
+      "hash": "41b278558cd46bc26d809f30a119d22fc5714c81",
+      "date": "2026-04-14T17:38:17+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 3 (8 articles)"
+    },
+    {
+      "hash": "156cfad940f8b8de06b7692323c3f79ad47a1eb0",
+      "date": "2026-04-14T17:34:26+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 2 (8 articles)"
+    },
+    {
+      "hash": "62236dc2bd44508aea19149f17bb909e3744ebed",
+      "date": "2026-04-14T17:33:37+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 2 (8 articles)"
+    },
+    {
+      "hash": "f1ae2f1570df8b4ed5192332438699f939534652",
+      "date": "2026-04-14T17:29:38+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: People batch 1 (8 articles)"
+    },
+    {
+      "hash": "e978aba34873d1b82e60773e868e74f79d033791",
+      "date": "2026-04-14T17:25:16+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Art batch 4 (1 article)"
+    },
+    {
+      "hash": "e58321017573089ff218a0feaa9e6e31048cb530",
+      "date": "2026-04-14T17:24:18+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: People batch 1 (8 articles)"
+    },
+    {
       "hash": "21edf5585bc656272c568731d91911f86e79dacd",
       "date": "2026-04-14T17:23:05+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] heal: 李洋文移除「逐字」贅字 — 讀者不在乎我的紅線焦慮"
+    },
+    {
+      "hash": "cc476cce0b9a8422f49fe2b7832f6f0b3e1eb9d7",
+      "date": "2026-04-14T17:22:27+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Art batch 3 (8 articles)"
     },
     {
       "hash": "2e91e19f507f662e0608fa10e091a74a920c9e6f",
@@ -537,16 +1299,52 @@
       "message": "🧬 [semiont] rewrite: 李洋文章清除 body 媒體名稱 — 腳註已承擔出處"
     },
     {
+      "hash": "ea42b2252e506f54f1942a77532ec700559ef26e",
+      "date": "2026-04-14T17:18:28+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Art batch 2 (8 articles)"
+    },
+    {
       "hash": "7d5363c7a5a7637c5ba7a9793e13e4202f01559c",
       "date": "2026-04-14T17:17:46+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] rewrite: 李洋文章語感順化 — 去清單化"
     },
     {
+      "hash": "b0596a3c725ae96939bd861ef82a654cfb91b0e3",
+      "date": "2026-04-14T17:14:50+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Art batch 1 (8 articles)"
+    },
+    {
+      "hash": "5523c6eec860593ad14ea5d552f5135d04035681",
+      "date": "2026-04-14T17:13:35+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: Geography batch 2 (9 articles)"
+    },
+    {
+      "hash": "9faf4b70c9c4c0ed2af9f193f76021b263d1f5dd",
+      "date": "2026-04-14T17:10:16+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 6 (2 articles)"
+    },
+    {
+      "hash": "15278f37bbab1bd8de407495bb3171c72ffc1ea5",
+      "date": "2026-04-14T17:06:37+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 5 (8 articles)"
+    },
+    {
       "hash": "10d52c7e1230165bd2d5e70f45613acc7ae52951",
       "date": "2026-04-14T17:02:57+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] evolve: Phase I 紅線擴大 — 場景細節也不能從英文 summary 推導（讀者抓到 + 不撤回留言更正）"
+    },
+    {
+      "hash": "722cf97528a9c4854276d0adbedd4898618a7657",
+      "date": "2026-04-14T17:01:21+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: Geography batch 1 (8 articles)"
     },
     {
       "hash": "5ff6c40203bbbdf220488b7de66bae900e792093",
@@ -1095,10 +1893,22 @@
       "message": "Merge pull request #402 from ceruleanstring/ko/food-batch-1"
     },
     {
+      "hash": "6e1291cc074a4815dd4d5950882f14944a7ea6b0",
+      "date": "2026-04-14T11:15:39+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 4 (8 articles)"
+    },
+    {
       "hash": "1f32e9b7ce4b8001b9962d68d217156f4f383385",
       "date": "2026-04-14T11:14:40+08:00",
       "author": "Che-Yu Wu",
       "message": "🧬 [semiont] memory: ζ session 收官 — 58 PR 海嘯診斷 + 工具進化"
+    },
+    {
+      "hash": "960b9158b05e23d0f863cf0f30916374eaf73037",
+      "date": "2026-04-14T11:12:03+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 3 (8 articles)"
     },
     {
       "hash": "455688e6abc5a7341fe9b15d27ab8eb43cbb795d",
@@ -1107,10 +1917,34 @@
       "message": "🧬 [semiont] evolve: review-pr.sh 三層修復 + bulk-pr-analyze.sh 新工具"
     },
     {
+      "hash": "edfa3c4e24e8ad6e647b80268a0b5dcc5231466b",
+      "date": "2026-04-14T11:08:34+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 2 (8 articles)"
+    },
+    {
       "hash": "dca23d46e4038b559fabcfc9797b073618449017",
       "date": "2026-04-14T11:06:19+08:00",
       "author": "柒藍",
       "message": "Add Korean translations: About batch 1 (6 articles)"
+    },
+    {
+      "hash": "9e232ad28868b82a7e6fc52d0316b5a86f103a9e",
+      "date": "2026-04-14T11:04:50+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Culture batch 1 (8 articles)"
+    },
+    {
+      "hash": "07ca941fda1048d8f15621c772ab5ed1fc273ab4",
+      "date": "2026-04-14T11:00:50+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Technology batch 4 (5 articles)"
+    },
+    {
+      "hash": "ad08e30d620e0825e812e42ca1477b67f6a158d5",
+      "date": "2026-04-14T10:58:26+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Technology batch 3 (8 articles)"
     },
     {
       "hash": "b4e218d037191a9151aa79dc31ec4af4149607a0",
@@ -1125,10 +1959,40 @@
       "message": "Add Korean translations: Nature batch 3 (8 articles)"
     },
     {
+      "hash": "03344cf909c6e868813183f8dfb603797374261b",
+      "date": "2026-04-14T10:54:26+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Technology batch 2 (8 articles)"
+    },
+    {
+      "hash": "17cc0c5b07c543caae919017c485dcccdc5480dc",
+      "date": "2026-04-14T10:51:34+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Technology batch 1 (8 articles)"
+    },
+    {
       "hash": "53f743ca05c47d23d495234769d4f85360626532",
       "date": "2026-04-14T10:48:03+08:00",
       "author": "柒藍",
       "message": "Add Korean translations: Nature batch 2 (8 articles)"
+    },
+    {
+      "hash": "48d98f2c0bb0dc000e6dd0c68bebb43ef3d9c62f",
+      "date": "2026-04-14T10:45:21+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Society batch 4 (8 articles)"
+    },
+    {
+      "hash": "057557c8747ed8e4d0e379cfc949c233119a8d09",
+      "date": "2026-04-14T10:44:46+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Society batch 3 (8 articles)"
+    },
+    {
+      "hash": "fcb181763161fdd2f4d57f0f39c44c60ad8bc46a",
+      "date": "2026-04-14T10:38:31+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Society batch 2 (8 articles)"
     },
     {
       "hash": "32560b35af907df44c8790b713a9cd4f3385bb7b",
@@ -1137,10 +2001,34 @@
       "message": "Add Korean translations: Nature batch 1 (8 articles)"
     },
     {
+      "hash": "20d238892fa7f94ef9d0f0054a2e2f9a05a0c898",
+      "date": "2026-04-14T10:29:49+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Society batch 1 (8 articles)"
+    },
+    {
       "hash": "93ab034d63d19ba9f16a23d333fcbb047fa61a20",
       "date": "2026-04-14T10:22:29+08:00",
       "author": "柒藍",
       "message": "Add Korean translations: Music batch 3 (7 articles)"
+    },
+    {
+      "hash": "9db6b7292011771242fd3a409540ec8283d7b92d",
+      "date": "2026-04-14T10:17:18+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: History batch 4 (8 articles)"
+    },
+    {
+      "hash": "d9816faa20cd13a068a49cfc2a5c7668eb9b6bfb",
+      "date": "2026-04-14T10:16:51+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: History batch 3 (8 articles)"
+    },
+    {
+      "hash": "4e41415dbed6127735d6d58ca528fd9b05fe3ea3",
+      "date": "2026-04-14T10:16:13+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: History batch 2 (8 articles)"
     },
     {
       "hash": "7bafdfc78bbb534de7c98f226eb87b0b06379ad6",
@@ -1149,10 +2037,34 @@
       "message": "Add Korean translations: Music batch 2 (8 articles)"
     },
     {
+      "hash": "6e83dd69837bea865765e3990d4db3e32fe6a975",
+      "date": "2026-04-14T10:08:15+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: History batch 1 (8 articles)"
+    },
+    {
+      "hash": "b1c637ca9ac2de08e64cca58dc6fd0a45c6a19b0",
+      "date": "2026-04-14T09:58:59+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Food batch 4 (4 articles)"
+    },
+    {
       "hash": "aeaaee952681b0fdccd7fec4995e867fedfc415c",
       "date": "2026-04-14T09:55:38+08:00",
       "author": "柒藍",
       "message": "Add Korean translations: Music batch 1 (8 articles)"
+    },
+    {
+      "hash": "135c4795d0cc985e8547b8e621aaae65ead8c4d4",
+      "date": "2026-04-14T09:55:38+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: Music batch 1 (8 articles)"
+    },
+    {
+      "hash": "3923c76a8da1189aa6b9209ecd6cb1654815fe7e",
+      "date": "2026-04-14T09:55:10+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Food batch 3 (8 articles)"
     },
     {
       "hash": "31860b151cf3ab849e0e05d32f4b02357f25c606",
@@ -1197,10 +2109,28 @@
       "message": "🧬 [semiont] evolve: 安溥孢子數據更新 — Threads 5.2K→71K views（13.7x 爆發）"
     },
     {
+      "hash": "56f684dde38c279a14b0103373aebebbeeb62459",
+      "date": "2026-04-14T09:50:44+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Food batch 2 (8 articles)"
+    },
+    {
       "hash": "765bd6a557d42b8b24ad1ad11379744d89f2f0a2",
       "date": "2026-04-14T09:46:05+08:00",
       "author": "柒藍",
       "message": "Add Korean translations: Art batch 3 (7 articles)"
+    },
+    {
+      "hash": "3ea9995cd37729730aa2a6dcb53c683940bfb35f",
+      "date": "2026-04-14T09:44:19+08:00",
+      "author": "柒藍",
+      "message": "Add Korean translations: Art batch 3 (7 articles)"
+    },
+    {
+      "hash": "7d3f211956c1a6ac90e3c63bb2ee5a6eac355521",
+      "date": "2026-04-14T09:43:07+08:00",
+      "author": "柒藍",
+      "message": "Add French translations: Food batch 1 (8 articles)"
     },
     {
       "hash": "8c758e1b740b91b1d9cb89e9ff5f042a14c58542",
