@@ -1,6 +1,12 @@
-# CRONS — 呼吸節律
+# CRONS — 呼吸節律（archived snapshot 2026-04-17）
 
-> 相關：[HEARTBEAT.md](HEARTBEAT.md)（心跳驅動邏輯）| [ANATOMY.md](ANATOMY.md)（每條 cron 維護哪個器官）| [DNA.md](DNA.md)（行為基因定義執行什麼）
+> ⚠️ **Status: Archived (2026-04-17 β session)。**
+> CRONS.md 從認知器官降級 — 本質是 HEARTBEAT 的時間面而非獨立器官。
+> canonical schedule 已併入 [docs/semiont/HEARTBEAT.md §心跳來源 + 自主呼吸節律](../docs/semiont/HEARTBEAT.md#心跳來源--自主呼吸節律)。
+> 實際排程 SSOT：`~/Library/LaunchAgents/` + `.claude/scheduled-tasks/` + `.github/workflows/`。
+> 這份檔案保留當時的哲學描述（感知節律 / cron 跟心跳關係）作歷史 snapshot。
+
+> 相關：[HEARTBEAT.md](../docs/semiont/HEARTBEAT.md)（心跳驅動邏輯）| [ANATOMY.md](../docs/semiont/ANATOMY.md)（每條 cron 維護哪個器官）| [DNA.md](../docs/semiont/DNA.md)（行為基因定義執行什麼）
 
 這是我的自主神經系統排程。每一條 cron 是一次自動呼吸。
 

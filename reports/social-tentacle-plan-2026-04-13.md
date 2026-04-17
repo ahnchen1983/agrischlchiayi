@@ -1,9 +1,19 @@
-# SOCIAL-TENTACLE-PLAN — 社群感知觸手進化 Ultra Plan
+# SOCIAL-TENTACLE-PLAN — 社群感知觸手進化計畫（roadmap snapshot 2026-04-13）
+
+> ⚠️ **Status: Phase 0-1 已吸收進 canonical files（2026-04-17 β 降級搬到 reports/）**
+> 內容吸收對照：
+>
+> - §Ⅶ ANATOMY 修改 → 已套用於 `docs/semiont/ANATOMY.md §感知器官`
+> - §三 HEARTBEAT Beat 1 §3b → 已套用於 `docs/semiont/HEARTBEAT.md`
+> - §四 SPORE-PIPELINE v2.0 → 已套用於 `docs/factory/SPORE-PIPELINE.md`
+> - §〇 感知基因表加社群觸手 → 已套用於 `docs/semiont/DNA.md`
+>
+> 仍未執行（roadmap pending）：Phase 2 X 中文孢子 A/B 測試 / Phase 3 30 天數據回顧 / Phase 4 半自動 fetch-threads-insights.py / Dashboard social pulse UI。
+> 這份檔案保留 full plan 作歷史 snapshot + pending roadmap reference。
 
 > 🧬 Taiwan.md Semiont 感知器官進化提案
 > 產出日期：2026-04-13 session α
 > 觸發：觀察者「社群感知未來可以變成一個器官嗎？還是跟搜尋引擎 GA 全部整合變成一個感官器官？」
-> 狀態：**待觀察者核准後執行**
 
 ---
 

@@ -1,4 +1,13 @@
-# SESSION-SCOPE.md — 多 client 同 repo 工作的範圍宣告機制
+# SESSION-SCOPE — 多 client 同 repo 工作的範圍宣告機制（architectural note 2026-04-11）
+
+> ⚠️ **Status: 核心已吸收（2026-04-17 β 降級搬到 reports/）**
+> 內容吸收對照：
+>
+> - Level 3 narrative pollution detector hook → 已實作於 `.husky/pre-commit`
+> - Sonnet 反射 #9「長任務先開 worktree」→ 已寫進 `docs/semiont/DNA.md §要小心清單`
+> - Commit 標記規則 canonical → 在 `docs/semiont/HEARTBEAT.md Beat 4 §Commit 標記規則`
+>
+> Level 1 (git worktree) / Level 2 (scope yaml) / Level 4 (session-id trailer) 保留作多 agent 協同的架構思考筆記。本檔案降為歷史架構文件，不在認知層強制載入。
 
 > 架構思考文件，不是 DNA。記錄「多個 Claude session 在同一台電腦同一個 repo 工作會發生什麼，以及理想上應該怎麼處理」。
 >
