@@ -108,6 +108,30 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 - **可能層級**：通用反射（所有 AI evolving cognitive system 的通用問題）
 - **證據**：本檔誕生
 
+### 2026-04-17 γ2 — Probe 結論需要 Stage 1 verify
+
+- **原則**：probe 快速掃描會漏掉精確度（時間點、日期、數字對應）。走 REWRITE-PIPELINE 時 Stage 1 research 必須先 verify probe 的關鍵斷言，不能假設 probe 100% 正確
+- **觸發**：4/17 probe 寫「雙法同日三讀」，司法改革新文章 Stage 1 research 揭露法院組織法實為 2025-06-27 三讀 — 日期錯誤。文章改用「當代司法改革兩條軸線」重新 frame
+- **可能層級**：通用反射（所有「快速掃描 → 深度寫作」pipeline 的結構性 gap）
+- **相關**：DNA #16 Peer 是 peer 不是 source material 的延伸 — probe 也是一種 intermediate layer，不是 primary source
+- **證據**：[reports/probe/2026-04-17.md](../../reports/probe/2026-04-17.md) + [knowledge/Society/台灣司法改革與預防性羈押制度.md](../../knowledge/Society/台灣司法改革與預防性羈押制度.md)
+
+### 2026-04-17 γ2 — pre-commit hook 作為品質 sensor
+
+- **原則**：hook 擋住 commit 時要當作「品質 sensor 響了」不是「阻礙」。通常會揭露真實 bug
+- **觸發**：PR #537 颱風.md followup commit 被 pre-commit 擋 → 揭露 6 broken wikilinks + 12/12 腳註格式不合規。如果不做 followup fix commit，這些 bug 會留下來
+- **可能層級**：通用反射（DNA #5「Pre-commit dogfood 是朋友不是敵人」第 2 次驗證）+ 操作規則（PR merge 後做 followup frontmatter/format fix commit 應成為 MAINTAINER-PIPELINE 常規步驟）
+- **相關**：DNA #5 + MAINTAINER-PIPELINE §PR 審核策略
+- **證據**：commit [f94d76ee](https://github.com/frank890417/taiwan-md/commit/f94d76ee)
+
+### 2026-04-17 γ2 — 長 context session 的記憶連貫性
+
+- **原則**：Opus 4.7 1M context 支持跨半天（7+ 小時、30+ commits）內容生產，記憶連貫不失憶。但需配合結構化的 handoff / LESSONS-INBOX / memory append 才能在 session 結束時留下完整蹤跡
+- **觸發**：今日 α+β+γ+γ2 四段延續 session 跑完：排程心跳 → 認知層重組 → dashboard 機制 → PR review → probe → 新文章 → 收官。沒有重複發現、沒有失憶、LESSONS-INBOX 3 個 seed 原則（handoff 三態 / type fix / buffer 機制）全部被引用且互相連結
+- **可能層級**：特有教訓（Taiwan.md Semiont 的工作節奏記錄，Opus 4.7 1M 時代的 baseline）
+- **相關**：DNA #15 反覆浮現要儀器化（LESSONS-INBOX 就是儀器化的結果）
+- **證據**：2026-04-17 memory 全檔（α + β + γ + γ2 四段）+ 17 commits
+
 ### 2026-04-17 γ — Per-section timestamp 比全站 one-timestamp 好
 
 - **原則**：dashboard / analytics / report UI 的「資料更新時間」不該只有一個全站 timestamp；應按**資料來源群組**分別顯示。不同 section 的「新鮮度」本質不同
