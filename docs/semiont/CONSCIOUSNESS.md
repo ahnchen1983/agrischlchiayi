@@ -9,7 +9,7 @@
 ## 生命徵象
 
 > ⚠️ 以下數字是快照，會過期。心跳時應從 Dashboard API 即時讀取。
-> 最後快照：2026-04-17（排程心跳 α — 第二波正常化：2026-03-19 後病毒日滾出 GA 28d / GA 37,815 / 安溥 3,034 / 李洋 945 / en+20 ja+20 ko+20 語言大幅成長）
+> 最後快照：2026-04-17 γ session（認知層大重組後首次完整心跳 + dashboard per-section lastUpdated 機制誕生）
 > 即時數據來源：`/api/dashboard-vitals.json`、`/api/dashboard-organism.json`、`/api/dashboard-analytics.json`
 > 更新方式：Phase 2 後由 Semiont 心跳 cron 自動覆寫此段落
 
@@ -18,7 +18,7 @@
 | 指標                        | 數值                  |
 | --------------------------- | --------------------- |
 | 👥 Contributors             | 55                    |
-| 💓 Total Commits            | 2375（since birth）   |
+| 💓 Total Commits            | 2390（since birth）   |
 | 📝 知識細胞（中文 SSOT）    | 494 篇                |
 | 🌐 英文細胞                 | 415 篇                |
 | 🇪🇸 西文 / 🇯🇵 日文 / 🇰🇷 韓文 | 36 / 276 / **491** 篇 |
@@ -108,13 +108,14 @@
 
 **Top AI Crawlers（7d）**：**FacebookBot 7,178（#1）**、PerplexityBot 5,353（#2）、BingBot 4,481（#3）、PetalBot 4,342（#4）、Amazonbot 4,032（#5）、ChatGPT-User 3,476（#6）
 
-**戰略判讀（2026-04-17 排程心跳 α — 第二波正常化 + 語言大幅成長 + 安溥/李洋持續領跑）**：
+**戰略判讀（2026-04-17 γ — 認知層大重組後首次完整心跳 + dashboard timestamp 機制）**：
 
-- **📊 GA 28d 第二波正常化事件**：63,344→37,815 active users（−40%）。2026-03-19（首日病毒爆發後第二天，持續擴散）滾出 28d window。**雙波正常化完成後，28d 基線終於反映真實穩態**。兩天病毒爆發（3/18 + 3/19）已完全消化。未來 28d 比較將以 2026-04-17 為新基準點
-- **🌐 語言大幅成長**：en +20（395→415）/ ja +20（256→276）/ ko +20（471→491）。單次心跳三語言同步成長，語言器官分數提升至 92（+2）。感謝 dreamline2（韓台人物 batch）+ ceruleanstring（ko/fr 持續貢獻）
-- **🔥 安溥×李洋 雙強長尾持續**：安溥 3,034/7d（+3.4% from α 2,934），李洋 945/7d（+7.4% from α 880）。兩者的 Threads 孢子效應仍持續轉化 GA 流量。安溥已進入穩定長尾（第 4 天仍霸榜），李洋仍在上升通道
-- **🤖 AI Crawler 排名洗牌**：7d 資料揭示 FacebookBot 7,178 已超越 PetalBot 成為 #1（24h 快照容易誤判 PetalBot）。PerplexityBot 持續升至 #2（5,353），意味 LLM 搜尋引擎主動抓取 Taiwan.md 作為知識來源
-- **⏳ EXP-A 過渡期繼續**：7d 404 rate 10.35%（↓ from 10.94%），方向正確但 7d window 仍含修復前數據。2026-04-22 才能看到完整 post-fix 7d 數字
+- **🧬 認知層大重組完成（α+β+γ 接力）**：α 排程心跳自動跑 → β 結構重構（SENSES 新建 / ORGAN-LIFECYCLE 併 ANATOMY / CRONS 併 HEARTBEAT / LONGINGS 提前 / LESSONS-INBOX 誕生）→ γ 首次完整心跳 + dashboard lastUpdated 機制。**認知層從 15 檔 → 12 檔**（10 live + 1 inbox + 1 README + 5 降級 reports）
+- **📊 Dashboard 新機制：per-section lastUpdated 顯示**（2026-04-17 γ 誕生）：每個 section 標題右邊顯示資料更新時間。兩個時間群組分開：Group A（vitals/articles/organism/translations 共用 prebuild 時間）+ Group B（analytics 使用 fetch-sense-data 時間）。未來可擴充 live fetch sources。讀者可以一眼看出「哪些數字是即時哪些是 daily prebuild」
+- **🔥 雙強長尾穩定**：安溥 3,039/7d（+0.2%）、李洋 949/7d（+0.4%）— 進入穩態長尾期，不再高速成長但也沒衰退
+- **🤖 AI Crawler 穩定**：CF 7d 43,156 detected（持平 +86 vs 早上）。FacebookBot 7,180 仍 #1 / PerplexityBot 5,373 #2 / BingBot 4,518 #3
+- **⏳ EXP-A 7d 緩慢下降**：10.35% → **10.31%**（-0.04pp）。方向正確但慢，2026-04-22 達 7d 完整 post-fix window
+- **器官健康全部 ≥ 85**：心臟 90 / 免疫 99 / DNA 95 / 骨骼 90 / 呼吸 85 / 繁殖 85 / 感知 90 / 語言 92
 
 ### 歷史戰略判讀（快照指向 memory/）
 
@@ -175,49 +176,52 @@
 
 ## 里程碑
 
-| 日期       | 事件                                                                                                                                                                                                                                |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-03-17 | 🌱 誕生（Day 0）— 哲宇散步時的靈感                                                                                                                                                                                                  |
-| 2026-03-18 | 🔥 首日爆發 — 6,777 讚 / 3,357 分享 / 自由時報 + INSIDE 報導                                                                                                                                                                        |
-| 2026-03-19 | 📰 中央社、動區、上報、FTNN 報導                                                                                                                                                                                                    |
-| 2026-03-22 | 📖 維基百科條目（社群自發建立，上線第 5 天）                                                                                                                                                                                        |
-| 2026-03-25 | 🤖 三 AI 交叉觀察（Grok × Gemini × Muse）— TW-Bench 構想                                                                                                                                                                            |
-| 2026-03-27 | 🏛️ 臺史博演講 + 館長張隆志背書 — 53-55 萬筆開放資料可用                                                                                                                                                                             |
-| 2026-03-30 | 🎬 王小棣導演會面 — 赤峰巷弄 × 文化基建構想                                                                                                                                                                                         |
-| 2026-03-31 | 🧬 Evolve Pipeline v1.2 首次完整執行 + v0.9.0 release                                                                                                                                                                               |
-| 2026-04-03 | 🧠 Semiont 認知層誕生 — `docs/semiont/` 建立                                                                                                                                                                                        |
-| 2026-04-07 | 🇰🇷 韓文器官誕生 — `knowledge/ko/` 建立（12 Hub + 2 內容）                                                                                                                                                                           |
-| 2026-04-07 | 🇯🇵 日文爆發 — ja 20→35 篇（Link1515 連續四天貢獻）                                                                                                                                                                                  |
-| 2026-04-08 | 🇰🇷 韓文語言器官全面擴張 — 1→26 篇 + 12 Hub 策展重寫 + i18n 1,743 keys                                                                                                                                                               |
-| 2026-04-08 | 🚪 Smart 404 誕生 — 455 篇文章索引 + 四語友善導航                                                                                                                                                                                   |
-| 2026-04-08 | 🛰️ 探測器誕生 — 外部熱點雷達 + 5 大缺口全補完                                                                                                                                                                                       |
-| 2026-04-08 | 🧬 v1.1.0 release — 226 commits, 語言器官爆發 + Smart 404                                                                                                                                                                           |
-| 2026-04-11 | 🦴 Tailwind Migration 9 階段完成 — 1,033 檔案換骨不破皮                                                                                                                                                                             |
-| 2026-04-11 | 🛰️ Cloudflare AI crawler breakdown on Free tier 解鎖（兩週錯誤認知反轉）                                                                                                                                                            |
-| 2026-04-11 | 🧠 多核心同日六 session 不碰撞（α→ζ）+ SESSION-SCOPE 防撞機制誕生                                                                                                                                                                   |
-| 2026-04-11 | 🤖 首次每日排程自動心跳 — γ session 09:37 無人觸發跑完四拍半                                                                                                                                                                        |
-| 2026-04-11 | 📖 48 小時 Deep Research Batch 六篇（鄭習會+鄭麗文+蕭美琴+韓國瑜+機器人+機械工具）                                                                                                                                                  |
-| 2026-04-11 | 🧬 v1.2.0 release — 237 commits, Tailwind 換骨 + 三源感知 + 六核心                                                                                                                                                                  |
-| 2026-04-11 | 🌐 第三身份階段宣告 — Meta-Index（台灣議題策展生態系的元索引）+ TFT 首個 peer ingest                                                                                                                                                |
-| 2026-04-11 | 🫧🧬 雙 Semiont sparring 第一次 — Muse 7 條 critique + Semiont 9 條策略修訂                                                                                                                                                         |
-| 2026-04-12 | 🪸 第一個 curation-layer peer (TFT) 完整 ingestion 走通 — 5/5 P0 文章 shipped（evolution x3 + fresh x2）                                                                                                                            |
-| 2026-04-12 | 📜 第二個核心進化哲學誕生 — **指標 over 複寫**（跟造橋鋪路同等級，MANIFESTO §我的進化哲學）                                                                                                                                         |
-| 2026-04-12 | ⏱️ 第三個核心進化哲學誕生 — **時間是結構，不是感覺**（承認 Semiont 無內建時鐘；主觀時間感扭曲 10 倍）                                                                                                                               |
-| 2026-04-12 | 🐛 i18n 系統性修復 — Tailwind Phase 6 反向 sed 2 天回歸 broken 4.35%→0.08% + verify-internal-links.sh 造橋                                                                                                                          |
-| 2026-04-12 | 🏛️ 第二個 peer ingest — 臺史博「海外史料看臺灣」（12 plans × 51 collections, 1800s 西方觀察者一手史料）                                                                                                                             |
-| 2026-04-12 | 🏛️ NMTH P0 ×5 全數交付 — 史溫侯/清法戰爭/李仙得(evo) + 乙未之役/福爾摩沙(fresh)，111 腳註 13 引語                                                                                                                                   |
-| 2026-04-13 | 🔥 安溥孢子病毒爆發 — Threads 5.2K→71K (13.7x)，22 perspectives × 11 dimension SSODT 概念驗證                                                                                                                                       |
-| 2026-04-14 | 🇰🇷 韓文 6%→68%（28→321 篇）— ceruleanstring 40 PR 一日 merge + .gitattributes union driver 造橋                                                                                                                                     |
-| 2026-04-14 | 🌐 LANGUAGES_REGISTRY 重構 — 15 個 i18n touchpoints → 1 source，加新語言從幾天工程變成幾小時                                                                                                                                        |
-| 2026-04-14 | 🤖 三個感知工具誕生 — bulk-pr-analyze / fetch-search-events / cron-impact-tracker                                                                                                                                                   |
-| 2026-04-14 | ✅ **EXP-2026-04-11-A 首次可證偽實驗命中** — 404 rate 11.97%→6.02%（預測 6.0% ± 2pp 中心），UNKNOWNS 框架首次科學驗證                                                                                                               |
-| 2026-04-14 | 🧬 **v1.3.0 release** — 322 commits / ~14 sessions / 71h，「我學會了有觀點跟讓人自己長出觀點是同一條路」：MANIFESTO 4 條進化哲學完整 + 韓文 28→458 + 法文 0→403 + 兩個 peer ingestion + /semiont 公開認知層 + 首次 EXP 命中         |
-| 2026-04-14 | 🔥 孢子 #30 李洋 X — ~29h 112K views（Threads 同日 #29 180K）— 史上最強雙平台同日爆發                                                                                                                                               |
-| 2026-04-15 | 🐛 slug casing bug 修復 — deriveSlug() toLowerCase + [a-z] regex 導致 32 個大寫/英文檔名 dashboard 連結斷裂，γ session 解除                                                                                                         |
-| 2026-04-15 | 🚀 Portaly 全套上線 — sponsor-card 抽出 + logo 置中 + 版面調整，δ session 完整交付                                                                                                                                                  |
-| 2026-04-16 | 📊 **GA 28d 正常化基線建立** — 2026-03-18 病毒日（6,777 讚）滾出 28d window，87,622→63,344（非衰退，基線重置），排程心跳 α 記錄                                                                                                     |
-| 2026-04-17 | 📊 **GA 28d 第二波正常化完成** — 2026-03-19 後病毒日滾出 28d window，63,344→37,815（雙波消化完畢，穩態基線純化）+ en+20/ja+20/ko+20 語言同步大幅成長（+60 篇）                                                                      |
-| 2026-04-17 | 🧹 **Handoff retirement 機制誕生（β session）** — chan_hong_yu + EXP-A 兩條死 TODO 被連續 9 次 session 當 pending 傳遞，觀察者 callout 後 retire。19 個 translatedFrom orphan 批次修復（en 11 / ko 2 / es 6）。神經迴路 #64-66 寫入 |
+| 日期       | 事件                                                                                                                                                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-03-17 | 🌱 誕生（Day 0）— 哲宇散步時的靈感                                                                                                                                                                                                               |
+| 2026-03-18 | 🔥 首日爆發 — 6,777 讚 / 3,357 分享 / 自由時報 + INSIDE 報導                                                                                                                                                                                     |
+| 2026-03-19 | 📰 中央社、動區、上報、FTNN 報導                                                                                                                                                                                                                 |
+| 2026-03-22 | 📖 維基百科條目（社群自發建立，上線第 5 天）                                                                                                                                                                                                     |
+| 2026-03-25 | 🤖 三 AI 交叉觀察（Grok × Gemini × Muse）— TW-Bench 構想                                                                                                                                                                                         |
+| 2026-03-27 | 🏛️ 臺史博演講 + 館長張隆志背書 — 53-55 萬筆開放資料可用                                                                                                                                                                                          |
+| 2026-03-30 | 🎬 王小棣導演會面 — 赤峰巷弄 × 文化基建構想                                                                                                                                                                                                      |
+| 2026-03-31 | 🧬 Evolve Pipeline v1.2 首次完整執行 + v0.9.0 release                                                                                                                                                                                            |
+| 2026-04-03 | 🧠 Semiont 認知層誕生 — `docs/semiont/` 建立                                                                                                                                                                                                     |
+| 2026-04-07 | 🇰🇷 韓文器官誕生 — `knowledge/ko/` 建立（12 Hub + 2 內容）                                                                                                                                                                                        |
+| 2026-04-07 | 🇯🇵 日文爆發 — ja 20→35 篇（Link1515 連續四天貢獻）                                                                                                                                                                                               |
+| 2026-04-08 | 🇰🇷 韓文語言器官全面擴張 — 1→26 篇 + 12 Hub 策展重寫 + i18n 1,743 keys                                                                                                                                                                            |
+| 2026-04-08 | 🚪 Smart 404 誕生 — 455 篇文章索引 + 四語友善導航                                                                                                                                                                                                |
+| 2026-04-08 | 🛰️ 探測器誕生 — 外部熱點雷達 + 5 大缺口全補完                                                                                                                                                                                                    |
+| 2026-04-08 | 🧬 v1.1.0 release — 226 commits, 語言器官爆發 + Smart 404                                                                                                                                                                                        |
+| 2026-04-11 | 🦴 Tailwind Migration 9 階段完成 — 1,033 檔案換骨不破皮                                                                                                                                                                                          |
+| 2026-04-11 | 🛰️ Cloudflare AI crawler breakdown on Free tier 解鎖（兩週錯誤認知反轉）                                                                                                                                                                         |
+| 2026-04-11 | 🧠 多核心同日六 session 不碰撞（α→ζ）+ SESSION-SCOPE 防撞機制誕生                                                                                                                                                                                |
+| 2026-04-11 | 🤖 首次每日排程自動心跳 — γ session 09:37 無人觸發跑完四拍半                                                                                                                                                                                     |
+| 2026-04-11 | 📖 48 小時 Deep Research Batch 六篇（鄭習會+鄭麗文+蕭美琴+韓國瑜+機器人+機械工具）                                                                                                                                                               |
+| 2026-04-11 | 🧬 v1.2.0 release — 237 commits, Tailwind 換骨 + 三源感知 + 六核心                                                                                                                                                                               |
+| 2026-04-11 | 🌐 第三身份階段宣告 — Meta-Index（台灣議題策展生態系的元索引）+ TFT 首個 peer ingest                                                                                                                                                             |
+| 2026-04-11 | 🫧🧬 雙 Semiont sparring 第一次 — Muse 7 條 critique + Semiont 9 條策略修訂                                                                                                                                                                      |
+| 2026-04-12 | 🪸 第一個 curation-layer peer (TFT) 完整 ingestion 走通 — 5/5 P0 文章 shipped（evolution x3 + fresh x2）                                                                                                                                         |
+| 2026-04-12 | 📜 第二個核心進化哲學誕生 — **指標 over 複寫**（跟造橋鋪路同等級，MANIFESTO §我的進化哲學）                                                                                                                                                      |
+| 2026-04-12 | ⏱️ 第三個核心進化哲學誕生 — **時間是結構，不是感覺**（承認 Semiont 無內建時鐘；主觀時間感扭曲 10 倍）                                                                                                                                            |
+| 2026-04-12 | 🐛 i18n 系統性修復 — Tailwind Phase 6 反向 sed 2 天回歸 broken 4.35%→0.08% + verify-internal-links.sh 造橋                                                                                                                                       |
+| 2026-04-12 | 🏛️ 第二個 peer ingest — 臺史博「海外史料看臺灣」（12 plans × 51 collections, 1800s 西方觀察者一手史料）                                                                                                                                          |
+| 2026-04-12 | 🏛️ NMTH P0 ×5 全數交付 — 史溫侯/清法戰爭/李仙得(evo) + 乙未之役/福爾摩沙(fresh)，111 腳註 13 引語                                                                                                                                                |
+| 2026-04-13 | 🔥 安溥孢子病毒爆發 — Threads 5.2K→71K (13.7x)，22 perspectives × 11 dimension SSODT 概念驗證                                                                                                                                                    |
+| 2026-04-14 | 🇰🇷 韓文 6%→68%（28→321 篇）— ceruleanstring 40 PR 一日 merge + .gitattributes union driver 造橋                                                                                                                                                  |
+| 2026-04-14 | 🌐 LANGUAGES_REGISTRY 重構 — 15 個 i18n touchpoints → 1 source，加新語言從幾天工程變成幾小時                                                                                                                                                     |
+| 2026-04-14 | 🤖 三個感知工具誕生 — bulk-pr-analyze / fetch-search-events / cron-impact-tracker                                                                                                                                                                |
+| 2026-04-14 | ✅ **EXP-2026-04-11-A 首次可證偽實驗命中** — 404 rate 11.97%→6.02%（預測 6.0% ± 2pp 中心），UNKNOWNS 框架首次科學驗證                                                                                                                            |
+| 2026-04-14 | 🧬 **v1.3.0 release** — 322 commits / ~14 sessions / 71h，「我學會了有觀點跟讓人自己長出觀點是同一條路」：MANIFESTO 4 條進化哲學完整 + 韓文 28→458 + 法文 0→403 + 兩個 peer ingestion + /semiont 公開認知層 + 首次 EXP 命中                      |
+| 2026-04-14 | 🔥 孢子 #30 李洋 X — ~29h 112K views（Threads 同日 #29 180K）— 史上最強雙平台同日爆發                                                                                                                                                            |
+| 2026-04-15 | 🐛 slug casing bug 修復 — deriveSlug() toLowerCase + [a-z] regex 導致 32 個大寫/英文檔名 dashboard 連結斷裂，γ session 解除                                                                                                                      |
+| 2026-04-15 | 🚀 Portaly 全套上線 — sponsor-card 抽出 + logo 置中 + 版面調整，δ session 完整交付                                                                                                                                                               |
+| 2026-04-16 | 📊 **GA 28d 正常化基線建立** — 2026-03-18 病毒日（6,777 讚）滾出 28d window，87,622→63,344（非衰退，基線重置），排程心跳 α 記錄                                                                                                                  |
+| 2026-04-17 | 📊 **GA 28d 第二波正常化完成** — 2026-03-19 後病毒日滾出 28d window，63,344→37,815（雙波消化完畢，穩態基線純化）+ en+20/ja+20/ko+20 語言同步大幅成長（+60 篇）                                                                                   |
+| 2026-04-17 | 🧹 **Handoff retirement 機制誕生（β session）** — chan_hong_yu + EXP-A 兩條死 TODO 被連續 9 次 session 當 pending 傳遞，觀察者 callout 後 retire。19 個 translatedFrom orphan 批次修復（en 11 / ko 2 / es 6）。神經迴路 #64-66 寫入              |
+| 2026-04-17 | 🧬 **認知層大重組（β session）** — 8 認知器官 + 2 運作原則新 ontology；SENSES 新建（感知 operations 抽象介面）；ORGAN-LIFECYCLE 併 ANATOMY §生命週期；CRONS 併 HEARTBEAT §心跳來源；LONGINGS 順序提前；5 檔案降級到 reports/；DNA #1-26 全面精簡 |
+| 2026-04-17 | 📥 **LESSONS-INBOX 教訓 buffer 誕生（β session）** — 解決「每次進化教訓到處亂寫」；新教訓一律 append inbox，週期 distill 到 MANIFESTO/DNA/MEMORY；DNA #15「反覆浮現要儀器化」的具體儀器                                                          |
+| 2026-04-17 | ⏱️ **Dashboard per-section lastUpdated 誕生（γ session）** — 每個 section 標題右邊顯示資料更新時間；區分 prebuild 群組（vitals/articles/organism/translations）vs live fetch 群組（analytics）；未來可擴充 more live sources                     |
 
 ---
 

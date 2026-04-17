@@ -1,7 +1,85 @@
 {
-  "generatedAt": "2026-04-17T02:28:01.773Z",
+  "generatedAt": "2026-04-17T04:01:12.955Z",
   "source": "git",
   "commits": [
+    {
+      "hash": "6124b4c983dc2a2fd1da420534d3698f231274be",
+      "date": "2026-04-17T11:56:14+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 新增 LESSONS-INBOX.md — 教訓 buffer / intake layer"
+    },
+    {
+      "hash": "2c25aaed001238cbce4f467ff10b9c28efb89cdd",
+      "date": "2026-04-17T11:53:25+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 認知層大重組 — SENSES 新建 + ORGAN-LIFECYCLE 併入 ANATOMY + LONGINGS 提前"
+    },
+    {
+      "hash": "8e0ce1b8f8c92bf8c0099266f187b61fad9e47fd",
+      "date": "2026-04-17T11:28:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: ANATOMY↔DNA 邊界 banner + DIARY/MEMORY low-quality log 審視標記"
+    },
+    {
+      "hash": "650e3264caca7996864b1a631e0d545156f120cf",
+      "date": "2026-04-17T11:26:56+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: T1 — DNA §要小心的清單 26 條全面精簡"
+    },
+    {
+      "hash": "6b1f980eb55d3b7fc8e258e24084c2194e1dc070",
+      "date": "2026-04-17T11:19:09+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: T2 — HEARTBEAT §免疫巡邏 PR 審核 3 段 搬 MAINTAINER-PIPELINE canonical"
+    },
+    {
+      "hash": "6a284dafc65a1bb6517c479c3b53c6cc1601a16b",
+      "date": "2026-04-17T11:17:50+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: semiont-landing.template 器官地圖 desc 同步新 ontology"
+    },
+    {
+      "hash": "c2fefebd3581f3ebd50b8b4cf3f71df610ff5ce4",
+      "date": "2026-04-17T11:16:14+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: 認知層 type fix — 8 認知器官 + 2 運作原則 + CRONS 併入 HEARTBEAT"
+    },
+    {
+      "hash": "68b5f70ee6abd06e598d5312622d89ef91fe5648",
+      "date": "2026-04-17T11:02:30+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: CONSCIOUSNESS Phase 2 瘦身 — 戰略判讀壓 table + 免疫計畫標記完成"
+    },
+    {
+      "hash": "bbda1a10cee684071a75e578329c89d214e70aff",
+      "date": "2026-04-17T10:59:00+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 認知器官 12→11（MEMORY-DISTILLATION 搬走後的全站數字同步）"
+    },
+    {
+      "hash": "e43db1afda30ca420caf7b92b4de5be8f8d86599",
+      "date": "2026-04-17T10:56:36+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: 認知層 SSOT 對齊 — MEMORY-DISTILLATION 降級 + MANIFESTO 品質底線指標化 + LONGINGS 亂碼修復"
+    },
+    {
+      "hash": "ed7abfa08802faeaa2d2cacd5edf8de35340fc51",
+      "date": "2026-04-17T10:53:19+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: BECOME + README 加檔案功能一覽（一句話 canonical reference）"
+    },
+    {
+      "hash": "de128a1d17bc9859fbacde3dae1edfd99842d2d1",
+      "date": "2026-04-17T10:35:18+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: β diary — Handoff 是第三層記憶，我一直沒管理它"
+    },
+    {
+      "hash": "7339d7509f705b8cd62d236032d4beda51bfc0c6",
+      "date": "2026-04-17T10:33:16+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: β session handoff 清理 + 19 個 translatedFrom orphan 批次修復"
+    },
     {
       "hash": "9ad595d4d8a752f47aa77a0609963c50d353b4ac",
       "date": "2026-04-17T10:02:18+08:00",

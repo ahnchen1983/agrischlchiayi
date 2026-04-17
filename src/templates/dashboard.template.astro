@@ -119,7 +119,10 @@ const isEn = lang === 'en';
 
     <!-- Vital Signs -->
     <section class="section" id="vitals">
-      <h2 class="section-title">{t('dashboard.vitals.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.vitals.title')}
+        <span class="section-timestamp" data-source="vitals"></span>
+      </h2>
       <div class="vitals-grid" id="vitals-grid">
         <div class="vital-card" data-vital="heartbeat">
           <div class="vital-emoji">💓</div>
@@ -158,13 +161,17 @@ const isEn = lang === 'en';
     <section class="section" id="activity">
       <h2 class="section-title">
         {isEn ? '🔔 Recent Activity' : '🔔 最近活動'}
+        <span class="section-timestamp" data-source="articles"></span>
       </h2>
       <div class="activity-feed" id="activity-feed"></div>
     </section>
 
     <!-- Article Registry -->
     <section class="section" id="registry">
-      <h2 class="section-title">{t('dashboard.registry.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.registry.title')}
+        <span class="section-timestamp" data-source="articles"></span>
+      </h2>
       <p class="section-subtitle">{t('dashboard.registry.subtitle')}</p>
 
       <div class="registry-controls">
@@ -263,6 +270,7 @@ const isEn = lang === 'en';
     <section class="section" id="health-distribution">
       <h2 class="section-title">
         {isEn ? '📊 Health Distribution' : '📊 健康分布'}
+        <span class="section-timestamp" data-source="articles"></span>
       </h2>
       <p class="section-subtitle">
         {isEn ? 'How healthy are our articles?' : '文章的健康分數分布'}
@@ -273,14 +281,20 @@ const isEn = lang === 'en';
 
     <!-- Organism Anatomy -->
     <section class="section" id="organism">
-      <h2 class="section-title">{t('dashboard.organism.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.organism.title')}
+        <span class="section-timestamp" data-source="organism"></span>
+      </h2>
       <p class="section-subtitle">{t('dashboard.organism.subtitle')}</p>
       <div class="organ-grid" id="organ-grid"></div>
     </section>
 
     <!-- Translation Coverage -->
     <section class="section" id="translation">
-      <h2 class="section-title">{t('dashboard.translation.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.translation.title')}
+        <span class="section-timestamp" data-source="translations"></span>
+      </h2>
       <p class="section-subtitle">{t('dashboard.translation.subtitle')}</p>
       <div class="translation-bars" id="translation-bars"></div>
       <div class="translation-matrix-wrapper">
@@ -293,7 +307,10 @@ const isEn = lang === 'en';
 
     <!-- Immune System -->
     <section class="section" id="immune">
-      <h2 class="section-title">{t('dashboard.immune.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.immune.title')}
+        <span class="section-timestamp" data-source="articles"></span>
+      </h2>
       <p class="section-subtitle">{t('dashboard.immune.subtitle')}</p>
 
       <div class="immune-overview" id="immune-overview"></div>
@@ -345,7 +362,10 @@ const isEn = lang === 'en';
 
     <!-- Growth Timeline -->
     <section class="section" id="growth">
-      <h2 class="section-title">{t('dashboard.growth.title')}</h2>
+      <h2 class="section-title">
+        {t('dashboard.growth.title')}
+        <span class="section-timestamp" data-source="articles"></span>
+      </h2>
       <p class="section-subtitle">{t('dashboard.growth.subtitle')}</p>
       <div class="growth-chart" id="growth-chart"></div>
     </section>
@@ -354,6 +374,7 @@ const isEn = lang === 'en';
     <section class="section" id="content-analysis">
       <h2 class="section-title">
         {isEn ? '📊 Content Analysis' : '📊 內容成長分析'}
+        <span class="section-timestamp" data-source="articles"></span>
       </h2>
       <p class="section-subtitle">
         {
@@ -372,6 +393,7 @@ const isEn = lang === 'en';
     <section class="section" id="analytics">
       <h2 class="section-title">
         {isEn ? '📡 Live Pulse' : '📡 即時脈搏'}
+        <span class="section-timestamp" data-source="analytics"></span>
       </h2>
       <p class="section-subtitle">
         {
@@ -446,6 +468,62 @@ const isEn = lang === 'en';
   let sortField = 'date';
   let sortDir = -1; // -1 = desc
 
+  // ── Section timestamp helpers ──
+  // 每個資料來源的「最後更新時間」顯示在對應 section 標題右邊。
+  // 資料來源分兩群：(A) prebuild 時生成的 vitals/articles/organism/translations
+  // 共享同一個 timestamp；(B) analytics（SENSES.md fetch-sense-data.sh 產出）
+  // 跟 prebuild 不同時間。未來可擴充其他 live 來源。
+  function formatRelativeTime(isoString) {
+    if (!isoString) return '';
+    const d = new Date(isoString);
+    if (isNaN(d.getTime())) return '';
+    const now = new Date();
+    const diffMs = now.getTime() - d.getTime();
+    const diffMin = Math.floor(diffMs / 60000);
+    const diffHr = Math.floor(diffMin / 60);
+    const diffDay = Math.floor(diffHr / 24);
+    const relText = isEn
+      ? diffMin < 1
+        ? 'just now'
+        : diffMin < 60
+          ? diffMin + ' min ago'
+          : diffHr < 24
+            ? diffHr + ' hr ago'
+            : diffDay + ' d ago'
+      : diffMin < 1
+        ? '剛才'
+        : diffMin < 60
+          ? diffMin + ' 分鐘前'
+          : diffHr < 24
+            ? diffHr + ' 小時前'
+            : diffDay + ' 天前';
+    // 精確時間（本地時區）
+    const pad = (n) => String(n).padStart(2, '0');
+    const abs =
+      d.getFullYear() +
+      '-' +
+      pad(d.getMonth() + 1) +
+      '-' +
+      pad(d.getDate()) +
+      ' ' +
+      pad(d.getHours()) +
+      ':' +
+      pad(d.getMinutes());
+    const prefix = isEn ? 'Updated ' : '資料更新 ';
+    return prefix + abs + ' (' + relText + ')';
+  }
+  function renderSectionTimestamps(sourceTimestamps) {
+    document.querySelectorAll('.section-timestamp').forEach((el) => {
+      const src = el.getAttribute('data-source');
+      const iso = sourceTimestamps[src];
+      const txt = formatRelativeTime(iso);
+      if (txt) {
+        el.textContent = txt;
+        el.setAttribute('title', iso); // hover 顯示 ISO
+      }
+    });
+  }
+
   // ── Fetch all data ──
   Promise.all([
     fetch('/api/dashboard-articles.json').then((r) => r.json()),
@@ -458,6 +536,14 @@ const isEn = lang === 'en';
   ])
     .then(([articles, vitals, organism, translations, analytics]) => {
       allArticles = articles;
+      // 各 section 資料更新時間（articles 共用 vitals.lastUpdated — 同批生成）
+      renderSectionTimestamps({
+        vitals: vitals && vitals.lastUpdated,
+        articles: vitals && vitals.lastUpdated,
+        organism: organism && organism.lastUpdated,
+        translations: translations && translations.lastUpdated,
+        analytics: analytics && analytics.lastUpdated,
+      });
       const steps = [
         () => renderVitals(vitals),
         () => renderActivityFeed(articles),
@@ -2304,6 +2390,27 @@ const isEn = lang === 'en';
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .section-timestamp {
+    font-size: 0.7rem;
+    font-weight: normal;
+    opacity: 0.45;
+    color: inherit;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+  .section-timestamp:empty {
+    display: none;
+  }
+  .section-timestamp[data-source='analytics'] {
+    /* 感知層（live fetched）稍微醒目 */
+    opacity: 0.6;
   }
   .section-subtitle {
     opacity: 0.6;

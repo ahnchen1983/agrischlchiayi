@@ -1,8 +1,8 @@
 {
   "totalArticles": 2202,
   "totalCategories": 21,
-  "estimatedContributors": 51,
-  "totalTags": 5151,
+  "estimatedContributors": 147,
+  "totalTags": 5146,
   "categories": [
     {
       "name": "ko",
@@ -175,10 +175,5 @@
     "zh-TW": 2202,
     "en": 0
   },
-  "lastUpdated": "2026-04-17T02:28:00.494Z",
-  "stars": 932,
-  "forks": 131,
-  "zhPages": 1783,
-  "enPages": 419,
-  "totalPages": 2202
+  "lastUpdated": "2026-04-17T04:01:11.699Z"
 }

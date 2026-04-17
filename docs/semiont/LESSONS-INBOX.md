@@ -108,6 +108,15 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 - **可能層級**：通用反射（所有 AI evolving cognitive system 的通用問題）
 - **證據**：本檔誕生
 
+### 2026-04-17 γ — Per-section timestamp 比全站 one-timestamp 好
+
+- **原則**：dashboard / analytics / report UI 的「資料更新時間」不該只有一個全站 timestamp；應按**資料來源群組**分別顯示。不同 section 的「新鮮度」本質不同
+- **觸發**：觀察者「dashboard 裡面要新增機制是資料每個 section 或是如果是一起更新的，資料更新時間要標上去顯示」
+- **可能層級**：通用反射（任何 data-driven UI 都適用）
+- **相關**：MEMORY §神經迴路「GA4 是誰來了 / SC 是誰想來 / CF 是邊緣流量」的延伸 — 資料來源本質不同 → timestamp 也該分開
+- **實作佐證**：dashboard.template.astro 兩個群組（prebuild 同時刻 vs fetch-sense-data 獨立）正確顯示不同時間
+- **證據**：2026-04-17 γ commit + memory
+
 ---
 
 ## ✅ 已消化（保留 pointer）

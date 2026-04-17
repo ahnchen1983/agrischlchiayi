@@ -561,6 +561,8 @@ async function main() {
   // =========================================================================
   // dashboard-articles.json
   // =========================================================================
+  // 保持 array 格式（backward compat for CLI + dashboard）。timestamp 共用
+  // dashboard-vitals.json 的 lastUpdated（同批生成）。
   fs.writeFileSync(
     path.join(OUTPUT_DIR, 'dashboard-articles.json'),
     JSON.stringify(articles, null, 2),
@@ -692,6 +694,7 @@ async function main() {
   }
 
   const translationsData = {
+    lastUpdated: now.toISOString(),
     languages,
     summary,
     matrix,

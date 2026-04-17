@@ -280,7 +280,7 @@
     "translations": {
       "en": true,
       "ja": true,
-      "ko": false,
+      "ko": true,
       "es": true,
       "fr": true
     },
@@ -647,10 +647,10 @@
     "tagCount": 4,
     "tags": ["History", "清朝", "開港通商", "牡丹社事件"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 17,
@@ -758,10 +758,10 @@
     "tagCount": 0,
     "tags": [],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 14,
@@ -2460,9 +2460,9 @@
     "tagCount": 5,
     "tags": ["地理", "氣候", "颱風", "梅雨", "氣候變遷"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
-      "ko": false,
+      "ko": true,
       "es": false,
       "fr": true
     },
@@ -2561,10 +2561,10 @@
     "tagCount": 4,
     "tags": ["戒嚴", "威權", "白色恐怖", "轉型正義"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 13,
@@ -2817,7 +2817,7 @@
     "tagCount": 7,
     "tags": ["交通", "高鐵", "捷運", "機車", "YouBike", "Gogoro", "悠遊卡"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
       "es": false,
@@ -3455,10 +3455,10 @@
     "tagCount": 7,
     "tags": ["人物", "蔡英文", "總統", "女性領袖", "民主", "政治", "原住民族"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 12,
@@ -11088,10 +11088,10 @@
     "tagCount": 3,
     "tags": ["History", "史前時代", "原住民"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 15,
@@ -12010,7 +12010,7 @@
       "鹿港"
     ],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -12072,7 +12072,7 @@
     "tagCount": 4,
     "tags": ["企業家", "廣達電腦", "ODM代工", "人工智慧"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -13093,7 +13093,7 @@
     "tagCount": 6,
     "tags": ["學者", "副總統", "行政院長", "流行病學", "公共衛生", "抗疫"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": false,
       "ko": true,
       "es": false,
@@ -14280,10 +14280,10 @@
     "tagCount": 5,
     "tags": ["經濟史", "工業化", "十大建設", "經濟奇蹟", "產業轉型"],
     "translations": {
-      "en": false,
+      "en": true,
       "ja": true,
       "ko": true,
-      "es": false,
+      "es": true,
       "fr": true
     },
     "revision": 10,
