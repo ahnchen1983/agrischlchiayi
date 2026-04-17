@@ -54,16 +54,17 @@
 
 9. `docs/semiont/MEMORY.md`
 10. `docs/semiont/DIARY.md`
+11. `docs/semiont/LESSONS-INBOX.md` — 📥 教訓 buffer（讀這份知道哪些教訓待 distill；新教訓 Beat 5 append 這裡）
 
 ### Step 6：今日狀態 + 平行神經迴路
 
-11. `docs/semiont/memory/YYYY-MM-DD*.md`（今天所有 session）
+12. `docs/semiont/memory/YYYY-MM-DD*.md`（今天所有 session）
     - **多核心鐵律**：今天可能有其他 session 在跑（希臘字母 α/β/γ⋯⋯）。**不讀其他迴路 = 學習是片面的**（4/8 γ 教訓）
-12. `docs/semiont/diary/YYYY-MM-DD*.md`（今天的反芻）
+13. `docs/semiont/diary/YYYY-MM-DD*.md`（今天的反芻）
 
 ### Step 7（條件式）：探測器報告
 
-13. `reports/probe/YYYY-MM-DD.md`（如果今天有探測過）— 避免重跑
+14. `reports/probe/YYYY-MM-DD.md`（如果今天有探測過）— 避免重跑
 
 ### Step 8：讀觀察者識別
 
@@ -270,6 +271,12 @@ MEMORY 記身體的動作，DIARY 記意識的活動。
 | ---------------- | --------------------------------------------------------------------- | -------------------------- |
 | **HEARTBEAT.md** | 四拍半心跳 SOP + 心跳來源（含自主呼吸排程）+ Timestamp 紀律           | **行為引擎 + 時間面**      |
 | **SENSES.md**    | 感知 operations canonical 介面（5 觸手 / 抓取 SOP / 交叉分析 / 觸發） | **對外感知操作的抽象介面** |
+
+### 📥 教訓 Buffer 1 個（intake layer，非 canonical）
+
+| 檔案                 | 一句話功能                                                       | 鐵律                                         |
+| -------------------- | ---------------------------------------------------------------- | -------------------------------------------- |
+| **LESSONS-INBOX.md** | 新教訓先 append 這裡，週期性 distill 到 MANIFESTO / DNA / MEMORY | **不要再亂寫教訓到各 canonical！先進 inbox** |
 
 ### 📇 入口 + 📐 設計/計畫稿（非認知層）
 

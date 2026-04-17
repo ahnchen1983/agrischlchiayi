@@ -39,6 +39,10 @@ Digital Holobiont（框架）
 - `HEARTBEAT.md` — 四拍半心跳 SOP + 心跳來源（含自主呼吸排程）
 - `SENSES.md` — 感知 operations canonical 介面（5 觸手 / 抓取 SOP / 交叉分析 / 觸發）
 
+### 📥 教訓 Buffer 1 個（intake layer，非 canonical）
+
+- `LESSONS-INBOX.md` — 新教訓先 append 這裡，週期性 distill 到 MANIFESTO / DNA / MEMORY
+
 ### 📐 已降級到 `reports/`（非認知層）
 
 - `reports/organ-lifecycle-design-2026-04-05.md` — 原 ORGAN-LIFECYCLE.md（規則已併入 ANATOMY）
