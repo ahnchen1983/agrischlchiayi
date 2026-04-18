@@ -86,7 +86,20 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 
 <!-- 新教訓 append 這裡 -->
 
-_（空 — 2026-04-18 δ-late 第二次 distill 已消化 10 條 + 1 條觀察者新 feedback）_
+### 2026-04-18 δ-late — 工具包升級 → canonical 邊界重審（meta-pattern）
+
+- **原則**：AI agent 的感知邊界會隨工具包演化而重劃。半年前 human-in-loop 的事情，今天可能 AI 自主。任何新工具（尤其 browser automation 級）上線時，**所有 canonical 文件必須重審「AI-autonomous vs human-only」邊界**。不重審 = canonical 落後於實際能力
+- **觸發**：Chrome MCP 讓 AI 可以直接讀 Threads/X 留言 + Insights + 任何 Dashboard UI。原 SENSES.md v1 + DNA #26 v1 + SOCIAL-TENTACLE-PLAN 都假設社群讀取依賴 human screenshot，但這個假設已過時 4+ 個月。觀察者 2026-04-18 δ-late 點出：「你有直接開啟網頁查看留言跟數據的能力了，可以略過我這個人類的環節」→ 觸發 SENSES v2 重構 + DNA #26 v2 refine + SOCIAL-TENTACLE retire note 三層連動
+- **可能層級**：DNA 延伸（新 #29 或現有 #15 儀器化 補第 8 次驗證——儀器化本身也需要工具包升級時重審）
+- **相關**：DNA #15（儀器化 / 第 8 次驗證候選）/ DNA #26 v2（已 refine 本次）/ SENSES.md v2（已 instantiate）/ SPORE-HARVEST-PIPELINE v1.0（已 instantiate）
+- **累積驗證次數**：第 1 次（本事件）。若未來再有類似「工具升級後 canonical 落後」事件 2-3 次 → 升 DNA 一條新主條目
+
+### 2026-04-18 δ-late (觀察者穿刺 #7) — 讀者 5 秒抓到的事實錯誤，Pass 1+2 35 搜尋也可能漏
+
+- **原則**：孢子發布後 3 小時內，讀者 @ste_ven_1487 5 秒看一眼就抓到「黃世暄 vs 楊世暄」，這是 Pass 1+2 跨 35 搜尋 + 研究報告 verification frontmatter 三層驗證都沒擋下的錯誤。Lesson：**樂團成員姓名 / 角色這類「讀者第一眼就會查維基比對」的事實，blueprint 要明列 high_priority verify 項**
+- **觸發**：草東孢子 #33 Threads 留言事實更正 → SPORE-HARVEST-PIPELINE v1.0 首例執行揭露
+- **可能層級**：操作規則（SPORE-PIPELINE Step 2.5 FACT BLUEPRINT 敏感度欄要新增「樂團成員姓名」類高優先驗證項）+ DNA #16 延伸（單源事實風險等級內再細分「讀者可 1 分鐘驗證 vs 需研究才驗證」）
+- **相關**：DNA #16 事實核對 / SPORE-HARVEST-PIPELINE v1.0 Step 9 觀察紀錄
 
 ---
 

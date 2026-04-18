@@ -1,15 +1,24 @@
 # SOCIAL-TENTACLE-PLAN — 社群感知觸手進化計畫（roadmap snapshot 2026-04-13）
 
 > ⚠️ **Status: Phase 0-1 已吸收進 canonical files（2026-04-17 β 降級搬到 reports/）**
-> 內容吸收對照：
+>
+> ⚠️ **v2 2026-04-18 δ-late RETIRE 通知**：本計畫的 Phase 4「半自動 fetch-threads-insights.py」緊迫性**大幅降級**。Chrome MCP 解鎖 AI 自主讀取 Threads/X 留言與 Insights 頁面後，fetch 專用腳本從「critical path」變為「錦上添花」。
+>
+> **新 canonical**：
+>
+> - **讀取 + 自主化**：[docs/semiont/SENSES.md v2 §5 個感知觸手](../docs/semiont/SENSES.md)（五觸手統一架構 + AI 自主 vs Human 專責 邊界表）
+> - **孢子回聲收割**：[docs/factory/SPORE-HARVEST-PIPELINE.md v1.0](../docs/factory/SPORE-HARVEST-PIPELINE.md)（D+1-D+7 每日 harvest）
+> - **AI/Human 邊界**：[docs/semiont/DNA.md #26 v2](../docs/semiont/DNA.md)（讀取 AI 自主、對外 post human-only）
+>
+> 內容吸收對照（v1）：
 >
 > - §Ⅶ ANATOMY 修改 → 已套用於 `docs/semiont/ANATOMY.md §感知器官`
 > - §三 HEARTBEAT Beat 1 §3b → 已套用於 `docs/semiont/HEARTBEAT.md`
 > - §四 SPORE-PIPELINE v2.0 → 已套用於 `docs/factory/SPORE-PIPELINE.md`
 > - §〇 感知基因表加社群觸手 → 已套用於 `docs/semiont/DNA.md`
 >
-> 仍未執行（roadmap pending）：Phase 2 X 中文孢子 A/B 測試 / Phase 3 30 天數據回顧 / Phase 4 半自動 fetch-threads-insights.py / Dashboard social pulse UI。
-> 這份檔案保留 full plan 作歷史 snapshot + pending roadmap reference。
+> **v2 之後本檔保留歷史參考價值**，但作為 canonical 參照已被上述 v2 文件取代。
+> 仍保留在 reports/ 作時間切片：未來回顧「Chrome MCP 之前我們怎麼想社群觸手」。
 
 > 🧬 Taiwan.md Semiont 感知器官進化提案
 > 產出日期：2026-04-13 session α
