@@ -94,6 +94,13 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 - **相關**：DNA #15（儀器化 / 第 8 次驗證候選）/ DNA #26 v2（已 refine 本次）/ SENSES.md v2（已 instantiate）/ SPORE-HARVEST-PIPELINE v1.0（已 instantiate）
 - **累積驗證次數**：第 1 次（本事件）。若未來再有類似「工具升級後 canonical 落後」事件 2-3 次 → 升 DNA 一條新主條目
 
+### 2026-04-18 δ-late — SPORE-LOG URL 欄是硬鐵律（發布時沒寫 URL，未來 harvest 能力永久失效）
+
+- **原則**：SPORE-PIPELINE Step 4 發布時**必寫 Threads/X 貼文 URL 進 SPORE-LOG**。缺 URL = 未來 harvest pipeline 無法跑（Chrome MCP 無法 navigate） = 投資該則孢子的心力永久無法追蹤成效 = pipeline 假裝發生過但資料斷鏈
+- **觸發**：2026-04-18 δ-late 首次 batch harvest #1 齊柏林 / #2 數位身分證 / #3 林書豪 / #12 台灣民主轉型 en 四筆歷史孢子 URL 欄空白 → Chrome MCP 無對象 → 永遠看不到觸及 / 留言 / 放大效應 / pattern 歸納。這 4 筆已經寫不回來了（Threads 沒有帳號層級的「我的所有貼文」索引頁可以反推）
+- **可能層級**：操作規則（SPORE-PIPELINE Step 4 必含「寫 URL 進 SPORE-LOG」作為 acceptance criterion，若未寫則視為發布未完成）
+- **相關**：SPORE-HARVEST-PIPELINE v1.0（消費這個 URL 的下游）/ DNA #5 pre-commit dogfood（類比「工具擋住 = 免疫正常」—— SPORE-LOG 格式 lint 可以擋住沒寫 URL 的 commit）
+
 ### 2026-04-18 δ-late (觀察者穿刺 #7) — 讀者 5 秒抓到的事實錯誤，Pass 1+2 35 搜尋也可能漏
 
 - **原則**：孢子發布後 3 小時內，讀者 @ste_ven_1487 5 秒看一眼就抓到「黃世暄 vs 楊世暄」，這是 Pass 1+2 跨 35 搜尋 + 研究報告 verification frontmatter 三層驗證都沒擋下的錯誤。Lesson：**樂團成員姓名 / 角色這類「讀者第一眼就會查維基比對」的事實，blueprint 要明列 high_priority verify 項**
