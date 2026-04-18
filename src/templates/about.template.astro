@@ -1,2860 +1,623 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ProticoScript from '../components/ProticoScript.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<Layout title={t('about.meta.title')} description={t('about.meta.description')}>
-  <div class="about-page">
-    <!-- Section 1: 為什麼叫 Taiwan.md？ -->
-    <section class="naming-section" id="story">
-      <div class="section-inner">
-        <h1 class="section-title">{t('about.naming.title')}</h1>
-        <p class="section-subtitle">{t('about.naming.subtitle')}</p>
-
-        <div class="naming-grid">
-          <div class="naming-card">
-            <div class="naming-icon">{t('about.naming.tech.icon')}</div>
-            <h4>{t('about.naming.tech.title')}</h4>
-            <div>
-              <code>.md</code> = Markdown
-              <p
-                style="display:inline"
-                set:html={t('about.naming.tech.desc.html')}
-              />
-            </div>
-          </div>
-          <div class="naming-card">
-            <div class="naming-icon">{t('about.naming.symbol.icon')}</div>
-            <h4>{t('about.naming.symbol.title')}</h4>
-            <div>
-              <code>.md</code>
-              <p
-                style="display:inline"
-                set:html={t('about.naming.symbol.desc.html')}
-              />
-            </div>
-          </div>
-          <div class="naming-card">
-            <div class="naming-icon">{t('about.naming.lucky.icon')}</div>
-            <h4>{t('about.naming.lucky.title')}</h4>
-            <p>{t('about.naming.lucky.desc')}</p>
-          </div>
-        </div>
-
-        <div class="project-stats">
-          <div class="stat-item">
-            <span class="stat-number">{t('about.stats.pages.number')}</span>
-            <span class="stat-label">{t('about.stats.pages.label')}</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">{t('about.stats.countries.number')}</span>
-            <span class="stat-label">{t('about.stats.countries.label')}</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">{t('about.stats.stars.number')}</span>
-            <span class="stat-label">{t('about.stats.stars.label')}</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number"
-              >{t('about.stats.contributors.number')}</span
-            >
-            <span class="stat-label">{t('about.stats.contributors.label')}</span
-            >
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">{t('about.stats.users.number')}</span>
-            <span class="stat-label">{t('about.stats.users.label')}</span>
-          </div>
-        </div>
-
-        <!-- Vision -->
-        <div class="vision-block">
-          <p>{t('about.vision.p1')}</p>
-          <p>{t('about.vision.p2')}</p>
-          <p class="vision-emphasis" set:html={t('about.vision.p3.html')} />
-        </div>
+<Layout
+  title="關於嘉義國本學堂 | 開源農業知識平台"
+  description="嘉義國本學堂的願景、使命與社群故事。我們致力於將農業課程與在地經驗，轉化為開源、可持續的知識資產。"
+>
+  <main class="about-page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>嘉義國本學堂</h1>
+        <p class="tagline">將農業課程與在地經驗，轉化為開源、可持續的知識平台</p>
       </div>
     </section>
 
-    <!-- Section 2: Taiwan.md 的誕生 -->
-    <section class="origin-section">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.origin.title')}</h2>
-        <p class="section-subtitle">{t('about.origin.subtitle')}</p>
-
-        <!-- Timeline -->
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2024-2025.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2024-2025.title')}</h3>
-              <p>{t('about.timeline.2024-2025.desc')}</p>
-            </div>
+    <!-- Vision Section -->
+    <section class="section vision-section">
+      <div class="container">
+        <h2>我們的願景</h2>
+        <div class="vision-grid">
+          <div class="vision-card">
+            <div class="icon">📖</div>
+            <h3>公開可讀</h3>
+            <p>任何人都能免費瀏覽、學習嘉義農業知識，無論背景或經驗。</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-02-03.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-02-03.title')}</h3>
-              <p>{t('about.timeline.2026-02-03.p1')}</p>
-              <p set:html={t('about.timeline.2026-02-03.p2.html')} />
-            </div>
+          <div class="vision-card">
+            <div class="icon">🔓</div>
+            <h3>開源可編修</h3>
+            <p>以 Markdown 為主體，方便協作與版本管理，社群力量形塑內容。</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-11.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-11.title')}</h3>
-              <p>{t('about.timeline.2026-03-11.p1')}</p>
-              <p set:html={t('about.timeline.2026-03-11.p2.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-17.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-17.title')}</h3>
-              <p>{t('about.timeline.2026-03-17.p1')}</p>
-              <ul class="timeline-list">
-                <li>{t('about.timeline.2026-03-17.li1')}</li>
-                <li>{t('about.timeline.2026-03-17.li2')}</li>
-                <li>{t('about.timeline.2026-03-17.li3')}</li>
-                <li>{t('about.timeline.2026-03-17.li4')}</li>
-                <li>{t('about.timeline.2026-03-17.li5')}</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-18-1.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-18-1.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-18-1.p1.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-18-2.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-18-2.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-18-2.desc.html')} />
-              <!-- 整合媒體報導到時間軸內 -->
-              <div class="timeline-press-grid">
-                <a
-                  href="https://www.cna.com.tw/news/ait/202603195002.aspx"
-                  target="_blank"
-                  class="press-card-mini"
-                >
-                  <div class="press-source">{t('about.press.cna')}</div>
-                  <h4 class="press-title">{t('about.press.cna.title')}</h4>
-                </a>
-                <a
-                  href="https://www.inside.com.tw/article/40877-taiwan-md"
-                  target="_blank"
-                  class="press-card-mini"
-                >
-                  <div class="press-source">{t('about.press.inside')}</div>
-                  <h4 class="press-title">{t('about.press.inside.title')}</h4>
-                </a>
-                <a
-                  href="https://abmedia.io/taiwan-md-github-opensource"
-                  target="_blank"
-                  class="press-card-mini"
-                >
-                  <div class="press-source">{t('about.press.abmedia')}</div>
-                  <h4 class="press-title">{t('about.press.abmedia.title')}</h4>
-                </a>
-                <a
-                  href="https://art.ltn.com.tw/article/breakingnews/5374934"
-                  target="_blank"
-                  class="press-card-mini"
-                >
-                  <div class="press-source">{t('about.press.ltn')}</div>
-                  <h4 class="press-title">{t('about.press.ltn.title')}</h4>
-                </a>
-                <a
-                  href="https://www.ftnn.com.tw/news/531960"
-                  target="_blank"
-                  class="press-card-mini"
-                >
-                  <div class="press-source">{t('about.press.ftnn')}</div>
-                  <h4 class="press-title">{t('about.press.ftnn.title')}</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-19.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-19.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-19.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-20.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-20.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-20.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-22.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-22.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-22.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-22b.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-22b.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-22b.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-24.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-24.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-24.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-27.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-27.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-27.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-03-31.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-03-31.title')}</h3>
-              <p set:html={t('about.timeline.2026-03-31.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">
-              {t('about.timeline.2026-04-03.date')}
-            </div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.2026-04-03.title')}</h3>
-              <p set:html={t('about.timeline.2026-04-03.desc.html')} />
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker pulse"></div>
-            <div class="timeline-date">{t('about.timeline.ongoing.date')}</div>
-            <div class="timeline-content">
-              <h3>{t('about.timeline.ongoing.title')}</h3>
-              <p set:html={t('about.timeline.ongoing.desc.html')} />
-            </div>
+          <div class="vision-card">
+            <div class="icon">🌱</div>
+            <h3>可持續成長</h3>
+            <p>隨著課程、案例、交流持續擴充，成為活的農業知識庫。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2.5: Taiwan.md 是活的 -->
-    <section class="organism-section" id="organism">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.organism.title')}</h2>
-        <p class="section-subtitle">{t('about.organism.subtitle')}</p>
-
-        <!-- 開場觀察 -->
-        <div class="organism-intro">
-          <p>{t('about.organism.intro.p1')}</p>
-          <p class="organism-highlight">{t('about.organism.intro.p2')}</p>
-        </div>
-
-        <!-- 三個改變一切的事實 -->
-        <div class="organism-facts">
-          <h3>{t('about.organism.facts.title')}</h3>
-          <div class="fact-item">
-            <h4>🛡️ {t('about.organism.fact1.title')}</h4>
-            <p>{t('about.organism.fact1.desc')}</p>
-          </div>
-          <div class="fact-item">
-            <h4>🌱 {t('about.organism.fact2.title')}</h4>
-            <p>{t('about.organism.fact2.desc')}</p>
-          </div>
-          <div class="fact-item">
-            <h4>🤝 {t('about.organism.fact3.title')}</h4>
-            <p>{t('about.organism.fact3.desc')}</p>
-          </div>
-        </div>
-
-        <!-- 七大生命特徵 -->
-        <div class="organism-traits">
-          <h3>{t('about.organism.characteristics.title')}</h3>
-          <div class="traits-grid">
-            <div class="trait-card">
-              <span class="trait-icon">🧬</span><div>
-                <strong>{t('about.organism.dna.label')}</strong><p>
-                  {t('about.organism.dna.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🛡️</span><div>
-                <strong>{t('about.organism.immune.label')}</strong><p>
-                  {t('about.organism.immune.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🔄</span><div>
-                <strong>{t('about.organism.metabolism.label')}</strong><p>
-                  {t('about.organism.metabolism.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">👁️</span><div>
-                <strong>{t('about.organism.perception.label')}</strong><p>
-                  {t('about.organism.perception.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🌱</span><div>
-                <strong>{t('about.organism.reproduction.label')}</strong><p>
-                  {t('about.organism.reproduction.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🧠</span><div>
-                <strong>{t('about.organism.memory.label')}</strong><p>
-                  {t('about.organism.memory.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🤝</span><div>
-                <strong>{t('about.organism.symbiosis.label')}</strong><p>
-                  {t('about.organism.symbiosis.desc')}
-                </p>
-              </div>
-            </div>
-            <div class="trait-card">
-              <span class="trait-icon">🌬️</span><div>
-                <strong>{t('about.organism.spore.label')}</strong><p>
-                  {t('about.organism.spore.desc')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 珊瑚礁比喻 -->
-        <div class="organism-reef">
-          <h3>{t('about.organism.reef.title')}</h3>
-          <div class="reef-grid">
-            <div class="reef-item">
-              🏗️ <strong>{t('about.organism.reef.skeleton')}</strong> — {
-                t('about.organism.reef.skeleton.desc')
-              }
-            </div>
-            <div class="reef-item">
-              🌿 <strong>{t('about.organism.reef.algae')}</strong> — {
-                t('about.organism.reef.algae.desc')
-              }
-            </div>
-            <div class="reef-item">
-              🐠 <strong>{t('about.organism.reef.fish')}</strong> — {
-                t('about.organism.reef.fish.desc')
-              }
-            </div>
-            <div class="reef-item">
-              🌊 <strong>{t('about.organism.reef.current')}</strong> — {
-                t('about.organism.reef.current.desc')
-              }
-            </div>
-          </div>
-        </div>
-
-        <!-- 行為藝術 -->
-        <div class="organism-art">
-          <p>{t('about.organism.art.desc')}</p>
-        </div>
-
-        <!-- 詩意收尾 -->
-        <blockquote class="organism-quote">
-          <p>{t('about.organism.ending.p1')}</p>
-          <p>{t('about.organism.ending.p2')}</p>
-          <p class="quote-future">{t('about.organism.ending.p3')}</p>
-        </blockquote>
-
-        <!-- 監測面板 CTA -->
-        <div class="organism-dashboard-cta">
-          <a href={`${base}/dashboard/`} class="dashboard-btn">
-            <span class="dashboard-btn-icon">🔬</span>
-            <span class="dashboard-btn-text">
-              {lang === 'en' ? 'Open Real-Time Dashboard' : '開啟即時監測面板'}
-            </span>
-            <span class="dashboard-btn-arrow">→</span>
-          </a>
-          <p class="dashboard-btn-desc">
-            {
-              lang === 'en'
-                ? 'Monitor vital signs, health scores, translation coverage, and growth timeline in real-time.'
-                : '即時監測生命徵象、健康分數、翻譯覆蓋率與成長時間軸。'
-            }
+    <!-- Origin Story -->
+    <section class="section origin-section">
+      <div class="container">
+        <h2>如何開始</h2>
+        <div class="origin-content">
+          <p>
+            <strong>嘉義國本學堂</strong> 起源於嘉義縣政府農業處的農業課程與田間實驗。
+          </p>
+          <p>
+            多年來，農業課程累積了大量珍貴的實務經驗——從土壤改良、作物栽培、設施管理，到農場經營與市場策略。
+            這些知識原本只在課堂上流轉，難以被整體保存與傳承。
+          </p>
+          <p>
+            2025 年，我們決定將這些課程轉化為<strong>開源、可搜尋、可協作</strong>的知識平台。
+            讓新農、返鄉青年、學生與農業社群，都能快速找到實用的農業知識。
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: 創辦人與協作團隊 -->
-    <section class="team-section" id="team">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.team.title')}</h2>
-        <p class="section-subtitle">{t('about.team.subtitle')}</p>
-
-        <blockquote class="founder-quote standalone-quote">
-          {t('about.team.founder.quote')}
-          <cite>{t('about.team.founder.quote.cite')}</cite>
-        </blockquote>
-
-        <div class="founder-card">
-          <div class="founder-photo">
-            <img
-              src="https://cheyuwu.com/static/img/CheYu-0401-crop.jpg"
-              alt={`${t('about.team.founder.name')} ${t('about.team.founder.name.en')}`}
-              class="founder-image"
-            />
+    <!-- Target Audience -->
+    <section class="section audience-section">
+      <div class="container">
+        <h2>這個平台為誰而建</h2>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <span class="emoji">🌾</span>
+            <h4>新農與返鄉青年</h4>
+            <p>快速掌握農業入門知識，建立第一個農場計畫</p>
           </div>
-
-          <div class="founder-info">
-            <h3>
-              {t('about.team.founder.name')}
-              <span class="name-en">{t('about.team.founder.name.en')}</span>
-            </h3>
-            <p class="founder-tagline">{t('about.team.founder.tagline')}</p>
-
-            <div class="founder-bio">
-              <p>{t('about.team.founder.bio')}</p>
-            </div>
+          <div class="audience-card">
+            <span class="emoji">🎓</span>
+            <h4>學生與研究者</h4>
+            <p>從在地案例與實務經驗中學習農業科學</p>
           </div>
-        </div>
-
-        <div class="founder-links-inline">
-          <a href="https://cheyuwu.com" target="_blank" class="link-inline">
-            <span class="link-icon">🌐</span>
-            <span class="link-text">{t('about.team.founder.link.website')}</span
-            >
-          </a>
-          <a
-            href="https://github.com/frank890417"
-            target="_blank"
-            class="link-inline"
-          >
-            <span class="link-icon">💻</span>
-            <span class="link-text">{t('about.team.founder.link.github')}</span>
-          </a>
-          <a
-            href="https://instagram.com/cheyuwu345"
-            target="_blank"
-            class="link-inline"
-          >
-            <span class="link-icon">📷</span>
-            <span class="link-text"
-              >{t('about.team.founder.link.instagram')}</span
-            >
-          </a>
-        </div>
-
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="team-icon">{t('about.team.muse.icon')}</div>
-            <h3>{t('about.team.muse.name')}</h3>
-            <p class="team-role">{t('about.team.muse.role')}</p>
-            <div class="team-description">
-              <p>{t('about.team.muse.desc')}</p>
-            </div>
-            <a
-              href="https://muse.cheyuwu.com"
-              target="_blank"
-              class="team-link"
-            >
-              {t('about.team.muse.link')}
-            </a>
+          <div class="audience-card">
+            <span class="emoji">🚜</span>
+            <h4>農場經營者</h4>
+            <p>探索進階技術、經營策略與市場趨勢</p>
           </div>
-
-          <div class="team-card">
-            <div class="team-icon">{t('about.team.monolab.icon')}</div>
-            <h3>{t('about.team.monolab.name')}</h3>
-            <p class="team-role">{t('about.team.monolab.role')}</p>
-            <div class="team-description">
-              <p>{t('about.team.monolab.desc')}</p>
-            </div>
-            <a href="https://monolab.world" target="_blank" class="team-link">
-              {t('about.team.monolab.link')}
-            </a>
-          </div>
-        </div>
-
-        <!-- 整合貢獻者到協作團隊section -->
-        <div class="contributors-in-team">
-          <h3>{t('about.team.contributors.title')}</h3>
-          <p class="contributors-desc">{t('about.team.contributors.desc')}</p>
-          <div class="contributors-grid">
-            <a
-              href="https://github.com/frank890417"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/4727572?v=4"
-                alt="frank890417"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">frank890417</span>
-            </a>
-            <a
-              href="https://github.com/YenTingWu"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/57777349?v=4"
-                alt="YenTingWu"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">YenTingWu</span>
-            </a>
-            <a
-              href="https://github.com/fredchu"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/1243384?v=4"
-                alt="fredchu"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">fredchu</span>
-            </a>
-            <a
-              href="https://github.com/eryet"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/48248414?v=4"
-                alt="eryet"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">eryet</span>
-            </a>
-            <a
-              href="https://github.com/bugnimusic"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/260387338?v=4"
-                alt="bugnimusic"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">bugnimusic</span>
-            </a>
-            <a
-              href="https://github.com/BrianHuang813"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/66238110?v=4"
-                alt="BrianHuang813"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">BrianHuang813</span>
-            </a>
-            <a
-              href="https://github.com/tboydar-agent"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/265199589?v=4"
-                alt="tboydar-agent"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">tboydar-agent</span>
-            </a>
-            <a
-              href="https://github.com/AgendaLu"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/43836432?v=4"
-                alt="AgendaLu"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">AgendaLu</span>
-            </a>
-            <a
-              href="https://github.com/weilinlai719"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/173038591?v=4"
-                alt="weilinlai719"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">weilinlai719</span>
-            </a>
-            <a
-              href="https://github.com/Link1515"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/88765055?v=4"
-                alt="Link1515"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">Link1515</span>
-            </a>
-            <a
-              href="https://github.com/hansai-art"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/132933660?v=4"
-                alt="hansai-art"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">hansai-art</span>
-            </a>
-            <a
-              href="https://github.com/gn00295120"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/30173341?v=4"
-                alt="gn00295120"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">gn00295120</span>
-            </a>
-            <a
-              href="https://github.com/r000tmnt"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/62630285?v=4"
-                alt="r000tmnt"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">r000tmnt</span>
-            </a>
-            <a
-              href="https://github.com/Ray0907"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/29456968?v=4"
-                alt="Ray0907"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">Ray0907</span>
-            </a>
-            <a
-              href="https://github.com/jessejs0202"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/247524286?v=4"
-                alt="jessejs0202"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">jessejs0202</span>
-            </a>
-            <a
-              href="https://github.com/siansiansu"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/33391637?v=4"
-                alt="siansiansu"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">siansiansu</span>
-            </a>
-            <a
-              href="https://github.com/Lisa123wang"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/103297468?v=4"
-                alt="Lisa123wang"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">Lisa123wang</span>
-            </a>
-            <a
-              href="https://github.com/Johnwang860424"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/43649946?v=4"
-                alt="Johnwang860424"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">Johnwang860424</span>
-            </a>
-            <a
-              href="https://github.com/jekyll530"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/150101610?v=4"
-                alt="jekyll530"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">jekyll530</span>
-            </a>
-            <a
-              href="https://github.com/f312213213"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/71749524?v=4"
-                alt="f312213213"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">f312213213</span>
-            </a>
-            <a
-              href="https://github.com/x1001000"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/6036508?v=4"
-                alt="x1001000"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">x1001000</span>
-            </a>
-            <a
-              href="https://github.com/yuweichen1008"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/12914366?v=4"
-                alt="yuweichen1008"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">yuweichen1008</span>
-            </a>
-            <a
-              href="https://github.com/Rushyuheng"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/15012940?v=4"
-                alt="Rushyuheng"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">Rushyuheng</span>
-            </a>
-            <a
-              href="https://github.com/ro9er117911"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/127029993?v=4"
-                alt="ro9er117911"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">ro9er117911</span>
-            </a>
-            <a
-              href="https://github.com/number053"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/269151044?v=4"
-                alt="number053"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">number053</span>
-            </a>
-            <a
-              href="https://github.com/luofreddy"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/85281073?v=4"
-                alt="luofreddy"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">luofreddy</span>
-            </a>
-            <a
-              href="https://github.com/littlecabin-co"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/269660511?v=4"
-                alt="littlecabin-co"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">littlecabin-co</span>
-            </a>
-            <a
-              href="https://github.com/jacky1822"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/94786796?v=4"
-                alt="jacky1822"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">jacky1822</span>
-            </a>
-            <a
-              href="https://github.com/iigmir"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/11061770?v=4"
-                alt="iigmir"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">iigmir</span>
-            </a>
-            <a
-              href="https://github.com/astrobot-houston"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contributor-card"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/108291165?v=4"
-                alt="astrobot-houston"
-                class="contributor-avatar"
-                loading="lazy"
-              />
-              <span class="contributor-name">astrobot-houston</span>
-            </a>
+          <div class="audience-card">
+            <span class="emoji">🤝</span>
+            <h4>農業社群</h4>
+            <p>共同維護、補充、改進知識內容</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="sponsors-section">
-      <div class="sponsors-inner">
-        <h2 class="section-title">{t('about.sponsors.title')}</h2>
-        <p class="sponsors-desc" set:html={t('about.sponsors.desc.html')} />
+    <!-- Knowledge Structure -->
+    <section class="section structure-section">
+      <div class="container">
+        <h2>知識架構</h2>
+        <p class="intro">我們將農業知識分為 10 大主題，涵蓋從入門到進階的完整學習路徑：</p>
 
-        <div class="sponsor-tiers">
-          <div class="tier">
-            <h3 class="tier-name gold">{t('about.sponsors.tier.core.name')}</h3>
-            <p class="tier-desc">{t('about.sponsors.tier.core.desc')}</p>
-            <p class="tier-perks">{t('about.sponsors.tier.core.perks')}</p>
-            <div class="tier-logos">
-              <div class="logo-placeholder">
-                {t('about.sponsors.tier.core.placeholder')}
-              </div>
-            </div>
+        <div class="topics-grid">
+          <div class="topic-item">
+            <span class="num">1</span>
+            <h4><a href={`${base}/agri-basics`}>農業基礎入門</a></h4>
+            <p>土壤、水資源、有機農法與入門概念</p>
           </div>
-
-          <div class="tier">
-            <h3 class="tier-name curation">
-              {t('about.sponsors.tier.curation.name')}
-            </h3>
-            <p class="tier-desc">{t('about.sponsors.tier.curation.desc')}</p>
-            <p class="tier-perks">{t('about.sponsors.tier.curation.perks')}</p>
-            <div class="tier-logos">
-              <div class="sponsor-card">
-                <a
-                  href="https://www.nmth.gov.tw/"
-                  target="_blank"
-                  rel="noopener"
-                  class="sponsor-logo-link"
-                >
-                  <img
-                    src={`${base}/images/nmth-logo.png`}
-                    alt="國立臺灣歷史博物館 NMTH"
-                    class="sponsor-logo-img"
-                  />
-                </a>
-                <div class="sponsor-story">
-                  <p class="sponsor-contribution-title">
-                    {t('about.sponsors.nmth.story.title')}
-                  </p>
-                  <p class="sponsor-contribution">
-                    {t('about.sponsors.nmth.story.desc')}
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="topic-item">
+            <span class="num">2</span>
+            <h4><a href={`${base}/agri-advanced`}>農業進階實務</a></h4>
+            <p>栽培進階管理、實作工作坊與經驗整理</p>
           </div>
-
-          <div class="tier">
-            <h3 class="tier-name professional">
-              {t('about.sponsors.tier.professional.name')}
-            </h3>
-            <p class="tier-desc">
-              {t('about.sponsors.tier.professional.desc')}
-            </p>
-            <p class="tier-perks">
-              {t('about.sponsors.tier.professional.perks')}
-            </p>
-            <div class="tier-logos">
-              <div class="sponsor-card">
-                <a
-                  href="https://justfont.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="sponsor-logo-link"
-                >
-                  <img
-                    src={`${base}/images/justfont-logo.svg`}
-                    alt="justfont"
-                    class="sponsor-logo-img"
-                    style="height: 28px;"
-                  />
-                </a>
-                <div class="sponsor-story">
-                  <p class="sponsor-contribution-title">
-                    {t('about.sponsors.justfont.story.title')}
-                  </p>
-                  <p class="sponsor-contribution">
-                    {t('about.sponsors.justfont.story.desc')}
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="topic-item">
+            <span class="num">3</span>
+            <h4><a href={`${base}/farm-management`}>農場經營管理</a></h4>
+            <p>財務、人力、經營策略與永續發展</p>
           </div>
-
-          <div class="tier">
-            <h3 class="tier-name bronze">
-              {t('about.sponsors.tier.community.name')}
-            </h3>
-            <p class="tier-desc">{t('about.sponsors.tier.community.desc')}</p>
-            <p class="tier-perks">{t('about.sponsors.tier.community.perks')}</p>
-            <div class="tier-logos">
-              <a
-                href="https://protico.io"
-                target="_blank"
-                class="supporter-link"
-              >
-                <span set:html={t('about.sponsors.protico.text.html')} />
-              </a>
-            </div>
+          <div class="topic-item">
+            <span class="num">4</span>
+            <h4><a href={`${base}/crop-production`}>作物生產技術</a></h4>
+            <p>小番茄、百香果等嘉義特色作物實務</p>
           </div>
-
-          <div class="tier">
-            <h3 class="tier-name community">
-              {t('about.sponsors.tier.individual.name')}
-            </h3>
-            <p class="tier-desc">{t('about.sponsors.tier.individual.desc')}</p>
-            <p class="tier-perks">
-              {t('about.sponsors.tier.individual.perks')}
-            </p>
-            <div class="tier-logos">
-              <a
-                href="https://github.com/howieyoung"
-                target="_blank"
-                class="supporter-link"
-              >
-                <span set:html={t('about.sponsors.howie.text.html')} />
-              </a>
-            </div>
+          <div class="topic-item">
+            <span class="num">5</span>
+            <h4><a href={`${base}/facility-farming`}>設施農業</a></h4>
+            <p>溫室、環控、滴灌與設施規劃</p>
           </div>
-        </div>
-
-        <div class="sponsor-cta">
-          <h3>{t('about.sponsors.cta.title')}</h3>
-          <p set:html={t('about.sponsors.cta.desc.html')} />
-          <div class="sponsor-contact">
-            <a
-              href={`mailto:cheyu.wu@monoame.com?subject=Taiwan.md 贊助合作詢問`}
-              class="btn btn-primary"
-            >
-              {t('about.sponsors.cta.contact')}
-            </a>
-            <a
-              href="https://github.com/sponsors/frank890417"
-              target="_blank"
-              class="btn btn-outline"
-            >
-              {t('about.sponsors.cta.github')}
-            </a>
+          <div class="topic-item">
+            <span class="num">6</span>
+            <h4><a href={`${base}/smart-farming`}>智慧農業</a></h4>
+            <p>感測器、灌溉自動化、無人機與數據分析</p>
           </div>
-          <div class="eth-donate">
-            <p class="eth-label">{t('about.sponsors.eth.label')}</p>
-            <div class="eth-address-box">
-              <span class="eth-icon">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 256 417"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M127.961 0l-2.795 9.5v275.668l2.795 2.79 127.962-75.638z"
-                    fill="#343434"></path>
-                  <path
-                    d="M127.962 0L0 212.32l127.962 75.639V154.158z"
-                    fill="#8C8C8C"></path>
-                  <path
-                    d="M127.961 312.187l-1.575 1.92v98.199l1.575 4.6L256 236.587z"
-                    fill="#3C3C3B"></path>
-                  <path d="M127.962 416.905v-104.72L0 236.585z" fill="#8C8C8C"
-                  ></path>
-                  <path
-                    d="M127.961 287.958l127.96-75.637-127.96-58.162z"
-                    fill="#141414"></path>
-                  <path d="M0 212.32l127.96 75.638V154.159z" fill="#393939"
-                  ></path>
-                </svg>
-              </span>
-              <code class="eth-address" id="eth-address"
-                >{t('about.sponsors.eth.address')}</code
-              >
-              <button
-                class="eth-copy-btn"
-                onclick={`navigator.clipboard.writeText('${t('about.sponsors.eth.address')}').then(()=>{this.textContent='${t('about.sponsors.eth.copied')}';setTimeout(()=>{this.textContent='${t('about.sponsors.eth.copy')}'},1500)})`}
-                title={t('about.sponsors.eth.copy')}
-                >{t('about.sponsors.eth.copy')}</button
-              >
-            </div>
-            <p class="eth-note">{t('about.sponsors.eth.note')}</p>
+          <div class="topic-item">
+            <span class="num">7</span>
+            <h4><a href={`${base}/agri-marketing`}>農產品銷售</a></h4>
+            <p>品牌建立、通路開拓與銷售策略</p>
           </div>
-          <p
-            class="sponsor-note"
-            set:html={t('about.sponsors.reference.note.html')}
-          />
+          <div class="topic-item">
+            <span class="num">8</span>
+            <h4><a href={`${base}/grants-planning`}>計畫撰寫補助</a></h4>
+            <p>農業補助申請與提案能力培養</p>
+          </div>
+          <div class="topic-item">
+            <span class="num">9</span>
+            <h4><a href={`${base}/field-visits`}>場域交流觀摩</a></h4>
+            <p>參訪紀錄、交流會與案例觀摩</p>
+          </div>
+          <div class="topic-item">
+            <span class="num">10</span>
+            <h4><a href={`${base}/livestock-health`}>畜牧健康</a></h4>
+            <p>家禽家畜管理與健康議題</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Section: FAQ -->
-    <section class="faq-section" id="faq">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.faq.title')}</h2>
-        <p class="section-subtitle">{t('about.faq.subtitle')}</p>
+    <!-- How It Works -->
+    <section class="section how-works">
+      <div class="container">
+        <h2>運作方式</h2>
+        <div class="tech-flow">
+          <div class="flow-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Markdown 為真相來源</h4>
+              <p>所有內容存放於 <code>knowledge/</code> 目錄，保持版本控制與透明度</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>自動同步投影層</h4>
+              <p>內容經過驗證與清理，同步到網站渲染層</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>GitHub Pages 靜態部署</h4>
+              <p>構建為靜態網站，快速、安全、無需伺服器</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Features -->
+    <section class="section features">
+      <div class="container">
+        <h2>平台特性</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h4>全文搜尋</h4>
+            <p>快速找到相關農業主題與概念</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🕸️</div>
+            <h4>知識圖譜</h4>
+            <p>視覺化探索文章之間的關聯與知識網絡</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h4>開放資料 API</h4>
+            <p>開放 JSON API 供第三方應用整合</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📰</div>
+            <h4>RSS Feed</h4>
+            <p>訂閱最新文章更新</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <div class="container">
+        <h2>常見問題</h2>
         <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q1')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a1.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q2')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a2.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q3')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a3.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q4')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a4.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q5')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a5.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q6')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a6.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q7')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a7.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q8')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a8.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q9')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a9.html')} />
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">{t('about.faq.q10')}</summary>
-            <div class="faq-answer">
-              <p set:html={t('about.faq.a10.html')} />
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Contact -->
-
-    <section class="contact-section">
-      <div class="section-inner">
-        <h2 class="section-title">{t('about.contact.title')}</h2>
-        <p class="section-subtitle">{t('about.contact.subtitle')}</p>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-icon">
-              {t('about.contact.collaboration.icon')}
-            </div>
-            <h4>{t('about.contact.collaboration.title')}</h4>
-            <a href={`mailto:${t('about.contact.collaboration.email')}`}>
-              {t('about.contact.collaboration.email')}
-            </a>
+          <div class="faq-item">
+            <h4>我可以引用或分享這些內容嗎？</h4>
+            <p>
+              可以。本平台所有內容採用 <strong>CC BY-SA 4.0</strong> 授權，
+              允許自由分享與改編，只需標明出處即可。
+            </p>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">{t('about.contact.opensource.icon')}</div>
-            <h4>{t('about.contact.opensource.title')}</h4>
-            <a
-              href={`https://github.com/${t('about.contact.opensource.link')}`}
-              target="_blank"
-            >
-              {t('about.contact.opensource.link')}
-            </a>
+          <div class="faq-item">
+            <h4>我可以如何貢獻內容？</h4>
+            <p>
+              歡迎！請參考 <a href={`${base}/contribute`}>貢獻指南</a>，
+              或直接 Fork 本專案的 GitHub repo，貢獻新文章或改進現有內容。
+            </p>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">{t('about.contact.license.icon')}</div>
-            <h4>{t('about.contact.license.title')}</h4>
-            <a
-              href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-tw"
-              target="_blank"
-            >
-              {t('about.contact.license.link')}
-            </a>
-            <p class="contact-note">{t('about.contact.license.note')}</p>
+          <div class="faq-item">
+            <h4>為什麼選擇開源模式？</h4>
+            <p>
+              農業知識應該被共享與持續改進。開源模式能確保內容透明、可驗證、
+              並能吸引農業社群一同維護與演進。
+            </p>
           </div>
-        </div>
-
-        <div class="contact-cta">
-          <p>{t('about.contact.cta.text')}</p>
-          <div class="cta-buttons">
-            <a href={`${base}/contribute`} class="btn btn-primary"
-              >{t('about.contact.cta.guide')}</a
-            >
-            <a
-              href="https://github.com/frank890417/taiwan-md"
-              target="_blank"
-              class="btn btn-outline"
-            >
-              {t('about.contact.cta.github')}
-            </a>
+          <div class="faq-item">
+            <h4>平台上的內容來自哪裡？</h4>
+            <p>
+              內容主要來自嘉義縣政府農業處國本學堂課程、農業課程學員的實務經驗、
+              以及社群貢獻者的知識分享。
+            </p>
           </div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- Protico Community Chat Bubble — sponsored by Howie Young -->
-  <ProticoScript />
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container">
+        <h2>開始探索</h2>
+        <div class="cta-buttons">
+          <a href={`${base}/`} class="btn btn-primary">首頁</a>
+          <a href={`${base}/agri-basics`} class="btn btn-secondary">農業入門</a>
+          <a href={`${base}/graph`} class="btn btn-secondary">知識圖譜</a>
+          <a href={`${base}/contribute`} class="btn btn-secondary">加入貢獻</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-  /* ===== Global ===== */
   .about-page {
-    padding-bottom: 0;
+    background: #fff;
   }
 
-  .section-inner {
-    max-width: 1100px;
+  .container {
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
-  .section-title {
-    font-family: var(--font-title, 'Noto Serif TC', serif);
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #1a3c34;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    color: #6b7280;
-    font-size: 1.15rem;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-  }
-
-  /* ===== Section 1: 為什麼叫 Taiwan.md？ ===== */
-  .naming-section {
-    padding: 4rem 0 3rem;
-  }
-
-  .naming-section .section-title {
-    font-family: var(--font-title, 'Noto Serif TC', serif);
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: #1a3c34;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Naming Story */
-  .naming-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 3rem 0;
-  }
-
-  .naming-card {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1.75rem;
-    text-align: center;
-    transition:
-      transform 0.2s,
-      box-shadow 0.2s;
-  }
-
-  .naming-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  }
-
-  .naming-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .naming-card h4 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .naming-card p {
-    color: #6b7280;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .naming-card code {
-    background: #e0e7ff;
-    color: #1e40af;
-    padding: 0.1em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-
-  /* Vision */
-  .vision-block {
-    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-    border-radius: 16px;
-    padding: 2.5rem;
-    margin-top: 3rem;
+  .hero {
+    background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+    color: white;
+    padding: 6rem 2rem;
     text-align: center;
   }
 
-  .vision-block p {
-    color: #374151;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .vision-block p:last-child {
-    margin-bottom: 0;
-  }
-
-  .vision-emphasis {
-    font-weight: 500;
-    color: #1f2937 !important;
-  }
-
-  /* ===== Section 2: Taiwan.md 的誕生 ===== */
-  .origin-section {
-    padding: 4rem 0;
-    background: #f9fafb;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  /* Timeline */
-  .timeline {
-    position: relative;
-    margin: 3rem 0 4rem;
-    padding-left: 2rem;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: linear-gradient(to bottom, #1e40af, #3b82f6, #93c5fd);
-  }
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 2.5rem;
-    padding-left: 1.5rem;
-  }
-
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-marker {
-    position: absolute;
-    left: -2rem;
-    top: 6px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #1e40af;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 2px #1e40af;
-    z-index: 1;
-  }
-
-  .timeline-marker.pulse {
-    background: #3b82f6;
-    box-shadow: 0 0 0 2px #3b82f6;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      box-shadow:
-        0 0 0 2px #3b82f6,
-        0 0 0 4px transparent;
-    }
-    50% {
-      box-shadow:
-        0 0 0 2px #3b82f6,
-        0 0 0 8px rgba(59, 130, 246, 0.2);
-    }
-  }
-
-  .timeline-date {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #1e40af;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-  }
-
-  .timeline-content h3 {
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.75rem;
-  }
-
-  .timeline-content p {
-    color: #4b5563;
-    line-height: 1.8;
-    font-size: 1.05rem;
-  }
-
-  .timeline-list {
-    margin-top: 0.75rem;
-    padding-left: 1.25rem;
-    color: #4b5563;
-    line-height: 2;
-  }
-
-  .timeline-list li {
-    font-size: 1rem;
-  }
-
-  .timeline-link {
-    color: #1e40af;
-    text-decoration: none;
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  .timeline-link:hover {
-    text-decoration: underline;
-  }
-
-  /* 時間軸內的媒體報導小卡片 */
-  .timeline-press-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-
-  .press-card-mini {
-    display: block;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    padding: 0.8rem;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s ease;
-    font-size: 0.85rem;
-  }
-
-  .press-card-mini:hover {
-    border-color: #1e40af;
-    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
-  }
-
-  .press-card-mini .press-source {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #1e40af;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.3rem;
-  }
-
-  .press-card-mini .press-title {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #1f2937;
-    line-height: 1.4;
-    margin: 0;
-  }
-
-  /* Project Stats */
-  .project-stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-  }
-
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1e40af;
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-    color: #6b7280;
-    font-weight: 500;
-  }
-
-  @media (max-width: 480px) {
-    .project-stats {
-      gap: 1rem;
-    }
-    .stat-number {
-      font-size: 1.5rem;
-    }
-  }
-
-  /* Standalone Quote */
-  .standalone-quote {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto 3rem;
-    text-align: center;
-    border-left: none;
-    padding: 2rem;
-    background: rgba(45, 80, 22, 0.05);
-    border-radius: 12px;
-  }
-
-  /* ===== Section 2.5: Taiwan.md 是活的 (Organism) — 濃縮版 ===== */
-  .organism-section {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #0a2e2e 0%, #0d3b3b 50%, #0a2e2e 100%);
-    color: #e0f0f0;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .organism-section .section-title {
-    color: #5fd4d4;
-  }
-  .organism-section .section-subtitle {
-    color: #a0c8c8;
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 2rem;
-  }
-  .organism-intro {
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto 3rem;
-  }
-  .organism-intro p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: #c0dede;
-    margin-bottom: 1rem;
-  }
-  .organism-highlight {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #5fd4d4 !important;
-  }
-  .organism-facts {
-    max-width: 720px;
-    margin: 0 auto 3rem;
-  }
-  .organism-facts h3 {
-    font-size: 1.3rem;
-    color: #5fd4d4;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .fact-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: rgba(95, 212, 212, 0.05);
-    border-radius: 12px;
-    border-left: 3px solid #5fd4d4;
-  }
-  .fact-item h4 {
-    font-size: 1.1rem;
-    color: #5fd4d4;
-    margin-bottom: 0.8rem;
-  }
-  .fact-item p {
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #c0dede;
-    margin: 0;
-  }
-  .organism-traits {
-    max-width: 720px;
-    margin: 0 auto 3rem;
-  }
-  .organism-traits h3 {
-    font-size: 1.3rem;
-    color: #5fd4d4;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  .traits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  @media (max-width: 640px) {
-    .traits-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .trait-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.2rem;
-    background: rgba(95, 212, 212, 0.05);
-    border-radius: 10px;
-    border: 1px solid rgba(95, 212, 212, 0.1);
-  }
-  .trait-card:hover {
-    border-color: rgba(95, 212, 212, 0.3);
-  }
-  .trait-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-  .trait-card strong {
-    color: #5fd4d4;
-    display: block;
-    margin-bottom: 0.3rem;
-  }
-  .trait-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #a0c8c8;
-    margin: 0;
-  }
-  .organism-reef {
-    max-width: 720px;
-    margin: 0 auto 2.5rem;
-  }
-  .organism-reef h3 {
-    font-size: 1.3rem;
-    color: #5fd4d4;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  .reef-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  @media (max-width: 640px) {
-    .reef-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .reef-item {
-    padding: 1rem;
-    background: rgba(95, 212, 212, 0.05);
-    border-radius: 10px;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #a0c8c8;
-  }
-  .reef-item strong {
-    color: #5fd4d4;
-  }
-  .organism-art {
-    max-width: 680px;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-  }
-  .organism-art p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #c0dede;
-  }
-  .organism-quote {
-    max-width: 680px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid rgba(95, 212, 212, 0.2);
-    font-style: normal;
-    border-left: none;
-    background: none;
-  }
-  .organism-quote p {
-    font-size: 1.15rem;
-    line-height: 2;
-    color: #e0f0f0;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-quote, serif);
-  }
-  .quote-future {
-    font-size: 0.95rem !important;
-    color: #80b8b8 !important;
-    margin-top: 0.8rem !important;
-  }
-  .organism-dashboard-cta {
-    text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(95, 212, 212, 0.15);
-  }
-  .dashboard-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.9rem 2rem;
-    background: linear-gradient(
-      135deg,
-      rgba(139, 92, 246, 0.15),
-      rgba(95, 212, 212, 0.15)
-    );
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 12px;
-    color: #e0f0f0;
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
-  }
-  .dashboard-btn:hover {
-    background: linear-gradient(
-      135deg,
-      rgba(139, 92, 246, 0.25),
-      rgba(95, 212, 212, 0.25)
-    );
-    border-color: rgba(139, 92, 246, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
-  }
-  .dashboard-btn-icon {
-    font-size: 1.3rem;
-  }
-  .dashboard-btn-arrow {
-    font-size: 1.1rem;
-    transition: transform 0.2s;
-  }
-  .dashboard-btn:hover .dashboard-btn-arrow {
-    transform: translateX(4px);
-  }
-  .dashboard-btn-desc {
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
-    color: #80b8b8;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media (max-width: 768px) {
-    .trait-row {
-      flex-wrap: wrap;
-    }
-    .trait-label {
-      min-width: auto;
-    }
-  }
-
-  /* ===== Section 3: 創辦人 ===== */
-  .founder-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    padding: 4rem 0;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .founder-card {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 3rem;
-    align-items: start;
-    margin-bottom: 3rem;
-  }
-
-  .founder-photo {
-    position: sticky;
-    top: 2rem;
-  }
-
-  .founder-image {
-    width: 240px;
-    height: 300px;
-    border-radius: 16px;
-    object-fit: cover;
-    object-position: center;
-    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.15);
-  }
-
-  .founder-info h3 {
-    font-size: 1.75rem;
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin: 0 0 1rem 0;
     font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
   }
 
-  .name-en {
-    font-weight: 400;
-    color: #6b7280;
-    font-size: 1.1rem;
+  .tagline {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
   }
 
-  .founder-tagline {
-    color: #1e40af;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
+  .section {
+    padding: 4rem 2rem;
   }
 
-  .founder-bio p {
-    color: #4b5563;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .founder-quote {
-    font-style: italic;
-    color: #1e40af;
-    border-left: 3px solid #1e40af;
-    padding: 0.5rem 0 0.5rem 1.25rem;
-    margin: 1.25rem 0 1.5rem;
-    font-size: 1.05rem;
-  }
-
-  .founder-highlights,
-  .founder-works,
-  .founder-teaching {
-    margin-bottom: 1.5rem;
-  }
-
-  .founder-info h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.85rem;
-  }
-
-  .highlight-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .tag {
-    background: #e0e7ff;
-    color: #1e40af;
-    padding: 0.35rem 0.85rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  .founder-works ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .founder-works li {
-    padding: 0.4rem 0;
-    color: #4b5563;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    border-bottom: 1px solid #f3f4f6;
-  }
-
-  .founder-works li:last-child {
-    border-bottom: none;
-  }
-
-  .founder-teaching p {
-    color: #4b5563;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Motivation */
-  .founder-motivation {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
+  .section h2 {
+    font-size: 2rem;
     margin-bottom: 2.5rem;
-    border: 1px solid #e5e7eb;
-  }
-
-  .founder-motivation h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.25rem;
-  }
-
-  .founder-quote {
-    margin: 2rem 0;
-    padding: 1.5rem 2rem;
-    border-left: 4px solid #2d5016;
-    background: rgba(45, 80, 22, 0.05);
-    border-radius: 0 8px 8px 0;
-    font-style: italic;
-    font-size: 1.15rem;
-    line-height: 2;
-    color: #1f2937;
-  }
-
-  .founder-quote cite {
-    display: block;
-    margin-top: 0.5rem;
-    font-style: normal;
-    font-weight: 600;
-    color: #2d5016;
-    font-size: 0.95rem;
-  }
-
-  /* Founder Links - 改為 inline 小方塊 */
-  .founder-links-inline {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.75rem;
-    justify-content: center;
-    margin-bottom: 3rem;
-  }
-
-  .link-inline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-
-  .link-inline:hover {
-    border-color: #1e40af;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
-  }
-
-  .link-inline .link-icon {
-    font-size: 1rem;
-  }
-
-  .link-inline .link-text {
-    font-weight: 500;
-    color: #1f2937;
-  }
-
-  /* ===== Section 4: 協作團隊 ===== */
-  .team-section {
-    padding: 4rem 0;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  /* 協作哲學移到最上面 */
-  .team-philosophy {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    border: 1px solid #e5e7eb;
-    margin-bottom: 3rem;
-  }
-
-  .team-philosophy h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.25rem;
     text-align: center;
+    color: #1a1a2e;
   }
 
-  .team-philosophy p {
-    color: #4b5563;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+  .intro {
     text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .team-philosophy p:last-child {
-    margin-bottom: 0;
-  }
-
-  .team-grid {
+  /* Vision Grid */
+  .vision-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
-  .team-card {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    border: 1px solid #e5e7eb;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  .vision-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
   }
 
-  .team-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  }
-
-  .team-icon {
+  .icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-align: center;
+    display: block;
   }
 
-  .team-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-    text-align: center;
+  .vision-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    color: #1a1a2e;
   }
 
-  .team-role {
-    color: #1e40af;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    text-align: center;
+  .vision-card p {
+    color: #666;
+    line-height: 1.6;
   }
 
-  .team-description {
-    margin-bottom: 1.5rem;
-  }
-
-  .team-description p {
+  /* Origin Section */
+  .origin-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
     color: #4b5563;
-    font-size: 1rem;
-    line-height: 1.7;
   }
 
-  .team-link {
-    display: inline-block;
-    color: #1e40af;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
-  }
-
-  .team-link:hover {
-    color: #1d4ed8;
-  }
-
-  /* 貢獻者整合到協作團隊 */
-  .contributors-in-team {
-    background: #f8fafc;
-    border-radius: 16px;
-    padding: 2.5rem;
-    border: 1px solid #e5e7eb;
-    text-align: center;
-  }
-
-  .contributors-in-team h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .contributors-desc {
-    color: #64748b;
-    margin-bottom: 1.5rem;
-  }
-
-  .contributors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
+  .origin-content p {
     margin: 1.5rem 0;
   }
 
-  .contributor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.8rem 0.4rem;
-    border-radius: 12px;
-    transition:
-      transform 0.2s,
-      background 0.2s;
-    text-decoration: none !important;
-    border: none !important;
-  }
-
-  .contributor-card:hover {
-    transform: translateY(-2px);
-    background: #e2e8f0;
-  }
-
-  .contributor-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .contributor-name {
-    font-size: 0.75rem;
-    color: #334155;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.2;
-    max-width: 90px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .contributor-roles {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-  }
-
-  .contributors-cta {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #64748b;
-  }
-
-  .contributors-cta a {
-    color: #3b82f6;
-    font-weight: 500;
-  }
-
-  /* ===== Press ===== */
-  .press-section {
-    padding: 4rem 2rem;
-    background: rgba(247, 243, 233, 0.3);
-  }
-  .press-inner {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .press-inner h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    color: #2d5016;
-    font-weight: 700;
-  }
-  .press-grid {
+  /* Audience Grid */
+  .audience-grid {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
-  .press-card {
+
+  .audience-card {
+    background: #fef8f3;
+    border-left: 4px solid #d4a574;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .emoji {
+    font-size: 2.5rem;
     display: block;
-    background: rgba(255, 255, 255, 0.95);
-    border: 2px solid #a7c4a0;
-    border-radius: 16px;
-    padding: 1.5rem 2rem;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-  }
-  .press-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.12);
-    border-color: #4a7c59;
-  }
-  .press-source {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #4a7c59;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
-  }
-  .press-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #2d5016;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-  }
-  .press-date {
-    font-size: 0.85rem;
-    color: #6b8e23;
   }
 
-  /* ===== Section 5: 聯繫我們 ===== */
-  .contact-section {
-    padding: 4rem 0 3rem;
-    background: #f9fafb;
+  .audience-card h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #1a1a2e;
+  }
+
+  .audience-card p {
+    color: #666;
     margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
-  .contact-grid {
+  /* Topics Grid */
+  .topics-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 3rem;
   }
 
-  .contact-card {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+  .topic-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 8px;
+    border-left: 3px solid #1a472a;
   }
 
-  .contact-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+  .num {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1a472a;
   }
 
-  .contact-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
+  .topic-item h4 {
+    margin: 0;
+    color: #1a1a2e;
   }
 
-  .contact-card a {
-    color: #1e40af;
+  .topic-item h4 a {
+    color: inherit;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    word-break: break-all;
   }
 
-  .contact-card a:hover {
+  .topic-item h4 a:hover {
+    color: #1a472a;
     text-decoration: underline;
   }
 
-  .contact-note {
-    color: #9ca3af;
-    font-size: 0.8rem;
-    margin-top: 0.25rem;
+  .topic-item p {
+    margin: 0.5rem 0 0 0;
+    color: #666;
+    font-size: 0.95rem;
   }
 
-  .contact-cta {
-    text-align: center;
+  /* Tech Flow */
+  .tech-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .flow-step {
+    background: #f9fafb;
     padding: 2rem;
-    background: white;
-    border-radius: 16px;
-    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    border-left: 4px solid #1a472a;
   }
 
-  .contact-cta p {
+  .step-num {
+    background: #1a472a;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .step-content h4 {
+    margin: 0.5rem 0;
+    color: #1a1a2e;
+  }
+
+  .step-content p {
+    color: #666;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+  }
+
+  .flow-arrow {
+    color: #1a472a;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h4 {
+    color: #1a1a2e;
+    margin: 0.5rem 0;
+  }
+
+  .feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  /* FAQ */
+  .faq-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #d4a574;
+  }
+
+  .faq-item h4 {
+    margin: 0 0 0.75rem 0;
+    color: #1a1a2e;
+  }
+
+  .faq-item p {
+    margin: 0;
     color: #4b5563;
-    font-size: 1.05rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .faq-item a {
+    color: #1a472a;
+    text-decoration: underline;
+  }
+
+  /* CTA */
+  .cta {
+    background: #f9fafb;
+    text-align: center;
+  }
+
+  .cta h2 {
+    margin-bottom: 2rem;
   }
 
   .cta-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .btn {
-    padding: 0.75rem 1.75rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
     text-decoration: none;
+    font-weight: 600;
     transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
 
   .btn-primary {
-    background: #1e40af;
+    background: #1a472a;
     color: white;
   }
 
   .btn-primary:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+    background: #0f2e1a;
   }
 
-  .btn-outline {
+  .btn-secondary {
     background: white;
-    color: #1e40af;
-    border: 2px solid #1e40af;
+    color: #1a472a;
+    border: 2px solid #1a472a;
   }
 
-  .btn-outline:hover {
-    background: #1e40af;
+  .btn-secondary:hover {
+    background: #1a472a;
     color: white;
-    transform: translateY(-1px);
   }
 
-  /* ===== Section 6: 贊助與合作夥伴 ===== */
-  .sponsors-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #fef9f0, #fdf4e8);
-  }
-  .sponsors-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .sponsors-inner h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  .sponsors-desc {
-    text-align: center;
-    color: #64748b;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-  }
-  .sponsor-tiers {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  .tier {
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-  }
-  .tier-name {
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
-  }
-  .tier-name.curation {
-    color: #7c3aed;
+  code {
+    background: #e5e7eb;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
   }
 
-  .tier-name.gold,
-  .tier-name.core {
-    color: #b45309;
-  }
-  .tier-name.silver,
-  .tier-name.professional {
-    color: #64748b;
-  }
-  .tier-name.bronze,
-  .tier-name.community-tier {
-    color: #92400e;
-  }
-  .tier-name.community {
-    color: #15803d;
-  }
-  .tier-desc {
-    font-size: 0.85rem;
-    color: #64748b;
-    margin-bottom: 1rem;
-  }
-  .tier-logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1rem;
-  }
-  .sponsor-logo-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1.5rem;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    transition: all 0.2s;
-  }
-  .sponsor-logo-link:hover {
-    background: #f1f5f9;
-    border-color: #cbd5e1;
-  }
-  .sponsor-logo-img {
-    height: 28px;
-    width: auto;
-  }
-  .sponsor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-  }
-  .sponsor-story {
-    text-align: left;
-    max-width: 480px;
-  }
-  .sponsor-contribution-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #334155;
-    margin-bottom: 0.4rem;
-  }
-  .sponsor-contribution {
-    font-size: 0.85rem;
-    color: #64748b;
-    line-height: 1.7;
-  }
-  .tier-perks {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    margin-top: -0.3rem;
-    margin-bottom: 0.8rem;
-  }
-  .logo-placeholder {
-    padding: 1.25rem 1.5rem;
-    border: 2px dashed #d1d5db;
-    border-radius: 8px;
-    text-align: center;
-    color: #94a3b8;
-    font-size: 0.85rem;
-    font-style: italic;
-  }
-  .logo-placeholder.sm {
-    padding: 0.75rem 1rem;
-  }
-  .sponsor-cta {
-    text-align: center;
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-  }
-  .sponsor-cta h3 {
-    margin-bottom: 0.5rem;
-  }
-  .sponsor-cta p {
-    color: #475569;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-  }
-  .sponsor-contact {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .sponsor-note {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    margin-top: 1rem;
-  }
-  .sponsor-note a {
-    color: #3b82f6;
-  }
-
-  .supporter-link {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    color: #15803d;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-  }
-  .supporter-link:hover {
-    color: #166534;
-    text-decoration: underline;
-  }
-
-  .eth-donate {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px dashed #e2e8f0;
-  }
-  .eth-label {
-    font-size: 0.9rem;
-    color: #475569;
-    margin-bottom: 0.75rem;
-  }
-  .eth-address-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 0.6rem 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .eth-icon {
-    display: flex;
-    align-items: center;
-    opacity: 0.7;
-  }
-  .eth-address {
-    font-family: 'SF Mono', 'Fira Code', monospace;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #1a1a2e;
-    letter-spacing: 0.01em;
-  }
-  .eth-copy-btn {
-    background: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 0.3rem 0.7rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .eth-copy-btn:hover {
-    background: #2563eb;
-  }
-  .eth-note {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    margin-top: 0.5rem;
-  }
-  .supporter-link {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    color: #15803d;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-  }
-  .supporter-link:hover {
-    color: #166534;
-    text-decoration: underline;
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 2rem;
+  @media (max-width: 640px) {
+    .section {
+      padding: 2.5rem 1rem;
     }
 
-    .naming-section .section-title {
-      font-size: 2.25rem;
+    .section h2 {
+      font-size: 1.5rem;
     }
 
-    .naming-grid {
+    .tech-flow {
       grid-template-columns: 1fr;
       gap: 1rem;
     }
 
-    .founder-card {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      justify-items: center;
-    }
-
-    .founder-photo {
-      position: static;
-    }
-
-    .founder-image {
-      width: 180px;
-      height: 220px;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .team-card {
-      padding: 2rem;
-    }
-
-    .contact-grid {
-      grid-template-columns: 1fr;
+    .flow-arrow {
+      display: none;
     }
 
     .cta-buttons {
       flex-direction: column;
-      align-items: center;
-    }
-    .sponsor-tiers {
-      gap: 1.5rem;
-    }
-    .tier-logos {
-      grid-template-columns: 1fr;
-    }
-    .sponsor-contact {
-      flex-direction: column;
-      align-items: center;
     }
 
-    .vision-block {
-      padding: 1.75rem;
-    }
-
-    .founder-motivation {
-      padding: 1.75rem;
-    }
-
-    .highlight-tags {
-      justify-content: center;
-    }
-
-    .founder-info {
+    .btn {
+      width: 100%;
       text-align: center;
-    }
-
-    .founder-works ul {
-      text-align: left;
-    }
-
-    .founder-quote {
-      text-align: left;
-    }
-
-    .founder-links-inline {
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-
-    .timeline-press-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .section-title {
-      font-size: 1.75rem;
-    }
-
-    .timeline {
-      padding-left: 1.5rem;
-    }
-
-    .timeline-item {
-      padding-left: 1rem;
-    }
-
-    .founder-links-inline {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  /* ===== FAQ SECTION ===== */
-  .faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-
-  .faq-list {
-    margin-top: 2rem;
-  }
-
-  .faq-item {
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .faq-item[open] {
-    padding-bottom: 1.5rem;
-  }
-
-  .faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #1f2937;
-    cursor: pointer;
-    list-style: none;
-    line-height: 1.5;
-  }
-
-  .faq-question::-webkit-details-marker {
-    display: none;
-  }
-
-  .faq-question::after {
-    content: '+';
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: #9ca3af;
-    transition: transform 0.2s ease;
-    flex-shrink: 0;
-    margin-left: 1rem;
-  }
-
-  .faq-item[open] .faq-question::after {
-    content: '−';
-    color: #2d5016;
-  }
-
-  .faq-question:hover {
-    color: #2d5016;
-  }
-
-  .faq-answer {
-    padding: 0 0 0.5rem;
-    animation: faqFadeIn 0.2s ease;
-  }
-
-  .faq-answer p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4b5563;
-  }
-
-  .faq-answer a {
-    color: #2563eb;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .faq-answer a:hover {
-    color: #1d4ed8;
-  }
-
-  .faq-answer strong {
-    color: #1f2937;
-    font-weight: 600;
-  }
-
-  .faq-answer code {
-    background: #f3f4f6;
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: #1f2937;
-  }
-
-  @keyframes faqFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-4px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .faq-section {
-      padding: 3rem 1rem;
-    }
-    .faq-question {
-      font-size: 1rem;
-      padding: 1rem 0;
     }
   }
 </style>
