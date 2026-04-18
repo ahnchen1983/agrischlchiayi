@@ -113,6 +113,28 @@ BECOME_TAIWANMD.md Step 5 新增：
 <!-- 凹與山 已完成 → 搬到 §✅ Done -->
 <!-- VH (Vast & Hazy) Stage 1 研究已完成，Stage 2 Write pending → pre-research 已存 reports/research/2026-04/VH.md -->
 
+### 張雨生（EVOLVE — 貢獻者首版已 merge，待深度擴寫）
+
+- **Type**: `EVOLVE`
+- **Category**: People (Music)
+- **Path**: knowledge/People/張雨生.md
+- **Priority**: P1
+- **Status**: pending（首版 PR #547 已 merge + 維護者 followup polish；深度擴寫待啟動）
+- **Requested**: 2026-04-18 by 貢獻者 @idlccp1984 (PR #547) + 維護者決定升級為 EVOLVE
+- **Notes**:
+  - 現狀：~1,200 字 / 9 腳註 / quality-scan ✅ / format-check ✅
+  - EVOLVE 目標：擴寫為 2,000+ 字深度文，走 REWRITE-PIPELINE v2.17.1
+  - Stage 0 素材萃取：現有的 6 個小標題可保留（「妹妹的歌聲與偶像的誕生」「從妥協的怪物到超前部署」「劇場的重生與搖滾的娜娜」「幕後推手與永恆的影響」「預言家的背影」皆 scene 級合格）
+  - 待補 Stage 1 20+ 搜尋缺口：
+    - 張雨生父親身份（空軍軍官？）+ 澎湖成長細節
+    - 《和樂團》副業時期（1993-1997）
+    - 1997-10-20 車禍細節（紀實處理：MANIFESTO §5 v2 可寫事實陳述，不 reconstruct 最後時刻）
+    - 〈張惠妹《姊妹》《Bad Boy》〉的合作細節 + 張雨生 as 製作人身份
+    - 《口是心非》deeper analysis（樂評視為最成熟作品）
+    - YouTube inline link：〈我的未來不是夢〉〈天天想你〉〈大海〉〈口是心非〉〈吻我吧娜娜〉官方 MV
+- **Reference**: PR #547 by @idlccp1984
+- **Pre-research**: 無（原 PR 無 Stage 1 研究報告，EVOLVE 時要建立）
+
 ### VH（Vast & Hazy，Stage 1 研究已完成）
 
 - **Type**: NEW
