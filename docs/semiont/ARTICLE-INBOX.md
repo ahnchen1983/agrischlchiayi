@@ -285,21 +285,7 @@ BECOME_TAIWANMD.md Step 5 新增：
 
 <!-- 陳建騏 P0 已完成 2026-04-18 θ → 搬到 §✅ Done -->
 
-### 阿爆（阿仍仍，Aljenljeng Tjaluvie）
-
-- **Type**: NEW
-- **Category**: People (Music)
-- **Priority**: P1
-- **Status**: pending
-- **Requested**: 2026-04-18 ε by 觀察者
-- **Notes**:
-  - 排灣族女歌手，金曲原住民語 × 電子流行跨界代表
-  - 2020《kinakaian 母親的舌頭》獲第 31 屆金曲獎最佳年度專輯（少數以原住民語專輯拿下年度最佳）
-  - 核心矛盾：族語作為 future pop 的載體（不是 preservation mode，是創新 mode）
-  - 必驗：製作人陣容（Dizparity 等）、專輯概念、族語推廣 × 電子音樂定位
-  - 跨分類重要性：既是音樂人，也是原住民族語言文化重要推手
-- **Reference**: 觀察者批次指定
-- **Pre-research**: 尚未啟動
+<!-- 阿爆 P1 已完成 2026-04-18 ι → 搬到 §✅ Done -->
 
 ### 鄭宜農
 
@@ -331,6 +317,18 @@ _（暫無）_
 ## ✅ Done（已開發，保留歷史）
 
 _（此區域存放從 pending/in-progress 完成的條目，指向已 commit 的文章路徑）_
+
+### 阿爆（阿仍仍）— 2026-04-18 ι 完成（族語 future pop × 2020 金曲年度專輯破圈）
+
+- **Article**: [knowledge/People/阿爆.md](../../knowledge/People/阿爆.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 Explore agent 30 searches + 5 WebFetch / Stage 2 full rewrite
+- **核心矛盾**：**Anchor 1「族語作為 Future Pop 載體」× Anchor 4「從 Sidebar 到 Main Stage」融合** — 2020 金曲 31 年度專輯首次由全族語作品拿下，打破「原住民音樂 = 族群分類 subcategory」結構
+- **Hook**：2020-10-03 金曲 31 頒獎台上年度專輯宣布《kinakaian 母親的舌頭》（代表性 scene，非反諷）
+- **核心 verbatim**：「不要浪費天賦也不要依賴天賦」(得獎感言) + 「既然有自己的語言可以使用，為什麼不用？」(族語 future pop 核心哲學)
+- **敘事結構**：正興部落 → 2003 R&B 雙人組 → 2004-2014 護理師十年 → 2014《東排三聲代》三代古謠 → 2016《vavayan·女人》荒井十一 → 2019《kinakaian》Dizparity 電音 → 2020 金曲 31 + 那屋瓦廠牌
+- **敏感素材處理**：族群議題用紀實筆法（MANIFESTO §5 v2）不扁平化為「偏鄉原住民」symbol；母親 2021-02 過世只引用公開事實，不 reconstruct
+- **品質**：22 腳註來源 / 4,096 中文字 / 29 footnote refs / desc 160（邊界邊緣）/ em-dash 10 / 每 141 字 1 fn（遠超 EDITORIAL ≥ 300 硬規則）
+- **Research**: [reports/research/2026-04/阿爆.md](../../reports/research/2026-04/阿爆.md) — 30 WebSearch + 5 WebFetch / 7 verbatim / 3 second voices / 5 narrative anchor 候選
 
 ### 陳建騏 — 2026-04-18 θ 完成（製作人 subgenre 首例）
 
