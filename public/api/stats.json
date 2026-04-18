@@ -1,8 +1,8 @@
 {
-  "totalArticles": 33,
+  "totalArticles": 36,
   "totalCategories": 10,
   "estimatedContributors": 3,
-  "totalTags": 75,
+  "totalTags": 88,
   "categories": [
     {
       "name": "Agri-Basics",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Agri-Marketing",
-      "count": 3
+      "count": 6
     },
     {
       "name": "Farm-Management",
@@ -48,11 +48,15 @@
   "topTags": [
     {
       "name": "國本學堂",
-      "count": 33
+      "count": 36
     },
     {
       "name": "第三屆",
       "count": 8
+    },
+    {
+      "name": "農產品銷售",
+      "count": 5
     },
     {
       "name": "第五屆",
@@ -91,10 +95,6 @@
       "count": 2
     },
     {
-      "name": "農產品銷售",
-      "count": 2
-    },
-    {
       "name": "小黃瓜",
       "count": 2
     },
@@ -104,6 +104,14 @@
     },
     {
       "name": "家禽",
+      "count": 2
+    },
+    {
+      "name": "直銷",
+      "count": 2
+    },
+    {
+      "name": "品牌建立",
       "count": 2
     },
     {
@@ -117,19 +125,11 @@
     {
       "name": "土壤學",
       "count": 1
-    },
-    {
-      "name": "設施蔬果",
-      "count": 1
-    },
-    {
-      "name": "通路策略",
-      "count": 1
     }
   ],
   "languageDistribution": {
-    "zh-TW": 33,
+    "zh-TW": 36,
     "en": 0
   },
-  "lastUpdated": "2026-04-18T07:49:38.823Z"
+  "lastUpdated": "2026-04-18T08:06:46.975Z"
 }

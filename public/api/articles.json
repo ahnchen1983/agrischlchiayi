@@ -80,6 +80,26 @@
     "path": "Agri-Basics/水資源管理入門.md"
   },
   {
+    "title": "外銷認證與國際市場開拓：東亞市場機會與進入壁壘",
+    "description": "哈斯酪梨農場如何從行口依賴轉向國際外銷？本文從嘉義產銷班的實例出發，分析東亞市場認證要求、通關流程、定價策略，以及2026年全台供給衝擊下的國際市場布局。",
+    "category": "Agri-Marketing",
+    "tags": [
+      "國本學堂",
+      "農產品銷售",
+      "外銷",
+      "認證",
+      "國際市場",
+      "日本",
+      "東亞",
+      "哈斯酪梨"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Agri-Marketing/%E5%A4%96%E9%8A%B7%E8%AA%8D%E8%AD%89%E8%88%87%E5%9C%8B%E9%9A%9B%E5%B8%82%E5%A0%B4%E9%96%8B%E6%8B%93",
+    "readingTime": 11,
+    "featured": true,
+    "date": "2026-04-18",
+    "path": "Agri-Marketing/外銷認證與國際市場開拓.md"
+  },
+  {
     "title": "田間管理技巧",
     "description": "除草、施肥時機、輪作概念等田間管理實務技巧",
     "category": "Agri-Advanced",
@@ -358,6 +378,25 @@
     "path": "Crop-Production/跟植物診療師學診斷小番茄小黃瓜健康管理實戰.md"
   },
   {
+    "title": "農民市集與直銷模式實務：多通路客戶經營與增值加工",
+    "description": "農民市集是高毛利但低規模的通路。本文從虱目魚農場的實例出發，分析如何結合市集、電商、官網、超商，打造穩定直銷收入；以及二級、三級產品如何提升客戶價值。",
+    "category": "Agri-Marketing",
+    "tags": [
+      "國本學堂",
+      "農產品銷售",
+      "農民市集",
+      "直銷宅配",
+      "多通路",
+      "六級化",
+      "加工品"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Agri-Marketing/%E8%BE%B2%E6%B0%91%E5%B8%82%E9%9B%86%E8%88%87%E7%9B%B4%E9%8A%B7%E6%A8%A1%E5%BC%8F%E5%AF%A6%E5%8B%99",
+    "readingTime": 13,
+    "featured": true,
+    "date": "2026-04-18",
+    "path": "Agri-Marketing/農民市集與直銷模式實務.md"
+  },
+  {
     "title": "農產品品牌建立",
     "description": "農產品品牌故事打造、包裝設計與行銷策略實務",
     "category": "Agri-Marketing",
@@ -416,6 +455,24 @@
     "featured": false,
     "date": "2026-04-05",
     "path": "Smart-Farming/農業物聯網入門.md"
+  },
+  {
+    "title": "農業品牌建立與精品化策略：從大宗商品到消費者認可",
+    "description": "大宗蔬果如何轉型為品牌商品？本文從花卉農場的實例出發，分析如何透過品牌故事、包裝設計、市場定位，實現 3-5 倍溢價。",
+    "category": "Agri-Marketing",
+    "tags": [
+      "國本學堂",
+      "農產品銷售",
+      "品牌建立",
+      "精品化",
+      "直銷",
+      "高級客戶"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Agri-Marketing/%E8%BE%B2%E6%A5%AD%E5%93%81%E7%89%8C%E5%BB%BA%E7%AB%8B%E8%88%87%E7%B2%BE%E5%93%81%E5%8C%96%E7%AD%96%E7%95%A5",
+    "readingTime": 12,
+    "featured": true,
+    "date": "2026-04-18",
+    "path": "Agri-Marketing/農業品牌建立與精品化策略.md"
   },
   {
     "title": "農業理財實戰與農作物病徵觀察法",
