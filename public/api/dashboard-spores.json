@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T12:04:50.453637Z",
+  "lastUpdated": "2026-04-18T12:13:12.953964Z",
   "schemaVersion": "1.0",
   "totals": {
     "count": 34,
@@ -128,6 +128,16 @@
       "date": "2026-04-14"
     },
     {
+      "n": 15,
+      "article": "台灣感性",
+      "platform": "threads",
+      "views": 568,
+      "engagements": 0,
+      "rate": null,
+      "badge": null,
+      "date": "2026-04-08"
+    },
+    {
       "n": 7,
       "article": "台灣宗教與寺廟文化",
       "platform": "x",
@@ -136,16 +146,6 @@
       "rate": 0.47,
       "badge": null,
       "date": "2026-04-06"
-    },
-    {
-      "n": 5,
-      "article": "台灣國樂",
-      "platform": "x",
-      "views": 55,
-      "engagements": 3,
-      "rate": 5.45,
-      "badge": null,
-      "date": "2026-04-04"
     }
   ],
   "amplification": [
@@ -206,8 +206,8 @@
       "maxRate": 10.71
     },
     "threads": {
-      "count": 2,
-      "avgViews": 150000,
+      "count": 8,
+      "avgViews": 37728,
       "maxViews": 180000,
       "avgRate": 5.97,
       "maxRate": 9.54
@@ -231,14 +231,6 @@
       "url": null
     },
     {
-      "n": 4,
-      "article": "台灣國樂",
-      "platform": "threads",
-      "publishedDays": 14,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DWtoAI1k8Xf"
-    },
-    {
       "n": 3,
       "article": "林書豪",
       "platform": "threads",
@@ -247,52 +239,12 @@
       "url": null
     },
     {
-      "n": 8,
-      "article": "嚴長壽",
-      "platform": "threads",
-      "publishedDays": 12,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DWyqKShE4a8"
-    },
-    {
-      "n": 6,
-      "article": "台灣宗教與寺廟文化",
-      "platform": "threads",
-      "publishedDays": 12,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DWx7dvkEcNA"
-    },
-    {
       "n": 12,
       "article": "台灣民主轉型",
       "platform": "threads",
       "publishedDays": 11,
       "status": "OVERDUE",
       "url": null
-    },
-    {
-      "n": 10,
-      "article": "台灣民主轉型",
-      "platform": "threads",
-      "publishedDays": 11,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DW1ba_tEz5D"
-    },
-    {
-      "n": 15,
-      "article": "台灣感性",
-      "platform": "threads",
-      "publishedDays": 10,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DW2whskkZot"
-    },
-    {
-      "n": 13,
-      "article": "台海危機與兩岸關係發展",
-      "platform": "threads",
-      "publishedDays": 10,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DW2rgufk40S"
     },
     {
       "n": 20,
@@ -333,6 +285,54 @@
       "publishedDays": 7,
       "status": "OVERDUE",
       "url": "https://www.threads.com/@taiwandotmd/post/DW_l-6Yk_kg"
+    },
+    {
+      "n": 21,
+      "article": "2026鄭習會與國共十年再會",
+      "platform": "threads",
+      "publishedDays": 7,
+      "status": "OVERDUE",
+      "url": "https://www.threads.com/@taiwandotmd/post/DW_CjmCkQMW"
+    },
+    {
+      "n": 27,
+      "article": "張懸與安溥",
+      "platform": "x",
+      "publishedDays": 5,
+      "status": "waiting",
+      "url": "https://x.com/taiwandotmd/status/2043538702853644444"
+    },
+    {
+      "n": 26,
+      "article": "韓國瑜",
+      "platform": "x",
+      "publishedDays": 5,
+      "status": "waiting",
+      "url": "https://x.com/taiwandotmd/status/2043538858886017091"
+    },
+    {
+      "n": 25,
+      "article": "張懸與安溥",
+      "platform": "threads",
+      "publishedDays": 5,
+      "status": "waiting",
+      "url": "https://www.threads.com/@taiwandotmd/post/DXDq1FZkddO"
+    },
+    {
+      "n": 24,
+      "article": "韓國瑜",
+      "platform": "threads",
+      "publishedDays": 5,
+      "status": "waiting",
+      "url": "https://www.threads.com/@taiwandotmd/post/DXDpQqyETkf"
+    },
+    {
+      "n": 30,
+      "article": "李洋（v3 場景修正）",
+      "platform": "x",
+      "publishedDays": 4,
+      "status": "waiting",
+      "url": "https://x.com/taiwandotmd/status/2043976162813325344"
     }
   ],
   "weeklyPulse": [
@@ -344,12 +344,12 @@
     {
       "week": "2026-W14",
       "published": 3,
-      "avgViews": 55
+      "avgViews": 203
     },
     {
       "week": "2026-W15",
       "published": 18,
-      "avgViews": 102
+      "avgViews": 190
     },
     {
       "week": "2026-W16",
