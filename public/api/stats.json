@@ -1,8 +1,8 @@
 {
-  "totalArticles": 31,
+  "totalArticles": 33,
   "totalCategories": 10,
   "estimatedContributors": 3,
-  "totalTags": 68,
+  "totalTags": 75,
   "categories": [
     {
       "name": "Agri-Basics",
@@ -11,6 +11,10 @@
     {
       "name": "Crop-Production",
       "count": 4
+    },
+    {
+      "name": "Agri-Marketing",
+      "count": 3
     },
     {
       "name": "Farm-Management",
@@ -37,10 +41,6 @@
       "count": 5
     },
     {
-      "name": "Agri-Marketing",
-      "count": 1
-    },
-    {
       "name": "Grants-Planning",
       "count": 2
     }
@@ -48,7 +48,7 @@
   "topTags": [
     {
       "name": "國本學堂",
-      "count": 31
+      "count": 33
     },
     {
       "name": "第三屆",
@@ -91,11 +91,23 @@
       "count": 2
     },
     {
+      "name": "農產品銷售",
+      "count": 2
+    },
+    {
+      "name": "小黃瓜",
+      "count": 2
+    },
+    {
       "name": "農業進階",
       "count": 2
     },
     {
       "name": "家禽",
+      "count": 2
+    },
+    {
+      "name": "設施農業",
       "count": 2
     },
     {
@@ -107,29 +119,17 @@
       "count": 1
     },
     {
-      "name": "小農新創",
+      "name": "設施蔬果",
       "count": 1
     },
     {
-      "name": "圓夢發表",
-      "count": 1
-    },
-    {
-      "name": "水資源",
-      "count": 1
-    },
-    {
-      "name": "田間管理",
-      "count": 1
-    },
-    {
-      "name": "有機農業",
+      "name": "通路策略",
       "count": 1
     }
   ],
   "languageDistribution": {
-    "zh-TW": 31,
+    "zh-TW": 33,
     "en": 0
   },
-  "lastUpdated": "2026-04-04T19:11:55.519Z"
+  "lastUpdated": "2026-04-18T07:49:38.823Z"
 }
