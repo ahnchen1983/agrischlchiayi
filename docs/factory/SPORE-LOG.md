@@ -8,38 +8,40 @@
 
 > **規則**：同一篇文章間隔 **≥ 2 週** 才能再發孢子。發文後立即填入此表。
 
-| #   | 日期       | 語言 | 平台    | 文章 slug                | 分類       | 模板        | URL                                                                                                                           |
-| --- | ---------- | ---- | ------- | ------------------------ | ---------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 30  | 2026-04-14 | zh   | X       | 李洋（v3 場景修正）      | people     | A2 首尾呼應 | [→](https://x.com/taiwandotmd/status/2043976162813325344) — **112K views / ~29h** 🔥 **X 史上最強孢子**                       |
-| 29  | 2026-04-14 | zh   | Threads | 🌋 李洋（v2，留言更正）  | people     | A2 首尾呼應 | [→](https://www.threads.com/@taiwandotmd/post/DXGuAudkbuC) — **180K views / 8h** 🌋 **史上最強孢子**（超越 #25 安溥 7d 120K） |
-| 28  | 2026-04-14 | zh   | Threads | 李洋（⚠️ 已撤回）        | people     | A 人物型    | ~~[→](https://www.threads.com/@taiwandotmd/post/DXGo_9REaGS)~~（事實錯誤撤回）                                                |
-| 27  | 2026-04-13 | zh   | X       | 張懸與安溥               | music      | A 人物型    | [→](https://x.com/taiwandotmd/status/2043538702853644444)                                                                     |
-| 26  | 2026-04-13 | zh   | X       | 韓國瑜                   | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2043538858886017091)                                                                     |
-| 25  | 2026-04-13 | zh   | Threads | 張懸與安溥               | music      | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DXDq1FZkddO)                                                                    |
-| 24  | 2026-04-13 | zh   | Threads | 韓國瑜                   | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DXDpQqyETkf)                                                                    |
-| 23  | 2026-04-11 | en   | X       | 鄭麗文                   | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2042527836003868785)                                                                     |
-| 22  | 2026-04-11 | zh   | Threads | 鄭麗文                   | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DW_l-6Yk_kg)                                                                    |
-| 21  | 2026-04-11 | zh   | Threads | 2026鄭習會與國共十年再會 | society    | D 時間軸型  | [→](https://www.threads.com/@taiwandotmd/post/DW_CjmCkQMW)                                                                    |
-| 20  | 2026-04-10 | en   | —       | 台灣動物用藥爭議         | society    | B 冷知識型  | —（待發）                                                                                                                     |
-| 19  | 2026-04-10 | zh   | —       | 台灣動物用藥爭議         | society    | B 冷知識型  | —（待發）                                                                                                                     |
-| 18  | 2026-04-10 | en   | —       | 台灣國防與軍事現代化     | society    | B 冷知識型  | —（待發）                                                                                                                     |
-| 17  | 2026-04-10 | zh   | —       | 台灣國防與軍事現代化     | society    | B 冷知識型  | —（待發）                                                                                                                     |
-| 16  | 2026-04-08 | en   | X       | 台灣感性                 | culture    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041719940965920921)                                                                     |
-| 15  | 2026-04-08 | zh   | Threads | 台灣感性                 | culture    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DW2whskkZot)                                                                    |
-| 14  | 2026-04-08 | en   | X       | 台海危機與兩岸關係發展   | history    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041710306196677031)                                                                     |
-| 13  | 2026-04-08 | zh   | Threads | 台海危機與兩岸關係發展   | history    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DW2rgufk40S)                                                                    |
-| 12  | 2026-04-07 | en   | Threads | 台灣民主轉型             | history    | D 時間軸型  | —                                                                                                                             |
-| 11  | 2026-04-07 | en   | X       | 台灣民主轉型             | history    | D 時間軸型  | [→](https://x.com/taiwandotmd/status/2041532925469224960)                                                                     |
-| 10  | 2026-04-07 | zh   | Threads | 台灣民主轉型             | history    | D 時間軸型  | [→](https://www.threads.com/@taiwandotmd/post/DW1ba_tEz5D)                                                                    |
-| 9   | 2026-04-06 | zh   | X       | 嚴長壽                   | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2041143084583469498)                                                                     |
-| 8   | 2026-04-06 | zh   | Threads | 嚴長壽                   | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DWyqKShE4a8)                                                                    |
-| 7   | 2026-04-06 | zh   | X       | 台灣宗教與寺廟文化       | culture    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041042663613608298)                                                                     |
-| 6   | 2026-04-06 | zh   | Threads | 台灣宗教與寺廟文化       | culture    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DWx7dvkEcNA)                                                                    |
-| 5   | 2026-04-04 | zh   | X       | 台灣國樂                 | music      | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2040438911697379383)                                                                     |
-| 4   | 2026-04-04 | zh   | Threads | 台灣國樂                 | music      | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DWtoAI1k8Xf)                                                                    |
-| 3   | 2026-04-04 | zh   | Threads | 林書豪                   | people     | A 人物型    | —                                                                                                                             |
-| 2   | 2026-03-24 | zh   | Threads | 齊柏林                   | people     | A 人物型    | —                                                                                                                             |
-| 1   | 2026-03-24 | zh   | Threads | 數位身分證與個資爭議     | technology | B 冷知識型  | —                                                                                                                             |
+| #   | 日期       | 語言 | 平台    | 文章 slug                 | 分類       | 模板        | URL                                                                                                                           |
+| --- | ---------- | ---- | ------- | ------------------------- | ---------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 32  | 2026-04-18 | zh   | X       | Cicada（inline 連結實驗） | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2045363785347612934) — **實驗：inline link（非分兩篇）A/B**                              |
+| 31  | 2026-04-18 | zh   | Threads | Cicada（inline 連結實驗） | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DXQph5okwOu) — **實驗：inline link（非分兩篇）A/B**                             |
+| 30  | 2026-04-14 | zh   | X       | 李洋（v3 場景修正）       | people     | A2 首尾呼應 | [→](https://x.com/taiwandotmd/status/2043976162813325344) — **112K views / ~29h** 🔥 **X 史上最強孢子**                       |
+| 29  | 2026-04-14 | zh   | Threads | 🌋 李洋（v2，留言更正）   | people     | A2 首尾呼應 | [→](https://www.threads.com/@taiwandotmd/post/DXGuAudkbuC) — **180K views / 8h** 🌋 **史上最強孢子**（超越 #25 安溥 7d 120K） |
+| 28  | 2026-04-14 | zh   | Threads | 李洋（⚠️ 已撤回）         | people     | A 人物型    | ~~[→](https://www.threads.com/@taiwandotmd/post/DXGo_9REaGS)~~（事實錯誤撤回）                                                |
+| 27  | 2026-04-13 | zh   | X       | 張懸與安溥                | music      | A 人物型    | [→](https://x.com/taiwandotmd/status/2043538702853644444)                                                                     |
+| 26  | 2026-04-13 | zh   | X       | 韓國瑜                    | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2043538858886017091)                                                                     |
+| 25  | 2026-04-13 | zh   | Threads | 張懸與安溥                | music      | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DXDq1FZkddO)                                                                    |
+| 24  | 2026-04-13 | zh   | Threads | 韓國瑜                    | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DXDpQqyETkf)                                                                    |
+| 23  | 2026-04-11 | en   | X       | 鄭麗文                    | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2042527836003868785)                                                                     |
+| 22  | 2026-04-11 | zh   | Threads | 鄭麗文                    | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DW_l-6Yk_kg)                                                                    |
+| 21  | 2026-04-11 | zh   | Threads | 2026鄭習會與國共十年再會  | society    | D 時間軸型  | [→](https://www.threads.com/@taiwandotmd/post/DW_CjmCkQMW)                                                                    |
+| 20  | 2026-04-10 | en   | —       | 台灣動物用藥爭議          | society    | B 冷知識型  | —（待發）                                                                                                                     |
+| 19  | 2026-04-10 | zh   | —       | 台灣動物用藥爭議          | society    | B 冷知識型  | —（待發）                                                                                                                     |
+| 18  | 2026-04-10 | en   | —       | 台灣國防與軍事現代化      | society    | B 冷知識型  | —（待發）                                                                                                                     |
+| 17  | 2026-04-10 | zh   | —       | 台灣國防與軍事現代化      | society    | B 冷知識型  | —（待發）                                                                                                                     |
+| 16  | 2026-04-08 | en   | X       | 台灣感性                  | culture    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041719940965920921)                                                                     |
+| 15  | 2026-04-08 | zh   | Threads | 台灣感性                  | culture    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DW2whskkZot)                                                                    |
+| 14  | 2026-04-08 | en   | X       | 台海危機與兩岸關係發展    | history    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041710306196677031)                                                                     |
+| 13  | 2026-04-08 | zh   | Threads | 台海危機與兩岸關係發展    | history    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DW2rgufk40S)                                                                    |
+| 12  | 2026-04-07 | en   | Threads | 台灣民主轉型              | history    | D 時間軸型  | —                                                                                                                             |
+| 11  | 2026-04-07 | en   | X       | 台灣民主轉型              | history    | D 時間軸型  | [→](https://x.com/taiwandotmd/status/2041532925469224960)                                                                     |
+| 10  | 2026-04-07 | zh   | Threads | 台灣民主轉型              | history    | D 時間軸型  | [→](https://www.threads.com/@taiwandotmd/post/DW1ba_tEz5D)                                                                    |
+| 9   | 2026-04-06 | zh   | X       | 嚴長壽                    | people     | A 人物型    | [→](https://x.com/taiwandotmd/status/2041143084583469498)                                                                     |
+| 8   | 2026-04-06 | zh   | Threads | 嚴長壽                    | people     | A 人物型    | [→](https://www.threads.com/@taiwandotmd/post/DWyqKShE4a8)                                                                    |
+| 7   | 2026-04-06 | zh   | X       | 台灣宗教與寺廟文化        | culture    | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2041042663613608298)                                                                     |
+| 6   | 2026-04-06 | zh   | Threads | 台灣宗教與寺廟文化        | culture    | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DWx7dvkEcNA)                                                                    |
+| 5   | 2026-04-04 | zh   | X       | 台灣國樂                  | music      | B 冷知識型  | [→](https://x.com/taiwandotmd/status/2040438911697379383)                                                                     |
+| 4   | 2026-04-04 | zh   | Threads | 台灣國樂                  | music      | B 冷知識型  | [→](https://www.threads.com/@taiwandotmd/post/DWtoAI1k8Xf)                                                                    |
+| 3   | 2026-04-04 | zh   | Threads | 林書豪                    | people     | A 人物型    | —                                                                                                                             |
+| 2   | 2026-03-24 | zh   | Threads | 齊柏林                    | people     | A 人物型    | —                                                                                                                             |
+| 1   | 2026-03-24 | zh   | Threads | 數位身分證與個資爭議      | technology | B 冷知識型  | —                                                                                                                             |
 
 ### 待發
 
