@@ -2,9 +2,9 @@
   "categories": {
     "About": 19,
     "Art": 101,
-    "Culture": 169,
-    "Economy": 185,
-    "Food": 104,
+    "Culture": 170,
+    "Economy": 186,
+    "Food": 105,
     "Geography": 60,
     "History": 129,
     "Language": 1,
@@ -144,7 +144,7 @@
     },
     {
       "date": "2026-04-18",
-      "count": 9
+      "count": 12
     }
   ],
   "updated": "2026-04-18"

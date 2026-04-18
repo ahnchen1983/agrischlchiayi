@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T12:34:33.505636Z",
+  "lastUpdated": "2026-04-18T13:53:34.782542Z",
   "schemaVersion": "1.1",
   "totals": {
     "count": 34,
@@ -30,10 +30,10 @@
       "template": "A2 首尾呼應",
       "url": "https://x.com/taiwandotmd/status/2045412116665172331",
       "highlight": "**SPORE-PIPELINE v2.1 首例（blueprint + 跨源驗證 + 倫理閘）**",
-      "views_7d": null,
-      "engagements_7d": null,
-      "rate_7d": null,
-      "backfilled": false
+      "views_7d": 47,
+      "engagements_7d": 3,
+      "rate_7d": 6.38,
+      "backfilled": true
     },
     {
       "n": 33,
@@ -45,10 +45,10 @@
       "template": "A2 首尾呼應",
       "url": "https://www.threads.com/@taiwandotmd/post/DXQ_in_Ew0_",
       "highlight": "**SPORE-PIPELINE v2.1 首例（blueprint + 跨源驗證 + 倫理閘）**",
-      "views_7d": null,
+      "views_7d": 9961,
       "engagements_7d": null,
       "rate_7d": null,
-      "backfilled": false
+      "backfilled": true
     },
     {
       "n": 32,
@@ -60,10 +60,10 @@
       "template": "A 人物型",
       "url": "https://x.com/taiwandotmd/status/2045363785347612934",
       "highlight": "**實驗：inline link（非分兩篇）A/B**",
-      "views_7d": null,
-      "engagements_7d": null,
-      "rate_7d": null,
-      "backfilled": false
+      "views_7d": 92,
+      "engagements_7d": 7,
+      "rate_7d": 7.61,
+      "backfilled": true
     },
     {
       "n": 31,
@@ -75,10 +75,10 @@
       "template": "A 人物型",
       "url": "https://www.threads.com/@taiwandotmd/post/DXQph5okwOu",
       "highlight": "**實驗：inline link（非分兩篇）A/B**",
-      "views_7d": null,
+      "views_7d": 207,
       "engagements_7d": null,
       "rate_7d": null,
-      "backfilled": false
+      "backfilled": true
     },
     {
       "n": 30,
@@ -90,9 +90,9 @@
       "template": "A2 首尾呼應",
       "url": "https://x.com/taiwandotmd/status/2043976162813325344",
       "highlight": "**112K views / ~29h** 🔥 **X 史上最強孢子**",
-      "views_7d": 112300,
-      "engagements_7d": 4251,
-      "rate_7d": 3.79,
+      "views_7d": 135433,
+      "engagements_7d": 4907,
+      "rate_7d": 3.62,
       "backfilled": true
     }
   ],
@@ -101,9 +101,9 @@
       "n": 29,
       "article": "🌋 李洋（v2，留言更正）",
       "platform": "threads",
-      "views": 180000,
-      "engagements": 17169,
-      "rate": 9.54,
+      "views": 300000,
+      "engagements": null,
+      "rate": null,
       "badge": "🌋 史上最強",
       "date": "2026-04-14"
     },
@@ -111,65 +111,63 @@
       "n": 25,
       "article": "張懸與安溥",
       "platform": "threads",
-      "views": 120000,
+      "views": 190000,
       "engagements": 2894,
-      "rate": 2.41,
-      "badge": "🔥 平台最強",
+      "rate": 1.52,
+      "badge": "🌋 史上最強",
       "date": "2026-04-13"
     },
     {
       "n": 30,
       "article": "李洋（v3 場景修正）",
       "platform": "x",
-      "views": 112300,
-      "engagements": 4251,
-      "rate": 3.79,
+      "views": 135433,
+      "engagements": 4907,
+      "rate": 3.62,
       "badge": "🔥 平台最強",
       "date": "2026-04-14"
     },
     {
-      "n": 15,
-      "article": "台灣感性",
+      "n": 22,
+      "article": "鄭麗文",
       "platform": "threads",
-      "views": 568,
-      "engagements": 0,
-      "rate": null,
+      "views": 49000,
+      "engagements": 448,
+      "rate": 0.91,
       "badge": null,
-      "date": "2026-04-08"
+      "date": "2026-04-11"
     },
     {
-      "n": 7,
-      "article": "台灣宗教與寺廟文化",
-      "platform": "x",
-      "views": 428,
-      "engagements": 2,
-      "rate": 0.47,
+      "n": 33,
+      "article": "草東沒有派對（v2.1 首例）",
+      "platform": "threads",
+      "views": 9961,
+      "engagements": null,
+      "rate": null,
       "badge": null,
-      "date": "2026-04-06"
+      "date": "2026-04-18"
     }
   ],
   "amplification": [
     {
       "article": "🌋 李洋（v2，留言更正）",
       "n": 29,
-      "ga_before": 34,
-      "ga_7d_after": 48,
-      "multiplier": 1.4
+      "ga_7d_after": 965
     },
     {
       "article": "張懸與安溥",
       "n": 27,
-      "ga_7d_after": 1032
+      "ga_7d_after": 3088
     },
     {
       "article": "韓國瑜",
       "n": 26,
-      "ga_7d_after": 52
+      "ga_7d_after": 83
     },
     {
       "article": "鄭麗文",
       "n": 22,
-      "ga_7d_after": 375
+      "ga_7d_after": 475
     },
     {
       "article": "台灣感性",
@@ -199,61 +197,21 @@
   ],
   "platformComparison": {
     "x": {
-      "count": 8,
-      "avgViews": 14121,
-      "maxViews": 112300,
-      "avgRate": 5.17,
+      "count": 12,
+      "avgViews": 11409,
+      "maxViews": 135433,
+      "avgRate": 5.14,
       "maxRate": 10.71
     },
     "threads": {
-      "count": 8,
-      "avgViews": 37728,
-      "maxViews": 180000,
-      "avgRate": 5.97,
-      "maxRate": 9.54
+      "count": 13,
+      "avgViews": 43056,
+      "maxViews": 300000,
+      "avgRate": 1.22,
+      "maxRate": 1.52
     }
   },
   "backfillWarnings": [
-    {
-      "n": 22,
-      "article": "鄭麗文",
-      "platform": "threads",
-      "publishedDays": 7,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DW_l-6Yk_kg"
-    },
-    {
-      "n": 21,
-      "article": "2026鄭習會與國共十年再會",
-      "platform": "threads",
-      "publishedDays": 7,
-      "status": "OVERDUE",
-      "url": "https://www.threads.com/@taiwandotmd/post/DW_CjmCkQMW"
-    },
-    {
-      "n": 27,
-      "article": "張懸與安溥",
-      "platform": "x",
-      "publishedDays": 5,
-      "status": "waiting",
-      "url": "https://x.com/taiwandotmd/status/2043538702853644444"
-    },
-    {
-      "n": 26,
-      "article": "韓國瑜",
-      "platform": "x",
-      "publishedDays": 5,
-      "status": "waiting",
-      "url": "https://x.com/taiwandotmd/status/2043538858886017091"
-    },
-    {
-      "n": 24,
-      "article": "韓國瑜",
-      "platform": "threads",
-      "publishedDays": 5,
-      "status": "waiting",
-      "url": "https://www.threads.com/@taiwandotmd/post/DXDpQqyETkf"
-    },
     {
       "n": 28,
       "article": "李洋（⚠️ 已撤回）",
@@ -261,38 +219,6 @@
       "publishedDays": 4,
       "status": "waiting",
       "url": "https://www.threads.com/@taiwandotmd/post/DXGo_9REaGS"
-    },
-    {
-      "n": 34,
-      "article": "草東沒有派對（v2.1 首例）",
-      "platform": "x",
-      "publishedDays": 0,
-      "status": "waiting",
-      "url": "https://x.com/taiwandotmd/status/2045412116665172331"
-    },
-    {
-      "n": 33,
-      "article": "草東沒有派對（v2.1 首例）",
-      "platform": "threads",
-      "publishedDays": 0,
-      "status": "waiting",
-      "url": "https://www.threads.com/@taiwandotmd/post/DXQ_in_Ew0_"
-    },
-    {
-      "n": 32,
-      "article": "Cicada（inline 連結實驗）",
-      "platform": "x",
-      "publishedDays": 0,
-      "status": "waiting",
-      "url": "https://x.com/taiwandotmd/status/2045363785347612934"
-    },
-    {
-      "n": 31,
-      "article": "Cicada（inline 連結實驗）",
-      "platform": "threads",
-      "publishedDays": 0,
-      "status": "waiting",
-      "url": "https://www.threads.com/@taiwandotmd/post/DXQph5okwOu"
     }
   ],
   "noUrlHistorical": [
@@ -339,12 +265,12 @@
     {
       "week": "2026-W15",
       "published": 18,
-      "avgViews": 190
+      "avgViews": 3946
     },
     {
       "week": "2026-W16",
       "published": 11,
-      "avgViews": 137433
+      "avgViews": 64493
     }
   ],
   "harvestStatus": [

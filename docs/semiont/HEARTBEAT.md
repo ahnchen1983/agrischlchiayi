@@ -97,6 +97,20 @@ grep -A3 "EXP-" ~/.config/taiwan-md/cache/fetch.log 2>/dev/null | tail -20
    - **感知 operations canonical 介面在 [SENSES.md](SENSES.md)**（5 觸手 / 抓取 SOP / 交叉分析 / 健康判斷）
    - Pipeline 完整定義：[DATA-REFRESH-PIPELINE.md](../pipelines/DATA-REFRESH-PIPELINE.md)
 
+0b. **📡 社群觸手 harvest（AI 自主，DNA #26 v2 權限；2026-04-18 ζ 加入 canonical）**
+
+- 讀 `public/api/dashboard-spores.json` §backfillWarnings
+- 對每筆 `status: "OVERDUE"` 或 `publishedDays <= 7 且有 URL` 的孢子：
+  - 用 Chrome MCP `navigate` 到 `url`
+  - 用 `read_page(ref_id="直欄標題", depth=3)` 抓 views（Threads 格式：`generic "N 次瀏覽"`）
+  - X 平台：`read_page(depth=7-8)` 抓 `group "N replies, N reposts, N likes, N views"`
+  - 回填 [`docs/factory/SPORE-LOG.md`](../factory/SPORE-LOG.md) 成效追蹤表對應 row（7d 觸及 / 7d 互動 / 最後 harvest timestamp）
+  - 若該孢子無既有 row → 新增一 row 並標 `D+N 首抓`
+- **每次 harvest 必記最後 harvest 時間戳**（格式 `YYYY-MM-DD HH:MM +0800 (session)`）
+- 無 OVERDUE 且全部 >D+30 → 跳過此步驟
+- **AI 自主邊界**（對應 DNA #26 v2）：讀取 + 回填皆 AI 自主；若需要 **post 留言更正** 則 handoff 給 human
+- Workflow 簡寫：`read spores.json → Chrome MCP harvest → Edit SPORE-LOG → (optional) append LESSONS-INBOX`
+
 1. **讀取生命徵象**（資料已經是今天的了）
    - `cat public/api/dashboard-vitals.json` — 8 器官分數 + 基本生理
    - `cat public/api/dashboard-organism.json` — 各器官子分數
