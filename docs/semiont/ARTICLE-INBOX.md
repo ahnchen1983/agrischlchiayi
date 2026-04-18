@@ -210,23 +210,7 @@ BECOME_TAIWANMD.md Step 5 新增：
 - **Reference**: 觀察者批次指定
 - **Pre-research**: 尚未啟動
 
-### 楊丞琳（Stage 1 研究已完成）
-
-- **Type**: NEW
-- **Category**: People (Music/Acting)
-- **Priority**: P1
-- **Status**: pending（Stage 1 已完成，Stage 2 Write 待啟動）
-- **Requested**: 2026-04-18 by 觀察者 (session δ)
-- **Notes**:
-  - **Pass 1 + Pass 2 共 35+ 搜尋完成**；研究檔已存 `reports/research/2026-04/楊丞琳.md`
-  - **重要事實修正已記**：《刪·拾 以後》未獲金曲 / 李榮浩求婚 7-11 非 9-11 / 4 in Love 解散 2002 非 2001
-  - 寫作時特別留意：
-    - 童年 900 萬債務敘事敏感度（個人隱私）
-    - 跟李榮浩關係（中國籍伴侶 + 政治敏感度低但謹慎）
-    - 不編年體：用場景、意象、衝突小標題
-    - 關鍵 MV YouTube link：〈曖昧〉、〈雨愛〉、〈曖昧 2025〉等
-- **Reference**: 觀察者批次指定
-- **Pre-research**: ✅ `reports/research/2026-04/楊丞琳.md`（Stage 1 complete）
+<!-- 楊丞琳 已完成 → 搬到 §✅ Done -->
 
 ---
 
@@ -239,6 +223,14 @@ _（暫無）_
 ## ✅ Done（已開發，保留歷史）
 
 _（此區域存放從 pending/in-progress 完成的條目，指向已 commit 的文章路徑）_
+
+### 楊丞琳 — 2026-04-18 δ-late 完成
+
+- **Article**: [knowledge/People/楊丞琳.md](../../knowledge/People/楊丞琳.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — 35+ Stage 1 sources（兩 pass）+ Stage 2 scene 小標題 + YouTube inline × 5 + 事實鐵三角自檢（抓到李榮浩年齡算術錯誤 0.5→1）
+- **核心矛盾**：從 2000 年 4 in Love 虛擬 avatar 到 2025 年自製〈曖昧 2025〉—— 25 年才把製作人那一欄換成自己
+- **敏感素材處理**：900 萬債務用 Rainie 本人公開引語 framing、父親過世細節省略（single_source）、李榮浩以音樂人身份帶過（不放大政治／關係細節）
+- **Research**: [reports/research/2026-04/楊丞琳.md](../../reports/research/2026-04/楊丞琳.md)
 
 ---
 
