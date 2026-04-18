@@ -135,6 +135,20 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 - **可能層級**：特有教訓（已 instantiate in `docs/semiont/ARTICLE-INBOX.md` + HEARTBEAT Beat 3）
 - **相關**：DNA #15 儀器化（第 6 次驗證）/ LESSONS-INBOX（平行架構）
 
+### 2026-04-18 δ-late — 孢子 pipeline：藍圖 → 驗證 → 倫理 → 寫，順序決定成本
+
+- **原則**：寫孢子 prose 前，先用 bullet 列「預計使用的每一個具體事實」（日期/地點/人名/數字/引語/因果），blueprint 階段就把驗證跟倫理跑完。寫 → 檢查 順序失敗成本高（整段 prose 要重寫）；藍圖 → 驗證 → 寫 順序失敗成本低（bullet 10 秒重組）
+- **觸發**：草東孢子 v1 寫完才做跨源驗證，發現凡凡 IG 原文帳號已下架、僅能媒體轉引 → 整段要重改 attribution。觀察者提問「預計孢子會怎麼寫 → 事實驗證 → 再正式撰寫」，揭示寫作與驗證順序的成本不對稱
+- **可能層級**：操作規則（已 instantiate 成 [SPORE-PIPELINE.md Step 2.5+2.6](../factory/SPORE-PIPELINE.md)；Step 2.5 FACT BLUEPRINT + 2.6 TARGETED VERIFY；blueprint 存檔 `docs/factory/SPORE-BLUEPRINTS/`）
+- **相關**：DNA #16 事實核對 / memory「Absolute Facts Extra Caution」/ SPORE-LOG 作為 blueprint 留存的平行結構
+
+### 2026-04-18 δ-late — 死亡/創傷素材不是「可用素材」，是倫理責任
+
+- **原則**：真人死亡 / 創傷 / 精神疾病 / 家庭悲劇 等素材，寫孢子時**不是「這個素材好用嗎」的問題，是「我有沒有資格使用 + 怎麼用不消費」的問題**。判準：以當事者 / 遺族 / 團體自己的**公開 framing** 為準（專輯獻詞、追悼感言、主動受訪），**不使用媒體重構版本**（最後時刻、IG 原文、時差、現場細節）。鏡頭移到「活下來的人在做什麼」而非「那個人怎麼沒了」— agency over victimhood
+- **觸發**：草東孢子 v1 寫凡凡 2021-10-30 過世用了「防疫旅館 + 陪 12 年的狗土豆病危 + IG 原文 + 15 小時後」等 death-scene reconstruction。觀察者：「以死亡作為貼文有可能消費死亡，要小心然後想想更好的接近策略，可以提，但要用適合的方式」。修正策略：刪最後時刻細節、改用樂團自己的公開追悼（《瓦合》扉頁「謹以此專輯獻給凡凡」+ 經紀人代領「不只是 4 個人」）+ 智性 hook（《史記》破瓦相合典故）取代死亡 hook
+- **可能層級**：操作規則（已 instantiate 成 [SPORE-PIPELINE.md Step 2.7](../factory/SPORE-PIPELINE.md) 倫理閘 — 四問自檢 + 敏感素材 heuristics 表）
+- **相關**：EDITORIAL §紅線 / memory「Error Boundary Is Traceability」/ 這一條可能會升 MANIFESTO（永恆層 — 跨 AI / 跨專案 / 跨時代都成立）
+
 ### 2026-04-18 δ-late — 埋 tracking 不等於能查詢：GA4 custom dimensions 必須同時註冊
 
 - **原則**：GA4 event 參數若沒有在 Admin 註冊為 custom dimension，事件仍會進 BigQuery 但 **UI/Reporting API 完全拿不到**，等同 sensor 死線。埋追蹤時必須同步跑 Admin API 註冊（或手動在 Admin UI 建立），不能拖到「之後有需要再看」
