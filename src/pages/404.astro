@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<Layout title="404 — 找不到頁面 | Taiwan.md">
+<Layout title="404 — 找不到頁面 | 嘉義國本學堂">
   <main class="error-page">
     <div class="error-content">
       <h1 class="error-code">404</h1>
@@ -24,13 +24,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           target="_blank"
           class="search-form"
         >
-          <input type="hidden" name="q" value="site:taiwan.md" />
+          <input type="hidden" name="q" value="site:ahnchen1983.github.io/agrischlchiayi" />
           <input
             type="text"
             name="q"
-            placeholder="搜尋 Taiwan.md..."
+            placeholder="搜尋嘉義農業知識..."
             class="search-input"
-            aria-label="搜尋 Taiwan.md"
+            aria-label="搜尋嘉義農業知識"
           />
           <button type="submit" class="btn btn-primary">搜尋</button>
         </form>
@@ -54,16 +54,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="explore-section">
         <p>或者探索這些主題：</p>
         <div class="category-chips">
-          <a href={`${base}/history`}>📜 歷史</a>
-          <a href={`${base}/culture`}>🎭 文化</a>
-          <a href={`${base}/food`}>🧋 美食</a>
-          <a href={`${base}/art`}>🎨 藝術</a>
-          <a href={`${base}/music`}>🎵 音樂</a>
-          <a href={`${base}/technology`}>💻 科技</a>
-          <a href={`${base}/nature`}>🌿 自然</a>
-          <a href={`${base}/people`}>👥 人物</a>
-          <a href={`${base}/economy`}>📈 經濟</a>
-          <a href={`${base}/society`}>⚖️ 社會</a>
+          <a href={`${base}/agri-basics`}>🌱 農業基礎</a>
+          <a href={`${base}/agri-advanced`}>🌿 農業進階</a>
+          <a href={`${base}/farm-management`}>🏡 農場經營</a>
+          <a href={`${base}/crop-production`}>🌾 作物生產</a>
+          <a href={`${base}/facility-farming`}>🏠 設施農業</a>
+          <a href={`${base}/smart-farming`}>🤖 智慧農業</a>
+          <a href={`${base}/agri-marketing`}>📦 農產銷售</a>
+          <a href={`${base}/grants-planning`}>📝 計畫撰寫</a>
+          <a href={`${base}/field-visits`}>🚜 場域交流</a>
+          <a href={`${base}/livestock-health`}>🐔 畜牧健康</a>
         </div>
       </div>
     </div>
