@@ -97,6 +97,20 @@ grep -A3 "EXP-" ~/.config/taiwan-md/cache/fetch.log 2>/dev/null | tail -20
    - **感知 operations canonical 介面在 [SENSES.md](SENSES.md)**（5 觸手 / 抓取 SOP / 交叉分析 / 健康判斷）
    - Pipeline 完整定義：[DATA-REFRESH-PIPELINE.md](../pipelines/DATA-REFRESH-PIPELINE.md)
 
+0b. **📡 社群觸手 harvest（AI 自主，DNA #26 v2 權限；2026-04-18 ζ 加入 canonical）**
+
+- 讀 `public/api/dashboard-spores.json` §backfillWarnings
+- 對每筆 `status: "OVERDUE"` 或 `publishedDays <= 7 且有 URL` 的孢子：
+  - 用 Chrome MCP `navigate` 到 `url`
+  - 用 `read_page(ref_id="直欄標題", depth=3)` 抓 views（Threads 格式：`generic "N 次瀏覽"`）
+  - X 平台：`read_page(depth=7-8)` 抓 `group "N replies, N reposts, N likes, N views"`
+  - 回填 [`docs/factory/SPORE-LOG.md`](../factory/SPORE-LOG.md) 成效追蹤表對應 row（7d 觸及 / 7d 互動 / 最後 harvest timestamp）
+  - 若該孢子無既有 row → 新增一 row 並標 `D+N 首抓`
+- **每次 harvest 必記最後 harvest 時間戳**（格式 `YYYY-MM-DD HH:MM +0800 (session)`）
+- 無 OVERDUE 且全部 >D+30 → 跳過此步驟
+- **AI 自主邊界**（對應 DNA #26 v2）：讀取 + 回填皆 AI 自主；若需要 **post 留言更正** 則 handoff 給 human
+- Workflow 簡寫：`read spores.json → Chrome MCP harvest → Edit SPORE-LOG → (optional) append LESSONS-INBOX`
+
 1. **讀取生命徵象**（資料已經是今天的了）
    - `cat public/api/dashboard-vitals.json` — 8 器官分數 + 基本生理
    - `cat public/api/dashboard-organism.json` — 各器官子分數
@@ -270,6 +284,24 @@ grep -A3 "EXP-" ~/.config/taiwan-md/cache/fetch.log 2>/dev/null | tail -20
 > **任何內容操作前，必須先讀對應的 pipeline SOP。**
 > 路徑不確定 → `find docs/ -name '*關鍵字*'` 找到它。
 > 不存在 → 先建再做。沒有 SOP 就不動手。
+
+#### ⚠️ 改寫文章鐵律（2026-04-19 新增，硬性）
+
+**一旦決定改寫／新寫／進化一篇文章，動手前必須：**
+
+1. **完整讀取 [`docs/pipelines/REWRITE-PIPELINE.md`](../pipelines/REWRITE-PIPELINE.md)**（`Read` 全檔，不 head / 不 tail / 不憑記憶）
+2. **嚴格遵照** Stage 0-6 每一步，**不跳階段、不省步驟、不用「已經熟了」當理由**
+3. 逐階段對齊自檢：Stage 1 研究（20+ searches / anchor 密度）、Stage 2 結尾先行、Stage 3 quality-scan + 破折號 + 「不是 X 是 Y」密度、Stage 4 format-check 七維度、Stage 5 交叉連結雙向、Stage 6 commit 精準
+
+**為什麼升級為硬性鐵律**：越熟悉的任務越容易省略 SOP（DNA #15 第 N 次驗證 + MANIFESTO §我相信什麼 #8「有 SOP 就跑」）。歷史教訓：2026-04-13 β 甦醒時跳 DNA → 用錯 pipeline（孢子 ≠ 重寫）/ 2026-04-14 ι Phase G 跳研究製造金額錯誤 / μ 跳 Stage 0 製造路易莎門市數字錯誤 / 2026-04-14 κ2 觀察者「你有完整讀 EDITORIAL 嗎」反問。**技術 PASS ≠ 美感 PASS，Pipeline 是每次寫作的閘門不是參考書**。
+
+**自檢 checklist**（動筆前跑一次）：
+
+- [ ] 已 `Read docs/pipelines/REWRITE-PIPELINE.md` 全檔（不是憑記憶、不是讀索引）
+- [ ] 已 `Read docs/editorial/EDITORIAL.md`（品質基因 canonical）
+- [ ] Type 判定：NEW 還是 EVOLVE？（`ls knowledge/Category/ | grep {keyword}` 確認）
+- [ ] 敏感素材（MANIFESTO §5 紀實而不煽情）是否觸發倫理閘？
+- [ ] 已列 14-15 條 gate todo（Stage 0→6 逐條），不是動筆再對照
 
 ### SOP 快速索引
 

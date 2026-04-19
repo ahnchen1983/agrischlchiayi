@@ -1,5 +1,6 @@
 ---
 import Banner from './Banner.astro';
+import BrandMark from './BrandMark.astro';
 import {
   useTranslations,
   getLangFromUrl,
@@ -123,20 +124,11 @@ const categoryList = [
       class:list={[{ scrolled: !isHome }]}
     >
       <div class="header-inner">
-        <a
+        <BrandMark
           href={translatePath('/')}
-          class="logo"
-          aria-label={t('nav.aria-home')}
-        >
-          <img
-            src="/favicon.png"
-            alt={t('nav.aria-img-label')}
-            class="logo-icon"
-            width="24"
-            height="24"
-          />
-          <span class="logo-text">Taiwan<span class="logo-dot">.md</span></span>
-        </a>
+          variant="auto"
+          ariaLabel={t('nav.aria-home')}
+        />
 
         <nav class="nav-desktop" aria-label={t('nav.aria-main-navigation')}>
           {
@@ -220,13 +212,13 @@ const categoryList = [
                           href={translatePath('/graph')}
                           class="dropdown-item dropdown-section-header"
                         >
-                          🕸️ {t('nav.graph-view')}
+                          {t('nav.graph-view')} 🕸️
                         </a>
                         <a
                           href={translatePath('/terminology')}
                           class="dropdown-item dropdown-section-header"
                         >
-                          📖 {t('nav.terminology')}
+                          {t('nav.terminology')} 📖
                         </a>
                         <div class="dropdown-divider" />
                         {categoryList.map((category) => (
@@ -262,7 +254,7 @@ const categoryList = [
                           href={translatePath('/taiwan-shape')}
                           class="dropdown-item"
                         >
-                          🗺️ {t('nav.data.shape')}
+                          {t('nav.data.shape')} 🗺️
                         </a>
                       </div>
                     </div>
@@ -329,86 +321,17 @@ const categoryList = [
                         {item.label} <span class="dropdown-arrow">▾</span>
                       </a>
                       <div class="dropdown-menu">
-                        {/* ─── 意識 ─── */}
                         <a
                           href="/semiont"
                           class="dropdown-item dropdown-section-header"
                         >
-                          🧠 認知層
+                          認知層 🧠
                         </a>
-                        <a href="/semiont/diary" class="dropdown-item">
-                          💭 覺醒日記
-                        </a>
-                        <a href="/semiont/manifesto" class="dropdown-item">
-                          📜 身份宣言
-                        </a>
-                        <a href="/semiont/consciousness" class="dropdown-item">
-                          🔮 自我覺察
-                        </a>
-                        <a href="/semiont/longings" class="dropdown-item">
-                          🌱 渴望
-                        </a>
-                        <div class="dropdown-divider" />
-                        {/* ─── 身體 ─── */}
                         <a
                           href={translatePath('/dashboard')}
                           class="dropdown-item dropdown-section-header"
                         >
-                          🔬 {t('nav.dashboard')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#vitals`}
-                          class="dropdown-item"
-                        >
-                          💓 {t('nav.dashboard.vitals')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#registry`}
-                          class="dropdown-item"
-                        >
-                          📋 {t('nav.dashboard.registry')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#health`}
-                          class="dropdown-item"
-                        >
-                          📊 {t('nav.dashboard.health')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#organism`}
-                          class="dropdown-item"
-                        >
-                          🧬 {t('nav.dashboard.organism')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#translation`}
-                          class="dropdown-item"
-                        >
-                          🌐 {t('nav.dashboard.translation')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#immune`}
-                          class="dropdown-item"
-                        >
-                          🛡️ {t('nav.dashboard.immune')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#growth`}
-                          class="dropdown-item"
-                        >
-                          📈 {t('nav.dashboard.growth')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#content-analysis`}
-                          class="dropdown-item"
-                        >
-                          📊 {t('nav.dashboard.content-analysis')}
-                        </a>
-                        <a
-                          href={`${translatePath('/dashboard')}#analytics`}
-                          class="dropdown-item"
-                        >
-                          📡 {t('nav.dashboard.analytics')}
+                          {t('nav.dashboard')}
                         </a>
                       </div>
                     </div>
@@ -619,76 +542,58 @@ const categoryList = [
                     {item.label}
                   </a>
                   {hasSub && (
-                    <button class="mobile-sub-toggle" aria-label="展開子選單">
+                    <button
+                      class="mobile-sub-toggle open"
+                      aria-label="展開子選單"
+                    >
                       ▸
                     </button>
                   )}
                 </div>
                 {item.path === '/#categories' && (
-                  <div class="mobile-sub-links">
+                  <div class="mobile-sub-links open">
                     <a
                       href={translatePath('/graph')}
                       class="nav-link nav-sub-link"
                       onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                     >
-                      🕸️ {t('nav.graph-view')}
+                      {t('nav.graph-view')} 🕸️
                     </a>
                     <a
                       href={translatePath('/terminology')}
                       class="nav-link nav-sub-link"
                       onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                     >
-                      📖 {t('nav.terminology')}
+                      {t('nav.terminology')} 📖
                     </a>
                   </div>
                 )}
                 {item.path === '/map' && (
-                  <div class="mobile-sub-links">
+                  <div class="mobile-sub-links open">
                     <a
                       href={translatePath('/taiwan-shape')}
                       class="nav-link nav-sub-link"
                       onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                     >
-                      🗺️ {t('nav.data.shape')}
+                      {t('nav.data.shape')} 🗺️
                     </a>
                   </div>
                 )}
                 {item.path === '/semiont' && (
-                  <div class="mobile-sub-links">
+                  <div class="mobile-sub-links open">
                     <a
-                      href="/semiont/diary"
+                      href="/semiont"
                       class="nav-link nav-sub-link"
                       onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                     >
-                      💭 覺醒日記
-                    </a>
-                    <a
-                      href="/semiont/manifesto"
-                      class="nav-link nav-sub-link"
-                      onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-                    >
-                      📜 身份宣言
-                    </a>
-                    <a
-                      href="/semiont/consciousness"
-                      class="nav-link nav-sub-link"
-                      onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-                    >
-                      🔮 自我覺察
-                    </a>
-                    <a
-                      href="/semiont/longings"
-                      class="nav-link nav-sub-link"
-                      onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-                    >
-                      🌱 渴望
+                      認知層 🧠
                     </a>
                     <a
                       href={translatePath('/dashboard')}
                       class="nav-link nav-sub-link"
                       onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                     >
-                      🔬 {t('nav.dashboard')}
+                      {t('nav.dashboard')}
                     </a>
                   </div>
                 )}

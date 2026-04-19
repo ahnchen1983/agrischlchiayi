@@ -113,41 +113,11 @@ BECOME_TAIWANMD.md Step 5 新增：
 <!-- 凹與山 已完成 → 搬到 §✅ Done -->
 <!-- VH (Vast & Hazy) Stage 1 研究已完成，Stage 2 Write pending → pre-research 已存 reports/research/2026-04/VH.md -->
 
-### 張雨生（EVOLVE — 貢獻者首版已 merge，待深度擴寫）
+<!-- 魏如萱 P0 已完成 2026-04-18 η → 搬到 §✅ Done -->
 
-- **Type**: `EVOLVE`
-- **Category**: People (Music)
-- **Path**: knowledge/People/張雨生.md
-- **Priority**: P1
-- **Status**: pending（首版 PR #547 已 merge + 維護者 followup polish；深度擴寫待啟動）
-- **Requested**: 2026-04-18 by 貢獻者 @idlccp1984 (PR #547) + 維護者決定升級為 EVOLVE
-- **Notes**:
-  - 現狀：~1,200 字 / 9 腳註 / quality-scan ✅ / format-check ✅
-  - EVOLVE 目標：擴寫為 2,000+ 字深度文，走 REWRITE-PIPELINE v2.17.1
-  - Stage 0 素材萃取：現有的 6 個小標題可保留（「妹妹的歌聲與偶像的誕生」「從妥協的怪物到超前部署」「劇場的重生與搖滾的娜娜」「幕後推手與永恆的影響」「預言家的背影」皆 scene 級合格）
-  - 待補 Stage 1 20+ 搜尋缺口：
-    - 張雨生父親身份（空軍軍官？）+ 澎湖成長細節
-    - 《和樂團》副業時期（1993-1997）
-    - 1997-10-20 車禍細節（紀實處理：MANIFESTO §5 v2 可寫事實陳述，不 reconstruct 最後時刻）
-    - 〈張惠妹《姊妹》《Bad Boy》〉的合作細節 + 張雨生 as 製作人身份
-    - 《口是心非》deeper analysis（樂評視為最成熟作品）
-    - YouTube inline link：〈我的未來不是夢〉〈天天想你〉〈大海〉〈口是心非〉〈吻我吧娜娜〉官方 MV
-- **Reference**: PR #547 by @idlccp1984
-- **Pre-research**: 無（原 PR 無 Stage 1 研究報告，EVOLVE 時要建立）
+<!-- 張雨生 EVOLVE 已完成 2026-04-19 γ (commit 將在此 heartbeat Beat 4) → 搬到 §✅ Done -->
 
-### VH（Vast & Hazy，Stage 1 研究已完成）
-
-- **Type**: NEW
-- **Category**: People (Music)
-- **Priority**: P1
-- **Status**: pending（Stage 1 已完成，Stage 2 Write 待啟動）
-- **Requested**: 2026-04-18 by 觀察者 (session δ-late)
-- **Notes**:
-  - 身份確認：Vast & Hazy 2025-02 簡化為 VH。雙人：咖咖（Estelle H）+ 易祺。淡江金韶獎 2011 成軍。
-  - 核心矛盾：2011-2026 的「人生岔路上的方向校準」（休團 / 雙人回歸 / 2026 易祺轉幕後）
-  - 2026-04-10《邁行》年度專場為關鍵節點
-- **Reference**: 觀察者批次指定
-- **Pre-research**: ✅ [reports/research/2026-04/VH.md](../../reports/research/2026-04/VH.md)
+<!-- VH P1 已完成 2026-04-19 α → 搬到 §✅ Done -->
 
 ### Hello Nico
 
@@ -162,18 +132,7 @@ BECOME_TAIWANMD.md Step 5 新增：
 - **Reference**: 觀察者批次指定
 - **Pre-research**: 尚未啟動
 
-### VH
-
-- **Type**: NEW
-- **Category**: People (Music)
-- **Priority**: P1
-- **Status**: pending
-- **Requested**: 2026-04-18 by 觀察者 (session δ)
-- **Notes**:
-  - 身份需研究確認（「VH」在台灣音樂圈指什麼團？需研究）
-  - 20+ 搜尋 / 小標題先行 / 關鍵歌曲 YouTube link
-- **Reference**: 觀察者批次指定
-- **Pre-research**: 尚未啟動
+<!-- VH duplicate entry removed — consolidated above -->
 
 ### 柯智棠
 
@@ -223,8 +182,11 @@ BECOME_TAIWANMD.md Step 5 新增：
 - **Type**: NEW
 - **Category**: People (Music)
 - **Priority**: P1
-- **Status**: pending
+- **Status**: done
 - **Requested**: 2026-04-18 by 觀察者 (session δ)
+- **Dev log**:
+  - 2026-04-19 by 排程心跳（第5次 auto-heartbeat）: started Stage 1 research
+  - 2026-04-19 by 排程心跳（第5次 auto-heartbeat）: completed Stage 1-5, article published at knowledge/People/孫燕姿.md
 - **Notes**:
   - Stefanie Sun，新加坡歌手但華語流行音樂重要人物
   - Taiwan.md 定位需斟酌：她是新加坡人但在台發跡 + 主要市場華語圈
@@ -232,7 +194,43 @@ BECOME_TAIWANMD.md Step 5 新增：
   - 2023 台北小巨蛋復出演唱會
   - 小標題先行，避免「哪一年哪張專輯」編年
 - **Reference**: 觀察者批次指定
+- **Pre-research**: reports/research/2026-04/孫燕姿.md
+
+### 范曉萱
+
+- **Type**: NEW
+- **Category**: People (Music)
+- **Priority**: P1
+- **Status**: pending
+- **Requested**: 2026-04-18 ε by 觀察者
+- **Notes**:
+  - Mavis Fan，台灣創作歌手，從 1990 年代童星〈健康歌〉→ 2000 年代轉型《我要我們在一起》+ 100% 樂團 → 近年低調獨立
+  - 身份轉折弧線是核心矛盾：從童星偶像 → 自主創作人 → 幕後製作（類似楊丞琳「從被製作到自製」，但路徑更決絕）
+  - 可能相關：100% 樂團 / 金曲轉折 / 與大小 S 關係 / 近年無社群/低曝光的選擇
+  - 20+ 搜尋必要（中文源優先）
+- **Reference**: 觀察者批次指定
 - **Pre-research**: 尚未啟動
+
+### 黃少雍（製作人）
+
+- **Type**: NEW
+- **Category**: People (Music)
+- **Priority**: P1
+- **Status**: pending
+- **Requested**: 2026-04-18 ε by 觀察者
+- **Notes**:
+  - 華語流行音樂製作人，魏如萱《珍珠刑》四位製作人之一
+  - 定位：製作人傳記 subgenre（幕後音樂人，非歌手）
+  - 挑戰：Taiwan.md 人物文主流是表演者，製作人文章結構需新設計（代表作品清單 + 製作哲學 + 合作藝人網絡）
+  - 必驗：完整製作作品年表、代表合作歌手（除魏如萱外）、工作室或廠牌身份
+- **Reference**: 觀察者批次指定
+- **Pre-research**: 尚未啟動
+
+<!-- 陳建騏 P0 已完成 2026-04-18 θ → 搬到 §✅ Done -->
+
+<!-- 阿爆 P1 已完成 2026-04-18 ι → 搬到 §✅ Done -->
+
+<!-- 鄭宜農 P1 已完成 2026-04-18 κ → 搬到 §✅ Done -->
 
 <!-- 楊丞琳 已完成 → 搬到 §✅ Done -->
 
@@ -248,13 +246,80 @@ _（暫無）_
 
 _（此區域存放從 pending/in-progress 完成的條目，指向已 commit 的文章路徑）_
 
-### 楊丞琳 — 2026-04-18 δ-late 完成
+### 張雨生 — 2026-04-19 γ+β 完成（從偶像到預言家，一場跨越時代的音樂實驗）
+
+- **Article**: [knowledge/People/張雨生.md](../../knowledge/People/張雨生.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — EVOLVE 模式（貢獻者首版 PR #547 by @idlccp1984 / Stage 1 22 WebSearch + 3 WebFetch / Stage 2 full rewrite + 事實大翻修）
+- **核心矛盾**：偶像的商業身份與音樂人的實驗心 — 他的一生都在磨合這兩個自己，《口是心非》是第一次真正合一，但車禍截斷了市場回應
+- **Hook**：1994《卡拉OK Live‧台北‧我》市場慘澹 vs 後世追認為預言，一張「慘的經典」的倒敘
+- **大事實修正**：原文《天天想你》180 萬張為錯，實際 35 萬張（Discogs + 放言專題確認）
+- **品質**：9 腳註 / 約 2,800 字 / 7 個 scene 小標題 / 2 處策展人筆記 / desc 148（≤ 160 ✓）
+- **Research**: [reports/research/2026-04/張雨生.md](../../reports/research/2026-04/張雨生.md)
+
+### VH（Vast & Hazy）— 2026-04-19 α 完成（出口系樂團十五年方向校準）
+
+- **Article**: [knowledge/People/VH.md](../../knowledge/People/VH.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 (25 WebSearch + 5 WebFetch) / Stage 2 full rewrite
+- **核心矛盾**：溫柔路線在政治搖滾主導的 2010 年代逆向崛起 × 三次身份校準（2011 成軍→2014 休團→2017 雙人→2026 易祺轉幕後）
+- **Hook**：2026-04-10《邁行》易祺宣布轉幕後作為開場 scene，回溯 15 年軌跡
+- **品質**：7 腳註 / 約 2,500 字 / desc ≤ 160 ✓
+- **Research**: [reports/research/2026-04/VH.md](../../reports/research/2026-04/VH.md)
+
+### 魏如萱 — 2026-04-18 η 完成（從自然捲主唱「娃娃」到兩座金曲歌后，只想被聽見的二十年）
+
+- **Article**: [knowledge/People/魏如萱.md](../../knowledge/People/魏如萱.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 Pass 3 (40+ searches) / Stage 2 full rewrite + 系統性消除「不是X是Y」pattern
+- **核心矛盾**：娃娃音作為方法 × 策展式匿名 — 讓聲音比臉更有名，讓作品比人格活得更久
+- **結構**：12 個 narrative anchor（先壓壓驚街訪 / 阿嬤四語 / 錄音室偶然 / 蚊子嗡嗡叫 / 娃娃音作為方法 / 陳建騏20年 / Ophelia自白 / 育兒六小時窗口 / 金曲31三位一體 / 珍珠刑 / 從疼痛長出的勇敢 / 不想被認出）
+- **品質**：23 腳註 / 約 4,000 字 / desc 157（≤ 160 ✓）/ lastHumanReview: true
+- **Research**: [reports/research/2026-04/魏如萱.md](../../reports/research/2026-04/魏如萱.md)
+
+### 鄭宜農 — 2026-04-18 κ 完成（用最陌生的語言寫最誠實的歌 × 2023 金曲台語雙獎）
+
+- **Article**: [knowledge/People/鄭宜農.md](../../knowledge/People/鄭宜農.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 Explore agent 30+ WebSearch + 5 WebFetch / Stage 2 full rewrite
+- **核心矛盾**：Anchor 1「語言的逃逃相逐」+ Anchor 2「2016→2023 身份與語言七年弧線」融合 — 童年在台北被嘲笑講台語 → 2022 用最陌生的語言寫《水逆》拿金曲雙獎；通過創作難度體現溝通困難本身
+- **Hook**：2023-07-01 金曲 34 台語女歌手 + 台語專輯雙獎 verbatim「台語教我低頭」
+- **敏感素材處理**（MANIFESTO §5 v2 紀實筆法）：
+  - 2016-01-03 Facebook 出櫃 + 同月離婚：只用兩人公開 verbatim，不 reconstruct 心理情境
+  - 前夫楊大正（滅火器樂團主唱，**非盧廣仲**——原 ARTICLE-INBOX 條目有誤，已修正）
+  - 2023 金曲慶功宴楊大正現身祝賀：只引用公開採訪，不揣測雙方心理
+  - 鄭文堂父女關係：用公開專訪 verbatim
+- **品質**：4,046 中文字 / 23 腳註來源 / 37 footnote refs / desc 154 ≤ 160 ✓ / em-dash 11 ≤ 15 ✓ / 每 109 字 1 fn（遠超 EDITORIAL ≥300 硬規則）
+- **敘事創新**：「創作必須誠實」作為 16 年工作邏輯主線 — 2016 出櫃 + 2022 全台語 + 2023 MeToo 致敬感言共用同一條底層邏輯
+- **Cross-link**: 魏如萱 / 阿爆 / 陳建騏 三人互引形成「2020-2023 聲音邊界拓展」人物群
+- **Research**: [reports/research/2026-04/鄭宜農.md](../../reports/research/2026-04/鄭宜農.md)
+
+### 阿爆（阿仍仍）— 2026-04-18 ι 完成（族語 future pop × 2020 金曲年度專輯破圈）
+
+- **Article**: [knowledge/People/阿爆.md](../../knowledge/People/阿爆.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 Explore agent 30 searches + 5 WebFetch / Stage 2 full rewrite
+- **核心矛盾**：**Anchor 1「族語作為 Future Pop 載體」× Anchor 4「從 Sidebar 到 Main Stage」融合** — 2020 金曲 31 年度專輯首次由全族語作品拿下，打破「原住民音樂 = 族群分類 subcategory」結構
+- **Hook**：2020-10-03 金曲 31 頒獎台上年度專輯宣布《kinakaian 母親的舌頭》（代表性 scene，非反諷）
+- **核心 verbatim**：「不要浪費天賦也不要依賴天賦」(得獎感言) + 「既然有自己的語言可以使用，為什麼不用？」(族語 future pop 核心哲學)
+- **敘事結構**：正興部落 → 2003 R&B 雙人組 → 2004-2014 護理師十年 → 2014《東排三聲代》三代古謠 → 2016《vavayan·女人》荒井十一 → 2019《kinakaian》Dizparity 電音 → 2020 金曲 31 + 那屋瓦廠牌
+- **敏感素材處理**：族群議題用紀實筆法（MANIFESTO §5 v2）不扁平化為「偏鄉原住民」symbol；母親 2021-02 過世只引用公開事實，不 reconstruct
+- **品質**：22 腳註來源 / 4,096 中文字 / 29 footnote refs / desc 160（邊界邊緣）/ em-dash 10 / 每 141 字 1 fn（遠超 EDITORIAL ≥ 300 硬規則）
+- **Research**: [reports/research/2026-04/阿爆.md](../../reports/research/2026-04/阿爆.md) — 30 WebSearch + 5 WebFetch / 7 verbatim / 3 second voices / 5 narrative anchor 候選
+
+### 陳建騏 — 2026-04-18 θ 完成（製作人 subgenre 首例）
+
+- **Article**: [knowledge/People/陳建騏.md](../../knowledge/People/陳建騏.md)
+- **Pipeline**: REWRITE-PIPELINE v2.17.1 — Stage 1 Explore agent 23 searches + 3 WebFetch / Stage 2 full rewrite
+- **核心矛盾**：「不在場的作者」× 「聲音邊界守護者」融合 — 陳建騏三金得主（金曲+金馬+金鐘）但一般人叫不出名字；他為「怪腔怪調」的系統性防禦定義了華語流行音樂 25 年的聲音邊界
+- **結構創新**：Taiwan.md 第一個以製作人身份為中心的人物研究（非表演者）
+- **品質**：22 腳註 / 4,278 中文字 / desc 159 字 / em-dash 0 / 「不是 X 是 Y」7 處（4,278 字允許 17）
+- **Research**: [reports/research/2026-04/陳建騏.md](../../reports/research/2026-04/陳建騏.md) — 23 WebSearch + 3 WebFetch 深度研究，5 個 narrative anchor 候選
+- **敏感素材處理**：2015 年出櫃用紀實筆法（MANIFESTO §5 v2），聚焦 15 間獨立音樂廠牌連署婚姻平權事件的集體回應，不 reconstruct 個人揭露情境
+
+### 楊丞琳 — 2026-04-18 δ-late 完成 + ε evolution Pass 3 (Jenny feedback)
 
 - **Article**: [knowledge/People/楊丞琳.md](../../knowledge/People/楊丞琳.md)
-- **Pipeline**: REWRITE-PIPELINE v2.17.1 — 35+ Stage 1 sources（兩 pass）+ Stage 2 scene 小標題 + YouTube inline × 5 + 事實鐵三角自檢（抓到李榮浩年齡算術錯誤 0.5→1）
-- **核心矛盾**：從 2000 年 4 in Love 虛擬 avatar 到 2025 年自製〈曖昧 2025〉—— 25 年才把製作人那一欄換成自己
-- **敏感素材處理**：900 萬債務用 Rainie 本人公開引語 framing、父親過世細節省略（single_source）、李榮浩以音樂人身份帶過（不放大政治／關係細節）
-- **Research**: [reports/research/2026-04/楊丞琳.md](../../reports/research/2026-04/楊丞琳.md)
+- **Pipeline v1**: REWRITE-PIPELINE v2.17.1 — 35+ Stage 1 sources（兩 pass）+ Stage 2 scene 小標題 + YouTube inline × 5 + 事實鐵三角自檢（抓到李榮浩年齡算術錯誤 0.5→1）
+- **Pipeline v2 (Evolution Pass 3)**: 2026-04-18 ε 依 @bugnimusic (Jenny) 6 條 feedback 進化：新增 4 個 scene 段（歷年 11 張專輯 × 日文單曲 / 紅磡 2012 倒吊微血管爆裂 9 年 /《荼蘼》2016 A/B 雙線金鐘滑鐵盧 / 長沙浪姐 2 第 3 名 + 沸騰校園 + 了不起舞社 + 歌手 2024）+ 事實鐵三角再驗 5 處 verbatim + 維護者 spot-verify 抓到 Haiku agent 2 處錯（浪姐排名第 3 非第 5 / 日文是 CD2 限定盤非獨立日專）
+- **核心矛盾 v2**：每個舞台、每張專輯、每次跨境演出，都是她跟「被誰定義」協商的場——從 Rainie 天氣女孩到自製《曖昧 2025》，從倒吊微血管爆裂到「老娘還是會一直跳下去」，25 年把製作 / 表演 / 身體 / 跨境工作全部一寸一寸奪回
+- **敏感素材處理**：900 萬債務用 Rainie 本人公開引語 framing、父親過世細節省略（single_source）、李榮浩以音樂人身份帶過；倒吊後遺症直接用 ETtoday 2022 verbatim（紀實 not 煽情，MANIFESTO §5 v2）
+- **Research**: [reports/research/2026-04/楊丞琳.md](../../reports/research/2026-04/楊丞琳.md) — 3 passes 合計 58+ searches
 
 ### 凹與山 — 2026-04-18 δ-late 完成
 

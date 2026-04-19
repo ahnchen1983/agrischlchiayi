@@ -58,6 +58,67 @@ Taiwan.md 的進化動力有兩層：
 
 任何時候觀察者說「去抓 XX 文章 threads 留言」→ 立刻跑完整 pipeline（本次草東孢子 #33 即為此 pattern 首例）。
 
+### Batch Harvest 模式（v1.2 新增 — 2026-04-18 δ-late 首例驗證後正式文件化）
+
+**適用條件**：
+
+- Dashboard OVERDUE ≥ 3 筆 → 優先跑 batch，而非逐筆 daily
+- 同平台 + 預期低留言密度（歷史舊孢子 D+10+）
+- 觀察者 ad-hoc 觸發「回填一批舊孢子」
+
+**Batch 執行流程**（跟單筆 pipeline 共用 Step 1-9，但合併為單一 harvest log）：
+
+```
+1. 列出目標 URL（從 Dashboard `backfillWarnings` 或 SPORE-LOG grep）
+2. Chrome MCP 單一 tab 連續 navigate 每個 URL
+   - 每筆 ~15s（navigate 5s + JS extract 10s）
+   - N 筆 = ~N × 15s + 1-2 分鐘額外（分析 + 歸檔）
+3. 記錄每筆的 views / comments，一次性整理成表格
+4. 分類 + 事實驗證（Step 2-3）— 有留言的才進，低留言批次通常跳過
+5. 寫單一 batch log：`docs/factory/SPORE-HARVESTS/batch-YYYY-MM-DD-N-spores.md`
+6. 同時更新 SPORE-LOG 成效追蹤表（N 列一次 commit）
+7. Pattern 歸納（Step 9）— batch 的特殊價值：可做跨筆比較
+```
+
+**Batch log 特殊欄位**（跟單筆 log schema 的差異）：
+
+```yaml
+---
+spores: '#N, #M, ...' # 多筆逗號分隔
+harvest_date: YYYY-MM-DD HH:MM
+harvest_window_day: 'mixed (D+X to D+Y)' # 不同筆跨度
+batch_reason: 為什麼合併（e.g. OVERDUE + 同平台 + 低留言預期）
+reply_count: total # 加總
+---
+```
+
+**跨筆比較機制**（batch 獨有）：
+
+batch 跑完要做的「Pattern 歸納」比單筆深：
+
+1. **平台表現差**：同批次內 Threads vs X 觸及 / 互動率比較
+2. **模板表現差**：B 冷知識型 vs A 人物型 vs D 時間軸型平均 views
+3. **時間軸效應**：早期（D+14）vs 近期（D+7）孢子互動密度變化
+4. **系統性教訓**：批次才看得到的 pattern（e.g.「早期無圖孢子零留言」）
+
+**首例驗證**（2026-04-18 δ-late）：
+
+- 6 筆同平台 OVERDUE（Threads，D+10-D+14）
+- 總時長 ~5 分鐘
+- 產出：[SPORE-HARVESTS/batch-2026-04-18-6-spores.md](SPORE-HARVESTS/batch-2026-04-18-6-spores.md)
+- 3 個 pattern 觀察（帳號密度 / 模板差 / 平台差）
+- 1 條 LESSONS-INBOX 新教訓（SPORE-LOG URL 硬鐵律）
+
+**Batch vs 單筆的選擇判準**：
+
+| 情境                            | 選擇                                   |
+| ------------------------------- | -------------------------------------- |
+| OVERDUE 1-2 筆，最近 7 天內     | 單筆（Step 1-9 完整）                  |
+| OVERDUE ≥ 3 筆 + 同平台         | Batch                                  |
+| 剛發新孢子 D+0-D+3              | 單筆（潛在高留言 → 細緻處理）          |
+| 單筆孢子互動爆量（views ≥ 50K） | 單筆 + 加速 harvest（D+0 + D+1 + D+3） |
+| 歷史孢子整理（> 30 天）         | Batch                                  |
+
 ---
 
 ## Step 1: COLLECT 抓留言
@@ -218,27 +279,45 @@ raw_images: # 若留言含圖
 
 ---
 
-## Step 5: Perspectives frontmatter
+## Step 5: Perspectives frontmatter（v1.1 規則校準）
 
-所有被處理的留言（不論是否進 body）都要 append 到 perspectives frontmatter，保留完整 provenance trail。
+> **觀察者 2026-04-18 δ-late 校準（v1.1）**：
+> **「勘誤類型不收錄到 Perspectives。Perspectives 是各種針對主題的想法 / 看法 / 聲音，勘誤就是修改處理。」**
+>
+> 這把 perspectives 的語意清楚定義為**主題性觀點**，不是 raw 留言存檔。
 
-### Schema（從李洋 pattern 擴展）
+### 寫入規則（v1.1 簡化）
+
+| Dimension           | 進 perspectives？ | 理由                                             |
+| ------------------- | ----------------- | ------------------------------------------------ |
+| **更正 correction** | ❌ **不進**       | 直接 Step 4 修文章本體 + Step 6 回覆，不重複歸檔 |
+| **建議 suggestion** | ⚠️ 酌情           | 被採納入 body → 進；未採納但想法值得保留 → 進    |
+| **擴寫 enrichment** | ✅ 進             | 主題性觀點 / 典故延伸                            |
+| **共鳴 resonance**  | ✅ 進             | 情感回響、個人經驗                               |
+| **AI 書寫質疑**     | ✅ 進             | Meta 觀點，有主題性                              |
+| **擴散 sharing**    | ✅ 進             | tag 推薦也表達對主題的態度                       |
+| **情感 emotional**  | ✅ 進             | 跟主題人物的情感投射                             |
+| **攻擊**            | ❌ **不進**       | 非主題觀點，另外處理                             |
+
+### Schema（保持 5 欄）
 
 ```yaml
 perspectives:
   - author: '@username'
     text: '原文逐字'
-    dimension: '更正 / 建議 / 擴寫 / 共鳴 / AI 書寫質疑 / 擴散 / 情感 / 攻擊'
+    dimension: '建議 / 擴寫 / 共鳴 / AI 書寫質疑 / 擴散 / 情感'
     source: 'Threads 孢子 #N 留言 YYYY-MM-DD HH:MM'
-    action: '已修 / 已納入文 / 僅歸檔 / 待觀察 / 已回覆'
+    action: '已納入文 / 僅歸檔 / 待觀察 / 已回覆'
 ```
 
-### 擴展欄位（李洋 pattern 有 3 欄 author/text/dimension，本檔擴為 5 欄）
+**核心語意**：perspectives 是**讀者對文章主題的聲音集**（跟李洋 pattern 的 SSODT 精神一致），不是留言 raw dump。勘誤是文章本體的修改動作，由 commit message + Step 4 修文體現，不需要額外 frontmatter slot。
+
+### 擴展欄位
 
 - **source**：平台 + 孢子編號 + 時間戳（provenance）
 - **action**：文章本體是否已接住（integration status）
 
-這 5 欄合起來讓未來任何 session 甦醒都能從 frontmatter 直接看到「這篇文章經歷過哪些讀者回聲、哪些已處理」。
+這 5 欄合起來讓未來任何 session 甦醒都能從 frontmatter 直接看到「這篇文章經歷過哪些讀者**觀點**介入、哪些已處理」。
 
 ---
 
