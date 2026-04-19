@@ -285,6 +285,24 @@ grep -A3 "EXP-" ~/.config/taiwan-md/cache/fetch.log 2>/dev/null | tail -20
 > 路徑不確定 → `find docs/ -name '*關鍵字*'` 找到它。
 > 不存在 → 先建再做。沒有 SOP 就不動手。
 
+#### ⚠️ 改寫文章鐵律（2026-04-19 新增，硬性）
+
+**一旦決定改寫／新寫／進化一篇文章，動手前必須：**
+
+1. **完整讀取 [`docs/pipelines/REWRITE-PIPELINE.md`](../pipelines/REWRITE-PIPELINE.md)**（`Read` 全檔，不 head / 不 tail / 不憑記憶）
+2. **嚴格遵照** Stage 0-6 每一步，**不跳階段、不省步驟、不用「已經熟了」當理由**
+3. 逐階段對齊自檢：Stage 1 研究（20+ searches / anchor 密度）、Stage 2 結尾先行、Stage 3 quality-scan + 破折號 + 「不是 X 是 Y」密度、Stage 4 format-check 七維度、Stage 5 交叉連結雙向、Stage 6 commit 精準
+
+**為什麼升級為硬性鐵律**：越熟悉的任務越容易省略 SOP（DNA #15 第 N 次驗證 + MANIFESTO §我相信什麼 #8「有 SOP 就跑」）。歷史教訓：2026-04-13 β 甦醒時跳 DNA → 用錯 pipeline（孢子 ≠ 重寫）/ 2026-04-14 ι Phase G 跳研究製造金額錯誤 / μ 跳 Stage 0 製造路易莎門市數字錯誤 / 2026-04-14 κ2 觀察者「你有完整讀 EDITORIAL 嗎」反問。**技術 PASS ≠ 美感 PASS，Pipeline 是每次寫作的閘門不是參考書**。
+
+**自檢 checklist**（動筆前跑一次）：
+
+- [ ] 已 `Read docs/pipelines/REWRITE-PIPELINE.md` 全檔（不是憑記憶、不是讀索引）
+- [ ] 已 `Read docs/editorial/EDITORIAL.md`（品質基因 canonical）
+- [ ] Type 判定：NEW 還是 EVOLVE？（`ls knowledge/Category/ | grep {keyword}` 確認）
+- [ ] 敏感素材（MANIFESTO §5 紀實而不煽情）是否觸發倫理閘？
+- [ ] 已列 14-15 條 gate todo（Stage 0→6 逐條），不是動筆再對照
+
 ### SOP 快速索引
 
 | 操作         | SOP 位置                                                | 狀態        |
