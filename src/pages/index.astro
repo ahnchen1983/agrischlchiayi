@@ -17,39 +17,51 @@ const readingPathSteps = [
   {
     href: `${base}/agri-basics/土壤基礎知識`,
     title: '🌱 土壤基礎知識',
-    description: '認識嘉義地區土壤特性，新農入門第一步',
+    description: '認識嘉義地區土壤特性，小農經營的第一課',
     time: '5 min',
   },
   {
     href: `${base}/crop-production/小番茄栽培技術`,
     title: '🌿 小番茄栽培技術',
-    description: '從選種到採收，嘉義小番茄完整栽培指南',
+    description: '嘉義招牌作物：從選種到採收的完整指南',
     time: '6 min',
   },
   {
-    href: `${base}/smart-farming/農業物聯網入門`,
-    title: '🤖 農業物聯網入門',
-    description: '感測器、數據分析，智慧農業起步走',
+    href: `${base}/farm-management/農場財務健檢與規劃`,
+    title: '🏡 農場財務健檢與規劃',
+    description: '掌握成本結構、規劃融資——經營農場的必修課',
     time: '5 min',
   },
   {
-    href: `${base}/farm-management/農場財務規劃`,
-    title: '🏡 農場財務規劃',
-    description: '小農也需要的財務管理基本功',
+    href: `${base}/crop-production/農作物病徵診斷指南`,
+    title: '🔍 農作物病徵診斷指南',
+    description: '用對眼光看植物——早期發現、早期防控',
+    time: '6 min',
+  },
+  {
+    href: `${base}/smart-farming/智慧農業基礎設施建設指南`,
+    title: '🤖 智慧農業基礎設施建設',
+    description: '從水電實務到自動灌溉——科技改變農田',
     time: '5 min',
+  },
+  {
+    href: `${base}/agri-marketing/農民市集與直銷模式實務`,
+    title: '📦 農民市集與直銷模式實務',
+    description: '產品怎樣賣得更好？直銷、通路、電商全策略',
+    time: '6 min',
   },
   {
     href: `${base}/grants-planning/農業補助申請指南`,
-    title: '📝 農業補助申請指南',
-    description: '補助計畫申請流程與撰寫技巧',
+    title: '💰 農業補助申請指南',
+    description: '政府資源怎麼申請？補助計畫撰寫實務',
     time: '4 min',
   },
 ];
 
 const readingPathFooterItems = [
-  { icon: '⏱️', label: '總計 25 分鐘' },
-  { icon: '🎯', label: '跨越 5 大領域' },
-  { icon: '🌟', label: '農業入門起步' },
+  { icon: '⏱️', label: '總計 37 分鐘' },
+  { icon: '🎯', label: '跨越 8 大領域' },
+  { icon: '🌟', label: '從入門到經營實務' },
 ];
 ---
 
@@ -64,12 +76,12 @@ const readingPathFooterItems = [
   <RandomDiscovery />
 
   <ReadingPath
-    title="📖 不知道從哪開始？"
-    subtitle="用這 5 篇文章，在 25 分鐘內快速入門農業知識"
+    title="📖 從零開始，37 分鐘快速入門"
+    subtitle="7 篇精選文章：從基礎到實務，解決嘉義農場的三大挑戰"
     steps={readingPathSteps}
     footerItems={readingPathFooterItems}
     continueHref="#categories"
-    continueLabel="繼續探索更多主題 →"
+    continueLabel="深入瞭解三大挑戰的完整解決方案 →"
   />
 
   <FeatureCards
@@ -78,8 +90,8 @@ const readingPathFooterItems = [
     cards={[
       {
         icon: '🎯',
-        title: '國本學堂精華',
-        description: '嘉義縣政府農業處歷屆課程內容，系統化整理',
+        title: '51 篇實務指南',
+        description: '從嘉義農民的真實挑戰出發，涵蓋生產、財務、銷售全流程',
       },
       {
         icon: '🕸️',
@@ -88,13 +100,13 @@ const readingPathFooterItems = [
       },
       {
         icon: '🌾',
-        title: '在地農業實務',
-        description: '嘉義地區作物、設施、智農實戰經驗',
+        title: '最新實務內容',
+        description: '新增農場財務、植物診斷、鳳梨機械化等高價值指南',
       },
       {
         icon: '📖',
-        title: '開源共創',
-        description: '任何人都可以貢獻，讓農業知識持續成長',
+        title: '開源共創社群',
+        description: '貢獻新農友案例、實務經驗，讓知識持續進化',
       },
     ]}
   >
@@ -121,50 +133,51 @@ const readingPathFooterItems = [
 
   <CategoriesSection>
     <Fragment slot="prose">
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #1f2937; font-size: 1.8rem;">嘉義農場的三大挑戰</h2>
+
+      <p style="font-weight: 600; color: #2d5016; font-size: 1.1rem; margin-bottom: 1rem;">
+        ✓ 挑戰 1：「怎樣提高產量與品質？」
+      </p>
       <p>
-        嘉義，北回歸線穿越的農業重鎮。從嘉南平原的稻浪到阿里山的茶園，
-        這裡是台灣農業的核心產區之一。
-        <a href={`${base}/agri-basics`} class="topic-pill">🌱 農業基礎入門</
-        >帶你認識土壤、水資源與有機農法的第一步。
+        從<a href={`${base}/agri-basics`} class="topic-pill">🌱 土壤基礎知識</a>開始，
+        掌握嘉義地區的栽培祕訣。具體作物方面，
+        <a href={`${base}/crop-production/小番茄栽培技術`} class="topic-pill">🌿 小番茄栽培</a>、
+        <a href={`${base}/crop-production/鳳梨栽培與機械化指南`} class="topic-pill">🍍 鳳梨栽培與機械化</a>等指南
+        涵蓋選種、肥培、病蟲害管理全過程。
+        而<a href={`${base}/crop-production/農作物病徵診斷指南`} class="topic-pill">🔍 農作物病徵診斷指南</a>
+        讓你用對眼光看植物，早期發現風險。
       </p>
 
+      <p style="font-weight: 600; color: #2d5016; font-size: 1.1rem; margin-bottom: 1rem; margin-top: 1.5rem;">
+        ✓ 挑戰 2：「成本太高，怎麼降本增效？」
+      </p>
       <p>
-        國本學堂自創辦以來，培育了數百位新農與返鄉青農。
-        從<a href={`${base}/agri-advanced`} class="topic-pill">🌾 進階實務</
-        >的田間管理技巧，到<a href={`${base}/crop-production`} class="topic-pill"
-          >🌿 作物生產</a
-        >的小番茄、百香果栽培指南，每一堂課都是來自產地的實戰經驗。
+        <a href={`${base}/farm-management/農場財務健檢與規劃`} class="topic-pill">🏡 農場財務健檢與規劃</a>
+        幫你讀懂成本結構、進行財務規劃——小農不能只靠直覺經營。
+        <a href={`${base}/smart-farming/智慧農業基礎設施建設指南`} class="topic-pill">🤖 智慧農業基礎設施建設</a>
+        結合水電實務與自動灌溉，降低人力與資源成本。
+        <a href={`${base}/facility-farming`} class="topic-pill">🏗️ 設施農業</a>
+        讓溫室環控與精準灌溉成為現實，提升每平方公尺的產值。
       </p>
 
+      <p style="font-weight: 600; color: #2d5016; font-size: 1.1rem; margin-bottom: 1rem; margin-top: 1.5rem;">
+        ✓ 挑戰 3：「產品怎樣賣得更好？」
+      </p>
       <p>
-        現代農業不只是種田。<a href={`${base}/smart-farming`} class="topic-pill"
-          >🤖 智慧農業</a
-        >帶來物聯網感測、智慧灌溉與無人機應用；
-        <a href={`${base}/facility-farming`} class="topic-pill">🏗️ 設施農業</
-        >讓溫室環控成為可能。科技正在改變嘉義的農田風景。
+        <a href={`${base}/agri-marketing/農民市集與直銷模式實務`} class="topic-pill">📦 農民市集與直銷模式實務</a>、
+        <a href={`${base}/agri-marketing/小黃瓜銷售通路策略`} class="topic-pill">通路策略</a>、
+        <a href={`${base}/agri-marketing/農業品牌建立與精品化策略`} class="topic-pill">品牌建立與精品化</a>——
+        嘉義新一代農友不只種得好，更懂得經營銷售。
+        <a href={`${base}/agri-marketing/外銷認證與國際市場開拓`} class="topic-pill">外銷認證與國際市場</a>
+        更是拓展收入的新機會。
       </p>
 
-      <p>
-        經營一座農場需要的不只是農藝。
-        <a href={`${base}/farm-management`} class="topic-pill">🏡 農場經營管理</
-        >教你財務規劃與人力管理；
-        <a href={`${base}/grants-planning`} class="topic-pill">📝 計畫撰寫補助</
-        >幫你掌握補助申請的眉角。
-      </p>
-
-      <p>
-        從產地到餐桌的最後一哩路——<a
-          href={`${base}/agri-marketing`}
-          class="topic-pill">📦 農產品銷售</
-        >探索品牌建立與通路經營。
-        而<a href={`${base}/field-visits`} class="topic-pill">🚜 場域交流觀摩</
-        >帶你走訪模範農場，看見不同經營模式的可能。
-      </p>
-
-      <p>
-        <a href={`${base}/livestock-health`} class="topic-pill">🐄 畜牧健康</
-        >不可忽視——家禽飼養管理與動物福利同樣是農業的一環。
-        所有知識在這裡匯聚，等你探索。
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e5e7eb;">
+        國本學堂將 50+ 年課程經驗系統化為 51 篇實務指南，
+        涵蓋<a href={`${base}/agri-advanced`} class="topic-pill">🌾 多元農業經營</a>、
+        <a href={`${base}/grants-planning`} class="topic-pill">💰 補助申請</a>，
+        以及透過<a href={`${base}/field-visits`} class="topic-pill">🚜 場域交流觀摩</a>
+        走訪模範農場。所有知識都從嘉義的真實農場出發，等你探索。
       </p>
     </Fragment>
   </CategoriesSection>
