@@ -416,6 +416,45 @@ const isEn = lang === 'en';
       <div class="spores-weekly" id="spores-weekly"></div>
     </section>
 
+    <!-- Contribution Leaderboard — Top Contributors (2026-04-19 β) -->
+    <section class="section" id="contributors">
+      <h2 class="section-title">
+        {isEn ? '👥 Contribution Leaderboard' : '👥 貢獻者排行榜'}
+        <span class="section-timestamp" data-source="contributors"></span>
+      </h2>
+      <p class="section-subtitle">
+        {
+          isEn
+            ? 'Top 20 contributors by commits + primary area (content / system / translation)'
+            : '依 commits 數排序的前 20 位貢獻者，以及主要貢獻類型（內容 / 系統 / 翻譯）'
+        }
+      </p>
+
+      <div class="contributors-overview" id="contributors-overview"></div>
+
+      <h3 class="subsection-title">
+        {isEn ? '🏆 Top 20 Contributors' : '🏆 前 20 位貢獻者'}
+      </h3>
+      <div class="contributors-leaderboard" id="contributors-leaderboard"></div>
+
+      <h3 class="subsection-title">
+        {isEn ? '📊 By Primary Area' : '📊 依主要貢獻領域'}
+      </h3>
+      <div class="contributors-areas" id="contributors-areas"></div>
+
+      <h3 class="subsection-title">
+        {isEn ? '🌱 Recently Joined' : '🌱 最近加入'}
+      </h3>
+      <p class="section-subtitle" style="margin-top:-8px">
+        {
+          isEn
+            ? 'First-time contributors in the last 30 days'
+            : '過去 30 天第一次貢獻的小丑魚'
+        }
+      </p>
+      <div class="contributors-recent" id="contributors-recent"></div>
+    </section>
+
     <!-- Growth Timeline -->
     <section class="section" id="growth">
       <h2 class="section-title">
@@ -592,45 +631,62 @@ const isEn = lang === 'en';
     fetch('/api/dashboard-spores.json')
       .then((r) => r.json())
       .catch(() => null),
+    fetch('/api/contributors.json')
+      .then((r) => r.json())
+      .catch(() => null),
   ])
-    .then(([articles, vitals, organism, translations, analytics, spores]) => {
-      allArticles = articles;
-      // 各 section 資料更新時間（articles 共用 vitals.lastUpdated — 同批生成）
-      renderSectionTimestamps({
-        vitals: vitals && vitals.lastUpdated,
-        articles: vitals && vitals.lastUpdated,
-        organism: organism && organism.lastUpdated,
-        translations: translations && translations.lastUpdated,
-        analytics: analytics && analytics.lastUpdated,
-        spores: spores && spores.lastUpdated,
-      });
-      const steps = [
-        () => renderVitals(vitals),
-        () => renderActivityFeed(articles),
-        () => renderRegistry(articles),
-        () => renderHealthDistribution(articles),
-        () => renderOrganism(organism),
-        () => renderTranslations(translations, vitals),
-        () => renderImmune(articles, vitals),
-        () => {
-          if (spores) renderSpores(spores);
-        },
-        () => renderGrowth(articles),
-        () => renderContentAnalysis(articles),
-        () => {
-          if (analytics) renderAnalytics(analytics);
-        },
-        () => renderNextSteps(articles, translations),
-        () => renderFooter(vitals),
-      ];
-      steps.forEach((fn, i) => {
-        try {
-          fn();
-        } catch (e) {
-          console.error(`Dashboard render step ${i} failed:`, e);
-        }
-      });
-    })
+    .then(
+      ([
+        articles,
+        vitals,
+        organism,
+        translations,
+        analytics,
+        spores,
+        contributors,
+      ]) => {
+        allArticles = articles;
+        // 各 section 資料更新時間（articles 共用 vitals.lastUpdated — 同批生成）
+        renderSectionTimestamps({
+          vitals: vitals && vitals.lastUpdated,
+          articles: vitals && vitals.lastUpdated,
+          organism: organism && organism.lastUpdated,
+          translations: translations && translations.lastUpdated,
+          analytics: analytics && analytics.lastUpdated,
+          spores: spores && spores.lastUpdated,
+          contributors: contributors && contributors.lastUpdated,
+        });
+        const steps = [
+          () => renderVitals(vitals),
+          () => renderActivityFeed(articles),
+          () => renderRegistry(articles),
+          () => renderHealthDistribution(articles),
+          () => renderOrganism(organism),
+          () => renderTranslations(translations, vitals),
+          () => renderImmune(articles, vitals),
+          () => {
+            if (spores) renderSpores(spores);
+          },
+          () => {
+            if (contributors) renderContributors(contributors);
+          },
+          () => renderGrowth(articles),
+          () => renderContentAnalysis(articles),
+          () => {
+            if (analytics) renderAnalytics(analytics);
+          },
+          () => renderNextSteps(articles, translations),
+          () => renderFooter(vitals),
+        ];
+        steps.forEach((fn, i) => {
+          try {
+            fn();
+          } catch (e) {
+            console.error(`Dashboard render step ${i} failed:`, e);
+          }
+        });
+      },
+    )
     .catch((e) => console.error('Dashboard fetch failed:', e));
 
   // ── Number Roll-up Animation ──
@@ -1677,6 +1733,184 @@ const isEn = lang === 'en';
                 w.week.slice(-3) +
                 '</div>' +
                 '</div>'
+              );
+            })
+            .join('') +
+          '</div>';
+      }
+    }
+  }
+
+  // ── Contribution Leaderboard (2026-04-19 β) ──
+  function renderContributors(c) {
+    if (!c) return;
+
+    // Overview — 4 stat cards
+    const overview = document.getElementById('contributors-overview');
+    if (overview) {
+      overview.innerHTML =
+        '<div class="contributors-stats">' +
+        [
+          ['👥 ' + (isEn ? 'Total' : '總貢獻者'), c.totals.contributors],
+          ['🔥 ' + (isEn ? 'Weekly active' : '週活躍'), c.weeklyActive],
+          ['📅 ' + (isEn ? 'Monthly active' : '月活躍'), c.monthlyActive],
+          [
+            '🌱 ' + (isEn ? 'New (30d)' : '新人（30 天）'),
+            c.recentlyJoined.length,
+          ],
+        ]
+          .map(
+            ([l, v]) =>
+              '<div class="contributors-stat"><div class="contributors-stat-num">' +
+              v +
+              '</div><div class="contributors-stat-label">' +
+              l +
+              '</div></div>',
+          )
+          .join('') +
+        '</div>';
+    }
+
+    // Leaderboard — top 20 card grid
+    const board = document.getElementById('contributors-leaderboard');
+    if (board) {
+      const areaLabel = (a) => {
+        const labels = isEn
+          ? {
+              content: '📝 Content',
+              system: '⚙️ System',
+              translation: '🌐 Translation',
+              other: '• Other',
+            }
+          : {
+              content: '📝 內容',
+              system: '⚙️ 系統',
+              translation: '🌐 翻譯',
+              other: '• 其他',
+            };
+        return labels[a.primaryArea] || '—';
+      };
+      board.innerHTML =
+        '<ol class="contributors-board">' +
+        c.leaderboard
+          .map((a, i) => {
+            const rankBadge =
+              i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '#' + (i + 1);
+            return (
+              '<li class="contributors-row">' +
+              '<span class="contributors-rank">' +
+              rankBadge +
+              '</span>' +
+              '<a href="' +
+              a.profileUrl +
+              '" target="_blank" rel="noopener" class="contributors-person">' +
+              '<img src="' +
+              a.avatarUrl +
+              '" alt="' +
+              a.login +
+              '" class="contributors-avatar" loading="lazy" />' +
+              '<span class="contributors-login">' +
+              a.login +
+              '</span>' +
+              '</a>' +
+              '<span class="contributors-commits">' +
+              a.commits.toLocaleString() +
+              '<span class="contributors-unit"> ' +
+              (isEn ? 'commits' : '次') +
+              '</span></span>' +
+              '<span class="contributors-area contributors-area-' +
+              a.primaryArea +
+              '">' +
+              areaLabel(a) +
+              '</span>' +
+              '</li>'
+            );
+          })
+          .join('') +
+        '</ol>';
+    }
+
+    // Top by primary area (3 columns)
+    const areas = document.getElementById('contributors-areas');
+    if (areas) {
+      const col = (title, emoji, list) =>
+        '<div class="contributors-area-col">' +
+        '<h4>' +
+        emoji +
+        ' ' +
+        title +
+        '</h4>' +
+        (list.length > 0
+          ? '<ol class="contributors-area-list">' +
+            list
+              .map(
+                (a) =>
+                  '<li><a href="' +
+                  a.profileUrl +
+                  '" target="_blank" rel="noopener"><img src="' +
+                  a.avatarUrl +
+                  '" alt="" loading="lazy" /><span>' +
+                  a.login +
+                  '</span><span class="contributors-area-count">' +
+                  (a.breakdown
+                    ? a.breakdown[
+                        a.primaryArea === 'content'
+                          ? 'content'
+                          : a.primaryArea === 'system'
+                            ? 'system'
+                            : 'translation'
+                      ]
+                    : a.commits) +
+                  '</span></a></li>',
+              )
+              .join('') +
+            '</ol>'
+          : '<p class="contributors-empty">—</p>') +
+        '</div>';
+      areas.innerHTML =
+        '<div class="contributors-areas-grid">' +
+        col(isEn ? 'Content' : '內容', '📝', c.topContent) +
+        col(isEn ? 'System' : '系統', '⚙️', c.topSystem) +
+        col(isEn ? 'Translation' : '翻譯', '🌐', c.topTranslation) +
+        '</div>';
+    }
+
+    // Recently joined
+    const recent = document.getElementById('contributors-recent');
+    if (recent) {
+      if (c.recentlyJoined.length === 0) {
+        recent.innerHTML =
+          '<p class="contributors-empty">' +
+          (isEn
+            ? 'No new contributors in the last 30 days.'
+            : '過去 30 天沒有新貢獻者。') +
+          '</p>';
+      } else {
+        recent.innerHTML =
+          '<div class="contributors-recent-grid">' +
+          c.recentlyJoined
+            .map((a) => {
+              const dateStr = a.firstCommitAt
+                ? a.firstCommitAt.slice(0, 10)
+                : '—';
+              return (
+                '<a href="' +
+                a.profileUrl +
+                '" target="_blank" rel="noopener" class="contributors-recent-card">' +
+                '<img src="' +
+                a.avatarUrl +
+                '" alt="' +
+                a.login +
+                '" loading="lazy" />' +
+                '<div class="contributors-recent-meta">' +
+                '<div class="contributors-recent-login">' +
+                a.login +
+                '</div>' +
+                '<div class="contributors-recent-date">' +
+                (isEn ? 'Joined ' : '加入於 ') +
+                dateStr +
+                '</div>' +
+                '</div></a>'
               );
             })
             .join('') +
@@ -4405,6 +4639,232 @@ const isEn = lang === 'en';
     }
     .ga-page-name {
       font-size: 0.78rem;
+    }
+  }
+
+  /* ── Contribution Leaderboard (2026-04-19 β) ── */
+  .contributors-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .contributors-stat {
+    background: var(--bg-subtle, #f8f6f0);
+    border: 1px solid var(--border-subtle, #e5e0d0);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    text-align: center;
+  }
+  .contributors-stat-num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary, #2a2a2a);
+    font-variant-numeric: tabular-nums;
+  }
+  .contributors-stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted, #666);
+    margin-top: 0.2rem;
+  }
+  .contributors-board {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+  }
+  .contributors-row {
+    display: grid;
+    grid-template-columns: 48px 1fr 110px 110px;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--border-subtle, #eee);
+    transition: background 0.2s;
+  }
+  .contributors-row:hover {
+    background: var(--bg-hover, #faf8f2);
+  }
+  .contributors-rank {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted, #888);
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+  }
+  .contributors-person {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: inherit;
+    min-width: 0;
+  }
+  .contributors-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+  .contributors-login {
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .contributors-commits {
+    text-align: right;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-primary, #2a2a2a);
+  }
+  .contributors-unit {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--text-muted, #999);
+  }
+  .contributors-area {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 8px;
+    text-align: center;
+    background: #eee;
+    color: #555;
+    white-space: nowrap;
+  }
+  .contributors-area-content {
+    background: #fef3e0;
+    color: #b86e00;
+  }
+  .contributors-area-system {
+    background: #e8efff;
+    color: #2555b8;
+  }
+  .contributors-area-translation {
+    background: #e8f7ed;
+    color: #277a3f;
+  }
+  .contributors-area-other {
+    background: #f0eeea;
+    color: #7a7a7a;
+  }
+  .contributors-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .contributors-area-col {
+    background: var(--bg-subtle, #faf8f2);
+    border: 1px solid var(--border-subtle, #e5e0d0);
+    border-radius: 10px;
+    padding: 0.9rem;
+  }
+  .contributors-area-col h4 {
+    font-size: 0.9rem;
+    margin: 0 0 0.7rem;
+    color: var(--text-primary, #2a2a2a);
+  }
+  .contributors-area-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .contributors-area-list li {
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--border-subtle, #eee);
+  }
+  .contributors-area-list li:last-child {
+    border-bottom: none;
+  }
+  .contributors-area-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.86rem;
+  }
+  .contributors-area-list img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+  }
+  .contributors-area-list span:first-of-type {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .contributors-area-count {
+    color: var(--text-muted, #888);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.78rem;
+  }
+  .contributors-empty {
+    color: var(--text-muted, #999);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .contributors-recent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .contributors-recent-card {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    background: var(--bg-subtle, #faf8f2);
+    border: 1px solid var(--border-subtle, #e5e0d0);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s;
+  }
+  .contributors-recent-card:hover {
+    transform: translateY(-2px);
+  }
+  .contributors-recent-card img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+  .contributors-recent-meta {
+    min-width: 0;
+    flex: 1;
+  }
+  .contributors-recent-login {
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .contributors-recent-date {
+    font-size: 0.72rem;
+    color: var(--text-muted, #888);
+  }
+  @media (max-width: 640px) {
+    .contributors-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .contributors-row {
+      grid-template-columns: 36px 1fr 85px;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+    .contributors-area {
+      display: none;
+    }
+    .contributors-commits {
+      font-size: 0.85rem;
+    }
+    .contributors-areas-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
