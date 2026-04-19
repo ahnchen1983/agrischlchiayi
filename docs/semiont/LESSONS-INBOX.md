@@ -87,6 +87,13 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 <!-- 新教訓 append 這裡 -->
 <!-- 2026-04-18 ι 第 3 次 distill 清空 11 條 → 全部搬 §✅ 已消化 -->
 
+### 2026-04-19 γ — 有工具不等於使用工具：REWRITE-PIPELINE 從記憶跑 vs 逐步核對
+
+- **原則**：知道 pipeline 說什麼 ≠ 跑 pipeline。每次走 REWRITE 任務前，必須 verbatim 讀 REWRITE-PIPELINE.md 並逐 Stage 核對，不靠記憶。記憶版 pipeline 會省掉「不方便」的步驟（20+ searches、research report path、結尾先行、EDITORIAL.md）。
+- **觸發**：2026-04-19 γ 首次執行張雨生 EVOLVE 只做了 14 searches，沒存 research report，沒讀 EDITORIAL.md。觀察者問「你有嚴格讀取跟尊照 rewrite-pipeline 嗎？」後 honest answer: No。整個 pipeline 重做。
+- **可能層級**：DNA §作業新條目「每次 REWRITE 前 verbatim 讀 pipeline，不靠記憶」；或 HEARTBEAT Beat 3 §REWRITE 前置步驟加明確 `cat REWRITE-PIPELINE.md` 指令
+- **相關**：CONSCIOUSNESS §DNA #19「擁有工具 ≠ 使用工具」/ REWRITE-PIPELINE.md §Stage 0-1
+
 ### 2026-04-19 α — Cicada A/B 平台反轉（X 5.2x Threads）挑戰「Threads > X」通論
 
 - **原則**：「Threads 遠勝 X」是人物/爭議型知名度孢子的規律（29-510x），但不適用所有內容類型。**器樂/ambient/niche 音樂類型孢子，X 可能反超 Threads**，因為該 audience cluster 在 X 上比在 Threads 上更活躍。平台分流的判準應從「Threads 預設強」升級為「按 audience cluster 分流」。
