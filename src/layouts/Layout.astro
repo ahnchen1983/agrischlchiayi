@@ -512,11 +512,22 @@ const jfClass = [
               return r.score >= cutoff;
             })
             .slice(0, 30);
-          // Sort: current language first
+
+          // Enhanced ranking: consider language, field match, and relevance
           matches.sort(function (a, b) {
+            // 1. Language preference (current language first)
             var aLang = a.lang === lang ? 0 : 1;
             var bLang = b.lang === lang ? 0 : 1;
-            return aLang - bLang;
+            if (aLang !== bLang) return aLang - bLang;
+
+            // 2. Score-based ranking (higher is better)
+            // Apply slightly stronger boost for title matches
+            var aScore = a.score * (a.field === 'title_bigram' ? 1.2 : 1);
+            var bScore = b.score * (b.field === 'title_bigram' ? 1.2 : 1);
+            if (Math.abs(aScore - bScore) > 0.01) return bScore - aScore;
+
+            // 3. Fallback: document order (earlier articles are more stable)
+            return a.id - b.id;
           });
           return matches;
         }
@@ -532,8 +543,19 @@ const jfClass = [
             })
           );
         });
+
+        // Enhanced fallback ranking
         matches.sort(function (a, b) {
-          return (a.lang === lang ? 0 : 1) - (b.lang === lang ? 0 : 1);
+          var aLang = a.lang === lang ? 0 : 1;
+          var bLang = b.lang === lang ? 0 : 1;
+          if (aLang !== bLang) return aLang - bLang;
+
+          // Prefer title matches over description matches
+          var aInTitle = a.t.toLowerCase().indexOf(lq) !== -1 ? 0 : 1;
+          var bInTitle = b.t.toLowerCase().indexOf(lq) !== -1 ? 0 : 1;
+          if (aInTitle !== bInTitle) return aInTitle - bInTitle;
+
+          return 0;
         });
         return matches;
       }
@@ -558,6 +580,32 @@ const jfClass = [
         );
       }
 
+      function _getPopularTerms(lang) {
+        // Extract popular search terms from the search index
+        // These are common agricultural terms that should appear in the index
+        var commonTerms = {
+          'zh-TW': [
+            '小黃瓜', '設施農業', '有機農業', '農場財務',
+            '智慧農業', 'IoT', '灌溉', '病蟲害防治',
+            '作物', '肥料', '市場', '銷售',
+            '氣候', '土壤', '種植', '農民'
+          ],
+          'en': [
+            'farming', 'agriculture', 'crop', 'organic',
+            'soil', 'water', 'irrigation', 'technology',
+            'market', 'climate', 'yield', 'sustainability'
+          ]
+        };
+        return commonTerms[lang] || commonTerms['zh-TW'];
+      }
+
+      function _renderAutocompleteItem(term) {
+        return '<div class="search-autocomplete-item">' +
+          '<span class="search-autocomplete-icon">🔍</span>' +
+          '<span class="search-autocomplete-term">' + term + '</span>' +
+          '</div>';
+      }
+
       function initSearch() {
         var isEn = document.documentElement.lang === 'en';
         var lang = isEn ? 'en' : 'zh-TW';
@@ -569,14 +617,20 @@ const jfClass = [
           ? 'Type to search across all articles'
           : '輸入關鍵字搜尋所有文章';
         var hintNone = isEn ? 'No results found' : '找不到相關文章';
+        var popularTerms = _getPopularTerms(lang);
 
         _initSearchEngine();
 
         input.addEventListener('input', function () {
           var q = this.value.trim();
           if (!q) {
-            results.innerHTML =
-              '<div class="search-hint">' + hintEmpty + '</div>';
+            // Show popular terms as autocomplete suggestions
+            var popularHtml = '<div class="search-autocomplete-list">' +
+              '<div class="search-autocomplete-label">' +
+              (isEn ? 'Popular searches:' : '熱門搜尋:') + '</div>' +
+              popularTerms.slice(0, 8).map(_renderAutocompleteItem).join('') +
+              '</div>';
+            results.innerHTML = popularHtml;
             return;
           }
           // Single-char queries are handled by prefix match
@@ -603,6 +657,16 @@ const jfClass = [
               '</div>';
           }
           results.innerHTML = html;
+        });
+
+        // Add click handlers for autocomplete suggestions
+        results.addEventListener('click', function (e) {
+          var item = e.target.closest('.search-autocomplete-item');
+          if (item) {
+            var term = item.querySelector('.search-autocomplete-term').textContent;
+            input.value = term;
+            input.dispatchEvent(new Event('input'));
+          }
         });
 
         document.addEventListener('keydown', function (e) {

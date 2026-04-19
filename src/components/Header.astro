@@ -1079,6 +1079,42 @@ const categoryList = [
     white-space: nowrap;
   }
 
+  /* Autocomplete styles */
+  :global(.search-autocomplete-list) {
+    padding: 0.75rem;
+  }
+  :global(.search-autocomplete-label) {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    margin-bottom: 0.35rem;
+  }
+  :global(.search-autocomplete-item) {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+  }
+  :global(.search-autocomplete-item:hover) {
+    background: #f1f5f9;
+  }
+  :global(.search-autocomplete-icon) {
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+  :global(.search-autocomplete-term) {
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 500;
+  }
+
   /* =============================================
      MEDIUM TIGHTEN (≤1200px)
   ============================================= */
