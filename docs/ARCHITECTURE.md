@@ -102,27 +102,45 @@ graph TD
 
 ```mermaid
 graph TD
-    A[knowledge/ 內容] --> B[scripts/core/search-index.py]
+    A[knowledge/ 內容] --> B[scripts/core/build-search-index.mjs]
     B --> C[解析 Markdown + frontmatter]
-    B --> D[提取關鍵字與摘要]
-    C --> E[生成 search.json]
-    D --> E
-    E --> F[public/api/search.json]
-    F --> G[前端搜尋功能]
+    B --> D[提取標題、描述、標籤]
+    B --> E[CJK 分詞（Bigram tokenization）]
+    C --> F[MiniSearch 序列化]
+    D --> F
+    E --> F
+    F --> G[public/api/search-minisearch.json]
+    F --> H[public/api/search-index.json 備用索引]
+    G --> I[前端 MiniSearch 引擎<br/>含 boost 加權]
+    H --> J[降級方案：indexOf 搜尋]
 ```
+
+#### 搜尋系統架構
+- **主索引**：MiniSearch（支援 CJK bigram）
+  - 字段：title_bigram (boost: 6)、desc_bigram (boost: 4)、tags_bigram (boost: 2)
+  - 前綴匹配、模糊搜尋、多語言支援
+- **備用索引**：簡易 indexOf（無網路或 MiniSearch 失敗時）
+- **語言優先排序**：當前頁面語言優先顯示
 
 ### 5.3 圖譜生成流程
 
 ```mermaid
 graph TD
-    A[knowledge/ 目錄結構] --> B[scripts/core/graph-data.py]
-    B --> C[解析 wikilinks 與分類]
-    B --> D[生成節點與邊資料]
-    C --> E[graph.json 輸出]
+    A[knowledge/ 文章] --> B[src/pages/graph.astro]
+    B --> C[掃描 frontmatter<br/>title, tags, crop, tech]
+    B --> D[掃描 Wikilinks<br/>[[Article Title]]語法]
+    C --> E[組建圖節點<br/>category+slug id]
     D --> E
-    E --> F[src/pages/graph.astro]
-    F --> G[D3.js 視覺化渲染]
+    E --> F[組建圖邊<br/>tag/topic 連接]
+    F --> G[D3.js force-directed graph]
+    G --> H[互動式知識圖譜頁面<br/>點擊、懸停、拖動]
 ```
+
+#### 知識圖譜架構
+- **節點類型**：中心節點、文章節點、特殊節點（About 等）
+- **邊連接方式**：共享標籤、共享作物類型、共享技術標籤
+- **視覺化**：D3.js force-directed，按分類著色
+- **交互**：點擊跳轉、懸停顯示標題、拖動重排
 
 ## 6. 各 Component / Template 職責與 API
 
@@ -239,7 +257,49 @@ jobs:
 - [ ] RSS feed 更新
 - [ ] 404 頁面正常
 
-## 9. 已知陷阱與解決方案
+## 9. 架構設計決策與原因
+
+### 9.1 為什麼選擇 MiniSearch 而非傳統搜尋引擎？
+
+**決策**：客戶端 MiniSearch library（而非伺服器 Elasticsearch 或 Algolia）
+
+**原因**：
+- 靜態網站無伺服器，GitHub Pages 只支援純靜態
+- MiniSearch 體積小（~30KB gzipped），無額外依賴
+- 支援 CJK bigram 分詞，適合中文農業術語
+- JSON 序列化格式，易於版本控制與持續更新
+
+### 9.2 為什麼採用 SSOT (Single Source of Truth) 架構？
+
+**決策**：`knowledge/` 作為唯一源，通過 sync.sh 投影到 `src/content/zh-TW/`
+
+**原因**：
+- Markdown 文件易於版本控制、易於協作
+- 生成的 `src/content/` 為暫時投影層，不提交 git
+- 變更流向清晰：編輯 → knowledge/ → sync → src/content/ → build → dist
+- 防止內容分散或「幽靈版本」
+
+### 9.3 為什麼使用 D3.js Force-Directed Graph？
+
+**決策**：D3.js 而非其他圖譜庫（如 vis.js 或 Cytoscape）
+
+**原因**：
+- 完全可控的視覺化，支援無限自訂
+- 與 Astro 相容性強（client:load 指令）
+- 適合中等規模圖（40-100 節點），效能足夠
+- 學習曲線相對友善，生態豐富
+
+### 9.4 為什麼 frontmatter 統一管理，而非分散？
+
+**決策**：標準化 frontmatter schema（title, description, tags, level, crop, tech, status）
+
+**原因**：
+- 便於內容檢索、分類、圖譜生成
+- 支援多維度濾篩（按作物、按技術、按難度）
+- 易於 SEO 與 Open Graph 自動化
+- 新貢獻者有清晰的編輯規範
+
+## 10. 已知陷阱與解決方案
 
 ### 9.1 BASE_URL 處理
 
@@ -282,18 +342,39 @@ npx lint-staged
 - 自訂 remark 插件 `plugins/remark-wikilinks.mjs`
 - 統一解析邏輯在 `src/lib/utils/wikilinks.ts`
 
-## 10. 近期優先事項
+## 11. 架構演進方向（2026Q2-Q3）
 
-1. 持續把 `Taiwan.md` 遺留文案收斂為「嘉義國本學堂」
-2. 補齊農業專屬 About / Contribute 內容
-3. 擴充 `knowledge/` 條目、索引頁與來源品質
-4. 規範多語系與 SEO 策略
-5. 整合農民耕作資料到系統
+### 短期（4 週內）
+- 搜尋結果排序優化：按相關性、按分類、按新鮮度
+- 搜尋自動補全：熱門農業術語提示
+- 知識圖譜交互增強：click-to-navigate、focus 高亮、統計資訊
 
-## 11. 成功標準
+### 中期（8 週內）
+- 多語系支援深化：英文農業內容補全、i18n SEO 最佳化
+- 農民耕作資料整合：批量去識別化案例導入
+- 推薦引擎初步版本：基於使用者瀏覽歷史的相關文章推薦
 
-- 使用者能透過首頁、分類頁與圖譜快速找到農業知識
-- `knowledge/` 與網站輸出保持一致，不產生幽靈內容
-- GitHub Pages 子路徑部署下，所有內部連結與資產都正常
+### 長期（6 個月）
+- 全文搜尋與NLP：農業專屬詞彙向量化、語義搜尋
+- 社群化功能：用戶評論、案例討論、經驗分享
+- 移動應用考慮：Electron/Capacitor 離線版本
+
+## 12. 成功標準
+
+### 內容層面
+- 使用者能透過首頁、分類頁、搜尋與圖譜快速找到農業知識
+- `knowledge/` 與網站輸出完全同步，不產生幽靈內容
 - 新貢獻者能依 `README` 與 `CONTRIBUTING.md` 直接參與
-- 建置流程穩定，可重現，無手動介入需求
+
+### 技術層面
+- GitHub Pages 子路徑部署下，所有內部連結與資產都正常
+- 搜尋索引完整包含 100+ 文章，查詢回應 <100ms
+- 知識圖譜支援 50+ 節點的互動式操作
+- 建置流程穩定、可重現、無手動介入需求
+- 所有 assets 預算在 2MB 以內（gzip）
+
+### 用戶體驗層面
+- 首頁加載 <2s（3G 網路），搜尋結果 <0.5s 出現
+- 圖譜交互流暢，懸停 <50ms 顯示節點資訊
+- 移動設備適配，響應式設計完整
+- 無障礙訪問達到 WCAG 2.1 AA 標準
