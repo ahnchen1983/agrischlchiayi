@@ -34,21 +34,21 @@ export const heroCategories: HeroCategory[] = [
         descKey: 'resources.featured.moa',
       },
       {
-        nameKey: 'resources.site.cyhg',
-        url: 'https://www.cyhg.gov.tw/',
+        nameKey: 'resources.site.cyhg.agri',
+        url: 'https://agriculture.cyhg.gov.tw/',
         domain: 'cyhg.gov.tw',
         featured: true,
         descKey: 'resources.featured.cyhg',
       },
       {
-        nameKey: 'resources.site.trit',
-        url: 'https://www.trit.gov.tw/',
-        domain: 'trit.gov.tw',
+        nameKey: 'resources.site.tari',
+        url: 'https://www.tari.gov.tw/',
+        domain: 'tari.gov.tw',
       },
       {
-        nameKey: 'resources.site.swcb',
-        url: 'https://www.swcb.gov.tw/',
-        domain: 'swcb.gov.tw',
+        nameKey: 'resources.site.ardswc',
+        url: 'https://www.ardswc.gov.tw/',
+        domain: 'ardswc.gov.tw',
       },
       {
         nameKey: 'resources.site.fa',
@@ -65,26 +65,26 @@ export const heroCategories: HeroCategory[] = [
     color: '#059669', // Standard green
     sites: [
       {
-        nameKey: 'resources.site.tais',
-        url: 'https://www.tais.gov.tw/',
-        domain: 'tais.gov.tw',
+        nameKey: 'resources.site.tari',
+        url: 'https://www.tari.gov.tw/',
+        domain: 'tari.gov.tw',
         featured: true,
         descKey: 'resources.featured.tais',
       },
       {
         nameKey: 'resources.site.afrec',
-        url: 'https://www.afrec.gov.tw/',
-        domain: 'afrec.gov.tw',
+        url: 'https://www.tndais.gov.tw/',
+        domain: 'tndais.gov.tw',
       },
       {
-        nameKey: 'resources.site.ttsdcc',
+        nameKey: 'resources.site.stri',
         url: 'https://www.ttsdcc.org.tw/',
         domain: 'ttsdcc.org.tw',
       },
       {
-        nameKey: 'resources.site.isia',
-        url: 'https://www.isia.org.tw/',
-        domain: 'isia.org.tw',
+        nameKey: 'resources.site.atri',
+        url: 'https://www.atri.org.tw/',
+        domain: 'atri.org.tw',
       },
       {
         nameKey: 'resources.site.tesd',
@@ -99,9 +99,9 @@ export const heroCategories: HeroCategory[] = [
     color: '#10b981', // Light green
     sites: [
       {
-        nameKey: 'resources.site.coa.market',
-        url: 'https://www.coa.gov.tw/ws.php?id=2449',
-        domain: 'coa.gov.tw',
+        nameKey: 'resources.site.moa.market',
+        url: 'https://www.moa.gov.tw/ws.php?id=2449',
+        domain: 'moa.gov.tw',
         featured: true,
         descKey: 'resources.featured.coa.market',
       },
@@ -140,9 +140,9 @@ export const heroCategories: HeroCategory[] = [
         descKey: 'resources.featured.acgf',
       },
       {
-        nameKey: 'resources.site.coa.subsidy',
-        url: 'https://www.coa.gov.tw/theme_list.php?theme=subsidy',
-        domain: 'coa.gov.tw',
+        nameKey: 'resources.site.moa.subsidy',
+        url: 'https://www.moa.gov.tw/theme_list.php?theme=subsidy',
+        domain: 'moa.gov.tw',
       },
       {
         nameKey: 'resources.site.tai',
@@ -168,15 +168,15 @@ export const heroCategories: HeroCategory[] = [
     sites: [
       {
         nameKey: 'resources.site.swcb.water',
-        url: 'https://www.swcb.gov.tw/',
-        domain: 'swcb.gov.tw',
+        url: 'https://swcb.moenv.gov.tw/',
+        domain: 'swcb.moenv.gov.tw',
         featured: true,
         descKey: 'resources.featured.swcb.water',
       },
       {
-        nameKey: 'resources.site.coa.organic',
-        url: 'https://www.coa.gov.tw/ws.php?id=2461',
-        domain: 'coa.gov.tw',
+        nameKey: 'resources.site.moa.organic',
+        url: 'https://www.moa.gov.tw/ws.php?id=2461',
+        domain: 'moa.gov.tw',
       },
       {
         nameKey: 'resources.site.moenv',
@@ -224,29 +224,29 @@ export const agriGovernanceCentral: ResourceSite[] = [
     domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.trit',
-    url: 'https://www.trit.gov.tw/',
-    domain: 'trit.gov.tw',
+    nameKey: 'resources.site.tari',
+    url: 'https://www.tari.gov.tw/',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.trit.crops',
-    url: 'https://www.trit.gov.tw/ws.php?id=1142',
-    domain: 'trit.gov.tw',
+    nameKey: 'resources.site.tari.crops',
+    url: 'https://www.tari.gov.tw/ws.php?id=1142',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.trit.livestock',
-    url: 'https://www.trit.gov.tw/ws.php?id=1143',
-    domain: 'trit.gov.tw',
+    nameKey: 'resources.site.tari.livestock',
+    url: 'https://www.tari.gov.tw/ws.php?id=1143',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.trit.fisheries',
-    url: 'https://www.trit.gov.tw/ws.php?id=1144',
-    domain: 'trit.gov.tw',
+    nameKey: 'resources.site.tari.fisheries',
+    url: 'https://www.tari.gov.tw/ws.php?id=1144',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.trit.forestry',
-    url: 'https://www.trit.gov.tw/ws.php?id=1145',
-    domain: 'trit.gov.tw',
+    nameKey: 'resources.site.tari.forestry',
+    url: 'https://www.tari.gov.tw/ws.php?id=1145',
+    domain: 'tari.gov.tw',
   },
   {
     nameKey: 'resources.site.fa',
@@ -256,9 +256,9 @@ export const agriGovernanceCentral: ResourceSite[] = [
     descKey: 'resources.featured.fa',
   },
   {
-    nameKey: 'resources.site.swcb',
-    url: 'https://www.swcb.gov.tw/',
-    domain: 'swcb.gov.tw',
+    nameKey: 'resources.site.ardswc',
+    url: 'https://www.ardswc.gov.tw/',
+    domain: 'ardswc.gov.tw',
   },
   {
     nameKey: 'resources.site.afpa',
@@ -280,36 +280,26 @@ export const agriGovernanceCentral: ResourceSite[] = [
 // Subcategory 1.2: 地方農業單位 (Local Agricultural Units) - Focused on Chiayi
 export const agriGovernanceLocal: ResourceSite[] = [
   {
-    nameKey: 'resources.site.cyhg',
-    url: 'https://www.cyhg.gov.tw/',
+    nameKey: 'resources.site.cyhg.agri',
+    url: 'https://agriculture.cyhg.gov.tw/',
     domain: 'cyhg.gov.tw',
     featured: true,
     descKey: 'resources.featured.cyhg',
   },
   {
-    nameKey: 'resources.site.cyhg.agri',
-    url: 'https://www.cyhg.gov.tw/cp.aspx?n=5566',
+    nameKey: 'resources.site.cyhg.agri.subsidy',
+    url: 'https://agriculture.cyhg.gov.tw/News.aspx?n=86&sms=9134',
     domain: 'cyhg.gov.tw',
   },
   {
-    nameKey: 'resources.site.chiayicity',
-    url: 'https://www.chiayi.gov.tw/',
-    domain: 'chiayi.gov.tw',
-  },
-  {
     nameKey: 'resources.site.chiayicity.agri',
-    url: 'https://www.chiayi.gov.tw/cp.aspx?n=4932',
+    url: 'https://economic.chiayi.gov.tw/',
     domain: 'chiayi.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.ttsdcc',
-    url: 'https://www.ttsdcc.org.tw/',
-    domain: 'ttsdcc.org.tw',
   },
   {
     nameKey: 'resources.site.ttsdcc.chiayi',
-    url: 'https://chiayi.ttsdcc.org.tw/',
-    domain: 'ttsdcc.org.tw',
+    url: 'https://www.tndais.gov.tw/index_chiayi_branch.php',
+    domain: 'tndais.gov.tw',
   },
   {
     nameKey: 'resources.site.tainan.agri',
@@ -346,24 +336,14 @@ export const agriGovernanceLocal: ResourceSite[] = [
 // Subcategory 1.3: 農業法規與政策 (Agricultural Regulations & Policies)
 export const agriGovernancePolicy: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.law',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=law',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.law',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=law',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.lawdb.agri',
-    url: 'https://law.moj.gov.tw/News/NewsList.aspx?pcode=M0020001',
-    domain: 'law.moj.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moj.agri',
-    url: 'https://www.moj.gov.tw/',
-    domain: 'moj.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.coa.land',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=land',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.land',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=land',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.nladb',
@@ -377,41 +357,41 @@ export const agriGovernancePolicy: ResourceSite[] = [
 // Subcategory 2.1: 農業試驗研究機構 (Agricultural Research Institutions)
 export const agriTechResearch: ResourceSite[] = [
   {
-    nameKey: 'resources.site.tais',
-    url: 'https://www.tais.gov.tw/',
-    domain: 'tais.gov.tw',
+    nameKey: 'resources.site.tari',
+    url: 'https://www.tari.gov.tw/',
+    domain: 'tari.gov.tw',
     featured: true,
     descKey: 'resources.featured.tais',
   },
   {
-    nameKey: 'resources.site.tais.crops',
-    url: 'https://www.tais.gov.tw/ws.php?id=1',
-    domain: 'tais.gov.tw',
+    nameKey: 'resources.site.tari.crops',
+    url: 'https://www.tari.gov.tw/ws.php?id=1',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.tais.livestock',
-    url: 'https://www.tais.gov.tw/ws.php?id=2',
-    domain: 'tais.gov.tw',
+    nameKey: 'resources.site.tari.livestock',
+    url: 'https://www.tari.gov.tw/ws.php?id=2',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.tais.fisheries',
-    url: 'https://www.tais.gov.tw/ws.php?id=3',
-    domain: 'tais.gov.tw',
+    nameKey: 'resources.site.tari.fisheries',
+    url: 'https://www.tari.gov.tw/ws.php?id=3',
+    domain: 'tari.gov.tw',
   },
   {
     nameKey: 'resources.site.afrec',
-    url: 'https://www.afrec.gov.tw/',
-    domain: 'afrec.gov.tw',
+    url: 'https://www.tndais.gov.tw/',
+    domain: 'tndais.gov.tw',
   },
   {
     nameKey: 'resources.site.afrec.tainan',
-    url: 'https://tainan.afrec.gov.tw/',
-    domain: 'afrec.gov.tw',
+    url: 'https://www.tndais.gov.tw/',
+    domain: 'tndais.gov.tw',
   },
   {
     nameKey: 'resources.site.afrec.chiayi',
-    url: 'https://chiayi.afrec.gov.tw/',
-    domain: 'afrec.gov.tw',
+    url: 'https://www.tndais.gov.tw/index_chiayi_branch.php',
+    domain: 'tndais.gov.tw',
   },
   {
     nameKey: 'resources.site.afrec.taichung',
@@ -468,9 +448,9 @@ export const agriTechInnovation: ResourceSite[] = [
     domain: 'tesd.survey.sinica.edu.tw',
   },
   {
-    nameKey: 'resources.site.coa.smartagri',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=smartfarm',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.smartagri',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=smartfarm',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.nstc',
@@ -492,14 +472,14 @@ export const agriTechInnovation: ResourceSite[] = [
 // Subcategory 2.3: 農業推廣與教育 (Agricultural Extension & Education)
 export const agriTechExtension: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.extension',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=extension',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.extension',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=extension',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.ttsdcc.chiayi.ext',
-    url: 'https://chiayi.ttsdcc.org.tw/education',
-    domain: 'ttsdcc.org.tw',
+    url: 'https://www.tndais.gov.tw/index_chiayi_branch.php',
+    domain: 'tndais.gov.tw',
   },
   {
     nameKey: 'resources.site.coa.nagu',
@@ -528,16 +508,16 @@ export const agriTechExtension: ResourceSite[] = [
 // Subcategory 3.1: 線上銷售平台 (Online Sales Platforms)
 export const agriMarketingOnline: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.market',
-    url: 'https://www.coa.gov.tw/ws.php?id=2449',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.market',
+    url: 'https://www.moa.gov.tw/ws.php?id=2449',
+    domain: 'moa.gov.tw',
     featured: true,
     descKey: 'resources.featured.coa.market',
   },
   {
-    nameKey: 'resources.site.coa.trade',
-    url: 'https://trade.coa.gov.tw/',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.trade',
+    url: 'https://trade.moa.gov.tw/',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.shopee',
@@ -594,9 +574,9 @@ export const agriMarketingOnline: ResourceSite[] = [
 // Subcategory 3.2: 直銷與市集 (Direct Sales & Markets)
 export const agriMarketingDirect: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.market.direct',
-    url: 'https://www.coa.gov.tw/ws.php?id=2453',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.market.direct',
+    url: 'https://www.moa.gov.tw/ws.php?id=2453',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.ttsdcc.market',
@@ -604,9 +584,9 @@ export const agriMarketingDirect: ResourceSite[] = [
     domain: 'ttsdcc.org.tw',
   },
   {
-    nameKey: 'resources.site.coa.farmers.market',
-    url: 'https://market.coa.gov.tw/',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.farmers.market',
+    url: 'https://market.moa.gov.tw/',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.huashan.market',
@@ -619,9 +599,9 @@ export const agriMarketingDirect: ResourceSite[] = [
     domain: 'ccw.org.tw',
   },
   {
-    nameKey: 'resources.site.coa.organic.market',
-    url: 'https://www.coa.gov.tw/ws.php?id=2465',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.organic.market',
+    url: 'https://www.moa.gov.tw/ws.php?id=2465',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.csf',
@@ -633,29 +613,29 @@ export const agriMarketingDirect: ResourceSite[] = [
 // Subcategory 3.3: 認證與品牌建立 (Certification & Branding)
 export const agriMarketingCertification: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.organic',
-    url: 'https://www.coa.gov.tw/ws.php?id=2461',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.organic',
+    url: 'https://www.moa.gov.tw/ws.php?id=2461',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.gis',
-    url: 'https://www.coa.gov.tw/ws.php?id=2462',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.gis',
+    url: 'https://www.moa.gov.tw/ws.php?id=2462',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.traceability',
-    url: 'https://www.coa.gov.tw/ws.php?id=2466',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.traceability',
+    url: 'https://www.moa.gov.tw/ws.php?id=2466',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.fsq',
-    url: 'https://www.coa.gov.tw/ws.php?id=2467',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.fsq',
+    url: 'https://www.moa.gov.tw/ws.php?id=2467',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.good.agricultural',
-    url: 'https://www.coa.gov.tw/ws.php?id=2468',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.good.agricultural',
+    url: 'https://www.moa.gov.tw/ws.php?id=2468',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.ttasia',
@@ -686,9 +666,9 @@ export const agriFinanceChannels: ResourceSite[] = [
     descKey: 'resources.featured.acgf',
   },
   {
-    nameKey: 'resources.site.coa.finance',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=finance',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.finance',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=finance',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.boafroc',
@@ -696,9 +676,9 @@ export const agriFinanceChannels: ResourceSite[] = [
     domain: 'boafroc.org.tw',
   },
   {
-    nameKey: 'resources.site.coa.farmland',
-    url: 'https://www.coa.gov.tw/ws.php?id=2471',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.farmland',
+    url: 'https://www.moa.gov.tw/ws.php?id=2471',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.fsc',
@@ -725,14 +705,14 @@ export const agriFinanceChannels: ResourceSite[] = [
 // Subcategory 4.2: 政府補助計畫 (Government Subsidy Programs)
 export const agriFinanceSubsidy: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.subsidy',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=subsidy',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.subsidy',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=subsidy',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.subsidy.direct',
-    url: 'https://subsidy.coa.gov.tw/',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.subsidy.direct',
+    url: 'https://subsidy.moa.gov.tw/',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.cyhg.subsidy',
@@ -769,9 +749,9 @@ export const agriFinanceInsurance: ResourceSite[] = [
     domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.insurance',
-    url: 'https://www.coa.gov.tw/ws.php?id=2474',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.insurance',
+    url: 'https://www.moa.gov.tw/ws.php?id=2474',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.tai',
@@ -800,16 +780,11 @@ export const agriFinanceInsurance: ResourceSite[] = [
 // Subcategory 5.1: 水資源管理 (Water Resource Management)
 export const agriSustainabilityWater: ResourceSite[] = [
   {
-    nameKey: 'resources.site.swcb.water',
-    url: 'https://www.swcb.gov.tw/',
-    domain: 'swcb.gov.tw',
+    nameKey: 'resources.site.ardswc.water',
+    url: 'https://www.ardswc.gov.tw/',
+    domain: 'ardswc.gov.tw',
     featured: true,
     descKey: 'resources.featured.swcb.water',
-  },
-  {
-    nameKey: 'resources.site.swcb.chiayi',
-    url: 'https://chiayi.swcb.gov.tw/',
-    domain: 'swcb.gov.tw',
   },
   {
     nameKey: 'resources.site.wra',
@@ -817,38 +792,28 @@ export const agriSustainabilityWater: ResourceSite[] = [
     domain: 'wra.gov.tw',
   },
   {
-    nameKey: 'resources.site.wra.chiayi',
-    url: 'https://chiayi.wra.gov.tw/',
-    domain: 'wra.gov.tw',
+    nameKey: 'resources.site.ia',
+    url: 'https://www.ia.gov.tw/',
+    domain: 'ia.gov.tw',
   },
   {
-    nameKey: 'resources.site.itri.water',
-    url: 'https://www.itri.org.tw/chi/Services/Service01/Service0103.aspx',
-    domain: 'itri.org.tw',
-  },
-  {
-    nameKey: 'resources.site.coa.water',
-    url: 'https://www.coa.gov.tw/ws.php?id=2476',
-    domain: 'coa.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moenv.water',
-    url: 'https://www.moenv.gov.tw/Page/8081DE39812DD5A7/8e0ff38b-eade-4c0a-87c8-5fb1c2c0e84e',
-    domain: 'moenv.gov.tw',
+    nameKey: 'resources.site.moa.water',
+    url: 'https://www.moa.gov.tw/ws.php?id=2476',
+    domain: 'moa.gov.tw',
   },
 ];
 
 // Subcategory 5.2: 友善農業與認證 (Sustainable Farming & Certification)
 export const agriSustainabilityOrganic: ResourceSite[] = [
   {
-    nameKey: 'resources.site.coa.organic',
-    url: 'https://www.coa.gov.tw/ws.php?id=2461',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.organic',
+    url: 'https://www.moa.gov.tw/ws.php?id=2461',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.ecofarm',
-    url: 'https://www.coa.gov.tw/ws.php?id=2477',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.ecofarm',
+    url: 'https://www.moa.gov.tw/ws.php?id=2477',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.moenv.ecolabel',
@@ -885,9 +850,9 @@ export const agriSustainabilityClimate: ResourceSite[] = [
     domain: 'cwa.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.climate',
-    url: 'https://www.coa.gov.tw/ws.php?id=2478',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.climate',
+    url: 'https://www.moa.gov.tw/ws.php?id=2478',
+    domain: 'moa.gov.tw',
   },
   {
     nameKey: 'resources.site.moenv.climate',
@@ -900,13 +865,13 @@ export const agriSustainabilityClimate: ResourceSite[] = [
     domain: 'nstc.gov.tw',
   },
   {
-    nameKey: 'resources.site.tais.pest',
-    url: 'https://www.tais.gov.tw/ws.php?id=1151',
-    domain: 'tais.gov.tw',
+    nameKey: 'resources.site.tari.pest',
+    url: 'https://www.tari.gov.tw/ws.php?id=1151',
+    domain: 'tari.gov.tw',
   },
   {
-    nameKey: 'resources.site.coa.disaster',
-    url: 'https://www.coa.gov.tw/theme_list.php?theme=disaster',
-    domain: 'coa.gov.tw',
+    nameKey: 'resources.site.moa.disaster',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=disaster',
+    domain: 'moa.gov.tw',
   },
 ];

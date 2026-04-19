@@ -1105,11 +1105,11 @@ export const resourcesUI = {
     // Featured site descriptions (農業資源)
     'resources.featured.moa': '台灣農業政策的最高指導機關，主管農業發展、農地利用與農民福利。',
     'resources.featured.cyhg': '嘉義縣農業的推動者，提供地方補助、技術輔導與產銷服務。',
-    'resources.featured.fa': '防止農地違規使用的專責機構，保護台灣農地資源。',
-    'resources.featured.tais': '台灣農業科技的搖籃，農業試驗與改良的重要基地。',
+    'resources.featured.fa': '主管台灣漁業發展、資源養護及漁業國際合作。',
+    'resources.featured.tais': '台灣農業科技的搖籃，負責農業試驗與技術改良。',
     'resources.featured.coa.market': '農業部農產品交易平台，連接農民與消費者的重要樞紐。',
     'resources.featured.acgf': '農業信用的守門人，提供農民必需的融資保證與信用支持。',
-    'resources.featured.swcb.water': '台灣水資源與水土保持的主管機關，農業灌溉的關鍵單位。',
+    'resources.featured.swcb.water': '台灣水資源與水土保持的主管機關，負責農村發展與山地防災。',
 
     // Insight cards (農業資源)
     'resources.insight.agri.ministries.number': '1',
@@ -1133,30 +1133,30 @@ export const resourcesUI = {
 
     // Site names - Central Ministries (農業部及所屬)
     'resources.site.moa.main': '農業部',
-    'resources.site.moa.crops': '農業部作物科',
-    'resources.site.moa.livestock': '農業部畜牧科',
+    'resources.site.moa.crops': '農業部農業處(作物)',
+    'resources.site.moa.livestock': '農業部畜牧司',
     'resources.site.moa.fisheries': '農業部漁業署',
 
-    'resources.site.trit': '農業試驗所',
-    'resources.site.trit.crops': '農業試驗所作物改良課',
-    'resources.site.trit.livestock': '農業試驗所畜牧課',
-    'resources.site.trit.fisheries': '農業試驗所漁業課',
-    'resources.site.trit.forestry': '農業試驗所林業課',
+    'resources.site.tari': '農業部農業試驗所',
+    'resources.site.tari.crops': '農業試驗所作物改良組',
+    'resources.site.tari.livestock': '農業試驗所畜產加工組',
+    'resources.site.tari.fisheries': '農業試驗所水產加工組',
+    'resources.site.tari.forestry': '農業試驗所林業試驗組',
 
-    'resources.site.fa': '農地工程處',
-    'resources.site.swcb': '水土保持局',
+    'resources.site.fa': '農業部漁業署',
+    'resources.site.ardswc': '農業部農村發展及水土保持署',
     'resources.site.afpa': '農業生產力提升辦公室',
-    'resources.site.nlsc': '國土測繪中心',
+    'resources.site.nlsc': '內政部國土測繪中心',
     'resources.site.forestbureau': '農業部林業及自然保育署',
 
     // Site names - Local Agricultural Units (地方農業單位)
     'resources.site.cyhg': '嘉義縣政府',
     'resources.site.cyhg.agri': '嘉義縣政府農業處',
     'resources.site.chiayicity': '嘉義市政府',
-    'resources.site.chiayicity.agri': '嘉義市政府農業處',
-    'resources.site.ttsdcc': '台灣農業試驗所推廣中心',
-    'resources.site.ttsdcc.chiayi': '嘉義農改場',
-    'resources.site.tainan.agri': '台南市政府農業處',
+    'resources.site.chiayicity.agri': '嘉義市政府建設處(農業)',
+    'resources.site.ttsdcc': '農業部農業試驗所(原推廣中心)',
+    'resources.site.ttsdcc.chiayi': '台南區農業改良場(嘉義分場)',
+    'resources.site.tainan.agri': '台南市政府農業局',
     'resources.site.yunlin.agri': '雲林縣政府農業處',
     'resources.site.kaohsiung.agri': '高雄市政府農業局',
     'resources.site.pingtung.agri': '屏東縣政府農業處',
@@ -1164,11 +1164,11 @@ export const resourcesUI = {
     'resources.site.nantou.agri': '南投縣政府農業處',
 
     // Site names - Regulations & Policies (農業法規)
-    'resources.site.coa.law': '農業部法規',
-    'resources.site.lawdb.agri': '法律資料庫農業類',
+    'resources.site.moa.law': '農業部主管法規查詢系統',
+    'resources.site.lawdb.agri': '主管法規查詢系統',
     'resources.site.moj.agri': '法務部',
-    'resources.site.coa.land': '農業部農地利用',
-    'resources.site.nladb': '國家土地使用分區資料庫',
+    'resources.site.moa.land': '農業部主題專區(農地利用)',
+    'resources.site.nladb': '國土規劃地理資訊系統',
 
     // Site names - Research Institutions (農業研究機構)
     'resources.site.tais': '農業試驗所',
@@ -1176,11 +1176,11 @@ export const resourcesUI = {
     'resources.site.tais.livestock': '農業試驗所畜產試驗課',
     'resources.site.tais.fisheries': '農業試驗所水產試驗課',
 
-    'resources.site.afrec': '農改場',
-    'resources.site.afrec.tainan': '台南農改場',
-    'resources.site.afrec.chiayi': '嘉義農改場',
-    'resources.site.afrec.taichung': '台中農改場',
-    'resources.site.afrec.kaohsiung': '高雄農改場',
+    'resources.site.afrec': '各區農業改良場',
+    'resources.site.afrec.tainan': '台南區農業改良場',
+    'resources.site.afrec.chiayi': '台南區農業改良場嘉義分場',
+    'resources.site.afrec.taichung': '台中區農業改良場',
+    'resources.site.afrec.kaohsiung': '高雄區農業改良場',
 
     'resources.site.tfri': '林業試驗所',
     'resources.site.fric': '漁業試驗所',
@@ -1191,20 +1191,22 @@ export const resourcesUI = {
     // Site names - Technology & Innovation (農業科技)
     'resources.site.aait': '農業人工智慧技術研究中心',
     'resources.site.isia': '農業科學素養教育研究中心',
-    'resources.site.coa.smartagri': '農業部智慧農業',
+    'resources.site.moa.smartagri': '農業部智慧農業',
     'resources.site.nia': '農業資訊網路研究中心',
+    'resources.site.atri': '農業科技研究院',
+    'resources.site.stri': '台灣農業試驗所推廣中心',
 
     // Site names - Extension & Education (農業推廣教育)
-    'resources.site.coa.extension': '農業部推廣教育',
-    'resources.site.ttsdcc.chiayi.ext': '嘉義農改場推廣教育',
+    'resources.site.moa.extension': '農業部農業推廣專區',
+    'resources.site.ttsdcc.chiayi.ext': '嘉義分場推廣教育',
     'resources.site.coa.nagu': '農業技能認證中心',
     'resources.site.tca': '台灣農業推廣協會',
     'resources.site.wda': '農業新世代推廣協會',
     'resources.site.tua': '台灣農業推廣協會',
 
     // Site names - Online Sales Platforms (線上銷售平台)
-    'resources.site.coa.market': '農業部農產品交易平台',
-    'resources.site.coa.trade': '農產品交易平台',
+    'resources.site.moa.market': '農業部農產品行銷/交易平台',
+    'resources.site.moa.trade': '農產品行銷專區',
     'resources.site.shopee': 'Shopee',
     'resources.site.shopee.farm': 'Shopee 農產品',
     'resources.site.pchome': 'PChome 24h 購物',
@@ -1217,26 +1219,27 @@ export const resourcesUI = {
     'resources.site.foodbank': '食品貿易區',
 
     // Site names - Direct Sales & Markets (直銷市集)
-    'resources.site.coa.market.direct': '農業部農民直銷資訊',
-    'resources.site.ttsdcc.market': '農改場農民市集',
-    'resources.site.coa.farmers.market': '全國農民市集查詢',
-    'resources.site.huashan.market': '華山 1914 農友市集',
-    'resources.site.taipei.agri.market': '台北農產品展銷',
-    'resources.site.coa.organic.market': '有機農業市集',
+    'resources.site.moa.market.direct': '農業部農民直銷專區',
+    'resources.site.ttsdcc.market': '農改場農民市集資訊',
+    'resources.site.moa.farmers.market': '全國農民市集查詢',
+    'resources.site.huashan.market': '華山 1914 希望廣場',
+    'resources.site.taipei.agri.market': '台北農特產品展售中心',
+    'resources.site.moa.organic.market': '有機農業推廣市集',
     'resources.site.csf': '社區支持農業聯盟',
 
     // Site names - Certification & Branding (認證與品牌)
-    'resources.site.coa.gis': '農產品地理標誌',
-    'resources.site.coa.traceability': '農產品產銷履歷',
-    'resources.site.coa.fsq': '農產品品質認證',
-    'resources.site.coa.good.agricultural': '優質農產品認証',
+    'resources.site.moa.organic': '有機農業專區',
+    'resources.site.moa.gis': '農產品地理標誌服務',
+    'resources.site.moa.traceability': '農產品產銷履歷系統',
+    'resources.site.moa.fsq': '農產品品質認證網',
+    'resources.site.moa.good.agricultural': 'TGAP 優質農產品',
     'resources.site.ttasia': '台灣農業認證推廣協會',
     'resources.site.tactcc': '財團法人台灣農業標準學會',
     'resources.site.sgs': 'SGS 台灣',
 
     // Site names - Financing Channels (融資管道)
     'resources.site.acgf': '農業信用保證基金',
-    'resources.site.coa.finance': '農業部融資資訊',
+    'resources.site.moa.finance': '農業部金融補助專區',
     'resources.site.boafroc': '農業融資管道',
     'resources.site.coa.farmland': '農地銀行資訊',
     'resources.site.ttua': '台灣農業信貸協會',
@@ -1244,8 +1247,8 @@ export const resourcesUI = {
     'resources.site.chiayi.bank': '嘉義銀行農業融資',
 
     // Site names - Subsidy Programs (補助計畫)
-    'resources.site.coa.subsidy': '農業部補助計畫',
-    'resources.site.coa.subsidy.direct': '農業補助申請查詢',
+    'resources.site.moa.subsidy': '農業部補助資訊專區',
+    'resources.site.moa.subsidy.direct': '農民補助計畫查詢',
     'resources.site.cyhg.subsidy': '嘉義縣農業補助',
     'resources.site.chiayicity.subsidy': '嘉義市農業補助',
     'resources.site.ttsdcc.subsidy': '農改場補助資訊',
@@ -1253,36 +1256,37 @@ export const resourcesUI = {
     'resources.site.moea.subsidy': '經濟部補助計畫',
 
     // Site names - Agricultural Insurance (農業保險)
-    'resources.site.moa.insurance': '農業保險資訊',
-    'resources.site.coa.insurance': '農業保險查詢',
+    'resources.site.moa.insurance': '農業保險主題專區',
+    'resources.site.moa.insurance.query': '農業保險查詢系統',
     'resources.site.tai': '台灣農業保險',
     'resources.site.tmn': '泰安產物保險',
     'resources.site.chinalife': '中國人壽保險',
     'resources.site.cathay': '國泰產物保險',
 
     // Site names - Water Resources (水資源)
-    'resources.site.swcb.water': '水土保持局',
-    'resources.site.swcb.chiayi': '嘉義水土保持工作站',
-    'resources.site.wra': '經濟部水資源署',
-    'resources.site.wra.chiayi': '嘉義水資源分站',
-    'resources.site.itri.water': '工研院水資源技術',
-    'resources.site.coa.water': '農業水資源管理',
-    'resources.site.moenv.water': '環境部水資源',
+    'resources.site.ardswc.water': '農業部農村發展及水土保持署',
+    'resources.site.swcb.chiayi': '農村水保署南投分署(轄嘉義)',
+    'resources.site.wra': '經濟部水利署',
+    'resources.site.wra.chiayi': '水利署第五河川分署',
+    'resources.site.itri.water': '工研院水資源技術中心',
+    'resources.site.moa.water': '農業部灌溉水資源管理',
+    'resources.site.ia': '農業部農田水利署',
+    'resources.site.moenv.water': '環境部水質保護司',
 
     // Site names - Sustainable Farming (友善農業)
-    'resources.site.coa.organic': '有機農業',
-    'resources.site.coa.ecofarm': '生態農業推廣',
+    'resources.site.moa.organic': '有機農業專區',
+    'resources.site.moa.ecofarm': '農業部生態農業推廣',
     'resources.site.moenv.ecolabel': '環保標章',
     'resources.site.tactcc.organic': '有機農業認證',
     'resources.site.toaff': '台灣有機農業推廣協會',
     'resources.site.ttasn': '台灣農業永續推廣協會',
 
     // Site names - Climate & Disaster (氣候災害)
-    'resources.site.cwa.agri': '農業氣象服務',
-    'resources.site.coa.climate': '農業氣候調適',
+    'resources.site.cwa.agri': '中央氣象署農業氣象服務',
+    'resources.site.moa.climate': '農業氣候變遷調適',
     'resources.site.moenv.climate': '環境部氣候變遷',
     'resources.site.nstc.climate': '國科會氣候研究',
-    'resources.site.tais.pest': '農業試驗所病蟲害診斷',
-    'resources.site.coa.disaster': '農業災害防救',
+    'resources.site.tari.pest': '農業試驗所病蟲害診斷專區',
+    'resources.site.moa.disaster': '農業災害應變資訊網',
   },
 } as const;

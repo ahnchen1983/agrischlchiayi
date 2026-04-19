@@ -1,20 +1,24 @@
 {
-  "totalArticles": 37,
+  "totalArticles": 41,
   "totalCategories": 10,
   "estimatedContributors": 3,
   "totalTags": 92,
   "categories": [
     {
       "name": "Agri-Basics",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Crop-Production",
-      "count": 6
+      "count": 8
     },
     {
       "name": "Agri-Marketing",
       "count": 6
+    },
+    {
+      "name": "Smart-Farming",
+      "count": 5
     },
     {
       "name": "Field-Visits",
@@ -23,10 +27,6 @@
     {
       "name": "Agri-Advanced",
       "count": 3
-    },
-    {
-      "name": "Smart-Farming",
-      "count": 4
     },
     {
       "name": "Livestock-Health",
@@ -128,8 +128,8 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 37,
+    "zh-TW": 41,
     "en": 0
   },
-  "lastUpdated": "2026-04-19T11:42:32.501Z"
+  "lastUpdated": "2026-04-19T12:45:29.335Z"
 }
