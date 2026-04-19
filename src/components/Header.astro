@@ -144,12 +144,6 @@ const categoryList = [
                         >
                           🕸️ {t('nav.graph-view')}
                         </a>
-                        <a
-                          href={toHref('/terminology')}
-                          class="dropdown-item dropdown-section-header"
-                        >
-                          📖 {t('nav.terminology')}
-                        </a>
                         <div class="dropdown-divider" />
                         {categoryList.map((category) => (
                           <a href={category.path} class="dropdown-item">
@@ -418,13 +412,6 @@ const categoryList = [
                     onclick="document.querySelector('.nav-mobile').classList.remove('open')"
                   >
                     🕸️ {t('nav.graph-view')}
-                  </a>
-                  <a
-                    href={toHref('/terminology')}
-                    class="nav-link nav-sub-link"
-                    onclick="document.querySelector('.nav-mobile').classList.remove('open')"
-                  >
-                    📖 {t('nav.terminology')}
                   </a>
                 </div>
               )}
