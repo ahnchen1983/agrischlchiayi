@@ -50,7 +50,7 @@
   {
     "title": "小農新創-圓夢發表暨卓越班交流會",
     "description": "小農新創圓夢計畫成果發表與卓越班學員經驗交流",
-    "category": "Farm-Management",
+    "category": "Field-Visits",
     "tags": [
       "國本學堂",
       "第三屆",
@@ -58,11 +58,11 @@
       "圓夢發表",
       "卓越班"
     ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Farm-Management/%E5%B0%8F%E8%BE%B2%E6%96%B0%E5%89%B5%E5%9C%93%E5%A4%A2%E7%99%BC%E8%A1%A8%E6%9A%A8%E5%8D%93%E8%B6%8A%E7%8F%AD%E4%BA%A4%E6%B5%81%E6%9C%83",
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Field-Visits/%E5%B0%8F%E8%BE%B2%E6%96%B0%E5%89%B5%E5%9C%93%E5%A4%A2%E7%99%BC%E8%A1%A8%E6%9A%A8%E5%8D%93%E8%B6%8A%E7%8F%AD%E4%BA%A4%E6%B5%81%E6%9C%83",
     "readingTime": 2,
     "featured": false,
     "date": "2026-04-05",
-    "path": "Farm-Management/小農新創圓夢發表暨卓越班交流會.md"
+    "path": "Field-Visits/小農新創圓夢發表暨卓越班交流會.md"
   },
   {
     "title": "水資源管理入門",
@@ -115,6 +115,24 @@
     "path": "Agri-Advanced/田間管理技巧.md"
   },
   {
+    "title": "多元農業經營整合指南",
+    "description": "整合農耕、養殖、家禽、家畜等多元農業領域的經營策略與技術指南",
+    "category": "Agri-Advanced",
+    "tags": [
+      "多元農業",
+      "農耕",
+      "養殖",
+      "家禽",
+      "家畜",
+      "整合經營"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Agri-Advanced/%E5%A4%9A%E5%85%83%E8%BE%B2%E6%A5%AD%E7%B6%93%E7%87%9F%E6%95%B4%E5%90%88%E6%8C%87%E5%8D%97",
+    "readingTime": 2,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Agri-Advanced/多元農業經營整合指南.md"
+  },
+  {
     "title": "有機農業實務",
     "description": "有機認證流程、有機肥料使用與有機農場經營實務",
     "category": "Agri-Advanced",
@@ -145,22 +163,21 @@
     "path": "Crop-Production/百香果種植指南.md"
   },
   {
-    "title": "建構現代化溫室生產模式-溫室暗管教育訓練暨滴灌環控研習會",
-    "description": "聚焦溫室排水灌溉與環境控制，學習暗管、滴灌與環控整合操作",
-    "category": "Facility-Farming",
+    "title": "果樹智慧灌溉系統實作指南",
+    "description": "果樹智慧灌溉系統的實務指南，涵蓋感測器、控制器、遠端監控與自動化設計",
+    "category": "Smart-Farming",
     "tags": [
       "國本學堂",
-      "第五屆",
-      "溫室",
-      "暗管",
-      "滴灌",
-      "環控"
+      "第三屆",
+      "智慧灌溉",
+      "果樹",
+      "省工管理"
     ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Facility-Farming/%E5%BB%BA%E6%A7%8B%E7%8F%BE%E4%BB%A3%E5%8C%96%E6%BA%AB%E5%AE%A4%E7%94%9F%E7%94%A2%E6%A8%A1%E5%BC%8F%E6%BA%AB%E5%AE%A4%E6%9A%97%E7%AE%A1%E6%95%99%E8%82%B2%E8%A8%93%E7%B7%B4%E6%9A%A8%E6%BB%B4%E7%81%8C%E7%92%B0%E6%8E%A7%E7%A0%94%E7%BF%92%E6%9C%83",
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Smart-Farming/%E6%9E%9C%E6%A8%B9%E6%99%BA%E6%85%A7%E7%81%8C%E6%BA%89%E7%B3%BB%E7%B5%B1%E5%AF%A6%E4%BD%9C%E6%8C%87%E5%8D%97",
     "readingTime": 2,
     "featured": false,
     "date": "2026-04-05",
-    "path": "Facility-Farming/建構現代化溫室生產模式溫室暗管教育訓練暨滴灌環控研習會.md"
+    "path": "Smart-Farming/果樹智慧灌溉系統實作指南.md"
   },
   {
     "title": "家禽飼養管理",
@@ -213,37 +230,18 @@
   {
     "title": "第四屆國本學堂卓越班",
     "description": "培養農業經營領導人才的卓越班進階課程",
-    "category": "Farm-Management",
+    "category": "Field-Visits",
     "tags": [
       "國本學堂",
       "第四屆",
       "卓越班",
       "經營管理"
     ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Farm-Management/%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%9C%8B%E6%9C%AC%E5%AD%B8%E5%A0%82%E5%8D%93%E8%B6%8A%E7%8F%AD",
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Field-Visits/%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%9C%8B%E6%9C%AC%E5%AD%B8%E5%A0%82%E5%8D%93%E8%B6%8A%E7%8F%AD",
     "readingTime": 2,
     "featured": false,
     "date": "2026-04-05",
-    "path": "Farm-Management/第四屆國本學堂卓越班.md"
-  },
-  {
-    "title": "第四屆國本學堂進階班-農耕養殖家禽家畜",
-    "description": "進階班課程涵蓋農耕、養殖、家禽、家畜四大農業領域",
-    "category": "Agri-Advanced",
-    "tags": [
-      "國本學堂",
-      "第四屆",
-      "進階班",
-      "農耕",
-      "養殖",
-      "家禽",
-      "家畜"
-    ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Agri-Advanced/%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%9C%8B%E6%9C%AC%E5%AD%B8%E5%A0%82%E9%80%B2%E9%9A%8E%E7%8F%AD%E8%BE%B2%E8%80%95%E9%A4%8A%E6%AE%96%E5%AE%B6%E7%A6%BD%E5%AE%B6%E7%95%9C",
-    "readingTime": 2,
-    "featured": false,
-    "date": "2026-04-05",
-    "path": "Agri-Advanced/第四屆國本學堂進階班農耕養殖家禽家畜.md"
+    "path": "Field-Visits/第四屆國本學堂卓越班.md"
   },
   {
     "title": "第四屆國本學堂課程說明會暨農業場域交流會",
@@ -280,8 +278,8 @@
     "path": "Agri-Marketing/設施蔬果直銷客戶開發實務.md"
   },
   {
-    "title": "智慧農業轉型攻略-水電實務與智農DIY工作坊",
-    "description": "智慧農業轉型實戰課程，結合水電實務操作與智農DIY實作",
+    "title": "智慧農業基礎設施建設指南",
+    "description": "智慧農業導入的基礎設施指南，涵蓋水電實務、設備安裝、整合規劃",
     "category": "Smart-Farming",
     "tags": [
       "國本學堂",
@@ -290,11 +288,11 @@
       "水電實務",
       "DIY工作坊"
     ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Smart-Farming/%E6%99%BA%E6%85%A7%E8%BE%B2%E6%A5%AD%E8%BD%89%E5%9E%8B%E6%94%BB%E7%95%A5%E6%B0%B4%E9%9B%BB%E5%AF%A6%E5%8B%99%E8%88%87%E6%99%BA%E8%BE%B2DIY%E5%B7%A5%E4%BD%9C%E5%9D%8A",
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Smart-Farming/%E6%99%BA%E6%85%A7%E8%BE%B2%E6%A5%AD%E5%9F%BA%E7%A4%8E%E8%A8%AD%E6%96%BD%E5%BB%BA%E8%A8%AD%E6%8C%87%E5%8D%97",
     "readingTime": 2,
     "featured": false,
     "date": "2026-04-05",
-    "path": "Smart-Farming/智慧農業轉型攻略水電實務與智農DIY工作坊.md"
+    "path": "Smart-Farming/智慧農業基礎設施建設指南.md"
   },
   {
     "title": "無人機農業應用",
@@ -312,23 +310,6 @@
     "path": "Smart-Farming/無人機農業應用.md"
   },
   {
-    "title": "圓夢計畫-鳳梨切苗機械化發表會",
-    "description": "國本學堂學員圓夢計畫成果，展示鳳梨切苗機械化技術",
-    "category": "Smart-Farming",
-    "tags": [
-      "國本學堂",
-      "第三屆",
-      "圓夢計畫",
-      "鳳梨",
-      "機械化"
-    ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Smart-Farming/%E5%9C%93%E5%A4%A2%E8%A8%88%E7%95%AB%E9%B3%B3%E6%A2%A8%E5%88%87%E8%8B%97%E6%A9%9F%E6%A2%B0%E5%8C%96%E7%99%BC%E8%A1%A8%E6%9C%83",
-    "readingTime": 2,
-    "featured": false,
-    "date": "2026-04-05",
-    "path": "Smart-Farming/圓夢計畫鳳梨切苗機械化發表會.md"
-  },
-  {
     "title": "溫室設施規劃",
     "description": "溫室類型選擇、環控系統規劃與設施農業經營要點",
     "category": "Facility-Farming",
@@ -344,8 +325,8 @@
     "path": "Facility-Farming/溫室設施規劃.md"
   },
   {
-    "title": "溫室結構重建研習會",
-    "description": "溫室結構重建技術研習，提升設施耐候性與生產效率",
+    "title": "溫室結構重建與維護指南",
+    "description": "溫室結構重建與維護的實務指南，包括評估、規劃、施工、成本管理",
     "category": "Facility-Farming",
     "tags": [
       "國本學堂",
@@ -353,11 +334,29 @@
       "溫室",
       "結構重建"
     ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Facility-Farming/%E6%BA%AB%E5%AE%A4%E7%B5%90%E6%A7%8B%E9%87%8D%E5%BB%BA%E7%A0%94%E7%BF%92%E6%9C%83",
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Facility-Farming/%E6%BA%AB%E5%AE%A4%E7%B5%90%E6%A7%8B%E9%87%8D%E5%BB%BA%E8%88%87%E7%B6%AD%E8%AD%B7%E6%8C%87%E5%8D%97",
     "readingTime": 2,
     "featured": false,
     "date": "2026-04-05",
-    "path": "Facility-Farming/溫室結構重建研習會.md"
+    "path": "Facility-Farming/溫室結構重建與維護指南.md"
+  },
+  {
+    "title": "溫室環控與灌溉系統整合指南",
+    "description": "溫室環境控制與灌溉系統整合的實務指南，涵蓋暗管排水、滴灌技術、環控操作",
+    "category": "Facility-Farming",
+    "tags": [
+      "國本學堂",
+      "第五屆",
+      "溫室",
+      "暗管",
+      "滴灌",
+      "環控"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Facility-Farming/%E6%BA%AB%E5%AE%A4%E7%92%B0%E6%8E%A7%E8%88%87%E7%81%8C%E6%BA%89%E7%B3%BB%E7%B5%B1%E6%95%B4%E5%90%88%E6%8C%87%E5%8D%97",
+    "readingTime": 2,
+    "featured": false,
+    "date": "2026-04-05",
+    "path": "Facility-Farming/溫室環控與灌溉系統整合指南.md"
   },
   {
     "title": "跟植物診療師學診斷-小番茄小黃瓜健康管理實戰",
@@ -397,6 +396,22 @@
     "path": "Agri-Marketing/農民市集與直銷模式實務.md"
   },
   {
+    "title": "農作物病徵診斷指南",
+    "description": "系統化學習如何觀察、診斷與識別農作物常見病徵，提早防控",
+    "category": "Crop-Production",
+    "tags": [
+      "病蟲害診斷",
+      "植物診療",
+      "防治策略",
+      "病徵觀察"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Crop-Production/%E8%BE%B2%E4%BD%9C%E7%89%A9%E7%97%85%E5%BE%B5%E8%A8%BA%E6%96%B7%E6%8C%87%E5%8D%97",
+    "readingTime": 6,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Crop-Production/農作物病徵診斷指南.md"
+  },
+  {
     "title": "農產品品牌建立",
     "description": "農產品品牌故事打造、包裝設計與行銷策略實務",
     "category": "Agri-Marketing",
@@ -410,6 +425,22 @@
     "featured": false,
     "date": "2026-04-05",
     "path": "Agri-Marketing/農產品品牌建立.md"
+  },
+  {
+    "title": "農場財務健檢與規劃",
+    "description": "系統化學習農場收支分析、財務報表解讀、融資規劃與風險管理工具",
+    "category": "Farm-Management",
+    "tags": [
+      "財務管理",
+      "農場經營",
+      "成本分析",
+      "資金規劃"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Farm-Management/%E8%BE%B2%E5%A0%B4%E8%B2%A1%E5%8B%99%E5%81%A5%E6%AA%A2%E8%88%87%E8%A6%8F%E5%8A%83",
+    "readingTime": 15,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Farm-Management/農場財務健檢與規劃.md"
   },
   {
     "title": "農場財務規劃",
@@ -473,23 +504,6 @@
     "featured": true,
     "date": "2026-04-18",
     "path": "Agri-Marketing/農業品牌建立與精品化策略.md"
-  },
-  {
-    "title": "農業理財實戰與農作物病徵觀察法",
-    "description": "結合農場財務健檢與植物病徵觀察的雙主題進階課程",
-    "category": "Farm-Management",
-    "tags": [
-      "國本學堂",
-      "第五屆",
-      "農業理財",
-      "財務管理",
-      "病徵觀察"
-    ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Farm-Management/%E8%BE%B2%E6%A5%AD%E7%90%86%E8%B2%A1%E5%AF%A6%E6%88%B0%E8%88%87%E8%BE%B2%E4%BD%9C%E7%89%A9%E7%97%85%E5%BE%B5%E8%A7%80%E5%AF%9F%E6%B3%95",
-    "readingTime": 2,
-    "featured": false,
-    "date": "2026-04-05",
-    "path": "Farm-Management/農業理財實戰與農作物病徵觀察法.md"
   },
   {
     "title": "農業設計供應合作農業減碳提案規劃",
@@ -559,6 +573,22 @@
     "path": "Grants-Planning/農業補助申請指南.md"
   },
   {
+    "title": "鳳梨栽培與機械化指南",
+    "description": "鳳梨從育苗、定植、管理到採收的完整栽培指南，含機械化應用方案",
+    "category": "Crop-Production",
+    "tags": [
+      "鳳梨",
+      "栽培技術",
+      "機械化",
+      "省工管理"
+    ],
+    "url": "https://ahnchen1983.github.io/agrischlchiayi/Crop-Production/%E9%B3%B3%E6%A2%A8%E6%A0%BD%E5%9F%B9%E8%88%87%E6%A9%9F%E6%A2%B0%E5%8C%96%E6%8C%87%E5%8D%97",
+    "readingTime": 29,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Crop-Production/鳳梨栽培與機械化指南.md"
+  },
+  {
     "title": "模範農場參訪紀錄",
     "description": "國本學堂場域觀摩學習心得與模範農場經營特色紀錄",
     "category": "Field-Visits",
@@ -572,22 +602,5 @@
     "featured": false,
     "date": "2026-04-05",
     "path": "Field-Visits/模範農場參訪紀錄.md"
-  },
-  {
-    "title": "邁向省工管理-果樹智慧灌溉工作坊",
-    "description": "果樹智慧灌溉系統實作工作坊，學習省工管理技術",
-    "category": "Smart-Farming",
-    "tags": [
-      "國本學堂",
-      "第三屆",
-      "智慧灌溉",
-      "果樹",
-      "省工管理"
-    ],
-    "url": "https://ahnchen1983.github.io/agrischlchiayi/Smart-Farming/%E9%82%81%E5%90%91%E7%9C%81%E5%B7%A5%E7%AE%A1%E7%90%86%E6%9E%9C%E6%A8%B9%E6%99%BA%E6%85%A7%E7%81%8C%E6%BA%89%E5%B7%A5%E4%BD%9C%E5%9D%8A",
-    "readingTime": 2,
-    "featured": false,
-    "date": "2026-04-05",
-    "path": "Smart-Farming/邁向省工管理果樹智慧灌溉工作坊.md"
   }
 ]

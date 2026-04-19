@@ -1,8 +1,8 @@
 {
-  "totalArticles": 36,
+  "totalArticles": 37,
   "totalCategories": 10,
   "estimatedContributors": 3,
-  "totalTags": 88,
+  "totalTags": 92,
   "categories": [
     {
       "name": "Agri-Basics",
@@ -10,35 +10,35 @@
     },
     {
       "name": "Crop-Production",
-      "count": 4
+      "count": 6
     },
     {
       "name": "Agri-Marketing",
       "count": 6
     },
     {
-      "name": "Farm-Management",
-      "count": 5
+      "name": "Field-Visits",
+      "count": 7
     },
     {
       "name": "Agri-Advanced",
       "count": 3
     },
     {
-      "name": "Facility-Farming",
-      "count": 3
+      "name": "Smart-Farming",
+      "count": 4
     },
     {
       "name": "Livestock-Health",
       "count": 1
     },
     {
-      "name": "Field-Visits",
-      "count": 5
+      "name": "Facility-Farming",
+      "count": 3
     },
     {
-      "name": "Smart-Farming",
-      "count": 5
+      "name": "Farm-Management",
+      "count": 3
     },
     {
       "name": "Grants-Planning",
@@ -48,26 +48,18 @@
   "topTags": [
     {
       "name": "國本學堂",
-      "count": 36
+      "count": 33
     },
     {
       "name": "第三屆",
-      "count": 8
+      "count": 7
     },
     {
       "name": "農產品銷售",
       "count": 5
     },
     {
-      "name": "第五屆",
-      "count": 4
-    },
-    {
       "name": "場域交流",
-      "count": 4
-    },
-    {
-      "name": "第四屆",
       "count": 4
     },
     {
@@ -75,11 +67,19 @@
       "count": 3
     },
     {
-      "name": "溫室",
+      "name": "第四屆",
       "count": 3
     },
     {
       "name": "智慧農業",
+      "count": 3
+    },
+    {
+      "name": "溫室",
+      "count": 3
+    },
+    {
+      "name": "第五屆",
       "count": 3
     },
     {
@@ -99,11 +99,19 @@
       "count": 2
     },
     {
+      "name": "成本分析",
+      "count": 2
+    },
+    {
       "name": "農業進階",
       "count": 2
     },
     {
       "name": "家禽",
+      "count": 2
+    },
+    {
+      "name": "省工管理",
       "count": 2
     },
     {
@@ -117,19 +125,11 @@
     {
       "name": "設施農業",
       "count": 2
-    },
-    {
-      "name": "農場管理",
-      "count": 2
-    },
-    {
-      "name": "土壤學",
-      "count": 1
     }
   ],
   "languageDistribution": {
-    "zh-TW": 36,
+    "zh-TW": 37,
     "en": 0
   },
-  "lastUpdated": "2026-04-18T08:06:46.975Z"
+  "lastUpdated": "2026-04-19T09:31:02.377Z"
 }
