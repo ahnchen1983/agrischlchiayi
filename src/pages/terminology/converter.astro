@@ -706,7 +706,7 @@ const rulesJSON = JSON.stringify(rules);
     });
 
     // Example buttons
-    document.querySelectorAll('.btn-example').forEach((btn) => {
+    document.querySelectorAll('[data-example]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const key = btn.dataset.example;
         if (EXAMPLES[key]) {
