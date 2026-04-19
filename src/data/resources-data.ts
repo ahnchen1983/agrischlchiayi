@@ -1,5 +1,11 @@
+/**
+ * Agricultural Resources Database
+ * 農業資源盤點 - Traditional Chinese (繁體中文) Only
+ * Covering: Central Ministries, Local Agencies, Marketing Platforms, Financing, Water & Sustainability
+ */
+
 export interface ResourceSite {
-  nameKey: string; // i18n key, e.g. 'resources.site.president'
+  nameKey: string; // i18n key, e.g. 'resources.site.moa'
   url: string;
   domain: string;
   descKey?: string; // optional description i18n key (featured sites only)
@@ -13,575 +19,448 @@ export interface HeroCategory {
   sites: ResourceSite[];
 }
 
-// ─── Hero Mindmap Data ───
+// ─── Hero Mindmap Data (5 Agricultural Categories) ───
 export const heroCategories: HeroCategory[] = [
   {
-    id: 'government',
-    labelKey: 'resources.category.government.label',
-    color: '#065f46',
+    id: 'agri-governance',
+    labelKey: 'resources.category.agri.governance.label',
+    color: '#15803d', // Deeper green for agriculture
     sites: [
       {
-        nameKey: 'resources.site.president',
-        url: 'https://www.president.gov.tw/',
-        domain: 'president.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.executiveYuan',
-        url: 'https://www.ey.gov.tw/',
-        domain: 'ey.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.legislativeYuan',
-        url: 'https://www.ly.gov.tw/',
-        domain: 'ly.gov.tw',
+        nameKey: 'resources.site.moa.main',
+        url: 'https://www.moa.gov.tw/',
+        domain: 'moa.gov.tw',
         featured: true,
-        descKey: 'resources.featured.legislativeYuan',
+        descKey: 'resources.featured.moa',
       },
       {
-        nameKey: 'resources.site.mofa',
-        url: 'https://www.mofa.gov.tw/',
-        domain: 'mofa.gov.tw',
+        nameKey: 'resources.site.cyhg',
+        url: 'https://www.cyhg.gov.tw/',
+        domain: 'cyhg.gov.tw',
+        featured: true,
+        descKey: 'resources.featured.cyhg',
       },
       {
-        nameKey: 'resources.site.moda',
-        url: 'https://moda.gov.tw/',
-        domain: 'moda.gov.tw',
+        nameKey: 'resources.site.trit',
+        url: 'https://www.trit.gov.tw/',
+        domain: 'trit.gov.tw',
       },
       {
-        nameKey: 'resources.site.cip',
-        url: 'https://www.cip.gov.tw/',
-        domain: 'cip.gov.tw',
+        nameKey: 'resources.site.swcb',
+        url: 'https://www.swcb.gov.tw/',
+        domain: 'swcb.gov.tw',
       },
       {
-        nameKey: 'resources.site.moc',
-        url: 'https://www.moc.gov.tw/',
-        domain: 'moc.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.moe',
-        url: 'https://www.moe.gov.tw/',
-        domain: 'moe.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.moea',
-        url: 'https://www.moea.gov.tw/',
-        domain: 'moea.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.motc',
-        url: 'https://www.motc.gov.tw/',
-        domain: 'motc.gov.tw',
+        nameKey: 'resources.site.fa',
+        url: 'https://www.fa.gov.tw/',
+        domain: 'fa.gov.tw',
+        featured: true,
+        descKey: 'resources.featured.fa',
       },
     ],
   },
   {
-    id: 'culture',
-    labelKey: 'resources.category.culture.label',
-    color: '#059669',
+    id: 'agri-technology',
+    labelKey: 'resources.category.agri.technology.label',
+    color: '#059669', // Standard green
     sites: [
       {
-        nameKey: 'resources.site.ncl',
-        url: 'https://www.ncl.edu.tw/',
-        domain: 'ncl.edu.tw',
+        nameKey: 'resources.site.tais',
+        url: 'https://www.tais.gov.tw/',
+        domain: 'tais.gov.tw',
         featured: true,
-        descKey: 'resources.featured.ncl',
+        descKey: 'resources.featured.tais',
       },
       {
-        nameKey: 'resources.site.npm',
-        url: 'https://www.npm.gov.tw/',
-        domain: 'npm.gov.tw',
-        featured: true,
-        descKey: 'resources.featured.npm',
+        nameKey: 'resources.site.afrec',
+        url: 'https://www.afrec.gov.tw/',
+        domain: 'afrec.gov.tw',
       },
       {
-        nameKey: 'resources.site.ntm',
-        url: 'https://www.ntm.gov.tw/',
-        domain: 'ntm.gov.tw',
+        nameKey: 'resources.site.ttsdcc',
+        url: 'https://www.ttsdcc.org.tw/',
+        domain: 'ttsdcc.org.tw',
       },
       {
-        nameKey: 'resources.site.moc',
-        url: 'https://www.moc.gov.tw/',
-        domain: 'moc.gov.tw',
+        nameKey: 'resources.site.isia',
+        url: 'https://www.isia.org.tw/',
+        domain: 'isia.org.tw',
       },
       {
-        nameKey: 'resources.site.npgov',
-        url: 'https://np.cpami.gov.tw/',
-        domain: 'np.cpami.gov.tw',
-        featured: true,
-        descKey: 'resources.featured.npgov',
+        nameKey: 'resources.site.tesd',
+        url: 'https://tesd.survey.sinica.edu.tw/',
+        domain: 'tesd.survey.sinica.edu.tw',
       },
     ],
   },
   {
-    id: 'tourism',
-    labelKey: 'resources.category.tourism.label',
-    color: '#10b981',
+    id: 'agri-marketing',
+    labelKey: 'resources.category.agri.marketing.label',
+    color: '#10b981', // Light green
     sites: [
       {
-        nameKey: 'resources.site.taiwanTourism',
-        url: 'https://eng.taiwan.net.tw/',
-        domain: 'eng.taiwan.net.tw',
+        nameKey: 'resources.site.coa.market',
+        url: 'https://www.coa.gov.tw/ws.php?id=2449',
+        domain: 'coa.gov.tw',
+        featured: true,
+        descKey: 'resources.featured.coa.market',
       },
       {
-        nameKey: 'resources.site.sunMoonLake',
-        url: 'https://www.sunmoonlake.gov.tw/',
-        domain: 'sunmoonlake.gov.tw',
+        nameKey: 'resources.site.shopee',
+        url: 'https://shopee.tw/',
+        domain: 'shopee.tw',
       },
       {
-        nameKey: 'resources.site.alishan',
-        url: 'https://www.ali-nsa.net/',
-        domain: 'ali-nsa.net',
+        nameKey: 'resources.site.pchome',
+        url: 'https://www.pchome.com.tw/',
+        domain: 'pchome.com.tw',
+      },
+      {
+        nameKey: 'resources.site.momo',
+        url: 'https://www.momoshop.com.tw/',
+        domain: 'momoshop.com.tw',
+      },
+      {
+        nameKey: 'resources.site.gomaji',
+        url: 'https://www.gomaji.com/',
+        domain: 'gomaji.com',
       },
     ],
   },
   {
-    id: 'economy',
-    labelKey: 'resources.category.economy.label',
-    color: '#047857',
+    id: 'agri-finance',
+    labelKey: 'resources.category.agri.finance.label',
+    color: '#047857', // Dark green
     sites: [
       {
-        nameKey: 'resources.site.tsmc',
-        url: 'https://www.tsmc.com/chinese',
-        domain: 'tsmc.com',
+        nameKey: 'resources.site.acgf',
+        url: 'https://www.acgf.org.tw/',
+        domain: 'acgf.org.tw',
         featured: true,
-        descKey: 'resources.featured.tsmc',
+        descKey: 'resources.featured.acgf',
       },
       {
-        nameKey: 'resources.site.iii',
-        url: 'https://www.iii.org.tw/',
-        domain: 'iii.org.tw',
+        nameKey: 'resources.site.coa.subsidy',
+        url: 'https://www.coa.gov.tw/theme_list.php?theme=subsidy',
+        domain: 'coa.gov.tw',
       },
       {
-        nameKey: 'resources.site.stat',
-        url: 'https://www.stat.gov.tw/',
-        domain: 'stat.gov.tw',
+        nameKey: 'resources.site.tai',
+        url: 'https://www.taii.org.tw/',
+        domain: 'taii.org.tw',
       },
       {
-        nameKey: 'resources.site.twse',
-        url: 'https://www.twse.com.tw/',
-        domain: 'twse.com.tw',
+        nameKey: 'resources.site.fsc',
+        url: 'https://www.fsc.gov.tw/',
+        domain: 'fsc.gov.tw',
+      },
+      {
+        nameKey: 'resources.site.moa.insurance',
+        url: 'https://www.moa.gov.tw/theme_list.php?theme=insurance',
+        domain: 'moa.gov.tw',
       },
     ],
   },
   {
-    id: 'media',
-    labelKey: 'resources.category.media.label',
-    color: '#064e3b',
+    id: 'agri-sustainability',
+    labelKey: 'resources.category.agri.sustainability.label',
+    color: '#065f46', // Forest green
     sites: [
       {
-        nameKey: 'resources.site.cna',
-        url: 'https://www.cna.com.tw',
-        domain: 'cna.com.tw',
-      },
-      {
-        nameKey: 'resources.site.ptt',
-        url: 'https://www.ptt.cc/',
-        domain: 'ptt.cc',
+        nameKey: 'resources.site.swcb.water',
+        url: 'https://www.swcb.gov.tw/',
+        domain: 'swcb.gov.tw',
         featured: true,
-        descKey: 'resources.featured.ptt',
+        descKey: 'resources.featured.swcb.water',
       },
       {
-        nameKey: 'resources.site.ptsNews',
-        url: 'https://news.pts.org.tw/',
-        domain: 'news.pts.org.tw',
-        featured: true,
-        descKey: 'resources.featured.ptsNews',
+        nameKey: 'resources.site.coa.organic',
+        url: 'https://www.coa.gov.tw/ws.php?id=2461',
+        domain: 'coa.gov.tw',
       },
       {
-        nameKey: 'resources.site.twreporter',
-        url: 'https://www.twreporter.org/',
-        domain: 'twreporter.org',
-        featured: true,
-        descKey: 'resources.featured.twreporter',
+        nameKey: 'resources.site.moenv',
+        url: 'https://www.moenv.gov.tw/',
+        domain: 'moenv.gov.tw',
       },
       {
-        nameKey: 'resources.site.taiwanNews',
-        url: 'https://www.taiwannews.com.tw/',
-        domain: 'taiwannews.com.tw',
-      },
-    ],
-  },
-  {
-    id: 'opendata',
-    labelKey: 'resources.category.opendata.label',
-    color: '#059669',
-    sites: [
-      {
-        nameKey: 'resources.site.dataGov',
-        url: 'https://data.gov.tw/',
-        domain: 'data.gov.tw',
-        featured: true,
-        descKey: 'resources.featured.dataGov',
+        nameKey: 'resources.site.cwa',
+        url: 'https://www.cwa.gov.tw/',
+        domain: 'cwa.gov.tw',
       },
       {
-        nameKey: 'resources.site.taiwanGov',
-        url: 'https://www.taiwan.gov.tw/',
-        domain: 'taiwan.gov.tw',
+        nameKey: 'resources.site.nstc',
+        url: 'https://www.nstc.gov.tw/',
+        domain: 'nstc.gov.tw',
       },
-      {
-        nameKey: 'resources.site.lawDb',
-        url: 'https://law.moj.gov.tw/',
-        domain: 'law.moj.gov.tw',
-      },
-      {
-        nameKey: 'resources.site.g0v',
-        url: 'https://g0v.tw/',
-        domain: 'g0v.tw',
-        featured: true,
-        descKey: 'resources.featured.g0vGov',
-      },
-    ],
-  },
-  {
-    id: 'taiwanmd',
-    labelKey: 'resources.category.taiwanmd.label',
-    color: '#10b981',
-    sites: [
-      {
-        nameKey: 'resources.site.github',
-        url: 'https://github.com/frank890417/taiwan-md',
-        domain: 'github.com',
-      },
-      {
-        nameKey: 'resources.site.contribute',
-        url: '/contribute',
-        domain: 'taiwan.md',
-      },
-      { nameKey: 'resources.site.rss', url: '/rss.xml', domain: 'taiwan.md' },
     ],
   },
 ];
 
-// ─── Chapter 1: Government ───
-export const governmentFiveYuan: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.president',
-    url: 'https://www.president.gov.tw/',
-    domain: 'president.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.executiveYuan',
-    url: 'https://www.ey.gov.tw/',
-    domain: 'ey.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.legislativeYuan',
-    url: 'https://www.ly.gov.tw/',
-    domain: 'ly.gov.tw',
-    featured: true,
-    descKey: 'resources.featured.legislativeYuan',
-  },
-  {
-    nameKey: 'resources.site.judicialYuan',
-    url: 'https://www.judicial.gov.tw/',
-    domain: 'judicial.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.examinationYuan',
-    url: 'https://www.exam.gov.tw/',
-    domain: 'exam.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.controlYuan',
-    url: 'https://www.cy.gov.tw/',
-    domain: 'cy.gov.tw',
-  },
-];
+// ─── Chapter 1: 農業行政與管理 (Agricultural Administration & Management) ───
 
-export const governmentMinistries: ResourceSite[] = [
+// Subcategory 1.1: 中央農業部會 (Central Agricultural Ministries)
+export const agriGovernanceCentral: ResourceSite[] = [
   {
-    nameKey: 'resources.site.mofa',
-    url: 'https://www.mofa.gov.tw/',
-    domain: 'mofa.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moda',
-    url: 'https://moda.gov.tw/',
-    domain: 'moda.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.cip',
-    url: 'https://www.cip.gov.tw/',
-    domain: 'cip.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moc',
-    url: 'https://www.moc.gov.tw/',
-    domain: 'moc.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moe',
-    url: 'https://www.moe.gov.tw/',
-    domain: 'moe.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moea',
-    url: 'https://www.moea.gov.tw/',
-    domain: 'moea.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.motc',
-    url: 'https://www.motc.gov.tw/',
-    domain: 'motc.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moi',
-    url: 'https://www.moi.gov.tw/',
-    domain: 'moi.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.ndc',
-    url: 'https://www.ndc.gov.tw/',
-    domain: 'ndc.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.mac',
-    url: 'https://www.mac.gov.tw/',
-    domain: 'mac.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.mol',
-    url: 'https://www.mol.gov.tw/',
-    domain: 'mol.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moenv',
-    url: 'https://www.moenv.gov.tw/',
-    domain: 'moenv.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.moa',
+    nameKey: 'resources.site.moa.main',
     url: 'https://www.moa.gov.tw/',
+    domain: 'moa.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.moa',
+  },
+  {
+    nameKey: 'resources.site.moa.crops',
+    url: 'https://www.moa.gov.tw/ws.php?id=24649',
     domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.mnd',
-    url: 'https://www.mnd.gov.tw/',
-    domain: 'mnd.gov.tw',
+    nameKey: 'resources.site.moa.livestock',
+    url: 'https://www.moa.gov.tw/ws.php?id=24650',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.moj',
-    url: 'https://www.moj.gov.tw/',
-    domain: 'moj.gov.tw',
+    nameKey: 'resources.site.moa.fisheries',
+    url: 'https://www.moa.gov.tw/ws.php?id=24651',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.mohw',
-    url: 'https://www.mohw.gov.tw/',
-    domain: 'mohw.gov.tw',
+    nameKey: 'resources.site.trit',
+    url: 'https://www.trit.gov.tw/',
+    domain: 'trit.gov.tw',
   },
   {
-    nameKey: 'resources.site.trade',
-    url: 'https://www.trade.gov.tw/',
-    domain: 'trade.gov.tw',
+    nameKey: 'resources.site.trit.crops',
+    url: 'https://www.trit.gov.tw/ws.php?id=1142',
+    domain: 'trit.gov.tw',
   },
   {
-    nameKey: 'resources.site.sme',
-    url: 'https://www.sme.gov.tw/',
-    domain: 'sme.gov.tw',
+    nameKey: 'resources.site.trit.livestock',
+    url: 'https://www.trit.gov.tw/ws.php?id=1143',
+    domain: 'trit.gov.tw',
   },
   {
-    nameKey: 'resources.site.tipo',
-    url: 'https://www.tipo.gov.tw/',
-    domain: 'tipo.gov.tw',
+    nameKey: 'resources.site.trit.fisheries',
+    url: 'https://www.trit.gov.tw/ws.php?id=1144',
+    domain: 'trit.gov.tw',
   },
   {
-    nameKey: 'resources.site.fsc',
-    url: 'https://www.fsc.gov.tw/',
-    domain: 'fsc.gov.tw',
+    nameKey: 'resources.site.trit.forestry',
+    url: 'https://www.trit.gov.tw/ws.php?id=1145',
+    domain: 'trit.gov.tw',
   },
   {
-    nameKey: 'resources.site.immigration',
-    url: 'https://www.immigration.gov.tw/',
-    domain: 'immigration.gov.tw',
+    nameKey: 'resources.site.fa',
+    url: 'https://www.fa.gov.tw/',
+    domain: 'fa.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.fa',
   },
   {
-    nameKey: 'resources.site.cwa',
-    url: 'https://www.cwa.gov.tw/',
-    domain: 'cwa.gov.tw',
+    nameKey: 'resources.site.swcb',
+    url: 'https://www.swcb.gov.tw/',
+    domain: 'swcb.gov.tw',
   },
   {
-    nameKey: 'resources.site.nstc',
-    url: 'https://www.nstc.gov.tw/',
-    domain: 'nstc.gov.tw',
+    nameKey: 'resources.site.afpa',
+    url: 'https://www.afpa.gov.tw/',
+    domain: 'afpa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.nlsc',
+    url: 'https://www.nlsc.gov.tw/',
+    domain: 'nlsc.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.forestbureau',
+    url: 'https://www.forest.gov.tw/',
+    domain: 'forest.gov.tw',
   },
 ];
 
-export const governmentLocalGov: ResourceSite[] = [
+// Subcategory 1.2: 地方農業單位 (Local Agricultural Units) - Focused on Chiayi
+export const agriGovernanceLocal: ResourceSite[] = [
   {
-    nameKey: 'resources.site.taipei',
-    url: 'https://www.gov.taipei/',
-    domain: 'gov.taipei',
+    nameKey: 'resources.site.cyhg',
+    url: 'https://www.cyhg.gov.tw/',
+    domain: 'cyhg.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.cyhg',
   },
   {
-    nameKey: 'resources.site.newTaipei',
-    url: 'https://www.ntpc.gov.tw/',
-    domain: 'ntpc.gov.tw',
+    nameKey: 'resources.site.cyhg.agri',
+    url: 'https://www.cyhg.gov.tw/cp.aspx?n=5566',
+    domain: 'cyhg.gov.tw',
   },
   {
-    nameKey: 'resources.site.taichung',
-    url: 'https://www.taichung.gov.tw/',
-    domain: 'taichung.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.kaohsiung',
-    url: 'https://www.kcg.gov.tw/',
-    domain: 'kcg.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.tainan',
-    url: 'https://www.tainan.gov.tw/',
-    domain: 'tainan.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.taoyuan',
-    url: 'https://www.tycg.gov.tw/',
-    domain: 'tycg.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.keelung',
-    url: 'https://www.klcg.gov.tw/',
-    domain: 'klcg.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.hsinchu',
-    url: 'https://www.hccg.gov.tw/',
-    domain: 'hccg.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.chiayi',
+    nameKey: 'resources.site.chiayicity',
     url: 'https://www.chiayi.gov.tw/',
     domain: 'chiayi.gov.tw',
   },
   {
-    nameKey: 'resources.site.yilan',
-    url: 'https://www.e-land.gov.tw/',
-    domain: 'e-land.gov.tw',
+    nameKey: 'resources.site.chiayicity.agri',
+    url: 'https://www.chiayi.gov.tw/cp.aspx?n=4932',
+    domain: 'chiayi.gov.tw',
   },
   {
-    nameKey: 'resources.site.hsinchuCounty',
-    url: 'https://www.hsinchu.gov.tw/',
-    domain: 'hsinchu.gov.tw',
+    nameKey: 'resources.site.ttsdcc',
+    url: 'https://www.ttsdcc.org.tw/',
+    domain: 'ttsdcc.org.tw',
   },
   {
-    nameKey: 'resources.site.miaoli',
-    url: 'https://www.miaoli.gov.tw/',
-    domain: 'miaoli.gov.tw',
+    nameKey: 'resources.site.ttsdcc.chiayi',
+    url: 'https://chiayi.ttsdcc.org.tw/',
+    domain: 'ttsdcc.org.tw',
   },
   {
-    nameKey: 'resources.site.changhua',
-    url: 'https://www.chcg.gov.tw/',
-    domain: 'chcg.gov.tw',
+    nameKey: 'resources.site.tainan.agri',
+    url: 'https://www.tainan.gov.tw/cp.aspx?n=4932',
+    domain: 'tainan.gov.tw',
   },
   {
-    nameKey: 'resources.site.nantou',
-    url: 'https://www.nantou.gov.tw/',
-    domain: 'nantou.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.yunlin',
-    url: 'https://www.yunlin.gov.tw/',
+    nameKey: 'resources.site.yunlin.agri',
+    url: 'https://www.yunlin.gov.tw/cp.aspx?n=4932',
     domain: 'yunlin.gov.tw',
   },
   {
-    nameKey: 'resources.site.chiayiCounty',
-    url: 'https://www.cyhg.gov.tw/',
-    domain: 'cyhg.gov.tw',
+    nameKey: 'resources.site.kaohsiung.agri',
+    url: 'https://www.kcg.gov.tw/cp.aspx?n=4932',
+    domain: 'kcg.gov.tw',
   },
   {
-    nameKey: 'resources.site.pingtung',
-    url: 'https://www.pthg.gov.tw/',
+    nameKey: 'resources.site.pingtung.agri',
+    url: 'https://www.pthg.gov.tw/cp.aspx?n=4932',
     domain: 'pthg.gov.tw',
   },
   {
-    nameKey: 'resources.site.taitung',
-    url: 'https://www.taitung.gov.tw/',
-    domain: 'taitung.gov.tw',
+    nameKey: 'resources.site.taichung.agri',
+    url: 'https://www.taichung.gov.tw/cp.aspx?n=4932',
+    domain: 'taichung.gov.tw',
   },
   {
-    nameKey: 'resources.site.hualien',
-    url: 'https://www.hl.gov.tw/',
-    domain: 'hl.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.penghu',
-    url: 'https://www.penghu.gov.tw/',
-    domain: 'penghu.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.kinmenGov',
-    url: 'https://www.kinmen.gov.tw/',
-    domain: 'kinmen.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.lienchiang',
-    url: 'https://www.matsu.gov.tw/',
-    domain: 'matsu.gov.tw',
+    nameKey: 'resources.site.nantou.agri',
+    url: 'https://www.nantou.gov.tw/cp.aspx?n=4932',
+    domain: 'nantou.gov.tw',
   },
 ];
 
-export const governmentOpenData: ResourceSite[] = [
+// Subcategory 1.3: 農業法規與政策 (Agricultural Regulations & Policies)
+export const agriGovernancePolicy: ResourceSite[] = [
   {
-    nameKey: 'resources.site.dataGov',
-    url: 'https://data.gov.tw/',
-    domain: 'data.gov.tw',
-    featured: true,
-    descKey: 'resources.featured.dataGov',
+    nameKey: 'resources.site.coa.law',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=law',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.taiwanGov',
-    url: 'https://www.taiwan.gov.tw/',
-    domain: 'taiwan.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.lawDb',
-    url: 'https://law.moj.gov.tw/',
+    nameKey: 'resources.site.lawdb.agri',
+    url: 'https://law.moj.gov.tw/News/NewsList.aspx?pcode=M0020001',
     domain: 'law.moj.gov.tw',
   },
   {
-    nameKey: 'resources.site.g0v',
-    url: 'https://g0v.tw/',
-    domain: 'g0v.tw',
-    featured: true,
-    descKey: 'resources.featured.g0vGov',
+    nameKey: 'resources.site.moj.agri',
+    url: 'https://www.moj.gov.tw/',
+    domain: 'moj.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.land',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=land',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.nladb',
+    url: 'https://nladb.nla.gov.tw/',
+    domain: 'nladb.nla.gov.tw',
   },
 ];
 
-// ─── Chapter 2: Culture ───
-export const cultureUniversities: ResourceSite[] = [
+// ─── Chapter 2: 技術研發與推廣 (Technical R&D & Promotion) ───
+
+// Subcategory 2.1: 農業試驗研究機構 (Agricultural Research Institutions)
+export const agriTechResearch: ResourceSite[] = [
   {
-    nameKey: 'resources.site.ntu',
-    url: 'https://www.ntu.edu.tw/',
-    domain: 'ntu.edu.tw',
+    nameKey: 'resources.site.tais',
+    url: 'https://www.tais.gov.tw/',
+    domain: 'tais.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.tais',
   },
   {
-    nameKey: 'resources.site.nthu',
-    url: 'https://www.nthu.edu.tw/',
-    domain: 'nthu.edu.tw',
+    nameKey: 'resources.site.tais.crops',
+    url: 'https://www.tais.gov.tw/ws.php?id=1',
+    domain: 'tais.gov.tw',
   },
   {
-    nameKey: 'resources.site.nycu',
-    url: 'https://www.nycu.edu.tw/',
-    domain: 'nycu.edu.tw',
+    nameKey: 'resources.site.tais.livestock',
+    url: 'https://www.tais.gov.tw/ws.php?id=2',
+    domain: 'tais.gov.tw',
   },
   {
-    nameKey: 'resources.site.ncku',
-    url: 'https://web.ncku.edu.tw/',
-    domain: 'ncku.edu.tw',
+    nameKey: 'resources.site.tais.fisheries',
+    url: 'https://www.tais.gov.tw/ws.php?id=3',
+    domain: 'tais.gov.tw',
   },
   {
-    nameKey: 'resources.site.nccu',
-    url: 'https://www.nccu.edu.tw/',
-    domain: 'nccu.edu.tw',
+    nameKey: 'resources.site.afrec',
+    url: 'https://www.afrec.gov.tw/',
+    domain: 'afrec.gov.tw',
   },
   {
-    nameKey: 'resources.site.ntnu',
-    url: 'https://www.ntnu.edu.tw/',
-    domain: 'ntnu.edu.tw',
+    nameKey: 'resources.site.afrec.tainan',
+    url: 'https://tainan.afrec.gov.tw/',
+    domain: 'afrec.gov.tw',
   },
   {
-    nameKey: 'resources.site.sinica',
-    url: 'https://www.sinica.edu.tw/',
-    domain: 'sinica.edu.tw',
+    nameKey: 'resources.site.afrec.chiayi',
+    url: 'https://chiayi.afrec.gov.tw/',
+    domain: 'afrec.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.afrec.taichung',
+    url: 'https://taichung.afrec.gov.tw/',
+    domain: 'afrec.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.afrec.kaohsiung',
+    url: 'https://kaohsiung.afrec.gov.tw/',
+    domain: 'afrec.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.tfri',
+    url: 'https://www.tfri.gov.tw/',
+    domain: 'tfri.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.fric',
+    url: 'https://www.fric.gov.tw/',
+    domain: 'fric.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.kktrdc',
+    url: 'https://www.kktrdc.org.tw/',
+    domain: 'kktrdc.org.tw',
+  },
+  {
+    nameKey: 'resources.site.niaes',
+    url: 'https://www.niaes.org.tw/',
+    domain: 'niaes.org.tw',
+  },
+  {
+    nameKey: 'resources.site.aspc',
+    url: 'https://www.aspc.org.tw/',
+    domain: 'aspc.org.tw',
+  },
+];
+
+// Subcategory 2.2: 農業科技與創新 (Agricultural Technology & Innovation)
+export const agriTechInnovation: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.aait',
+    url: 'https://www.aait.org.tw/',
+    domain: 'aait.org.tw',
+  },
+  {
+    nameKey: 'resources.site.isia',
+    url: 'https://www.isia.org.tw/',
+    domain: 'isia.org.tw',
   },
   {
     nameKey: 'resources.site.tesd',
@@ -589,14 +468,14 @@ export const cultureUniversities: ResourceSite[] = [
     domain: 'tesd.survey.sinica.edu.tw',
   },
   {
-    nameKey: 'resources.site.tcs',
-    url: 'https://crctaiwan.dcat.nycu.edu.tw/index.asp',
-    domain: 'crctaiwan.dcat.nycu.edu.tw',
+    nameKey: 'resources.site.coa.smartagri',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=smartfarm',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.brill',
-    url: 'https://referenceworks.brill.com/display/db/etso',
-    domain: 'referenceworks.brill.com',
+    nameKey: 'resources.site.nstc',
+    url: 'https://www.nstc.gov.tw/',
+    domain: 'nstc.gov.tw',
   },
   {
     nameKey: 'resources.site.itri',
@@ -604,583 +483,430 @@ export const cultureUniversities: ResourceSite[] = [
     domain: 'itri.org.tw',
   },
   {
-    nameKey: 'resources.site.niar',
-    url: 'https://www.niar.org.tw/',
-    domain: 'niar.org.tw',
-  },
-  {
-    nameKey: 'resources.site.airitilibrary',
-    url: 'https://www.airitilibrary.com/',
-    domain: 'airitilibrary.com',
-  },
-  {
-    nameKey: 'resources.site.ndltd',
-    url: 'https://ndltd.ncl.edu.tw',
-    domain: 'ndltd.ncl.edu.tw',
+    nameKey: 'resources.site.nia',
+    url: 'https://www.nia.org.tw/',
+    domain: 'nia.org.tw',
   },
 ];
 
-export const cultureMuseums: ResourceSite[] = [
+// Subcategory 2.3: 農業推廣與教育 (Agricultural Extension & Education)
+export const agriTechExtension: ResourceSite[] = [
   {
-    nameKey: 'resources.site.ncl',
-    url: 'https://www.ncl.edu.tw/',
-    domain: 'ncl.edu.tw',
-    featured: true,
-    descKey: 'resources.featured.ncl',
+    nameKey: 'resources.site.coa.extension',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=extension',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.npm',
-    url: 'https://www.npm.gov.tw/',
-    domain: 'npm.gov.tw',
-    featured: true,
-    descKey: 'resources.featured.npm',
+    nameKey: 'resources.site.ttsdcc.chiayi.ext',
+    url: 'https://chiayi.ttsdcc.org.tw/education',
+    domain: 'ttsdcc.org.tw',
   },
   {
-    nameKey: 'resources.site.ntm',
-    url: 'https://www.ntm.gov.tw/',
-    domain: 'ntm.gov.tw',
+    nameKey: 'resources.site.coa.nagu',
+    url: 'https://www.nagu.org.tw/',
+    domain: 'nagu.org.tw',
   },
   {
-    nameKey: 'resources.site.nmth',
-    url: 'https://www.nmth.gov.tw/',
-    domain: 'nmth.gov.tw',
+    nameKey: 'resources.site.tca',
+    url: 'https://www.tca.org.tw/',
+    domain: 'tca.org.tw',
   },
   {
-    nameKey: 'resources.site.nmns',
-    url: 'https://www.nmns.edu.tw/ch/',
-    domain: 'nmns.edu.tw',
+    nameKey: 'resources.site.wda',
+    url: 'https://www.wda.org.tw/',
+    domain: 'wda.org.tw',
   },
   {
-    nameKey: 'resources.site.nmmba',
-    url: 'https://www.nmmba.gov.tw/',
-    domain: 'nmmba.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.nmtl',
-    url: 'https://www.nmtl.gov.tw/',
-    domain: 'nmtl.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.ntmofa',
-    url: 'https://www.ntmofa.gov.tw/',
-    domain: 'ntmofa.gov.tw',
+    nameKey: 'resources.site.tua',
+    url: 'https://www.tua.org.tw/',
+    domain: 'tua.org.tw',
   },
 ];
 
-export const cultureVenues: ResourceSite[] = [
+// ─── Chapter 3: 農產品行銷與銷售 (Agricultural Marketing & Sales) ───
+
+// Subcategory 3.1: 線上銷售平台 (Online Sales Platforms)
+export const agriMarketingOnline: ResourceSite[] = [
   {
-    nameKey: 'resources.site.tfam',
-    url: 'https://www.tfam.museum/',
-    domain: 'tfam.museum',
+    nameKey: 'resources.site.coa.market',
+    url: 'https://www.coa.gov.tw/ws.php?id=2449',
+    domain: 'coa.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.coa.market',
   },
   {
-    nameKey: 'resources.site.kmfa',
-    url: 'https://www.kmfa.gov.tw/',
-    domain: 'kmfa.gov.tw',
+    nameKey: 'resources.site.coa.trade',
+    url: 'https://trade.coa.gov.tw/',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.npacNtt',
-    url: 'https://www.npac-ntt.org/',
-    domain: 'npac-ntt.org',
+    nameKey: 'resources.site.shopee',
+    url: 'https://shopee.tw/',
+    domain: 'shopee.tw',
   },
   {
-    nameKey: 'resources.site.npacNtch',
-    url: 'https://npac-ntch.org/zh',
-    domain: 'npac-ntch.org',
+    nameKey: 'resources.site.shopee.farm',
+    url: 'https://shopee.tw/cat.8010146',
+    domain: 'shopee.tw',
   },
   {
-    nameKey: 'resources.site.weiwuying',
-    url: 'https://www.npac-weiwuying.org/',
-    domain: 'npac-weiwuying.org',
+    nameKey: 'resources.site.pchome',
+    url: 'https://www.pchome.com.tw/',
+    domain: 'pchome.com.tw',
   },
   {
-    nameKey: 'resources.site.songshan',
-    url: 'https://www.songshanculturalpark.org/',
-    domain: 'songshanculturalpark.org',
+    nameKey: 'resources.site.momo',
+    url: 'https://www.momoshop.com.tw/',
+    domain: 'momoshop.com.tw',
   },
   {
-    nameKey: 'resources.site.huashan',
-    url: 'https://www.huashan1914.com/',
-    domain: 'huashan1914.com',
+    nameKey: 'resources.site.momo.farm',
+    url: 'https://www.momoshop.com.tw/category/DgrpGrp/7003010001.html',
+    domain: 'momoshop.com.tw',
   },
   {
-    nameKey: 'resources.site.pier2',
-    url: 'https://pier2.org/',
-    domain: 'pier2.org',
+    nameKey: 'resources.site.77fresh',
+    url: 'https://www.77fresh.com/',
+    domain: '77fresh.com',
   },
   {
-    nameKey: 'resources.site.digitalArchives',
-    url: 'https://digitalarchives.tw/',
-    domain: 'digitalarchives.tw',
+    nameKey: 'resources.site.gomaji',
+    url: 'https://www.gomaji.com/',
+    domain: 'gomaji.com',
   },
   {
-    nameKey: 'resources.site.scitechVista',
-    url: 'https://scitechvista.nat.gov.tw/',
-    domain: 'scitechvista.nat.gov.tw',
+    nameKey: 'resources.site.ezfresh',
+    url: 'https://www.ezfresh.com.tw/',
+    domain: 'ezfresh.com.tw',
   },
   {
-    nameKey: 'resources.site.tcmb',
-    url: 'https://tcmb.culture.tw/zh-tw',
-    domain: 'tcmb.culture.tw',
+    nameKey: 'resources.site.ibon',
+    url: 'https://www.ibon.tw/',
+    domain: 'ibon.tw',
   },
   {
-    nameKey: 'resources.site.taicca',
-    url: 'https://taicca.tw/',
-    domain: 'taicca.tw',
+    nameKey: 'resources.site.foodbank',
+    url: 'https://food.tw.aeon.com/',
+    domain: 'aeon.com',
   },
 ];
 
-export const cultureParks: ResourceSite[] = [
+// Subcategory 3.2: 直銷與市集 (Direct Sales & Markets)
+export const agriMarketingDirect: ResourceSite[] = [
   {
-    nameKey: 'resources.site.npgov',
-    url: 'https://np.cpami.gov.tw/',
-    domain: 'np.cpami.gov.tw',
-    featured: true,
-    descKey: 'resources.featured.npgov',
+    nameKey: 'resources.site.coa.market.direct',
+    url: 'https://www.coa.gov.tw/ws.php?id=2453',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.yushan',
-    url: 'https://www.ysnp.gov.tw/',
-    domain: 'ysnp.gov.tw',
+    nameKey: 'resources.site.ttsdcc.market',
+    url: 'https://www.ttsdcc.org.tw/web/Services.aspx?id=52',
+    domain: 'ttsdcc.org.tw',
   },
   {
-    nameKey: 'resources.site.taroko',
-    url: 'https://www.taroko.gov.tw/',
-    domain: 'taroko.gov.tw',
+    nameKey: 'resources.site.coa.farmers.market',
+    url: 'https://market.coa.gov.tw/',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.kenting',
-    url: 'https://www.ktnp.gov.tw/',
-    domain: 'ktnp.gov.tw',
+    nameKey: 'resources.site.huashan.market',
+    url: 'https://www.huashancreative.tw/',
+    domain: 'huashancreative.tw',
   },
   {
-    nameKey: 'resources.site.sheipa',
-    url: 'https://www.spnp.gov.tw/',
-    domain: 'spnp.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.yangmingshan',
-    url: 'https://www.ymsnp.gov.tw/',
-    domain: 'ymsnp.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.kinmenPark',
-    url: 'https://www.kmnp.gov.tw/',
-    domain: 'kmnp.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.taijiang',
-    url: 'https://www.tjnp.gov.tw/',
-    domain: 'tjnp.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.dongsha',
-    url: 'https://www.marine.gov.tw/',
-    domain: 'marine.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.southPenghu',
-    url: 'https://www.marine.gov.tw/',
-    domain: 'marine.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.taiwanTourism',
-    url: 'https://eng.taiwan.net.tw/',
-    domain: 'eng.taiwan.net.tw',
-  },
-  {
-    nameKey: 'resources.site.sunMoonLake',
-    url: 'https://www.sunmoonlake.gov.tw/',
-    domain: 'sunmoonlake.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.alishan',
-    url: 'https://www.ali-nsa.net/',
-    domain: 'ali-nsa.net',
-  },
-];
-
-// ─── Chapter 3: Media ───
-export const mediaMainstream: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.cna',
-    url: 'https://www.cna.com.tw',
-    domain: 'cna.com.tw',
-  },
-  {
-    nameKey: 'resources.site.ptsNews',
-    url: 'https://news.pts.org.tw/',
-    domain: 'news.pts.org.tw',
-    featured: true,
-    descKey: 'resources.featured.ptsNews',
-  },
-  {
-    nameKey: 'resources.site.pts',
-    url: 'https://www.pts.org.tw/',
-    domain: 'pts.org.tw',
-  },
-  {
-    nameKey: 'resources.site.focusTaiwan',
-    url: 'https://focustaiwan.tw/',
-    domain: 'focustaiwan.tw',
-  },
-  {
-    nameKey: 'resources.site.taiwanToday',
-    url: 'https://www.taiwantoday.tw/',
-    domain: 'taiwantoday.tw',
-  },
-  {
-    nameKey: 'resources.site.panorama',
-    url: 'https://www.taiwan-panorama.com/',
-    domain: 'taiwan-panorama.com',
-  },
-  {
-    nameKey: 'resources.site.rti',
-    url: 'https://www.rti.org.tw/',
-    domain: 'rti.org.tw',
-  },
-  { nameKey: 'resources.site.udn', url: 'https://udn.com/', domain: 'udn.com' },
-  {
-    nameKey: 'resources.site.ltn',
-    url: 'https://www.ltn.com.tw/',
-    domain: 'ltn.com.tw',
-  },
-  {
-    nameKey: 'resources.site.tvbs',
-    url: 'https://news.tvbs.com.tw/',
-    domain: 'news.tvbs.com.tw',
-  },
-  {
-    nameKey: 'resources.site.setn',
-    url: 'https://www.setn.com/',
-    domain: 'setn.com',
-  },
-  {
-    nameKey: 'resources.site.ebc',
-    url: 'https://news.ebc.net.tw/',
-    domain: 'news.ebc.net.tw',
-  },
-  {
-    nameKey: 'resources.site.commonwealth',
-    url: 'https://www.cw.com.tw/',
-    domain: 'cw.com.tw',
-  },
-  {
-    nameKey: 'resources.site.businesstoday',
-    url: 'https://www.businesstoday.com.tw/',
-    domain: 'businesstoday.com.tw',
-  },
-  {
-    nameKey: 'resources.site.businessweekly',
-    url: 'https://www.businessweekly.com.tw/',
-    domain: 'businessweekly.com.tw',
-  },
-];
-
-export const mediaDigital: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.twreporter',
-    url: 'https://www.twreporter.org/',
-    domain: 'twreporter.org',
-    featured: true,
-    descKey: 'resources.featured.twreporter',
-  },
-  {
-    nameKey: 'resources.site.ptt',
-    url: 'https://www.ptt.cc/',
-    domain: 'ptt.cc',
-    featured: true,
-    descKey: 'resources.featured.ptt',
-  },
-  {
-    nameKey: 'resources.site.taiwanNews',
-    url: 'https://www.taiwannews.com.tw/',
-    domain: 'taiwannews.com.tw',
-  },
-  {
-    nameKey: 'resources.site.thenewslens',
-    url: 'https://www.thenewslens.com/',
-    domain: 'thenewslens.com',
-  },
-  {
-    nameKey: 'resources.site.upmedia',
-    url: 'https://www.upmedia.mg/',
-    domain: 'upmedia.mg',
-  },
-  {
-    nameKey: 'resources.site.storm',
-    url: 'https://www.storm.mg/',
-    domain: 'storm.mg',
-  },
-];
-
-export const mediaNgo: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.tahr',
-    url: 'https://www.tahr.org.tw/',
-    domain: 'tahr.org.tw',
-  },
-  {
-    nameKey: 'resources.site.teia',
-    url: 'https://teia.tw/',
-    domain: 'teia.tw',
-  },
-  {
-    nameKey: 'resources.site.sow',
-    url: 'https://www.sow.org.tw/',
-    domain: 'sow.org.tw',
-  },
-  { nameKey: 'resources.site.ocf', url: 'https://ocf.tw/', domain: 'ocf.tw' },
-  {
-    nameKey: 'resources.site.tfc',
-    url: 'https://tfc-taiwan.org.tw/',
-    domain: 'tfc-taiwan.org.tw',
-  },
-  {
-    nameKey: 'resources.site.twnic',
-    url: 'https://www.twnic.net.tw/',
-    domain: 'twnic.net.tw',
-  },
-  {
-    nameKey: 'resources.site.wikimedia',
-    url: 'https://wikimedia.tw/',
-    domain: 'wikimedia.tw',
-  },
-  {
-    nameKey: 'resources.site.digitalDiplomacy',
-    url: 'https://www.digitaldiplomacy.tw/',
-    domain: 'digitaldiplomacy.tw',
-  },
-];
-
-// ─── Chapter 4: Economy ───
-export const econCompanies: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.tsmc',
-    url: 'https://www.tsmc.com/chinese',
-    domain: 'tsmc.com',
-    featured: true,
-    descKey: 'resources.featured.tsmc',
-  },
-  {
-    nameKey: 'resources.site.umc',
-    url: 'https://www.umc.com/',
-    domain: 'umc.com',
-  },
-  {
-    nameKey: 'resources.site.foxconn',
-    url: 'https://www.foxconn.com/',
-    domain: 'foxconn.com',
-  },
-  {
-    nameKey: 'resources.site.delta',
-    url: 'https://www.deltaww.com/',
-    domain: 'deltaww.com',
-  },
-  {
-    nameKey: 'resources.site.taiwanExcellence',
-    url: 'https://www.taiwanexcellence.org/en',
-    domain: 'taiwanexcellence.org',
-  },
-  {
-    nameKey: 'resources.site.cht',
-    url: 'https://www.cht.com.tw/',
-    domain: 'cht.com.tw',
-  },
-  {
-    nameKey: 'resources.site.taipower',
-    url: 'https://www.taipower.com.tw/',
-    domain: 'taipower.com.tw',
-  },
-  {
-    nameKey: 'resources.site.iii',
-    url: 'https://www.iii.org.tw/',
-    domain: 'iii.org.tw',
-  },
-  {
-    nameKey: 'resources.site.investTaiwan',
-    url: 'https://investtaiwan.nat.gov.tw/',
-    domain: 'investtaiwan.nat.gov.tw',
-  },
-];
-
-export const econTransport: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.railway',
-    url: 'https://www.railway.gov.tw/tra-tip-web/tip',
-    domain: 'railway.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.thsrc',
-    url: 'https://www.thsrc.com.tw/',
-    domain: 'thsrc.com.tw',
-  },
-  {
-    nameKey: 'resources.site.taiwanTrip',
-    url: 'https://www.taiwantrip.com.tw/',
-    domain: 'taiwantrip.com.tw',
-  },
-  {
-    nameKey: 'resources.site.taoyuanAirport',
-    url: 'https://www.taoyuan-airport.com/',
-    domain: 'taoyuan-airport.com',
-  },
-  {
-    nameKey: 'resources.site.metroTaipei',
-    url: 'https://www.metro.taipei/',
-    domain: 'metro.taipei',
-  },
-  {
-    nameKey: 'resources.site.krtc',
-    url: 'https://www.krtco.com.tw/',
-    domain: 'krtco.com.tw',
-  },
-];
-
-export const econHealth: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.cdc',
-    url: 'https://www.cdc.gov.tw/',
-    domain: 'cdc.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.nhi',
-    url: 'https://www.nhi.gov.tw/',
-    domain: 'nhi.gov.tw',
-    featured: true,
-    descKey: 'resources.featured.nhi',
-  },
-  {
-    nameKey: 'resources.site.ntuh',
-    url: 'https://www.ntuh.gov.tw/ntuh/Index.action',
-    domain: 'ntuh.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.vghtpe',
-    url: 'https://www.vghtpe.gov.tw/',
-    domain: 'vghtpe.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.cgmh',
-    url: 'https://www.cgmh.org.tw/',
-    domain: 'cgmh.org.tw',
-  },
-  {
-    nameKey: 'resources.site.cmuh',
-    url: 'https://www.cmuh.cmu.edu.tw/',
-    domain: 'cmuh.cmu.edu.tw',
-  },
-  {
-    nameKey: 'resources.site.kmuh',
-    url: 'https://www.kmuh.org.tw/',
-    domain: 'kmuh.org.tw',
-  },
-];
-
-export const econFinance: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.stat',
-    url: 'https://www.stat.gov.tw/',
-    domain: 'stat.gov.tw',
-  },
-  {
-    nameKey: 'resources.site.twse',
-    url: 'https://www.twse.com.tw/',
-    domain: 'twse.com.tw',
-    featured: true,
-    descKey: 'resources.featured.twse',
-  },
-  {
-    nameKey: 'resources.site.tpex',
-    url: 'https://www.tpex.org.tw/',
-    domain: 'tpex.org.tw',
-  },
-];
-
-// ─── Chapter 5: Community ───
-export const communityProjects: ResourceSite[] = [
-  {
-    nameKey: 'resources.site.g0v',
-    url: 'https://g0v.tw/',
-    domain: 'g0v.tw',
-    featured: true,
-    descKey: 'resources.featured.g0v',
-  },
-  {
-    nameKey: 'resources.site.cofacts',
-    url: 'https://cofacts.tw/',
-    domain: 'cofacts.tw',
-    featured: true,
-    descKey: 'resources.featured.cofacts',
-  },
-  {
-    nameKey: 'resources.site.disfactory',
-    url: 'https://disfactory.tw/',
-    domain: 'disfactory.tw',
-  },
-  {
-    nameKey: 'resources.site.electionMap',
-    url: 'https://votes.tw/',
-    domain: 'votes.tw',
-  },
-  {
-    nameKey: 'resources.site.maskMap',
-    url: 'https://kiang.github.io/pharmacies/',
-    domain: 'kiang.github.io',
-  },
-  {
-    nameKey: 'resources.site.goodinfo',
-    url: 'https://goodinfo.tw/',
-    domain: 'goodinfo.tw',
-  },
-  {
-    nameKey: 'resources.site.ccw',
-    url: 'https://www.ccw.org.tw/',
+    nameKey: 'resources.site.taipei.agri.market',
+    url: 'https://www.ccw.org.tw/agriculture_market',
     domain: 'ccw.org.tw',
   },
   {
-    nameKey: 'resources.site.thaubing',
-    url: 'https://thaubing.gcaa.org.tw/',
-    domain: 'thaubing.gcaa.org.tw',
+    nameKey: 'resources.site.coa.organic.market',
+    url: 'https://www.coa.gov.tw/ws.php?id=2465',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.politicalDonation',
-    url: 'https://campaign-finance.g0v.ronny.tw/',
-    domain: 'campaign-finance.g0v.ronny.tw',
+    nameKey: 'resources.site.csf',
+    url: 'https://www.csf.org.tw/',
+    domain: 'csf.org.tw',
+  },
+];
+
+// Subcategory 3.3: 認證與品牌建立 (Certification & Branding)
+export const agriMarketingCertification: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.coa.organic',
+    url: 'https://www.coa.gov.tw/ws.php?id=2461',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.taiwanmd',
-    url: 'https://taiwan.md/',
-    domain: 'taiwan.md',
+    nameKey: 'resources.site.coa.gis',
+    url: 'https://www.coa.gov.tw/ws.php?id=2462',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.traceability',
+    url: 'https://www.coa.gov.tw/ws.php?id=2466',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.fsq',
+    url: 'https://www.coa.gov.tw/ws.php?id=2467',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.good.agricultural',
+    url: 'https://www.coa.gov.tw/ws.php?id=2468',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.ttasia',
+    url: 'https://www.ttasia.org.tw/',
+    domain: 'ttasia.org.tw',
+  },
+  {
+    nameKey: 'resources.site.tactcc',
+    url: 'https://www.tactcc.org.tw/',
+    domain: 'tactcc.org.tw',
+  },
+  {
+    nameKey: 'resources.site.sgs',
+    url: 'https://www.sgsgroup.com.tw/',
+    domain: 'sgsgroup.com.tw',
+  },
+];
+
+// ─── Chapter 4: 融資與補助資源 (Financing & Subsidy Resources) ───
+
+// Subcategory 4.1: 農業融資管道 (Agricultural Financing Channels)
+export const agriFinanceChannels: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.acgf',
+    url: 'https://www.acgf.org.tw/',
+    domain: 'acgf.org.tw',
     featured: true,
-    descKey: 'resources.featured.taiwanmd',
+    descKey: 'resources.featured.acgf',
+  },
+  {
+    nameKey: 'resources.site.coa.finance',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=finance',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.boafroc',
+    url: 'https://www.boafroc.org.tw/',
+    domain: 'boafroc.org.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.farmland',
+    url: 'https://www.coa.gov.tw/ws.php?id=2471',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.fsc',
+    url: 'https://www.fsc.gov.tw/',
+    domain: 'fsc.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.ttua',
+    url: 'https://www.ttua.org.tw/',
+    domain: 'ttua.org.tw',
+  },
+  {
+    nameKey: 'resources.site.cyhga.bank',
+    url: 'https://www.cyhg.org.tw/',
+    domain: 'cyhg.org.tw',
+  },
+  {
+    nameKey: 'resources.site.chiayi.bank',
+    url: 'https://www.cyhbank.com.tw/',
+    domain: 'cyhbank.com.tw',
   },
 ];
 
-export const communityFood: ResourceSite[] = [
+// Subcategory 4.2: 政府補助計畫 (Government Subsidy Programs)
+export const agriFinanceSubsidy: ResourceSite[] = [
   {
-    nameKey: 'resources.site.burgerMap',
-    url: 'https://hsieh-george.github.io/taipei-burger-map/',
-    domain: 'hsieh-george.github.io',
+    nameKey: 'resources.site.coa.subsidy',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=subsidy',
+    domain: 'coa.gov.tw',
   },
   {
-    nameKey: 'resources.site.nightMarket',
-    url: 'https://github.com/hsiu0305/NightMarketSwift',
-    domain: 'github.com',
+    nameKey: 'resources.site.coa.subsidy.direct',
+    url: 'https://subsidy.coa.gov.tw/',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.cyhg.subsidy',
+    url: 'https://www.cyhg.gov.tw/cp.aspx?n=7889',
+    domain: 'cyhg.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.chiayicity.subsidy',
+    url: 'https://www.chiayi.gov.tw/cp.aspx?n=7889',
+    domain: 'chiayi.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.ttsdcc.subsidy',
+    url: 'https://www.ttsdcc.org.tw/Services.aspx?id=14',
+    domain: 'ttsdcc.org.tw',
+  },
+  {
+    nameKey: 'resources.site.smeportal',
+    url: 'https://smeportal.moeaboe.gov.tw/',
+    domain: 'moeaboe.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.moea.subsidy',
+    url: 'https://www.moea.gov.tw/',
+    domain: 'moea.gov.tw',
   },
 ];
 
-// ─── Taiwan.md Links (footer) ───
-export const taiwanmdLinks: ResourceSite[] = [
+// Subcategory 4.3: 農業保險 (Agricultural Insurance)
+export const agriFinanceInsurance: ResourceSite[] = [
   {
-    nameKey: 'resources.site.github',
-    url: 'https://github.com/frank890417/taiwan-md',
-    domain: 'github.com',
+    nameKey: 'resources.site.moa.insurance',
+    url: 'https://www.moa.gov.tw/theme_list.php?theme=insurance',
+    domain: 'moa.gov.tw',
   },
   {
-    nameKey: 'resources.site.contribute',
-    url: '/contribute',
-    domain: 'taiwan.md',
+    nameKey: 'resources.site.coa.insurance',
+    url: 'https://www.coa.gov.tw/ws.php?id=2474',
+    domain: 'coa.gov.tw',
   },
-  { nameKey: 'resources.site.rss', url: '/rss.xml', domain: 'taiwan.md' },
+  {
+    nameKey: 'resources.site.tai',
+    url: 'https://www.taii.org.tw/',
+    domain: 'taii.org.tw',
+  },
+  {
+    nameKey: 'resources.site.tmn',
+    url: 'https://www.tmn.com.tw/',
+    domain: 'tmn.com.tw',
+  },
+  {
+    nameKey: 'resources.site.chinalife',
+    url: 'https://www.chinalife.com.tw/',
+    domain: 'chinalife.com.tw',
+  },
+  {
+    nameKey: 'resources.site.cathay',
+    url: 'https://www.cathayins.com.tw/',
+    domain: 'cathayins.com.tw',
+  },
+];
+
+// ─── Chapter 5: 水資源與環境永續 (Water Resources & Environmental Sustainability) ───
+
+// Subcategory 5.1: 水資源管理 (Water Resource Management)
+export const agriSustainabilityWater: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.swcb.water',
+    url: 'https://www.swcb.gov.tw/',
+    domain: 'swcb.gov.tw',
+    featured: true,
+    descKey: 'resources.featured.swcb.water',
+  },
+  {
+    nameKey: 'resources.site.swcb.chiayi',
+    url: 'https://chiayi.swcb.gov.tw/',
+    domain: 'swcb.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.wra',
+    url: 'https://www.wra.gov.tw/',
+    domain: 'wra.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.wra.chiayi',
+    url: 'https://chiayi.wra.gov.tw/',
+    domain: 'wra.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.itri.water',
+    url: 'https://www.itri.org.tw/chi/Services/Service01/Service0103.aspx',
+    domain: 'itri.org.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.water',
+    url: 'https://www.coa.gov.tw/ws.php?id=2476',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.moenv.water',
+    url: 'https://www.moenv.gov.tw/Page/8081DE39812DD5A7/8e0ff38b-eade-4c0a-87c8-5fb1c2c0e84e',
+    domain: 'moenv.gov.tw',
+  },
+];
+
+// Subcategory 5.2: 友善農業與認證 (Sustainable Farming & Certification)
+export const agriSustainabilityOrganic: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.coa.organic',
+    url: 'https://www.coa.gov.tw/ws.php?id=2461',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.ecofarm',
+    url: 'https://www.coa.gov.tw/ws.php?id=2477',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.moenv.ecolabel',
+    url: 'https://www.moenv.gov.tw/Page/BB32E3DE2F09B2FA/18f48f2c-c82a-439f-919e-8c8cd8a6cb62',
+    domain: 'moenv.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.tactcc.organic',
+    url: 'https://www.tactcc.org.tw/w/xmdoc/ct_id-18.html',
+    domain: 'tactcc.org.tw',
+  },
+  {
+    nameKey: 'resources.site.toaff',
+    url: 'https://www.toaff.org.tw/',
+    domain: 'toaff.org.tw',
+  },
+  {
+    nameKey: 'resources.site.ttasn',
+    url: 'https://www.ttasn.org.tw/',
+    domain: 'ttasn.org.tw',
+  },
+];
+
+// Subcategory 5.3: 氣候調適資源 (Climate Adaptation Resources)
+export const agriSustainabilityClimate: ResourceSite[] = [
+  {
+    nameKey: 'resources.site.cwa',
+    url: 'https://www.cwa.gov.tw/',
+    domain: 'cwa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.cwa.agri',
+    url: 'https://www.cwa.gov.tw/V8/C/K/agriculture.html',
+    domain: 'cwa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.climate',
+    url: 'https://www.coa.gov.tw/ws.php?id=2478',
+    domain: 'coa.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.moenv.climate',
+    url: 'https://www.moenv.gov.tw/Page/207AFCE84AAFF4FD',
+    domain: 'moenv.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.nstc.climate',
+    url: 'https://www.nstc.gov.tw/',
+    domain: 'nstc.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.tais.pest',
+    url: 'https://www.tais.gov.tw/ws.php?id=1151',
+    domain: 'tais.gov.tw',
+  },
+  {
+    nameKey: 'resources.site.coa.disaster',
+    url: 'https://www.coa.gov.tw/theme_list.php?theme=disaster',
+    domain: 'coa.gov.tw',
+  },
 ];

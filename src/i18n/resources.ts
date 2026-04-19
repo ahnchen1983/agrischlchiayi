@@ -1012,5 +1012,277 @@ export const resourcesUI = {
     'resources.site.ptsNews': '公視新聞網',
     'resources.site.npgov': '國家公園入口網',
     'resources.site.taiwanmd': 'Taiwan.md',
+
+    // ───────────────────────────────────────────
+    // AGRICULTURAL RESOURCES (Traditional Chinese)
+    // ───────────────────────────────────────────
+
+    // Category labels (農業資源5大分類)
+    'resources.category.agri.governance.label': '🌾 農業行政',
+    'resources.category.agri.technology.label': '🔬 技術研發',
+    'resources.category.agri.marketing.label': '📦 行銷銷售',
+    'resources.category.agri.finance.label': '💰 融資補助',
+    'resources.category.agri.sustainability.label': '🌍 永續資源',
+
+    // Chapter navigation labels
+    'resources.nav.agriGovernance': '農業行政',
+    'resources.nav.agriTechnology': '技術推廣',
+    'resources.nav.agriMarketing': '行銷銷售',
+    'resources.nav.agriFinance': '融資補助',
+    'resources.nav.agriSustainability': '永續資源',
+
+    // Chapter 1: Agricultural Administration & Management
+    'resources.chapter.agri.governance.title': '農業行政與管理',
+    'resources.chapter.agri.governance.story':
+      '嘉義是台灣農業重鎮。從農業部的政策制定到農改場的田間技術指導，從嘉義縣政府農業處的地方補助到水土保持局的灌溉管理，一套完整的農業支援體系正默默支撐著農民的日常決策。這不只是政府機構的堆砌，而是每一位農民都能直接獲取的資源。',
+
+    // Chapter 2: Technical R&D & Promotion
+    'resources.chapter.agri.technology.title': '技術研發與推廣',
+    'resources.chapter.agri.technology.story':
+      '台灣農業研究機構全球領先。從農業試驗所的新品種開發，到農改場紮根地方的技術輔導，再到農科院推動的智慧農業，一代代農業科學家正在用數據、用科技、用對話來重新定義「種田」的意義。',
+
+    // Chapter 3: Agricultural Marketing & Sales
+    'resources.chapter.agri.marketing.title': '農產品行銷與銷售',
+    'resources.chapter.agri.marketing.story':
+      '一顆葡萄柚從嘉義的果園到消費者的餐桌，過程比你想的還複雜。但現在，農民不再只能靠盤商，電商平台、直銷市集、有機認証，每一道通路都在給農民新的選擇。品質、認證、品牌，農產品正在被重新定義。',
+
+    // Chapter 4: Financing & Subsidy Resources
+    'resources.chapter.agri.finance.title': '融資與補助資源',
+    'resources.chapter.agri.finance.story':
+      '農業投資需要龐大資金，但農民常常被銀行拒絕。農業信用保證基金、政府補助計畫、農業保險，這些機制讓資金流向田地。一個好的想法、一份詳細的計畫，農民現在可以獲得專業的融資支持。',
+
+    // Chapter 5: Water & Environmental Sustainability
+    'resources.chapter.agri.sustainability.title': '水資源與環境永續',
+    'resources.chapter.agri.sustainability.story':
+      '水是農業的生命線。從灌溉水權的管理，到友善農業的實踐，再到氣候變遷的調適，農民正在學習如何與大地和平共處。永續不是選項，而是未來農業的基本功。',
+
+    // Section titles & descriptions
+    'resources.section.agriCentral.title': '🏛️ 中央農業部會',
+    'resources.section.agriCentral.desc': '農業部及所屬試驗場所、水土保持與漁業機構',
+
+    'resources.section.agriLocal.title': '🏙️ 地方農業單位',
+    'resources.section.agriLocal.desc': '嘉義及其他縣市政府農業相關單位、農改場',
+
+    'resources.section.agriPolicy.title': '📋 農業法規與政策',
+    'resources.section.agriPolicy.desc': '農地利用、農業發展條例等政策資訊',
+
+    'resources.section.agriResearch.title': '🔬 農業試驗研究機構',
+    'resources.section.agriResearch.desc': '農業試驗所、農改場、林試所、漁試所等研究單位',
+
+    'resources.section.agriInnovation.title': '💡 農業科技與創新',
+    'resources.section.agriInnovation.desc': '智慧農業、農業科技決策團隊、創新平台',
+
+    'resources.section.agriExtension.title': '👨‍🌾 農業推廣與教育',
+    'resources.section.agriExtension.desc': '農業推廣教育課程、工作坊、技術指導',
+
+    'resources.section.agriOnline.title': '🛒 線上銷售平台',
+    'resources.section.agriOnline.desc': '農民可上架販售的電商平台',
+
+    'resources.section.agriDirect.title': '🌾 直銷與市集',
+    'resources.section.agriDirect.desc': '農民市集、直銷通路、合作社',
+
+    'resources.section.agriCertification.title': '✅ 認證與品牌建立',
+    'resources.section.agriCertification.desc': '有機認證、地理標誌、產銷履歷認證',
+
+    'resources.section.agriLending.title': '🏦 農業融資管道',
+    'resources.section.agriLending.desc': '農業信用保證、農地銀行、農漁會信用部',
+
+    'resources.section.agriSubsidy.title': '💚 政府補助計畫',
+    'resources.section.agriSubsidy.desc': '各類農業補助申請窗口、計畫資訊',
+
+    'resources.section.agriInsurance.title': '🛡️ 農業保險',
+    'resources.section.agriInsurance.desc': '作物保險、生產成本保險、價格保險',
+
+    'resources.section.agriWater.title': '💧 水資源管理',
+    'resources.section.agriWater.desc': '水利署、灌溉管理、水權申請',
+
+    'resources.section.agriOrganic.title': '🌱 友善農業與認證',
+    'resources.section.agriOrganic.desc': '有機農業認證、環保標章、生態認證',
+
+    'resources.section.agriClimate.title': '🌤️ 氣候調適資源',
+    'resources.section.agriClimate.desc': '天氣預報、災害防救、氣象資訊',
+
+    // Featured site descriptions (農業資源)
+    'resources.featured.moa': '台灣農業政策的最高指導機關，主管農業發展、農地利用與農民福利。',
+    'resources.featured.cyhg': '嘉義縣農業的推動者，提供地方補助、技術輔導與產銷服務。',
+    'resources.featured.fa': '防止農地違規使用的專責機構，保護台灣農地資源。',
+    'resources.featured.tais': '台灣農業科技的搖籃，農業試驗與改良的重要基地。',
+    'resources.featured.coa.market': '農業部農產品交易平台，連接農民與消費者的重要樞紐。',
+    'resources.featured.acgf': '農業信用的守門人，提供農民必需的融資保證與信用支持。',
+    'resources.featured.swcb.water': '台灣水資源與水土保持的主管機關，農業灌溉的關鍵單位。',
+
+    // Insight cards (農業資源)
+    'resources.insight.agri.ministries.number': '1',
+    'resources.insight.agri.ministries.label': '農業部',
+    'resources.insight.agri.changefarms.number': '8',
+    'resources.insight.agri.changefarms.label': '農改場',
+    'resources.insight.agri.research.number': '15+',
+    'resources.insight.agri.research.label': '農業研究機構',
+
+    // Curator Notes (農業資源)
+    'resources.curator.agri.governance':
+      '🔍 農業政策看似複雜，但其實是有系統可循的。從農地取得、補助申請到技術輔導，每一步都有專責機構在支持農民。關鍵是知道去問誰。',
+    'resources.curator.agri.technology':
+      '🔍 台灣農業研究機構全球領先。從嘉義的果樹改良到雲林的水稻育種，這些看不見的工作正在塑造台灣農業的未來。',
+    'resources.curator.agri.marketing':
+      '🔍 農民過去只能透過盤商銷售，邊際利潤極低。現在，電商平台、農民市集、直銷通路打開了新世界。一個有品牌意識的農民，收入可以翻倍。',
+    'resources.curator.agri.finance':
+      '🔍 農業投資是長期投資，但銀行傳統上不相信農民。農業信用保證基金的出現，讓農民終於可以獲得像都市企業一樣的融資支持。',
+    'resources.curator.agri.sustainability':
+      '🔍 氣候變遷正在改變農業規則。從水旱災到新興病蟲害，農民需要的不只是過去的經驗，而是科學的監測、及時的資訊、彈性的政策支持。',
+
+    // Site names - Central Ministries (農業部及所屬)
+    'resources.site.moa.main': '農業部',
+    'resources.site.moa.crops': '農業部作物科',
+    'resources.site.moa.livestock': '農業部畜牧科',
+    'resources.site.moa.fisheries': '農業部漁業署',
+
+    'resources.site.trit': '農業試驗所',
+    'resources.site.trit.crops': '農業試驗所作物改良課',
+    'resources.site.trit.livestock': '農業試驗所畜牧課',
+    'resources.site.trit.fisheries': '農業試驗所漁業課',
+    'resources.site.trit.forestry': '農業試驗所林業課',
+
+    'resources.site.fa': '農地工程處',
+    'resources.site.swcb': '水土保持局',
+    'resources.site.afpa': '農業生產力提升辦公室',
+    'resources.site.nlsc': '國土測繪中心',
+    'resources.site.forestbureau': '農業部林業及自然保育署',
+
+    // Site names - Local Agricultural Units (地方農業單位)
+    'resources.site.cyhg': '嘉義縣政府',
+    'resources.site.cyhg.agri': '嘉義縣政府農業處',
+    'resources.site.chiayicity': '嘉義市政府',
+    'resources.site.chiayicity.agri': '嘉義市政府農業處',
+    'resources.site.ttsdcc': '台灣農業試驗所推廣中心',
+    'resources.site.ttsdcc.chiayi': '嘉義農改場',
+    'resources.site.tainan.agri': '台南市政府農業處',
+    'resources.site.yunlin.agri': '雲林縣政府農業處',
+    'resources.site.kaohsiung.agri': '高雄市政府農業局',
+    'resources.site.pingtung.agri': '屏東縣政府農業處',
+    'resources.site.taichung.agri': '台中市政府農業局',
+    'resources.site.nantou.agri': '南投縣政府農業處',
+
+    // Site names - Regulations & Policies (農業法規)
+    'resources.site.coa.law': '農業部法規',
+    'resources.site.lawdb.agri': '法律資料庫農業類',
+    'resources.site.moj.agri': '法務部',
+    'resources.site.coa.land': '農業部農地利用',
+    'resources.site.nladb': '國家土地使用分區資料庫',
+
+    // Site names - Research Institutions (農業研究機構)
+    'resources.site.tais': '農業試驗所',
+    'resources.site.tais.crops': '農業試驗所作物試驗課',
+    'resources.site.tais.livestock': '農業試驗所畜產試驗課',
+    'resources.site.tais.fisheries': '農業試驗所水產試驗課',
+
+    'resources.site.afrec': '農改場',
+    'resources.site.afrec.tainan': '台南農改場',
+    'resources.site.afrec.chiayi': '嘉義農改場',
+    'resources.site.afrec.taichung': '台中農改場',
+    'resources.site.afrec.kaohsiung': '高雄農改場',
+
+    'resources.site.tfri': '林業試驗所',
+    'resources.site.fric': '漁業試驗所',
+    'resources.site.kktrdc': '亞熱帶農業試驗站',
+    'resources.site.niaes': '農業環境科學研究所',
+    'resources.site.aspc': '蠶業改良場',
+
+    // Site names - Technology & Innovation (農業科技)
+    'resources.site.aait': '農業人工智慧技術研究中心',
+    'resources.site.isia': '農業科學素養教育研究中心',
+    'resources.site.coa.smartagri': '農業部智慧農業',
+    'resources.site.nia': '農業資訊網路研究中心',
+
+    // Site names - Extension & Education (農業推廣教育)
+    'resources.site.coa.extension': '農業部推廣教育',
+    'resources.site.ttsdcc.chiayi.ext': '嘉義農改場推廣教育',
+    'resources.site.coa.nagu': '農業技能認證中心',
+    'resources.site.tca': '台灣農業推廣協會',
+    'resources.site.wda': '農業新世代推廣協會',
+    'resources.site.tua': '台灣農業推廣協會',
+
+    // Site names - Online Sales Platforms (線上銷售平台)
+    'resources.site.coa.market': '農業部農產品交易平台',
+    'resources.site.coa.trade': '農產品交易平台',
+    'resources.site.shopee': 'Shopee',
+    'resources.site.shopee.farm': 'Shopee 農產品',
+    'resources.site.pchome': 'PChome 24h 購物',
+    'resources.site.momo': 'momo 購物網',
+    'resources.site.momo.farm': 'momo 農特產品',
+    'resources.site.77fresh': '7-FRESH 線上購物',
+    'resources.site.gomaji': 'gomaji',
+    'resources.site.ezfresh': '宅配通蔬果到府',
+    'resources.site.ibon': 'iBon 便利購',
+    'resources.site.foodbank': '食品貿易區',
+
+    // Site names - Direct Sales & Markets (直銷市集)
+    'resources.site.coa.market.direct': '農業部農民直銷資訊',
+    'resources.site.ttsdcc.market': '農改場農民市集',
+    'resources.site.coa.farmers.market': '全國農民市集查詢',
+    'resources.site.huashan.market': '華山 1914 農友市集',
+    'resources.site.taipei.agri.market': '台北農產品展銷',
+    'resources.site.coa.organic.market': '有機農業市集',
+    'resources.site.csf': '社區支持農業聯盟',
+
+    // Site names - Certification & Branding (認證與品牌)
+    'resources.site.coa.gis': '農產品地理標誌',
+    'resources.site.coa.traceability': '農產品產銷履歷',
+    'resources.site.coa.fsq': '農產品品質認證',
+    'resources.site.coa.good.agricultural': '優質農產品認証',
+    'resources.site.ttasia': '台灣農業認證推廣協會',
+    'resources.site.tactcc': '財團法人台灣農業標準學會',
+    'resources.site.sgs': 'SGS 台灣',
+
+    // Site names - Financing Channels (融資管道)
+    'resources.site.acgf': '農業信用保證基金',
+    'resources.site.coa.finance': '農業部融資資訊',
+    'resources.site.boafroc': '農業融資管道',
+    'resources.site.coa.farmland': '農地銀行資訊',
+    'resources.site.ttua': '台灣農業信貸協會',
+    'resources.site.cyhga.bank': '嘉義農業信用合作社',
+    'resources.site.chiayi.bank': '嘉義銀行農業融資',
+
+    // Site names - Subsidy Programs (補助計畫)
+    'resources.site.coa.subsidy': '農業部補助計畫',
+    'resources.site.coa.subsidy.direct': '農業補助申請查詢',
+    'resources.site.cyhg.subsidy': '嘉義縣農業補助',
+    'resources.site.chiayicity.subsidy': '嘉義市農業補助',
+    'resources.site.ttsdcc.subsidy': '農改場補助資訊',
+    'resources.site.smeportal': '中小企業網路大學校',
+    'resources.site.moea.subsidy': '經濟部補助計畫',
+
+    // Site names - Agricultural Insurance (農業保險)
+    'resources.site.moa.insurance': '農業保險資訊',
+    'resources.site.coa.insurance': '農業保險查詢',
+    'resources.site.tai': '台灣農業保險',
+    'resources.site.tmn': '泰安產物保險',
+    'resources.site.chinalife': '中國人壽保險',
+    'resources.site.cathay': '國泰產物保險',
+
+    // Site names - Water Resources (水資源)
+    'resources.site.swcb.water': '水土保持局',
+    'resources.site.swcb.chiayi': '嘉義水土保持工作站',
+    'resources.site.wra': '經濟部水資源署',
+    'resources.site.wra.chiayi': '嘉義水資源分站',
+    'resources.site.itri.water': '工研院水資源技術',
+    'resources.site.coa.water': '農業水資源管理',
+    'resources.site.moenv.water': '環境部水資源',
+
+    // Site names - Sustainable Farming (友善農業)
+    'resources.site.coa.organic': '有機農業',
+    'resources.site.coa.ecofarm': '生態農業推廣',
+    'resources.site.moenv.ecolabel': '環保標章',
+    'resources.site.tactcc.organic': '有機農業認證',
+    'resources.site.toaff': '台灣有機農業推廣協會',
+    'resources.site.ttasn': '台灣農業永續推廣協會',
+
+    // Site names - Climate & Disaster (氣候災害)
+    'resources.site.cwa.agri': '農業氣象服務',
+    'resources.site.coa.climate': '農業氣候調適',
+    'resources.site.moenv.climate': '環境部氣候變遷',
+    'resources.site.nstc.climate': '國科會氣候研究',
+    'resources.site.tais.pest': '農業試驗所病蟲害診斷',
+    'resources.site.coa.disaster': '農業災害防救',
   },
 } as const;
