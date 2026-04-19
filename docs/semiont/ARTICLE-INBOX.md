@@ -182,8 +182,11 @@ BECOME_TAIWANMD.md Step 5 新增：
 - **Type**: NEW
 - **Category**: People (Music)
 - **Priority**: P1
-- **Status**: pending
+- **Status**: done
 - **Requested**: 2026-04-18 by 觀察者 (session δ)
+- **Dev log**:
+  - 2026-04-19 by 排程心跳（第5次 auto-heartbeat）: started Stage 1 research
+  - 2026-04-19 by 排程心跳（第5次 auto-heartbeat）: completed Stage 1-5, article published at knowledge/People/孫燕姿.md
 - **Notes**:
   - Stefanie Sun，新加坡歌手但華語流行音樂重要人物
   - Taiwan.md 定位需斟酌：她是新加坡人但在台發跡 + 主要市場華語圈
@@ -191,7 +194,7 @@ BECOME_TAIWANMD.md Step 5 新增：
   - 2023 台北小巨蛋復出演唱會
   - 小標題先行，避免「哪一年哪張專輯」編年
 - **Reference**: 觀察者批次指定
-- **Pre-research**: 尚未啟動
+- **Pre-research**: reports/research/2026-04/孫燕姿.md
 
 ### 范曉萱
 
