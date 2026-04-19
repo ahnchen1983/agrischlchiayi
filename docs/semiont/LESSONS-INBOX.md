@@ -178,6 +178,34 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 - **累積驗證次數**：第 1 次（本事件）
 -->
 
+### 2026-04-19 β — 觀察者留言兌現協議：404 連結是對貢獻者的信任傷害
+
+- **原則**：在外部 repo 留言承諾寫文章但連結指向短版 resource / 404 / 占位頁 = 對貢獻者而言是 trust chain 破裂。當深度文章寫好，必須回到原留言補新連結（不是新留言說「喔對了順便提一下」，而是明確回應「之前說的我做到了」）。
+- **觸發**：2026-04-19 CheYu 指派 Mini Taiwan Pulse P1，背景是他之前在 [ianlkl11234s/mini-taiwan-pulse Issue #1](https://github.com/ianlkl11234s/mini-taiwan-pulse/issues/1) 只給了 `taiwan.md/resources/mini-taiwan-pulse` 短版連結（相當於 404 等級的深度承諾），這次升級為 /technology/ 深度策展後回去補留言兌現。
+- **可能層級**：操作規則 → MAINTAINER-PIPELINE 的「留言後續追蹤」（第一次 PR merge 後的 survey 已經有，但「承諾→兌現」是另一種 follow-up）。
+- **相關**：DNA #8「維護者信件要說謝謝」、#7「先有再求好」的延伸——「有」之後「好」的時候要回頭告訴人。
+
+### 2026-04-19 β — Pre-commit wikilink 檢查是 format-check 的最後防線
+
+- **原則**：format-check 掃 `延伸閱讀` section 的 wikilink，但 prose 裡的 wikilink（在正文段落中插入的 `[[Technology/foo]]`）要靠 pre-commit 另一道 hook 抓。兩道檢查不重疊，兩道都跑才抓完。
+- **觸發**：2026-04-19 Mini Taiwan Pulse 寫作 Stage 3。第一次 format-check 報 `READING_WIKILINK × 4`（延伸閱讀段），改成 markdown 連結後過；commit 時 pre-commit 再擋「3 個斷裂 wikilink」——是正文裡的 `[[Technology/數位身分證與數位政府]]` 等三處殘留。
+- **可能層級**：通用反射 → DNA #19 延伸（「visual smoke test」原本針對 refactor，這裡是「wikilink 檢查分兩層」的延伸），或獨立為 DNA 新條目「格式檢查工具有 scope，pre-commit 是最後把關」。
+- **相關**：`.husky/pre-commit`、`scripts/tools/format-check.sh`、DNA #5「Pre-commit dogfood 是朋友不是敵人」的第 4 次驗證。
+
+### 2026-04-19 β — 資源 vs 深度策展的雙層分工
+
+- **原則**：`knowledge/resources/` 是索引條目（短 catalog 式），`knowledge/Category/` 是策展文章（深、有核心矛盾、2,000+ 字）。當 resource 條目值得被深度化時，不要刪掉 resource 頁，而是：(a) 寫新 Technology/X.md 深度文章；(b) 在 resource 頁頂部加 pointer 指向深度版；(c) 兩者並存且互相連結。
+- **觸發**：2026-04-19 Mini Taiwan Pulse——原本是 resources/mini-taiwan-pulse.md（2026-03-22 建），現在升級為 Technology/mini-taiwan-pulse.md（2026-04-19），resource 頁加 pointer 保留 legacy URL + 英法翻譯不會 orphan。
+- **可能層級**：操作規則 → REWRITE-PIPELINE 或 MAINTAINER-PIPELINE 新增「resource→depth 升級 SOP」的一頁 checklist。或特有教訓 → MEMORY §神經迴路。
+- **相關**：`knowledge/resources/` 目錄現有的 catalog 條目是潛在的 P1 depth 候選，可以用 GA4 看哪些 resource 頁有流量 → 值得升級。
+
+### 2026-04-19 β — 獨立開源作為公民科技新樣態
+
+- **原則**：台灣公民科技敘事長期被 g0v 集體模型主導，但 2026 年的實際光譜延伸到個人週末專案（Migu Cheng 六週 193 commits 的 mini-taiwan-pulse）。未來 Technology/公民科技 子分類的策展方向應該涵蓋：(a) g0v 集體黑客松、(b) 個人開源專案、(c) 政府標案外包開源、(d) 學生專題、(e) 獎助金專案——五種混合型態而非單一 g0v 敘事。
+- **觸發**：2026-04-19 寫 Mini Taiwan Pulse 時意識到：Migu 不屬於 g0v 現場文化（沒 Discord、沒黑客松紀錄、profile 沒 g0v tag），但做的事完全符合公民科技定義。敘事拉伸在文章 §「公民科技的定義，正在被重新拉伸」完成。
+- **可能層級**：哲學層 → MANIFESTO §第三身份階段 thesis 延伸，或 LONGINGS 新渴望「策展公民科技光譜的五型態」。
+- **相關**：[Technology/mini-taiwan-pulse](../../knowledge/Technology/mini-taiwan-pulse.md)、[Technology/開源社群與g0v](../../knowledge/Technology/開源社群與g0v.md)、MANIFESTO 附錄「第三身份階段 thesis」
+
 ---
 
 ## ✅ 已消化（保留 pointer）
