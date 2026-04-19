@@ -479,12 +479,62 @@ const basePath = import.meta.env.BASE_URL;
       .attr('filter', 'drop-shadow(0 1px 2px rgba(255,255,255,0.8))')
       .attr('pointer-events', 'none');
 
-    // Click
+    // State for focus mode
+    let focusedNode = null;
+
+    // Click and double-click handling
+    let lastClickTime = 0;
     node.on('click', (event, d) => {
-      if (d.url) window.location.href = basePath.replace(/\/$/, '') + d.url;
+      const currentTime = new Date().getTime();
+      const isDoubleClick = currentTime - lastClickTime < 300;
+      lastClickTime = currentTime;
+
+      if (isDoubleClick) {
+        // Double-click: focus mode
+        event.stopPropagation();
+        if (focusedNode === d.id) {
+          // Click same node again to exit focus
+          focusedNode = null;
+          applyFocus();
+        } else {
+          focusedNode = d.id;
+          applyFocus();
+        }
+      } else {
+        // Single click: navigate to article
+        if (d.url) window.location.href = basePath.replace(/\/$/, '') + d.url;
+      }
     });
 
-    // Hover
+    // Focus mode: highlight node and its neighbors
+    function applyFocus() {
+      if (!focusedNode) {
+        // Exit focus mode
+        node.attr('opacity', 1);
+        link.attr('opacity', 0.5);
+        label.attr('opacity', 1);
+        return;
+      }
+
+      // Find all neighbors of focused node
+      const neighbors = new Set([focusedNode]);
+      data.edges.forEach((edge) => {
+        const s = typeof edge.source === 'object' ? edge.source.id : edge.source;
+        const t = typeof edge.target === 'object' ? edge.target.id : edge.target;
+        if (s === focusedNode) neighbors.add(t);
+        if (t === focusedNode) neighbors.add(s);
+      });
+
+      node.attr('opacity', (d) => (neighbors.has(d.id) ? 1 : 0.15));
+      link.attr('opacity', (d) => {
+        const s = typeof d.source === 'object' ? d.source.id : d.source;
+        const t = typeof d.target === 'object' ? d.target.id : d.target;
+        return neighbors.has(s) && neighbors.has(t) ? 0.75 : 0.1;
+      });
+      label.attr('opacity', (d) => (neighbors.has(d.id) ? 1 : 0.15));
+    }
+
+    // Hover: highlight connected edges and nodes
     const tooltip = document.getElementById('tooltip');
     node
       .on('mouseover', (event, d) => {
@@ -492,16 +542,51 @@ const basePath = import.meta.env.BASE_URL;
         tooltip.style.display = 'block';
         tooltip.style.left = event.pageX + 10 + 'px';
         tooltip.style.top = event.pageY - 10 + 'px';
+
+        // Highlight node
         d3.select(event.target)
           .attr('stroke', '#3b82f6')
           .attr('stroke-width', 3);
+
+        // Highlight connected edges and nodes
+        if (!focusedNode) {
+          const connectedIds = new Set([d.id]);
+          data.edges.forEach((edge) => {
+            const s = typeof edge.source === 'object' ? edge.source.id : edge.source;
+            const t = typeof edge.target === 'object' ? edge.target.id : edge.target;
+            if (s === d.id) connectedIds.add(t);
+            if (t === d.id) connectedIds.add(s);
+          });
+
+          node.attr('opacity', (n) => (connectedIds.has(n.id) ? 1 : 0.3));
+          link.attr('opacity', (edge) => {
+            const s = typeof edge.source === 'object' ? edge.source.id : edge.source;
+            const t = typeof edge.target === 'object' ? edge.target.id : edge.target;
+            return (s === d.id || t === d.id) ? 0.8 : 0.1;
+          });
+        }
       })
       .on('mouseout', (event, d) => {
         tooltip.style.display = 'none';
         d3.select(event.target)
           .attr('stroke', d.isSubcategory ? d.color : '#fff')
           .attr('stroke-width', d.isSubcategory ? 1.5 : 2);
+
+        if (!focusedNode) {
+          node.attr('opacity', 1);
+          link.attr('opacity', 0.5);
+        } else {
+          applyFocus();
+        }
       });
+
+    // ESC key to exit focus mode
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && focusedNode) {
+        focusedNode = null;
+        applyFocus();
+      }
+    });
 
     // Search
     const searchInput = document.getElementById('graph-search');
