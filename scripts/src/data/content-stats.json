@@ -8,12 +8,12 @@
     "Geography": 60,
     "History": 129,
     "Language": 1,
-    "Lifestyle": 58,
+    "Lifestyle": 59,
     "Music": 88,
     "Nature": 85,
-    "People": 512,
+    "People": 518,
     "Society": 164,
-    "Technology": 118,
+    "Technology": 119,
     "resources": 4,
     "people": 2
   },
@@ -144,8 +144,12 @@
     },
     {
       "date": "2026-04-18",
-      "count": 12
+      "count": 15
+    },
+    {
+      "date": "2026-04-19",
+      "count": 5
     }
   ],
-  "updated": "2026-04-18"
+  "updated": "2026-04-19"
 }

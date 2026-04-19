@@ -3865,6 +3865,17 @@
     "path": "Nature/台灣高山生態系與冰河孑遺.md"
   },
   {
+    "title": "台灣高鐵：從「零政府出資」到「國有民營」，20 年縮短 90 分鐘的代價",
+    "description": "1998 年殷琪簽下這份 BOT，承諾政府零出資。2015 年立法院 18 比 0 否決財改案，葉匡時當晚請辭。十七年間，台灣如何用 5,133 億與一場歐日技術戰爭，把南北距離壓縮到 90 分鐘？",
+    "category": "Lifestyle",
+    "tags": ["交通", "基礎建設", "經濟", "社會"],
+    "url": "https://taiwan.md/Lifestyle/%E5%8F%B0%E7%81%A3%E9%AB%98%E9%90%B5",
+    "readingTime": 32,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Lifestyle/台灣高鐵.md"
+  },
+  {
     "title": "台灣偏鄉教育：孩子缺的不是勵志故事，是一整套沒有鬆開的支持",
     "description": "偏鄉教育不是「山裡的學校比較遠」那麼簡單。從老師流動、混齡教學、交通與住宿，到家庭支持、社區連結與社會對成功的單一想像，真正困難的是一個孩子離開教室後，整套支持系統常常一層一層鬆開。",
     "category": "Society",
@@ -6411,7 +6422,7 @@
       "迷因"
     ],
     "url": "https://taiwan.md/Culture/%E9%95%B7%E8%BC%A9%E5%9C%96",
-    "readingTime": 10,
+    "readingTime": 12,
     "featured": false,
     "date": "2026-04-18",
     "path": "Culture/長輩圖.md"
@@ -6446,6 +6457,17 @@
     "featured": false,
     "date": "2026-04-05",
     "path": "History/阿里山：帝國的林場與高一生的山.md"
+  },
+  {
+    "title": "阿爆（阿仍仍）：把排灣族語送進金曲年度專輯的那個 future pop 歌手",
+    "description": "2020 年金曲 31 年度專輯頒給全排灣語電音《kinakaian 母親的舌頭》。阿爆（Aljenljeng Tjaluvie，1981 年臺東金峰）從 R&B 雙人組 Abao & Brandy 出道、當過十年護理師，2019 與 Dizparity 把族語做成 future pop，改寫「原住民音樂 = 保存」。",
+    "category": "People",
+    "tags": [],
+    "url": "https://taiwan.md/People/%E9%98%BF%E7%88%86",
+    "readingTime": 35,
+    "featured": false,
+    "date": "2026-04-18",
+    "path": "People/阿爆.md"
   },
   {
     "title": "侯孝賢",
@@ -7127,11 +7149,11 @@
   },
   {
     "title": "草東沒有派對：從陽明山草東街到兩座金曲最佳樂團的十二年",
-    "description": "2017 年第 28 屆金曲獎，一個沒有唱片公司、沒有經紀人、自費壓 2,000 張手工 CD 的四人樂團，用 19、19、18 票三輪壓倒性勝利打敗五月天，連拿最佳樂團、最佳新人、年度歌曲三座。然後他們消失了七年——中間還橫跨鼓手凡凡 2021 年在防疫旅館的死與兩年的完全沉默。2024 年他們用第二張專輯《瓦合》再度拿下金曲最佳樂團。經紀人代他們上台說：「草東沒有派對從來都不是只有站在舞台上的 4 個人。」",
+    "description": "2017 年金曲 28，一個自費壓 2,000 張 CD 的四人樂團壓倒性擊敗五月天拿下三座。他們消失了七年，橫跨鼓手凡凡 2021 年在防疫旅館過世與兩年沉默。2023 年用《瓦合》回歸，2024 金曲 35 拿下年度專輯 + 最佳華語 + 最佳樂團三冠，經紀人代領：「草東從來不只是站在舞台上的 4 個人。」",
     "category": "People",
     "tags": [],
     "url": "https://taiwan.md/People/%E8%8D%89%E6%9D%B1%E6%B2%92%E6%9C%89%E6%B4%BE%E5%B0%8D",
-    "readingTime": 34,
+    "readingTime": 39,
     "featured": false,
     "date": "2026-04-18",
     "path": "People/草東沒有派對.md"
@@ -7635,6 +7657,17 @@
     "path": "People/郭泓志.md"
   },
   {
+    "title": "郭金發：燒肉粽背後的低音靈魂",
+    "description": "從大稻埕皮鞋店學徒到寶島低音歌王，郭金發以一曲〈燒肉粽〉唱出台灣戰後庶民的辛酸與韌性，並在舞台上燃盡最後一絲生命。",
+    "category": "People",
+    "tags": ["音樂", "台灣歌謠", "燒肉粽", "低音歌王", "戒嚴禁歌"],
+    "url": "https://taiwan.md/People/%E9%83%AD%E9%87%91%E7%99%BC",
+    "readingTime": 10,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "People/郭金發.md"
+  },
+  {
     "title": "郭婞淳",
     "description": "台灣舉重選手，三屆奧運獎牌得主（2016 銅牌、2021 金牌、2024 銅牌），59 公斤級世界紀錄保持人，阿美族馬蘭部落後裔",
     "category": "People",
@@ -7777,6 +7810,17 @@
     "featured": false,
     "date": "2026-03-19",
     "path": "People/陳建仁.md"
+  },
+  {
+    "title": "陳建騏：從會計系到三金製作人，為華語流行音樂拆掉「怪腔怪調」這條紅線的那個人",
+    "description": "1973 年出生、淡江大學會計系畢業的陳建騏，是華語流行音樂史上罕見的「不在場作者」：你聽過他製作的魏如萱、徐佳瑩、田馥甄、彭佳慧的歌，但你可能不知道他是誰。2021 年第 32 屆金曲獎最佳專輯製作人、2023 年金馬獎最佳原創電影歌曲、2025 年金鐘獎戲劇原創歌曲三金得主，一個從劇場鋼琴手走進流行音樂的製作人。",
+    "category": "People",
+    "tags": [],
+    "url": "https://taiwan.md/People/%E9%99%B3%E5%BB%BA%E9%A8%8F",
+    "readingTime": 33,
+    "featured": false,
+    "date": "2026-04-18",
+    "path": "People/陳建騏.md"
   },
   {
     "title": "陳映真",
@@ -8534,18 +8578,7 @@
     "title": "義美：百年固執、食安良心，與社會共好的多維實踐",
     "description": "義美食品，這家從日治時期大稻埕「大安醫院」原址起家的糕餅店，如何在高騰蛟與高志明兩代人的固執經營下，成為台灣食品產業的標竿？本文深入探討其從傳統糕餅到現代通路、從食安實驗室到機器人產業的多維實踐，以及其在社會責任與品牌神話中的挑戰與轉型。",
     "category": "Economy",
-    "tags": [
-      "義美",
-      "食品",
-      "食安",
-      "高騰蛟",
-      "高志明",
-      "台灣品牌",
-      "通路",
-      "蔣渭水",
-      "實驗室",
-      "機器人"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/Economy/%E5%8F%B0%E7%81%A3%E4%BC%81%E6%A5%AD%EF%BC%9A%E7%BE%A9%E7%BE%8E%E9%A3%9F%E5%93%81",
     "readingTime": 15,
     "featured": false,
@@ -9081,6 +9114,17 @@
     "path": "ja/People/koxinga.md"
   },
   {
+    "title": "鄭宜農：用最陌生的語言寫最誠實的歌——從 2016 身份公開到 2023 金曲台語雙獎的七年",
+    "description": "1987 年生鄭宜農（Enno Cheng），父親是新電影導演鄭文堂。2007 年演員出道金馬入圍，2016 Facebook 出櫃同月離婚，2022 年首張全台語專輯《水逆》，2023 金曲 34 拿下最佳台語女歌手 + 最佳台語專輯雙獎。她說：「那我直接用一個我沒有這麼熟悉的語言，讓我自己變得很困難。」",
+    "category": "People",
+    "tags": [],
+    "url": "https://taiwan.md/People/%E9%84%AD%E5%AE%9C%E8%BE%B2",
+    "readingTime": 34,
+    "featured": false,
+    "date": "2026-04-18",
+    "path": "People/鄭宜農.md"
+  },
+  {
     "title": "鄭南榕",
     "description": "他在創刊前就準備了24張雜誌執照，因為他知道政府會一直關他的刊——一個「外省囝仔」如何為整座島嶼的言論自由而死",
     "category": "People",
@@ -9226,6 +9270,17 @@
     "featured": false,
     "date": "2026-03-23",
     "path": "People/蕭敬騰.md"
+  },
+  {
+    "title": "蕭煌奇：兩度失明，卻用「目中無人」的幽默，摔出金曲歌王的逆境弧線",
+    "description": "1976年出生，台灣創作歌手蕭煌奇，先天性白內障導致兩度失明。他不僅是四屆金曲台語歌王，更曾是亞帕運柔道銅牌國手。他以「全方位樂團」開創視障音樂人職業化之路，並以「地獄梗」翻轉社會對身障者的刻板印象，成為華語樂壇的傳奇人物。",
+    "category": "People",
+    "tags": ["蕭煌奇", "全方位樂團", "金曲獎", "柔道國手", "地獄梗"],
+    "url": "https://taiwan.md/People/%E8%95%AD%E7%85%8C%E5%A5%87",
+    "readingTime": 12,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "People/蕭煌奇.md"
   },
   {
     "title": "賴清德：從礦工家庭到總統府的公共衛生醫師",
@@ -9552,11 +9607,11 @@
   },
   {
     "title": "魏如萱：從自然捲主唱「娃娃」到兩座金曲歌后，只想被聽見的二十年",
-    "description": "2003 年魏如萱以「娃娃」之名擔任台灣獨立樂團自然捲主唱；2020 年與 2025 年兩度拿下金曲最佳國語女歌手。從華岡藝校戲劇科、廣播 DJ、劇場配唱，到 2019〈彼個所在〉的四語悼念、2025《珍珠刑》的「從疼痛裡長出來的勇敢與溫柔」——她二十年走的是一條華語流行音樂裡最反直覺的路徑：讓聲音比臉更有名，讓作品比人格活得更久。",
+    "description": "2003 年自然捲主唱「娃娃」，2006 年聲帶受傷後用「Waa Wei」單飛，2020 與 2025 年兩度拿下金曲最佳國語女歌手。從〈彼個所在〉四語悼念盧凱彤、〈Ophelia〉童聲版的女性抵抗，到《珍珠刑》從疼痛長出的勇敢——她二十年走的是華語流行音樂最反直覺的路徑：讓聲音比臉更有名，讓作品比人格活得更久。",
     "category": "People",
     "tags": [],
     "url": "https://taiwan.md/People/%E9%AD%8F%E5%A6%82%E8%90%B1",
-    "readingTime": 36,
+    "readingTime": 42,
     "featured": false,
     "date": "2026-04-18",
     "path": "People/魏如萱.md"
@@ -18652,17 +18707,9 @@
     "title": "Mini Taiwan Pulse — 台灣交通即時 3D 視覺化",
     "description": "用開放資料感受台灣的脈動——航班光軌劃過天際、船舶穿梭海面、列車奔馳軌道，23 個圖層即時呈現這座島嶼的呼吸。",
     "category": "resources",
-    "tags": [
-      "resources",
-      "open-data",
-      "visualization",
-      "transportation",
-      "3D",
-      "real-time",
-      "Taiwan.md"
-    ],
+    "tags": [],
     "url": "https://taiwan.md/resources/mini-taiwan-pulse",
-    "readingTime": 9,
+    "readingTime": 12,
     "featured": false,
     "date": "2026-03-22",
     "path": "resources/mini-taiwan-pulse.md"
@@ -18704,6 +18751,25 @@
     "featured": false,
     "date": "2026-03-22",
     "path": "fr/resources/mini-taiwan-pulse.md"
+  },
+  {
+    "title": "Mini Taiwan Pulse：一個資料分析師如何把台灣的交通脈動畫成會呼吸的 3D 光軌",
+    "description": "2026 年 2 月 24 日，一個叫 Migu Cheng 的資料分析師開了 mini-taiwan-pulse 這個 repo，六週後 193 個 commits、241 顆 star：他一個人把 FlightRadar24、TDX、SEGIS、CWA 的開放資料串起來，用 Three.js 把台灣畫成會呼吸的 3D 光軌。台灣的開放資料基礎建設是亞洲前段班，卻很少人看得見那片資料海。公民科技從 g0v 集體黑客松延伸到個人週末專案，視覺化本身就是一種參與。",
+    "category": "Technology",
+    "tags": [
+      "Technology",
+      "公民科技",
+      "開放資料",
+      "資料視覺化",
+      "開源專案",
+      "TDX",
+      "Three.js"
+    ],
+    "url": "https://taiwan.md/Technology/mini-taiwan-pulse",
+    "readingTime": 42,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "Technology/mini-taiwan-pulse.md"
   },
   {
     "title": "Modern Taiwanese Poetry: The Island's Lyricism",
@@ -22663,6 +22729,17 @@
     "featured": false,
     "date": "2026-03-21",
     "path": "en/Culture/urban-character-and-regional-culture.md"
+  },
+  {
+    "title": "VH（Vast & Hazy）：「出口系樂團」的十五年方向校準",
+    "description": "2011 年淡江金韶獎成軍，2014 年休團，2017 年以雙人型態回歸，三度入圍金曲最佳演唱組合。在台灣獨立圈習慣喧嘩的年代，Vast & Hazy 選擇做無名焦慮的容納所——樂迷自發命名「出口系樂團」。2026 年易祺宣布轉幕後，咖咖帶著這個名字繼續邁行。",
+    "category": "People",
+    "tags": [],
+    "url": "https://taiwan.md/People/VH",
+    "readingTime": 13,
+    "featured": false,
+    "date": "2026-04-19",
+    "path": "People/VH.md"
   },
   {
     "title": "Vida nocturna y cultura KTV",

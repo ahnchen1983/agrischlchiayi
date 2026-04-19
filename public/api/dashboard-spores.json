@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T01:49:07.314488Z",
+  "lastUpdated": "2026-04-19T07:47:05.932448Z",
   "schemaVersion": "1.1",
   "totals": {
     "count": 34,
@@ -30,9 +30,9 @@
       "template": "A2 首尾呼應",
       "url": "https://x.com/taiwandotmd/status/2045412116665172331",
       "highlight": "**SPORE-PIPELINE v2.1 首例（blueprint + 跨源驗證 + 倫理閘）**",
-      "views_7d": 59,
-      "engagements_7d": 5,
-      "rate_7d": 8.47,
+      "views_7d": 106,
+      "engagements_7d": 7,
+      "rate_7d": 6.6,
       "backfilled": true
     },
     {
@@ -45,9 +45,9 @@
       "template": "A2 首尾呼應",
       "url": "https://www.threads.com/@taiwandotmd/post/DXQ_in_Ew0_",
       "highlight": "**SPORE-PIPELINE v2.1 首例（blueprint + 跨源驗證 + 倫理閘）**",
-      "views_7d": 16000,
-      "engagements_7d": 569,
-      "rate_7d": 3.56,
+      "views_7d": null,
+      "engagements_7d": 734,
+      "rate_7d": null,
       "backfilled": true
     },
     {
@@ -60,9 +60,9 @@
       "template": "A 人物型",
       "url": "https://x.com/taiwandotmd/status/2045363785347612934",
       "highlight": "**實驗：inline link（非分兩篇）A/B**",
-      "views_7d": 92,
-      "engagements_7d": 7,
-      "rate_7d": 7.61,
+      "views_7d": 1253,
+      "engagements_7d": 70,
+      "rate_7d": 5.59,
       "backfilled": true
     },
     {
@@ -75,7 +75,7 @@
       "template": "A 人物型",
       "url": "https://www.threads.com/@taiwandotmd/post/DXQph5okwOu",
       "highlight": "**實驗：inline link（非分兩篇）A/B**",
-      "views_7d": 207,
+      "views_7d": 242,
       "engagements_7d": null,
       "rate_7d": null,
       "backfilled": true
@@ -138,14 +138,14 @@
       "date": "2026-04-11"
     },
     {
-      "n": 33,
-      "article": "草東沒有派對（v2.1 首例）",
+      "n": 24,
+      "article": "韓國瑜",
       "platform": "threads",
-      "views": 16000,
-      "engagements": 569,
-      "rate": 3.56,
+      "views": 8524,
+      "engagements": null,
+      "rate": null,
       "badge": null,
-      "date": "2026-04-18"
+      "date": "2026-04-13"
     }
   ],
   "amplification": [
@@ -198,16 +198,16 @@
   "platformComparison": {
     "x": {
       "count": 12,
-      "avgViews": 11410,
+      "avgViews": 11510,
       "maxViews": 135433,
-      "avgRate": 5.32,
+      "avgRate": 4.99,
       "maxRate": 10.71
     },
     "threads": {
-      "count": 13,
-      "avgViews": 43521,
+      "count": 12,
+      "avgViews": 45817,
       "maxViews": 300000,
-      "avgRate": 3.75,
+      "avgRate": 3.81,
       "maxRate": 9.0
     }
   },
@@ -270,7 +270,7 @@
     {
       "week": "2026-W16",
       "published": 11,
-      "avgViews": 65098
+      "avgViews": 70692
     }
   ],
   "harvestStatus": [

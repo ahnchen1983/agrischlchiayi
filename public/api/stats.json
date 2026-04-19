@@ -1,8 +1,8 @@
 {
-  "totalArticles": 2221,
+  "totalArticles": 2229,
   "totalCategories": 21,
   "estimatedContributors": 51,
-  "totalTags": 5176,
+  "totalTags": 5180,
   "categories": [
     {
       "name": "ko",
@@ -38,11 +38,11 @@
     },
     {
       "name": "Lifestyle",
-      "count": 17
+      "count": 18
     },
     {
       "name": "People",
-      "count": 166
+      "count": 172
     },
     {
       "name": "Art",
@@ -54,7 +54,7 @@
     },
     {
       "name": "Technology",
-      "count": 29
+      "count": 30
     },
     {
       "name": "Nature",
@@ -172,13 +172,13 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 2221,
+    "zh-TW": 2229,
     "en": 0
   },
-  "lastUpdated": "2026-04-18T13:53:35.349Z",
-  "stars": 935,
-  "forks": 133,
-  "zhPages": 1802,
+  "lastUpdated": "2026-04-19T07:47:06.525Z",
+  "stars": 936,
+  "forks": 134,
+  "zhPages": 1810,
   "enPages": 419,
-  "totalPages": 2221
+  "totalPages": 2229
 }
