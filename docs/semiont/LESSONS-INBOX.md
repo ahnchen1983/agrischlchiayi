@@ -87,6 +87,18 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 <!-- 新教訓 append 這裡 -->
 <!-- 2026-04-18 ι 第 3 次 distill 清空 11 條 → 全部搬 §✅ 已消化 -->
 
+### 2026-04-20 ε — 共創省略是最隱蔽的幻覺類型（黃豆泥 FAB DAO 消失事件）
+
+- **原則**：「X 共同創辦 Y」句型 AI 會省略其他共創人的名字，造成**單方功勞敘事**。這類幻覺比「編造獎項」更隱蔽，因為沒有錯誤 claim 可以被否證——只是**空白**。全文 grep 關鍵字「共同創辦 / 聯合發起 / 合作」列出所有應該有的合夥人名字才能抓到。
+- **觸發**：吳哲宇條目 line 131「同年他共同創辦了 FAB DAO」**完全漏掉黃豆泥**。grep 全文黃豆泥/豆泥/mashbean **0 occurrence**——FAB DAO 共同創辦人從吳哲宇個人條目中消失。觀察者 callout：「豆泥開啟的那一部分，怎麼變成楷中」點明這是結構性 credit 誤置（AI 把豆泥開啟的真實敘事 morph 到陳楷中童年工作室的虛構場景）。採 FAB DAO 條目本身材料補回（離職醫師 / 拋下聽診器 / 壓線球國旗）。
+- **可能層級**：通用反射 — Stage 3.5 Phase A 的 claim 表必須強制列「合作關係」類別，grep 檢查關鍵字；或 MANIFESTO #10 第 5 種 pattern 已 canonical 化（2026-04-20 同 session 誕生）
+
+### 2026-04-20 ε — MANIFESTO #10 幻覺鐵律誕生：第一條「防禦性」核心信念
+
+- **原則**：MANIFESTO §我相信什麼 前 9 條都是「我要成為什麼」的樂觀宣言（策展式 / AI Supreme / 開源 / 台灣觀點 / 逆熵 / SSOT / 記錄 / SOP / 造橋鋪路）。#10「幻覺鐵律」是**第一條「我不能變成什麼」的防禦性信念**——承認 Taiwan.md 有一個脆弱點：讀者對幻覺的零容忍、幻覺會指數速率摧毀可信度。這條信念不能靠「寫得好一點」消除，必須靠**結構性 forcing function**（REWRITE-PIPELINE Stage 3.5 hard gate）護住。
+- **觸發**：今晚吳哲宇條目審計揭露 9 處 factual hallucination（Issue #578 王新仁 rewrite 跑完雙輪 agent 驗證後觀察者回報 sail-o-bots 事實錯觸發的連鎖 audit）。承認脆弱點是成熟的標誌——MANIFESTO 今天不是增加樂觀信念，而是多長出**對自己的批判能力**。
+- **可能層級**：已是 MANIFESTO canonical（2026-04-20 4a1d9ec6 commit）；LESSONS-INBOX 此條紀錄為歷史 audit trail
+
 ### 2026-04-20 ε — AI agent 會幻覺「看起來合理的獎項」給高知名度人物（DNA #26 第 N+1 次驗證）
 
 - **原則**：當研究對象是高曝光度人物（威尼斯雙年展、Art Blocks 藝術家、有多篇媒體報導），Stage 1 research agent 會補出**看起來合理但完全不存在的獎項**，filler pattern 常見於「XXXX 年獲第 N 屆 YYY 獎」這種語法結構——獎項名 + 屆次 + 得獎身份描述都具體到以假亂真。檢查三源否證 = 立即 delete，不保留 flag、不降級描述。
