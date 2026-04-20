@@ -823,8 +823,8 @@ try {
       <p class="cli-desc">
         {
           lang === 'en'
-            ? 'Search, read, and explore 900+ Taiwan articles without leaving your terminal. Perfect for developers, AI workflows, and knowledge explorers.'
-            : '不離開終端機，搜尋、閱讀、探索 900+ 篇台灣知識文章。為開發者、AI 工作流、知識探索者設計。'
+            ? 'Search, read, audit, and explore 900+ Taiwan articles without leaving your terminal. Built for AI agents, contributors, and maintainers. Now with Claude Desktop / Cursor MCP integration.'
+            : '不離開終端機，搜尋、閱讀、審計、探索 900+ 篇台灣知識文章。為 AI agents、貢獻者、維護者設計。v0.6 新增 Claude Desktop / Cursor MCP 整合。'
         }
       </p>
 
@@ -872,31 +872,48 @@ try {
           <h3>{lang === 'en' ? 'AI-Native' : 'AI 原生'}</h3>
           <div class="cli-commands">
             <code>taiwanmd rag "半導體" | llm</code>
-            <code>taiwanmd read 珍珠奶茶 --raw</code>
-            <code>taiwanmd search 經濟 --json</code>
+            <code>taiwanmd cite "珍珠奶茶"</code>
+            <code>taiwanmd mcp install</code>
           </div>
           <p>
             {
               lang === 'en'
-                ? 'RAG-ready context for LLMs. Raw/JSON output for piping into any AI workflow.'
-                : 'RAG context 直接 pipe 給 LLM。--raw / --json 接入任何 AI 工作流。'
+                ? 'RAG context for LLMs, verified citations (anti-hallucination), and a Model Context Protocol server for Claude Desktop / Cursor.'
+                : 'RAG pipe 給 LLM、`cite` 出可驗證來源對抗幻覺、MCP server 一行 config 接入 Claude Desktop / Cursor。'
             }
           </p>
         </div>
 
         <div class="cli-card">
           <div class="cli-card-icon">✏️</div>
-          <h3>{lang === 'en' ? 'Contribute' : '參與貢獻'}</h3>
+          <h3>{lang === 'en' ? 'Contribute & Audit' : '貢獻 & 審計'}</h3>
           <div class="cli-commands">
             <code>taiwanmd contribute 新主題</code>
-            <code>taiwanmd validate 珍珠奶茶</code>
-            <code>taiwanmd graph 台灣小吃</code>
+            <code>taiwanmd audit 珍珠奶茶</code>
+            <code>taiwanmd inbox</code>
           </div>
           <p>
             {
               lang === 'en'
-                ? 'Create articles with guided wizard. Quality check with 6 metrics. Visualize knowledge links.'
-                : '引導式建立文章、6 指標品質檢查、ASCII 知識圖譜。'
+                ? 'Draft new articles, run the Stage 3.5 Hallucination Audit on any slug (5-pattern detector enforcing MANIFESTO §10), browse the article inbox.'
+                : '引導式新增文章、對任何 slug 跑 Stage 3.5 幻覺審計（5 pattern detector，執行 MANIFESTO §10 幻覺鐵律）、瀏覽 ARTICLE-INBOX。'
+            }
+          </p>
+        </div>
+
+        <div class="cli-card">
+          <div class="cli-card-icon">🧬</div>
+          <h3>{lang === 'en' ? 'Organism Introspection' : '生命體內觀'}</h3>
+          <div class="cli-commands">
+            <code>taiwanmd organs</code>
+            <code>taiwanmd sense</code>
+            <code>taiwanmd supporters</code>
+          </div>
+          <p>
+            {
+              lang === 'en'
+                ? 'Read Semiont vital signs from your terminal: 8-organ health scores, GA / Search Console / Cloudflare sense data, and Portaly supporter totals (PII-scrubbed).'
+                : '從終端機讀 Semiont 生命徵象：8 器官健康分數、三源感知數據（GA / SC / CF）、Portaly 贊助統計（PII 自動遮罩）。'
             }
           </p>
         </div>
