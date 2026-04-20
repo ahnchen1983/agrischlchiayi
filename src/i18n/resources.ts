@@ -1,14 +1,14 @@
 export const resourcesUI = {
   en: {
     // Meta
-    'resources.meta.title': 'Taiwan Resources Guide - Taiwan.md',
+    'resources.meta.title': 'Agricultural Resources Guide - Chiayi County',
     'resources.meta.description':
-      'Comprehensive collection of official Taiwan government agencies, cultural institutions, open data platforms, and authoritative information sources',
+      'Complete agricultural resources for Chiayi farmers. Official channels for Ministry of Agriculture, research institutes, county agricultural offices, marketing platforms, financing support, and water resource management.',
 
     // Hero
-    'resources.hero.title': 'Taiwan Resources Guide',
+    'resources.hero.title': 'Agricultural Resources Guide',
     'resources.hero.subtitle.html':
-      "Comprehensive collection of government agencies, cultural institutions, and open data sources<br />Your one-stop gateway to Taiwan's most authoritative information",
+      "Your agricultural resource map for Chiayi County. From policy subsidies to technical guidance, from financing channels to sales platforms<br />One-stop access to all official resources farmers need for decision making",
 
     // Breadcrumb
     'resources.breadcrumb.home': 'Home',
@@ -516,14 +516,14 @@ export const resourcesUI = {
   },
   'zh-TW': {
     // Meta
-    'resources.meta.title': '台灣資源導覽 - Taiwan.md',
+    'resources.meta.title': '農業資源導覽 - 嘉義國本學堂',
     'resources.meta.description':
-      '完整收錄台灣政府機關、文化機構、開放資料平台等官方網站，提供政策資訊、文化內容、統計數據的一站式入口',
+      '嘉義農民必備資源導覽。涵蓋農業部、農改場、各縣市農業處、試驗研究機構、行銷平台、融資補助與水資源管理的完整官方資訊。',
 
     // Hero
-    'resources.hero.title': '台灣資源導覽',
+    'resources.hero.title': '農業資源導覽',
     'resources.hero.subtitle.html':
-      '完整收錄政府機關、文化機構、開放資料等官方資源<br />一站式掌握台灣最權威的資訊來源',
+      '嘉義農民的資源地圖。從政策補助到技術輔導，從融資管道到銷售通路<br />一站式掌握所有農業決策所需的官方資源',
 
     // Breadcrumb
     'resources.breadcrumb.home': '首頁',
