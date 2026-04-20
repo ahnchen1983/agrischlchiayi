@@ -56,7 +56,7 @@ const isEn = lang === 'en';
   </div>
 </section>
 
-<script is:inline define:vars={{ articlesJson, isEn }}>
+<script is:inline define:vars={{ articlesJson, isEn, lang }}>
   document.addEventListener('DOMContentLoaded', async function () {
     const randomBtn = document.getElementById('random-discovery-btn');
     let articles = [];
@@ -64,7 +64,12 @@ const isEn = lang === 'en';
     if (articlesJson) {
       articles = JSON.parse(articlesJson);
     } else {
-      // ZH mode: fetch from API
+      // Fallback path (zh-TW / ja / ko home): fetch /api/articles.json and
+      // narrow to the current page's language. articles.json contains every
+      // language folder under knowledge/ (including preview-mode fr/es whose
+      // routes are disabled), so the per-lang filter is required to prevent
+      // the random button from landing on /fr/… 404s or dropping the reader
+      // into the wrong locale. See Issue #575.
       var catLabels = {
         history: '📜 歷史',
         geography: '🗺️ 地理',
@@ -79,13 +84,24 @@ const isEn = lang === 'en';
         economy: '📈 經濟',
         lifestyle: '🏮 生活',
       };
+      // Any first-path-segment that represents a locale (including 'zh-tw'
+      // for stray knowledge/zh-TW/ files that would 404 against the default
+      // locale's root-level routes).
+      var langPrefixes = ['en', 'ja', 'ko', 'es', 'fr', 'zh-tw'];
       try {
         const res = await fetch('/api/articles.json');
         if (res.ok) {
           const raw = await res.json();
           articles = raw
             .filter(function (a) {
-              return a.category !== 'en' && !a.url.includes('/en/');
+              var cat = (a.category || '').toLowerCase();
+              if (lang === 'zh-TW') {
+                // zh-TW = default locale, URL has no language prefix.
+                // Exclude articles whose category IS a language code.
+                return langPrefixes.indexOf(cat) === -1;
+              }
+              // Non-default locale: category must equal current lang.
+              return cat === lang;
             })
             .map(function (a) {
               var u = a.url
