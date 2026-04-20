@@ -1,4 +1,9 @@
 export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+
+# 🚨 Deidentification check (runs FIRST — blocks sensitive data before any other work)
+# See DEIDENTIFICATION-POLICY.md for full policy
+bash scripts/tools/deidentification-check.sh || exit 1
+
 npx lint-staged
 
 # Validate frontmatter on staged .md files in knowledge/
