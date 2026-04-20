@@ -176,22 +176,7 @@ BECOME_TAIWANMD.md Step 5 新增：
 
 <!-- 范曉萱 已完成 2026-04-20 δ → 搬到 §✅ Done -->
 
-### 黃少雍（製作人）
-
-- **Type**: NEW
-- **Category**: People (Music)
-- **Priority**: P1
-- **Status**: in-progress
-- **Requested**: 2026-04-18 ε by 觀察者
-- **Notes**:
-  - 華語流行音樂製作人，魏如萱《珍珠刑》四位製作人之一
-  - 定位：製作人傳記 subgenre（幕後音樂人，非歌手）
-  - 挑戰：Taiwan.md 人物文主流是表演者，製作人文章結構需新設計（代表作品清單 + 製作哲學 + 合作藝人網絡）
-  - 必驗：完整製作作品年表、代表合作歌手（除魏如萱外）、工作室或廠牌身份
-- **Reference**: 觀察者批次指定
-- **Pre-research**: 尚未啟動
-- **Dev log**:
-  - 2026-04-20 by γ session: started Stage 0→1，觀察者 B 指派（避開林經堯/范曉萱碰撞），NEW 模式，將沿陳建騏 2026-04-18 θ 製作人 subgenre 結構
+<!-- 黃少雍 已完成 2026-04-20 γ → 搬到 §✅ Done -->
 
 <!-- 陳建騏 P0 已完成 2026-04-18 θ → 搬到 §✅ Done -->
 
@@ -273,6 +258,19 @@ _（暫無）_
 ## ✅ Done（已開發，保留歷史）
 
 _（此區域存放從 pending/in-progress 完成的條目，指向已 commit 的文章路徑）_
+
+### 黃少雍（製作人）— 2026-04-20 γ 完成（棄生化博班，用電音把母語送上金曲年度專輯）
+
+- **Article**: [knowledge/People/黃少雍.md](../../knowledge/People/黃少雍.md)
+- **Pipeline**: REWRITE-PIPELINE v2.18 — NEW 模式（Stage 1 general-purpose agent 20 WebSearch + 11 WebFetch / Stage 2 全文寫作 / Stage 3 事實鐵三角 / Stage 4 format-check / Stage 5 cross-link 陳建騏+魏如萱+阿爆 三篇回補）
+- **核心矛盾**（27 字）：「生化博士班逃兵，用電音把母語送上金曲年度專輯」— 考試院長黃榮村之子 × 30 歲棄台大生化博班 × 派樂黛 10 年 × 2022 金曲最佳編曲（夏子〈fu'is 星星歌〉）× 2020 阿爆《母親的舌頭》年度專輯共製
+- **Hook**：2022-07-02 金曲 33 後台那支直笛（anchor 1：製作人得獎 Solo + 盧廣仲台下跟吹 → 同時承載「盧廣仲樂手雇主」+「編曲獎最隱形」+「阿美族語前衛電子」三條線）
+- **結構創新**（製作人 subgenre 第二例，繼陳建騏 2026-04-18 θ 之後）：6 個 scene 小標題（後台直笛 / 棄博班 / 派樂黛借名 / 聽不懂歌詞 / 阿美族語電音編曲 / 陳建騏補集對位）+ 1 📝策展人 callout + 1 pull quote
+- **verbatim 引語**：10 句直接引語（Blow / 生命力新聞 / KKBOX 王希文對談 / IPCF），另 research pool 25 句可未來再用；黃榮村「要求清楚目標」改為報導轉述（非直接引語 §5c 紀律）
+- **敏感素材**（MANIFESTO §5 v2）：無死亡/家庭悲劇；父親黃榮村為公眾人物（前教育部長/現任考試院長），公開已報導資訊，避免簡化為「官二代之作」敘事陷阱
+- **品質**：10 腳註 / 約 3,029 中文字 / 破折號 4（≤15 ✓，從首版 13 降下）/「不是 X 是 Y」0（≤3 ✓）/ desc 139（≤160 ✓）/ QS ✅ / format ✅ / wikilink ✅
+- **Cross-link 回補**：陳建騏.md + 魏如萱.md + 阿爆.md 三篇延伸閱讀加黃少雍 pointer（雙線聲音邊界、10+ 年合作、MINETJUS 課程）
+- **Research**: [reports/research/2026-04/黃少雍.md](../../reports/research/2026-04/黃少雍.md) — 20+11 = 31 calls / 25 verbatim pool / 7 anchor / Second Voices 節標記 Stage 2 擴充方向
 
 ### 林宥嘉 — 2026-04-20 ε 完成（EVOLVE）（從 25 分滿分的〈Creep〉，到承認自己不需要完美的 17 年）
 
