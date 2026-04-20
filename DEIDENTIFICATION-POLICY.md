@@ -8,13 +8,13 @@
 ## 🚨 **嚴禁事項**
 
 ### ❌ 提交信息中
-- **禁止出現農友真實姓名**（如：Farmer-A、Farmer-B、Farmer-C等）
-- **禁止出現農場名稱**（如：[Farm-A]、[Farm-B]等）
+- **禁止出現農友真實姓名**（任何識別個人身份的名字）
+- **禁止出現農場或企業名稱**（任何可識別的機構名稱）
 - **禁止出現具體的驗證報告檔名**（如：VERIFICATION-REPORT-2.1.md）
 - **禁止出現電話、地址、社交媒體帳號**
 
 **示例：**
-- ❌ `docs: add VERIFICATION-REPORT-2.1 with Farmer-A and Farmer-B case studies`
+- ❌ `docs: add VERIFICATION-REPORT-2.1 with specific farmer names in case studies`
 - ✅ `docs: add internal farmer case study documentation`
 
 ### ❌ 版控追蹤的檔案中
