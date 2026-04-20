@@ -223,6 +223,26 @@ BECOME_TAIWANMD.md Step 5 新增：
 
 <!-- 楊丞琳 已完成 → 搬到 §✅ Done -->
 
+### 紀柏豪（Pohao Chi）
+
+- **Type**: `NEW`
+- **Category**: Art
+- **Priority**: `P1`
+- **Status**: `pending`
+- **Requested**: 2026-04-20 by 觀察者 (session β)
+- **Notes**:
+  - 聲音藝術家／作曲家／策展人，倫敦大學金匠學院（Goldsmiths）聲音藝術碩士背景
+  - 跨界聲音裝置、生成音樂、Web Audio、演算法作曲、駐村計畫
+  - 涉及 C-LAB 聲響實驗室、國藝會、台新藝術獎脈絡（需查獎項紀錄）
+  - 可能關聯：失聲祭、超響、2020 聲音裝置個展（需驗證年份與作品）
+  - 與王連晟、王新仁、林經堯屬相近聲音藝術脈絡但風格更偏聲響實驗與學術研究
+  - 必驗事實：Goldsmiths 學歷年份、台新藝術獎入圍／得獎、駐村紀錄、個人工作室（「融聲創意」？）身份確認
+- **Reference**:
+  - 個人網站 <https://www.pohaochi.com/>（待驗證）
+  - 國藝會補助藝術家資料庫
+  - 台新藝術獎官網 <https://www.taishinart.org.tw/>
+- **Pre-research**: 尚未啟動
+
 ### 林經堯
 
 - **Type**: `NEW`
