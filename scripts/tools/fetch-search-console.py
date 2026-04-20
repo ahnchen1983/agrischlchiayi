@@ -71,12 +71,21 @@ def reexec_in_venv():
 
 
 def query_sc(service, site_url, dimensions, start_date, end_date, row_limit=500):
-    """Query Search Console Search Analytics API."""
+    """Query Search Console Search Analytics API.
+
+    dataState="all" includes fresh (not-yet-finalized) data so we match what
+    the GSC UI displays. Without it, zero-click high-impression queries from
+    the last 1-2 days silently drop out of the result set. (2026-04-20 fix —
+    dashboard showed 2,458 imp while GSC UI showed 2,747 for the same 7-day
+    window, and high-impression queries like 鄧麗君 / taipei population were
+    missing from the cache.)
+    """
     body = {
         "startDate": start_date,
         "endDate": end_date,
         "dimensions": dimensions,
         "rowLimit": row_limit,
+        "dataState": "all",
     }
     return (
         service.searchanalytics()
@@ -133,16 +142,32 @@ def main():
 
     service = build("searchconsole", "v1", credentials=credentials, cache_discovery=False)
 
-    # SC has ~3 day lag, so end on "today - 3 days"
-    end_date = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
-    start_date = (datetime.now() - timedelta(days=args.days + 3)).strftime("%Y-%m-%d")
+    # GSC UI typically publishes data with a 2-day lag, so end on "today - 2
+    # days". Previously the lag was 3 days, which made the dashboard window
+    # trail GSC's own chart by a full day and skipped the freshest data point.
+    # args.days is the window size (7 = one week inclusive), so start = end -
+    # (N-1) gives exactly N calendar days inclusive.
+    end_date = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
+    start_date = (datetime.now() - timedelta(days=args.days + 1)).strftime("%Y-%m-%d")
 
     print(f"🔎 Fetching Search Console ({site_url}, {start_date} → {end_date})...", file=sys.stderr)
 
     try:
+        # Site totals — queried without dimensions. SC's privacy filters drop
+        # anonymized queries from query-dimensioned rows, so summing the
+        # queries list under-reports site totals by ~90% (observed 2,747 vs
+        # real 38,080 for 7d, 2026-04-20). Only a dimension-less query gives
+        # the numbers you see in the GSC UI header.
+        totals_raw = query_sc(service, site_url, [], start_date, end_date, row_limit=1)
         countries = query_sc(service, site_url, ["country"], start_date, end_date, row_limit=100)
-        queries = query_sc(service, site_url, ["query"], start_date, end_date, row_limit=200)
-        pages = query_sc(service, site_url, ["page"], start_date, end_date, row_limit=200)
+        # SC API sorts rows by clicks DESC, then impressions — so zero-click
+        # but high-impression queries (e.g. 鄧麗君 478 imp / 0 clicks) land
+        # after ALL clicked rows. We need rowLimit big enough to reach them.
+        # 2000 covers our current query tail; the hard cap is 25000. Pages
+        # bumped similarly so hub pages with zero-click impressions aren't
+        # silently dropped.
+        queries = query_sc(service, site_url, ["query"], start_date, end_date, row_limit=2000)
+        pages = query_sc(service, site_url, ["page"], start_date, end_date, row_limit=1000)
         devices = query_sc(service, site_url, ["device"], start_date, end_date, row_limit=10)
     except Exception as e:
         fail(f"Search Console API error: {type(e).__name__}: {e}")
@@ -159,8 +184,13 @@ def main():
             for r in rows.get("rows", [])
         ]
 
-    total_clicks = sum(r.get("clicks", 0) for r in queries.get("rows", []))
-    total_impressions = sum(r.get("impressions", 0) for r in queries.get("rows", []))
+    totals_row = (totals_raw.get("rows") or [{}])[0]
+    total_clicks = totals_row.get("clicks", 0)
+    total_impressions = totals_row.get("impressions", 0)
+    total_position = totals_row.get("position", 0)
+    # Kept for debugging the query-dim vs site-total gap.
+    query_sum_clicks = sum(r.get("clicks", 0) for r in queries.get("rows", []))
+    query_sum_impressions = sum(r.get("impressions", 0) for r in queries.get("rows", []))
 
     output = {
         "fetched_at": datetime.now().isoformat(),
@@ -170,6 +200,15 @@ def main():
             "clicks": total_clicks,
             "impressions": total_impressions,
             "ctr": round(total_clicks / total_impressions, 4) if total_impressions else 0,
+            "position": round(total_position, 2),
+            # How much of the site totals is covered by the named queries we
+            # can see (the rest is anonymized by SC privacy filters).
+            "query_dim_clicks": query_sum_clicks,
+            "query_dim_impressions": query_sum_impressions,
+            "query_dim_coverage_pct": (
+                round(query_sum_impressions / total_impressions * 100, 1)
+                if total_impressions else 0
+            ),
         },
         "countries": simplify(countries),
         "queries": simplify(queries),

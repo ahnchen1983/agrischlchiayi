@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T15:04:24.589643",
+  "lastUpdated": "2026-04-20T17:43:21.843181",
   "sourcesUsed": ["ga", "searchConsole24h", "cloudflare24h", "sense-cache"],
   "ga": {
     "label": "2026-03-23 to 2026-04-20",
@@ -558,49 +558,49 @@
     }
   ],
   "searchConsole7d": {
-    "label": "2026-04-10 to 2026-04-17 (7d)",
-    "startDate": "2026-04-10",
-    "endDate": "2026-04-17",
+    "label": "2026-04-12 to 2026-04-18 (7d)",
+    "startDate": "2026-04-12",
+    "endDate": "2026-04-18",
     "days": 7,
     "totals": {
-      "clicks": 157,
-      "impressions": 2458,
-      "ctr": 6.39
+      "clicks": 450,
+      "impressions": 38080,
+      "ctr": 1.18
     },
     "brandBreakdown": {
       "brand": {
-        "clicks": 81,
-        "impressions": 755,
-        "ctr": 10.73
+        "clicks": 71,
+        "impressions": 819,
+        "ctr": 8.67
       },
       "nonBrand": {
-        "clicks": 76,
-        "impressions": 1703,
-        "ctr": 4.46
+        "clicks": 91,
+        "impressions": 8452,
+        "ctr": 1.08
       },
       "note": "Brand = queries containing 'taiwan.md' / 'taiwan md' / exact 'md' / 'taiwandotmd'. Total CTR aggregates both; brand CTR is usually 60-80%, nonBrand CTR reflects true external discoverability."
     },
     "topQueries": [
       {
         "query": "taiwan md",
-        "clicks": 45,
-        "impressions": 65,
-        "ctr": 69.23,
-        "position": 1.03
-      },
-      {
-        "query": "taiwan.md",
-        "clicks": 29,
-        "impressions": 39,
-        "ctr": 74.36,
+        "clicks": 43,
+        "impressions": 61,
+        "ctr": 70.49,
         "position": 1
       },
       {
+        "query": "taiwan.md",
+        "clicks": 22,
+        "impressions": 31,
+        "ctr": 70.97,
+        "position": 1.06
+      },
+      {
         "query": "張懸",
-        "clicks": 20,
-        "impressions": 487,
-        "ctr": 4.11,
-        "position": 5.51
+        "clicks": 22,
+        "impressions": 544,
+        "ctr": 4.04,
+        "position": 5.17
       },
       {
         "query": "安溥",
@@ -610,11 +610,32 @@
         "position": 6.71
       },
       {
+        "query": "李珠珢",
+        "clicks": 6,
+        "impressions": 98,
+        "ctr": 6.12,
+        "position": 3.6
+      },
+      {
         "query": "md",
         "clicks": 4,
-        "impressions": 564,
-        "ctr": 0.71,
-        "position": 9.05
+        "impressions": 606,
+        "ctr": 0.66,
+        "position": 8.56
+      },
+      {
+        "query": "台灣邦交國2026",
+        "clicks": 3,
+        "impressions": 28,
+        "ctr": 10.71,
+        "position": 4.39
+      },
+      {
+        "query": "張懸 安溥",
+        "clicks": 3,
+        "impressions": 24,
+        "ctr": 12.5,
+        "position": 3.17
       },
       {
         "query": "taipei ktv nightclub",
@@ -624,39 +645,18 @@
         "position": 7.83
       },
       {
-        "query": "taiwanmd",
-        "clicks": 2,
-        "impressions": 20,
-        "ctr": 10.0,
-        "position": 1.05
-      },
-      {
-        "query": "台灣邦交國2026",
-        "clicks": 2,
-        "impressions": 29,
-        "ctr": 6.9,
-        "position": 5.07
-      },
-      {
-        "query": "夜市文化",
-        "clicks": 2,
-        "impressions": 23,
-        "ctr": 8.7,
-        "position": 8
-      },
-      {
-        "query": "張懸 安溥",
-        "clicks": 2,
-        "impressions": 14,
-        "ctr": 14.29,
-        "position": 3.86
-      },
-      {
         "query": "朴星垠",
         "clicks": 2,
         "impressions": 7,
         "ctr": 28.57,
         "position": 3.86
+      },
+      {
+        "query": "李多慧",
+        "clicks": 2,
+        "impressions": 37,
+        "ctr": 5.41,
+        "position": 4.68
       },
       {
         "query": "焦安溥",
@@ -668,23 +668,23 @@
       {
         "query": ".md",
         "clicks": 1,
-        "impressions": 51,
-        "ctr": 1.96,
-        "position": 9.18
+        "impressions": 49,
+        "ctr": 2.04,
+        "position": 9.14
       },
       {
         "query": "2026台灣邦交國",
         "clicks": 1,
-        "impressions": 6,
-        "ctr": 16.67,
-        "position": 4.17
+        "impressions": 5,
+        "ctr": 20.0,
+        "position": 3.6
       },
       {
-        "query": "hakka floral fabric",
+        "query": "arny",
         "clicks": 1,
-        "impressions": 1,
-        "ctr": 100,
-        "position": 8
+        "impressions": 3,
+        "ctr": 33.33,
+        "position": 7
       },
       {
         "query": "is the taipei zoo ethical",
@@ -696,9 +696,16 @@
       {
         "query": "md taiwan",
         "clicks": 1,
-        "impressions": 67,
-        "ctr": 1.49,
-        "position": 4.48
+        "impressions": 59,
+        "ctr": 1.69,
+        "position": 4.85
+      },
+      {
+        "query": "semiont",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
       },
       {
         "query": "shoto 吸毒",
@@ -713,92 +720,125 @@
         "impressions": 27,
         "ctr": 3.7,
         "position": 6.33
-      },
-      {
-        "query": "taiwan economic miracle",
-        "clicks": 1,
-        "impressions": 13,
-        "ctr": 7.69,
-        "position": 11.15
       }
     ],
     "opportunities": [
       {
-        "query": "cheng li-wun",
+        "query": "鄧麗君",
         "clicks": 0,
-        "impressions": 45,
-        "position": 10.91
+        "impressions": 478,
+        "position": 1.06
       },
       {
-        "query": "\"lu yen-hsun\" trained at",
+        "query": "taipei population",
         "clicks": 0,
-        "impressions": 31,
-        "position": 2.65
+        "impressions": 392,
+        "position": 1.03
       },
       {
-        "query": "c.c. wei tsmc iranstreetjournal",
+        "query": "夏小虎在民谣圈的影响力",
         "clicks": 0,
-        "impressions": 25,
-        "position": 9.16
+        "impressions": 142,
+        "position": 4.88
       },
       {
-        "query": "cheng li wun",
+        "query": "日治時期",
         "clicks": 0,
-        "impressions": 25,
-        "position": 10.6
+        "impressions": 108,
+        "position": 10.82
       },
       {
-        "query": "ai28527",
+        "query": "largan precision",
         "clicks": 0,
-        "impressions": 18,
-        "position": 9.83
+        "impressions": 103,
+        "position": 1.12
       },
       {
-        "query": "ceo c.c. wei tsmc iranstreetjournal",
+        "query": "population of taipei",
         "clicks": 0,
-        "impressions": 16,
-        "position": 8.56
+        "impressions": 91,
+        "position": 1
       },
       {
-        "query": "\"cho-yun hsu\" \"national taiwan university\" professor",
+        "query": "溥",
         "clicks": 0,
-        "impressions": 12,
-        "position": 7.42
+        "impressions": 85,
+        "position": 8.85
       },
       {
-        "query": "\"台灣原住民建築的生態智慧與可持續發展\" 林志宏 2011",
+        "query": "members of mayday (taiwanese band)",
         "clicks": 0,
-        "impressions": 12,
-        "position": 2.25
+        "impressions": 68,
+        "position": 9.44
       },
       {
-        "query": "\"cho-yun hsu\" taiwan history",
+        "query": "台灣前50大企業",
         "clicks": 0,
-        "impressions": 11,
-        "position": 3.64
+        "impressions": 50,
+        "position": 8.28
       },
       {
-        "query": "\"臺灣原住民建築的生態智慧與可持續發展\"",
+        "query": "largan company taiwan",
         "clicks": 0,
-        "impressions": 11,
-        "position": 2.27
+        "impressions": 49,
+        "position": 1.04
       }
     ],
     "wordCloud": [
       {
         "query": "md",
-        "impressions": 564,
+        "impressions": 606,
         "clicks": 4
       },
       {
         "query": "張懸",
-        "impressions": 487,
-        "clicks": 20
+        "impressions": 544,
+        "clicks": 22
+      },
+      {
+        "query": "鄧麗君",
+        "impressions": 478,
+        "clicks": 0
+      },
+      {
+        "query": "taipei population",
+        "impressions": 392,
+        "clicks": 0
+      },
+      {
+        "query": "夏小虎在民谣圈的影响力",
+        "impressions": 142,
+        "clicks": 0
       },
       {
         "query": "台灣前50大企業排名",
-        "impressions": 154,
+        "impressions": 128,
         "clicks": 1
+      },
+      {
+        "query": "楊丞琳",
+        "impressions": 124,
+        "clicks": 1
+      },
+      {
+        "query": "日治時期",
+        "impressions": 108,
+        "clicks": 0
+      },
+      {
+        "query": "largan precision",
+        "impressions": 103,
+        "clicks": 0
+      },
+      {
+        "query": "李珠珢",
+        "impressions": 98,
+        "clicks": 6
+      },
+      {
+        "query": "population of taipei",
+        "impressions": 91,
+        "clicks": 0
       },
       {
         "query": "安溥",
@@ -806,24 +846,39 @@
         "clicks": 7
       },
       {
+        "query": "溥",
+        "impressions": 85,
+        "clicks": 0
+      },
+      {
+        "query": "members of mayday (taiwanese band)",
+        "impressions": 68,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan md",
+        "impressions": 61,
+        "clicks": 43
+      },
+      {
+        "query": "李洋",
+        "impressions": 60,
+        "clicks": 1
+      },
+      {
         "query": "md taiwan",
-        "impressions": 67,
+        "impressions": 59,
         "clicks": 1
       },
       {
         "query": "鄭麗文是外省人嗎",
-        "impressions": 67,
+        "impressions": 55,
         "clicks": 1
       },
       {
-        "query": "taiwan md",
-        "impressions": 65,
-        "clicks": 45
-      },
-      {
-        "query": ".md",
-        "impressions": 51,
-        "clicks": 1
+        "query": "台灣前50大企業",
+        "impressions": 50,
+        "clicks": 0
       },
       {
         "query": "焦安溥",
@@ -831,39 +886,174 @@
         "clicks": 2
       },
       {
+        "query": ".md",
+        "impressions": 49,
+        "clicks": 1
+      },
+      {
+        "query": "largan company taiwan",
+        "impressions": 49,
+        "clicks": 0
+      },
+      {
+        "query": "mayday taiwan",
+        "impressions": 46,
+        "clicks": 0
+      },
+      {
         "query": "cheng li-wun",
         "impressions": 45,
         "clicks": 0
       },
       {
-        "query": "taiwan.md",
-        "impressions": 39,
-        "clicks": 29
+        "query": "largan",
+        "impressions": 43,
+        "clicks": 0
       },
       {
-        "query": "李珠珢",
+        "query": "largan taiwan",
+        "impressions": 43,
+        "clicks": 0
+      },
+      {
+        "query": "jolin tsai age",
+        "impressions": 40,
+        "clicks": 0
+      },
+      {
+        "query": "中華人民共和國國旗",
+        "impressions": 40,
+        "clicks": 0
+      },
+      {
+        "query": "台灣前50大公司",
+        "impressions": 40,
+        "clicks": 0
+      },
+      {
+        "query": "李多慧",
+        "impressions": 37,
+        "clicks": 2
+      },
+      {
+        "query": "mayday ashin birthplace tainan",
+        "impressions": 37,
+        "clicks": 0
+      },
+      {
+        "query": "アンソンジェ",
+        "impressions": 37,
+        "clicks": 0
+      },
+      {
+        "query": "mayday chinese band",
+        "impressions": 36,
+        "clicks": 0
+      },
+      {
+        "query": "vtuber",
+        "impressions": 36,
+        "clicks": 0
+      },
+      {
+        "query": "대만 기후",
         "impressions": 35,
         "clicks": 1
       },
       {
-        "query": "대만 기후",
-        "impressions": 32,
-        "clicks": 1
+        "query": "population taipei",
+        "impressions": 35,
+        "clicks": 0
       },
       {
-        "query": "\"lu yen-hsun\" trained at",
+        "query": "cheng li-wun education",
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "query": "hou hsiao-hsien more than 50 awards official biography",
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "query": "吳哲宇",
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "query": "安溥 年齡",
+        "impressions": 34,
+        "clicks": 0
+      },
+      {
+        "query": "where is jj lin from",
+        "impressions": 33,
+        "clicks": 0
+      },
+      {
+        "query": "hou hsiao-hsien over 50 awards official biography",
+        "impressions": 32,
+        "clicks": 0
+      },
+      {
+        "query": "台灣日治時期",
+        "impressions": 32,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan.md",
+        "impressions": 31,
+        "clicks": 22
+      },
+      {
+        "query": "hsu cho-yun li ji",
         "impressions": 31,
         "clicks": 0
       },
       {
-        "query": "台灣邦交國2026",
+        "query": "mayday (taiwanese band)",
+        "impressions": 31,
+        "clicks": 0
+      },
+      {
+        "query": "mayday ashin birthplace",
+        "impressions": 30,
+        "clicks": 0
+      },
+      {
+        "query": "中华民国 邦交国 2026",
         "impressions": 29,
-        "clicks": 2
+        "clicks": 0
+      },
+      {
+        "query": "台灣邦交國2026",
+        "impressions": 28,
+        "clicks": 3
+      },
+      {
+        "query": "朱一贵 籍贯",
+        "impressions": 28,
+        "clicks": 0
+      },
+      {
+        "query": "清治時期",
+        "impressions": 28,
+        "clicks": 0
       },
       {
         "query": "taiwan",
         "impressions": 27,
         "clicks": 1
+      },
+      {
+        "query": "林良",
+        "impressions": 27,
+        "clicks": 0
+      },
+      {
+        "query": "ai28527",
+        "impressions": 26,
+        "clicks": 0
       },
       {
         "query": "c.c. wei tsmc iranstreetjournal",
@@ -876,63 +1066,308 @@
         "clicks": 0
       },
       {
-        "query": "夜市文化",
+        "query": "mdtaiwan",
+        "impressions": 25,
+        "clicks": 0
+      },
+      {
+        "query": "日治台灣",
+        "impressions": 25,
+        "clicks": 0
+      },
+      {
+        "query": "張懸 安溥",
+        "impressions": 24,
+        "clicks": 3
+      },
+      {
+        "query": "taiwan diplomatic allies 2026",
         "impressions": 23,
-        "clicks": 2
+        "clicks": 0
+      },
+      {
+        "query": "台灣50大企業",
+        "impressions": 23,
+        "clicks": 0
+      },
+      {
+        "query": "草東沒有派對",
+        "impressions": 23,
+        "clicks": 0
+      },
+      {
+        "query": "\"cho-yun hsu\" student archaeologist",
+        "impressions": 22,
+        "clicks": 0
+      },
+      {
+        "query": "康士坦的變化球",
+        "impressions": 22,
+        "clicks": 0
+      },
+      {
+        "query": "largan precision taiwan",
+        "impressions": 20,
+        "clicks": 0
+      },
+      {
+        "query": "uni president taiwan",
+        "impressions": 20,
+        "clicks": 0
+      },
+      {
+        "query": "夜市文化",
+        "impressions": 20,
+        "clicks": 0
+      },
+      {
+        "query": "郁永河 字号",
+        "impressions": 20,
+        "clicks": 0
+      },
+      {
+        "query": "how many people live in taipei",
+        "impressions": 19,
+        "clicks": 0
+      },
+      {
+        "query": "mayday taiwanese band",
+        "impressions": 19,
+        "clicks": 0
+      },
+      {
+        "query": "台灣 邦交國 2026",
+        "impressions": 19,
+        "clicks": 0
+      },
+      {
+        "query": "瑜市",
+        "impressions": 19,
+        "clicks": 0
       },
       {
         "query": "taiwanmd",
-        "impressions": 20,
-        "clicks": 2
+        "impressions": 18,
+        "clicks": 1
       },
       {
-        "query": "ai28527",
+        "query": "\"臺灣原住民建築的生態智慧與可持續發展\"",
         "impressions": 18,
         "clicks": 0
       },
       {
+        "query": "cheng li-wun parents",
+        "impressions": 18,
+        "clicks": 0
+      },
+      {
+        "query": "hou hsiao-hsien 50 awards biography",
+        "impressions": 18,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan economic miracle",
+        "impressions": 17,
+        "clicks": 1
+      },
+      {
         "query": "ceo c.c. wei tsmc iranstreetjournal",
+        "impressions": 17,
+        "clicks": 0
+      },
+      {
+        "query": "中華民國 邦交國 數量 2026",
+        "impressions": 17,
+        "clicks": 0
+      },
+      {
+        "query": "jolin age",
         "impressions": 16,
         "clicks": 0
       },
       {
-        "query": "李多慧",
+        "query": "jolin tsai chinese name",
+        "impressions": 16,
+        "clicks": 0
+      },
+      {
+        "query": "偏鄉教育",
+        "impressions": 16,
+        "clicks": 0
+      },
+      {
+        "query": "藍染",
+        "impressions": 16,
+        "clicks": 0
+      },
+      {
+        "query": "巧固球世界排名",
         "impressions": 15,
         "clicks": 1
       },
       {
-        "query": "張懸 安溥",
-        "impressions": 14,
-        "clicks": 2
-      },
-      {
-        "query": "taiwan economic miracle",
-        "impressions": 13,
-        "clicks": 1
-      },
-      {
         "query": "\"cho-yun hsu\" \"national taiwan university\" professor",
-        "impressions": 12,
+        "impressions": 15,
+        "clicks": 0
+      },
+      {
+        "query": "中华民国 邦交国 数量 2026",
+        "impressions": 15,
+        "clicks": 0
+      },
+      {
+        "query": "台灣 邦交國 數量 2026",
+        "impressions": 15,
+        "clicks": 0
+      },
+      {
+        "query": "日本統治時代 台湾 期間",
+        "impressions": 15,
+        "clicks": 0
+      },
+      {
+        "query": "桂綸鎂",
+        "impressions": 15,
+        "clicks": 0
+      },
+      {
+        "query": "chi-huey wong date of birth",
+        "impressions": 14,
+        "clicks": 0
+      },
+      {
+        "query": "lee ju eun",
+        "impressions": 14,
+        "clicks": 0
+      },
+      {
+        "query": "pegatron company taiwan",
+        "impressions": 14,
+        "clicks": 0
+      },
+      {
+        "query": "taipei metro population",
+        "impressions": 14,
+        "clicks": 0
+      },
+      {
+        "query": "中華民國 邦交國 2026",
+        "impressions": 14,
+        "clicks": 0
+      },
+      {
+        "query": "\"cho-yun hsu\" student archaeology",
+        "impressions": 13,
         "clicks": 0
       },
       {
         "query": "\"台灣原住民建築的生態智慧與可持續發展\" 林志宏 2011",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "taipei city population",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "taiwanese production designer started in theatre",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "台灣邦交國數量變化",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "張懸為什麼改名",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "新住民美食",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "盧廣仲哪裡人",
+        "impressions": 13,
+        "clicks": 0
+      },
+      {
+        "query": "\"cho-yun hsu\" archaeologist student",
         "impressions": 12,
         "clicks": 0
       },
       {
         "query": "\"cho-yun hsu\" taiwan history",
-        "impressions": 11,
+        "impressions": 12,
         "clicks": 0
       },
       {
-        "query": "\"臺灣原住民建築的生態智慧與可持續發展\"",
-        "impressions": 11,
+        "query": "cross-strait relations historical timeline 1949-2026",
+        "impressions": 12,
         "clicks": 0
       },
       {
-        "query": "bobby chen",
-        "impressions": 11,
+        "query": "hou hsiao-hsien more than 50 awards biography",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "largan precision products",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "lin yangduo",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "m.d.",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "mayday band members",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "mayday band members birthplace tainan",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "mayday band taiwan",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "mayday taiwan band",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "md taiwan.com",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan diplomatic allies number 2026",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan tectonic plates",
+        "impressions": 12,
+        "clicks": 0
+      },
+      {
+        "query": "乖乖文化",
+        "impressions": 12,
         "clicks": 0
       },
       {
@@ -941,598 +1376,163 @@
         "clicks": 0
       },
       {
+        "query": "hsu cho-yun teacher li ji",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "mayday chinese",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "taiwan vtuber data github",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "umc是什麼",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "立杯機率",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "葉丙成",
+        "impressions": 11,
+        "clicks": 0
+      },
+      {
+        "query": "\"台灣原住民建築的生態智慧與可持續發展\"",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
         "query": "asus company country",
         "impressions": 10,
         "clicks": 0
       },
       {
-        "query": "台灣用語轉換器",
+        "query": "what is the population of taipei",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "台灣手搖飲文化",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "地牛",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "朱一貴",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "李遠哲",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "郑习会 2026",
+        "impressions": 10,
+        "clicks": 0
+      },
+      {
+        "query": "2026 台灣股市參與率 家庭持有股票比例",
         "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "bobby chen",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "hsu cho-yun li chi",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "エドワードリー",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "チェ・ヒョンソク",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "台湾 邦交国 2026",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "台灣原住民歌手",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "台灣市值前50大公司",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "姜緗潔",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "施明德",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "日月光半導体",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "林懷民",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "鄭麗文 維基",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "鄭麗文 鄭習會 2026",
+        "impressions": 9,
+        "clicks": 0
+      },
+      {
+        "query": "キム・ドユン",
+        "impressions": 8,
         "clicks": 1
       },
       {
-        "query": "\"台灣原住民建築的生態智慧與可持續發展\"",
+        "query": "台灣城鄉差距",
+        "impressions": 8,
+        "clicks": 1
+      },
+      {
+        "query": "\"cho-yun hsu\" mentor",
         "impressions": 8,
         "clicks": 0
       },
       {
         "query": "c.c. wei tsmc ceo biography",
         "impressions": 8,
-        "clicks": 0
-      },
-      {
-        "query": "朴星垠",
-        "impressions": 7,
-        "clicks": 2
-      },
-      {
-        "query": "is the taipei zoo ethical",
-        "impressions": 7,
-        "clicks": 1
-      },
-      {
-        "query": "台灣前五十大企業",
-        "impressions": 7,
-        "clicks": 1
-      },
-      {
-        "query": "\"cho-yun hsu\" archaeologist student",
-        "impressions": 7,
-        "clicks": 0
-      },
-      {
-        "query": "\"cho-yun hsu\" mentor",
-        "impressions": 7,
-        "clicks": 0
-      },
-      {
-        "query": "taipei ktv nightclub",
-        "impressions": 6,
-        "clicks": 2
-      },
-      {
-        "query": "2026台灣邦交國",
-        "impressions": 6,
-        "clicks": 1
-      },
-      {
-        "query": "台灣便利商店文化",
-        "impressions": 6,
-        "clicks": 1
-      },
-      {
-        "query": "張懸爭議",
-        "impressions": 6,
-        "clicks": 1
-      },
-      {
-        "query": "\"chi-huey wong\" born",
-        "impressions": 6,
-        "clicks": 0
-      },
-      {
-        "query": "asus country of origin",
-        "impressions": 6,
-        "clicks": 0
-      },
-      {
-        "query": "ceo c.c. wei tsmc",
-        "impressions": 6,
-        "clicks": 0
-      },
-      {
-        "query": "中國用語轉換",
-        "impressions": 5,
-        "clicks": 1
-      },
-      {
-        "query": "台灣獨立鯨魚旗由來",
-        "impressions": 5,
-        "clicks": 1
-      },
-      {
-        "query": "台灣穿山甲",
-        "impressions": 5,
-        "clicks": 1
-      },
-      {
-        "query": "\"国立台南芸術大学\"",
-        "impressions": 5,
-        "clicks": 0
-      },
-      {
-        "query": "2 physical features of taiwan",
-        "impressions": 5,
-        "clicks": 0
-      },
-      {
-        "query": "amis language revitalization",
-        "impressions": 5,
-        "clicks": 0
-      },
-      {
-        "query": "andré chiang cuisine",
-        "impressions": 5,
-        "clicks": 0
-      },
-      {
-        "query": "asus是什麼",
-        "impressions": 5,
-        "clicks": 0
-      },
-      {
-        "query": "台灣前50大企業排名2025",
-        "impressions": 4,
-        "clicks": 1
-      },
-      {
-        "query": "呂冠緯",
-        "impressions": 4,
-        "clicks": 1
-      },
-      {
-        "query": "數據台灣",
-        "impressions": 4,
-        "clicks": 1
-      },
-      {
-        "query": "\"cho-yun hsu\" student archaeologist",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "\"folk music\" \"modern rock\" \"formed in 1999\" band",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "\"studied under\" \"cho-yun hsu\"",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "\"臺灣原住民建築的生態智慧與可持續發展\" 林志宏 2011",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "ase 日月光",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "ashin mayday birthplace tainan",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "audrey tang current position 2026",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "chai yi ling",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li wun wiki",
-        "impressions": 4,
-        "clicks": 0
-      },
-      {
-        "query": "taiwanese funeral customs",
-        "impressions": 3,
-        "clicks": 1
-      },
-      {
-        "query": "\"cho-yun hsu\" archaeology student",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "\"cho-yun hsu\" student archaeology",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "\"formed in 1999\" band \"folk music\" \"modern rock\"",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "\"never finished high school\" \"music festival\" singer wikipedia",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "\"taiwan's kitchen\" tainan",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "\"鄭習會\" 2026",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li wun education",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li wun family",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li-wun age",
-        "impressions": 3,
-        "clicks": 0
-      },
-      {
-        "query": "動物用藥爭議",
-        "impressions": 2,
-        "clicks": 1
-      },
-      {
-        "query": "台灣知識",
-        "impressions": 2,
-        "clicks": 1
-      },
-      {
-        "query": "台灣聲景協會",
-        "impressions": 2,
-        "clicks": 1
-      },
-      {
-        "query": "法軍",
-        "impressions": 2,
-        "clicks": 1
-      },
-      {
-        "query": "產業轉型",
-        "impressions": 2,
-        "clicks": 1
-      },
-      {
-        "query": "\"born in 1997\" \"asian games gold\"",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"folk music\" \"modern rock\" \"formed in 1999\"",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"formed in 1999\" \"folk music\" \"modern rock\"",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"never finished high school\" \"music festival\" singer",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"student of hsu cho-yun\" archaeologist",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"taiwan armand pine\"",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"五月天\" 台南 出身",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "\"地理分界点\" 郁永河",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "163 braces",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "228 incident taiwan history causes timeline consequences",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "50大企業",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ahn jihyun",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ai相關產業",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "alien art center kaohsiung",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "architecture of taiwan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ase 台湾",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "aseグループ",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ashin mayday born in tainan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ashin mayday born tainan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "asus acer msi gigabyte headquartered in taiwan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "asus msi acer gigabyte headquartered in taiwan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "audrey tang current position taiwan",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "byun ha yul cheerleader",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cc wei",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "ceo c.c. tsmc iranstreetjournal",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "che-yu wu",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "chef edward lee",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li wun biography",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li wun parents",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li-wen kmt biography",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li-wen taiwan politician biography",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "cheng li-wun biography",
-        "impressions": 2,
-        "clicks": 0
-      },
-      {
-        "query": "hakka floral fabric",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "shoto 吸毒",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "原住民飲食文化",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "地層下陷",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "垃圾車音樂由來",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "安溥 張懸",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "愛德華李",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "智飛科技",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "曹瑞原",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "翁佳音",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "鄭宜農",
-        "impressions": 1,
-        "clicks": 1
-      },
-      {
-        "query": "\"cho-yun hsu\" teacher",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"htc vive\" ambassador vtuber",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"ibon\" \"hong kong\" 7-eleven kiosk",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"master's degree in mechanical engineering\" \"stanford\" \"hong kong\" founder",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"shopee\" digital transformation strategy",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"student of hsu cho-yun\" archaeology",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "\"studied under\" historian taiwan archaeologist",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "&team",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "(md)",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "*.md",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "+md",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "16族",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "1884年",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "1895 年",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "1949國民政府遷台",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "2015 四大 歌手 姓氏 四字 短语",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "2025颱風",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "2026年4月10日 習近平 鄭麗文 會面",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "23岁 单曲 包含 出生城市 歌手",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "23岁 发行 单曲 包含 出生 城市",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "23岁单曲包含出生城市歌手",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "29岁成立自己团队 歌手",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "29岁成立自己的团队 歌手",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "2nd taiwan strait crisis",
-        "impressions": 1,
-        "clicks": 0
-      },
-      {
-        "query": "30岁 第三张专辑 最佳创作歌手 金曲奖",
-        "impressions": 1,
         "clicks": 0
       }
     ]
