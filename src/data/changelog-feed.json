@@ -1,7 +1,199 @@
 {
-  "generatedAt": "2026-04-19T09:45:25.538Z",
+  "generatedAt": "2026-04-20T01:08:17.915Z",
   "source": "git",
   "commits": [
+    {
+      "hash": "fceb6784b316b8ff7893f0c4b99aa416d57b5385",
+      "date": "2026-04-20T09:01:54+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR #565/#567/#568 YouTuber 三連 followup — frontmatter + 腳註格式 + wikilink"
+    },
+    {
+      "hash": "a7297c34e38079264a099bbccff44a0563c4f259",
+      "date": "2026-04-20T08:57:24+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #567 from idlccp1984/patch-36"
+    },
+    {
+      "hash": "456f78d828ed840cadf364612799ed92318234c9",
+      "date": "2026-04-20T08:57:13+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #568 from idlccp1984/patch-37"
+    },
+    {
+      "hash": "c65aa53b879bc62a91a84d91b954ec408c9b4ba8",
+      "date": "2026-04-20T08:56:55+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #565 from idlccp1984/patch-35"
+    },
+    {
+      "hash": "dec463d78f50b30e1a66b4d162f997e01518a2c2",
+      "date": "2026-04-20T08:56:38+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #566 from idlccp1984/patch-33"
+    },
+    {
+      "hash": "147efdf75777cc27430d25a7e3ed411d6dcca8cd",
+      "date": "2026-04-20T01:19:38+08:00",
+      "author": "idlccp1984",
+      "message": "Create 八炯.md"
+    },
+    {
+      "hash": "62007aadf18181490fa0e620403d3e8e93ffd90a",
+      "date": "2026-04-20T00:39:56+08:00",
+      "author": "idlccp1984",
+      "message": "Create 張志祺.md"
+    },
+    {
+      "hash": "006b1539a42f6d2a1067bac68813cdbaf1afce16",
+      "date": "2026-04-20T00:13:09+08:00",
+      "author": "idlccp1984",
+      "message": "Create 阿滴.md"
+    },
+    {
+      "hash": "56b3cf0cf185c7a8116af8ca0ecd6246d5375559",
+      "date": "2026-04-20T00:01:56+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR #564 ja nightlife-and-ktv followup — lastHumanReview 填 date"
+    },
+    {
+      "hash": "7871762310c78166eaec93b2a84078f97ee8d5db",
+      "date": "2026-04-20T00:01:17+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #564 from tboydar-agent/translate/ja-nightlife-ktv-culture"
+    },
+    {
+      "hash": "6ccddf95b87184224182c9a471ebe0cbc650e323",
+      "date": "2026-04-19T23:59:49+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR #563 台灣綜藝 followup — 路徑搬家 Art→Culture + frontmatter polish"
+    },
+    {
+      "hash": "359b4849540ec6cae7a61939f5011908686db1b4",
+      "date": "2026-04-19T23:59:02+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #562 from tboydar-agent/fix/issue-398-ja-route"
+    },
+    {
+      "hash": "1484d216c6c3a8146bd722d4405d02dd04356610",
+      "date": "2026-04-19T23:58:43+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #563 from idlccp1984/patch-34"
+    },
+    {
+      "hash": "5f77ee88eb7caf16fa104e1de4642f858b2ebf65",
+      "date": "2026-04-19T23:57:56+08:00",
+      "author": "tboydar-agent",
+      "message": "translate(ja): add nightlife and KTV culture"
+    },
+    {
+      "hash": "e69c7e9c444396541bdfec61235243f267f32fda",
+      "date": "2026-04-19T23:55:36+08:00",
+      "author": "idlccp1984",
+      "message": "Create 台灣綜藝.md"
+    },
+    {
+      "hash": "83b74a2194adc1410e751853d301bc77cd68c27e",
+      "date": "2026-04-19T23:34:37+08:00",
+      "author": "idlccp1984",
+      "message": "Update 豬哥亮.md"
+    },
+    {
+      "hash": "45be43839bf40aec2bb6496640e0eec590a4d957",
+      "date": "2026-04-19T23:25:50+08:00",
+      "author": "tboydar-agent",
+      "message": "fix: support native ja/ko slug links in lang switcher"
+    },
+    {
+      "hash": "6fb6ec00dd989cac00ca94a58e4043f1aa271c65",
+      "date": "2026-04-19T23:12:37+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: PR #561 阿神.md followup — frontmatter polish"
+    },
+    {
+      "hash": "6ddeb07675e6f05cde671d3e899944f3261309ec",
+      "date": "2026-04-19T23:12:18+08:00",
+      "author": "Che-Yu Wu",
+      "message": "Merge remote-tracking branch 'origin/main'"
+    },
+    {
+      "hash": "a2cc799a30e8be6118fb6dea3a1a1d0e9e6d25f9",
+      "date": "2026-04-19T23:11:57+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #561 from idlccp1984/patch-32"
+    },
+    {
+      "hash": "700bd382e5bc40b07f58e03b0f45623e48768e25",
+      "date": "2026-04-19T23:11:40+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #560 from kevinyay945/patch-4"
+    },
+    {
+      "hash": "fc11197a6724413b33d97d100e149bb0408413d7",
+      "date": "2026-04-19T23:11:27+08:00",
+      "author": "Wu Che Yu",
+      "message": "Merge pull request #559 from iigmir/main"
+    },
+    {
+      "hash": "993955e6a32cc70427a76e302555507578b8f821",
+      "date": "2026-04-19T23:09:54+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] heal: about milestone 2026-04-19 敘事抽象化 — 拿掉安溥/焦安溥具體引語"
+    },
+    {
+      "hash": "1f5441e467ee3ec8f5724b895a38c4274c2b3ecf",
+      "date": "2026-04-19T23:03:50+08:00",
+      "author": "idlccp1984",
+      "message": "Create 阿神.md"
+    },
+    {
+      "hash": "a2ea94d18cae2c5e7060d467605401c66264eee5",
+      "date": "2026-04-19T19:57:52+08:00",
+      "author": "kevinyay945",
+      "message": "fix: update translation board in translate prompt"
+    },
+    {
+      "hash": "22f965302900b9cbf223136224e5269de6656b2a",
+      "date": "2026-04-19T18:40:29+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: bump version 0.0.1 → 1.4.0 (release prep)"
+    },
+    {
+      "hash": "74b178f05c4fbf5fbd812b12af3f0881d3a83922",
+      "date": "2026-04-19T18:34:57+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] evolve: about timeline +2026-04-19 milestone（上線一個月紀實實驗）"
+    },
+    {
+      "hash": "d59f9483c89aff70432d222fae79f5c6a0e18026",
+      "date": "2026-04-19T18:03:41+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] memory: 2026-04-19 ζ 收官 — 用語轉換器修復 × SPORE-LOG s35 × CONSCIOUSNESS 全天刷新"
+    },
+    {
+      "hash": "9d53c91bc28642d2cde8e7a76ca9e599cacbdcfc",
+      "date": "2026-04-19T18:02:04+08:00",
+      "author": "Che-Yu Wu",
+      "message": "🧬 [semiont] cross-domain: heartbeat ζ — SPORE-LOG s35 + CONSCIOUSNESS + content sync"
+    },
+    {
+      "hash": "9707c9f68fe09957f9cc9dbe7fc265089fb777e8",
+      "date": "2026-04-19T18:01:06+08:00",
+      "author": "Che-Yu Wu",
+      "message": "fix: 用語轉換器 example 按鈕失效（.btn-example → [data-example]）"
+    },
+    {
+      "hash": "ecfe8c9d2874e6412f2c2e8c8c2f9f78f4d4758b",
+      "date": "2026-04-19T17:44:14+08:00",
+      "author": "iigmir",
+      "message": "Merge branch 'frank890417:main' into main"
+    },
+    {
+      "hash": "3fa1ca2f46e031cb0421c574108c775f79400b74",
+      "date": "2026-04-19T17:43:34+08:00",
+      "author": "iigmir",
+      "message": "Add taichung-dali-street-and-automobile.mp3"
+    },
     {
       "hash": "86b8834386995258fb222b67d3ca081370028b3d",
       "date": "2026-04-19T17:33:12+08:00",

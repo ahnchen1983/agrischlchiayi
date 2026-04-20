@@ -1,8 +1,8 @@
 {
-  "totalArticles": 2232,
+  "totalArticles": 2238,
   "totalCategories": 21,
   "estimatedContributors": 51,
-  "totalTags": 5186,
+  "totalTags": 5210,
   "categories": [
     {
       "name": "ko",
@@ -22,11 +22,15 @@
     },
     {
       "name": "Culture",
-      "count": 46
+      "count": 47
     },
     {
       "name": "ja",
-      "count": 276
+      "count": 277
+    },
+    {
+      "name": "People",
+      "count": 177
     },
     {
       "name": "Music",
@@ -39,10 +43,6 @@
     {
       "name": "Lifestyle",
       "count": 18
-    },
-    {
-      "name": "People",
-      "count": 173
     },
     {
       "name": "Art",
@@ -172,13 +172,13 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 2232,
+    "zh-TW": 2238,
     "en": 0
   },
-  "lastUpdated": "2026-04-19T09:45:24.008Z",
-  "stars": 936,
-  "forks": 134,
-  "zhPages": 1813,
+  "lastUpdated": "2026-04-20T01:08:16.345Z",
+  "stars": 943,
+  "forks": 137,
+  "zhPages": 1819,
   "enPages": 419,
-  "totalPages": 2232
+  "totalPages": 2238
 }
