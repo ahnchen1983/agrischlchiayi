@@ -1,77 +1,86 @@
 #!/usr/bin/env bash
 # ============================================================
-# Commit-message Deidentification Check
+# Commit-message Deidentification Check (hash-based)
 # ============================================================
 # Blocks commits whose MESSAGE contains sensitive farmer data.
-# (The pre-commit hook handles file content; this handles the message.)
+# Uses SHA256-16 hashes — no cleartext names stored in this file.
 #
 # Bypass (emergency only): git commit --no-verify
 # See DEIDENTIFICATION-POLICY.md
 # ============================================================
 
 msg_file="$1"
-msg=$(cat "$msg_file")
 
-# Colors
-if [ -t 2 ]; then
-  RED=$'\033[31m'
-  YELLOW=$'\033[33m'
-  BOLD=$'\033[1m'
-  RESET=$'\033[0m'
-else
-  RED=""; YELLOW=""; BOLD=""; RESET=""
-fi
+python3 - "$msg_file" <<'PYEOF'
+import hashlib, re, sys
+from pathlib import Path
 
-FARMER_NAMES="Farmer-A|Farmer-B|Farmer-C|Farmer-D|Farmer-E|Farmer-F|Farmer-G|Farmer-H|Farmer-I|Farmer-J|Farmer-L|Farmer-M|Farmer-N|Farmer-O|[某農友真名]"
-FARM_NAMES="[Farm-A]|[Farm-A]|[Farm-B]|[Farm-B]"
+# SHA256-16 hashes of known sensitive identifiers.
+# (Source strings are intentionally not stored.)
+SENSITIVE_HASHES = {
+    "6f38e3042df13c90", "1bde4d547f2488de", "17eb58e7a3b44a6b",
+    "43dc7543b1d3d2df", "ffb37c0425f0ddd4", "45995cfe14eb0887",
+    "e1584dc3eee0ceec", "b7f763cd8592883a", "c5e839525d6db32b",
+    "cc7c498447e8b3ce", "5df1c25f70a7d7ad", "4c90f80a99384d78",
+    "f3cad159360b1e7c", "da9658e1fc134d6f", "1c25e3454d92a143",
+    "f187e765f39c3e59", "a30c009b9a814fbe", "372e3628b388ac4f",
+    "c4d3729aa49695c5",
+}
+WINDOW_SIZES = (2, 3, 4, 5, 6)
 
-# Sensitive file references in commit message (e.g. "VERIFICATION-REPORT-2.1", "source/farmer.md")
-FILENAME_PATTERNS="VERIFICATION-REPORT-[0-9]+\.[0-9]+|FARMER-DATA-EXECUTION-SCHEDULE|source/[一-龥]+\.md"
+# Patterns are generic descriptions, not names
+FILENAME_PATTERNS = re.compile(
+    r"VERIFICATION-REPORT-\d+\.\d+|FARMER-DATA-EXECUTION-SCHEDULE|source/[\u4e00-\u9fff]+\.md"
+)
+CHINESE_RUN = re.compile(r"[\u4e00-\u9fff]+")
 
-violations=0
+RED, YELLOW, BOLD, RESET = "\033[31m", "\033[33m", "\033[1m", "\033[0m"
+if not sys.stderr.isatty():
+    RED = YELLOW = BOLD = RESET = ""
 
-# Check for farmer names
-name_hits=$(echo "$msg" | grep -oE "$FARMER_NAMES" | sort -u || true)
-if [ -n "$name_hits" ]; then
-  echo "" >&2
-  echo "${RED}${BOLD}❌ Commit 訊息含有農友真名：${RESET}" >&2
-  echo "$name_hits" | sed "s/^/   ${RED}→${RESET} /" >&2
-  violations=$((violations + 1))
-fi
+msg = Path(sys.argv[1]).read_text(encoding="utf-8", errors="replace")
 
-# Check for farm names
-farm_hits=$(echo "$msg" | grep -oE "$FARM_NAMES" | sort -u || true)
-if [ -n "$farm_hits" ]; then
-  echo "" >&2
-  echo "${RED}${BOLD}❌ Commit 訊息含有農場/企業名稱：${RESET}" >&2
-  echo "$farm_hits" | sed "s/^/   ${RED}→${RESET} /" >&2
-  violations=$((violations + 1))
-fi
+def sha16(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()[:16]
 
-# Check for sensitive filename references
-file_hits=$(echo "$msg" | grep -oE "$FILENAME_PATTERNS" | sort -u || true)
-if [ -n "$file_hits" ]; then
-  echo "" >&2
-  echo "${RED}${BOLD}❌ Commit 訊息含有敏感檔名：${RESET}" >&2
-  echo "$file_hits" | sed "s/^/   ${RED}→${RESET} /" >&2
-  echo "   ${YELLOW}改為通用描述（如「internal farmer documentation」）${RESET}" >&2
-  violations=$((violations + 1))
-fi
+def find_hash_hits(text: str) -> set[str]:
+    hits = set()
+    for m in CHINESE_RUN.finditer(text):
+        run = m.group(0)
+        for size in WINDOW_SIZES:
+            for i in range(0, len(run) - size + 1):
+                w = run[i:i+size]
+                if sha16(w) in SENSITIVE_HASHES:
+                    hits.add(w)
+    return hits
 
-if [ "$violations" -gt 0 ]; then
-  echo "" >&2
-  echo "${RED}${BOLD}═══════════════════════════════════════════════════════════${RESET}" >&2
-  echo "${RED}${BOLD}🚨 Commit 訊息被阻擋：發現 $violations 項去識別化違規${RESET}" >&2
-  echo "${RED}${BOLD}═══════════════════════════════════════════════════════════${RESET}" >&2
-  echo "" >&2
-  echo "${BOLD}允許的訊息範例：${RESET}" >&2
-  echo "  ${YELLOW}docs: update internal farmer data documentation${RESET}" >&2
-  echo "  ${YELLOW}content: add crop cultivation guide with anonymized case studies${RESET}" >&2
-  echo "  ${YELLOW}fix: remove sensitive information from data sources${RESET}" >&2
-  echo "" >&2
-  echo "${BOLD}完整政策：${RESET} DEIDENTIFICATION-POLICY.md" >&2
-  echo "" >&2
-  exit 1
-fi
+violations = 0
 
-exit 0
+name_hits = sorted(find_hash_hits(msg))
+if name_hits:
+    print(f"\n{RED}{BOLD}❌ Commit 訊息含有敏感姓名/名稱：{RESET}", file=sys.stderr)
+    for h in name_hits:
+        print(f"   {RED}→{RESET} {h}", file=sys.stderr)
+    violations += 1
+
+file_hits = sorted(set(FILENAME_PATTERNS.findall(msg)))
+if file_hits:
+    print(f"\n{RED}{BOLD}❌ Commit 訊息含有敏感檔名：{RESET}", file=sys.stderr)
+    for h in file_hits:
+        print(f"   {RED}→{RESET} {h}", file=sys.stderr)
+    print(f"   {YELLOW}改為通用描述（如「internal farmer documentation」）{RESET}", file=sys.stderr)
+    violations += 1
+
+if violations:
+    print(f"\n{RED}{BOLD}═══════════════════════════════════════════════════════════{RESET}", file=sys.stderr)
+    print(f"{RED}{BOLD}🚨 Commit 訊息被阻擋：發現 {violations} 項去識別化違規{RESET}", file=sys.stderr)
+    print(f"{RED}{BOLD}═══════════════════════════════════════════════════════════{RESET}", file=sys.stderr)
+    print(f"\n{BOLD}允許的訊息範例：{RESET}", file=sys.stderr)
+    print(f"  {YELLOW}docs: update internal farmer data documentation{RESET}", file=sys.stderr)
+    print(f"  {YELLOW}content: add crop cultivation guide with anonymized case studies{RESET}", file=sys.stderr)
+    print(f"  {YELLOW}fix: remove sensitive information from data sources{RESET}", file=sys.stderr)
+    print(f"\n{BOLD}完整政策：{RESET} DEIDENTIFICATION-POLICY.md\n", file=sys.stderr)
+    sys.exit(1)
+
+sys.exit(0)
+PYEOF
