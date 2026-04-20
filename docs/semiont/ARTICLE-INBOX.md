@@ -192,8 +192,6 @@ BECOME_TAIWANMD.md Step 5 新增：
 
 <!-- 范曉萱 已完成 2026-04-20 δ → 搬到 §✅ Done -->
 
-- **Pre-research**: 尚未啟動
-
 ### 黃少雍（製作人）
 
 - **Type**: NEW
