@@ -90,7 +90,10 @@ SELF_FILES = {
 # ---------------------------------------------------------------------------
 CHINESE_CHAR_RUN = re.compile(r"[\u4e00-\u9fff]+")
 PHONE_RE = re.compile(r"09\d{2}[- ]?\d{3}[- ]?\d{3}")
-ADDRESS_RE = re.compile(r"[\u4e00-\u9fff]+[鄉鎮區][\u4e00-\u9fff]+[村里](?:第?\d+鄰|路\d+號)")
+# Address: 鄉/鎮/區 + 村/里 + (第N鄰 or 路N號), tolerating whitespace anywhere
+ADDRESS_RE = re.compile(
+    r"[\u4e00-\u9fff]+[鄉鎮區]\s*[\u4e00-\u9fff]+[村里]\s*(?:第\s*\d+\s*鄰|路\s*\d+\s*號)"
+)
 
 
 # ---------------------------------------------------------------------------
@@ -119,8 +122,14 @@ def sha16(s: str) -> str:
 
 
 def run_git(args: list[str]) -> str:
+    # -c core.quotepath=false ensures non-ASCII filenames (e.g. Chinese)
+    # come through as UTF-8 rather than octal-escaped, which would break
+    # path-based git diff queries.
     try:
-        return subprocess.check_output(["git", *args], stderr=subprocess.DEVNULL).decode("utf-8", errors="replace")
+        return subprocess.check_output(
+            ["git", "-c", "core.quotepath=false", *args],
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8", errors="replace")
     except subprocess.CalledProcessError:
         return ""
 
