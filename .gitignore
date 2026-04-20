@@ -40,6 +40,7 @@ memory/
 
 # 農友原始資料 — 絕不提交
 source/
+source-raw/
 !docs/**/source/
 
 # 敏感驗證與追蹤文件
