@@ -223,6 +223,26 @@ BECOME_TAIWANMD.md Step 5 新增：
 
 <!-- 楊丞琳 已完成 → 搬到 §✅ Done -->
 
+### 林經堯
+
+- **Type**: `NEW`
+- **Category**: Art
+- **Priority**: `P1`
+- **Status**: `pending`
+- **Requested**: 2026-04-20 by 觀察者 (session β)
+- **Notes**:
+  - 聲音藝術家／數位藝術家，前 C-LAB 聲響實驗室總監
+  - FAB DAO《百岳計畫》六位藝術家之一，負責一組山頭系列
+  - 跟王新仁、王連晟同代，akaSwap 共創者（2021-07 Tezos）
+  - 曾任南藝大教授（需驗證現職）
+  - 金曲獎演唱會影像設計 / 劇場音樂製作相關（需查作品列表）
+  - 必驗事實：C-LAB 聲響實驗室總監任期、akaSwap 共創角色精確分工、南藝大任職年份
+- **Reference**:
+  - FAB DAO 百岳計畫六人脈絡（[knowledge/Art/FAB DAO與百岳計畫.md](../../knowledge/Art/FAB DAO與百岳計畫.md)）
+  - akaSwap 官網 <https://akaswap.com/>
+  - C-LAB 聲響實驗室 <https://clab.org.tw/unit/soundlabtw/>
+- **Pre-research**: 尚未啟動（但王新仁與王連晟的研究報告已有交叉提及，可省 3-5 次 research budget）
+
 ---
 
 ## 🚧 In-Progress
