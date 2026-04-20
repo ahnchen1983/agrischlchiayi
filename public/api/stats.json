@@ -1,5 +1,5 @@
 {
-  "totalArticles": 41,
+  "totalArticles": 42,
   "totalCategories": 10,
   "estimatedContributors": 3,
   "totalTags": 92,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Farm-Management",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Grants-Planning",
@@ -128,8 +128,8 @@
     }
   ],
   "languageDistribution": {
-    "zh-TW": 41,
+    "zh-TW": 42,
     "en": 0
   },
-  "lastUpdated": "2026-04-19T12:45:29.335Z"
+  "lastUpdated": "2026-04-20T13:26:04.985Z"
 }
