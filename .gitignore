@@ -32,3 +32,26 @@ memory/
 # Dev management files
 .dev/
 .claude/
+
+# ============================================================
+# 🚨 FARMER DATA PROTECTION — DO NOT REMOVE OR MODIFY
+# See DEIDENTIFICATION-POLICY.md for full policy
+# ============================================================
+
+# 農友原始資料 — 絕不提交
+source/
+!docs/**/source/
+
+# 敏感驗證與追蹤文件
+docs/VERIFICATION-REPORT-*.md
+docs/FARMER-DATA-EXECUTION-SCHEDULE.md
+docs/FARMER-DATA-BACKUP-*.md
+
+# 私密設定與憑證
+.env.local
+.credentials/
+private/
+
+# 備份檔案
+*.json.bak
+*.md.bak
