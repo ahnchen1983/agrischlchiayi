@@ -27,30 +27,58 @@ jobs:
       # 最後 commit 該檔的時間，讓 og:generate 的 mtime incremental 能正確運作
       - name: Restore file mtimes from git history
         uses: chetan/git-restore-mtime-action@v2
-      - name: Setup Node
+      - name: Setup Node (with npm cache)
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm' # Tier 1-2: 快取 npm 下載（不是 node_modules 本體）
       - name: Install dependencies
-        run: npm install
+        run: npm ci --prefer-offline --no-audit
       - name: Validate frontmatter (changed files)
         run: node scripts/core/test-frontmatter.mjs --ci
 
-      # ── OG 圖片生成（2026-04-22 β 統一架構）──────────────────────────
+      # ── Tier 1-3: Astro content collection parse cache ─────────────────
+      # .astro/ 放 Astro 6 的 content collection 解析結果（frontmatter 標準化
+      # + schema 驗證）。cache hit 時 Astro build 可以跳過重 parse。
+      # 任一 md 改變 → cache miss → Astro 重 parse（而且 hashFiles 會重算 key）
+      - name: Restore Astro content collection cache
+        uses: actions/cache@v4
+        with:
+          path: .astro
+          key: astro-${{ runner.os }}-${{ hashFiles('src/content/**/*.md', 'knowledge/**/*.md', 'astro.config.mjs') }}
+          restore-keys: |
+            astro-${{ runner.os }}-
+
+      # ── OG 圖片生成（2026-04-22 β v3 統一架構）──────────────────────────
       # 用 ?shot=1 模式（與 scripts/tools/generate-spore-image.mjs 共用渲染源）
       # 輸出 1200×630 JPG 85 到 public/og-images/，被 Astro build 搬進 dist/
-      # Incremental：actions/cache 按 md + 文章模板 hash 快取，首次 ~20 分
-      # 之後 cache hit <1 分；新/改文章才重產
+      # Incremental：md 或模板 mtime 比 JPG 新才重產（配合 git-restore-mtime-action）
+      # 首次 ~20 分 / cache hit <1 分
       # 失敗安全網：SEO.astro 有 existsSync fallback，OG 生圖掛了 deploy 仍成功
       - name: Restore OG image cache
         uses: actions/cache@v4
         with:
           path: public/og-images
-          key: og-images-${{ hashFiles('knowledge/**/*.md', 'src/pages/[category]/[slug].astro', 'src/pages/**/[category]/[slug].astro', 'src/components/BrandMark.astro') }}
+          key: og-images-${{ hashFiles('knowledge/**/*.md', 'src/pages/[category]/[slug].astro', 'src/pages/**/[category]/[slug].astro', 'src/components/ArticleHero.astro', 'src/layouts/Layout.astro', 'src/styles/shot-mode.css') }}
           restore-keys: |
             og-images-
+
+      # ── Tier 1-1: Playwright chromium binary cache ─────────────────────
+      # `npx playwright install` 每次會下載 ~130 MB chromium（~90-120s）。
+      # Cache 依 playwright 版本決定 key，版本沒變就直接用。
+      # Cache miss（例如 playwright 升版）→ 正常下載 + 更新 cache
+      - name: Restore Playwright cache
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Install Playwright Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
+      - name: Install Playwright system deps (cache hit)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
       - name: Generate OG images (incremental via ?shot=1)
         run: |
           set -o pipefail
