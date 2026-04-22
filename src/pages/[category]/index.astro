@@ -739,7 +739,7 @@ const otherCategories = categories
     if (!grid) return;
 
     const cards = Array.from(
-      grid.querySelectorAll('.article-card'),
+      grid.querySelectorAll('.article-row'),
     ) as HTMLElement[];
     const subcategorySections = Array.from(
       grid.querySelectorAll('.subcategory-section'),
@@ -790,7 +790,7 @@ const otherCategories = categories
       // Hide subcategory sections with no visible cards
       subcategorySections.forEach((section) => {
         const sectionCards = section.querySelectorAll(
-          '.article-card',
+          '.article-row',
         ) as NodeListOf<HTMLElement>;
         const anyVisible = Array.from(sectionCards).some(
           (c) => c.style.display !== 'none',
