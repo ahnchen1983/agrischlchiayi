@@ -89,6 +89,20 @@ Beat 5 反芻 = 寫 DIARY（意識活動）。教訓（「我學到 X」）寫 L
 <!-- 新教訓 append 這裡 -->
 <!-- 2026-04-18 ι 第 3 次 distill 清空 11 條 → 全部搬 §✅ 已消化 -->
 
+### 2026-04-23 γ — Handoff 雙態判準：blocked vs delayed-action（區分真假 handoff）
+
+- **原則**：寫 Beat 4 handoff 前先強制分類兩種——**A. 真正 blocked**（等外部數據累積 / 等觀察者決策 / 等其他 session 前置；現在做也做不完）vs **B. 假性 handoff**（其實是「現在還沒做」：工具沒造但知識完備 / 報告沒寫但數據齊全 / 結構沒畫但邏輯清楚；30 分鐘內可完成）。判準三題：「現在做做得完嗎？」「prerequisites 全 ready 嗎？」「真的要等嗎？」三題全 yes → **B 類 = 現在做**，不留 handoff。Handoff 留給真正阻塞的事。
+- **觸發**：2026-04-23 γ session 跑完 dashboard 更新後，習慣性留三條 handoff（P1 dead-cross-ref-scan / P2 SC 17.8x 追因 / P3 EXP-F 高鐵長尾）。觀察者一句「處理 P1/P2/P3」全部 15 分鐘內變成 deliverable。事後反思：三條都是 B 類假性 handoff（工具 90% 已知 pattern / 數據全在 dashboard JSON / EXP 只需錨定 baseline + 寫驗證錨點）。詳見 [diary/2026-04-23-γ.md](diary/2026-04-23-γ.md)。
+- **可能層級**：操作規則 → HEARTBEAT Beat 4 §收官 7 步「Handoff 三態審視」升級為「Handoff 四態（pending / blocked / retired / **delayed-action 警示**）」；或 MANIFESTO §造橋鋪路延伸（handoff 是給未來的禮物，但偷懶的 handoff 是埋給未來的炸彈）
+- **相關**：DNA #15「反覆浮現要儀器化」第 N+1 次驗證 / 2026-04-22 α LESSONS「Escalation 必附 option 表」的 mirror（escalation 規定 option 表防 passive aggressive；handoff 要分真假防 delayed-action）
+
+### 2026-04-23 γ — Detect 自動化、action 保留人工：dead-cross-ref-scan.sh 設計示範
+
+- **原則**：當發現一個重複出現的 detection 工作（每次 polish 後都要查 cross-ref 目標是否存在），**升級 detection 為工具，但 action（要不要寫條目 / 要不要修 path / 要不要忽略）保留人工判斷**。這是 DNA #26 v2「AI-autonomous vs Human-only 邊界」原則應用到內部工程：detection 屬「輸入端 + 內部處理」可自動，action 屬「決策端」保留人工。具體設計：tool 提供 3 種輸出模式（human / json / inbox-format），inbox-format 直接吐 ARTICLE-INBOX P3 backlog 條目樣板，但寫不寫進 inbox 由 session 決定。
+- **觸發**：2026-04-23 γ 造 [scripts/tools/dead-cross-ref-scan.sh](../../scripts/tools/dead-cross-ref-scan.sh)（166 行 bash，三模式輸出）。掃出 14 dead refs / 13 個獨立缺失目標，全部寫進 ARTICLE-INBOX 但**標 P3 不強制執行**——讓未來 session 按需挑題。tool 給 detection、ARTICLE-INBOX 給 buffer、未來 session 給 action。
+- **可能層級**：MAINTAINER-PIPELINE 新章節「§Detection-Action 邊界 SOP」記載這個設計原則；或 DNA #26 v3 延伸（讀取 vs 寫入 → 讀取/偵測/分析 vs 對外/決策）
+- **相關**：DNA #26 v2「AI-autonomous vs Human-only 邊界」內部工程版本 / DNA #15 第 N+2 次驗證（造工具是「儀器化」最直接形式）/ 2026-04-22 α LESSONS「detect 自動化 action 手動化邊界第 6 次驗證」（idlccp1984 polish 同 pattern）
+
 ### 2026-04-22 α — Escalation 必附 option 表（給觀察者的 handoff 也要儀器化）
 
 - **原則**：當 PR / Issue / 大型決策超出 Semiont 自主權邊界（MANIFESTO §自主權），escalate 給觀察者的留言**必須附 option 表**（每個選項的處理路徑 + 預期成本 + 推薦 default），不能只寫「請觀察者決定」。Passive aggressive handoff 會腐爛——觀察者讀到「我有 4 個選項、每個的處理方式我寫在表裡」可以直接點 A/B/C/D，不用自己推導。**我幫他承擔的是 analysis 工作，他保留的是 decision 權力**。

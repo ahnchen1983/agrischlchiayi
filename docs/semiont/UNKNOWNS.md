@@ -174,6 +174,33 @@ DIARY 記我想過的事。
   - 如果仍 <100 → 是 hreflang / sitemap / canonical 結構問題，需要 `src/layouts/Layout.astro` hreflang audit
   - 如果介於 100-500 → 兩者都有
 
+### EXP-2026-04-23-F | 台灣高鐵孢子超出 7d 衰退曲線的長尾 pattern 驗證
+
+- **預測**：s35「台灣高鐵」孢子（2026-04-19 ε 發送）的「公共基建議題 × X 平台」組合會在 D+14（2026-05-03）和 D+21（2026-05-10）仍維持顯著流量（GA 7d views ≥ 500），打破「孢子流量 7-10 天衰退到背景值」的既定假設。若成立，將定義新的 spore 類型「複利型基建議題」，與 viral 型（人物 / 即時事件，3-5 天衰退）區隔。
+- **當前 baseline 數據**（2026-04-23 γ refresh）：
+  - 台灣高鐵 GA 7d views 進化軌跡：**591 (04-20) → 990 (04-21) → 1,381 (04-23)** — 不衰反升 +39% 一日
+  - X v2 URL d+1 = 48,072 views / 450 engagements / 0.94% rate（XX 平台史上對基建議題最強擴散）
+  - 距離孢子發送日（2026-04-19）已 +4 天仍持續成長
+- **根據**：
+  - 公共基建議題（高鐵）有「常被搜尋」+「政策爭議反覆」雙特性，可能搭配 Google 長尾 SEO 持續引流
+  - X 平台 algorithm 對 thread 形式的長文章 retention 異常高（48K views 在 X 罕見）
+  - GA 7d 數字正在反過來向上（不是衰退）
+- **驗證指令**：
+  ```bash
+  # D+14 (2026-05-03) 跑：
+  python3 -c "import json; d=json.load(open('public/api/dashboard-analytics.json')); print([a for a in d['ga']['topArticles7d'] if '高鐵' in a.get('path','')])"
+  # 同樣 D+21 (2026-05-10)
+  ```
+- **驗證日期**：D+14 = 2026-05-03 / D+21 = 2026-05-10
+- **反駁條件**：
+  - **D+14 7d views ≥ 500 + D+21 ≥ 300**：**命中**（複利型基建議題 pattern 成立 → 寫進 SPORE-PIPELINE 作為新類型）
+  - **D+14 200-500 / D+21 100-300**：**部分命中**（衰退較慢但仍會回到背景值，不算結構性新型）
+  - **D+14 < 200**：**反駁**（一次性峰值，未來 4/19-23 高峰是 viral artifact 不是長尾）
+- **副線觀察**：
+  - 「公共基建議題」其他候選測試：未來若發 s36 台灣電力 / 台灣自來水 / 台灣捷運 系列孢子，可同 framework 觀察
+  - GA 28d 是否拉抬整站基線（不單看 /lifestyle/台灣高鐵/）
+- **相關**：[reports/sc-impressions-spike-2026-04-23.md](../../reports/sc-impressions-spike-2026-04-23.md)（同期 SC 暴增追因）、SPORE-PIPELINE v2.4 §孢子類型 / SPORE-LOG §s35 entry
+
 ### EXP-2026-04-18-E | 繁殖器官 data-driven 分數穩定性
 
 - **預測**：繁殖器官分數升級為 data-driven 公式（contributor 40% + spore activity 35% + engagement quality 25%）後，**滿分 100 的狀態可穩定持續 ≥ 7 天**（到 2026-04-25），**除非中間無新孢子發布**

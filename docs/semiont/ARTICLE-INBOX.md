@@ -142,6 +142,132 @@ BECOME_TAIWANMD.md Step 5 新增：
 <!-- 鄭宜農 P1 已完成 2026-04-18 κ → ARTICLE-DONE-LOG.md -->
 <!-- 楊丞琳 已完成 2026-04-18 δ-late + ε → ARTICLE-DONE-LOG.md -->
 
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- 🛠️ Dead cross-ref P3 backlog（由 dead-cross-ref-scan.sh 自動產生 2026-04-23 γ） -->
+<!-- 14 條失效 cross-ref，13 個獨立缺失目標。每寫完一條 → 跑 scan 再回填。 -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+### 太陽花學運（cross-ref category typo 修復）
+
+- **Type**: `EVOLVE`（修正既有條目的 cross-ref，非新建）
+- **Path**: knowledge/Music/滅火器樂團.md + knowledge/Music/張懸與安溥.md
+- **Priority**: `P2` (cross-ref 指向 /history/ 但實際在 Society/)
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 兩個音樂條目的 cross-ref 寫成 `/history/太陽花學運` 但實際路徑是 `/society/太陽花學運`。一行 sed 可修
+
+### 台灣便利商店文化
+
+- **Type**: `NEW`
+- **Category**: Culture
+- **Priority**: `P3` (dead cross-ref backlog)
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Economy/全聯福利中心 引用但無條目。寫的時候要包含：7-11/全家/萊爾富/OK 四強生態 / ATM 化生活 / 鮮食革命 / 集點經濟 / 24h 文化 / 國際罕見密度（每平方公里 0.7 家）
+
+### 台灣綜藝節目
+
+- **Type**: `NEW`
+- **Category**: Culture
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Lifestyle/吉祥物 引用。寫時包含：豬哥亮餐廳秀脈絡 / 我猜我猜我猜猜猜 / 康熙來了 / 綜藝玩很大 / 國光幫幫忙 / 綜藝大集合 — 從台視外景到 Netflix 的演化
+
+### 台灣伴手禮經濟
+
+- **Type**: `NEW`
+- **Category**: Economy
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Food/金牛角 引用。寫時包含：鳳梨酥產業（年產值 30+ 億）/ 太陽餅 / 牛軋糖 / 茶葉 / 高鐵站伴手禮一條街 / 機場 SOGO / 觀光工廠模式
+
+### 台灣外送經濟
+
+- **Type**: `NEW`
+- **Category**: Economy
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Economy/全聯福利中心 引用。Foodpanda 撤離事件 / Uber Eats 寡佔 / 機車外送員勞權爭議 / 25-50 元手續費經濟學 / 雲端廚房興起 / 疫情重塑餐飲習慣
+
+### 台灣糕餅文化
+
+- **Type**: `NEW`
+- **Category**: Food
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Food/金牛角 引用。鳳梨酥 / 太陽餅 / 蛋黃酥 / 鹹蛋糕 / 老餅鋪世代傳承（俊美 / 阿聰師 / 寶泉）/ 中秋月餅大戰
+
+### 台灣行動支付
+
+- **Type**: `NEW`
+- **Category**: Technology
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Economy/全聯福利中心 引用。Line Pay 一強 / 街口 / 全支付（全聯）/ 台灣 Pay / 悠遊付 / 為什麼台灣支付落後韓國日本：銀行勢力、信用卡盛行、現金文化
+
+### 三峽老街
+
+- **Type**: `NEW`
+- **Category**: Geography
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 Food/金牛角 引用。日治時期街屋立面 / 巴洛克風格 / 染坊歷史 / 金牛角發源地 / 祖師廟（李梅樹）/ 老街觀光化爭議
+
+### 田馥甄（Hebe）
+
+- **Type**: `NEW`
+- **Category**: People
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 People/陳建騏 引用。S.H.E → solo / 與陳建騏長期合作 / 〈魔鬼中的天使〉/ 〈無人知曉〉/ 金曲多次入圍 / 為什麼是「文青歌后」標籤的起點
+
+### 徐佳瑩
+
+- **Type**: `NEW`
+- **Category**: People
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 People/陳建騏 引用。〈身騎白馬〉一曲爆紅 / 超偶第一屆 / 〈尋人啟事〉/ 與陳建騏合作金曲史 / 創作型歌手定位
+
+### 王連晟
+
+- **Type**: `NEW`
+- **Category**: People（藝術歸 People，非 Art — 跟既有 cross-ref 一致）
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 People/吳哲宇 引用。⚠️ 但 knowledge/Art/王連晟.md 已存在 — **應修 cross-ref 改 path 而非建新條目**
+
+### 王新仁
+
+- **Type**: `NEW`
+- **Category**: People（同上 cross-ref 邏輯）
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 People/吳哲宇 引用。⚠️ 但 knowledge/Art/王新仁.md 已存在 — **應修 cross-ref 改 path 而非建新條目**
+
+### 原住民族語言政策
+
+- **Type**: `NEW`
+- **Category**: Society
+- **Priority**: `P3`
+- **Status**: `pending`
+- **Requested**: 2026-04-23 by dead-cross-ref-scan.sh γ
+- **Notes**: 已被 People/阿爆 引用。國家語言發展法（2019）/ 16 族族語認定 / 學校族語課困境 / 沉浸式族語幼兒園 / 媒體政策（原文台 / 族語新聞）
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ▼ 觀察者觸發的 P0/P1 主題（保留 -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
 ### 台灣聲景（Issue #574，Nistoreyo 投稿）
 
 - **Type**: `NEW`
