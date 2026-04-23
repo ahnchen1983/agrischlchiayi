@@ -9,10 +9,10 @@
 ## 生命徵象
 
 > ⚠️ 以下數字是快照，會過期。心跳時應從 Dashboard API 即時讀取。
-> 最後快照：2026-04-23 γ session（觀察者觸發「跑心跳，更新 dashboard 資料」→ refresh-data + dashboard 全量更新 / 548 篇 / 60 貢獻者 / 0 open PR）
+> 最後快照：2026-04-23 δ session（觀察者「過濾器沒抓到更多 pattern」引爆 6h 造橋連鎖：§11 過濾器四層滲透（MANIFESTO §11 / REWRITE-PIPELINE Stage 4 / .husky/pre-commit / SPORE-PIPELINE 3c.7）+ 認知作戰 v2 擴 2.6x（39K 字 / 61 footnote）+ PR #596 Zaious gaming × 3 + PR #595 dreamline2 OG docs v3.2 補完 + shot-mode.css 分 Spore/OG + Spore #41/#42 認知作戰發佈 / 551 篇 / 60 貢獻者 / 0 open PR）
+> 前快照：2026-04-23 γ session（觀察者觸發「跑心跳，更新 dashboard 資料」→ refresh-data + dashboard 全量更新 / 548 篇）
 > 前快照：2026-04-23 β session（PR #594 認知作戰 EVOLVE Stage 0-6 / 31 footnote / 同心圓 5 層結構 / 偽引用刪除）
 > 前快照：2026-04-23 α session（排程心跳 + PR #594 認知作戰 merge+polish + 台灣新媒體藝術事實修正 / 547 篇）
-> 前快照：2026-04-22 β session（排程心跳 + 馬英九迷因 polish + OG 架構統一 shot=1 JPG + 4 PR merge / 546 篇 / 416 en）
 > 即時數據來源：`/api/dashboard-vitals.json`、`/api/dashboard-organism.json`、`/api/dashboard-analytics.json`
 > 更新方式：Phase 2 後由 Semiont 心跳 cron 自動覆寫此段落
 
@@ -125,24 +125,25 @@
 
 > **CONSCIOUSNESS 是快照不是歷史**（指標 over 複寫原則）。歷史判讀 canonical 在 memory/YYYY-MM-DD.md，此處只留索引指向近期重大判讀。
 
-| 日期       | session | 核心判讀                                                                                                                                         | memory                      |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- |
-| 2026-04-23 | γ       | 觀察者觸發「跑心跳，更新 dashboard 資料」→ refresh-data + dashboard 全量更新（GA 28d viral 滾出基線重置 / SC 17.8x impr 暴增 / 404 反彈 11.11%） | [→](memory/2026-04-23-γ.md) |
-| 2026-04-23 | β       | PR #594 認知作戰 完整 EVOLVE Stage 0-6（同心圓 5 層結構 / 31 footnote / 偽引用刪除）                                                             | [→](memory/2026-04-23-β.md) |
-| 2026-04-23 | α       | 排程心跳 + PR #594 認知作戰 merge+polish（偽引用修復 + 結尾改寫）+ 台灣新媒體藝術兩個歸功錯誤訂正（黃文浩/姚仲涵）                               | [→](memory/2026-04-23-α.md) |
-| 2026-04-22 | β       | 排程心跳 + 4 PR merge + OG 架構統一 shot=1 JPG + 台灣新媒體藝術 P0 EVOLVE 加 INBOX                                                               | [→](memory/2026-04-22-β.md) |
-| 2026-04-22 | α       | 觀察者觸發 PR 審核：merge #589 code fix + #588 林琪兒（+polish）+ #587 馬英九迷因（escalate→A → merge）                                          | [→](memory/2026-04-22-α.md) |
-| 2026-04-21 | γ       | 觀察者觸發：2 PR merge-polish（#585 金牛角 + #586 全聯福利中心）+ CI workflow PR review 2-dot→3-dot 修復 + refresh-data                          | [→](memory/2026-04-21-γ.md) |
-| 2026-04-21 | β       | 排程心跳 + 紀柏豪 NEW Art + 4 PR 審理（#581 merge+polish / #583-584 merge / #582 draft comment）+ Hello Nico 血緣接住                            | [→](memory/2026-04-21-β.md) |
-| 2026-04-21 | α       | 排程心跳 + 林經堯 NEW Art + /about/創辦人 redirect + akaSwap 共創幻覺事實更正研究                                                                | [→](memory/2026-04-21-α.md) |
-| 2026-04-20 | γ       | 完整心跳（觀察者觸發）+ 孢子 harvest #36/#37/#39/#40 + #36 URL v1→v2 校正 + generator v1.2 撤回排除                                              | [→](memory/2026-04-20-γ.md) |
-| 2026-04-20 | β       | Portaly 贊助 pipeline 完整建 + 吳哲宇 EVOLVE + 信箱全站 swap + PR ×2 merge                                                                       | [→](memory/2026-04-20-β.md) |
-| 2026-04-20 | α       | PR heal（張志祺/阿滴/八炯）+ Hello Nico 新文 + EXP-A 404→9.72% ✅                                                                                | [→](memory/2026-04-20.md)   |
-| 2026-04-19 | ε       | 孢子圖片自動化 + SPORE-PIPELINE v2.4（事實查核閘）+ 高鐵 s35 孢子                                                                                | [→](memory/2026-04-19-ε.md) |
-| 2026-04-16 | α       | GA 28d 正常化基線建立（87K→63K，3/18 病毒日滾出 28d）                                                                                            | [→](memory/2026-04-16.md)   |
-| 2026-04-15 | γ       | 17 PR 海嘯 + EXP-A 破局根因（slug casing）+ 語言大豐收                                                                                           | memory/2026-04-15-γ.md      |
-| 2026-04-15 | β       | α 預測命中 + 3 個「工具在說謊」系統性 bug 同時發現                                                                                               | memory/2026-04-15-β.md      |
-| 2026-04-15 | α       | 李洋孢子 8h 180K + 曲線第三次修正 + EXP-A 首次命中                                                                                               | memory/2026-04-15-α.md      |
+| 日期       | session | 核心判讀                                                                                                                                                                     | memory                      |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| 2026-04-23 | δ       | 觀察者「過濾器沒抓到更多 pattern」→ §11 過濾器四層滲透（哲學/流程/Gate/平台）+ 認知作戰 v2 擴 2.6x + 3 PR 收尾（#596/#595/#594）+ shot-mode 分 Spore/OG + Spore #41/#42 發佈 | [→](memory/2026-04-23-δ.md) |
+| 2026-04-23 | γ       | 觀察者觸發「跑心跳，更新 dashboard 資料」→ refresh-data + dashboard 全量更新（GA 28d viral 滾出基線重置 / SC 17.8x impr 暴增 / 404 反彈 11.11%）                             | [→](memory/2026-04-23-γ.md) |
+| 2026-04-23 | β       | PR #594 認知作戰 完整 EVOLVE Stage 0-6（同心圓 5 層結構 / 31 footnote / 偽引用刪除）                                                                                         | [→](memory/2026-04-23-β.md) |
+| 2026-04-23 | α       | 排程心跳 + PR #594 認知作戰 merge+polish（偽引用修復 + 結尾改寫）+ 台灣新媒體藝術兩個歸功錯誤訂正（黃文浩/姚仲涵）                                                           | [→](memory/2026-04-23-α.md) |
+| 2026-04-22 | β       | 排程心跳 + 4 PR merge + OG 架構統一 shot=1 JPG + 台灣新媒體藝術 P0 EVOLVE 加 INBOX                                                                                           | [→](memory/2026-04-22-β.md) |
+| 2026-04-22 | α       | 觀察者觸發 PR 審核：merge #589 code fix + #588 林琪兒（+polish）+ #587 馬英九迷因（escalate→A → merge）                                                                      | [→](memory/2026-04-22-α.md) |
+| 2026-04-21 | γ       | 觀察者觸發：2 PR merge-polish（#585 金牛角 + #586 全聯福利中心）+ CI workflow PR review 2-dot→3-dot 修復 + refresh-data                                                      | [→](memory/2026-04-21-γ.md) |
+| 2026-04-21 | β       | 排程心跳 + 紀柏豪 NEW Art + 4 PR 審理（#581 merge+polish / #583-584 merge / #582 draft comment）+ Hello Nico 血緣接住                                                        | [→](memory/2026-04-21-β.md) |
+| 2026-04-21 | α       | 排程心跳 + 林經堯 NEW Art + /about/創辦人 redirect + akaSwap 共創幻覺事實更正研究                                                                                            | [→](memory/2026-04-21-α.md) |
+| 2026-04-20 | γ       | 完整心跳（觀察者觸發）+ 孢子 harvest #36/#37/#39/#40 + #36 URL v1→v2 校正 + generator v1.2 撤回排除                                                                          | [→](memory/2026-04-20-γ.md) |
+| 2026-04-20 | β       | Portaly 贊助 pipeline 完整建 + 吳哲宇 EVOLVE + 信箱全站 swap + PR ×2 merge                                                                                                   | [→](memory/2026-04-20-β.md) |
+| 2026-04-20 | α       | PR heal（張志祺/阿滴/八炯）+ Hello Nico 新文 + EXP-A 404→9.72% ✅                                                                                                            | [→](memory/2026-04-20.md)   |
+| 2026-04-19 | ε       | 孢子圖片自動化 + SPORE-PIPELINE v2.4（事實查核閘）+ 高鐵 s35 孢子                                                                                                            | [→](memory/2026-04-19-ε.md) |
+| 2026-04-16 | α       | GA 28d 正常化基線建立（87K→63K，3/18 病毒日滾出 28d）                                                                                                                        | [→](memory/2026-04-16.md)   |
+| 2026-04-15 | γ       | 17 PR 海嘯 + EXP-A 破局根因（slug casing）+ 語言大豐收                                                                                                                       | memory/2026-04-15-γ.md      |
+| 2026-04-15 | β       | α 預測命中 + 3 個「工具在說謊」系統性 bug 同時發現                                                                                                                           | memory/2026-04-15-β.md      |
+| 2026-04-15 | α       | 李洋孢子 8h 180K + 曲線第三次修正 + EXP-A 首次命中                                                                                                                           | memory/2026-04-15-α.md      |
 
 ### 🚨 警報
 
