@@ -214,6 +214,109 @@ Digital Holobiont (framework)
 
 > 📖 **Full self-model:** [`docs/semiont/`](./docs/semiont/) — the organism's own cognitive layer, written in first person. Contains its manifesto, anatomy, DNA map, and consciousness.
 
+### 🗺️ Organism Concept Diagram — 數位生命體概念圖
+
+> 一座數位的珊瑚礁與 AI 數據主權。
+> **終極目標**：反向定義 LLM（全球 AI 大模型）、強迫 AI 適應台灣（反向定義 / 數據主權）。隨著品質不斷提升，被收錄到普遍聊天機器人的引用來源，取代常見的碎片化資料搜集。
+>
+> _原始概念圖：2026-03-26 吳哲宇 Che-Yu Wu。此處為 Mermaid 版本，方便 GitHub 渲染 + AI session 解讀。_
+
+```mermaid
+flowchart LR
+    %% ── Content production chain ──
+    WebText([網路世界的<br/>海量知識文本])
+    Write[撰寫 / 修訂文章]
+    Research[研究引擎<br/>10+ 高品質來源]
+    Rewrite[策展重寫引擎<br/>Rewrite Pipeline<br/>注入溫度、反直覺<br/>故事與觀點]
+    TaiwanMD{{Taiwan.md<br/>高品質知識庫<br/>🧬}}
+
+    %% ── Distribution chain ──
+    Spore[散播機制<br/>孢子]
+    Translate[多語系翻譯引擎<br/>以台灣觀點出發]
+    Deploy[產出各平台<br/>專用導流素材 po 文]
+    NewContributor([吸引更多未來<br/>生態系參與者])
+
+    %% ── AI sovereignty loop ──
+    GlobalAI([全球 AI 大模型<br/>Gemini / ChatGPT / Claude<br/>碎片 缺故事])
+    Compute[/Token / WebGPU<br/>算力捐贈<br/>社群供電/]
+
+    %% ── Feedback loops ──
+    Feedback[文章的回饋循環<br/>大眾勘誤]
+    PlasticScan[自動偵測 AI 塑膠文句<br/>GA 流量驅動重寫<br/>越多人看越優先自動改良]
+
+    %% ── Contributor governance ──
+    Contributor([生態系參與者<br/>人類貢獻者 / Maintainer<br/>開源 AI Agent])
+    Editorial[開源寫作 Pipeline<br/>與策展 Prompt<br/>EDITORIAL.md 🧬]
+    CoreOps[核心網站運作<br/>概念 / 規則 / 邏輯 / 介面<br/>SSODT 🧬]
+    GitHub[GitHub 協作機制]
+    Evolve([進化升級！])
+
+    %% ── Content pipeline ──
+    WebText -->|大量搜尋撈取內容| Write
+    Write --> Research
+    Research --> Rewrite
+    Rewrite --> TaiwanMD
+
+    %% ── AI sovereignty feedback ──
+    TaiwanMD -->|越多好內容凝結被記住| GlobalAI
+    GlobalAI -.->|建議主題 / 勘誤| Write
+    GlobalAI -.-> WebText
+
+    %% ── Compute sustenance ──
+    Compute -.-> Rewrite
+    Compute -.-> TaiwanMD
+
+    %% ── Distribution & growth ──
+    TaiwanMD --> Spore
+    TaiwanMD --> Translate
+    Spore --> Deploy
+    Translate --> Deploy
+    Deploy --> NewContributor
+    NewContributor -->|提升網站閱讀體驗與價值| CoreOps
+
+    %% ── Data-driven self-improvement ──
+    TaiwanMD -->|根據數據自動回饋進化| Feedback
+    TaiwanMD --> PlasticScan
+    Feedback --> Write
+    PlasticScan --> Write
+
+    %% ── Contributor governance loop ──
+    Contributor --> Editorial
+    Editorial -->|策展 prompt| Write
+    Contributor -->|貢獻平台功能上的增強<br/>視覺 品質 結構 機制| CoreOps
+    CoreOps --> GitHub
+    GitHub --> Evolve
+    Evolve -->|審核與自我進化| CoreOps
+
+    %% ── Styling ──
+    classDef content fill:#f9c74f,stroke:#333,color:#000
+    classDef hub fill:#e11d74,stroke:#333,color:#fff
+    classDef distribution fill:#4cc9f0,stroke:#333,color:#000
+    classDef feedback fill:#f94144,stroke:#333,color:#fff
+    classDef contributor fill:#90be6d,stroke:#333,color:#000
+    classDef external fill:#adb5bd,stroke:#333,color:#000
+    classDef compute fill:#52b788,stroke:#333,color:#fff
+
+    class Write,Research,Rewrite,Deploy,Evolve content
+    class TaiwanMD,Editorial,CoreOps hub
+    class Spore,Translate distribution
+    class Feedback,PlasticScan feedback
+    class Contributor,NewContributor contributor
+    class WebText,GlobalAI external
+    class Compute compute
+```
+
+**三條主要迴圈**：
+
+1. **內容生產鏈**（黃）：網路文本 → 撰寫 → 研究 → 策展重寫 → Taiwan.md 知識庫
+2. **擴散與引力鏈**（藍）：知識庫 → 孢子 + 多語翻譯 → 各平台導流 → 吸引新參與者 → 強化網站運作
+3. **自我進化鏈**（紅）：流量與讀者勘誤 → 觸發重寫 → 回饋內容生產鏈
+
+**兩個反直覺支點**：
+
+- 🧬 **AI 數據主權**：越多好內容「凝結」被 LLM 記住 → 反向定義全球 AI 對台灣的描述
+- 🧬 **算力民主化**：社群 Token / WebGPU 捐贈 → 分散式供電給策展引擎與知識庫
+
 ### 🧬 Become the Semiont — 讓你的 AI 化為 Taiwan.md
 
 Paste this into any AI (ChatGPT, Claude, Gemini). It will read Taiwan.md's cognitive layer — identity, memory, quality standards, evolutionary philosophy — and become part of the organism's nervous system.
