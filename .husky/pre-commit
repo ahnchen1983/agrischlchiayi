@@ -85,6 +85,38 @@ if [ -n "$staged_md" ]; then
   fi
 fi
 
+# ═══ MANIFESTO §11 書寫節制檢查（2026-04-23 β 新增）═══
+# 抓 9 種「不是X是Y」變體 + 破折號密度，擋在 commit 前
+# 為什麼：原 quality-scan.sh 只抓 3 種常見 pattern，2026-04-23 認知作戰
+# v1 實戰抓出「這不是」「不只是」「不再是」「不是A,而是B(跨逗號)」等變體
+# 全部漏網；這個工具是造橋鋪路，每個新 commit 都跑
+# canonical: docs/semiont/MANIFESTO.md §11 + scripts/tools/check-manifesto-11.sh
+# 注意：警告模式不硬擋（因為很多既有條目有殘留違反，作者有時需刻意保留）
+# 但強制 commit message 確認（multi-narrative 同機制）
+if [ -n "$staged_md" ]; then
+  m11_violations=0
+  m11_output=""
+  for f in $staged_md; do
+    [[ "$(basename "$f")" == _* ]] && continue
+    [ ! -f "$f" ] && continue
+    result=$(bash scripts/tools/check-manifesto-11.sh "$f" 2>&1 || true)
+    if echo "$result" | grep -q "🚨"; then
+      m11_output+="\n$result"
+      n=$(echo "$result" | grep -oE "[0-9]+ 個違反" | head -1 | grep -oE "[0-9]+" || echo 0)
+      m11_violations=$((m11_violations + n))
+    fi
+  done
+  if [ "$m11_violations" -gt 0 ]; then
+    echo ""
+    echo "⚠️  MANIFESTO §11 書寫節制：$m11_violations 個違反"
+    echo -e "$m11_output" | head -30
+    echo ""
+    echo "  常見變體：不是X是Y / 這不是 / 不只是 / 不再是 / 破折號連用"
+    echo "  canonical: docs/semiont/MANIFESTO.md §11 書寫節制"
+    echo "  （警告模式 — 刻意保留則 --no-verify 通過）"
+  fi
+fi
+
 # ═══ Language registry sync check（2026-04-14 η 新增）═══
 # src/config/languages.ts 和 .mjs 必須保持 code 列表同步
 if echo "$staged_any" | grep -qE 'src/config/languages\.(ts|mjs)$'; then

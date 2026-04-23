@@ -554,9 +554,16 @@ bash scripts/tools/format-check.sh knowledge/{Category}/{文章}.md
 
 # 2. 所有 inline [[wikilink]] 目標存在性
 bash scripts/tools/wikilink-validate.sh knowledge/{Category}/{文章}.md
+
+# 3. MANIFESTO §11 書寫節制全變體檢查（2026-04-23 β 新增）
+# 抓 9 種「不是X是Y」對位句型 + 破折號密度
+# 原本 quality-scan.sh 只抓「不是X而是Y」「不僅X更是Y」3 種，
+# 認知作戰 v1 實戰抓出「這不是」「不只是」「不再是」「不是A,而是B(跨逗號)」
+# 等變體全部漏網。這個工具是造橋鋪路。
+bash scripts/tools/check-manifesto-11.sh knowledge/{Category}/{文章}.md
 ```
 
-**Pre-commit hook 已自動執行這兩項檢查**（2026-04-04 session η 之後建立）。
+**Pre-commit hook 已自動執行這三項檢查**（format-check + wikilink-validate 於 2026-04-04 建立；check-manifesto-11 於 2026-04-23 β 新增）。
 如果被擋：按提示修正，不要用 `--no-verify` 繞過。繞過 = 下次有人會重複同樣的錯。
 
 > **為什麼要強制？** 2026-04-04 我在台灣國樂的延伸閱讀寫了 7 個 `[[wikilink]]`，忘記 Astro 不渲染。
