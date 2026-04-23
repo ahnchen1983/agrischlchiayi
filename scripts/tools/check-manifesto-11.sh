@@ -8,31 +8,54 @@
 #
 # 用法：
 #   scripts/tools/check-manifesto-11.sh knowledge/Society/認知作戰.md
-#   scripts/tools/check-manifesto-11.sh knowledge/**/*.md   # 批次
+#   scripts/tools/check-manifesto-11.sh knowledge/**/*.md       # 批次
+#   echo "$SPORE_TEXT" | scripts/tools/check-manifesto-11.sh -  # stdin 模式（孢子 prose）
+#   scripts/tools/check-manifesto-11.sh --text "不是A，而是B"   # 直接文字模式
 #
 # exit code：0 = 通過；1 = 有違反
 # output：逐行標出違反 + 建議
 
 set -e
 
+# 強制 UTF-8 locale — 否則 grep 的 [^，。] 等 char class 對中文無效
+# （macOS 預設 locale 可能是 C，Linux CI 類似）
+# 2026-04-23 β: spore draft 整合時發現「不是X。是Y」沒抓到，root cause 是 locale
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
+export LANG="${LANG:-en_US.UTF-8}"
+
 if [[ $# -lt 1 ]]; then
   echo "Usage: $0 <file.md> [<file2.md> ...]"
+  echo "       echo \"\$TEXT\" | $0 -       # stdin 模式"
+  echo "       $0 --text \"<text>\"          # 直接文字模式"
   exit 2
 fi
 
 total_violations=0
 files_with_violations=0
 
+# stdin / --text 支援（給 spore pipeline 等 inline prose 用）
+handle_inline_text() {
+  local text="$1"
+  local tmp
+  tmp=$(mktemp -t manifesto-11-check.XXXXXX.md)
+  printf '%s' "$text" > "$tmp"
+  check_file "$tmp"
+  rm -f "$tmp"
+}
+
 check_file() {
   local f="$1"
   local violations=0
   local output=""
 
-  # 1. 經典「不是X而是Y」（跨逗號、跨句）
+  # 1. 經典對位：「不是X，是Y」「不是X。是Y」「不是X而是Y」「不是X就是Y」
   local p1
-  p1=$(grep -nE "不是[^，。\n]{1,50}，.*而是|不是[^，。\n]{1,50}，.*就是" "$f" 2>/dev/null || true)
+  # 分兩條，covers all：
+  # (a) 不是X{，|。}是Y — 直接對位（逗號或句號後接「是」）
+  # (b) 不是X ... 而是|就是 Y — 跨字 而是/就是 對位
+  p1=$(grep -nE "不是[^，。\n]{1,50}(，|。)是|不是[^，。\n]{1,50}[^\n]{0,50}(而是|就是)" "$f" 2>/dev/null || true)
   if [[ -n "$p1" ]]; then
-    output+="\n  [1] 不是X而是Y（跨逗號）:\n$(echo "$p1" | sed 's/^/      /')"
+    output+="\n  [1] 不是X{，|。|而}是Y（對位句型）:\n$(echo "$p1" | sed 's/^/      /')"
     violations=$((violations + $(echo "$p1" | wc -l | tr -d ' ')))
   fi
 
@@ -131,9 +154,20 @@ check_file() {
   fi
 }
 
-for arg in "$@"; do
-  check_file "$arg"
-done
+# Dispatcher：支援 檔案 / stdin (-) / --text <str>
+if [[ "$1" == "-" ]]; then
+  # stdin 模式
+  text=$(cat)
+  handle_inline_text "$text"
+elif [[ "$1" == "--text" ]]; then
+  # 直接文字模式
+  shift
+  handle_inline_text "$*"
+else
+  for arg in "$@"; do
+    check_file "$arg"
+  done
+fi
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
