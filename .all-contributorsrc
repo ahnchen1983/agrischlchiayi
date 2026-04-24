@@ -382,6 +382,48 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/270533697?v=4",
       "profile": "https://github.com/vaiskalivuan",
       "contributions": ["translation"]
+    },
+    {
+      "login": "Yo0GuitarIT",
+      "name": "Chen Yu Ling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/118150842?v=4",
+      "profile": "https://github.com/Yo0GuitarIT",
+      "contributions": ["code"]
+    },
+    {
+      "login": "Zaious",
+      "name": "Zaious",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128442444?v=4",
+      "profile": "https://github.com/Zaious",
+      "contributions": ["content"]
+    },
+    {
+      "login": "assanges",
+      "name": "Sean Young",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4113063?v=4",
+      "profile": "https://github.com/assanges",
+      "contributions": ["code"]
+    },
+    {
+      "login": "expectingshadowland-maker",
+      "name": "expectingshadowland-maker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/276374199?v=4",
+      "profile": "https://github.com/expectingshadowland-maker",
+      "contributions": ["content"]
+    },
+    {
+      "login": "kevinyay945",
+      "name": "kevinyay945",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17717808?v=4",
+      "profile": "https://github.com/kevinyay945",
+      "contributions": ["doc"]
+    },
+    {
+      "login": "sageotomo",
+      "name": "sageotomo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/271172009?v=4",
+      "profile": "https://github.com/sageotomo",
+      "contributions": ["code"]
     }
   ],
   "totalContributors": 51
