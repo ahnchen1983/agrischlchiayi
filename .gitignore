@@ -43,6 +43,7 @@ taiwan.md架構/
 # 農友原始資料 — 絕不提交
 source/
 source-raw/
+農民md檔/
 !docs/**/source/
 
 # 敏感驗證與追蹤文件
