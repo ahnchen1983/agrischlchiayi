@@ -27,11 +27,13 @@ public/api/random.json
 public/api/search-minisearch.json
 meetings/
 memory/
-!docs/semiont/memory/
 
 # Dev management files
 .dev/
 .claude/
+
+# Taiwan.md fork legacy — kept locally for reference, not tracked
+taiwan.md架構/
 
 # ============================================================
 # 🚨 FARMER DATA PROTECTION — DO NOT REMOVE OR MODIFY
