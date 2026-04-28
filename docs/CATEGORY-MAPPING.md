@@ -334,7 +334,7 @@ IoT 監控 → [文章] → [文章] → [文章]
 
 ---
 
-## 去識別化驗證標準（見 DEIDENTIFICATION-CHECKLIST.md）
+## 去識別化驗證標準（見 [../DEIDENTIFICATION-POLICY.md](../DEIDENTIFICATION-POLICY.md)）
 
 所有農友資料必須：
 - ✅ 移除姓名、電話、地址

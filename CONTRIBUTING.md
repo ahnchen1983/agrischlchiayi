@@ -75,6 +75,17 @@ status: 'published' # draft / published / archived
 - 引用資料請標明來源
 - 使用繁體中文，專有名詞保留原文
 
+## 🚨 涉及農友個人資料時
+
+若文章內容引用任何農友個人資料、案例或計畫書，**提交前必讀** [`DEIDENTIFICATION-POLICY.md`](DEIDENTIFICATION-POLICY.md)。簡要原則：
+
+- 移除姓名、聯絡方式、家族成員、具體地址
+- 保留作物、規模、成本結構、銷售比例、技術方案
+- 文章須混合 ≥ 2 位農友的特徵以避免反向工程識別
+- commit message 不可含農友姓名或敏感檔名
+
+操作流程詳見 [`docs/FARMER-DATA-WORKFLOW.md`](docs/FARMER-DATA-WORKFLOW.md)。
+
 ## 問題回報
 
 - 內容錯誤：使用 Issue Template「內容修正」

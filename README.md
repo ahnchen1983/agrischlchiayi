@@ -90,6 +90,22 @@ const base = import.meta.env.BASE_URL;
 
 詳見 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
 
+> ⚠️ **若涉及農友個人資料**，提交前必讀 [`DEIDENTIFICATION-POLICY.md`](DEIDENTIFICATION-POLICY.md)。
+
+## 文件導覽
+
+| 文件 | 用途 |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | 系統設計文件（SDD） |
+| [`docs/DEVELOPER-GUIDE.md`](docs/DEVELOPER-GUIDE.md) | 開發手冊與常見任務 |
+| [`docs/CATEGORY-MAPPING.md`](docs/CATEGORY-MAPPING.md) | 13 大分類定義與內容缺口 |
+| [`docs/FARMER-DATA-PIPELINE.md`](docs/FARMER-DATA-PIPELINE.md) | 農友資料整合架構 |
+| [`docs/FARMER-DATA-WORKFLOW.md`](docs/FARMER-DATA-WORKFLOW.md) | 農友資料處理流程 |
+| [`DEIDENTIFICATION-POLICY.md`](DEIDENTIFICATION-POLICY.md) | 去識別化政策與檢查清單 |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | 投稿指南 |
+
+完整文件索引見 [`docs/README.md`](docs/README.md)。
+
 ## 授權
 
 - **內容**： [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
