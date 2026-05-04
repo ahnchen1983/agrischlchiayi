@@ -41,6 +41,7 @@ memory/
 # 農友原始資料 — 絕不提交
 source/
 source-raw/
+農民md檔/
 !docs/**/source/
 
 # 敏感驗證與追蹤文件
@@ -56,3 +57,8 @@ private/
 # 備份檔案
 *.json.bak
 *.md.bak
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
