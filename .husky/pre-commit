@@ -39,3 +39,24 @@ if [ -n "$staged_md" ]; then
     exit 1
   fi
 fi
+
+# Hub sync check (runs LAST — global consistency across knowledge/)
+# 為什麼：新增/刪除/重新命名 knowledge/<Cat>/*.md 後，10 類別 Hub 與 Crop-Index/Tech-Index 的
+#       AUTO-GENERATED 區塊若未同步重建，前台類別頁的精選清單會缺。
+# 為何放最後：deidentification/frontmatter/wikilink 是 per-file 檢查；本檢查是 cross-file 一致性。
+# 工具：scripts/tools/regenerate-hubs.py（idempotent，含 --check 模式）
+python3 scripts/tools/regenerate-hubs.py --check > /tmp/.hub-check.log 2>&1
+hub_exit=$?
+if [ "$hub_exit" -ne 0 ]; then
+  echo ""
+  echo "❌ Hub 索引與內容不同步："
+  grep -E "△|不同步" /tmp/.hub-check.log | head -10
+  echo ""
+  echo "   修正: python3 scripts/tools/regenerate-hubs.py"
+  echo "   然後重新 git add knowledge/ && git commit"
+  echo ""
+  echo "💡 跳過此檢查（緊急修復）: git commit --no-verify"
+  rm -f /tmp/.hub-check.log
+  exit 1
+fi
+rm -f /tmp/.hub-check.log
