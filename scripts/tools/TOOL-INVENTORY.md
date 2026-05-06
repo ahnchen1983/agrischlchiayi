@@ -2,7 +2,7 @@
 
 > 相關：[docs/semiont/DNA.md](../../docs/semiont/DNA.md)（工具基因）| [UNKNOWNS.md](../../docs/semiont/UNKNOWNS.md)（已知未知）
 
-17 個工具。它們檢查什麼維度、互相怎麼配合、哪裡有重疊、哪裡有缺口。
+18 個工具。它們檢查什麼維度、互相怎麼配合、哪裡有重疊、哪裡有缺口。
 
 ---
 
@@ -27,6 +27,7 @@
 | **assign-subcategory.cjs**    | 自動歸類文章到 subcategory                                                  | 手動                   |                                                                  |
 | **manage-featured.sh**        | 管理精選文章標記                                                            | 手動                   |                                                                  |
 | **translate.sh**              | 翻譯流程工具                                                                | 手動                   | Cron 目前暫停                                                    |
+| **regenerate-hubs.py**        | 重建 10 類別 Hub + Crop-Index + Tech-Index 的自動生成段（依屆別／作物／技術主題分組） | 手動 + 可掛 CI         | 新工具（2026-05-04）；冪等用 `<!-- AUTO-GENERATED -->` markers，不破壞 curated 內容 |
 
 ---
 
@@ -77,5 +78,5 @@
 
 ---
 
-_v1.0 | 2026-04-04_
+_v1.1 | 2026-05-04（新增 regenerate-hubs.py）_
 _建立原因：session η 發現 wikilink-validate 跟 format-check 部分重疊，但沒有機制盤點。「造新工具時不知道跟現有工具重疊嗎？」是結構性盲點_
