@@ -72,6 +72,118 @@
 - `added_date`: 2026-05-01
 - `paths`: knowledge/
 
+### Entry 008
+- `hash`: `a045b97f73e6e1be`
+- `notes`: 公開授課身分（東昀農場負責人），國本學堂第四屆進階班農耕場主講人；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 009
+- `hash`: `c35ed26bfa642bd0`
+- `notes`: 公開授課身分（裕泰農場負責人），國本學堂第四屆卓越班 1126 參訪場域主；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 010
+- `hash`: `482a74826ba8660e`
+- `notes`: 公開授課身分（旺萊山廠長），國本學堂第四屆卓越班核心課程「現代農企業管理」主講人；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 011
+- `hash`: `f1945d872874447d`
+- `notes`: 公開授課身分（卡維蘭 Kaviiland 執行長），國本學堂第四屆專業課程「銷售翻倍大作戰」主講人；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 012
+- `hash`: `18e39d5aea52a9bc`
+- `notes`: 公開授課身分（純淨農產合作社／最正農婦創辦人），國本學堂第二、三、四屆三場主講人；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 013
+- `hash`: `f11837a8b0c1b5f2`
+- `notes`: 公開授課身分（打寶蛤執行長），國本學堂第四屆文蛤戰略班 1210 跨縣參訪場域主；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 014
+- `hash`: `811b63a1b66fe651`
+- `notes`: 公開授課身分（哈哈魚場場長），國本學堂第四屆文蛤戰略班 1210 跨縣參訪場域主；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 015
+- `hash`: `b44cb7a8bee2bd27`
+- `notes`: 公開授課身分（新農果菜生產合作社理事主席），國本學堂第四屆進階班 0619 下午場參訪場域主；課程公告於主辦單位活動頁
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 016
+- `hash`: `b6804d2259f98796`
+- `notes`: 公開授課單位「東昀農場」（陳昆懷 Entry 008 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 017
+- `hash`: `42e29287985d9bb7`
+- `notes`: 公開授課單位「裕泰農場」（陳明輝 Entry 009 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 018
+- `hash`: `4911aff898a372aa`
+- `notes`: 公開授課單位「旺萊山」（陳俊翰 Entry 010 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 019
+- `hash`: `6dd35305966ad86c`
+- `notes`: 公開授課單位「卡維蘭」（洪睿弘 Entry 011 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 020
+- `hash`: `e58896bc0a03753e`
+- `notes`: 公開授課單位「純淨農產合作社」（陳惠琪 Entry 012 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 021
+- `hash`: `ccae09805beeb75e`
+- `notes`: 公開授課單位「打寶蛤」（楊宜樺 Entry 013 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 022
+- `hash`: `54694b20592b29e8`
+- `notes`: 公開授課單位「哈哈魚場」（陳明瞭 Entry 014 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
+### Entry 023
+- `hash`: `befd6fde3b50a3bd`
+- `notes`: 公開授課單位「新農果菜生產合作社」（詹勝仁 Entry 015 之服務機構）
+- `added_by`: ahnchen
+- `added_date`: 2026-05-04
+- `paths`: knowledge/
+
 ---
 
 ## 加入新名單流程
@@ -117,3 +229,4 @@ python3 -c "import hashlib; print(hashlib.sha256('姓名'.encode()).hexdigest()[
 | 1.0 | 2026-04-29 | 初版，登記 3 位國本學堂第四／第五屆主講人 |
 | 1.1 | 2026-05-01 | 補登記 2 位（謝雲龍／高信明），共 5 位 |
 | 1.2 | 2026-05-01 | 補登記 2 個公開授課單位（奕家果園、耿赫智能農場），共 5 位 + 2 機構 |
+| 1.3 | 2026-05-04 | 補登記 8 位公開講師（陳昆懷、陳明輝、陳俊翰、洪睿弘、陳惠琪、楊宜樺、陳明瞭、詹勝仁）+ 8 個對應公開授課單位，共 13 位 + 10 機構 = 23 entries |
