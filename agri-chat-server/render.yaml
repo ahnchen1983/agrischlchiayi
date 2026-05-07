@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: agri-chat-server
+    runtime: node
+    rootDir: agri-chat-server
+    buildCommand: npm install && npm run build-index
+    startCommand: npm start
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: OPENROUTER_API_KEY
+        sync: false

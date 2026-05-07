@@ -1,0 +1,47 @@
+repos:
+  # 檢測敏感信息 (API keys, 密碼等)
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.0
+    hooks:
+      - id: gitleaks
+        name: Detect secrets with gitleaks
+        entry: gitleaks detect --source . --verbose
+        language: golang
+        stages: [commit]
+        pass_filenames: false
+
+  # 檢測明文密碼和憑證
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        name: Detect secrets with detect-secrets
+        entry: detect-secrets scan --all-files --force-use-all-plugins
+        language: python
+        types: [python]
+        pass_filenames: false
+
+  # Prettier 代碼格式化
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.0.0
+    hooks:
+      - id: prettier
+        name: Prettier
+        types_or: [javascript, markdown, json, yaml]
+        exclude: ^(dist/|\.astro/|node_modules/)
+
+  # YAML 驗證
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-yaml
+        name: Check YAML
+      - id: end-of-file-fixer
+        name: Fix end of file
+      - id: trailing-whitespace
+        name: Trim trailing whitespace
+      - id: check-added-large-files
+        name: Check for large files
+        args: ['--maxkb=1000']
+      - id: detect-private-key
+        name: Detect private keys

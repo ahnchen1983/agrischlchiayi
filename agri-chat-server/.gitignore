@@ -1,0 +1,22 @@
+# 依賴
+node_modules/
+
+# 環境變數 — 絕不提交
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env*.save
+*.save
+
+# 日誌
+*.log
+npm-debug.log*
+
+# 知識庫索引（Render 在 build 階段重新生成）
+# 不 commit 的原因：(1) 1.5MB 太大；(2) 含農友姓名觸發 pre-commit hook
+knowledge-index.json
+
+# macOS
+.DS_Store
