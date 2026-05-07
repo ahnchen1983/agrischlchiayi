@@ -29,7 +29,7 @@ class AgriChat extends HTMLElement {
 
       .chat-container {
         position: fixed;
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
         width: 380px;
         max-width: calc(100vw - 20px);
@@ -201,7 +201,7 @@ class AgriChat extends HTMLElement {
 
       .toggle-btn {
         position: fixed;
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
         width: 56px;
         height: 56px;
