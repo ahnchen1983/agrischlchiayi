@@ -119,9 +119,12 @@ class AgriChat extends HTMLElement {
         max-width: 70%;
         padding: 12px 16px;
         border-radius: 12px;
-        word-wrap: break-word;
         font-size: 14px;
         line-height: 1.4;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        word-break: normal;
+        line-break: loose;
       }
 
       .message.bot .message-content {
@@ -143,6 +146,7 @@ class AgriChat extends HTMLElement {
         background: #f0f8f4;
         border-left: 3px solid var(--primary-color);
         border-radius: 4px;
+        white-space: normal;
       }
 
       .message-sources a {
@@ -150,6 +154,9 @@ class AgriChat extends HTMLElement {
         text-decoration: none;
         display: block;
         margin: 4px 0;
+        overflow-wrap: break-word;
+        word-break: normal;
+        line-height: 1.45;
       }
 
       .message-sources a:hover {
@@ -251,6 +258,10 @@ class AgriChat extends HTMLElement {
           width: calc(100vw - 20px);
           height: calc(100vh - 20px);
           max-height: 100vh;
+        }
+
+        .message-content {
+          max-width: 86%;
         }
       }
     `;
@@ -382,29 +393,28 @@ class AgriChat extends HTMLElement {
     } else {
       // 分離內容和來源
       const [mainContent, sourcesPart] = text.split('**相關文檔：**');
+      const sourcesHtml = sourcesPart
+        ? `<div class="message-sources">
+            <strong>📚 相關文檔：</strong>
+            ${sourcesPart
+              .split('\n')
+              .filter(line => line.startsWith('- ['))
+              .map(line => {
+                const match = line.match(/- \[(.*?)\]\((.*?)\)/);
+                if (match) {
+                  return `<a href="${match[2]}" target="_blank">📖 ${match[1]}</a>`;
+                }
+                return '';
+              })
+              .join('')}
+          </div>`
+        : '';
 
       messageEl.innerHTML = `
         <div class="message-content">
           ${mainContent.trim()}
+          ${sourcesHtml}
         </div>
-        ${
-          sourcesPart
-            ? `<div class="message-sources">
-                <strong>📚 相關文檔：</strong>
-                ${sourcesPart
-                  .split('\n')
-                  .filter(line => line.startsWith('- ['))
-                  .map(line => {
-                    const match = line.match(/- \[(.*?)\]\((.*?)\)/);
-                    if (match) {
-                      return `<a href="${match[2]}" target="_blank">📖 ${match[1]}</a>`;
-                    }
-                    return '';
-                  })
-                  .join('')}
-              </div>`
-            : ''
-        }
       `;
     }
 
