@@ -9,7 +9,7 @@ class AgriChat extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.isOpen = false;
     this.messages = [];
-    this.apiUrl = this.getAttribute('api-url') || 'https://agri-chat.onrender.com';
+    this.apiUrl = this.getAttribute('api-url') || 'https://agri-chat-server.onrender.com';
   }
 
   connectedCallback() {
