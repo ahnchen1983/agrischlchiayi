@@ -59,6 +59,19 @@ docs/
 
 ---
 
+## 🤖 AI assistant — 受邊界控制的知識助手
+
+這兩份文件是把 `agri-chat-server` 經驗整理成可複製到其他商品的標準做法：
+
+| 文件                                                                   | 用途                                                                 |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [AI-ASSISTANT-DEVELOPMENT-GUIDE.md](AI-ASSISTANT-DEVELOPMENT-GUIDE.md) | 商品化開發流程、資料來源邊界、行為邊界、上線檢查清單                 |
+| [BOUNDED-AI-ASSISTANT-PLAYBOOK.md](BOUNDED-AI-ASSISTANT-PLAYBOOK.md)   | 工程安全手冊、四層防禦、prompt injection 測試、secret 管理、故障排查 |
+
+原則：這類 AI 只能搜尋指定知識庫並回答，不能上網撈資料、讀外部檔案、執行工具、操作後台或處理付款/訂單/個資。
+
+---
+
 ## 📝 editorial/ — 寫作品質系統
 
 | 文件                                                   | 用途                                           |
