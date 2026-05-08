@@ -585,25 +585,50 @@ const jfClass = [
         // These are common agricultural terms that should appear in the index
         var commonTerms = {
           'zh-TW': [
-            '小黃瓜', '設施農業', '有機農業', '農場財務',
-            '智慧農業', 'IoT', '灌溉', '病蟲害防治',
-            '作物', '肥料', '市場', '銷售',
-            '氣候', '土壤', '種植', '農民'
+            '小黃瓜',
+            '設施農業',
+            '有機農業',
+            '農場財務',
+            '智慧農業',
+            'IoT',
+            '灌溉',
+            '病蟲害防治',
+            '作物',
+            '肥料',
+            '市場',
+            '銷售',
+            '氣候',
+            '土壤',
+            '種植',
+            '農民',
           ],
-          'en': [
-            'farming', 'agriculture', 'crop', 'organic',
-            'soil', 'water', 'irrigation', 'technology',
-            'market', 'climate', 'yield', 'sustainability'
-          ]
+          en: [
+            'farming',
+            'agriculture',
+            'crop',
+            'organic',
+            'soil',
+            'water',
+            'irrigation',
+            'technology',
+            'market',
+            'climate',
+            'yield',
+            'sustainability',
+          ],
         };
         return commonTerms[lang] || commonTerms['zh-TW'];
       }
 
       function _renderAutocompleteItem(term) {
-        return '<div class="search-autocomplete-item">' +
+        return (
+          '<div class="search-autocomplete-item">' +
           '<span class="search-autocomplete-icon">🔍</span>' +
-          '<span class="search-autocomplete-term">' + term + '</span>' +
-          '</div>';
+          '<span class="search-autocomplete-term">' +
+          term +
+          '</span>' +
+          '</div>'
+        );
       }
 
       function initSearch() {
@@ -625,9 +650,11 @@ const jfClass = [
           var q = this.value.trim();
           if (!q) {
             // Show popular terms as autocomplete suggestions
-            var popularHtml = '<div class="search-autocomplete-list">' +
+            var popularHtml =
+              '<div class="search-autocomplete-list">' +
               '<div class="search-autocomplete-label">' +
-              (isEn ? 'Popular searches:' : '熱門搜尋:') + '</div>' +
+              (isEn ? 'Popular searches:' : '熱門搜尋:') +
+              '</div>' +
               popularTerms.slice(0, 8).map(_renderAutocompleteItem).join('') +
               '</div>';
             results.innerHTML = popularHtml;
@@ -663,7 +690,9 @@ const jfClass = [
         results.addEventListener('click', function (e) {
           var item = e.target.closest('.search-autocomplete-item');
           if (item) {
-            var term = item.querySelector('.search-autocomplete-term').textContent;
+            var term = item.querySelector(
+              '.search-autocomplete-term',
+            ).textContent;
             input.value = term;
             input.dispatchEvent(new Event('input'));
           }
@@ -705,76 +734,7 @@ const jfClass = [
 
     <Footer />
 
-    <!-- Floating .md button -->
-    <a
-      id="md-btn"
-      class="floating-md"
-      title="查看 Raw Markdown 版本"
-      target="_blank"
-    >
-      .md
-    </a>
-
     <script is:inline>
-      // Set .md button href based on current path
-      const btn = document.getElementById('md-btn');
-      const pathname = window.location.pathname;
-      const ghBase = 'https://github.com/ahnchen1983/agrischlchiayi/blob/main';
-
-      let target = '/README.md'; // Default fallback
-
-      // Handle special pages
-      if (
-        pathname === '/' ||
-        pathname === '/en' ||
-        pathname === '/en/' ||
-        pathname === '/index.html'
-      ) {
-        target = '/README.md';
-      } else if (pathname.includes('/contribute')) {
-        target = '/CONTRIBUTING.md';
-      } else if (pathname.includes('/resources')) {
-        target = '/knowledge/About/台灣官方網站資源.md';
-      } else if (pathname.includes('/graph')) {
-        target = '/src/pages/graph.astro';
-      } else if (pathname.includes('/map')) {
-        target = pathname.startsWith('/en')
-          ? '/src/pages/en/map.astro'
-          : '/src/pages/map.astro';
-      } else if (pathname.includes('/about')) {
-        target = '/src/pages/about.astro';
-      } else {
-        // Content pages (Categories or Articles)
-        const isEn = pathname.startsWith('/en/');
-        // Remove /en/ prefix and leading/trailing slashes
-        const cleanPath = pathname
-          .replace(/^\/en/, '')
-          .replace(/^\//, '')
-          .replace(/\/$/, '')
-          .replace('index.html', '');
-        const parts = cleanPath.split('/');
-
-        if (parts.length > 0 && parts[0]) {
-          const cat = parts[0];
-          // Capitalize first letter of category (history -> History)
-          const catFolder = cat.charAt(0).toUpperCase() + cat.slice(1);
-
-          // ZH source is in knowledge/Category, EN source is in knowledge/en/Category
-          const prefix = isEn ? '/knowledge/en' : '/knowledge';
-
-          if (parts.length === 1) {
-            // Category Hub: knowledge/History/_History Hub.md
-            target = `${prefix}/${catFolder}/_${catFolder} Hub.md`;
-          } else {
-            // Article: knowledge/History/article-name.md
-            const slug = decodeURIComponent(parts.slice(1).join('/'));
-            target = `${prefix}/${catFolder}/${slug}.md`;
-          }
-        }
-      }
-
-      btn.href = ghBase + target;
-
       // Hash-based active state can only be detected client-side
       if (window.location.hash === '#categories') {
         document
@@ -785,9 +745,8 @@ const jfClass = [
 
     <!-- 🌾 嘉義農業 AI 助手（RAG，知識庫範疇） -->
     <agri-chat api-url="https://agri-chat-server.onrender.com"></agri-chat>
-    <script
-      src="https://agri-chat-server.onrender.com/chat-widget.js"
-      defer></script>
+    <script src="https://agri-chat-server.onrender.com/chat-widget.js" defer
+    ></script>
   </body>
 </html>
 
@@ -992,7 +951,7 @@ const jfClass = [
   main
     a:not(.nav-link):not([class*='btn']):not(.card-link):not(.logo):not(
       .category-card
-    ):not(.floating-md):not(.search-item):not(.reading-step):not(.update-item) {
+    ):not(.search-item):not(.reading-step):not(.update-item) {
     color: #475569;
     text-decoration: none;
     border-bottom: 1px solid #cbd5e1;
@@ -1002,9 +961,7 @@ const jfClass = [
   main
     a:not(.nav-link):not([class*='btn']):not(.card-link):not(.logo):not(
       .category-card
-    ):not(.floating-md):not(.search-item):not(.reading-step):not(
-      .update-item
-    ):hover {
+    ):not(.search-item):not(.reading-step):not(.update-item):hover {
     color: #1a1a2e;
     border-bottom-color: #64748b;
   }
@@ -1012,39 +969,11 @@ const jfClass = [
   main
     a[target='_blank']:not(.nav-link):not([class*='btn']):not(.card-link):not(
       .logo
-    ):not(.category-card):not(.floating-md):not(.contributor-card)::after {
+    ):not(.category-card):not(.contributor-card)::after {
     content: '↗';
     font-size: 0.8em;
     margin-left: 0.2em;
     opacity: 0.7;
-  }
-
-  /* Floating .md button */
-  .floating-md {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 48px;
-    height: 48px;
-    background: #1a1a2e;
-    color: #3b82f6;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'SF Mono', 'Fira Code', monospace;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: var(--shadow-card);
-    transition: all 0.2s;
-    z-index: 40;
-  }
-  .floating-md:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
-    background: #3b82f6;
-    color: white;
   }
 
   @media (max-width: 768px) {
@@ -1061,13 +990,6 @@ const jfClass = [
     body.page-default main.fork-graph-page,
     body.page-default main.category-page {
       padding-top: 0;
-    }
-    .floating-md {
-      bottom: 1rem;
-      right: 1rem;
-      width: 42px;
-      height: 42px;
-      font-size: 0.78rem;
     }
   }
 </style>
