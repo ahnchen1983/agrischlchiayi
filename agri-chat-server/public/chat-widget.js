@@ -9,7 +9,8 @@ class AgriChat extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.isOpen = false;
     this.messages = [];
-    this.apiUrl = this.getAttribute('api-url') || 'https://agri-chat-server.onrender.com';
+    this.apiUrl =
+      this.getAttribute('api-url') || 'https://agri-chat-server.onrender.com';
   }
 
   connectedCallback() {
@@ -29,7 +30,7 @@ class AgriChat extends HTMLElement {
 
       .chat-container {
         position: fixed;
-        bottom: 90px;
+        bottom: 20px;
         right: 20px;
         width: 380px;
         max-width: calc(100vw - 20px);
@@ -208,7 +209,7 @@ class AgriChat extends HTMLElement {
 
       .toggle-btn {
         position: fixed;
-        bottom: 90px;
+        bottom: 20px;
         right: 20px;
         width: 56px;
         height: 56px;
@@ -318,9 +319,9 @@ class AgriChat extends HTMLElement {
         const response = await fetch(`${this.apiUrl}/api/chat`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ message })
+          body: JSON.stringify({ message }),
         });
 
         if (!response.ok) {
@@ -346,7 +347,7 @@ class AgriChat extends HTMLElement {
 
         this.addMessage(
           `無法連接到服務器。請確保 API URL 正確。\n\n錯誤: ${error.message}`,
-          'bot'
+          'bot',
         );
       } finally {
         submitBtn.disabled = false;
@@ -355,7 +356,7 @@ class AgriChat extends HTMLElement {
     };
 
     submitBtn.addEventListener('click', sendMessage);
-    input.addEventListener('keypress', e => {
+    input.addEventListener('keypress', (e) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
         sendMessage();
@@ -398,8 +399,8 @@ class AgriChat extends HTMLElement {
             <strong>📚 相關文檔：</strong>
             ${sourcesPart
               .split('\n')
-              .filter(line => line.startsWith('- ['))
-              .map(line => {
+              .filter((line) => line.startsWith('- ['))
+              .map((line) => {
                 const match = line.match(/- \[(.*?)\]\((.*?)\)/);
                 if (match) {
                   return `<a href="${match[2]}" target="_blank">📖 ${match[1]}</a>`;
