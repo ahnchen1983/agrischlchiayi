@@ -31,11 +31,11 @@ function rateLimitMiddleware(req, res, next) {
   }
 
   const timestamps = requestCounts.get(ip);
-  const recentRequests = timestamps.filter(t => now - t < windowMs);
+  const recentRequests = timestamps.filter((t) => now - t < windowMs);
 
   if (recentRequests.length >= maxRequests) {
     return res.status(429).json({
-      error: '請求過於頻繁，請稍後再試'
+      error: '請求過於頻繁，請稍後再試',
     });
   }
 
@@ -44,11 +44,44 @@ function rateLimitMiddleware(req, res, next) {
   next();
 }
 
+// CORS allowlist
+// 從環境變數 CORS_ORIGINS 讀取，逗號分隔。
+// 範例: CORS_ORIGINS=https://ahnchen1983.github.io,http://localhost:4321
+//
+// Fail-open 設計：未設定時印警告但仍運作（允許所有 origin），避免部署
+// 時忘記設環境變數導致線上斷服務。設定後即進入嚴格 allowlist 模式。
+const ALLOWED_ORIGINS = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+const CORS_MODE = ALLOWED_ORIGINS.length > 0 ? 'allowlist' : 'open';
+
+if (CORS_MODE === 'open' && process.env.NODE_ENV === 'production') {
+  console.warn(
+    '⚠️  CORS_ORIGINS 未設定！目前允許所有 origin（不安全）。' +
+      '請在 Render Dashboard 設定 CORS_ORIGINS 環境變數後重新部署。',
+  );
+}
+
+app.use(
+  cors({
+    origin: (origin, cb) => {
+      // 允許無 origin（curl、伺服器間、同源請求）
+      if (!origin) return cb(null, true);
+      if (CORS_MODE === 'open') return cb(null, true);
+      if (ALLOWED_ORIGINS.includes(origin)) return cb(null, true);
+      cb(new Error(`Origin ${origin} not allowed by CORS`));
+    },
+  }),
+);
+
 // 中間件
-app.use(cors());
-app.use(bodyParser.json({
-  limit: '1mb' // 限制請求大小
-}));
+app.use(
+  bodyParser.json({
+    limit: '1mb', // 限制請求大小
+  }),
+);
 app.use((req, res, next) => {
   req.setTimeout(30000); // 30 秒超時
   next();
@@ -64,7 +97,9 @@ function initializeKnowledgeBase() {
     const indexPath = path.join(__dirname, 'knowledge-index.json');
 
     if (!fs.existsSync(indexPath)) {
-      console.error('❌ knowledge-index.json 不存在，請先執行 npm run build-index');
+      console.error(
+        '❌ knowledge-index.json 不存在，請先執行 npm run build-index',
+      );
       process.exit(1);
     }
 
@@ -97,7 +132,7 @@ app.get('/health', (req, res) => {
     status: 'ok',
     knowledge_base_ready: !!search,
     llm_ready: !!llm,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 });
 
@@ -105,7 +140,7 @@ app.get('/health', (req, res) => {
 let apiStats = {
   totalRequests: 0,
   totalTokens: 0,
-  lastReset: new Date()
+  lastReset: new Date(),
 };
 
 // 主要 API：發送訊息
@@ -113,9 +148,13 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
   try {
     const { message } = req.body;
 
-    if (!message || typeof message !== 'string' || message.trim().length === 0) {
+    if (
+      !message ||
+      typeof message !== 'string' ||
+      message.trim().length === 0
+    ) {
       return res.status(400).json({
-        error: '無效的訊息'
+        error: '無效的訊息',
       });
     }
 
@@ -131,13 +170,13 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
 
     // 記錄使用量（簡略估算）
     apiStats.totalRequests++;
-    apiStats.totalTokens += (userMessage.length / 4 + answer.length / 4);
+    apiStats.totalTokens += userMessage.length / 4 + answer.length / 4;
 
     res.json({
       success: true,
       answer,
       sources_found: context ? context.documents.length : 0,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
   } catch (error) {
     console.error('❌ 錯誤:', error.message);
@@ -145,12 +184,10 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
     // 不要洩露內部實現細節
     const statusCode = error.message.includes('無效') ? 400 : 500;
     const errorMessage =
-      statusCode === 500
-        ? '處理訊息時發生錯誤，請稍後再試'
-        : error.message;
+      statusCode === 500 ? '處理訊息時發生錯誤，請稍後再試' : error.message;
 
     res.status(statusCode).json({
-      error: errorMessage
+      error: errorMessage,
     });
   }
 });
@@ -168,7 +205,7 @@ app.get('/api/stats', (req, res) => {
     estimatedTokens: Math.round(apiStats.totalTokens),
     lastReset: apiStats.lastReset,
     uptime: process.uptime(),
-    memory: process.memoryUsage()
+    memory: process.memoryUsage(),
   });
 });
 
@@ -178,7 +215,7 @@ app.get('/api/search', (req, res) => {
 
   if (!q) {
     return res.status(400).json({
-      error: '缺少查詢參數 q'
+      error: '缺少查詢參數 q',
     });
   }
 
@@ -186,12 +223,12 @@ app.get('/api/search', (req, res) => {
 
   res.json({
     query: q,
-    results: results.map(r => ({
+    results: results.map((r) => ({
       title: r.title,
       url: r.url,
       score: r.score,
-      preview: r.content.slice(0, 300)
-    }))
+      preview: r.content.slice(0, 300),
+    })),
   });
 });
 
