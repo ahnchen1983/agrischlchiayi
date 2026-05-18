@@ -13,7 +13,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section class="hero">
       <div class="container">
         <h1>嘉義國本學堂</h1>
-        <p class="tagline">將農業課程與在地經驗，轉化為開源、可持續的知識平台</p>
+        <p class="tagline">
+          將農業課程與在地經驗，轉化為開源、可持續的知識平台
+        </p>
       </div>
     </section>
 
@@ -54,7 +56,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             這些知識原本只在課堂上流轉，難以被整體保存與傳承。
           </p>
           <p>
-            2025 年，我們決定將這些課程轉化為<strong>開源、可搜尋、可協作</strong>的知識平台。
+            2025 年，我們決定將這些課程轉化為<strong
+              >開源、可搜尋、可協作</strong
+            >的知識平台。
             讓新農、返鄉青年、學生與農業社群，都能快速找到實用的農業知識。
           </p>
         </div>
@@ -94,7 +98,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <section class="section structure-section">
       <div class="container">
         <h2>知識架構</h2>
-        <p class="intro">我們將農業知識分為 10 大主題，涵蓋從入門到進階的完整學習路徑：</p>
+        <p class="intro">
+          我們將農業知識分為 10 大主題，涵蓋從入門到進階的完整學習路徑：
+        </p>
 
         <div class="topics-grid">
           <div class="topic-item">
@@ -160,7 +166,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <div class="step-num">1</div>
             <div class="step-content">
               <h4>Markdown 為真相來源</h4>
-              <p>所有內容存放於 <code>knowledge/</code> 目錄，保持版本控制與透明度</p>
+              <p>
+                所有內容存放於 <code>knowledge/</code> 目錄，保持版本控制與透明度
+              </p>
             </div>
           </div>
           <div class="flow-arrow">→</div>
@@ -220,15 +228,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <div class="faq-item">
             <h4>我可以引用或分享這些內容嗎？</h4>
             <p>
-              可以。本平台所有內容採用 <strong>CC BY-SA 4.0</strong> 授權，
-              允許自由分享與改編，只需標明出處即可。
+              可以。本平台所有內容採用 <strong>CC BY-SA 4.0</strong> 授權， 允許自由分享與改編，只需標明出處即可。
             </p>
           </div>
           <div class="faq-item">
             <h4>我可以如何貢獻內容？</h4>
             <p>
-              歡迎！請參考 <a href={`${base}/contribute`}>貢獻指南</a>，
-              或直接 Fork 本專案的 GitHub repo，貢獻新文章或改進現有內容。
+              歡迎！請參考 <a href={`${base}/contribute`}>貢獻指南</a>， 或直接
+              Fork 本專案的 GitHub repo，貢獻新文章或改進現有內容。
             </p>
           </div>
           <div class="faq-item">
@@ -411,12 +418,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .num {
+    grid-row: 1 / span 2;
     font-weight: 700;
     font-size: 1.5rem;
     color: #1a472a;
   }
 
   .topic-item h4 {
+    grid-column: 2;
     margin: 0;
     color: #1a1a2e;
   }
@@ -432,6 +441,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   }
 
   .topic-item p {
+    grid-column: 2;
     margin: 0.5rem 0 0 0;
     color: #666;
     font-size: 0.95rem;
