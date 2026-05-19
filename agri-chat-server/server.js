@@ -170,11 +170,13 @@ function buildSummary(answer) {
 
 function buildSources(context) {
   if (!context || !Array.isArray(context.documents)) return [];
-  return context.documents.map((doc) => ({
-    title: doc.title,
-    url: doc.url,
-    score: doc.score,
-  }));
+  return context.documents
+    .filter((doc) => doc.url)
+    .map((doc) => ({
+      title: doc.title,
+      url: doc.url,
+      score: doc.score,
+    }));
 }
 
 // 主要 API：發送訊息
