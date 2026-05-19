@@ -121,11 +121,28 @@ class AgriChat extends HTMLElement {
         padding: 12px 16px;
         border-radius: 12px;
         font-size: 14px;
-        line-height: 1.4;
-        white-space: pre-wrap;
+        line-height: 1.6;
+        white-space: normal;
         overflow-wrap: break-word;
         word-break: normal;
         line-break: loose;
+      }
+
+      .message-content p {
+        margin: 0 0 0.7em;
+      }
+
+      .message-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .message-content ul {
+        margin: 0.25rem 0 0.7rem;
+        padding-left: 1.25rem;
+      }
+
+      .message-content li {
+        margin: 0.2rem 0;
       }
 
       .message.bot .message-content {
@@ -142,12 +159,26 @@ class AgriChat extends HTMLElement {
 
       .message-sources {
         font-size: 12px;
-        margin-top: 8px;
-        padding: 8px;
+        margin-top: 12px;
+        padding: 10px;
         background: #f0f8f4;
         border-left: 3px solid var(--primary-color);
         border-radius: 4px;
         white-space: normal;
+      }
+
+      .message-note-title {
+        display: block;
+        margin-bottom: 6px;
+        color: #1f6f43;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .message-summary {
+        margin: 0 0 8px;
+        color: #4b5563;
+        line-height: 1.5;
       }
 
       .message-sources a {
@@ -254,6 +285,47 @@ class AgriChat extends HTMLElement {
         50% { opacity: 1; }
       }
 
+      .welcome-card {
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 14px;
+        color: var(--text-color);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .welcome-card strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #1f6f43;
+      }
+
+      .welcome-card p {
+        margin: 0 0 10px;
+      }
+
+      .prompt-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .prompt-chip {
+        border: 1px solid #bfe8cf;
+        background: #f0f8f4;
+        color: #1f6f43;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font: inherit;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .prompt-chip:hover {
+        background: #e0f4e8;
+      }
+
       @media (max-width: 480px) {
         .chat-container {
           width: calc(100vw - 20px);
@@ -283,7 +355,17 @@ class AgriChat extends HTMLElement {
           <button class="close-btn" title="關閉">✕</button>
         </div>
 
-        <div class="chat-messages"></div>
+        <div class="chat-messages">
+          <div class="welcome-card">
+            <strong>你好，我是嘉義農業助手</strong>
+            <p>我會根據國本學堂知識庫回答農業課程、作物栽培、農場經營、設施與智慧農業等問題。回答底部會集中整理摘要與來源。</p>
+            <div class="prompt-chips">
+              <button class="prompt-chip" type="button">小番茄有什麼教學？</button>
+              <button class="prompt-chip" type="button">溫室管理要注意什麼？</button>
+              <button class="prompt-chip" type="button">農場財務怎麼規劃？</button>
+            </div>
+          </div>
+        </div>
 
         <div class="chat-input">
           <input type="text" placeholder="提問農業相關問題..." />
@@ -299,12 +381,15 @@ class AgriChat extends HTMLElement {
     const container = this.shadowRoot.querySelector('.chat-container');
     const input = this.shadowRoot.querySelector('.chat-input input');
     const submitBtn = this.shadowRoot.querySelector('.chat-input button');
+    const promptChips = this.shadowRoot.querySelectorAll('.prompt-chip');
 
     toggleBtn.addEventListener('click', () => this.toggle());
     closeBtn.addEventListener('click', () => this.toggle());
 
-    const sendMessage = async () => {
-      const message = input.value.trim();
+    const sendMessage = async (presetMessage = '') => {
+      const explicitMessage =
+        typeof presetMessage === 'string' ? presetMessage : '';
+      const message = (explicitMessage || input.value).trim();
       if (!message) return;
 
       // 新增用戶訊息到 UI
@@ -335,7 +420,7 @@ class AgriChat extends HTMLElement {
         messages[messages.length - 1].remove();
 
         // 新增 AI 回答
-        this.addMessage(data.answer, 'bot');
+        this.addMessage(data, 'bot');
       } catch (error) {
         console.error('❌ 錯誤:', error);
 
@@ -356,6 +441,9 @@ class AgriChat extends HTMLElement {
     };
 
     submitBtn.addEventListener('click', sendMessage);
+    promptChips.forEach((chip) => {
+      chip.addEventListener('click', () => sendMessage(chip.textContent));
+    });
     input.addEventListener('keypress', (e) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
@@ -379,44 +467,148 @@ class AgriChat extends HTMLElement {
     }
   }
 
-  addMessage(text, role, isLoading = false) {
+  cleanText(text) {
+    return String(text || '')
+      .replace(/\*\*相關文檔：\*\*[\s\S]*$/u, '')
+      .replace(/^\s*#{1,6}\s+/gm, '')
+      .replace(/^\s*[-*_]{3,}\s*$/gm, '')
+      .replace(/\*\*\*/g, '')
+      .replace(/\*\*/g, '')
+      .replace(/\*([^*\n]+)\*/g, '$1')
+      .replace(/__([^_]+)__/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .trim();
+  }
+
+  safeSourceUrl(value) {
+    try {
+      const url = new URL(value, window.location.origin);
+      if (url.protocol === 'http:' || url.protocol === 'https:')
+        return url.href;
+      return null;
+    } catch {
+      return value && value.startsWith('/') && !value.startsWith('//')
+        ? value
+        : null;
+    }
+  }
+
+  appendFormattedText(parent, text) {
+    const cleaned = this.cleanText(text);
+    const blocks = cleaned
+      .split(/\n{2,}/)
+      .map((block) => block.trim())
+      .filter(Boolean);
+
+    if (blocks.length === 0) {
+      const p = document.createElement('p');
+      p.textContent = '目前沒有可顯示的回答。';
+      parent.appendChild(p);
+      return;
+    }
+
+    blocks.forEach((block) => {
+      const lines = block
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const isList =
+        lines.length > 1 &&
+        lines.every((line) => /^([-•]|\d+[.)])\s+/.test(line));
+
+      if (isList) {
+        const ul = document.createElement('ul');
+        lines.forEach((line) => {
+          const li = document.createElement('li');
+          li.textContent = line.replace(/^([-•]|\d+[.)])\s+/, '');
+          ul.appendChild(li);
+        });
+        parent.appendChild(ul);
+        return;
+      }
+
+      const p = document.createElement('p');
+      p.textContent = lines
+        .map((line) => line.replace(/^([-•]|\d+[.)])\s+/, ''))
+        .join(' ');
+      parent.appendChild(p);
+    });
+  }
+
+  getLegacySources(text) {
+    const sourcesPart = String(text || '').split('**相關文檔：**')[1];
+    if (!sourcesPart) return [];
+    return sourcesPart
+      .split('\n')
+      .map((line) => line.match(/- \[(.*?)\]\((.*?)\)/))
+      .filter(Boolean)
+      .map((match) => ({ title: match[1], url: match[2] }));
+  }
+
+  addMessage(payload, role, isLoading = false) {
     const messagesDiv = this.shadowRoot.querySelector('.chat-messages');
 
     const messageEl = document.createElement('div');
     messageEl.className = `message ${role}`;
 
-    if (isLoading) {
-      messageEl.innerHTML = `
-        <div class="message-content">
-          <span class="loading"></span> ${text}
-        </div>
-      `;
-    } else {
-      // 分離內容和來源
-      const [mainContent, sourcesPart] = text.split('**相關文檔：**');
-      const sourcesHtml = sourcesPart
-        ? `<div class="message-sources">
-            <strong>📚 相關文檔：</strong>
-            ${sourcesPart
-              .split('\n')
-              .filter((line) => line.startsWith('- ['))
-              .map((line) => {
-                const match = line.match(/- \[(.*?)\]\((.*?)\)/);
-                if (match) {
-                  return `<a href="${match[2]}" target="_blank">📖 ${match[1]}</a>`;
-                }
-                return '';
-              })
-              .join('')}
-          </div>`
-        : '';
+    const contentEl = document.createElement('div');
+    contentEl.className = 'message-content';
 
-      messageEl.innerHTML = `
-        <div class="message-content">
-          ${mainContent.trim()}
-          ${sourcesHtml}
-        </div>
-      `;
+    if (isLoading) {
+      const loading = document.createElement('span');
+      loading.className = 'loading';
+      contentEl.appendChild(loading);
+      contentEl.appendChild(document.createTextNode(` ${payload}`));
+      messageEl.appendChild(contentEl);
+    } else {
+      const answer =
+        typeof payload === 'string'
+          ? payload
+          : payload.answer || payload.error || '';
+      this.appendFormattedText(contentEl, answer);
+
+      const summary =
+        typeof payload === 'string'
+          ? ''
+          : this.cleanText(payload.summary || '');
+      const sources =
+        typeof payload === 'string'
+          ? this.getLegacySources(payload)
+          : Array.isArray(payload.sources)
+            ? payload.sources
+            : [];
+
+      if (role === 'bot' && (summary || sources.length > 0)) {
+        const sourcesEl = document.createElement('div');
+        sourcesEl.className = 'message-sources';
+
+        const title = document.createElement('strong');
+        title.className = 'message-note-title';
+        title.textContent = '摘要與來源';
+        sourcesEl.appendChild(title);
+
+        if (summary) {
+          const summaryEl = document.createElement('p');
+          summaryEl.className = 'message-summary';
+          summaryEl.textContent = `摘要：${summary}`;
+          sourcesEl.appendChild(summaryEl);
+        }
+
+        sources.forEach((source) => {
+          const safeUrl = this.safeSourceUrl(source.url);
+          if (!safeUrl || !source.title) return;
+          const link = document.createElement('a');
+          link.href = safeUrl;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = `來源：${source.title}`;
+          sourcesEl.appendChild(link);
+        });
+
+        contentEl.appendChild(sourcesEl);
+      }
+
+      messageEl.appendChild(contentEl);
     }
 
     messagesDiv.appendChild(messageEl);

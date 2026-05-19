@@ -21,8 +21,9 @@ const SYSTEM_PROMPT = `你是一個農業知識助手，專門回答嘉義國本
 當用戶提問時：
 - 首先在提供的知識庫文件中尋找相關內容
 - 用簡潔、實用的方式回答
-- 在回答末尾引用來源文件（格式：[來源: 文檔標題]）
-- 如果需要補充說明，可以說「建議您查閱以下相關文檔」
+- 不要在回答中列出來源、文檔標題或 URL，系統會另外集中呈現
+- 不要使用 Markdown 裝飾符號，例如 **、***、###、---、>、表格
+- 可以使用一般段落或短條列，但不要輸出 Markdown 標題
 
 語言：繁體中文`;
 
@@ -37,8 +38,8 @@ class OpenRouterLLM {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'HTTP-Referer': 'https://agrischlchiayi.pages.dev',
-        'X-Title': 'Agri-Chat'
-      }
+        'X-Title': 'Agri-Chat',
+      },
     });
   }
 
@@ -58,7 +59,7 @@ class OpenRouterLLM {
     const contextText = context.documents
       .map(
         (doc, i) =>
-          `【文件 ${i + 1}】標題: ${doc.title}\nURL: ${doc.url}\n內容摘要:\n${doc.content}`
+          `【文件 ${i + 1}】標題: ${doc.title}\nURL: ${doc.url}\n內容摘要:\n${doc.content}`,
       )
       .join('\n\n---\n\n');
 
@@ -69,7 +70,8 @@ ${contextText}
 
 用戶問題：${userQuestion}
 
-請根據上述文件內容回答問題，並在最後標註來源。`;
+請根據上述文件內容回答問題。
+請只輸出給使用者看的回答本文，不要附來源清單、不要附 Markdown 裝飾符號。`;
 
     try {
       const response = await this.client.post('/chat/completions', {
@@ -77,28 +79,25 @@ ${contextText}
         messages: [
           {
             role: 'system',
-            content: SYSTEM_PROMPT
+            content: SYSTEM_PROMPT,
           },
           {
             role: 'user',
-            content: userPrompt
-          }
+            content: userPrompt,
+          },
         ],
         temperature: 0.7,
         max_tokens: 1000,
-        top_p: 0.95
+        top_p: 0.95,
       });
 
       const answer = response.data.choices[0].message.content;
-
-      // 附加來源連結
-      const sources = context.documents
-        .map(doc => `- [${doc.title}](${doc.url})`)
-        .join('\n');
-
-      return `${answer}\n\n**相關文檔：**\n${sources}`;
+      return answer;
     } catch (error) {
-      console.error('❌ OpenRouter API 錯誤:', error.response?.data || error.message);
+      console.error(
+        '❌ OpenRouter API 錯誤:',
+        error.response?.data || error.message,
+      );
 
       if (error.response?.status === 401) {
         throw new Error('OpenRouter API key 無效');

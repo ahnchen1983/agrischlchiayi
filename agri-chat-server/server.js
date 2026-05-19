@@ -143,6 +143,40 @@ let apiStats = {
   lastReset: new Date(),
 };
 
+function cleanAnswer(text) {
+  return String(text || '')
+    .replace(/\*\*相關文檔：\*\*[\s\S]*$/u, '')
+    .replace(/^\s*#{1,6}\s+/gm, '')
+    .replace(/^\s*[-*_]{3,}\s*$/gm, '')
+    .replace(/\*\*\*/g, '')
+    .replace(/\*\*/g, '')
+    .replace(/\*([^*\n]+)\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/\[來源:\s*[^\]]+\]/g, '')
+    .replace(/[ \t]+\n/g, '\n')
+    .trim();
+}
+
+function buildSummary(answer) {
+  const compact = cleanAnswer(answer)
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!compact) return '已根據國本學堂知識庫整理回答。';
+  if (compact.length <= 90) return compact;
+  return `${compact.slice(0, 90)}...`;
+}
+
+function buildSources(context) {
+  if (!context || !Array.isArray(context.documents)) return [];
+  return context.documents.map((doc) => ({
+    title: doc.title,
+    url: doc.url,
+    score: doc.score,
+  }));
+}
+
 // 主要 API：發送訊息
 app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
   try {
@@ -166,7 +200,9 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
 
     // 2. 調用 LLM 生成回答
     console.log('🤖 生成回答...');
-    const answer = await llm.generateAnswer(userMessage, context);
+    const answer = cleanAnswer(await llm.generateAnswer(userMessage, context));
+    const summary = buildSummary(answer);
+    const sources = buildSources(context);
 
     // 記錄使用量（簡略估算）
     apiStats.totalRequests++;
@@ -175,7 +211,9 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
     res.json({
       success: true,
       answer,
-      sources_found: context ? context.documents.length : 0,
+      summary,
+      sources,
+      sources_found: sources.length,
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
