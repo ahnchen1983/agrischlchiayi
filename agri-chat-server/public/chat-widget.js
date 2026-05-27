@@ -132,7 +132,7 @@ class AgriChat extends HTMLElement {
       }
 
       .message-content p {
-        margin: 0 0 0.7em;
+        margin: 0 0 1rem;
       }
 
       .message-content p:last-child {
@@ -140,7 +140,7 @@ class AgriChat extends HTMLElement {
       }
 
       .message-content ul {
-        margin: 0.25rem 0 0.7rem;
+        margin: 0.35rem 0 1rem;
         padding-left: 1.25rem;
       }
 
@@ -596,10 +596,17 @@ class AgriChat extends HTMLElement {
       }
 
       const p = document.createElement('p');
-      p.textContent = lines
-        .map((line) => line.replace(/^([-•]|\d+[.)])\s+/, ''))
-        .join(' ');
-      parent.appendChild(p);
+      if (lines.length === 1) {
+        p.textContent = lines[0].replace(/^([-•]|\d+[.)])\s+/, '');
+        parent.appendChild(p);
+        return;
+      }
+
+      lines.forEach((line) => {
+        const lineParagraph = document.createElement('p');
+        lineParagraph.textContent = line.replace(/^([-•]|\d+[.)])\s+/, '');
+        parent.appendChild(lineParagraph);
+      });
     });
   }
 

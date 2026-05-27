@@ -18,6 +18,15 @@ import {
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
+const parseArticleMatter = (fileContent: string) => {
+  try {
+    return matter(fileContent);
+  } catch {
+    const stripped = fileContent.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, '');
+    return { data: {}, content: stripped };
+  }
+};
+
 // ── Git helpers ───────────────────────────────────────────────────────────────
 let _gitCache: Map<
   string,
@@ -230,7 +239,9 @@ try {
       const articleSlug = basename(file, '.md');
       if (articleSlug === slug) continue;
       const filePath = join(folderPath, file);
-      const { data: fm } = safeMatter(await readFile(filePath, 'utf-8'));
+      const { data: fm } = parseArticleMatter(
+        await readFile(filePath, 'utf-8'),
+      );
       relatedArticles.push({
         title: fm.title || articleSlug,
         slug: articleSlug,
@@ -245,23 +256,27 @@ try {
 
 // ── Random explore list ───────────────────────────────────────────────────────
 let allArticles: Array<{ title: string; slug: string; category: string }> = [];
+let wikiArticles: Array<{ title: string; slug: string; category: string }> = [];
 try {
   for (const [catSlug, folderName] of Object.entries(categoryMapping)) {
-    if (catSlug === category) continue;
     try {
       const catPath = resolve(process.cwd(), 'knowledge', folderName);
       for (const file of (await readdir(catPath)).filter(
         (f) => f.endsWith('.md') && !f.startsWith('_'),
       )) {
         const articleSlug = basename(file, '.md');
-        const { data: fm } = safeMatter(
+        const { data: fm } = parseArticleMatter(
           await readFile(join(catPath, file), 'utf-8'),
         );
-        allArticles.push({
+        const article = {
           title: fm.title || articleSlug,
           slug: articleSlug,
           category: catSlug,
-        });
+        };
+        wikiArticles.push(article);
+        if (catSlug !== category) {
+          allArticles.push(article);
+        }
       }
     } catch {}
   }
@@ -274,12 +289,67 @@ const otherCategories = categories
   .map((cat) => ({ key: cat, ...categoryConfigs[cat as CategoryKey] }));
 
 // ── Markdown → HTML ───────────────────────────────────────────────────────────
+function escapeHtml(text: string) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function normalizeWikiTarget(value: string) {
+  return String(value || '')
+    .trim()
+    .replace(/\.md$/i, '')
+    .replace(/^\/+|\/+$/g, '');
+}
+
+function safeDecode(value: string) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
 function resolveWikilinks(md: string) {
   if (!md) return md;
   return md.replace(
     /\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/g,
     (_, target, display) => {
-      return `**${display || target}**`;
+      const rawTarget = normalizeWikiTarget(target);
+      const label = escapeHtml((display || rawTarget).trim());
+      const targetLower = rawTarget.toLowerCase();
+
+      const categoryMatch = Object.entries(categoryMapping).find(
+        ([catSlug, folderName]) =>
+          catSlug === targetLower ||
+          folderName.toLowerCase() === targetLower ||
+          categoryConfigs[catSlug as CategoryKey]?.name === rawTarget,
+      );
+      if (categoryMatch) {
+        return `<a class="wiki-link" href="${base}/${categoryMatch[0]}">${label}</a>`;
+      }
+
+      const articleMatch =
+        wikiArticles.find(
+          (article) =>
+            article.title === rawTarget ||
+            article.slug === rawTarget ||
+            article.slug === safeDecode(rawTarget),
+        ) ||
+        wikiArticles.find(
+          (article) =>
+            rawTarget.startsWith(article.title) ||
+            article.title.startsWith(rawTarget),
+        );
+
+      if (!articleMatch) {
+        return label;
+      }
+
+      return `<a class="wiki-link" href="${base}/${articleMatch.category}/${articleMatch.slug}">${label}</a>`;
     },
   );
 }
