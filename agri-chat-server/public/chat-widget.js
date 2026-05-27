@@ -9,6 +9,9 @@ class AgriChat extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.isOpen = false;
     this.messages = [];
+    this.conversationMemory = [];
+    this.memoryDisabled = false;
+    this.memoryNoticeShown = false;
     this.apiUrl =
       this.getAttribute('api-url') || 'https://agri-chat-server.onrender.com';
   }
@@ -129,7 +132,7 @@ class AgriChat extends HTMLElement {
       }
 
       .message-content p {
-        margin: 0 0 0.7em;
+        margin: 0 0 1rem;
       }
 
       .message-content p:last-child {
@@ -137,7 +140,7 @@ class AgriChat extends HTMLElement {
       }
 
       .message-content ul {
-        margin: 0.25rem 0 0.7rem;
+        margin: 0.35rem 0 1rem;
         padding-left: 1.25rem;
       }
 
@@ -193,6 +196,18 @@ class AgriChat extends HTMLElement {
 
       .message-sources a:hover {
         text-decoration: underline;
+      }
+
+      .memory-notice {
+        max-width: 86%;
+        align-self: center;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        color: #9a3412;
+        font-size: 12px;
+        line-height: 1.5;
       }
 
       .chat-input {
@@ -358,7 +373,7 @@ class AgriChat extends HTMLElement {
         <div class="chat-messages">
           <div class="welcome-card">
             <strong>你好，我是嘉義農業助手</strong>
-            <p>我會根據國本學堂知識庫回答農業課程、作物栽培、農場經營、設施與智慧農業等問題。回答底部會集中整理摘要與來源。</p>
+            <p>我會根據國本學堂知識庫回答農業課程、作物栽培、農場經營、設施與智慧農業等問題。這個測試版可短暫承接前幾輪追問，回答底部會集中整理摘要與來源。</p>
             <div class="prompt-chips">
               <button class="prompt-chip" type="button">小番茄有什麼教學？</button>
               <button class="prompt-chip" type="button">溫室管理要注意什麼？</button>
@@ -406,7 +421,10 @@ class AgriChat extends HTMLElement {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ message }),
+          body: JSON.stringify({
+            message,
+            history: this.getConversationHistory(),
+          }),
         });
 
         if (!response.ok) {
@@ -421,6 +439,7 @@ class AgriChat extends HTMLElement {
 
         // 新增 AI 回答
         this.addMessage(data, 'bot');
+        this.rememberExchange(message, data);
       } catch (error) {
         console.error('❌ 錯誤:', error);
 
@@ -480,6 +499,55 @@ class AgriChat extends HTMLElement {
       .trim();
   }
 
+  getConversationHistory() {
+    if (this.memoryDisabled) return [];
+    return this.conversationMemory.slice(-4);
+  }
+
+  getMemorySize(nextItem = null) {
+    const memory = nextItem
+      ? [...this.conversationMemory, nextItem]
+      : this.conversationMemory;
+    return JSON.stringify(memory).length;
+  }
+
+  rememberExchange(userMessage, data) {
+    if (this.memoryDisabled || !data || !data.summary) return;
+
+    const nextItem = {
+      user: this.cleanText(userMessage).slice(0, 160),
+      assistantSummary: this.cleanText(data.summary).slice(0, 240),
+    };
+
+    const maxSize = 1800;
+    const maxTurns = 4;
+
+    if (this.getMemorySize(nextItem) > maxSize) {
+      this.memoryDisabled = true;
+      this.conversationMemory = [];
+      this.showMemoryNotice();
+      return;
+    }
+
+    this.conversationMemory.push(nextItem);
+    if (this.conversationMemory.length > maxTurns) {
+      this.conversationMemory = this.conversationMemory.slice(-maxTurns);
+    }
+  }
+
+  showMemoryNotice() {
+    if (this.memoryNoticeShown) return;
+    this.memoryNoticeShown = true;
+
+    const messagesDiv = this.shadowRoot.querySelector('.chat-messages');
+    const notice = document.createElement('div');
+    notice.className = 'memory-notice';
+    notice.textContent =
+      '這段對話已達短期記憶上限。接下來我仍可回答新問題，但可能無法完整承接前面的脈絡。';
+    messagesDiv.appendChild(notice);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
   safeSourceUrl(value) {
     try {
       const url = new URL(value, window.location.origin);
@@ -528,10 +596,17 @@ class AgriChat extends HTMLElement {
       }
 
       const p = document.createElement('p');
-      p.textContent = lines
-        .map((line) => line.replace(/^([-•]|\d+[.)])\s+/, ''))
-        .join(' ');
-      parent.appendChild(p);
+      if (lines.length === 1) {
+        p.textContent = lines[0].replace(/^([-•]|\d+[.)])\s+/, '');
+        parent.appendChild(p);
+        return;
+      }
+
+      lines.forEach((line) => {
+        const lineParagraph = document.createElement('p');
+        lineParagraph.textContent = line.replace(/^([-•]|\d+[.)])\s+/, '');
+        parent.appendChild(lineParagraph);
+      });
     });
   }
 
