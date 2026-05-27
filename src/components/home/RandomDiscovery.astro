@@ -9,12 +9,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { articlesJson } = Astro.props;
 const isEn = lang === 'en';
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <section class="random-discovery">
   <div class="random-discovery-content">
-    <button id="random-discovery-btn" class="random-btn">
+    <button id="random-discovery-btn" class="random-btn" type="button">
       <span class="random-icon">🎲</span>
       <span class="random-text">隨機探索農業知識</span>
       <span class="random-subtitle">探索意想不到的農業故事</span>
@@ -29,49 +29,93 @@ const baseUrl = import.meta.env.BASE_URL;
   document.addEventListener('DOMContentLoaded', async function () {
     const randomBtn = document.getElementById('random-discovery-btn');
     let articles = [];
+    const folderToSlug = {
+      'Agri-Basics': 'agri-basics',
+      'Agri-Advanced': 'agri-advanced',
+      'Farm-Management': 'farm-management',
+      'Crop-Production': 'crop-production',
+      'Facility-Farming': 'facility-farming',
+      'Smart-Farming': 'smart-farming',
+      'Agri-Marketing': 'agri-marketing',
+      'Grants-Planning': 'grants-planning',
+      'Field-Visits': 'field-visits',
+      'Livestock-Health': 'livestock-health',
+    };
+    const categoryLabels = {
+      'Agri-Basics': '🌱 農業基礎入門',
+      'Agri-Advanced': '🌾 農業進階實務',
+      'Farm-Management': '🏡 農場經營管理',
+      'Crop-Production': '🌿 作物生產技術',
+      'Facility-Farming': '🏗️ 設施農業',
+      'Smart-Farming': '🤖 智慧農業',
+      'Agri-Marketing': '📦 農產品銷售',
+      'Grants-Planning': '📝 計畫撰寫補助',
+      'Field-Visits': '🚜 場域交流觀摩',
+      'Livestock-Health': '🐄 畜牧健康',
+    };
+
+    function articleUrl(article) {
+      if (article.path) {
+        const pathParts = article.path.replace(/\.md$/i, '').split('/');
+        const folder = pathParts[0];
+        const slug = pathParts.slice(1).join('/');
+        if (folderToSlug[folder] && slug) {
+          return (
+            baseUrl +
+            '/' +
+            folderToSlug[folder] +
+            '/' +
+            slug
+              .split('/')
+              .map(function (part) {
+                return encodeURIComponent(part);
+              })
+              .join('/')
+          );
+        }
+      }
+
+      try {
+        const url = new URL(article.url);
+        return url.pathname.replace(
+          /^\/agrischlchiayi\/([^/]+)/,
+          function (_, folder) {
+            return baseUrl + '/' + (folderToSlug[folder] || folder);
+          },
+        );
+      } catch {
+        return baseUrl + '/graph';
+      }
+    }
 
     if (articlesJson) {
       articles = JSON.parse(articlesJson);
     } else {
-      // ZH mode: fetch from API
-      var catLabels = {
-        history: '📜 歷史',
-        geography: '🗺️ 地理',
-        culture: '🎭 文化',
-        food: '🍜 美食',
-        art: '🎨 藝術',
-        music: '🎵 音樂',
-        technology: '💻 科技',
-        nature: '🌿 自然',
-        people: '👤 人物',
-        society: '⚖️ 社會',
-        economy: '📈 經濟',
-        lifestyle: '🏮 生活',
-      };
       try {
-        const res = await fetch(baseUrl + 'api/articles.json');
+        const res = await fetch(baseUrl + '/api/articles.json');
         if (res.ok) {
           const raw = await res.json();
           articles = raw
             .filter(function (a) {
-              return a.category !== 'en' && !a.url.includes('/en/');
+              return a.title && (a.path || a.url);
             })
             .map(function (a) {
-              var u = a.url
-                .replace('https://taiwan.md', '')
-                .replace(/^\/([^\/]+)/, function (m, p) {
-                  return '/' + p.toLowerCase();
-                });
               return {
                 title: a.title,
-                url: u,
-                category: catLabels[a.category.toLowerCase()] || a.category,
+                url: articleUrl(a),
+                category: categoryLabels[a.category] || a.category,
               };
             });
         }
       } catch (e) {
         articles = [];
       }
+    }
+
+    if (randomBtn && articles.length === 0) {
+      randomBtn.addEventListener('click', function () {
+        window.location.href = baseUrl + '/graph';
+      });
     }
 
     if (randomBtn && articles.length > 0) {
