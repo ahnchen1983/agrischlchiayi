@@ -44,12 +44,81 @@ class OpenRouterLLM {
   }
 
   /**
+   * 將追問改寫成可獨立檢索的問題。
+   * 歷史只用於補全本輪搜尋意圖，不作為回答依據。
+   */
+  async rewriteQuestion(userQuestion, history = []) {
+    if (!Array.isArray(history) || history.length === 0) {
+      return userQuestion;
+    }
+
+    const historyText = history
+      .slice(-4)
+      .map(
+        (item, index) =>
+          `第 ${index + 1} 輪\n使用者：${item.user}\n回答摘要：${item.assistantSummary}`,
+      )
+      .join('\n\n');
+
+    const prompt = `你要把使用者的追問改寫成「可獨立搜尋嘉義國本學堂農業知識庫」的完整查詢句。
+
+規則：
+1. 只根據對話摘要補足代名詞或省略主題。
+2. 不回答問題，只輸出改寫後的一句查詢。
+3. 不加入對話摘要中沒有的外部資訊。
+4. 若本輪問題本來就完整，原樣輸出。
+5. 長度控制在 80 個中文字以內。
+
+對話摘要：
+${historyText}
+
+本輪問題：${userQuestion}
+
+改寫後查詢：`;
+
+    try {
+      const response = await this.client.post('/chat/completions', {
+        model: MODEL,
+        messages: [
+          {
+            role: 'system',
+            content: '你只負責改寫搜尋查詢，不回答問題，不使用外部資料。',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+        temperature: 0.1,
+        max_tokens: 120,
+        top_p: 0.8,
+      });
+
+      const rewritten = response.data.choices[0].message.content
+        .replace(/^["「]|["」]$/g, '')
+        .trim();
+
+      return rewritten || userQuestion;
+    } catch (error) {
+      console.warn(
+        '⚠️ 問題改寫失敗，改用原始問題:',
+        error.response?.data || error.message,
+      );
+      return userQuestion;
+    }
+  }
+
+  /**
    * 基於知識庫內容生成回答
    * @param {string} userQuestion - 用戶問題
    * @param {Object} context - 搜索到的知識庫上下文
    * @returns {Promise<string>} 生成的回答
    */
-  async generateAnswer(userQuestion, context) {
+  async generateAnswer(
+    userQuestion,
+    context,
+    rewrittenQuestion = userQuestion,
+  ) {
     // 如果沒有搜索到相關內容，直接返回
     if (!context || context.documents.length === 0) {
       return '知識庫中未找到相關資訊。請嘗試用不同的詞彙提問，或者瀏覽平台首頁了解可用的知識類別。';
@@ -69,6 +138,7 @@ class OpenRouterLLM {
 ${contextText}
 
 用戶問題：${userQuestion}
+本輪檢索問題：${rewrittenQuestion}
 
 請根據上述文件內容回答問題。
 請只輸出給使用者看的回答本文，不要附來源清單、不要附 Markdown 裝飾符號。`;

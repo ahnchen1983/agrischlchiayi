@@ -179,10 +179,22 @@ function buildSources(context) {
     }));
 }
 
+function sanitizeHistory(history) {
+  if (!Array.isArray(history)) return [];
+
+  return history
+    .slice(-4)
+    .map((item) => ({
+      user: cleanAnswer(item?.user).slice(0, 160),
+      assistantSummary: cleanAnswer(item?.assistantSummary).slice(0, 240),
+    }))
+    .filter((item) => item.user && item.assistantSummary);
+}
+
 // 主要 API：發送訊息
 app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
   try {
-    const { message } = req.body;
+    const { message, history } = req.body;
 
     if (
       !message ||
@@ -195,14 +207,22 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
     }
 
     const userMessage = message.trim();
+    const conversationHistory = sanitizeHistory(history);
 
-    // 1. 搜索知識庫
-    console.log(`🔍 搜索: "${userMessage}"`);
-    const context = search.getContext(userMessage, 3);
+    // 1. 使用短期上下文改寫檢索問題，再搜索知識庫
+    const rewrittenQuestion = cleanAnswer(
+      await llm.rewriteQuestion(userMessage, conversationHistory),
+    );
+    const searchQuery = rewrittenQuestion || userMessage;
+
+    console.log(`🔍 搜索: "${searchQuery}"`);
+    const context = search.getContext(searchQuery, 3);
 
     // 2. 調用 LLM 生成回答
     console.log('🤖 生成回答...');
-    const answer = cleanAnswer(await llm.generateAnswer(userMessage, context));
+    const answer = cleanAnswer(
+      await llm.generateAnswer(userMessage, context, searchQuery),
+    );
     const summary = buildSummary(answer);
     const sources = buildSources(context);
 
@@ -216,6 +236,8 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
       summary,
       sources,
       sources_found: sources.length,
+      rewritten_query: searchQuery,
+      memory_used: conversationHistory.length > 0,
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
