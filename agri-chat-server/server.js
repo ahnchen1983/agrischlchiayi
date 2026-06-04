@@ -180,6 +180,26 @@ function buildSources(context) {
     }));
 }
 
+function buildFallbackAnswer(context) {
+  const docs = Array.isArray(context?.documents) ? context.documents : [];
+  if (docs.length === 0) {
+    return '知識庫中未找到相關資訊。請嘗試用不同的詞彙提問，或者瀏覽平台首頁了解可用的知識類別。';
+  }
+
+  const items = docs
+    .slice(0, 3)
+    .map((doc, index) => {
+      const preview = cleanAnswer(doc.content)
+        .replace(/\n+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .slice(0, 140);
+      return `${index + 1}. ${doc.title}：${preview}`;
+    })
+    .join('\n\n');
+
+  return `目前 AI 生成服務暫時不穩，先根據知識庫搜尋結果整理可參考的內容：\n\n${items}`;
+}
+
 function sanitizeHistory(history) {
   if (!Array.isArray(history)) return [];
 
@@ -221,9 +241,17 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
 
     // 2. 調用 LLM 生成回答
     console.log('🤖 生成回答...');
-    const answer = cleanAnswer(
-      await llm.generateAnswer(userMessage, context, searchQuery),
-    );
+    let answer;
+    let degraded = false;
+    try {
+      answer = cleanAnswer(
+        await llm.generateAnswer(userMessage, context, searchQuery),
+      );
+    } catch (llmError) {
+      degraded = true;
+      console.error('❌ LLM 生成失敗，改用知識庫摘要:', llmError.message);
+      answer = buildFallbackAnswer(context);
+    }
     const summary = buildSummary(answer);
     const sources = buildSources(context);
 
@@ -239,6 +267,7 @@ app.post('/api/chat', rateLimitMiddleware, async (req, res) => {
       sources_found: sources.length,
       rewritten_query: searchQuery,
       memory_used: conversationHistory.length > 0,
+      degraded,
       timestamp: new Date().toISOString(),
     });
   } catch (error) {

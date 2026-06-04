@@ -87,7 +87,12 @@ const jfClass = [
       title="嘉義國本學堂 RSS"
       href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/rss.xml`}
     />
-    <script is:inline define:vars={{ __siteBase: import.meta.env.BASE_URL }}>
+    <script
+      is:inline
+      define:vars={{
+        __siteBase: import.meta.env.BASE_URL.replace(/\/$/, ''),
+      }}
+    >
       window.__BASE__ = __siteBase;
     </script>
     <SEO
@@ -457,11 +462,14 @@ const jfClass = [
       var _searchMode = 'loading';
       var _fallbackIdx = null;
 
+      function _sitePath(path) {
+        var base = (window.__BASE__ || '').replace(/\/$/, '');
+        return base + '/' + String(path || '').replace(/^\//, '');
+      }
+
       async function _initSearchEngine() {
         try {
-          var res = await fetch(
-            (window.__BASE__ || '/') + 'api/search-minisearch.json',
-          );
+          var res = await fetch(_sitePath('api/search-minisearch.json'));
           if (!res.ok) throw new Error('HTTP ' + res.status);
           var data = await res.json();
           var MiniSearch = (
@@ -486,9 +494,7 @@ const jfClass = [
             e,
           );
           try {
-            var res2 = await fetch(
-              (window.__BASE__ || '/') + 'api/search-index.json',
-            );
+            var res2 = await fetch(_sitePath('api/search-index.json'));
             if (res2.ok) _fallbackIdx = await res2.json();
             else _fallbackIdx = [];
           } catch (e2) {
