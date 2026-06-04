@@ -132,6 +132,7 @@ app.get('/health', (req, res) => {
     status: 'ok',
     knowledge_base_ready: !!search,
     llm_ready: !!llm,
+    llm_model: llm?.model || null,
     timestamp: new Date().toISOString(),
   });
 });

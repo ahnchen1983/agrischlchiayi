@@ -6,7 +6,7 @@
 const axios = require('axios');
 
 const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
-const MODEL = 'google/gemini-2.0-flash-001'; // Gemini 模型
+const DEFAULT_MODEL = 'google/gemini-2.5-flash';
 
 // 系統提示詞 - 嚴格限制 LLM 行為
 const SYSTEM_PROMPT = `你是一個農業知識助手，專門回答嘉義國本學堂知識庫的問題。
@@ -33,6 +33,7 @@ class OpenRouterLLM {
       throw new Error('OpenRouter API key 未設定');
     }
     this.apiKey = apiKey;
+    this.model = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
     this.client = axios.create({
       baseURL: OPENROUTER_BASE_URL,
       headers: {
@@ -78,7 +79,7 @@ ${historyText}
 
     try {
       const response = await this.client.post('/chat/completions', {
-        model: MODEL,
+        model: this.model,
         messages: [
           {
             role: 'system',
@@ -145,7 +146,7 @@ ${contextText}
 
     try {
       const response = await this.client.post('/chat/completions', {
-        model: MODEL,
+        model: this.model,
         messages: [
           {
             role: 'system',
