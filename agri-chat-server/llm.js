@@ -7,6 +7,7 @@ const axios = require('axios');
 
 const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
 const DEFAULT_MODEL = 'google/gemini-2.5-flash';
+const REQUEST_TIMEOUT_MS = 15000;
 
 // 系統提示詞 - 嚴格限制 LLM 行為
 const SYSTEM_PROMPT = `你是一個農業知識助手，專門回答嘉義國本學堂知識庫的問題。
@@ -36,6 +37,7 @@ class OpenRouterLLM {
     this.model = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
     this.client = axios.create({
       baseURL: OPENROUTER_BASE_URL,
+      timeout: REQUEST_TIMEOUT_MS,
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'HTTP-Referer': 'https://agrischlchiayi.pages.dev',
